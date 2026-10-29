@@ -1,0 +1,8 @@
+reference/
+PROMPT.md
+AGENTS.md
+CODEX_MESAJI.txt
+node_modules/
+dist/
+docs/qa/
+package-lock.json

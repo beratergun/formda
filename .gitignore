@@ -1,0 +1,30 @@
+# Yerel çalışma dosyaları: GitHub'a gitmez
+PROMPT.md
+AGENTS.md
+CODEX_MESAJI.txt
+reference/
+
+# Bağımlılıklar ve derleme çıktıları
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+
+# Ortam ve sistem
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
+
+docs/qa/
+*.local
+backups/
+*.zip
+*.webm
+*.mp4
+*.mov
+
+.playwright-mcp/
