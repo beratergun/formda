@@ -1,0 +1,789 @@
+{
+  "id": "main",
+  "days": [
+    {
+      "kahvalti": {
+        "title": "Omlet",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "eggw",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 150,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Tavuk-nohut kutusu",
+        "items": [
+          {
+            "foodId": "tavuk",
+            "qty": 130,
+            "state": "raw"
+          },
+          {
+            "foodId": "nohut",
+            "qty": 100,
+            "state": "cooked"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "16.30",
+        "items": [
+          {
+            "foodId": "suzme",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "elma",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "mandalina",
+            "qty": 150,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Kıymalı ıspanak",
+        "items": [
+          {
+            "foodId": "kiyma",
+            "qty": 100,
+            "state": "raw"
+          },
+          {
+            "foodId": "sebze",
+            "qty": 300,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Yoğurt kâsesi",
+        "items": [
+          {
+            "foodId": "suzme",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yulaf",
+            "qty": 30,
+            "state": "raw"
+          },
+          {
+            "foodId": "mandalina",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "ceviz",
+            "qty": 10,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Hindi sandviç + yumurta",
+        "items": [
+          {
+            "foodId": "ekmek",
+            "qty": 60,
+            "state": "na"
+          },
+          {
+            "foodId": "hindi",
+            "qty": 100,
+            "state": "raw"
+          },
+          {
+            "foodId": "salata",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 50,
+            "state": "na"
+          },
+          {
+            "foodId": "egg",
+            "qty": 1,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "17.00",
+        "items": [
+          {
+            "foodId": "muz",
+            "qty": 120,
+            "state": "na"
+          },
+          {
+            "foodId": "sut",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "elma",
+            "qty": 150,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Çorba + tavuk",
+        "items": [
+          {
+            "foodId": "mercimek",
+            "qty": 40,
+            "state": "raw"
+          },
+          {
+            "foodId": "sogan",
+            "qty": 50,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "tavuk",
+            "qty": 120,
+            "state": "raw"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Haşlanmış",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "eggw",
+            "qty": 1,
+            "state": "na"
+          },
+          {
+            "foodId": "lor",
+            "qty": 60,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "zeytin",
+            "qty": 20,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Ton-fasulye kutusu",
+        "items": [
+          {
+            "foodId": "ton",
+            "qty": 110,
+            "state": "na"
+          },
+          {
+            "foodId": "fasulye",
+            "qty": 120,
+            "state": "cooked"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "17.30",
+        "items": [
+          {
+            "foodId": "suzme",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "ceviz",
+            "qty": 15,
+            "state": "na"
+          },
+          {
+            "foodId": "mandalina",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Fırın tavuk + cacık",
+        "items": [
+          {
+            "foodId": "tavuk",
+            "qty": 150,
+            "state": "raw"
+          },
+          {
+            "foodId": "sebze",
+            "qty": 250,
+            "state": "na"
+          },
+          {
+            "foodId": "patates",
+            "qty": 150,
+            "state": "cooked"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Menemen",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "eggw",
+            "qty": 1,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "lor",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Tavuk-sebze kutusu",
+        "items": [
+          {
+            "foodId": "tavuk",
+            "qty": 130,
+            "state": "raw"
+          },
+          {
+            "foodId": "sebze",
+            "qty": 250,
+            "state": "na"
+          },
+          {
+            "foodId": "patates",
+            "qty": 150,
+            "state": "cooked"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "15.00",
+        "items": [
+          {
+            "foodId": "lor",
+            "qty": 60,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "portakal",
+            "qty": 180,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Fırın hamsi + salata",
+        "items": [
+          {
+            "foodId": "hamsi",
+            "qty": 200,
+            "state": "raw"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Omlet",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "eggw",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 150,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Yumurta-patates kutusu",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "patates",
+            "qty": 150,
+            "state": "cooked"
+          },
+          {
+            "foodId": "suzme",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 150,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "18.30",
+        "items": [
+          {
+            "foodId": "muz",
+            "qty": 120,
+            "state": "na"
+          },
+          {
+            "foodId": "kefir",
+            "qty": 200,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Nohutlu tavuk sote",
+        "items": [
+          {
+            "foodId": "tavuk",
+            "qty": 150,
+            "state": "raw"
+          },
+          {
+            "foodId": "nohut",
+            "qty": 120,
+            "state": "cooked"
+          },
+          {
+            "foodId": "sebze",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Haşlanmış",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 2,
+            "state": "na"
+          },
+          {
+            "foodId": "eggw",
+            "qty": 1,
+            "state": "na"
+          },
+          {
+            "foodId": "lor",
+            "qty": 60,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          },
+          {
+            "foodId": "kahvsebze",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "zeytin",
+            "qty": 20,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Evde hindi sandviç",
+        "items": [
+          {
+            "foodId": "ekmek",
+            "qty": 60,
+            "state": "na"
+          },
+          {
+            "foodId": "hindi",
+            "qty": 100,
+            "state": "raw"
+          },
+          {
+            "foodId": "salata",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 50,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "İkindi",
+        "items": [
+          {
+            "foodId": "suzme",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "elma",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "mandalina",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "bitter",
+            "qty": 10,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Kıymalı kuru fasulye",
+        "items": [
+          {
+            "foodId": "kiyma",
+            "qty": 80,
+            "state": "raw"
+          },
+          {
+            "foodId": "fasulye",
+            "qty": 150,
+            "state": "cooked"
+          },
+          {
+            "foodId": "sebze",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "salata",
+            "qty": 150,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 100,
+            "state": "na"
+          }
+        ]
+      }
+    },
+    {
+      "kahvalti": {
+        "title": "Yoğurt kâsesi",
+        "items": [
+          {
+            "foodId": "suzme",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yulaf",
+            "qty": 30,
+            "state": "raw"
+          },
+          {
+            "foodId": "mandalina",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "ceviz",
+            "qty": 10,
+            "state": "na"
+          }
+        ]
+      },
+      "ogle": {
+        "title": "Tavuk-nohut tabağı",
+        "items": [
+          {
+            "foodId": "tavuk",
+            "qty": 130,
+            "state": "raw"
+          },
+          {
+            "foodId": "nohut",
+            "qty": 100,
+            "state": "cooked"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          }
+        ]
+      },
+      "ara": {
+        "title": "16.30",
+        "items": [
+          {
+            "foodId": "egg",
+            "qty": 1,
+            "state": "na"
+          },
+          {
+            "foodId": "portakal",
+            "qty": 180,
+            "state": "na"
+          }
+        ]
+      },
+      "aksam": {
+        "title": "Çorba + hindi",
+        "items": [
+          {
+            "foodId": "mercimek",
+            "qty": 40,
+            "state": "raw"
+          },
+          {
+            "foodId": "sogan",
+            "qty": 50,
+            "state": "na"
+          },
+          {
+            "foodId": "yag",
+            "qty": 5,
+            "state": "na"
+          },
+          {
+            "foodId": "hindi",
+            "qty": 120,
+            "state": "raw"
+          },
+          {
+            "foodId": "salata",
+            "qty": 200,
+            "state": "na"
+          },
+          {
+            "foodId": "yogurt",
+            "qty": 100,
+            "state": "na"
+          },
+          {
+            "foodId": "ekmek",
+            "qty": 30,
+            "state": "na"
+          }
+        ]
+      }
+    }
+  ]
+}

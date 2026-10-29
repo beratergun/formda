@@ -1,0 +1,1209 @@
+[
+  {
+    "id": "egg",
+    "name": "Yumurta (tam)",
+    "aliases": [
+      "yumurta",
+      "tam yumurta"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 72,
+    "proteinPer": 6.3,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "eggw",
+    "name": "Yumurta beyazı",
+    "aliases": [
+      "yumurta beyazı"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 17,
+    "proteinPer": 3.6,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tavuk",
+    "name": "Tavuk göğüs (çiğ)",
+    "aliases": [
+      "tavuk",
+      "tavuk göğsü"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 120,
+    "proteinPer": 22.5,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "hindi",
+    "name": "Hindi göğüs (çiğ)",
+    "aliases": [
+      "Hindi göğüs"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 115,
+    "proteinPer": 24,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kiyma",
+    "name": "Az yağlı kıyma (çiğ)",
+    "aliases": [
+      "Az yağlı kıyma"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 175,
+    "proteinPer": 20,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "hamsi",
+    "name": "Hamsi (çiğ)",
+    "aliases": [
+      "Hamsi"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 130,
+    "proteinPer": 20,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "ton",
+    "name": "Ton balığı (suda, süzülmüş)",
+    "aliases": [
+      "Ton balığı"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 110,
+    "proteinPer": 25,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "suzme",
+    "name": "Süzme yoğurt (az yağlı)",
+    "aliases": [
+      "Süzme yoğurt"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 75,
+    "proteinPer": 9,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "kase",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "yogurt",
+    "name": "Yoğurt (yarım yağlı)",
+    "aliases": [
+      "Yoğurt"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 50,
+    "proteinPer": 4,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "kase",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "lor",
+    "name": "Lor peyniri",
+    "aliases": [
+      "Lor peyniri"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 95,
+    "proteinPer": 13,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "sut",
+    "name": "Süt (yarım yağlı)",
+    "aliases": [
+      "Süt"
+    ],
+    "unit": "ml",
+    "per": 100,
+    "kcalPer": 46,
+    "proteinPer": 3.3,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "bardak",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kefir",
+    "name": "Kefir (sade)",
+    "aliases": [
+      "Kefir"
+    ],
+    "unit": "ml",
+    "per": 100,
+    "kcalPer": 55,
+    "proteinPer": 3.4,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "bardak",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "ekmek",
+    "name": "Tam buğday ekmeği",
+    "aliases": [
+      "ekmek",
+      "tam buğday ekmeği"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 250,
+    "proteinPer": 10,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "dilim",
+        "qty": 30
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "yulaf",
+    "name": "Yulaf (çiğ)",
+    "aliases": [
+      "Yulaf"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 375,
+    "proteinPer": 12.5,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "mercimek",
+    "name": "Kırmızı mercimek (çiğ)",
+    "aliases": [
+      "Kırmızı mercimek"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 350,
+    "proteinPer": 24,
+    "state": "raw",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "nohut",
+    "name": "Nohut (haşlanmış)",
+    "aliases": [
+      "Nohut"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 164,
+    "proteinPer": 8.9,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "fasulye",
+    "name": "Kuru fasulye (haşlanmış)",
+    "aliases": [
+      "Kuru fasulye"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 127,
+    "proteinPer": 8.7,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "patates",
+    "name": "Patates (haşlanmış/fırın)",
+    "aliases": [
+      "Patates"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 85,
+    "proteinPer": 2,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "sebze",
+    "name": "Pişmiş sebze",
+    "aliases": [
+      "Pişmiş sebze"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 30,
+    "proteinPer": 1.6,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "salata",
+    "name": "Salata (yağsız)",
+    "aliases": [
+      "Salata"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 20,
+    "proteinPer": 1,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kahvsebze",
+    "name": "Domates-salatalık-biber",
+    "aliases": [
+      "Domates-salatalık-biber"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 17,
+    "proteinPer": 0.8,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "sogan",
+    "name": "Soğan-havuç",
+    "aliases": [
+      "Soğan-havuç"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 40,
+    "proteinPer": 1,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "yag",
+    "name": "Zeytinyağı",
+    "aliases": [
+      "Zeytinyağı"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 900,
+    "proteinPer": 0,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "kaşık",
+        "qty": 10
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "zeytin",
+    "name": "Zeytin",
+    "aliases": [
+      "Zeytin"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 175,
+    "proteinPer": 1,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "ceviz",
+    "name": "Ceviz",
+    "aliases": [
+      "Ceviz"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 654,
+    "proteinPer": 15,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "elma",
+    "name": "Elma",
+    "aliases": [
+      "Elma"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 52,
+    "proteinPer": 0.3,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "orta boy",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "muz",
+    "name": "Muz",
+    "aliases": [
+      "Muz"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 89,
+    "proteinPer": 1.1,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "orta boy",
+        "qty": 120
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "mandalina",
+    "name": "Mandalina",
+    "aliases": [
+      "Mandalina"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 53,
+    "proteinPer": 0.8,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "portakal",
+    "name": "Portakal",
+    "aliases": [
+      "Portakal"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 47,
+    "proteinPer": 0.9,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "bitter",
+    "name": "Bitter çikolata",
+    "aliases": [
+      "Bitter çikolata"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 600,
+    "proteinPer": 8,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "cay",
+    "name": "Şekersiz çay/kahve",
+    "aliases": [
+      "çay",
+      "kahve",
+      "şekersiz çay"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 2,
+    "proteinPer": 0,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "beyazpeynir",
+    "name": "Beyaz peynir",
+    "aliases": [
+      "Beyaz peynir"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 260,
+    "proteinPer": 17,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kasar",
+    "name": "Kaşar peyniri",
+    "aliases": [
+      "Kaşar peyniri"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 350,
+    "proteinPer": 25,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "simit",
+    "name": "Simit",
+    "aliases": [
+      "Simit"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 290,
+    "proteinPer": 9,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "pilav",
+    "name": "Pirinç pilavı (pişmiş)",
+    "aliases": [
+      "Pirinç pilavı"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 150,
+    "proteinPer": 2.7,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "makarna",
+    "name": "Makarna (pişmiş)",
+    "aliases": [
+      "Makarna"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 158,
+    "proteinPer": 5.8,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "bulgur",
+    "name": "Bulgur pilavı (pişmiş)",
+    "aliases": [
+      "Bulgur pilavı"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 120,
+    "proteinPer": 3.5,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kofte",
+    "name": "Köfte (pişmiş)",
+    "aliases": [
+      "Köfte"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 230,
+    "proteinPer": 18,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tavukpismis",
+    "name": "Tavuk göğüs (pişmiş)",
+    "aliases": [
+      "tavuk",
+      "tavuk göğsü"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 165,
+    "proteinPer": 31,
+    "state": "cooked",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "durum",
+    "name": "Tavuk döner dürüm",
+    "aliases": [
+      "Tavuk döner dürüm"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 550,
+    "proteinPer": 32,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "lahmacun",
+    "name": "Lahmacun",
+    "aliases": [
+      "Lahmacun"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 250,
+    "proteinPer": 11,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "pide",
+    "name": "Kıymalı pide (1 adet)",
+    "aliases": [
+      "Kıymalı pide"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 700,
+    "proteinPer": 30,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "hamburger",
+    "name": "Hamburger",
+    "aliases": [
+      "Hamburger"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 500,
+    "proteinPer": 25,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "pizza",
+    "name": "Pizza (1 dilim)",
+    "aliases": [
+      "Pizza"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 285,
+    "proteinPer": 12,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kizartma",
+    "name": "Patates kızartması",
+    "aliases": [
+      "Patates kızartması"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 312,
+    "proteinPer": 3.4,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "corba",
+    "name": "Mercimek çorbası (1 kase)",
+    "aliases": [
+      "mercimek çorbası",
+      "çorba"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 180,
+    "proteinPer": 9,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "kase",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "ayran",
+    "name": "Ayran",
+    "aliases": [
+      "Ayran"
+    ],
+    "unit": "ml",
+    "per": 100,
+    "kcalPer": 38,
+    "proteinPer": 1.8,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "bardak",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "kola",
+    "name": "Kola / şekerli gazoz",
+    "aliases": [
+      "Kola / şekerli gazoz"
+    ],
+    "unit": "ml",
+    "per": 100,
+    "kcalPer": 42,
+    "proteinPer": 0,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "meyvesuyu",
+    "name": "Meyve suyu",
+    "aliases": [
+      "Meyve suyu"
+    ],
+    "unit": "ml",
+    "per": 100,
+    "kcalPer": 45,
+    "proteinPer": 0.5,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "sutlucik",
+    "name": "Sütlü çikolata",
+    "aliases": [
+      "Sütlü çikolata"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 535,
+    "proteinPer": 7.6,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "biskuvi",
+    "name": "Bisküvi",
+    "aliases": [
+      "Bisküvi"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 480,
+    "proteinPer": 6,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "findik",
+    "name": "Fındık",
+    "aliases": [
+      "Fındık"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 630,
+    "proteinPer": 15,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "badem",
+    "name": "Badem",
+    "aliases": [
+      "Badem"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 580,
+    "proteinPer": 21,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "hurma",
+    "name": "Hurma",
+    "aliases": [
+      "Hurma"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 23,
+    "proteinPer": 0.2,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "bal",
+    "name": "Bal (1 tatlı kaşığı)",
+    "aliases": [
+      "Bal"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 21,
+    "proteinPer": 0,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "seker",
+    "name": "Şeker (1 küçük paket)",
+    "aliases": [
+      "Şeker"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 20,
+    "proteinPer": 0,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "proteintozu",
+    "name": "Protein tozu (1 ölçek ≈ 30 g)",
+    "aliases": [
+      "Protein tozu"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 120,
+    "proteinPer": 24,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "karpuz",
+    "name": "Karpuz",
+    "aliases": [
+      "Karpuz"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 30,
+    "proteinPer": 0.6,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "uzum",
+    "name": "Üzüm",
+    "aliases": [
+      "Üzüm"
+    ],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 69,
+    "proteinPer": 0.7,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "porsiyon",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tostkasar",
+    "name": "Kaşarlı tost",
+    "aliases": [
+      "Kaşarlı tost"
+    ],
+    "unit": "adet",
+    "per": 1,
+    "kcalPer": 350,
+    "proteinPer": 15,
+    "state": "na",
+    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "portions": [
+      {
+        "label": "adet",
+        "qty": 1
+      }
+    ],
+    "useCount": 0
+  }
+]
