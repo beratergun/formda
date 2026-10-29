@@ -15,3 +15,21 @@ Bu sıra, boş repo → ilk push → Pages dağıtımı → canlı doğrulama �
 - 16 kurgusal ekran görüntüsü, telefon kolajları, 6 karelik GIF, düğmeler ve sosyal önizleme hazır.
 - Repo açıklaması, homepage ve 12 topic ayarlı; issues açık, wiki kapalı.
 - Canlı Pages, APK ve release bağlantılarının nihai sonuçları dağıtımdan sonra bu belgeye eklenir.
+
+## Canlı ve yerel doğrulama — 30 Ekim 2026
+
+| Kontrol                | Sonuç                                                                                                                                  |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Pages                  | https://beratergun.github.io/yol/ · HTTP 200 · HTTPS                                                                                   |
+| Web CI                 | [Kalite ve dağıtım](https://github.com/beratergun/yol/actions/runs/40963272035) başarılı; 95 birim, 8 E2E, 18 erişilebilirlik görünümü |
+| CI mobil Lighthouse    | 96 / 100 / 100                                                                                                                         |
+| Canlı mobil Lighthouse | 90 / 100 / 100; eşikler 90 / 95 / 95                                                                                                   |
+| Canlı çevrimdışı akış  | 219 kcal öğün → yenile → çevrimdışı su → yenile; kayıtlar kaldı                                                                        |
+| Kurulabilirlik         | Temiz kalıcı Chromium profilinde Chrome kurulum hatası yok                                                                             |
+| Ağ                     | Temiz profilde dış alan adı, yazma isteği ve konsol hatası yok; açık ürün sorgusu yapılmadı                                            |
+| Android                | [APK derlemesi](https://github.com/beratergun/yol/actions/runs/40963272082) başarılı; Gradle + lint + apksigner doğrulandı             |
+| APK içeriği            | `io.github.beratergun.yol`, sürüm `1.0.0`, uzak `server.url` yok; SHA-256 artifact ile eşleşti                                         |
+| İmza                   | Release sırları yapılandırılmadığı için geliştirme sertifikalı debug APK                                                               |
+| README                 | GitHub görünümünde iki büyük düğme ve görseller hatasız yüklendi                                                                       |
+
+MCP'nin kurulu masaüstü tarayıcısında yerel antivirüs betiği enjekte edildiği görüldü. Uygulama ağ sonucu, bu eklentileri taşımayan ayrı test profilinde `scripts/live-check.mjs` ile doğrulandı. Cihazın güvenlik ayarları değiştirilmedi.

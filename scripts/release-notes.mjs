@@ -1,0 +1,16 @@
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
+const { version } = JSON.parse(await readFile('package.json', 'utf8'));
+const lines = (await readFile('CHANGELOG.md', 'utf8')).split('\n');
+const start = lines.findIndex((line) => line.startsWith(`## [${version}]`));
+if (start < 0) throw new Error('Sürüm CHANGELOG içinde bulunamadı.');
+let end = lines.findIndex((line, i) => i > start && line.startsWith('## '));
+if (end < 0) end = lines.length;
+const body = lines
+  .slice(start + 1, end)
+  .filter((line) => !line.startsWith(`[${version}]:`))
+  .join('\n')
+  .trim();
+const notes = `${body}\n\n**[Telefona yükle (PWA)](https://beratergun.github.io/yol/)** · **[Android APK indir](https://github.com/beratergun/yol/releases/download/v${version}/Yol-v${version}.apk)**\n\nKaynak kodu ve APK iş akışı aynı sürüme aittir. Fotoğraf, video ve günlükler cihazda saklanır. İndirilen APK'nın SHA-256 dosyası aşağıdaki eklerdedir. Release imza anahtarı eklemek için [Android rehberini](https://github.com/beratergun/yol/blob/v${version}/docs/android.md) izleyebilirsin.\n\n![Yol uygulaması · kurgusal demo](https://raw.githubusercontent.com/beratergun/yol/v${version}/docs/screenshots/light-collage.png)\n\n![Kısa demo](https://raw.githubusercontent.com/beratergun/yol/v${version}/docs/demo.gif)\n`;
+await mkdir('../yol-launch/releases', { recursive: true });
+await writeFile(`../yol-launch/releases/v${version}-notes.md`, notes);
+console.log(`v${version} notes prepared from CHANGELOG.`);
