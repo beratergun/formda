@@ -204,3 +204,24 @@ legend { font-size: 12px; color: var(--sub); margin-bottom: 10px; }
 .file-button { position: relative; overflow: hidden; }
 .file-button input[type='file'] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
 .error-toast { position: fixed; z-index: 80; left: 50%; top: 15px; transform: translateX(-50%); width: min(90%,480px); border: 1px solid var(--danger); border-radius: 14px; padding: 14px; background: var(--card); color: var(--danger); display: flex; align-items: center; justify-content: space-between; gap: 10px; box-shadow: var(--shadow); }
+.body-map { display: grid; gap: 12px; }
+.body-map > svg { max-height: 260px; margin: auto; }
+.body-map path[role='button'] { cursor: pointer; }
+.body-map .choice:disabled { opacity: 1; }
+.exercise-figure { width: 100%; height: 170px; border-radius: 20px; background: var(--raise); }
+.instruction-list { list-style: decimal; margin: 0; padding-left: 24px; display: grid; gap: 12px; font-size: 13px; }
+.instruction-list li::marker { color: var(--accent); font-weight: 700; }
+.library-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: none; border: 0; width: 100%; text-align: left; color: var(--ink); min-height: 44px; }
+.library-item > span { display: grid; gap: 4px; }
+.library-item small { color: var(--sub); font-size: 10px; }
+.workout-mode { position: fixed; z-index: 40; inset: 0; background: var(--bg); overflow-y: auto; padding: max(20px,env(safe-area-inset-top)) 22px max(28px,env(safe-area-inset-bottom)); }
+.workout-mode > .stack { max-width: 516px; margin: auto; gap: 20px; }
+.set-inputs { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 10px; }
+.set-inputs input { text-align: center; font-variant-numeric: tabular-nums; font-size: 22px; font-family: var(--display); padding-inline: 5px; }
+.rest-timer { display: grid; justify-items: center; gap: 14px; text-align: center; background: var(--accent-soft); }
+.rest-timer > b { font: 600 60px/1 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+.stats-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.stats-grid > div { display: grid; text-align: center; gap: 4px; background: var(--raise); border-radius: 12px; padding: 12px 6px; }
+.stats-grid b { font-size: 23px; font-variant-numeric: tabular-nums; }
+.stats-grid small { color: var(--sub); font-size: 9px; }
+.celebration { width: 90px; height: 90px; border-radius: 50%; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent); margin-top: 30px; }

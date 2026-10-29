@@ -6,7 +6,7 @@
 | 2 | Saf domain fonksiyonları ve testler | Tamamlandı |
 | 3 | Dexie, OPFS, yedek / geri yükleme | Tamamlandı |
 | 4 | Karşılama, Bugün, beslenme | Tamamlandı |
-| 5 | Antrenman ve hareket kütüphanesi | Bekliyor |
+| 5 | Antrenman ve hareket kütüphanesi | Tamamlandı |
 | 6 | Fotoğraf ve karşılaştırma | Bekliyor |
 | 7 | Vlog, Günlük, raporlar | Bekliyor |
 | 8 | İlerleme ve Planım | Bekliyor |
