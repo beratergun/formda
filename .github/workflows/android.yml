@@ -1,0 +1,89 @@
+name: Android APK
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: android-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: false
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      HAS_SIGNING: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' && secrets.ANDROID_KEYSTORE_PASSWORD != '' && secrets.ANDROID_KEY_ALIAS != '' && secrets.ANDROID_KEY_PASSWORD != '' }}
+      ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+      ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+      ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+      ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/yol-release.jks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci
+      - run: npm run lint && npm run typecheck && npm run test
+      - run: npm run android:sync
+      - name: Decode release keystore
+        if: env.HAS_SIGNING == 'true'
+        run: |
+          python3 - <<'PY'
+          import base64, os
+          with open(os.environ['ANDROID_KEYSTORE_PATH'], 'wb') as key:
+              key.write(base64.b64decode(os.environ['ANDROID_KEYSTORE_BASE64']))
+          PY
+      - name: Build and lint debug APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug lintDebug --no-daemon
+      - name: Build signed release APK
+        if: env.HAS_SIGNING == 'true'
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon
+      - name: Select APK and verify signature
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          mkdir -p apk
+          if [ "$HAS_SIGNING" = "true" ]; then
+            cp android/app/build/outputs/apk/release/app-release.apk "apk/Yol-v$VERSION.apk"
+            echo "Release signing configured" >> "$GITHUB_STEP_SUMMARY"
+          else
+            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/Yol-v$VERSION.apk"
+            echo "Debug APK: Android development certificate; release secrets are not configured" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
+          "$BUILD_TOOLS/apksigner" verify --verbose "apk/Yol-v$VERSION.apk"
+          sha256sum "apk/Yol-v$VERSION.apk" > "apk/Yol-v$VERSION.apk.sha256"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yol-android-apk
+          path: apk/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yol-android-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+      - name: Attach APK to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" apk/* --clobber
+      - name: Remove runner signing file
+        if: always()
+        run: rm -f "$ANDROID_KEYSTORE_PATH"

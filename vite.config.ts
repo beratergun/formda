@@ -2,14 +2,17 @@ import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+const native = process.env.YOL_NATIVE === '1';
 
 export default defineConfig({
-  base: '/yol/',
+  base: native ? '/' : '/yol/',
+  build: { outDir: native ? 'dist-native' : 'dist' },
   server: { watch: { ignored: ['**/coverage/**', '**/docs/**', '**/.playwright-mcp/**', '**/reference/**', '**/test-results/**'] } },
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
+      disable: native,
       registerType: 'prompt',
       includeAssets: ['icons/*.png', 'icons/*.svg'],
       manifest: {
@@ -20,6 +23,8 @@ export default defineConfig({
         theme_color: '#087e83',
         background_color: '#f3f6f4',
         display: 'standalone',
+        orientation: 'portrait-primary',
+        id: '/yol/',
         start_url: '/yol/',
         scope: '/yol/',
         icons: [

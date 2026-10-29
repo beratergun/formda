@@ -37,6 +37,8 @@ import { Plan } from '../features/plan/Plan';
 import { Profile } from '../features/profile/Profile';
 import { AppLock } from './AppLock';
 import { LocalReminders } from './LocalReminders';
+import { InstallProvider } from './InstallCard';
+import { NativeLifecycle } from './NativeLifecycle';
 
 const tabs = [
   ['/', 'Bugün', House],
@@ -62,6 +64,7 @@ function AppLayout() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
   useEffect(() => { const sync = () => setTheme(localStorage.getItem('yol-theme') || 'system'); window.addEventListener('yol-theme-change', sync); return () => window.removeEventListener('yol-theme-change', sync); }, []);
+  useEffect(() => { const show = (event: Event) => setError((event as CustomEvent<string>).detail); window.addEventListener('yol-export-error', show); return () => window.removeEventListener('yol-export-error', show); }, [setError]);
   const onFood = (meal: MealId = 'kahvalti') => {
     setMeal(meal);
     setEntry('food');
@@ -211,6 +214,7 @@ function AppLayout() {
       )}
       <PwaPrompt />
       <LocalReminders />
+      <NativeLifecycle />
     </>
   );
 }
@@ -218,7 +222,7 @@ export function App() {
   return (
     <HashRouter>
       <StoreProvider>
-        <AppLock><AppLayout /></AppLock>
+        <InstallProvider><AppLock><AppLayout /></AppLock></InstallProvider>
       </StoreProvider>
     </HashRouter>
   );

@@ -11,7 +11,7 @@
 | 7 | Vlog, Günlük, raporlar | Tamamlandı |
 | 8 | İlerleme ve Planım | Tamamlandı |
 | 9 | Profil, gizlilik, ICS, eski veri aktarımı | Tamamlandı |
-| 9b | Uygulama yükleme deneyimi, Capacitor Android, APK iş akışı | Bekliyor |
+| 9b | Uygulama yükleme deneyimi, Capacitor Android, APK iş akışı | Uygulandı; Gradle/APK CI doğrulaması bekliyor |
 | 10 | E2E, erişilebilirlik, performans | Bekliyor |
 | 11 | README ve görseller | Bekliyor |
 | 12 | GitHub Pages ve v1.0.0 | Bekliyor |

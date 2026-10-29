@@ -15,6 +15,7 @@ import { defaultPlan } from '../../domain/program';
 import { todayKey } from '../../domain/dates';
 import type { Horizon } from '../../domain/types';
 import { restoreBackup } from '../../data/backup';
+import { InstallCard } from '../../app/InstallCard';
 
 export function Onboarding() {
   const { data, mutate, flush, setError, reload } = useStore();
@@ -333,6 +334,7 @@ export function Onboarding() {
         )}
       </div>
       {step === 0 && <label className="button quiet file-button">Yedeğimden devam et<input type="file" accept=".zip,application/zip" disabled={busy} onChange={e=>{const file=e.target.files?.[0];if(!file)return;setBusy(true);void restoreBackup(file,'replace').then(reload).catch(error=>setError(error instanceof Error?error.message:'Yedek açılamadı.')).finally(()=>setBusy(false));}} /></label>}
+      {step === 0 && <InstallCard />}
     </div>
   );
 }

@@ -23,6 +23,7 @@ import { pinHash } from '../../domain/privacy';
 import { dateDiff, dateLabel, shiftDate, todayKey } from '../../domain/dates';
 import { downloadBlob } from '../../data/media/export';
 import type { Profile as UserProfile } from '../../domain/types';
+import { InstallCard } from '../../app/InstallCard';
 
 const mb = (n: number) =>
   `${(n / 1024 / 1024).toLocaleString('tr', { maximumFractionDigits: 1 })} MB`;
@@ -150,6 +151,7 @@ export function Profile() {
         <h1>Yol, sana göre.</h1>
         <p className="muted">Tercihlerin, gizliliğin ve cihazındaki veriler.</p>
       </div>
+      <InstallCard force />
       <Card className="stack">
         <div className="row">
           <span className="avatar">
