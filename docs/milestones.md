@@ -4,7 +4,7 @@
 |---|---|---|
 | 1 | İskelet, araçlar, CI, tasarım tokenları, UI kiti | Tamamlandı |
 | 2 | Saf domain fonksiyonları ve testler | Tamamlandı |
-| 3 | Dexie, OPFS, yedek / geri yükleme | Bekliyor |
+| 3 | Dexie, OPFS, yedek / geri yükleme | Tamamlandı |
 | 4 | Karşılama, Bugün, beslenme | Bekliyor |
 | 5 | Antrenman ve hareket kütüphanesi | Bekliyor |
 | 6 | Fotoğraf ve karşılaştırma | Bekliyor |
