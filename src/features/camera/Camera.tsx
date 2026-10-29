@@ -281,8 +281,8 @@ export function CompareSlider({ before, after }: { before: MediaRecord; after: M
             </div>
             <div className="compare-before" style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}>
               <MediaImage record={before} />
-              <span className="compare-caption">{caption(before)}</span>
             </div>
+            <span className="compare-caption before-label">{caption(before)}</span>
             <span className="compare-line" style={{ left: `${value}%` }} />
             <input
               type="range"

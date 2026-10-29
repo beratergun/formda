@@ -23,6 +23,12 @@
   left: auto;
   right: 8px;
   text-align: right;
+  max-width: 45%;
+}
+.compare-caption.before-label {
+  top: 8px;
+  bottom: auto;
+  max-width: 45%;
 }
 
 @theme inline {

@@ -2,7 +2,7 @@ import { it, expect, afterEach, vi } from 'vitest';
 import { YolDatabase, seedDatabase } from './db';
 import { LocalRepository } from './repositories';
 import { saveMedia, readMedia, deleteMedia, clearAllData } from './media/opfs';
-import { decodeBackup, encodeBackup } from './backup/codec';
+import { decodeBackup, encodeBackup, encodeBlobStream } from './backup/codec';
 import { applyBackup } from './backup';
 import { emptyDay } from '../domain/types';
 import type { BackupDocument } from './backup/schema';
@@ -10,6 +10,32 @@ import { decodeBlobBackup } from './backup/stream';
 import { zipSync, strToU8 } from 'fflate';
 
 const databases: YolDatabase[] = [];
+it('rejects oversized ZIP32 output before reading media or replacing any records', async () => {
+  const database = fresh();
+  await seedDatabase(database);
+  const data = await new LocalRepository(database).load();
+  const document: BackupDocument = {
+    format: 'yol-backup',
+    version: 1,
+    createdAt: 'now',
+    data,
+    media: [],
+    exercises: [],
+  };
+  async function* files() {
+    yield {
+      name: 'media/large.bin',
+      blob: {
+        size: 0x100000000,
+        stream: () => {
+          throw new Error('must not read');
+        },
+      } as unknown as Blob,
+    };
+  }
+  await expect(encodeBlobStream(document, files())).rejects.toThrow('ZIP32');
+  expect(await database.food.count()).toBe(619);
+});
 function fresh() {
   const database = new YolDatabase(`test-${crypto.randomUUID()}`);
   databases.push(database);
@@ -19,11 +45,32 @@ afterEach(async () => {
   vi.restoreAllMocks();
   await Promise.all(databases.splice(0).map((database) => database.delete()));
 });
-it('retains bytes and MIME types when an engine rejects IndexedDB Blob values',async()=>{
- const database=fresh(),blob=new Blob(['body'],{type:'image/jpeg'}),thumb=new Blob(['thumb'],{type:'image/png'});
- vi.spyOn(database.media,'put').mockRejectedValueOnce(new Error('UnknownError: Error preparing Blob/File data'));
- const saved=await saveMedia({id:'binary',date:'2026-10-29',kind:'progress',thumb,width:1,height:1,tags:[],mime:blob.type},blob,database);
- const loaded=(await database.media.get(saved.id))!;expect(await loaded.blob!.text()).toBe('body');expect(loaded.blob!.type).toBe('image/jpeg');expect(await loaded.thumb.text()).toBe('thumb');expect(loaded.thumb.type).toBe('image/png');
+it('retains bytes and MIME types when an engine rejects IndexedDB Blob values', async () => {
+  const database = fresh(),
+    blob = new Blob(['body'], { type: 'image/jpeg' }),
+    thumb = new Blob(['thumb'], { type: 'image/png' });
+  vi.spyOn(database.media, 'put').mockRejectedValueOnce(
+    new Error('UnknownError: Error preparing Blob/File data'),
+  );
+  const saved = await saveMedia(
+    {
+      id: 'binary',
+      date: '2026-10-29',
+      kind: 'progress',
+      thumb,
+      width: 1,
+      height: 1,
+      tags: [],
+      mime: blob.type,
+    },
+    blob,
+    database,
+  );
+  const loaded = (await database.media.get(saved.id))!;
+  expect(await loaded.blob!.text()).toBe('body');
+  expect(loaded.blob!.type).toBe('image/jpeg');
+  expect(await loaded.thumb.text()).toBe('thumb');
+  expect(loaded.thumb.type).toBe('image/png');
 });
 it('seeds once and persists transactional updates without changing unrelated tables', async () => {
   const database = fresh();

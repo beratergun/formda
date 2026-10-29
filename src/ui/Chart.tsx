@@ -65,6 +65,13 @@ export function Chart({
     />,
     <Tooltip
       key="tooltip"
+      formatter={(value: unknown) =>
+        Array.isArray(value)
+          ? value.map((n) => Number(n).toLocaleString('tr', { maximumFractionDigits: 1 })).join('–')
+          : typeof value === 'number'
+            ? value.toLocaleString('tr', { maximumFractionDigits: 1 })
+            : String(value ?? '')
+      }
       contentStyle={{
         background: 'var(--card)',
         border: '1px solid var(--line)',

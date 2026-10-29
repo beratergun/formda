@@ -110,9 +110,20 @@ export async function encodeBlobStream(
     else chunks.push(new Uint8Array(chunk));
   });
   const metadata = new ZipPassThrough('data.json');
+  const json = strToU8(JSON.stringify(document));
+  let archiveSize = json.length + 256,
+    entryCount = 1;
+  if (json.length > 128 * 1024 * 1024)
+    throw new Error('Yapılandırılmış yedek belgesi 128 MB sınırını aşıyor.');
   zip.add(metadata);
-  metadata.push(strToU8(JSON.stringify(document)), true);
+  metadata.push(json, true);
   for await (const { name, blob } of files) {
+    archiveSize += blob.size + 256 + name.length * 2;
+    entryCount++;
+    if (archiveSize >= 0xffffffff || entryCount >= 65535)
+      throw new Error(
+        'ZIP32 arşiv sınırı aşılıyor. Büyük videoları ayrı dışa aktar; kayıtların cihazında duruyor.',
+      );
     const entry = new ZipPassThrough(name);
     zip.add(entry);
     const reader = blob.stream().getReader();

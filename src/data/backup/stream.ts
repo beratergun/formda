@@ -71,7 +71,7 @@ export async function decodeBlobBackup(blob: Blob) {
     offset += 46 + nameLength + h.getUint16(30, true) + h.getUint16(32, true);
   }
   const metadata = files.get('data.json');
-  if (!metadata || metadata.size > 16 * 1024 * 1024)
+  if (!metadata || metadata.size > 128 * 1024 * 1024)
     throw new Error('Yol yedek belgesi eksik veya çok büyük.');
   const document = backupSchema.parse(JSON.parse(await metadata.text()));
   const media: MediaRecord[] = document.media.map((record) => {
