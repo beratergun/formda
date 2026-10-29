@@ -1,0 +1,17 @@
+name: Özellik öner
+description: Yol için bir ihtiyacı ve beklediğin davranışı anlat.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Hangi ihtiyacı karşılayacak?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Önerilen davranış
+      description: Yerel veri, çevrimdışı kullanım ve gizlilikle nasıl uyumlu olduğunu belirt.
+    validations:
+      required: true

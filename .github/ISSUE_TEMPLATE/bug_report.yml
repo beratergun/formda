@@ -1,0 +1,22 @@
+name: Hata bildir
+description: Kurgusal veriyle yeniden üretilebilen bir sorun bildir.
+labels: [bug]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Yeniden üretme adımları
+      description: Cihaz, tarayıcı/Android sürümü, uygulama sürümü ve adımlar. Kişisel veri veya yedek dosyası ekleme.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Beklenen ve görülen davranış
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: İsteğe bağlı ekran görüntüsü
+      description: Yalnızca kurgusal veri kullan; kişisel fotoğraf, video ve sağlık verisi paylaşma.

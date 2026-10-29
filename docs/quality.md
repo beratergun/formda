@@ -2,17 +2,17 @@
 
 Kayıtlar ve medya testlerde tamamen kurgusaldır. Ham tarayıcı raporları ve ekran görüntüleri `docs/qa/` altında yerel tutulur; repoya yüklenmez.
 
-| Kontrol | Sonuç / kapsam |
-|---|---|
-| ESLint / strict TypeScript | Geçti |
-| Vitest | 94 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama |
-| Domain kapsamı | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6 |
-| Playwright | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit |
-| Mobil Lighthouse | Son ölçüm: performans 96 · erişilebilirlik 100 · en iyi uygulamalar 100; yerel üretim derlemesi, mobil profil. Önceki performans ölçümü 98. |
-| WCAG otomasyonu | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok |
-| Görsel QA | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri |
-| Android kaynak paketi | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor |
-| APK | Gradle, Android lint ve imza doğrulaması GitHub Actions yayın aşamasında tamamlanır |
+| Kontrol                    | Sonuç / kapsam                                                                                                                              |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| ESLint / strict TypeScript | Geçti                                                                                                                                       |
+| Vitest                     | 95 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama                                            |
+| Domain kapsamı             | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6                                                                                      |
+| Playwright                 | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit                              |
+| Mobil Lighthouse           | Son ölçüm: performans 96 · erişilebilirlik 100 · en iyi uygulamalar 100; yerel üretim derlemesi, mobil profil. Önceki performans ölçümü 98. |
+| WCAG otomasyonu            | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok                                                                              |
+| Görsel QA                  | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri                                                                             |
+| Android kaynak paketi      | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor                                                                              |
+| APK                        | Gradle, Android lint ve imza doğrulaması GitHub Actions yayın aşamasında tamamlanır                                                         |
 
 Tarayıcı testleri karşılama, tam 219 kcal öğün, kalıcı kayıt, çevrimdışı su kaydı, iki antrenman seti ve dinlenme sayacı, ilerleme grafiği, Cuma planı, fotoğraf karşılaştırması, vlog oynatma ve tam yedek gidiş dönüşünü kapsar. Kamera akışı ve vlog dosyası çalışma anında üretilir; kişisel veya dışarıdan indirilmiş medya kullanılmaz.
 
