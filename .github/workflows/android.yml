@@ -28,7 +28,7 @@ jobs:
           node-version: 22
           cache: npm
       - name: Set signing file path
-        run: echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/yol-release.jks" >> "$GITHUB_ENV"
+        run: echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/formda-release.jks" >> "$GITHUB_ENV"
       - uses: actions/setup-java@v6.1.0
         with:
           distribution: temurin
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/cache@v6.1.0
         with:
           path: ~/.android/debug.keystore
-          key: yol-debug-certificate-v1
+          key: formda-debug-certificate-v1
       - run: npm ci
       - run: npm run lint && npm run typecheck && npm run test
       - run: npm run android:sync
@@ -66,22 +66,22 @@ jobs:
           VERSION=$(node -p "require('./package.json').version")
           mkdir -p apk
           if [ "$HAS_SIGNING" = "true" ]; then
-            cp android/app/build/outputs/apk/release/app-release.apk "apk/Yol-v$VERSION.apk"
+            cp android/app/build/outputs/apk/release/app-release.apk "apk/Formda-v$VERSION.apk"
             echo "Release signing configured" >> "$GITHUB_STEP_SUMMARY"
           else
-            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/Yol-v$VERSION.apk"
+            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/Formda-v$VERSION.apk"
             echo "Debug APK: Android development certificate; release secrets are not configured" >> "$GITHUB_STEP_SUMMARY"
           fi
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
-          "$BUILD_TOOLS/apksigner" verify --verbose "apk/Yol-v$VERSION.apk"
-          (cd apk && sha256sum "Yol-v$VERSION.apk" > "Yol-v$VERSION.apk.sha256")
+          "$BUILD_TOOLS/apksigner" verify --verbose "apk/Formda-v$VERSION.apk"
+          (cd apk && sha256sum "Formda-v$VERSION.apk" > "Formda-v$VERSION.apk.sha256")
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: Yol-android-apk
+          name: Formda-android-apk
           path: apk/
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: Yol-android-debug
+          name: Formda-android-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
       - name: Attach APK to release
         if: github.event_name == 'release'

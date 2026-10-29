@@ -79,13 +79,13 @@ function AppLayout() {
   }, [location.pathname]);
   useEffect(() => {
     const sync = () => setTheme(localStorage.getItem('yol-theme') || 'system');
-    window.addEventListener('yol-theme-change', sync);
-    return () => window.removeEventListener('yol-theme-change', sync);
+    window.addEventListener('formda-theme-change', sync);
+    return () => window.removeEventListener('formda-theme-change', sync);
   }, []);
   useEffect(() => {
     const show = (event: Event) => setError((event as CustomEvent<string>).detail);
-    window.addEventListener('yol-export-error', show);
-    return () => window.removeEventListener('yol-export-error', show);
+    window.addEventListener('formda-export-error', show);
+    return () => window.removeEventListener('formda-export-error', show);
   }, [setError]);
   const onFood = (meal: MealId = 'kahvalti') => {
     setMeal(meal);
@@ -110,7 +110,7 @@ function AppLayout() {
             <header className="topbar">
               <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
                 <span className="brand-mark">
-                  <RouteIcon size={21} />
+                  <img src={import.meta.env.BASE_URL + 'icons/icon.svg'} width="28" height="28" alt="" />
                 </span>
                 {APP_NAME}
                 <span className="brand-dot">/</span>

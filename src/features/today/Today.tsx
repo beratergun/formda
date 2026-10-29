@@ -248,7 +248,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           <Leaf size={20} />
         </span>
         <div>
-          <p className="eyebrow">YOL ARKADAŞIN</p>
+          <p className="eyebrow">KİŞİSEL KOÇUN</p>
           <h2>Bugünün küçük notları</h2>
         </div>
       </div>

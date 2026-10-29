@@ -1,6 +1,6 @@
 import { chromium, expect } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
-const base = process.argv[2] || 'http://127.0.0.1:5173/yol/';
+const base = process.argv[2] || 'http://127.0.0.1:5173/formda/';
 await mkdir('docs/screenshots/raw', { recursive: true });
 const browser = await chromium.launch();
 const context = await browser.newContext({
@@ -33,7 +33,7 @@ try {
     await page.evaluate((t) => {
       localStorage.setItem('yol-theme', t);
       document.documentElement.dataset.theme = t;
-      window.dispatchEvent(new Event('yol-theme-change'));
+      window.dispatchEvent(new Event('formda-theme-change'));
     }, theme);
     for (const [name, heading, key] of [
       ['Bugün', 'Bugün, kendin için.', 'today'],

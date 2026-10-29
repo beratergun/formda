@@ -18,7 +18,7 @@ import { defaultPlan } from '../domain/program';
 import { todayKey } from '../domain/dates';
 import { hydrateMedia } from './media/binary';
 
-export class YolDatabase extends Dexie {
+export class FormdaDatabase extends Dexie {
   dayLog!: Table<DayLog, string>;
   mealEntry!: Table<MealEntry, string>;
   workoutLog!: Table<WorkoutLog, string>;
@@ -52,7 +52,7 @@ export class YolDatabase extends Dexie {
     this.media.hook('reading', hydrateMedia);
   }
 }
-export const db = new YolDatabase();
+export const db = new FormdaDatabase();
 export async function seedDatabase(database = db) {
   if ((await database.meta.get('seedVersion')) && (await database.meta.get('libraryVersion')))
     return;

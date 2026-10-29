@@ -1,7 +1,7 @@
 # Yerel çalışma dosyaları: GitHub'a gitmez
 PROMPT.md
 AGENTS.md
-CODEX_MESAJI.txt
+CODEX_MESAJI*.txt
 reference/
 
 # Bağımlılıklar ve derleme çıktıları

@@ -3,7 +3,7 @@ export function downloadBlob(blob: Blob, name: string) {
   if (isNative()) {
     void exportNative(blob, name).catch((error) =>
       window.dispatchEvent(
-        new CustomEvent('yol-export-error', {
+        new CustomEvent('formda-export-error', {
           detail: error instanceof Error ? error.message : 'Dosya dışa aktarılamadı.',
         }),
       ),
@@ -25,7 +25,7 @@ export async function shareBlob(blob: Blob, name: string) {
   const file = new File([blob], name, { type: blob.type });
   if (navigator.canShare?.({ files: [file] })) {
     try {
-      await navigator.share({ files: [file], title: 'Yol · Kendime bir adım' });
+      await navigator.share({ files: [file], title: 'Formda · Kendime bir adım' });
       return;
     } catch (error) {
       if (error instanceof Error && error.name === 'AbortError') return;

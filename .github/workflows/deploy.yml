@@ -27,7 +27,7 @@ jobs:
       - run: npx playwright test
       - name: Mobile Lighthouse
         run: |
-          npm run preview -- --port 4173 > /tmp/yol-preview.log 2>&1 &
+          npm run preview -- --port 4173 > /tmp/formda-preview.log 2>&1 &
           node scripts/a11y.mjs
           node scripts/lighthouse.mjs
       - uses: actions/upload-artifact@v7.0.2

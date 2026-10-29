@@ -11,12 +11,12 @@ const result = {
   appId: config.appId,
   appName: config.appName,
   remoteServer: config.server?.url || null,
-  manifestId: text.includes('io.github.beratergun.yol'),
+  manifestId: text.includes('io.github.beratergun.formda'),
   manifestVersion: text.includes('1.0.0'),
 };
 console.log(JSON.stringify(result, null, 2));
 if (
-  result.appId !== 'io.github.beratergun.yol' ||
+  result.appId !== 'io.github.beratergun.formda' ||
   result.remoteServer ||
   !result.manifestId ||
   !result.manifestVersion

@@ -1,5 +1,5 @@
 import { it, expect, afterEach, vi } from 'vitest';
-import { YolDatabase, seedDatabase } from './db';
+import { FormdaDatabase, seedDatabase } from './db';
 import { LocalRepository } from './repositories';
 import { saveMedia, readMedia, deleteMedia, clearAllData } from './media/opfs';
 import { decodeBackup, encodeBackup, encodeBlobStream } from './backup/codec';
@@ -9,7 +9,7 @@ import type { BackupDocument } from './backup/schema';
 import { decodeBlobBackup } from './backup/stream';
 import { zipSync, strToU8 } from 'fflate';
 
-const databases: YolDatabase[] = [];
+const databases: FormdaDatabase[] = [];
 it('rejects oversized ZIP32 output before reading media or replacing any records', async () => {
   const database = fresh();
   await seedDatabase(database);
@@ -37,7 +37,7 @@ it('rejects oversized ZIP32 output before reading media or replacing any records
   expect(await database.food.count()).toBe(619);
 });
 function fresh() {
-  const database = new YolDatabase(`test-${crypto.randomUUID()}`);
+  const database = new FormdaDatabase(`test-${crypto.randomUUID()}`);
   databases.push(database);
   return database;
 }
@@ -223,4 +223,22 @@ it('rejects a media byte corruption even if the stored file size is unchanged', 
   bytes[index] ^= 1;
   expect(() => decodeBackup(bytes)).toThrow('bütünlük');
   await expect(decodeBlobBackup(new Blob([new Uint8Array(bytes)]))).rejects.toThrow('bütünlük');
+});
+
+it('reopens the original database after rebranding without resetting records', async () => {
+  const original = new FormdaDatabase();
+  expect(original.name).toBe('yol-local');
+  databases.push(original);
+  await seedDatabase(original);
+  await original.dayLog.put({ ...emptyDay('2026-10-30'), note: 'Preserved journal', water: 7 });
+  await original.profile.update('main', { name: 'Local fixture' });
+  await original.food.update('egg', { favorite: true });
+  original.close();
+  const reopened = new FormdaDatabase();
+  databases.push(reopened);
+  await seedDatabase(reopened);
+  expect((await reopened.dayLog.get('2026-10-30'))?.note).toBe('Preserved journal');
+  expect((await reopened.dayLog.get('2026-10-30'))?.water).toBe(7);
+  expect((await reopened.profile.get('main'))?.name).toBe('Local fixture');
+  expect((await reopened.food.get('egg'))?.favorite).toBe(true);
 });

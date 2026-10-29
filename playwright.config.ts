@@ -7,7 +7,7 @@ export default defineConfig({
   expect: { timeout: 15000 },
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://127.0.0.1:4173/yol/',
+    baseURL: 'http://127.0.0.1:4173/formda/',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     locale: 'tr-TR',
@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run preview -- --port 4173',
-    url: 'http://127.0.0.1:4173/yol/',
+    url: 'http://127.0.0.1:4173/formda/',
     reuseExistingServer: !process.env.CI,
   },
 });

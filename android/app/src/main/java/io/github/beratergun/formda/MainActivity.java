@@ -1,4 +1,4 @@
-package io.github.beratergun.yol;
+package io.github.beratergun.formda;
 
 import android.os.Bundle;
 import com.getcapacitor.BridgeActivity;

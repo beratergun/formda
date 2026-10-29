@@ -1,7 +1,7 @@
 import lighthouse from 'lighthouse';
 import { chromium } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
-const url = process.argv[2] || 'http://127.0.0.1:4173/yol/';
+const url = process.argv[2] || 'http://127.0.0.1:4173/formda/';
 for (let attempt = 0; attempt < 30; attempt++) {
   try {
     if ((await fetch(url)).ok) break;

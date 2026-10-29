@@ -70,7 +70,7 @@ for (const theme of ['light', 'dark']) {
   const base = svg(
     1280,
     1024,
-    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'Yol /', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Her gün kendine bir adım.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
+    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'Formda', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Kişisel spor ve beslenme koçun.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
   );
   const layers = [];
   for (let i = 0; i < 3; i++) {
@@ -90,7 +90,7 @@ for (const theme of ['light', 'dark']) {
 const social = svg(
   1280,
   640,
-  `<defs><radialGradient id="g"><stop stop-color="#236764"/><stop offset="1" stop-color="#0e3435"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#9ac8a8" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#99c8b3" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'Yol /', 78, '#e9f2df', 750)}${text(68, 238, 'Her gün kendine', 40, '#e9f2df', 650)}${text(68, 290, 'bir adım.', 40, '#e9f2df', 650)}${text(68, 352, 'Cebindeki spor ve beslenme asistanı.', 21, '#bdd8ca')}${text(68, 420, 'PWA + Android', 18, '#d8eaa6', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#bdd8ca')}${text(68, 570, 'beratergun.github.io/yol', 20, '#e9f2df', 600)}`,
+  `<defs><radialGradient id="g"><stop stop-color="#236764"/><stop offset="1" stop-color="#0e3435"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#9ac8a8" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#99c8b3" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'Formda', 78, '#e9f2df', 750)}${text(68, 238, 'Kişisel spor ve', 40, '#e9f2df', 650)}${text(68, 290, 'beslenme koçun.', 40, '#e9f2df', 650)}${text(68, 352, 'Kişisel hedeflerin, cihazında.', 21, '#bdd8ca')}${text(68, 420, 'PWA + Android', 18, '#d8eaa6', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#bdd8ca')}${text(68, 570, 'beratergun.github.io/formda', 20, '#e9f2df', 600)}`,
 );
 await sharp(social)
   .composite([
@@ -135,7 +135,7 @@ for (const [name, label] of sequence) {
   const bg = svg(
     550,
     1060,
-    `<rect width="550" height="1060" fill="#e9f1ed"/>${text(68, 43, 'Yol /', 28, '#173f3c', 750)}${text(68, 76, label, 18, '#526d67')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#526d67')}`,
+    `<rect width="550" height="1060" fill="#e9f1ed"/>${text(68, 43, 'Formda', 28, '#173f3c', 750)}${text(68, 76, label, 18, '#526d67')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#526d67')}`,
   );
   frames.push(
     await sharp(bg)

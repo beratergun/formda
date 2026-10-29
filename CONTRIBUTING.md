@@ -2,7 +2,7 @@
 
 Katkılar küçük ve gözden geçirilebilir olsun. Arayüz metinlerini Türkçe, kodu ve Conventional Commit mesajlarını İngilizce yaz.
 
-1. Node 22.12+ ile `npm ci` çalıştır; `npm run dev` adresinin `/yol/` yolunu aç.
+1. Node 22.12+ ile `npm ci` çalıştır; `npm run dev` adresinin `/formda/` yolunu aç.
 2. Hesaplama ve karar kurallarını React'ten bağımsız `src/domain/` içinde tut.
 3. Fotoğraf, video ve günlükleri bir sunucuya gönderme. Yeni ağ bağlantısını varsayılan davranışa ekleme.
 4. Gerçek kişi fotoğrafı, sağlık kaydı, ZIP yedeği, anahtar veya ortam sırrı ekleme. Demo için yalnızca kurgusal veriler kullan.

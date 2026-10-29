@@ -8,4 +8,4 @@
 
 ## Ek teslim kapsamı
 
-Kullanıcı PWA yükleme kartı ve iPhone görsel rehberi, Capacitor Android (`io.github.beratergun.yol`), GitHub Secrets ile koşullu release imzalama, APK workflow'u ve v1.0.0 APK eki istedi. Bu dağıtım işi 9b aşamasında, tüm ürün kontrolleri tamamlanmadan yayınlanmadan yürütülecek. README ve tanıtım metinlerinde ürün uygulama olarak sunulacak.
+Kullanıcı PWA yükleme kartı ve iPhone görsel rehberi, Capacitor Android (`io.github.beratergun.formda`), GitHub Secrets ile koşullu release imzalama, APK workflow'u ve v1.0.0 APK eki istedi. Bu dağıtım işi 9b aşamasında, tüm ürün kontrolleri tamamlanmadan yayınlanmadan yürütülecek. README ve tanıtım metinlerinde ürün uygulama olarak sunulacak.

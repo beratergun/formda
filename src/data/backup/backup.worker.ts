@@ -1,6 +1,6 @@
 import { decodeBackup, encodeBackup, encodeBlobStream } from './codec';
 import type { BackupDocument } from './schema';
-import { YolDatabase } from '../db';
+import { FormdaDatabase } from '../db';
 import { LocalRepository } from '../repositories';
 import { readMedia } from '../media/opfs';
 import { decodeBlobBackup } from './stream';
@@ -20,7 +20,7 @@ self.onmessage = async (
     const { id, action, document, files, bytes } = event.data;
     let result;
     if (action === 'create') {
-      const database = new YolDatabase(event.data.databaseName);
+      const database = new FormdaDatabase(event.data.databaseName);
       try {
         const data = await new LocalRepository(database).load();
         const media = await database.media.toArray();

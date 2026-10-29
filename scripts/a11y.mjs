@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { writeFile, mkdir } from 'node:fs/promises';
-const url = process.argv[2] || 'http://127.0.0.1:4173/yol/';
+const url = process.argv[2] || 'http://127.0.0.1:4173/formda/';
 for (let attempt = 0; attempt < 30; attempt++) {
   try {
     if ((await fetch(url)).ok) break;
@@ -54,13 +54,23 @@ try {
     await page.evaluate((t) => {
       localStorage.setItem('yol-theme', t);
       document.documentElement.dataset.theme = t;
-      window.dispatchEvent(new Event('yol-theme-change'));
+      window.dispatchEvent(new Event('formda-theme-change'));
     }, theme);
     for (const name of ['Bugün', 'Günlük', 'İlerleme', 'Planım', 'Profil']) {
       await page.getByRole('link', { name, exact: true }).click();
-      const headings={'Bugün':'Bugün, kendin için.','Günlük':'Biriken anların.','İlerleme':'Yol aldığın her yer.','Planım':'Rotanı sen çiz.','Profil':'Yol, sana göre.'};
-      await page.getByRole('heading',{name:headings[name],exact:true}).waitFor();
-      await page.waitForFunction(()=>Array.from(document.querySelectorAll('main .page-enter')).every(e=>getComputedStyle(e).opacity==='1'));
+      const headings = {
+        Bugün: 'Bugün, kendin için.',
+        Günlük: 'Biriken anların.',
+        İlerleme: 'Yol aldığın her yer.',
+        Planım: 'Rotanı sen çiz.',
+        Profil: 'Formda, sana göre.',
+      };
+      await page.getByRole('heading', { name: headings[name], exact: true }).waitFor();
+      await page.waitForFunction(() =>
+        Array.from(document.querySelectorAll('main .page-enter')).every(
+          (e) => getComputedStyle(e).opacity === '1',
+        ),
+      );
       await scan(`${name}-${theme}`);
       if (name === 'İlerleme')
         for (const segment of ['Kilo ve vücut', 'Beslenme', 'Antrenman', 'Alışkanlık']) {

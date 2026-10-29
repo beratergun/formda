@@ -1,4 +1,4 @@
-package io.github.beratergun.yol;
+package io.github.beratergun.formda;
 
 import android.Manifest;
 import com.getcapacitor.JSObject;

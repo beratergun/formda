@@ -4,7 +4,6 @@ import {
   ArrowLeft,
   Check,
   LockKeyhole,
-  Route as RouteIcon,
   Leaf,
   Camera,
 } from 'lucide-react';
@@ -61,9 +60,9 @@ export function Onboarding() {
       <div className="row between">
         <span className="brand">
           <span className="brand-mark">
-            <RouteIcon size={22} />
+            <img src={import.meta.env.BASE_URL + 'icons/icon.svg'} width="28" height="28" alt="" />
           </span>
-          Yol<span className="brand-dot">/</span>
+          Formda<span className="brand-dot">/</span>
         </span>
         <Chip>{step + 1} / 4</Chip>
       </div>
@@ -107,7 +106,7 @@ export function Onboarding() {
             </span>
           </div>
           <div>
-            <p className="eyebrow">CEBİNDEKİ YOL ARKADAŞIN</p>
+            <p className="eyebrow">KİŞİSEL SPOR VE BESLENME KOÇUN</p>
             <h1>
               İyi ki geldin.
               <br />

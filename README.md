@@ -1,24 +1,24 @@
-<p align="center"><img src="public/icons/icon.svg" width="76" alt="Yol uygulama ikonu"></p>
-<h1 align="center">Yol /</h1>
-<p align="center"><strong>Her gün kendine bir adım.</strong><br>Cebindeki kişisel spor ve beslenme asistanı.</p>
+<p align="center"><img src="public/icons/icon.svg" width="76" alt="Formda uygulama ikonu"></p>
+<h1 align="center">Formda</h1>
+<p align="center"><strong>Kişisel spor ve beslenme koçun.</strong><br>Cebindeki kişisel spor ve beslenme asistanı.</p>
 <p align="center">
-  <a href="https://beratergun.github.io/yol/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle (PWA)"></a>
-  <a href="https://github.com/beratergun/yol/releases/download/v1.0.0/Yol-v1.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
+  <a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle (PWA)"></a>
+  <a href="https://github.com/beratergun/formda/releases/download/v1.0.0/Yol-v1.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
 </p>
 <p align="center">
-  <a href="https://github.com/beratergun/yol/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/yol/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
-  <a href="https://github.com/beratergun/yol/actions/workflows/android.yml"><img src="https://github.com/beratergun/yol/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
+  <a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
+  <a href="https://github.com/beratergun/formda/actions/workflows/android.yml"><img src="https://github.com/beratergun/formda/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/lisans-MIT-076f74" alt="MIT lisansı"></a>
   <img src="https://img.shields.io/badge/PWA-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-076f74" alt="Çevrimdışı PWA">
   <img src="https://img.shields.io/badge/TypeScript-strict-3178c6" alt="Strict TypeScript">
 </p>
-<p align="center"><a href="#english">English</a> · <a href="https://beratergun.github.io/yol/">Uygulamayı aç</a> · <a href="https://github.com/beratergun/yol/releases/tag/v1.0.0">v1.0.0</a></p>
+<p align="center"><a href="#english">English</a> · <a href="https://beratergun.github.io/formda/">Uygulamayı aç</a> · <a href="https://github.com/beratergun/formda/releases/tag/v1.0.0">v1.0.0</a></p>
 
 ![Telefon çerçevesinde Bugün, Antrenman ve fotoğraf karşılaştırması](docs/screenshots/light-collage.png)
 
-<p align="center"><img src="docs/demo.gif" width="360" alt="Yol uygulamasının altı ekranlık kısa demo GIF'i"></p>
+<p align="center"><img src="docs/demo.gif" width="360" alt="Formda uygulamasının altı ekranlık kısa demo GIF'i"></p>
 
-**Yol**, ne yediğini, nasıl hareket ettiğini ve gününün nasıl geçtiğini aynı yerde tutan, telefona kurulabilen bir uygulama. PWA olarak Android ve iPhone'da; aynı React kodunun Capacitor paketiyle Android APK olarak çalışır. Hesap açmanı veya abonelik başlatmanı istemez.
+**Formda**, ne yediğini, nasıl hareket ettiğini ve gününün nasıl geçtiğini aynı yerde tutan, telefona kurulabilen bir uygulama. PWA olarak Android ve iPhone'da; aynı React kodunun Capacitor paketiyle Android APK olarak çalışır. Hesap açmanı veya abonelik başlatmanı istemez.
 
 Ekran görüntülerindeki Deniz, günlükler ve ölçüler tamamen **kurgusaldır**. Fotoğraflar çizilmiş silüetlerden oluşur. Gerçek kişi fotoğrafı, videosu veya sağlık kaydı bu repoda bulunmaz.
 
@@ -85,13 +85,13 @@ Hesaplar React'ten bağımsız `src/domain/` altında. 5 yıllık plan depoya g�
 Node.js **22.12+** ve npm gerekir. Android için JDK 21, Android SDK 36 ve Android Studio kullanabilirsin.
 
 ```sh
-git clone https://github.com/beratergun/yol.git
-cd yol
+git clone https://github.com/beratergun/formda.git
+cd formda
 npm ci
 npm run dev
 ```
 
-Vite adresinin `/yol/` yolunu aç. Statik dağıtım için hash yönlendirme kullanılır.
+Vite adresinin `/formda/` yolunu aç. Statik dağıtım için hash yönlendirme kullanılır.
 
 ```sh
 npm run lint
@@ -140,7 +140,7 @@ Katkılar için [CONTRIBUTING](CONTRIBUTING.md), güvenlik için [SECURITY](SECU
 
 ## English
 
-**Yol is a personal fitness and nutrition app that stays on your device.** Install the PWA on Android or iPhone, or download the Android APK above. Both use the same React source. GitHub Pages distributes the static app; it does not receive your journal or media.
+**Formda is a personal fitness and nutrition app that stays on your device.** Install the PWA on Android or iPhone, or download the Android APK above. Both use the same React source. GitHub Pages distributes the static app; it does not receive your journal or media.
 
 Track meals using local Turkish sentence parsing, search, recipes, portions and explicit raw/cooked food entries. Follow workouts set by set with weight, reps, RPE, rest alarms, previous sessions and progression suggestions. An 84-exercise library includes instructions, safety guidance, muscle maps and alternatives. Swimming and cardio have dedicated recording controls.
 

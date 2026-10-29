@@ -3,10 +3,10 @@ def releaseStorePath = System.getenv('ANDROID_KEYSTORE_PATH')
 def hasReleaseSigning = releaseStorePath && file(releaseStorePath).exists()
 
 android {
-    namespace = "io.github.beratergun.yol"
+    namespace = "io.github.beratergun.formda"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "io.github.beratergun.yol"
+        applicationId "io.github.beratergun.formda"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

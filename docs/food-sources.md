@@ -6,4 +6,4 @@ Ek kayıtlar [USDA FoodData Central SR Legacy, Nisan 2018](https://fdc.nal.usda.
 
 Türkçe adlar arama kolaylığı içindir. Aynı besinin farklı hazırlama ve işleme çeşitleri SR numarasıyla ayırt edilir; özgün açıklama arama takma adı olarak korunur. Her çeşit ayrı ölçülmüş besin kaydıdır. Tarifler ve paketli ürünlerde kullanıcının gerçek tarifi veya etiketi esas alınır.
 
-Veriyi yeniden üretmek için resmi SR Legacy JSON arşivini geçici `yol-food-source` klasörüne çıkarıp `node scripts/seed-usda.mjs` çalıştır. Kaynak arşiv uygulama deposuna eklenmez.
+Veriyi yeniden üretmek için resmi SR Legacy JSON arşivini geçici `formda-food-source` klasörüne çıkarıp `node scripts/seed-usda.mjs` çalıştır. Kaynak arşiv uygulama deposuna eklenmez.

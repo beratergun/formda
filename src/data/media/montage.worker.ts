@@ -15,7 +15,7 @@ self.onmessage = async (event: MessageEvent<{ blob: Blob; record: MediaRecord }>
     bitmap.close();
     context.fillStyle = '#e5f3dc';
     context.font = '30px sans-serif';
-    context.fillText('Yol · ' + record.date, 35, 918);
+    context.fillText('Formda · ' + record.date, 35, 918);
     self.postMessage({ bitmap: canvas.transferToImageBitmap() });
   } catch {
     self.postMessage({ error: 'Fotoğraf karesi hazırlanamadı.' });

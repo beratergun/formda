@@ -56,7 +56,7 @@ function MediaViewer({ record, onClose }: { record: MediaRecord; onClose: () => 
           if (blob)
             downloadBlob(
               blob,
-              `yol-${record.date}.${record.kind === 'vlog' ? (record.mime.includes('mp4') ? 'mp4' : 'webm') : 'webp'}`,
+              `formda-${record.date}.${record.kind === 'vlog' ? (record.mime.includes('mp4') ? 'mp4' : 'webm') : 'webp'}`,
             );
         }}
       >
@@ -135,7 +135,7 @@ export function Journal() {
           photo: photo?.thumb,
         });
       });
-      await shareBlob(blob, `yol-rapor-${date}.png`);
+      await shareBlob(blob, `formda-rapor-${date}.png`);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Rapor hazırlanamadı.');
     } finally {
@@ -160,7 +160,7 @@ export function Journal() {
       const blob = await createMontage(unique, setMontageProgress, controller.current.signal);
       await shareBlob(
         blob,
-        `yol-bir-saniye.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
+        `formda-bir-saniye.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Montaj hazırlanamadı.');
@@ -471,7 +471,7 @@ export function Journal() {
             )}
           </Card>
           <Card className="stack">
-            <p className="eyebrow">YOL ARKADAŞININ NOTU</p>
+            <p className="eyebrow">KOÇUNUN NOTU</p>
             {report.comments.map((comment) => (
               <p key={comment}>{comment}</p>
             ))}

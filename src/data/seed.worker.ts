@@ -1,6 +1,6 @@
-import { YolDatabase, seedDatabase } from './db';
+import { FormdaDatabase, seedDatabase } from './db';
 self.onmessage = async (event: MessageEvent<string>) => {
-  const database = new YolDatabase(event.data);
+  const database = new FormdaDatabase(event.data);
   try {
     await seedDatabase(database);
     self.postMessage({});

@@ -2,9 +2,9 @@ import { chromium, expect } from '@playwright/test';
 import { mkdir, writeFile, mkdtemp, rm, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-const url = 'https://beratergun.github.io/yol/';
+const url = 'https://beratergun.github.io/formda/';
 const root = await realpath(tmpdir()),
-  profile = await mkdtemp(path.join(root, 'yol-live-'));
+  profile = await mkdtemp(path.join(root, 'formda-live-'));
 const context = await chromium.launchPersistentContext(profile, {
   headless: true,
   viewport: { width: 412, height: 915 },
@@ -74,6 +74,6 @@ try {
 } finally {
   await context.close();
   const resolved = await realpath(profile);
-  if (path.dirname(resolved) === root && path.basename(resolved).startsWith('yol-live-'))
+  if (path.dirname(resolved) === root && path.basename(resolved).startsWith('formda-live-'))
     await rm(resolved, { recursive: true, force: true });
 }

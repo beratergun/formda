@@ -16,3 +16,8 @@
 | 11  | README ve görseller                                        | Tamamlandı: iki dil, iki kurulum düğmesi, 16 demo ekranı, telefon kolajları, 6 kare GIF, sosyal önizleme ve yayın belgeleri; 95 birim testi |
 | 12  | GitHub Pages ve v1.0.0                                     | Tamamlandı                                                                                                                                  |
 | 13  | LinkedIn ve CV paketi                                      | Tamamlandı                                                                                                                                  |
+
+## Formda v2 (30 Ekim 2026)
+
+- A — Yerel marka/veri/Android çalışması tamamlandı; 96 birim, 8 E2E, 18 Axe görünümü, Lighthouse 99/100/100. Repo formda olarak yeniden adlandırıldı. Commit sonrası Pages/Android CI ve eski adres yönlendirmesi doğrulanacak.
+- B, C, D, E, F — Sırayla bekliyor. Henüz uygulanmış veya yayınlanmış sayılmaz.

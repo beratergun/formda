@@ -1,7 +1,7 @@
 # Kararlar ve varsayımlar
 
 - Başlangıçta depoda yalnızca özel şartname ve salt okunur prototip vardı. Uygulama temiz bir React 18 + strict TypeScript projesi olarak kuruluyor.
-- Yayın hedefi kullanıcının seçtiği `beratergun/yol` GitHub Pages adresidir. Hash tabanlı yönlendirme, statik sunucuda sayfa yenilemelerini güvenilir kılar.
+- Yayın hedefi kullanıcının seçtiği `beratergun/formda` GitHub Pages adresidir. Hash tabanlı yönlendirme, statik sunucuda sayfa yenilemelerini güvenilir kılar.
 - Prototipteki kişisel isim, ölçüler ve sabit tarih yeni kullanıcı için varsayılan yapılmaz. Tanıtım materyallerinde yalnızca kurgusal veriler kullanılır.
 - İlk kilometre taşında yalnızca o aşamada uygulanmış akışlar UI QA kapsamına alınır; sonraki ekranlar ilgili kilometre taşlarında eklenip test edilir.
 - Gün anahtarları Europe/Istanbul takvimine göre hesaplanır; UTC gece yarısı farkı kayıt gününü değiştirmez.
@@ -16,3 +16,10 @@
 - Video oluşturma API'leri yoksa dönüşüm ve bir saniye montajı, dış kaynak içermeyen tek bir HTML slayt gösterisi olarak dışa aktarılır. Vlog için kapak kareleri kullanılır; azaltılmış hareket tercihinde kareler sabit listeye dönüşür.
 - Yedek ZIP32 girişleri worker'da 64 KB parçalarla okunur; CRC ve şema doğrulaması bitmeden mevcut kayıtlar değiştirilmez. ZIP64 ve çok parçalı ZIP kabul edilmez.
 - Blob yazımını reddeden IndexedDB motorlarında yalnızca bu hata için MIME türüyle birlikte Uint8Array uyumluluk kodlaması kullanılır; okuma katmanı tekrar Blob üretir. Toplu geri yüklemenin ilk denemesi başarısızsa transaction geri alınır, uyumluluk kodlamasıyla atomik olarak tekrar denenir.
+
+## Formda v2 · Aşama A
+
+- PWA aynı HTTPS origin üzerinde /formda/ yoluna taşınır. IndexedDB adı yol-local, OPFS klasörü yol-media ve localStorage anahtarları aynen korunur; yol-backup v1 biçimi eski tam yedekleri açmak için korunur. Takvim UID'leri tekrar içe aktarmada kopya oluşturmamak için korunur.
+- Android uygulama kimliği kullanıcı isteğiyle io.github.beratergun.formda oldu. Ayrı Android sandbox'ları otomatik okunamaz: eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp Formda'ya geri yükle. Eski kurulumu yedek doğrulanmadan kaldırma.
+- Eski PWA'nın önbelleğe alınmış sürümü çevrimdışı çalışabilir; yönlendirme internet bağlantısıyla alınır. Yönlendirme hiçbir IndexedDB/OPFS/localStorage verisini silmez.
+- Android workflow push, published release ve workflow_dispatch tetiklerinde koşulsuz apk job çalıştırır; yalnızca imzalama adımları Secrets'a bağlıdır.

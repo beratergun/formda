@@ -18,7 +18,7 @@ export async function exportNative(blob: Blob, name: string) {
     import('@capacitor/filesystem'),
     import('@capacitor/share'),
   ]);
-  const path = `yol-exports/${Date.now()}-${name.replace(/[^\w.-]/g, '_')}`;
+  const path = `formda-exports/${Date.now()}-${name.replace(/[^\w.-]/g, '_')}`;
   await Filesystem.writeFile({ path, data: '', directory: Directory.Cache, recursive: true });
   const chunkSize = 192 * 1024;
   for (let offset = 0; offset < blob.size; offset += chunkSize) {
@@ -32,7 +32,7 @@ export async function exportNative(blob: Blob, name: string) {
   }
   const { uri } = await Filesystem.getUri({ path, directory: Directory.Cache });
   await Share.share({
-    title: 'Yol · Dosyan yanında',
+    title: 'Formda · Dosyan yanında',
     url: uri,
     dialogTitle: 'Cihaza kaydet veya paylaş',
   });

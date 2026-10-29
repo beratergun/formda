@@ -59,12 +59,12 @@ export function createIcs(settings: PlanSettings, start: string, end: string, no
     const plan = planFor(date, settings);
     if (plan.beforeStart || plan.ended) continue;
     events.push({
-      uid: `yol-${date}-${plan.type}@local`,
+      uid: `formda-${date}-${plan.type}@local`,
       date,
       time: plan.time,
       minutes:
         plan.type === 'strength' ? 75 : plan.type === 'swim' ? 45 : plan.type === 'rest' ? 10 : 30,
-      title: `Yol · ${plan.title}${plan.deload ? ' · Hafif hafta' : ''}`,
+      title: `Formda · ${plan.title}${plan.deload ? ' · Hafif hafta' : ''}`,
       description: `${plan.phase} · ${plan.week}. hafta${plan.assessment ? ' · Değerlendirme haftası' : ''}. ${plan.note}`,
     });
   }
@@ -78,10 +78,10 @@ export function createIcs(settings: PlanSettings, start: string, end: string, no
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Yol//Kişisel Plan//TR',
+    'PRODID:-//Formda//Kişisel Plan//TR',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'X-WR-CALNAME:Yol',
+    'X-WR-CALNAME:Formda',
     'X-WR-TIMEZONE:Europe/Istanbul',
     'BEGIN:VTIMEZONE',
     'TZID:Europe/Istanbul',

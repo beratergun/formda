@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.github.beratergun.yol',
-  appName: 'Yol',
+  appId: 'io.github.beratergun.formda',
+  appName: 'Formda',
   webDir: 'dist-native',
   backgroundColor: '#f3f6f4',
   loggingBehavior: 'none',

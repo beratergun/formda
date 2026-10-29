@@ -1,5 +1,5 @@
 import type { MediaRecord } from '../../domain/types';
-import { db, type YolDatabase } from '../db';
+import { db, type FormdaDatabase } from '../db';
 import { binaryMedia, blobStorageError } from './binary';
 
 export async function saveMedia(
@@ -49,7 +49,7 @@ export async function removeOpfs(path: string) {
     /* A missing file is already removed. */
   }
 }
-export async function deleteMedia(id: string, database: YolDatabase = db) {
+export async function deleteMedia(id: string, database: FormdaDatabase = db) {
   const record = await database.media.get(id);
   await database.media.delete(id);
   if (record?.opfsPath) await removeOpfs(record.opfsPath);

@@ -95,7 +95,7 @@ export function Profile() {
   const backup = () =>
     action(async () => {
       const blob = await createBackup();
-      downloadBlob(blob, `yol-tam-yedek-${todayKey()}.zip`);
+      downloadBlob(blob, `formda-tam-yedek-${todayKey()}.zip`);
       setMessage('Tam yedeğin cihaza indiriliyor.');
     });
   const setNewPin = () =>
@@ -130,7 +130,7 @@ export function Profile() {
       new Blob(['\ufeff' + rows.map((row) => row.map(safe).join(';')).join('\r\n')], {
         type: 'text/csv;charset=utf-8',
       }),
-      `yol-beslenme-${todayKey()}.csv`,
+      `formda-beslenme-${todayKey()}.csv`,
     );
   };
   const notify = async () => {
@@ -164,7 +164,7 @@ export function Profile() {
     <div className="stack page-enter">
       <div>
         <p className="eyebrow">SENİN ALANIN</p>
-        <h1>Yol, sana göre.</h1>
+        <h1>Formda, sana göre.</h1>
         <p className="muted">Tercihlerin, gizliliğin ve cihazındaki veriler.</p>
       </div>
       <InstallCard force />
@@ -258,7 +258,7 @@ export function Profile() {
               localStorage.setItem('yol-theme', e.target.value);
               if (e.target.value === 'system') delete document.documentElement.dataset.theme;
               else document.documentElement.dataset.theme = e.target.value;
-              window.dispatchEvent(new Event('yol-theme-change'));
+              window.dispatchEvent(new Event('formda-theme-change'));
             }}
           >
             <option value="system">Cihazı izle</option>
@@ -521,7 +521,7 @@ export function Profile() {
                 new Blob([createIcs(data.planSettings[0], icsStart, icsEnd)], {
                   type: 'text/calendar;charset=utf-8',
                 }),
-                'yol-plan.ics',
+                'formda-plan.ics',
               );
             } catch (e) {
               setError(e instanceof Error ? e.message : 'Takvim hazırlanamadı.');

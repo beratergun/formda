@@ -343,7 +343,7 @@ export function PhotoTimeline({ from, to }: { from?: string; to?: string } = {})
       );
       await shareBlob(
         blob,
-        `yol-donusum.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
+        `formda-donusum.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Video hazırlanamadı.');
@@ -468,7 +468,7 @@ export function PhotoTimeline({ from, to }: { from?: string; to?: string } = {})
               void readMedia(view).then((blob) =>
                 downloadBlob(
                   blob,
-                  `yol-${view.date}.${blob.type.includes('webp') ? 'webp' : 'jpg'}`,
+                  `formda-${view.date}.${blob.type.includes('webp') ? 'webp' : 'jpg'}`,
                 ),
               )
             }

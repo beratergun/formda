@@ -2,7 +2,7 @@
 
 ## [1.0.0] - 2026-10-30
 
-Yol'un telefona kurulabilen ilk sürümü.
+Formda'nın telefona kurulabilen ilk sürümü.
 
 - Standalone PWA, Android/iPhone kurulum rehberi, çevrimdışı kullanım, açık/koyu tema ve yerel fontlar.
 - Aynı React kaynak kodundan Capacitor Android paketi; otomatik debug ve isteğe bağlı imzalı release APK derlemesi.
@@ -16,4 +16,9 @@ Yol'un telefona kurulabilen ilk sürümü.
 
 APK, release imza sırları yoksa Android geliştirme sertifikalı debug varyantıdır. İmza ve SHA-256 doğrulaması yayın artifact'larıyla birlikte sağlanır.
 
-[1.0.0]: https://github.com/beratergun/yol/releases/tag/v1.0.0
+[1.0.0]: https://github.com/beratergun/formda/releases/tag/v1.0.0
+
+## Formda v2 · hazırlık
+
+- Marka, ikonlar, PWA yolu ve Android kimliği Formda olarak yenilendi.
+- Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp Formda'ya geri yükle.

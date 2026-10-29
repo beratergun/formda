@@ -10,7 +10,7 @@ import type {
   Targets,
   WorkoutLog,
 } from '../../domain/types';
-import { db, type YolDatabase } from '../db';
+import { db, type FormdaDatabase } from '../db';
 
 export interface AppData {
   dayLog: DayLog[];
@@ -43,7 +43,7 @@ export interface Repository {
   replace(patch: Partial<AppData>): Promise<void>;
 }
 export class LocalRepository implements Repository {
-  constructor(private database: YolDatabase = db) {}
+  constructor(private database: FormdaDatabase = db) {}
   async load(): Promise<AppData> {
     const values = await Promise.all(
       DATA_TABLES.map((name) => this.database.table(name).toArray()),

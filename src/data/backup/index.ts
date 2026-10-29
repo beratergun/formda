@@ -1,4 +1,4 @@
-import { db, seedDatabase, type YolDatabase } from '../db';
+import { db, seedDatabase, type FormdaDatabase } from '../db';
 import { clearAllData, removeOpfs } from '../media/opfs';
 import type { MediaRecord } from '../../domain/types';
 import type { decodeBackup } from './codec';
@@ -24,7 +24,7 @@ function runWorker<T>(payload: object): Promise<T> {
     worker.postMessage({ ...payload, id });
   });
 }
-export async function createBackup(database: YolDatabase = db) {
+export async function createBackup(database: FormdaDatabase = db) {
   const blob = await runWorker<Blob>({ action: 'create', databaseName: database.name });
   await database.meta.put({ key: 'lastBackupAt', value: new Date().toISOString() });
   return blob;
@@ -54,7 +54,7 @@ async function applyRecords(
   document: BackupDocument,
   media: MediaRecord[],
   mode: 'merge' | 'replace',
-  database: YolDatabase,
+  database: FormdaDatabase,
 ) {
   const previous = await database.media.toArray();
   // All validation and media decoding finish before the atomic replacement begins.

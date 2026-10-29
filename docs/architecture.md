@@ -1,6 +1,6 @@
 # Mimari
 
-Yol, aynı kaynak kodundan PWA ve Capacitor Android uygulaması üretir. GitHub Pages yalnızca statik varlıkları dağıtır. Uygulama sunucusu veya kullanıcı hesabı yoktur.
+Formda, aynı kaynak kodundan PWA ve Capacitor Android uygulaması üretir. GitHub Pages yalnızca statik varlıkları dağıtır. Uygulama sunucusu veya kullanıcı hesabı yoktur.
 
 ## Katmanlar
 

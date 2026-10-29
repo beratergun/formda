@@ -13,7 +13,7 @@ const frame = async (name, height) =>
 const cover = svg(
   1200,
   1200,
-  `<defs><radialGradient id="g"><stop stop-color="#235e59"/><stop offset="1" stop-color="#0d3032"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#8ac4a3" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#94c8b1" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'Yol /', 110, '#e9f2df', 750)}${text(78, 295, 'Her gün kendine', 48, '#e9f2df', 650)}${text(78, 360, 'bir adım.', 48, '#e9f2df', 650)}${text(78, 450, 'Yerel spor ve', 30, '#bbd5c9')}${text(78, 495, 'beslenme asistanı.', 30, '#bbd5c9')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#d8e9a5"/>${text(101, 593, 'PWA + Android', 25, '#183c37', 650)}${text(78, 688, 'Hesap yok.', 29, '#e9f2df', 600)}${text(78, 733, 'Sunucu yok.', 29, '#e9f2df', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#e9f2df', 600)}${text(78, 914, '95 test · 8 mobil E2E', 24, '#bbd5c9')}${text(78, 955, '%100 domain satır kapsamı', 24, '#bbd5c9')}${text(78, 1085, 'beratergun.github.io/yol', 25, '#e9f2df', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#94b9ae')}`,
+  `<defs><radialGradient id="g"><stop stop-color="#235e59"/><stop offset="1" stop-color="#0d3032"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#8ac4a3" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#94c8b1" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'Formda', 110, '#e9f2df', 750)}${text(78, 295, 'Her gün kendine', 48, '#e9f2df', 650)}${text(78, 360, 'bir adım.', 48, '#e9f2df', 650)}${text(78, 450, 'Yerel spor ve', 30, '#bbd5c9')}${text(78, 495, 'beslenme asistanı.', 30, '#bbd5c9')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#d8e9a5"/>${text(101, 593, 'PWA + Android', 25, '#183c37', 650)}${text(78, 688, 'Hesap yok.', 29, '#e9f2df', 600)}${text(78, 733, 'Sunucu yok.', 29, '#e9f2df', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#e9f2df', 600)}${text(78, 914, '95 test · 8 mobil E2E', 24, '#bbd5c9')}${text(78, 955, '%100 domain satır kapsamı', 24, '#bbd5c9')}${text(78, 1085, 'beratergun.github.io/formda', 25, '#e9f2df', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#94b9ae')}`,
 );
 await sharp(cover)
   .composite([{ input: await frame('today-light', 885), left: 748, top: 215 }])
@@ -49,7 +49,7 @@ for (const layout of layouts) {
   const base = svg(
     1080,
     1350,
-    `<rect width="1080" height="1350" fill="${bg}"/>${text(56, 92, 'Yol /', 38, ink, 750)}${text(56, 167, layout.title, 52, ink, 650)}${text(56, 217, layout.sub, 24, sub)}${text(56, 1250, 'Telefona kurulabilen yerel uygulama · PWA + Android', 24, ink, 600)}${text(56, 1301, 'Tamamen kurgusal demo · beratergun.github.io/yol', 19, sub)}`,
+    `<rect width="1080" height="1350" fill="${bg}"/>${text(56, 92, 'Formda', 38, ink, 750)}${text(56, 167, layout.title, 52, ink, 650)}${text(56, 217, layout.sub, 24, sub)}${text(56, 1250, 'Telefona kurulabilen yerel uygulama · PWA + Android', 24, ink, 600)}${text(56, 1301, 'Tamamen kurgusal demo · beratergun.github.io/formda', 19, sub)}`,
   );
   await sharp(base)
     .composite([
