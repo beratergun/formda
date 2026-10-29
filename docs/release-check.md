@@ -33,3 +33,14 @@ Bu sıra, boş repo → ilk push → Pages dağıtımı → canlı doğrulama �
 | README                 | GitHub görünümünde iki büyük düğme ve görseller hatasız yüklendi                                                                       |
 
 MCP'nin kurulu masaüstü tarayıcısında yerel antivirüs betiği enjekte edildiği görüldü. Uygulama ağ sonucu, bu eklentileri taşımayan ayrı test profilinde `scripts/live-check.mjs` ile doğrulandı. Cihazın güvenlik ayarları değiştirilmedi.
+
+## v1.0.0 teslimi
+
+- [Release](https://github.com/beratergun/yol/releases/tag/v1.0.0) yayınlandı; APK, PWA ZIP ve iki sağlama dosyası eklendi.
+- Etiket commit'i `751ef945f80ce723768fafd58845bf7bf1580582`; yazar, committer ve tagger Seyid Berat Ergün, GitHub release sahibi `beratergun`.
+- [Son uygulama kalite/Pages koşusu](https://github.com/beratergun/yol/actions/runs/40965745121) ve [APK koşusu](https://github.com/beratergun/yol/actions/runs/40965745198) başarılı.
+- [Release olayının APK derlemesi](https://github.com/beratergun/yol/actions/runs/40966380808) de başarılı; yayın ekleri bu koşunun çıktılarıyla güncellendi.
+- Son canlı mobil Lighthouse: **100 / 100 / 100**. İlk dağıtım ölçümü 90 / 100 / 100, CI ölçümü 96 / 100 / 100; ağ ve cihaz etkisi saklanmaz.
+- Canlı çevrimdışı kayıt ve kurulabilirlik denetimi tekrar geçti; dış alan adı/yazma isteği ve çalışma zamanı hatası yok.
+- Repo dışındaki `../yol-launch/` paketinde Türkçe yazı 202, İngilizce yazı 214 kelime; her biri 7 hashtag. 1200×1200 kapak ve üç 1080×1350 kolaj boyutları doğrulandı.
+- Mevcut `beratergun/beratergun` profil README'si değiştirilmedi; eklenecek bölüm dış pakette hazırlandı.

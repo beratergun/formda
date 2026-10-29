@@ -2,17 +2,19 @@
 
 Kayıtlar ve medya testlerde tamamen kurgusaldır. Ham tarayıcı raporları ve ekran görüntüleri `docs/qa/` altında yerel tutulur; repoya yüklenmez.
 
-| Kontrol                    | Sonuç / kapsam                                                                                                                              |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| ESLint / strict TypeScript | Geçti                                                                                                                                       |
-| Vitest                     | 95 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama                                            |
-| Domain kapsamı             | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6                                                                                      |
-| Playwright                 | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit                              |
+Son canlı mobil Lighthouse ölçümü **100/100/100**, CI ölçümü **96/100/100**. İlk canlı ölçüm 90/100/100 olarak kaydedildi; sonuçların ağ ve cihazla değişebildiği açıktır. APK, Android lint ve apksigner doğrulaması CI'da geçti ve v1.0.0 release'ine eklendi. Yayın dosyaları tekrar indirilip hash ve paket kimliği doğrulandı.
+
+| Kontrol                    | Sonuç / kapsam                                                                                                              |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ESLint / strict TypeScript | Geçti                                                                                                                       |
+| Vitest                     | 95 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama                            |
+| Domain kapsamı             | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6                                                                      |
+| Playwright                 | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit              |
 | Mobil Lighthouse           | Yerel üretim ölçümleri: performans 96–99 · erişilebilirlik 100 · en iyi uygulamalar 100. Yayın öncesi son ölçüm 99/100/100. |
-| WCAG otomasyonu            | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok                                                                              |
-| Görsel QA                  | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri                                                                             |
-| Android kaynak paketi      | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor                                                                              |
-| APK                        | Gradle, Android lint ve imza doğrulaması GitHub Actions yayın aşamasında tamamlanır                                                         |
+| WCAG otomasyonu            | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok                                                              |
+| Görsel QA                  | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri                                                             |
+| Android kaynak paketi      | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor                                                              |
+| APK                        | Gradle, Android lint, imza ve SHA-256 doğrulaması geçti; v1.0.0 eki hazır                                                   |
 
 Tarayıcı testleri karşılama, tam 219 kcal öğün, kalıcı kayıt, çevrimdışı su kaydı, iki antrenman seti ve dinlenme sayacı, ilerleme grafiği, Cuma planı, fotoğraf karşılaştırması, vlog oynatma ve tam yedek gidiş dönüşünü kapsar. Kamera akışı ve vlog dosyası çalışma anında üretilir; kişisel veya dışarıdan indirilmiş medya kullanılmaz.
 
