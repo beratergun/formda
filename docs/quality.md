@@ -8,7 +8,7 @@ Kayıtlar ve medya testlerde tamamen kurgusaldır. Ham tarayıcı raporları ve 
 | Vitest                     | 95 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama                                            |
 | Domain kapsamı             | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6                                                                                      |
 | Playwright                 | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit                              |
-| Mobil Lighthouse           | Son ölçüm: performans 96 · erişilebilirlik 100 · en iyi uygulamalar 100; yerel üretim derlemesi, mobil profil. Önceki performans ölçümü 98. |
+| Mobil Lighthouse           | Yerel üretim ölçümleri: performans 96–99 · erişilebilirlik 100 · en iyi uygulamalar 100. Yayın öncesi son ölçüm 99/100/100. |
 | WCAG otomasyonu            | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok                                                                              |
 | Görsel QA                  | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri                                                                             |
 | Android kaynak paketi      | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor                                                                              |

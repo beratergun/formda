@@ -119,7 +119,7 @@ npm run android:open
 - **Domain kapsamı:** satır %100, fonksiyon %100, dal %98,14; ölçülen ifade kapsamı %99,6.
 - **8 E2E testi:** Pixel 7 / Chromium ve iPhone 14 / WebKit boyutlarında kalıcı kayıt, çevrimdışı açılış, antrenman, fotoğraf ve tam yedek eşitliği. Sahte kamera ve çalışma anında üretilen vlog Chromium'da; Windows WebKit portunda galeri ve depolama uyumluluk yolu doğrulanır.
 - **Erişilebilirlik:** açık/koyu temada 18 görünümde otomatik WCAG A/AA denetimi; klavye, odak ve telefon taşma kontrolleri.
-- **Mobil Lighthouse:** son yerel üretim ölçümü **96 / 100 / 100** (performans / erişilebilirlik / en iyi uygulamalar). Eşikler 90 / 95 / 95. Sonuç cihaz ve ağ koşuluna göre değişir.
+- **Mobil Lighthouse:** yerel üretim ölçümleri **96–99 / 100 / 100** (performans / erişilebilirlik / en iyi uygulamalar). Eşikler 90 / 95 / 95. Sonuç cihaz ve ağ koşuluna göre değişir.
 
 [Doğrulama kapsamı ve yeniden çalıştırma](docs/quality.md). Ekranları yenilemek için önizleme sunucusu açıkken `node scripts/capture-demo.mjs`, ardından `node scripts/presentation-assets.mjs` çalıştır. Bu akış ayrı oturumda yalnızca kurgusal demo üretir.
 
@@ -150,6 +150,6 @@ Progress photos support ghost alignment, before/after sliders and local montage 
 
 The downloadable APK is a development-certificate **debug build** when release-signing Secrets are absent. Signed release builds use a user-owned keystore configured through GitHub Secrets; see [Android instructions](docs/android.md). Physical-device camera permission and installation dialogs still depend on the operating system. Desktop WebKit tests are not presented as physical iPhone tests.
 
-**Measured quality:** 95 unit tests; 100% domain line/function coverage and 98.14% branch coverage; eight mobile-browser E2E tests; two-theme automated accessibility checks; local mobile Lighthouse 96/100/100. The full backup round trip verifies structured records and binary media equality. Scores can vary by device and network.
+**Measured quality:** 95 unit tests; 100% domain line/function coverage and 98.14% branch coverage; eight mobile-browser E2E tests; two-theme automated accessibility checks; local mobile Lighthouse 96–99/100/100. The full backup round trip verifies structured records and binary media equality. Scores can vary by device and network.
 
 Use Node 22.12+, run `npm ci` and `npm run dev`. Validation commands and native build commands are listed above. The interface is Turkish. All screenshots, measurements and silhouette images shown here are fictional demo content. Contributions are welcome under the [MIT license](LICENSE).
