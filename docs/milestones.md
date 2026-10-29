@@ -7,7 +7,7 @@
 | 3 | Dexie, OPFS, yedek / geri yükleme | Tamamlandı |
 | 4 | Karşılama, Bugün, beslenme | Tamamlandı |
 | 5 | Antrenman ve hareket kütüphanesi | Tamamlandı |
-| 6 | Fotoğraf ve karşılaştırma | Bekliyor |
+| 6 | Fotoğraf ve karşılaştırma | Tamamlandı |
 | 7 | Vlog, Günlük, raporlar | Bekliyor |
 | 8 | İlerleme ve Planım | Bekliyor |
 | 9 | Profil, gizlilik, ICS, eski veri aktarımı | Bekliyor |

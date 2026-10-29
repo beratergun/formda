@@ -9,3 +9,4 @@
 - Uyarlanabilir TDEE hesabında kilo değişimi son ortalama eksi ilk ortalamadır; enerji dengesi için bu fark alımdan çıkarılır. Kilo kaybı böylece harcamayı artıran kanıt olur.
 - Şartnamedeki 4 haftalık blok (3 yüklenme + 1 hafif hafta) prototipin tek 13. hafta molasının yerine geçer. Her 12. haftada değerlendirme vardır.
 - Besinler için uydurma veri yerine resmi USDA dağıtımı kullanıldı. Referans kayıtlar yaklaşık kaynak etiketiyle korundu; tür ve marka farklarını gizlemek için eksik makrolar tamamlanmadı.
+- Fotoğraf/video kare hazırlığı OffscreenCanvas worker'larında yapılır. MediaRecorder ve HTMLCanvasElement.captureStream DOM API'leri olduğundan son kayıt ana iş parçacığında requestAnimationFrame ile akıtılır. Bu tarayıcı kısıtı, ağır senkron iş yapılarak aşılmaz.

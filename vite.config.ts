@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: '/yol/',
+  server: { watch: { ignored: ['**/coverage/**', '**/docs/**', '**/.playwright-mcp/**', '**/reference/**', '**/test-results/**'] } },
   plugins: [
     react(),
     tailwindcss(),

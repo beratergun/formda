@@ -29,6 +29,7 @@ import { QuickEntry } from '../features/today/QuickEntry';
 import type { MealId } from '../domain/types';
 import { Workout } from '../features/workout-mode/Workout';
 import { Library } from '../features/workout-mode/Library';
+import { CameraPage } from '../features/camera/Camera';
 
 const tabs = [
   ['/', 'Bugün', House],
@@ -93,6 +94,7 @@ function AppLayout() {
                 <Route path="/" element={<Today onFood={onFood} />} />
                 <Route path="/workout" element={<Workout />} />
                 <Route path="/library" element={<Library />} />
+              <Route path="/camera" element={<CameraPage />} />
                 {tabs.slice(1).map(([path, title]) => (
                   <Route
                     key={path}

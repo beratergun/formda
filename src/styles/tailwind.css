@@ -1,4 +1,7 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+@source '../app';
+@source '../features';
+@source '../ui';
 @import './tokens.css';
 
 @theme inline {
@@ -225,3 +228,21 @@ legend { font-size: 12px; color: var(--sub); margin-bottom: 10px; }
 .stats-grid b { font-size: 23px; font-variant-numeric: tabular-nums; }
 .stats-grid small { color: var(--sub); font-size: 9px; }
 .celebration { width: 90px; height: 90px; border-radius: 50%; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent); margin-top: 30px; }
+.camera-preview { position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 22px; background: #142827; }
+.camera-preview video, .camera-preview .ghost-image { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.camera-empty { display: grid; align-content: center; justify-items: center; gap: 14px; color: #b8d5c5; height: 100%; font-size: 12px; }
+.pose-guide { position: absolute; inset: 10% 20%; width: 60%; height: 80%; fill: none; stroke: #fff9; stroke-width: 1.5; stroke-dasharray: 5 4; pointer-events: none; }
+.camera-preview .ghost-image { opacity: .3; pointer-events: none; }
+.camera-countdown { position: absolute; inset: 0; display: grid; place-items: center; font: 700 90px var(--display); color: #fff; background: #0003; }
+.check-label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 12px; }
+.check-label input { width: 20px; height: 20px; accent-color: var(--accent); }
+.compare-slider { aspect-ratio: 3/4; border-radius: 16px; overflow: hidden; position: relative; background: var(--raise); }
+.compare-slider img { width: 100%; height: 100%; object-fit: contain; }
+.compare-base, .compare-before { position: absolute; inset: 0; }
+.compare-before { background: var(--raise); }
+.compare-line { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; pointer-events: none; box-shadow: 0 0 6px #0006; }
+.compare-line::after { content: '↔'; position: absolute; top: 50%; left: -18px; width: 38px; height: 38px; display: grid; place-items: center; background: #fff; color: #126c6a; border-radius: 50%; font-size: 20px; }
+.compare-slider input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.compare-side { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 5px; }
+.compare-side img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: var(--raise); border-radius: 12px; }
+.photo-detail img { max-height: 60dvh; width: 100%; object-fit: contain; border-radius: 14px; }

@@ -1,0 +1,3 @@
+export function downloadBlob(blob:Blob,name:string){const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+export async function shareBlob(blob:Blob,name:string){const file=new File([blob],name,{type:blob.type});if(navigator.canShare?.({files:[file]})){try{await navigator.share({files:[file],title:'Yol · Kendime bir adım'});return;}catch(error){if(error instanceof Error&&error.name==='AbortError')return;}}downloadBlob(blob,name);}
+export function recordingMime(){if(typeof MediaRecorder==='undefined')return undefined;return ['video/webm;codecs=vp8','video/webm','video/mp4'].find(m=>MediaRecorder.isTypeSupported(m));}
