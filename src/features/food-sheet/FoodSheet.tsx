@@ -43,6 +43,10 @@ export function FoodSheet({
   const [recipeName, setRecipeName] = useState('');
   const [cookedWeight, setCookedWeight] = useState(500);
   const [servings, setServings] = useState(2);
+  const [portionName, setPortionName] = useState('porsiyon');
+  const [conversionFood, setConversionFood] = useState('chicken');
+  const [conversionState, setConversionState] = useState<'raw' | 'cooked'>('cooked');
+  const [conversionQty, setConversionQty] = useState(150);
   const [recipeItems, setRecipeItems] = useState<{ foodId: string; qty: number }[]>([]);
   const request = useRef<AbortController>();
   useEffect(() => {
@@ -167,6 +171,7 @@ export function FoodSheet({
       };
       if (!recipe.name || !recipeItems.length) return;
       const food = recipeFood(recipe, data.food);
+      food.portions[0].label = portionName.trim() || 'porsiyon';
       mutate((v) => ({ recipe: [...v.recipe, recipe], food: [...v.food, food] }));
       choose(food);
       setTab('search');
@@ -223,6 +228,44 @@ export function FoodSheet({
         }}
         options={tabs}
       />
+      <details className="card stack">
+        <summary>Çiğ / pişmiş gramaj dönüştür</summary>
+        <label className="field">
+          Yiyecek
+          <select value={conversionFood} onChange={(e) => setConversionFood(e.target.value)}>
+            <option value="chicken">Tavuk göğüs</option>
+            <option value="rice">Pirinç</option>
+            <option value="pasta">Makarna</option>
+            <option value="lentils">Mercimek</option>
+          </select>
+        </label>
+        <div className="grid2">
+          <label className="field">
+            Tarttığım hâli
+            <select
+              value={conversionState}
+              onChange={(e) => setConversionState(e.target.value as 'raw' | 'cooked')}
+            >
+              <option value="cooked">Pişmiş</option>
+              <option value="raw">Çiğ</option>
+            </select>
+          </label>
+          <label className="field">
+            Ağırlık (g)
+            <input
+              type="number"
+              min={0}
+              value={conversionQty}
+              onChange={(e) => setConversionQty(Math.max(0, +e.target.value))}
+            />
+          </label>
+        </div>
+        <p className="notice">
+          Yaklaşık {Math.round(convertWeight(conversionQty, conversionFood, conversionState))} g{' '}
+          {conversionState === 'raw' ? 'pişmiş' : 'çiğ'} karşılığı. Pişirme yöntemine göre değişir;
+          kalori kaydı için tarttığın hâlin yiyecek kaydını seç.
+        </p>
+      </details>
       {selected && tab !== 'recipes' ? (
         <>
           <Button variant="quiet" onClick={() => setSelected(undefined)}>
@@ -430,6 +473,18 @@ export function FoodSheet({
                           />
                         </label>
                       </div>
+                      <label className="field">
+                        Porsiyon adı
+                        <input
+                          value={portionName}
+                          onChange={(e) => setPortionName(e.target.value)}
+                          placeholder="1 kepçe"
+                        />
+                      </label>
+                      <p className="muted small">
+                        1 {portionName || 'porsiyon'} ={' '}
+                        {servings > 0 ? Math.round(cookedWeight / servings) : 0} g
+                      </p>
                       <Button
                         disabled={
                           !recipeName.trim() ||
@@ -517,6 +572,16 @@ export function FoodSheet({
                   )}
                   {row.food && (
                     <>
+                      <Stepper
+                        value={row.qty}
+                        label={`Kalem ${i + 1} miktarı (${row.food.unit})`}
+                        min={0.25}
+                        max={10000}
+                        step={row.food.unit === 'adet' ? 0.25 : 10}
+                        onChange={(qty) =>
+                          setRows(rows.map((r, n) => (n === i ? { ...r, qty } : r)))
+                        }
+                      />
                       <p>
                         {row.qty} {row.food.unit} · {Math.round(calculate(row.food, row.qty).kcal)}{' '}
                         kcal · {calculate(row.food, row.qty).protein.toFixed(1)} g protein

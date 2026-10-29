@@ -130,7 +130,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
           </div>
           {platform === 'ios' ? (
             <>
-              <div className="install-guide-art" aria-label="iPhone yükleme rehberi">
+              <div className="install-guide-art" role="img" aria-label="iPhone yükleme rehberi">
                 <div className="guide-phone">
                   <span className="guide-island" />
                   <img

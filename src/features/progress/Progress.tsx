@@ -15,6 +15,8 @@ import { project } from '../../domain/projection';
 import { planFor } from '../../domain/program';
 import { epley, volume } from '../../domain/progression';
 import { streaks } from '../../domain/score';
+import { scoreHistory } from '../../domain/score';
+import { MacroBreakdown } from '../../ui/MacroBreakdown';
 import { MEALS, type Horizon } from '../../domain/types';
 import { EXERCISES } from '../../data/seed/exercises';
 
@@ -40,11 +42,7 @@ export function Progress() {
   const day = dailyReport(data, date);
   const recentDates = Array.from({ length: range }, (_, i) => shiftDate(date, i - range + 1));
   const recent = recentDates.map((d) => dailyReport(data, d));
-  const allPoints = data.dayLog.map((d) => ({
-    date: d.date,
-    score: dailyReport(data, d.date).points.total,
-    guard: d.guard,
-  }));
+  const allPoints = scoreHistory(data.dayLog, data.mealEntry, data.workoutLog, target);
   const streak = streaks(allPoints, date);
   const weights = data.dayLog
     .filter((d) => d.weight !== undefined && d.date <= date)
@@ -157,9 +155,18 @@ export function Progress() {
                 { value: '53', label: 'Bu yıl' },
               ]}
             />
-            <div className="heatmap" aria-label="Gün puanları ısı haritası">
-              {Array.from({ length: heatWeeks * 7 }, (_, i) =>
-                shiftDate(date, i - heatWeeks * 7 + 1),
+            <div className="heatmap" role="img" aria-label="Gün puanları ısı haritası">
+              {Array.from(
+                {
+                  length:
+                    heatWeeks === 53
+                      ? dateDiff(date, `${date.slice(0, 4)}-01-01`) + 1
+                      : heatWeeks * 7,
+                },
+                (_, i) =>
+                  heatWeeks === 53
+                    ? shiftDate(`${date.slice(0, 4)}-01-01`, i)
+                    : shiftDate(date, i - heatWeeks * 7 + 1),
               ).map((d) => {
                 const value = allPoints.find((p) => p.date === d)?.score || 0;
                 return (
@@ -311,7 +318,10 @@ export function Progress() {
                     label: dateLabel(p.date, 'd MMM yy'),
                     estimate: p.weight,
                     desired: Math.max(target.goalWeight, startWeight - i * desiredRate),
-                    scenarioBand: [Math.max(target.goalWeight, startWeight - i), Math.max(target.goalWeight, startWeight - i * 0.5)] as [number, number],
+                    scenarioBand: [
+                      Math.max(target.goalWeight, startWeight - i),
+                      Math.max(target.goalWeight, startWeight - i * 0.5),
+                    ] as [number, number],
                   })),
                 ] as ChartPoint[]
               }
@@ -322,8 +332,24 @@ export function Progress() {
                 { key: 'desired', name: 'Seçtiğin örnek hız' },
               ]}
               goal={target.goalWeight}
+              milestones={target.milestones.filter(
+                (n) => n <= startWeight && n > target.goalWeight,
+              )}
             />
-            <label className="field">Karşılaştırmak istediğin haftalık hız (kg)<input type="range" min={0.1} max={1} step={0.1} value={desiredRate} onChange={e=>setDesiredRate(+e.target.value)} /><span>{desiredRate.toLocaleString('tr')} kg/hafta · yalnızca karşılaştırma senaryosu</span></label>
+            <label className="field">
+              Karşılaştırmak istediğin haftalık hız (kg)
+              <input
+                type="range"
+                min={0.1}
+                max={1}
+                step={0.1}
+                value={desiredRate}
+                onChange={(e) => setDesiredRate(+e.target.value)}
+              />
+              <span>
+                {desiredRate.toLocaleString('tr')} kg/hafta · yalnızca karşılaştırma senaryosu
+              </span>
+            </label>
             <p className="muted small">
               {adapted.adaptive ? 'Uyarlanabilir' : 'Başlangıç'} harcama tahmini:{' '}
               {Math.round(adapted.value)} kcal/gün. Kilo değiştikçe hesap yenilenir; hedefte koruma
@@ -349,6 +375,22 @@ export function Progress() {
                   );
                 })}
             </div>
+          </Card>
+          <Card className="stack">
+            <h2>Vücut ölçülerinin yolu</h2>
+            <Chart
+              label="Bel, göğüs, kalça ve kol ölçüleri"
+              data={data.dayLog
+                .filter((d) => d.date <= date && d.measurements)
+                .sort((a, b) => a.date.localeCompare(b.date))
+                .map((d) => ({ label: dateLabel(d.date, 'd MMM'), ...d.measurements }))}
+              series={[
+                { key: 'waist', name: 'Bel (cm)' },
+                { key: 'chest', name: 'Göğüs (cm)' },
+                { key: 'hip', name: 'Kalça (cm)' },
+                { key: 'arm', name: 'Kol (cm)' },
+              ]}
+            />
           </Card>
           <Link className="button secondary" to="/camera">
             <Camera size={17} />
@@ -446,6 +488,10 @@ export function Progress() {
             {!data.food.some((f) => f.useCount > 0) && (
               <p className="muted small">İlk öğünlerinle burada bir liste oluşacak.</p>
             )}
+          </Card>
+          <Card className="stack">
+            <h2>Makro dağılımın</h2>
+            <MacroBreakdown macros={total(recent.flatMap((r) => r.meals))} />
           </Card>
         </>
       )}

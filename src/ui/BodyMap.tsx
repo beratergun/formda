@@ -1,6 +1,145 @@
 import { useState } from 'react';
 import { Segmented } from './index';
 
-export const MUSCLES:Record<string,string>={chest:'Göğüs',back:'Sırt',shoulders:'Omuz',biceps:'Ön kol',triceps:'Arka kol',core:'Karın',glutes:'Kalça',quadriceps:'Ön bacak',hamstrings:'Arka bacak',calves:'Baldır',adductors:'İç bacak'};
-export function BodyMap({active=[],values,onSelect}:{active?:string[];values?:Record<string,number>;onSelect?:(muscle:string)=>void}){const[side,setSide]=useState('front');const zones:[string,string][] = side==='front'?[['shoulders','M27 42q-10 0-12 16l12 5z M73 42q10 0 12 16l-12 5z'],['chest','M31 43h38v22H31z'],['biceps','M16 64h10v25H16z M74 64h10v25H74z'],['core','M34 69h32v34H34z'],['quadriceps','M31 116h16v43H31z M53 116h16v43H53z'],['adductors','M46 116h8v35h-8z'],['calves','M32 166h13v33H32z M55 166h13v33H55z']]:[['shoulders','M27 42q-10 0-12 16l12 5z M73 42q10 0 12 16l-12 5z'],['back','M31 43h38v57H31z'],['triceps','M16 64h10v25H16z M74 64h10v25H74z'],['glutes','M31 103h38v19H31z'],['hamstrings','M31 126h16v33H31z M53 126h16v33H53z'],['calves','M32 166h13v33H32z M55 166h13v33H55z']];return <div className="body-map"><Segmented label="Vücut görünümü" value={side} onChange={setSide} options={[{value:'front',label:'Ön'},{value:'back',label:'Arka'}]}/><svg viewBox="0 0 100 215" role="img" aria-label="Kas haritası"><circle cx="50" cy="20" r="13" fill="var(--line)"/><path d="M32 39h36l13 21 9 45-9 3-10-36v44l-2 87H54l-4-68-4 68H31l-2-87V72l-10 36-9-3 9-45z" fill="var(--raise)" stroke="var(--line)"/>{zones.map(([id,path])=><path key={id} d={path} fill={active.includes(id)||(values?.[id]||0)>0?'var(--accent)':'var(--line)'} opacity={values?.[id]===undefined?1:.3+values[id]*.23} role={onSelect?'button':undefined} tabIndex={onSelect?0:undefined} aria-label={`${MUSCLES[id]}${values?.[id]!==undefined?` · ağrı ${values[id]}/3`:''}`} onClick={()=>onSelect?.(id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect?.(id);}}}><title>{MUSCLES[id]}</title></path>)}</svg><div className="choice-grid">{(onSelect?Object.keys(MUSCLES):active).map(id=><button key={id} className="choice" onClick={()=>onSelect?.(id)} disabled={!onSelect}>{MUSCLES[id]}{values?` · ${values[id]||0}/3`:''}</button>)}</div></div>;}
-export function ExerciseFigure({type}:{type:string}){const bent=['squat','hinge','pull'].includes(type);return <svg viewBox="0 0 180 110" className="exercise-figure" role="img" aria-label="Basit hareket şeması"><path d="M15 97h150" stroke="var(--line)" strokeWidth="2"/><circle cx={bent?100:90} cy="20" r="10" fill="var(--accent-soft)" stroke="var(--accent)" strokeWidth="2"/><g fill="none" stroke="var(--accent)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d={bent?'m100 33-22 31 25 16-5 15m-20-31-25 14 5 17':'m90 33 0 34-20 28m20-28 20 28'}/><path d={type==='press'?'m90 40-23-25m23 25 23-25':type==='swim'?'m90 40-30-15m30 15 30 15':bent?'m92 44-32 10 0 20':'m90 40-22 20m22-20 22 20'}/></g><path d="m135 44 8-10 8 10m-8-9v35" stroke="var(--accent)" fill="none" opacity=".5" strokeWidth="2"/></svg>;}
+export const MUSCLES: Record<string, string> = {
+  chest: 'Göğüs',
+  back: 'Sırt',
+  shoulders: 'Omuz',
+  biceps: 'Ön kol',
+  triceps: 'Arka kol',
+  core: 'Karın',
+  glutes: 'Kalça',
+  quadriceps: 'Ön bacak',
+  hamstrings: 'Arka bacak',
+  calves: 'Baldır',
+  adductors: 'İç bacak',
+};
+export function BodyMap({
+  active = [],
+  values,
+  onSelect,
+}: {
+  active?: string[];
+  values?: Record<string, number>;
+  onSelect?: (muscle: string) => void;
+}) {
+  const [side, setSide] = useState('front');
+  const zones: [string, string][] =
+    side === 'front'
+      ? [
+          ['shoulders', 'M27 42q-10 0-12 16l12 5z M73 42q10 0 12 16l-12 5z'],
+          ['chest', 'M31 43h38v22H31z'],
+          ['biceps', 'M16 64h10v25H16z M74 64h10v25H74z'],
+          ['core', 'M34 69h32v34H34z'],
+          ['quadriceps', 'M31 116h16v43H31z M53 116h16v43H53z'],
+          ['adductors', 'M46 116h8v35h-8z'],
+          ['calves', 'M32 166h13v33H32z M55 166h13v33H55z'],
+        ]
+      : [
+          ['shoulders', 'M27 42q-10 0-12 16l12 5z M73 42q10 0 12 16l-12 5z'],
+          ['back', 'M31 43h38v57H31z'],
+          ['triceps', 'M16 64h10v25H16z M74 64h10v25H74z'],
+          ['glutes', 'M31 103h38v19H31z'],
+          ['hamstrings', 'M31 126h16v33H31z M53 126h16v33H53z'],
+          ['calves', 'M32 166h13v33H32z M55 166h13v33H55z'],
+        ];
+  return (
+    <div className="body-map">
+      <Segmented
+        label="Vücut görünümü"
+        value={side}
+        onChange={setSide}
+        options={[
+          { value: 'front', label: 'Ön' },
+          { value: 'back', label: 'Arka' },
+        ]}
+      />
+      <svg viewBox="0 0 100 215" role="img" aria-label="Kas haritası">
+        <circle cx="50" cy="20" r="13" fill="var(--line)" />
+        <path
+          d="M32 39h36l13 21 9 45-9 3-10-36v44l-2 87H54l-4-68-4 68H31l-2-87V72l-10 36-9-3 9-45z"
+          fill="var(--raise)"
+          stroke="var(--line)"
+        />
+        {zones.map(([id, path]) => (
+          <path
+            key={id}
+            d={path}
+            fill={active.includes(id) || (values?.[id] || 0) > 0 ? 'var(--accent)' : 'var(--line)'}
+            opacity={values?.[id] === undefined ? 1 : 0.3 + values[id] * 0.23}
+            role={onSelect ? 'button' : undefined}
+            tabIndex={onSelect ? 0 : undefined}
+            aria-label={`${MUSCLES[id]}${values?.[id] !== undefined ? ` · ağrı ${values[id]}/3` : ''}`}
+            onClick={() => onSelect?.(id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onSelect?.(id);
+              }
+            }}
+          >
+            <title>{MUSCLES[id]}</title>
+          </path>
+        ))}
+      </svg>
+      <div className="choice-grid">
+        {(onSelect ? Object.keys(MUSCLES) : active).map((id) => (
+          <button key={id} className="choice" onClick={() => onSelect?.(id)} disabled={!onSelect}>
+            {MUSCLES[id]}
+            {values ? ` · ${values[id] || 0}/3` : ''}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+export function ExerciseFigure({ type }: { type: string }) {
+  const bent = ['squat', 'hinge', 'pull'].includes(type);
+  return (
+    <svg
+      viewBox="0 0 180 110"
+      className="exercise-figure"
+      role="img"
+      aria-label="Basit hareket şeması"
+    >
+      <path d="M15 97h150" stroke="var(--line)" strokeWidth="2" />
+      <circle
+        cx={bent ? 100 : 90}
+        cy="20"
+        r="10"
+        fill="var(--accent-soft)"
+        stroke="var(--accent)"
+        strokeWidth="2"
+      />
+      <g
+        fill="none"
+        stroke="var(--accent)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d={bent ? 'm100 33-22 31 25 16-5 15m-20-31-25 14 5 17' : 'm90 33 0 34-20 28m20-28 20 28'}
+        />
+        <path
+          d={
+            type === 'press'
+              ? 'm90 40-23-25m23 25 23-25'
+              : type === 'swim'
+                ? 'm90 40-30-15m30 15 30 15'
+                : bent
+                  ? 'm92 44-32 10 0 20'
+                  : 'm90 40-22 20m22-20 22 20'
+          }
+        />
+      </g>
+      <path
+        d="m135 44 8-10 8 10m-8-9v35"
+        stroke="var(--accent)"
+        fill="none"
+        opacity=".5"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}

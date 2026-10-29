@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowUp, CalendarDays, Check, Plus, RefreshCw, Trash2 } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
 import { Button, Card, Chip, Segmented, Sheet } from '../../ui';
-import { defaultPlan, PHASES, planFor } from '../../domain/program';
+import { defaultPlan, PHASES, planFor, TEMPLATE_NAMES } from '../../domain/program';
 import { adjustment } from '../../domain/progression';
 import { dateDiff, monday, shiftDate, weekday } from '../../domain/dates';
 import {
@@ -132,6 +132,70 @@ export function Plan() {
                 onChange={(e) => patch({ swimTargetM: +e.target.value || undefined })}
               />
             </label>
+            <div className="grid2">
+              <label className="field">
+                Haftalık gün
+                <select
+                  value={settings.daysPerWeek}
+                  onChange={(e) => patch({ daysPerWeek: +e.target.value })}
+                >
+                  {[2, 3, 4, 5].map((n) => (
+                    <option key={n} value={n}>
+                      {n} gün
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="field">
+                Deneyim
+                <select
+                  value={settings.experience}
+                  onChange={(e) => patch({ experience: e.target.value })}
+                >
+                  <option value="beginner">Yeni başlıyorum</option>
+                  <option value="returning">Geri dönüyorum</option>
+                  <option value="experienced">Düzenli hareket ediyorum</option>
+                </select>
+              </label>
+            </div>
+            <fieldset>
+              <legend>Ekipman</legend>
+              <div className="choice-grid">
+                {['salon', 'ev', 'havuz'].map((item) => (
+                  <button
+                    key={item}
+                    className="choice"
+                    aria-pressed={settings.equipment.includes(item)}
+                    onClick={() =>
+                      patch({
+                        equipment: settings.equipment.includes(item)
+                          ? settings.equipment.filter((v) => v !== item)
+                          : [...settings.equipment, item],
+                      })
+                    }
+                  >
+                    {item === 'salon' ? 'Salon' : item === 'ev' ? 'Ev' : 'Havuz'}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+            <Button
+              variant="secondary"
+              disabled={!settings.equipment.length}
+              onClick={() =>
+                patch({
+                  ...defaultPlan(
+                    settings.startDate,
+                    settings.daysPerWeek,
+                    settings.equipment,
+                    settings.experience,
+                  ),
+                  horizon: settings.horizon,
+                })
+              }
+            >
+              Tercihlerimle haftayı yeniden kur
+            </Button>
           </Card>
           <Card className="stack">
             <h2>Haftanın ritmi</h2>
@@ -204,7 +268,7 @@ export function Plan() {
                               ? {
                                   ...d,
                                   templateId: e.target.value,
-                                  title: `Kuvvet ${e.target.value}`,
+                                  title: TEMPLATE_NAMES[e.target.value] || e.target.value,
                                 }
                               : d,
                           ),
@@ -213,7 +277,7 @@ export function Plan() {
                     >
                       {Object.keys(settings.templates).map((id) => (
                         <option key={id} value={id}>
-                          Kuvvet {id}
+                          {TEMPLATE_NAMES[id] || id}
                         </option>
                       ))}
                     </select>
@@ -298,7 +362,7 @@ export function Plan() {
               onChange={setTemplate}
               options={Object.keys(settings.templates).map((value) => ({
                 value,
-                label: `Kuvvet ${value}`,
+                label: TEMPLATE_NAMES[value] || value,
               }))}
             />
             {(settings.templates[template] || []).map((item, index) => (
@@ -562,6 +626,7 @@ function Goals() {
   const { data, mutate } = useStore();
   const [values, setValues] = useState<Targets>(data.targets[0]);
   const [saved, setSaved] = useState(false);
+  const [milestonesText, setMilestonesText] = useState(data.targets[0].milestones.join(', '));
   const patch = (value: Partial<Targets>) => {
     setValues({ ...values, ...value });
     setSaved(false);
@@ -606,15 +671,11 @@ function Goals() {
       <label className="field">
         Kilo basamakları (virgülle ayır)
         <input
-          value={values.milestones.join(', ')}
-          onChange={(e) =>
-            patch({
-              milestones: e.target.value
-                .split(',')
-                .map(Number)
-                .filter((n) => n > 0),
-            })
-          }
+          value={milestonesText}
+          onChange={(e) => {
+            setMilestonesText(e.target.value);
+            setSaved(false);
+          }}
         />
       </label>
       <Button
@@ -623,10 +684,21 @@ function Goals() {
           !values.protein ||
           !values.water ||
           !values.bedtime ||
+          !values.goalWeight ||
           values.goalWeight < 30
         }
         onClick={() => {
-          mutate(() => ({ targets: [values] }));
+          mutate(() => ({
+            targets: [
+              {
+                ...values,
+                milestones: milestonesText
+                  .split(',')
+                  .map(Number)
+                  .filter((n) => Number.isFinite(n) && n > 0),
+              },
+            ],
+          }));
           setSaved(true);
         }}
       >

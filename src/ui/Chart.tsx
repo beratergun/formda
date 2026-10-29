@@ -27,6 +27,7 @@ export function Chart({
   bar = false,
   band,
   rangeKey,
+  milestones = [],
 }: {
   data: ChartPoint[];
   series: { key: string; name: string; color?: string }[];
@@ -35,6 +36,7 @@ export function Chart({
   bar?: boolean;
   band?: [number, number];
   rangeKey?: string;
+  milestones?: number[];
 }) {
   const colors = ['var(--accent)', 'var(--strength)', 'var(--swim)', 'var(--cardio)'];
   if (!data.length || !data.some((point) => series.some((s) => typeof point[s.key] === 'number')))
@@ -101,13 +103,36 @@ export function Chart({
             margin={{ top: 12, right: 5, bottom: 0, left: -8 }}
           >
             {children}
-            {rangeKey && <Area dataKey={rangeKey} name="0,5–1 kg/hafta örnek bandı" fill="var(--accent)" fillOpacity={0.12} stroke="none" isAnimationActive={false} />}
+            {rangeKey && (
+              <Area
+                dataKey={rangeKey}
+                name="0,5–1 kg/hafta örnek bandı"
+                fill="var(--accent)"
+                fillOpacity={0.12}
+                stroke="none"
+                isAnimationActive={false}
+              />
+            )}
             {band && (
               <ReferenceArea y1={band[0]} y2={band[1]} fill="var(--accent)" fillOpacity={0.08} />
             )}
             {goal !== undefined && (
               <ReferenceLine y={goal} stroke="var(--sub)" strokeDasharray="4 4" />
             )}
+            {milestones.map((value) => (
+              <ReferenceLine
+                key={value}
+                y={value}
+                stroke="var(--line)"
+                strokeDasharray="2 5"
+                label={{
+                  value: `${value} kg`,
+                  fill: 'var(--sub)',
+                  fontSize: 9,
+                  position: 'insideTopRight',
+                }}
+              />
+            ))}
             {series.map((s, i) => (
               <Line
                 key={s.key}

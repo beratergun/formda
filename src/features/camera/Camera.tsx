@@ -62,11 +62,13 @@ export function CameraCapture({ onSaved }: { onSaved?: (record: MediaRecord) => 
   useEffect(() => {
     if (!active) return;
     let cancelled = false;
-    void ensureMediaPermissions(false).then(() => navigator.mediaDevices
-      .getUserMedia({
-        video: { facingMode: facing, width: { ideal: 1280 }, height: { ideal: 720 } },
-        audio: false,
-      }))
+    void ensureMediaPermissions(false)
+      .then(() =>
+        navigator.mediaDevices.getUserMedia({
+          video: { facingMode: facing, width: { ideal: 1280 }, height: { ideal: 720 } },
+          audio: false,
+        }),
+      )
       .then(async (media) => {
         if (cancelled) {
           media.getTracks().forEach((t) => t.stop());
@@ -275,9 +277,11 @@ export function CompareSlider({ before, after }: { before: MediaRecord; after: M
           <>
             <div className="compare-base">
               <MediaImage record={after} />
+              <span className="compare-caption right">{caption(after)}</span>
             </div>
             <div className="compare-before" style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}>
               <MediaImage record={before} />
+              <span className="compare-caption">{caption(before)}</span>
             </div>
             <span className="compare-line" style={{ left: `${value}%` }} />
             <input
@@ -291,8 +295,14 @@ export function CompareSlider({ before, after }: { before: MediaRecord; after: M
           </>
         ) : (
           <>
-            <MediaImage record={before} />
-            <MediaImage record={after} />
+            <div className="compare-pane">
+              <MediaImage record={before} />
+              <span className="compare-caption">{caption(before)}</span>
+            </div>
+            <div className="compare-pane">
+              <MediaImage record={after} />
+              <span className="compare-caption">{caption(after)}</span>
+            </div>
           </>
         )}
       </div>
@@ -303,9 +313,9 @@ export function CompareSlider({ before, after }: { before: MediaRecord; after: M
     </div>
   );
 }
-export function PhotoTimeline() {
+export function PhotoTimeline({ from, to }: { from?: string; to?: string } = {}) {
   const records = useMedia()
-    .filter((r) => r.kind === 'progress')
+    .filter((r) => r.kind === 'progress' && (!from || r.date >= from) && (!to || r.date <= to))
     .sort((a, b) => a.date.localeCompare(b.date));
   const [pose, setPose] = useState('Ön');
   const [beforeId, setBeforeId] = useState('');
@@ -314,6 +324,7 @@ export function PhotoTimeline() {
   const [busy, setBusy] = useState(false);
   const [percent, setPercent] = useState(0);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [selection, setSelection] = useState<string[] | null>(null);
   const { setError } = useStore();
   const controller = useRef<AbortController>();
   useEffect(() => () => controller.current?.abort(), []);
@@ -325,8 +336,15 @@ export function PhotoTimeline() {
     setPercent(0);
     controller.current = new AbortController();
     try {
-      const blob = await createMontage(filtered, setPercent, controller.current.signal);
-      await shareBlob(blob, `yol-donusum.${blob.type.includes('mp4') ? 'mp4' : 'webm'}`);
+      const blob = await createMontage(
+        filtered.filter((r) => !selection || selection.includes(r.id)),
+        setPercent,
+        controller.current.signal,
+      );
+      await shareBlob(
+        blob,
+        `yol-donusum.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
+      );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Video hazırlanamadı.');
     } finally {
@@ -386,12 +404,34 @@ export function PhotoTimeline() {
       )}
       <Button
         variant="secondary"
-        disabled={filtered.length < 2 || busy}
+        disabled={filtered.filter((r) => !selection || selection.includes(r.id)).length < 2 || busy}
         onClick={() => void montage()}
       >
         <Video size={18} />
         {busy ? `Video hazırlanıyor · %${percent}` : 'Hızlandırılmış dönüşüm videosu'}
       </Button>
+      <details className="card stack">
+        <summary>Videoya girecek kareleri seç</summary>
+        <Button variant="quiet" onClick={() => setSelection(null)}>
+          Tüm kareleri seç
+        </Button>
+        {filtered.map((r) => (
+          <label key={r.id} className="check-label">
+            <input
+              type="checkbox"
+              checked={!selection || selection.includes(r.id)}
+              onChange={(e) =>
+                setSelection(
+                  e.target.checked
+                    ? [...(selection || filtered.map((v) => v.id)), r.id]
+                    : (selection || filtered.map((v) => v.id)).filter((id) => id !== r.id),
+                )
+              }
+            />
+            {dateLabel(r.date)} · {r.pose}
+          </label>
+        ))}
+      </details>
       {busy && (
         <Button variant="quiet" onClick={() => controller.current?.abort()}>
           İptal et

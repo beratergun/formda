@@ -31,7 +31,9 @@ export function Workout() {
   const existing = data.workoutLog.find((w) => w.date === date && !w.done);
   const [id] = useState(existing?.id || newId);
   const [startedAt] = useState(existing?.startedAt || Date.now);
-  const [localType, setLocalType] = useState<WorkoutType>(existing?.type || (plan.type === 'rest' ? 'strength' : plan.type));
+  const [localType, setLocalType] = useState<WorkoutType>(
+    existing?.type || (plan.type === 'rest' ? 'strength' : plan.type),
+  );
   const [current, setCurrent] = useState(0);
   const [kg, setKg] = useState(10);
   const [reps, setReps] = useState(10);
@@ -115,9 +117,23 @@ export function Workout() {
   };
   const seconds = Math.max(0, Math.floor((now - startedAt) / 1000));
   if (finished) {
-    const records = [...new Set(log.sets.map(s => s.exerciseId))].map(exerciseId => {
-      const max = Math.max(0, ...log.sets.filter(s => s.exerciseId === exerciseId).map(s => epley(s.kg || 0, s.reps || 0)));
-      const previousMax = Math.max(0, ...data.workoutLog.filter(w => w.id !== id && w.done && w.date <= date).flatMap(w => w.sets.filter(s => s.exerciseId === exerciseId).map(s => epley(s.kg || 0, s.reps || 0))));
+    const records = [...new Set(log.sets.map((s) => s.exerciseId))].map((exerciseId) => {
+      const max = Math.max(
+        0,
+        ...log.sets
+          .filter((s) => s.exerciseId === exerciseId)
+          .map((s) => epley(s.kg || 0, s.reps || 0)),
+      );
+      const previousMax = Math.max(
+        0,
+        ...data.workoutLog
+          .filter((w) => w.id !== id && w.done && w.date <= date)
+          .flatMap((w) =>
+            w.sets
+              .filter((s) => s.exerciseId === exerciseId)
+              .map((s) => epley(s.kg || 0, s.reps || 0)),
+          ),
+      );
       return { exerciseId, max, record: max > previousMax };
     });
     return (
@@ -147,7 +163,15 @@ export function Workout() {
                 <small>tamamlanan set</small>
               </div>
             </div>
-            {records.filter(r => r.max > 0).map(record => <p className="notice" key={record.exerciseId}>{EXERCISES.find(e => e.id === record.exerciseId)?.name} · Tahmini 1RM {record.max.toLocaleString('tr', { maximumFractionDigits: 1 })} kg (Epley){record.record ? ' · Yeni kişisel rekor!' : ''}</p>)}
+            {records
+              .filter((r) => r.max > 0)
+              .map((record) => (
+                <p className="notice" key={record.exerciseId}>
+                  {EXERCISES.find((e) => e.id === record.exerciseId)?.name} · Tahmini 1RM{' '}
+                  {record.max.toLocaleString('tr', { maximumFractionDigits: 1 })} kg (Epley)
+                  {record.record ? ' · Yeni kişisel rekor!' : ''}
+                </p>
+              ))}
             {type === 'swim' && <p>{log.distanceM || 0} m yüzme</p>}
           </Card>
           <Link className="button secondary" to="/camera">

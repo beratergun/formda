@@ -45,7 +45,9 @@ export function Profile() {
     typeof Notification !== 'undefined' ? Notification.permission : 'desteklenmiyor',
   );
   useEffect(() => {
-    void storageInfo().then(setSpace).catch(() => setError('Depolama bilgisi okunamadı.'));
+    void storageInfo()
+      .then(setSpace)
+      .catch(() => setError('Depolama bilgisi okunamadı.'));
   }, [setError]);
   const action = async (task: () => Promise<void>) => {
     setBusy(true);
@@ -73,7 +75,19 @@ export function Profile() {
       setError('Boy, kilo ve aktivite değerlerini kontrol et.');
       return;
     }
-    mutate(v => ({ profile: [{ ...v.profile[0], name: profile.name, age: profile.age, sex: profile.sex, heightCm: profile.heightCm, startWeight: profile.startWeight, activityFactor: profile.activityFactor }] }));
+    mutate((v) => ({
+      profile: [
+        {
+          ...v.profile[0],
+          name: profile.name,
+          age: profile.age,
+          sex: profile.sex,
+          heightCm: profile.heightCm,
+          startWeight: profile.startWeight,
+          activityFactor: profile.activityFactor,
+        },
+      ],
+    }));
     setMessage('Profilin kaydedildi.');
   };
   const backup = () =>

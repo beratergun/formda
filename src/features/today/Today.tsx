@@ -20,9 +20,12 @@ import { db, newId, useStore } from '../../app/Store';
 import { Button, Card, Chip, Ring, Stepper } from '../../ui';
 import { total, calculate } from '../../domain/calories';
 import { dateDiff, dateLabel, monday, shiftDate, todayKey, weekday } from '../../domain/dates';
-import { assistantMessages, remainingSuggestions } from '../../domain/assistant';
+import { assistantMessages, assistantContext, remainingSuggestions } from '../../domain/assistant';
 import { planFor } from '../../domain/program';
-import { score, streaks, xpInfo, bedtimeMet } from '../../domain/score';
+import { score, scoreHistory, streaks, xpInfo, bedtimeMet } from '../../domain/score';
+import { volume } from '../../domain/progression';
+import { EXERCISES } from '../../data/seed/exercises';
+import { MacroBreakdown } from '../../ui/MacroBreakdown';
 import { selectQuote } from '../../domain/quotes';
 import { emptyDay, MEALS, type MediaRecord, type MealId } from '../../domain/types';
 
@@ -59,11 +62,15 @@ export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?:
       onClick={onClick}
       aria-label={`${record.kind === 'vlog' ? 'Vlog' : 'Fotoğraf'} · ${dateLabel(record.date)}`}
     >
-      {hidden ? <LockKeyhole size={25} aria-label="Anı küçük resmi gizli" /> : <img
-        src={url || undefined}
-        alt={record.title || `${record.pose || 'Anı'} · ${dateLabel(record.date)}`}
-        loading="lazy"
-      />}
+      {hidden ? (
+        <LockKeyhole size={25} aria-label="Anı küçük resmi gizli" />
+      ) : (
+        <img
+          src={url || undefined}
+          alt={record.title || `${record.pose || 'Anı'} · ${dateLabel(record.date)}`}
+          loading="lazy"
+        />
+      )}
       {record.kind === 'vlog' && <span>▶</span>}
     </button>
   );
@@ -78,34 +85,24 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
   const workouts = data.workoutLog.filter((w) => w.date === date);
   const done = workouts.some((w) => w.done);
   const points = score(day, macros, new Set(entries.map((e) => e.mealId)).size, done, targets);
-  const allPoints = data.dayLog.map((d) => {
-    const meals = data.mealEntry.filter((e) => e.date === d.date);
-    return {
-      date: d.date,
-      score: score(
-        d,
-        total(meals),
-        new Set(meals.map((e) => e.mealId)).size,
-        data.workoutLog.some((w) => w.date === d.date && w.done),
-        targets,
-      ).total,
-      guard: d.guard,
-    };
-  });
+  const allPoints = scoreHistory(data.dayLog, data.mealEntry, data.workoutLog, targets);
   const xp = xpInfo(allPoints.map((d) => d.score));
   const streak = streaks(allPoints, todayKey());
+  const savedBest = Number(data.meta.find((m) => m.key === 'bestStreak')?.value || 0);
+  useEffect(() => {
+    if (streak.best > savedBest)
+      mutate((v) => ({
+        meta: [
+          ...v.meta.filter((m) => m.key !== 'bestStreak'),
+          { key: 'bestStreak', value: String(streak.best) },
+        ],
+      }));
+  }, [streak.best, savedBest, mutate]);
   const messages = assistantMessages({
+    ...assistantContext(data, date, Object.fromEntries(EXERCISES.map((e) => [e.id, e.name]))),
     day,
     macros,
     targets,
-    gapDays: data.dayLog.length
-      ? Math.min(...data.dayLog.map((d) => Math.abs(dateDiff(date, d.date))))
-      : 0,
-    recentEnergy: data.dayLog
-      .filter((d) => d.energy !== undefined)
-      .sort((a, b) => a.date.localeCompare(b.date))
-      .slice(-3)
-      .map((d) => d.energy!),
   });
   const [quoteOffset, setQuoteOffset] = useState(0);
   const quote = selectQuote(
@@ -127,7 +124,12 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
     targets.kcal - macros.kcal,
     targets.protein - macros.protein,
   );
-  const media = useMedia(date);
+  const allMedia = useMedia();
+  const media = allMedia.filter((m) => m.date === date);
+  const lastPhoto =
+    allMedia
+      .filter((m) => m.kind === 'progress' && m.date <= date)
+      .sort((a, b) => b.date.localeCompare(a.date))[0]?.date || data.planSettings[0].startDate;
   const nowHour = Number(
     new Intl.DateTimeFormat('en-GB', {
       hour: '2-digit',
@@ -238,7 +240,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
             <Flame size={17} />
             {streak.current} gün seri
           </span>
-          <span>En iyi seri · {streak.best} gün</span>
+          <span>En iyi seri · {Math.max(streak.best, savedBest)} gün</span>
         </div>
       </Card>
       <div className="row section-heading">
@@ -271,6 +273,17 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           </div>
         </Card>
       )}
+      {date === todayKey() && dateDiff(date, lastPhoto) >= data.profile[0].photoReminderDays && (
+        <Card className="stack">
+          <h3>Bugünden bir kare saklamak ister misin?</h3>
+          <p className="muted small">
+            İlerleme fotoğrafı günün geldi. İstersen aynı açıdan bir anı ekle.
+          </p>
+          <Link className="button secondary" to="/camera">
+            Fotoğrafımı ekle
+          </Link>
+        </Card>
+      )}
       <div className="row between section-title">
         <h2>Günün dengesi</h2>
         <span className="eyebrow">KENDİ RİTMİNDE</span>
@@ -300,12 +313,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
             </p>
           </div>
         </div>
-        {macros.carb !== undefined && entries.length > 0 && (
-          <div className="row between muted small">
-            <span>Karbonhidrat · {Math.round(macros.carb)} g</span>
-            <span>Yağ · {Math.round(macros.fat || 0)} g</span>
-          </div>
-        )}
+        {macros.carb !== undefined && entries.length > 0 && <MacroBreakdown macros={macros} />}
         <div className="divider" />
         <div className="row between">
           <div className="row">
@@ -351,6 +359,8 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
                   60000,
               )}{' '}
               dk
+              {workouts.some((w) => w.done && w.sets.length > 0) &&
+                ` · ${volume(workouts.filter((w) => w.done).flatMap((w) => w.sets)).toLocaleString('tr')} kg hacim`}
             </span>
           </div>
         ) : plan.type === 'rest' ? (
@@ -446,6 +456,11 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
               <Button variant="quiet" className="planned-copy" onClick={() => plannedMeal(meal.id)}>
                 Plandaki gibi yedim <Check size={14} />
               </Button>
+              {allMedia
+                .filter((m) => items.some((e) => e.photoIds.includes(m.id)))
+                .map((record) => (
+                  <MediaThumb key={record.id} record={record} onClick={() => onFood(meal.id)} />
+                ))}
             </Card>
           );
         })}
@@ -454,11 +469,37 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         <Card className="stack">
           <p className="eyebrow">KALANI NASIL TAMAMLARIM?</p>
           {suggestions.map((s) => (
-            <button className="suggestion" key={s.food.id} onClick={() => onFood('ara')}>
+            <button
+              className="suggestion"
+              key={s.items.map((i) => i.food.id).join('+')}
+              onClick={() =>
+                addMeals(
+                  s.items.map(({ food, qty }) => ({
+                    id: newId(),
+                    date,
+                    mealId: 'ara',
+                    foodId: food.id,
+                    name: food.name,
+                    qty,
+                    unit: food.unit,
+                    state: food.state,
+                    ...calculate(food, qty),
+                    photoIds: [],
+                    createdAt: Date.now(),
+                  })),
+                )
+              }
+            >
               <span>
-                {s.qty} {s.food.unit} {s.food.name}
+                {s.items
+                  .map((item) => `${item.qty} ${item.food.unit} ${item.food.name}`)
+                  .join(' + ')}
               </span>
-              <b>{s.protein.toFixed(0)} g protein</b>
+              <b>
+                {Math.round(s.kcal)} kcal
+                <br />
+                {Math.round(s.protein)} g protein
+              </b>
             </button>
           ))}
         </Card>

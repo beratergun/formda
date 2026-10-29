@@ -67,7 +67,7 @@ export function Onboarding() {
         </span>
         <Chip>{step + 1} / 4</Chip>
       </div>
-      <div className="onboarding-dots" aria-label={`Adım ${step + 1}/4`}>
+      <div className="onboarding-dots" role="img" aria-label={`Adım ${step + 1}/4`}>
         {[0, 1, 2, 3].map((i) => (
           <i key={i} className={i <= step ? 'filled' : ''} />
         ))}
@@ -297,9 +297,21 @@ export function Onboarding() {
               <p>Fotoğraf eklemek senin seçimin. Şimdi atlayıp daha sonra dönebilirsin.</p>
             </div>
           </Card>
-          <Button variant="secondary" onClick={() => setPhotoOpen(true)}><Camera size={18} />Başlangıç fotoğrafını çek</Button>
+          <Button variant="secondary" onClick={() => setPhotoOpen(true)}>
+            <Camera size={18} />
+            Başlangıç fotoğrafını çek
+          </Button>
           {photoCount > 0 && <Chip>{photoCount} fotoğraf cihazına kaydedildi</Chip>}
-          {photoOpen && <Sheet title="Başlangıç fotoğrafın" onClose={() => setPhotoOpen(false)}><CameraCapture onSaved={() => { setPhotoCount(n => n + 1); setPhotoOpen(false); }} /></Sheet>}
+          {photoOpen && (
+            <Sheet title="Başlangıç fotoğrafın" onClose={() => setPhotoOpen(false)}>
+              <CameraCapture
+                onSaved={() => {
+                  setPhotoCount((n) => n + 1);
+                  setPhotoOpen(false);
+                }}
+              />
+            </Sheet>
+          )}
         </>
       )}
       <div className="onboarding-actions row">
@@ -333,7 +345,27 @@ export function Onboarding() {
           </Button>
         )}
       </div>
-      {step === 0 && <label className="button quiet file-button">Yedeğimden devam et<input type="file" accept=".zip,application/zip" disabled={busy} onChange={e=>{const file=e.target.files?.[0];if(!file)return;setBusy(true);void restoreBackup(file,'replace').then(reload).catch(error=>setError(error instanceof Error?error.message:'Yedek açılamadı.')).finally(()=>setBusy(false));}} /></label>}
+      {step === 0 && (
+        <label className="button quiet file-button">
+          Yedeğimden devam et
+          <input
+            type="file"
+            accept=".zip,application/zip"
+            disabled={busy}
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (!file) return;
+              setBusy(true);
+              void restoreBackup(file, 'replace')
+                .then(reload)
+                .catch((error) =>
+                  setError(error instanceof Error ? error.message : 'Yedek açılamadı.'),
+                )
+                .finally(() => setBusy(false));
+            }}
+          />
+        </label>
+      )}
       {step === 0 && <InstallCard />}
     </div>
   );

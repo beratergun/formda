@@ -1,2 +1,49 @@
-interface CardData{date:string;score:number;kcal:number;protein:number;water:number;sessions:number;photo?:Blob}
-self.onmessage=async(e:MessageEvent<CardData>)=>{try{const d=e.data;const canvas=new OffscreenCanvas(1080,1350);const context=canvas.getContext('2d')!;context.fillStyle='#f3f6f4';context.fillRect(0,0,1080,1350);context.fillStyle='#126c6a';context.fillRect(50,50,980,1250);context.fillStyle='#e6f0df';context.font='bold 64px sans-serif';context.fillText('Yol /',110,165);context.font='26px sans-serif';context.fillText('HER GÜN KENDİME BİR ADIM',110,215);context.font='30px sans-serif';context.fillText(d.date,110,290);context.font='bold 170px sans-serif';context.fillText(String(d.score),110,490);context.font='30px sans-serif';context.fillText('gün puanı',110,545);const rows=[`${Math.round(d.kcal)} kcal · ${Math.round(d.protein)} g protein`,`${d.water} bardak su · ${d.sessions} seans`];context.font='32px sans-serif';rows.forEach((text,i)=>context.fillText(text,110,650+i*70));if(d.photo){const image=await createImageBitmap(d.photo);const scale=Math.min(800/image.width,350/image.height);context.drawImage(image,110,810,image.width*scale,image.height*scale);image.close();}context.font='25px sans-serif';context.fillText('Kendi ritmimde. Kendi yolumda.',110,1220);const blob=await canvas.convertToBlob({type:'image/png'});self.postMessage({blob});}catch{self.postMessage({error:'Rapor kartı hazırlanamadı.'});}};
+interface CardData {
+  date: string;
+  score: number;
+  kcal: number;
+  protein: number;
+  water: number;
+  sessions: number;
+  photo?: Blob;
+}
+self.onmessage = async (e: MessageEvent<CardData>) => {
+  try {
+    const d = e.data;
+    const canvas = new OffscreenCanvas(1080, 1350);
+    const context = canvas.getContext('2d')!;
+    context.fillStyle = '#f3f6f4';
+    context.fillRect(0, 0, 1080, 1350);
+    context.fillStyle = '#126c6a';
+    context.fillRect(50, 50, 980, 1250);
+    context.fillStyle = '#e6f0df';
+    context.font = 'bold 64px sans-serif';
+    context.fillText('Yol /', 110, 165);
+    context.font = '26px sans-serif';
+    context.fillText('HER GÜN KENDİME BİR ADIM', 110, 215);
+    context.font = '30px sans-serif';
+    context.fillText(d.date, 110, 290);
+    context.font = 'bold 170px sans-serif';
+    context.fillText(String(d.score), 110, 490);
+    context.font = '30px sans-serif';
+    context.fillText('gün puanı', 110, 545);
+    const rows = [
+      `${Math.round(d.kcal)} kcal · ${Math.round(d.protein)} g protein`,
+      `${d.water} bardak su · ${d.sessions} seans`,
+    ];
+    context.font = '32px sans-serif';
+    rows.forEach((text, i) => context.fillText(text, 110, 650 + i * 70));
+    if (d.photo) {
+      const image = await createImageBitmap(d.photo);
+      const scale = Math.min(800 / image.width, 350 / image.height);
+      context.drawImage(image, 110, 810, image.width * scale, image.height * scale);
+      image.close();
+    }
+    context.font = '25px sans-serif';
+    context.fillText('Kendi ritmimde. Kendi yolumda.', 110, 1220);
+    const blob = await canvas.convertToBlob({ type: 'image/png' });
+    self.postMessage({ blob });
+  } catch {
+    self.postMessage({ error: 'Rapor kartı hazırlanamadı.' });
+  }
+};
