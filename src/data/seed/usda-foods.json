@@ -2,10 +2,7 @@
   {
     "id": "usda-171689",
     "name": "Elma (çiğ)",
-    "aliases": [
-      "Apples, raw, without skin",
-      "Elma"
-    ],
+    "aliases": ["Apples, raw, without skin", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 48,
@@ -26,10 +23,7 @@
   {
     "id": "usda-171691",
     "name": "Elma (çiğ, kurutulmuş) · SR 9011",
-    "aliases": [
-      "Apples, dried, sulfured, uncooked",
-      "Elma"
-    ],
+    "aliases": ["Apples, dried, sulfured, uncooked", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 243,
@@ -50,10 +44,7 @@
   {
     "id": "usda-171693",
     "name": "Elma (pişmiş, kurutulmuş) · SR 9013",
-    "aliases": [
-      "Apples, dried, sulfured, stewed, with added sugar",
-      "Elma"
-    ],
+    "aliases": ["Apples, dried, sulfured, stewed, with added sugar", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 83,
@@ -74,10 +65,7 @@
   {
     "id": "usda-171690",
     "name": "Elma (pişmiş, kurutulmuş) · SR 9010",
-    "aliases": [
-      "Apples, dehydrated (low moisture), sulfured, stewed",
-      "Elma"
-    ],
+    "aliases": ["Apples, dehydrated (low moisture), sulfured, stewed", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 74,
@@ -98,10 +86,7 @@
   {
     "id": "usda-167773",
     "name": "Elma (tuzlu, konserve) · SR 9402",
-    "aliases": [
-      "Applesauce, canned, sweetened, with salt",
-      "Elma"
-    ],
+    "aliases": ["Applesauce, canned, sweetened, with salt", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 76,
@@ -122,10 +107,7 @@
   {
     "id": "usda-171696",
     "name": "Elma (tuzsuz, konserve) · SR 9020",
-    "aliases": [
-      "Applesauce, canned, sweetened, without salt",
-      "Elma"
-    ],
+    "aliases": ["Applesauce, canned, sweetened, without salt", "Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 68,
@@ -146,10 +128,7 @@
   {
     "id": "usda-171697",
     "name": "Kayısı (çiğ)",
-    "aliases": [
-      "Apricots, raw",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, raw", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 48,
@@ -170,10 +149,7 @@
   {
     "id": "usda-173941",
     "name": "Kayısı (çiğ, kurutulmuş) · SR 9032",
-    "aliases": [
-      "Apricots, dried, sulfured, uncooked",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, dried, sulfured, uncooked", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 241,
@@ -194,10 +170,7 @@
   {
     "id": "usda-173943",
     "name": "Kayısı (pişmiş, kurutulmuş) · SR 9034",
-    "aliases": [
-      "Apricots, dried, sulfured, stewed, with added sugar",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, dried, sulfured, stewed, with added sugar", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 113,
@@ -218,10 +191,7 @@
   {
     "id": "usda-173940",
     "name": "Kayısı (pişmiş, kurutulmuş) · SR 9031",
-    "aliases": [
-      "Apricots, dehydrated (low-moisture), sulfured, stewed",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, dehydrated (low-moisture), sulfured, stewed", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 126,
@@ -241,10 +211,7 @@
   {
     "id": "usda-171703",
     "name": "Kayısı (dondurulmuş) · SR 9035",
-    "aliases": [
-      "Apricots, frozen, sweetened",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, frozen, sweetened", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 98,
@@ -265,10 +232,7 @@
   {
     "id": "usda-167768",
     "name": "Kayısı (konserve) · SR 9357",
-    "aliases": [
-      "Apricots, canned, heavy syrup, drained",
-      "Kayısı"
-    ],
+    "aliases": ["Apricots, canned, heavy syrup, drained", "Kayısı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 83,
@@ -289,10 +253,7 @@
   {
     "id": "usda-171707",
     "name": "Avokado (çiğ)",
-    "aliases": [
-      "Avocados, raw, Florida",
-      "Avokado"
-    ],
+    "aliases": ["Avocados, raw, Florida", "Avokado"],
     "unit": "g",
     "per": 100,
     "kcalPer": 120,
@@ -313,10 +274,7 @@
   {
     "id": "usda-171706",
     "name": "Avokado (çiğ) · SR 9038",
-    "aliases": [
-      "Avocados, raw, California",
-      "Avokado"
-    ],
+    "aliases": ["Avocados, raw, California", "Avokado"],
     "unit": "g",
     "per": 100,
     "kcalPer": 167,
@@ -337,10 +295,7 @@
   {
     "id": "usda-173944",
     "name": "Muz (çiğ)",
-    "aliases": [
-      "Bananas, raw",
-      "Muz"
-    ],
+    "aliases": ["Bananas, raw", "Muz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 89,
@@ -361,10 +316,7 @@
   {
     "id": "usda-173945",
     "name": "Muz (kurutulmuş) · SR 9041",
-    "aliases": [
-      "Bananas, dehydrated, or banana powder",
-      "Muz"
-    ],
+    "aliases": ["Bananas, dehydrated, or banana powder", "Muz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 346,
@@ -385,10 +337,7 @@
   {
     "id": "usda-173946",
     "name": "Böğürtlen (çiğ)",
-    "aliases": [
-      "Blackberries, raw",
-      "Böğürtlen"
-    ],
+    "aliases": ["Blackberries, raw", "Böğürtlen"],
     "unit": "g",
     "per": 100,
     "kcalPer": 43,
@@ -409,10 +358,7 @@
   {
     "id": "usda-168982",
     "name": "Böğürtlen (çiğ) · SR 35015",
-    "aliases": [
-      "Blackberries, wild, raw (Alaska Native)",
-      "Böğürtlen"
-    ],
+    "aliases": ["Blackberries, wild, raw (Alaska Native)", "Böğürtlen"],
     "unit": "g",
     "per": 100,
     "kcalPer": 52,
@@ -433,10 +379,7 @@
   {
     "id": "usda-171710",
     "name": "Böğürtlen (dondurulmuş) · SR 9048",
-    "aliases": [
-      "Blackberries, frozen, unsweetened",
-      "Böğürtlen"
-    ],
+    "aliases": ["Blackberries, frozen, unsweetened", "Böğürtlen"],
     "unit": "g",
     "per": 100,
     "kcalPer": 64,
@@ -457,10 +400,7 @@
   {
     "id": "usda-171709",
     "name": "Böğürtlen (konserve) · SR 9046",
-    "aliases": [
-      "Blackberries, canned, heavy syrup, solids and liquids",
-      "Böğürtlen"
-    ],
+    "aliases": ["Blackberries, canned, heavy syrup, solids and liquids", "Böğürtlen"],
     "unit": "g",
     "per": 100,
     "kcalPer": 92,
@@ -481,10 +421,7 @@
   {
     "id": "usda-171711",
     "name": "Yaban mersini (çiğ)",
-    "aliases": [
-      "Blueberries, raw",
-      "Yaban mersini"
-    ],
+    "aliases": ["Blueberries, raw", "Yaban mersini"],
     "unit": "g",
     "per": 100,
     "kcalPer": 57,
@@ -505,10 +442,7 @@
   {
     "id": "usda-167640",
     "name": "Yaban mersini (çiğ) · SR 35155",
-    "aliases": [
-      "Blueberries, wild, raw (Alaska Native)",
-      "Yaban mersini"
-    ],
+    "aliases": ["Blueberries, wild, raw (Alaska Native)", "Yaban mersini"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -529,10 +463,7 @@
   {
     "id": "usda-168158",
     "name": "Yaban mersini (kurutulmuş) · SR 9163",
-    "aliases": [
-      "Blueberries, dried, sweetened",
-      "Yaban mersini"
-    ],
+    "aliases": ["Blueberries, dried, sweetened", "Yaban mersini"],
     "unit": "g",
     "per": 100,
     "kcalPer": 317,
@@ -553,10 +484,7 @@
   {
     "id": "usda-173951",
     "name": "Yaban mersini (dondurulmuş) · SR 9055",
-    "aliases": [
-      "Blueberries, frozen, sweetened",
-      "Yaban mersini"
-    ],
+    "aliases": ["Blueberries, frozen, sweetened", "Yaban mersini"],
     "unit": "g",
     "per": 100,
     "kcalPer": 85,
@@ -577,10 +505,7 @@
   {
     "id": "usda-171719",
     "name": "Kiraz (çiğ)",
-    "aliases": [
-      "Cherries, sweet, raw",
-      "Kiraz"
-    ],
+    "aliases": ["Cherries, sweet, raw", "Kiraz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 63,
@@ -601,10 +526,7 @@
   {
     "id": "usda-173954",
     "name": "Kiraz (çiğ) · SR 9063",
-    "aliases": [
-      "Cherries, sour, red, raw",
-      "Kiraz"
-    ],
+    "aliases": ["Cherries, sour, red, raw", "Kiraz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 50,
@@ -625,10 +547,7 @@
   {
     "id": "usda-167769",
     "name": "Kiraz (konserve) · SR 9362",
-    "aliases": [
-      "Cherries, sour, canned, water pack, drained",
-      "Kiraz"
-    ],
+    "aliases": ["Cherries, sour, canned, water pack, drained", "Kiraz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -649,10 +568,7 @@
   {
     "id": "usda-167770",
     "name": "Kiraz (konserve) · SR 9367",
-    "aliases": [
-      "Cherries, sweet, canned, pitted, heavy syrup, drained",
-      "Kiraz"
-    ],
+    "aliases": ["Cherries, sweet, canned, pitted, heavy syrup, drained", "Kiraz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 83,
@@ -673,10 +589,7 @@
   {
     "id": "usda-171722",
     "name": "Turna yemişi (çiğ)",
-    "aliases": [
-      "Cranberries, raw",
-      "Turna yemişi"
-    ],
+    "aliases": ["Cranberries, raw", "Turna yemişi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 46,
@@ -697,10 +610,7 @@
   {
     "id": "usda-169804",
     "name": "Turna yemişi (çiğ) · SR 35029",
-    "aliases": [
-      "Cranberries, wild, bush, raw (Alaska Native)",
-      "Turna yemişi"
-    ],
+    "aliases": ["Cranberries, wild, bush, raw (Alaska Native)", "Turna yemişi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 55,
@@ -745,10 +655,7 @@
   {
     "id": "usda-168191",
     "name": "Hurma",
-    "aliases": [
-      "Dates, medjool",
-      "Hurma"
-    ],
+    "aliases": ["Dates, medjool", "Hurma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 277,
@@ -769,10 +676,7 @@
   {
     "id": "usda-171726",
     "name": "Hurma · SR 9087",
-    "aliases": [
-      "Dates, deglet noor",
-      "Hurma"
-    ],
+    "aliases": ["Dates, deglet noor", "Hurma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 282,
@@ -793,10 +697,7 @@
   {
     "id": "usda-173021",
     "name": "İncir (çiğ)",
-    "aliases": [
-      "Figs, raw",
-      "İncir"
-    ],
+    "aliases": ["Figs, raw", "İncir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 74,
@@ -817,10 +718,7 @@
   {
     "id": "usda-174665",
     "name": "İncir (çiğ, kurutulmuş) · SR 9094",
-    "aliases": [
-      "Figs, dried, uncooked",
-      "İncir"
-    ],
+    "aliases": ["Figs, dried, uncooked", "İncir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 249,
@@ -841,10 +739,7 @@
   {
     "id": "usda-174666",
     "name": "İncir (pişmiş, kurutulmuş) · SR 9095",
-    "aliases": [
-      "Figs, dried, stewed",
-      "İncir"
-    ],
+    "aliases": ["Figs, dried, stewed", "İncir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 107,
@@ -865,10 +760,7 @@
   {
     "id": "usda-173022",
     "name": "İncir (konserve) · SR 9090",
-    "aliases": [
-      "Figs, canned, water pack, solids and liquids",
-      "İncir"
-    ],
+    "aliases": ["Figs, canned, water pack, solids and liquids", "İncir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
@@ -889,10 +781,7 @@
   {
     "id": "usda-173023",
     "name": "İncir (konserve) · SR 9091",
-    "aliases": [
-      "Figs, canned, light syrup pack, solids and liquids",
-      "İncir"
-    ],
+    "aliases": ["Figs, canned, light syrup pack, solids and liquids", "İncir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 69,
@@ -913,10 +802,7 @@
   {
     "id": "usda-167774",
     "name": "Greyfurt (çiğ)",
-    "aliases": [
-      "Grapefruit juice, pink, raw",
-      "Greyfurt"
-    ],
+    "aliases": ["Grapefruit juice, pink, raw", "Greyfurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 39,
@@ -936,10 +822,7 @@
   {
     "id": "usda-173039",
     "name": "Greyfurt (çiğ) · SR 9128",
-    "aliases": [
-      "Grapefruit juice, white, raw",
-      "Greyfurt"
-    ],
+    "aliases": ["Grapefruit juice, white, raw", "Greyfurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 39,
@@ -960,10 +843,7 @@
   {
     "id": "usda-174679",
     "name": "Greyfurt (konserve) · SR 9124",
-    "aliases": [
-      "Grapefruit juice, white, canned, sweetened",
-      "Greyfurt"
-    ],
+    "aliases": ["Grapefruit juice, white, canned, sweetened", "Greyfurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 46,
@@ -984,10 +864,7 @@
   {
     "id": "usda-173038",
     "name": "Greyfurt · SR 9127",
-    "aliases": [
-      "Grapefruit juice, pink or red, with added calcium",
-      "Greyfurt"
-    ],
+    "aliases": ["Grapefruit juice, pink or red, with added calcium", "Greyfurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 39,
@@ -1008,10 +885,7 @@
   {
     "id": "usda-173040",
     "name": "Üzüm (çiğ)",
-    "aliases": [
-      "Grapes, muscadine, raw",
-      "Üzüm"
-    ],
+    "aliases": ["Grapes, muscadine, raw", "Üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 57,
@@ -1032,10 +906,7 @@
   {
     "id": "usda-174682",
     "name": "Üzüm (çiğ) · SR 9131",
-    "aliases": [
-      "Grapes, american type (slip skin), raw",
-      "Üzüm"
-    ],
+    "aliases": ["Grapes, american type (slip skin), raw", "Üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 67,
@@ -1056,10 +927,7 @@
   {
     "id": "usda-174684",
     "name": "Üzüm (konserve) · SR 9133",
-    "aliases": [
-      "Grapes, canned, thompson seedless, water pack, solids and liquids",
-      "Üzüm"
-    ],
+    "aliases": ["Grapes, canned, thompson seedless, water pack, solids and liquids", "Üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 40,
@@ -1080,10 +948,7 @@
   {
     "id": "usda-174685",
     "name": "Üzüm (konserve) · SR 9134",
-    "aliases": [
-      "Grapes, canned, thompson seedless, heavy syrup pack, solids and liquids",
-      "Üzüm"
-    ],
+    "aliases": ["Grapes, canned, thompson seedless, heavy syrup pack, solids and liquids", "Üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 76,
@@ -1104,10 +969,7 @@
   {
     "id": "usda-173044",
     "name": "Guava (çiğ)",
-    "aliases": [
-      "Guavas, common, raw",
-      "Guava"
-    ],
+    "aliases": ["Guavas, common, raw", "Guava"],
     "unit": "g",
     "per": 100,
     "kcalPer": 68,
@@ -1128,10 +990,7 @@
   {
     "id": "usda-173045",
     "name": "Guava (çiğ) · SR 9140",
-    "aliases": [
-      "Guavas, strawberry, raw",
-      "Guava"
-    ],
+    "aliases": ["Guavas, strawberry, raw", "Guava"],
     "unit": "g",
     "per": 100,
     "kcalPer": 69,
@@ -1152,10 +1011,7 @@
   {
     "id": "usda-168153",
     "name": "Kivi (çiğ)",
-    "aliases": [
-      "Kiwifruit, green, raw",
-      "Kivi"
-    ],
+    "aliases": ["Kiwifruit, green, raw", "Kivi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -1176,10 +1032,7 @@
   {
     "id": "usda-168211",
     "name": "Kivi (çiğ) · SR 9520",
-    "aliases": [
-      "Kiwifruit, ZESPRI SunGold, raw",
-      "Kivi"
-    ],
+    "aliases": ["Kiwifruit, ZESPRI SunGold, raw", "Kivi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 63,
@@ -1200,10 +1053,7 @@
   {
     "id": "usda-167746",
     "name": "Limon (çiğ)",
-    "aliases": [
-      "Lemons, raw, without peel",
-      "Limon"
-    ],
+    "aliases": ["Lemons, raw, without peel", "Limon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -1224,10 +1074,7 @@
   {
     "id": "usda-168155",
     "name": "Misket limonu (çiğ)",
-    "aliases": [
-      "Limes, raw",
-      "Misket limonu"
-    ],
+    "aliases": ["Limes, raw", "Misket limonu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -1248,10 +1095,7 @@
   {
     "id": "usda-169093",
     "name": "Kavun (çiğ)",
-    "aliases": [
-      "Melons, casaba, raw",
-      "Kavun"
-    ],
+    "aliases": ["Melons, casaba, raw", "Kavun"],
     "unit": "g",
     "per": 100,
     "kcalPer": 28,
@@ -1272,10 +1116,7 @@
   {
     "id": "usda-169911",
     "name": "Kavun (çiğ) · SR 9184",
-    "aliases": [
-      "Melons, honeydew, raw",
-      "Kavun"
-    ],
+    "aliases": ["Melons, honeydew, raw", "Kavun"],
     "unit": "g",
     "per": 100,
     "kcalPer": 36,
@@ -1296,10 +1137,7 @@
   {
     "id": "usda-169914",
     "name": "Nektarin (çiğ)",
-    "aliases": [
-      "Nectarines, raw",
-      "Nektarin"
-    ],
+    "aliases": ["Nectarines, raw", "Nektarin"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -1320,10 +1158,7 @@
   {
     "id": "usda-169918",
     "name": "Portakal (çiğ)",
-    "aliases": [
-      "Oranges, raw, Florida",
-      "Portakal"
-    ],
+    "aliases": ["Oranges, raw, Florida", "Portakal"],
     "unit": "g",
     "per": 100,
     "kcalPer": 46,
@@ -1344,10 +1179,7 @@
   {
     "id": "usda-169919",
     "name": "Portakal (çiğ) · SR 9205",
-    "aliases": [
-      "Oranges, raw, with peel",
-      "Portakal"
-    ],
+    "aliases": ["Oranges, raw, with peel", "Portakal"],
     "unit": "g",
     "per": 100,
     "kcalPer": 63,
@@ -1368,10 +1200,7 @@
   {
     "id": "usda-169926",
     "name": "Papaya (çiğ)",
-    "aliases": [
-      "Papayas, raw",
-      "Papaya"
-    ],
+    "aliases": ["Papayas, raw", "Papaya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 43,
@@ -1392,10 +1221,7 @@
   {
     "id": "usda-169928",
     "name": "Şeftali (çiğ)",
-    "aliases": [
-      "Peaches, yellow, raw",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, yellow, raw", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 39,
@@ -1416,10 +1242,7 @@
   {
     "id": "usda-169934",
     "name": "Şeftali (çiğ, kurutulmuş) · SR 9246",
-    "aliases": [
-      "Peaches, dried, sulfured, uncooked",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, dried, sulfured, uncooked", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 239,
@@ -1440,10 +1263,7 @@
   {
     "id": "usda-169115",
     "name": "Şeftali (pişmiş, kurutulmuş) · SR 9248",
-    "aliases": [
-      "Peaches, dried, sulfured, stewed, with added sugar",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, dried, sulfured, stewed, with added sugar", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 103,
@@ -1464,10 +1284,7 @@
   {
     "id": "usda-169933",
     "name": "Şeftali (pişmiş, kurutulmuş) · SR 9245",
-    "aliases": [
-      "Peaches, dehydrated (low-moisture), sulfured, stewed",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, dehydrated (low-moisture), sulfured, stewed", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 133,
@@ -1487,10 +1304,7 @@
   {
     "id": "usda-169116",
     "name": "Şeftali (dondurulmuş) · SR 9250",
-    "aliases": [
-      "Peaches, frozen, sliced, sweetened",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, frozen, sliced, sweetened", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 94,
@@ -1511,10 +1325,7 @@
   {
     "id": "usda-168181",
     "name": "Şeftali (konserve) · SR 9370",
-    "aliases": [
-      "Peaches, canned, heavy syrup, drained",
-      "Şeftali"
-    ],
+    "aliases": ["Peaches, canned, heavy syrup, drained", "Şeftali"],
     "unit": "g",
     "per": 100,
     "kcalPer": 72,
@@ -1535,10 +1346,7 @@
   {
     "id": "usda-169118",
     "name": "Armut (çiğ)",
-    "aliases": [
-      "Pears, raw",
-      "Armut"
-    ],
+    "aliases": ["Pears, raw", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 57,
@@ -1559,10 +1367,7 @@
   {
     "id": "usda-168177",
     "name": "Armut (çiğ) · SR 9340",
-    "aliases": [
-      "Pears, asian, raw",
-      "Armut"
-    ],
+    "aliases": ["Pears, asian, raw", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -1583,10 +1388,7 @@
   {
     "id": "usda-169123",
     "name": "Armut (pişmiş, kurutulmuş) · SR 9261",
-    "aliases": [
-      "Pears, dried, sulfured, stewed, with added sugar",
-      "Armut"
-    ],
+    "aliases": ["Pears, dried, sulfured, stewed, with added sugar", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 140,
@@ -1607,10 +1409,7 @@
   {
     "id": "usda-169122",
     "name": "Armut (pişmiş, kurutulmuş) · SR 9260",
-    "aliases": [
-      "Pears, dried, sulfured, stewed, without added sugar",
-      "Armut"
-    ],
+    "aliases": ["Pears, dried, sulfured, stewed, without added sugar", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 127,
@@ -1631,10 +1430,7 @@
   {
     "id": "usda-168182",
     "name": "Armut (konserve) · SR 9374",
-    "aliases": [
-      "Pears, canned, heavy syrup, drained",
-      "Armut"
-    ],
+    "aliases": ["Pears, canned, heavy syrup, drained", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 74,
@@ -1655,10 +1451,7 @@
   {
     "id": "usda-169119",
     "name": "Armut (konserve) · SR 9253",
-    "aliases": [
-      "Pears, canned, water pack, solids and liquids",
-      "Armut"
-    ],
+    "aliases": ["Pears, canned, water pack, solids and liquids", "Armut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -1679,10 +1472,7 @@
   {
     "id": "usda-169943",
     "name": "Trabzon hurması (çiğ)",
-    "aliases": [
-      "Persimmons, native, raw",
-      "Trabzon hurması"
-    ],
+    "aliases": ["Persimmons, native, raw", "Trabzon hurması"],
     "unit": "g",
     "per": 100,
     "kcalPer": 127,
@@ -1702,10 +1492,7 @@
   {
     "id": "usda-169941",
     "name": "Trabzon hurması (çiğ) · SR 9263",
-    "aliases": [
-      "Persimmons, japanese, raw",
-      "Trabzon hurması"
-    ],
+    "aliases": ["Persimmons, japanese, raw", "Trabzon hurması"],
     "unit": "g",
     "per": 100,
     "kcalPer": 70,
@@ -1726,10 +1513,7 @@
   {
     "id": "usda-169942",
     "name": "Trabzon hurması (kurutulmuş) · SR 9264",
-    "aliases": [
-      "Persimmons, japanese, dried",
-      "Trabzon hurması"
-    ],
+    "aliases": ["Persimmons, japanese, dried", "Trabzon hurması"],
     "unit": "g",
     "per": 100,
     "kcalPer": 274,
@@ -1750,10 +1534,7 @@
   {
     "id": "usda-169124",
     "name": "Ananas (çiğ)",
-    "aliases": [
-      "Pineapple, raw, all varieties",
-      "Ananas"
-    ],
+    "aliases": ["Pineapple, raw, all varieties", "Ananas"],
     "unit": "g",
     "per": 100,
     "kcalPer": 50,
@@ -1774,10 +1555,7 @@
   {
     "id": "usda-168194",
     "name": "Ananas (çiğ) · SR 9430",
-    "aliases": [
-      "Pineapple, raw, extra sweet variety",
-      "Ananas"
-    ],
+    "aliases": ["Pineapple, raw, extra sweet variety", "Ananas"],
     "unit": "g",
     "per": 100,
     "kcalPer": 51,
@@ -1798,10 +1576,7 @@
   {
     "id": "usda-169946",
     "name": "Ananas (dondurulmuş) · SR 9272",
-    "aliases": [
-      "Pineapple, frozen, chunks, sweetened",
-      "Ananas"
-    ],
+    "aliases": ["Pineapple, frozen, chunks, sweetened", "Ananas"],
     "unit": "g",
     "per": 100,
     "kcalPer": 86,
@@ -1822,10 +1597,7 @@
   {
     "id": "usda-167767",
     "name": "Ananas (konserve) · SR 9354",
-    "aliases": [
-      "Pineapple, canned, juice pack, drained",
-      "Ananas"
-    ],
+    "aliases": ["Pineapple, canned, juice pack, drained", "Ananas"],
     "unit": "g",
     "per": 100,
     "kcalPer": 60,
@@ -1846,10 +1618,7 @@
   {
     "id": "usda-169949",
     "name": "Erik (çiğ)",
-    "aliases": [
-      "Plums, raw",
-      "Erik"
-    ],
+    "aliases": ["Plums, raw", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 46,
@@ -1870,10 +1639,7 @@
   {
     "id": "usda-168162",
     "name": "Erik (çiğ, kurutulmuş) · SR 9291",
-    "aliases": [
-      "Plums, dried (prunes), uncooked",
-      "Erik"
-    ],
+    "aliases": ["Plums, dried (prunes), uncooked", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 240,
@@ -1894,10 +1660,7 @@
   {
     "id": "usda-167752",
     "name": "Erik (pişmiş, kurutulmuş) · SR 9293",
-    "aliases": [
-      "Plums, dried (prunes), stewed, with added sugar",
-      "Erik"
-    ],
+    "aliases": ["Plums, dried (prunes), stewed, with added sugar", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 124,
@@ -1918,10 +1681,7 @@
   {
     "id": "usda-167751",
     "name": "Erik (pişmiş, kurutulmuş) · SR 9292",
-    "aliases": [
-      "Plums, dried (prunes), stewed, without added sugar",
-      "Erik"
-    ],
+    "aliases": ["Plums, dried (prunes), stewed, without added sugar", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 107,
@@ -1942,10 +1702,7 @@
   {
     "id": "usda-168183",
     "name": "Erik (konserve) · SR 9379",
-    "aliases": [
-      "Plums, canned, heavy syrup, drained",
-      "Erik"
-    ],
+    "aliases": ["Plums, canned, heavy syrup, drained", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 89,
@@ -1966,10 +1723,7 @@
   {
     "id": "usda-169820",
     "name": "Erik · SR 35206",
-    "aliases": [
-      "Plums, wild (Northern Plains Indians)",
-      "Erik"
-    ],
+    "aliases": ["Plums, wild (Northern Plains Indians)", "Erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 91,
@@ -1990,10 +1744,7 @@
   {
     "id": "usda-169134",
     "name": "Nar (çiğ)",
-    "aliases": [
-      "Pomegranates, raw",
-      "Nar"
-    ],
+    "aliases": ["Pomegranates, raw", "Nar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 83,
@@ -2014,10 +1765,7 @@
   {
     "id": "usda-167755",
     "name": "Ahududu (çiğ)",
-    "aliases": [
-      "Raspberries, raw",
-      "Ahududu"
-    ],
+    "aliases": ["Raspberries, raw", "Ahududu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 52,
@@ -2038,10 +1786,7 @@
   {
     "id": "usda-167808",
     "name": "Ahududu · SR 9552",
-    "aliases": [
-      "Raspberries, puree, seedless",
-      "Ahududu"
-    ],
+    "aliases": ["Raspberries, puree, seedless", "Ahududu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 41,
@@ -2062,10 +1807,7 @@
   {
     "id": "usda-167809",
     "name": "Ahududu · SR 9553",
-    "aliases": [
-      "Raspberries, puree, with seeds",
-      "Ahududu"
-    ],
+    "aliases": ["Raspberries, puree, with seeds", "Ahududu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 55,
@@ -2086,10 +1828,7 @@
   {
     "id": "usda-167762",
     "name": "Çilek (çiğ)",
-    "aliases": [
-      "Strawberries, raw",
-      "Çilek"
-    ],
+    "aliases": ["Strawberries, raw", "Çilek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -2110,10 +1849,7 @@
   {
     "id": "usda-168174",
     "name": "Çilek (çiğ, dondurulmuş) · SR 9320",
-    "aliases": [
-      "Strawberries, frozen, sweetened, sliced",
-      "Çilek"
-    ],
+    "aliases": ["Strawberries, frozen, sweetened, sliced", "Çilek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 96,
@@ -2134,10 +1870,7 @@
   {
     "id": "usda-169105",
     "name": "Mandalina (çiğ)",
-    "aliases": [
-      "Tangerines, (mandarin oranges), raw",
-      "Mandalina"
-    ],
+    "aliases": ["Tangerines, (mandarin oranges), raw", "Mandalina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
@@ -2158,10 +1891,7 @@
   {
     "id": "usda-169106",
     "name": "Mandalina (konserve) · SR 9219",
-    "aliases": [
-      "Tangerines, (mandarin oranges), canned, juice pack",
-      "Mandalina"
-    ],
+    "aliases": ["Tangerines, (mandarin oranges), canned, juice pack", "Mandalina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 37,
@@ -2182,10 +1912,7 @@
   {
     "id": "usda-169924",
     "name": "Mandalina (konserve) · SR 9220",
-    "aliases": [
-      "Tangerines, (mandarin oranges), canned, light syrup pack",
-      "Mandalina"
-    ],
+    "aliases": ["Tangerines, (mandarin oranges), canned, light syrup pack", "Mandalina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -2206,10 +1933,7 @@
   {
     "id": "usda-167765",
     "name": "Karpuz (çiğ)",
-    "aliases": [
-      "Watermelon, raw",
-      "Karpuz"
-    ],
+    "aliases": ["Watermelon, raw", "Karpuz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -2230,10 +1954,7 @@
   {
     "id": "usda-168166",
     "name": "Kuru üzüm",
-    "aliases": [
-      "Raisins, seeded",
-      "Kuru üzüm"
-    ],
+    "aliases": ["Raisins, seeded", "Kuru üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 296,
@@ -2254,10 +1975,7 @@
   {
     "id": "usda-168164",
     "name": "Kuru üzüm · SR 9297",
-    "aliases": [
-      "Raisins, golden, seedless",
-      "Kuru üzüm"
-    ],
+    "aliases": ["Raisins, golden, seedless", "Kuru üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 301,
@@ -2278,10 +1996,7 @@
   {
     "id": "usda-168160",
     "name": "Kuru erik (çiğ, kurutulmuş)",
-    "aliases": [
-      "Prunes, dehydrated (low-moisture), uncooked",
-      "Kuru erik"
-    ],
+    "aliases": ["Prunes, dehydrated (low-moisture), uncooked", "Kuru erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 339,
@@ -2301,10 +2016,7 @@
   {
     "id": "usda-168161",
     "name": "Kuru erik (pişmiş, kurutulmuş) · SR 9290",
-    "aliases": [
-      "Prunes, dehydrated (low-moisture), stewed",
-      "Kuru erik"
-    ],
+    "aliases": ["Prunes, dehydrated (low-moisture), stewed", "Kuru erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 113,
@@ -2324,10 +2036,7 @@
   {
     "id": "usda-168159",
     "name": "Kuru erik (konserve) · SR 9288",
-    "aliases": [
-      "Prunes, canned, heavy syrup pack, solids and liquids",
-      "Kuru erik"
-    ],
+    "aliases": ["Prunes, canned, heavy syrup pack, solids and liquids", "Kuru erik"],
     "unit": "g",
     "per": 100,
     "kcalPer": 105,
@@ -2348,10 +2057,7 @@
   {
     "id": "usda-169205",
     "name": "Enginar (çiğ)",
-    "aliases": [
-      "Artichokes, (globe or french), raw",
-      "Enginar"
-    ],
+    "aliases": ["Artichokes, (globe or french), raw", "Enginar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 47,
@@ -2372,10 +2078,7 @@
   {
     "id": "usda-169311",
     "name": "Enginar (pişmiş, tuzlu) · SR 11702",
-    "aliases": [
-      "Artichokes, (globe or french), cooked, boiled, drained, with salt",
-      "Enginar"
-    ],
+    "aliases": ["Artichokes, (globe or french), cooked, boiled, drained, with salt", "Enginar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 51,
@@ -2396,10 +2099,7 @@
   {
     "id": "usda-168386",
     "name": "Enginar (pişmiş, tuzsuz) · SR 11008",
-    "aliases": [
-      "Artichokes, (globe or french), cooked, boiled, drained, without salt",
-      "Enginar"
-    ],
+    "aliases": ["Artichokes, (globe or french), cooked, boiled, drained, without salt", "Enginar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
@@ -2420,10 +2120,7 @@
   {
     "id": "usda-168387",
     "name": "Enginar (dondurulmuş) · SR 11009",
-    "aliases": [
-      "Artichokes, (globe or french), frozen, unprepared",
-      "Enginar"
-    ],
+    "aliases": ["Artichokes, (globe or french), frozen, unprepared", "Enginar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 38,
@@ -2444,10 +2141,7 @@
   {
     "id": "usda-168389",
     "name": "Kuşkonmaz (çiğ)",
-    "aliases": [
-      "Asparagus, raw",
-      "Kuşkonmaz"
-    ],
+    "aliases": ["Asparagus, raw", "Kuşkonmaz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -2468,10 +2162,7 @@
   {
     "id": "usda-168390",
     "name": "Kuşkonmaz (pişmiş) · SR 11012",
-    "aliases": [
-      "Asparagus, cooked, boiled, drained",
-      "Kuşkonmaz"
-    ],
+    "aliases": ["Asparagus, cooked, boiled, drained", "Kuşkonmaz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -2492,10 +2183,7 @@
   {
     "id": "usda-169313",
     "name": "Kuşkonmaz (pişmiş, tuzlu) · SR 11705",
-    "aliases": [
-      "Asparagus, cooked, boiled, drained, with salt",
-      "Kuşkonmaz"
-    ],
+    "aliases": ["Asparagus, cooked, boiled, drained, with salt", "Kuşkonmaz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -2516,10 +2204,7 @@
   {
     "id": "usda-169208",
     "name": "Kuşkonmaz (dondurulmuş) · SR 11018",
-    "aliases": [
-      "Asparagus, frozen, unprepared",
-      "Kuşkonmaz"
-    ],
+    "aliases": ["Asparagus, frozen, unprepared", "Kuşkonmaz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 24,
@@ -2540,10 +2225,7 @@
   {
     "id": "usda-169207",
     "name": "Kuşkonmaz (konserve) · SR 11015",
-    "aliases": [
-      "Asparagus, canned, drained solids",
-      "Kuşkonmaz"
-    ],
+    "aliases": ["Asparagus, canned, drained solids", "Kuşkonmaz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 19,
@@ -2564,10 +2246,7 @@
   {
     "id": "usda-169145",
     "name": "Pancar (çiğ)",
-    "aliases": [
-      "Beets, raw",
-      "Pancar"
-    ],
+    "aliases": ["Beets, raw", "Pancar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 43,
@@ -2588,10 +2267,7 @@
   {
     "id": "usda-169146",
     "name": "Pancar (pişmiş) · SR 11081",
-    "aliases": [
-      "Beets, cooked, boiled, drained",
-      "Pancar"
-    ],
+    "aliases": ["Beets, cooked, boiled, drained", "Pancar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -2612,10 +2288,7 @@
   {
     "id": "usda-168506",
     "name": "Pancar (pişmiş, tuzlu) · SR 11734",
-    "aliases": [
-      "Beets, cooked, boiled. drained, with salt",
-      "Pancar"
-    ],
+    "aliases": ["Beets, cooked, boiled. drained, with salt", "Pancar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -2636,10 +2309,7 @@
   {
     "id": "usda-169966",
     "name": "Pancar (konserve) · SR 11084",
-    "aliases": [
-      "Beets, canned, drained solids",
-      "Pancar"
-    ],
+    "aliases": ["Beets, canned, drained solids", "Pancar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -2660,10 +2330,7 @@
   {
     "id": "usda-170479",
     "name": "Pancar (konserve) · SR 11605",
-    "aliases": [
-      "Beets, harvard, canned, solids and liquids",
-      "Pancar"
-    ],
+    "aliases": ["Beets, harvard, canned, solids and liquids", "Pancar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 73,
@@ -2684,10 +2351,7 @@
   {
     "id": "usda-170379",
     "name": "Brokoli (çiğ)",
-    "aliases": [
-      "Broccoli, raw",
-      "Brokoli"
-    ],
+    "aliases": ["Broccoli, raw", "Brokoli"],
     "unit": "g",
     "per": 100,
     "kcalPer": 34,
@@ -2708,10 +2372,7 @@
   {
     "id": "usda-170381",
     "name": "Brokoli (çiğ) · SR 11096",
-    "aliases": [
-      "Broccoli raab, raw",
-      "Brokoli"
-    ],
+    "aliases": ["Broccoli raab, raw", "Brokoli"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -2732,10 +2393,7 @@
   {
     "id": "usda-170382",
     "name": "Brokoli (pişmiş) · SR 11097",
-    "aliases": [
-      "Broccoli raab, cooked",
-      "Brokoli"
-    ],
+    "aliases": ["Broccoli raab, cooked", "Brokoli"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -2756,10 +2414,7 @@
   {
     "id": "usda-169392",
     "name": "Brokoli (pişmiş) · SR 11969",
-    "aliases": [
-      "Broccoli, chinese, cooked",
-      "Brokoli"
-    ],
+    "aliases": ["Broccoli, chinese, cooked", "Brokoli"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -2780,10 +2435,7 @@
   {
     "id": "usda-169968",
     "name": "Brokoli (dondurulmuş) · SR 11092",
-    "aliases": [
-      "Broccoli, frozen, chopped, unprepared",
-      "Brokoli"
-    ],
+    "aliases": ["Broccoli, frozen, chopped, unprepared", "Brokoli"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -2828,10 +2480,7 @@
   {
     "id": "usda-170383",
     "name": "Brüksel lahanası (çiğ)",
-    "aliases": [
-      "Brussels sprouts, raw",
-      "Brüksel lahanası"
-    ],
+    "aliases": ["Brussels sprouts, raw", "Brüksel lahanası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 43,
@@ -2852,10 +2501,7 @@
   {
     "id": "usda-168513",
     "name": "Brüksel lahanası (pişmiş, tuzlu) · SR 11745",
-    "aliases": [
-      "Brussels sprouts, cooked, boiled, drained, with salt",
-      "Brüksel lahanası"
-    ],
+    "aliases": ["Brussels sprouts, cooked, boiled, drained, with salt", "Brüksel lahanası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 36,
@@ -2876,10 +2522,7 @@
   {
     "id": "usda-169971",
     "name": "Brüksel lahanası (pişmiş, tuzsuz) · SR 11099",
-    "aliases": [
-      "Brussels sprouts, cooked, boiled, drained, without salt",
-      "Brüksel lahanası"
-    ],
+    "aliases": ["Brussels sprouts, cooked, boiled, drained, without salt", "Brüksel lahanası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 36,
@@ -2900,10 +2543,7 @@
   {
     "id": "usda-169972",
     "name": "Brüksel lahanası (dondurulmuş) · SR 11100",
-    "aliases": [
-      "Brussels sprouts, frozen, unprepared",
-      "Brüksel lahanası"
-    ],
+    "aliases": ["Brussels sprouts, frozen, unprepared", "Brüksel lahanası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 41,
@@ -2924,10 +2564,7 @@
   {
     "id": "usda-169975",
     "name": "Lahana (çiğ)",
-    "aliases": [
-      "Cabbage, raw",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, raw", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -2948,10 +2585,7 @@
   {
     "id": "usda-169977",
     "name": "Lahana (çiğ) · SR 11112",
-    "aliases": [
-      "Cabbage, red, raw",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, red, raw", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -2972,10 +2606,7 @@
   {
     "id": "usda-168572",
     "name": "Lahana (pişmiş) · SR 11970",
-    "aliases": [
-      "Cabbage, napa, cooked",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, napa, cooked", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 12,
@@ -2995,10 +2626,7 @@
   {
     "id": "usda-169976",
     "name": "Lahana (pişmiş, tuzsuz) · SR 11110",
-    "aliases": [
-      "Cabbage, cooked, boiled, drained, without salt",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, cooked, boiled, drained, without salt", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -3019,10 +2647,7 @@
   {
     "id": "usda-170392",
     "name": "Lahana · SR 11118",
-    "aliases": [
-      "Cabbage, kimchi",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, kimchi", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 15,
@@ -3043,10 +2668,7 @@
   {
     "id": "usda-169891",
     "name": "Lahana · SR 43144",
-    "aliases": [
-      "Cabbage, mustard, salted",
-      "Lahana"
-    ],
+    "aliases": ["Cabbage, mustard, salted", "Lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 28,
@@ -3067,10 +2689,7 @@
   {
     "id": "usda-170393",
     "name": "Havuç (çiğ)",
-    "aliases": [
-      "Carrots, raw",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, raw", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 41,
@@ -3091,10 +2710,7 @@
   {
     "id": "usda-168568",
     "name": "Havuç (çiğ) · SR 11960",
-    "aliases": [
-      "Carrots, baby, raw",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, baby, raw", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -3115,10 +2731,7 @@
   {
     "id": "usda-169339",
     "name": "Havuç (pişmiş, tuzlu) · SR 11757",
-    "aliases": [
-      "Carrots, cooked, boiled, drained, with salt",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, cooked, boiled, drained, with salt", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -3139,10 +2752,7 @@
   {
     "id": "usda-170394",
     "name": "Havuç (pişmiş, tuzsuz) · SR 11125",
-    "aliases": [
-      "Carrots, cooked, boiled, drained, without salt",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, cooked, boiled, drained, without salt", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -3163,10 +2773,7 @@
   {
     "id": "usda-170396",
     "name": "Havuç (konserve) · SR 11128",
-    "aliases": [
-      "Carrots, canned, regular pack, drained solids",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, canned, regular pack, drained solids", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -3187,10 +2794,7 @@
   {
     "id": "usda-168518",
     "name": "Havuç (konserve) · SR 11759",
-    "aliases": [
-      "Carrots, canned, no salt added, drained solids",
-      "Havuç"
-    ],
+    "aliases": ["Carrots, canned, no salt added, drained solids", "Havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -3211,10 +2815,7 @@
   {
     "id": "usda-169986",
     "name": "Karnabahar (çiğ)",
-    "aliases": [
-      "Cauliflower, raw",
-      "Karnabahar"
-    ],
+    "aliases": ["Cauliflower, raw", "Karnabahar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -3235,10 +2836,7 @@
   {
     "id": "usda-169389",
     "name": "Karnabahar (çiğ) · SR 11965",
-    "aliases": [
-      "Cauliflower, green, raw",
-      "Karnabahar"
-    ],
+    "aliases": ["Cauliflower, green, raw", "Karnabahar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -3259,10 +2857,7 @@
   {
     "id": "usda-169391",
     "name": "Karnabahar (pişmiş, tuzlu) · SR 11968",
-    "aliases": [
-      "Cauliflower, green, cooked, with salt",
-      "Karnabahar"
-    ],
+    "aliases": ["Cauliflower, green, cooked, with salt", "Karnabahar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -3283,10 +2878,7 @@
   {
     "id": "usda-169390",
     "name": "Karnabahar (pişmiş) · SR 11967",
-    "aliases": [
-      "Cauliflower, green, cooked, no salt added",
-      "Karnabahar"
-    ],
+    "aliases": ["Cauliflower, green, cooked, no salt added", "Karnabahar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -3307,10 +2899,7 @@
   {
     "id": "usda-170398",
     "name": "Karnabahar (dondurulmuş) · SR 11137",
-    "aliases": [
-      "Cauliflower, frozen, unprepared",
-      "Karnabahar"
-    ],
+    "aliases": ["Cauliflower, frozen, unprepared", "Karnabahar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 24,
@@ -3331,10 +2920,7 @@
   {
     "id": "usda-169988",
     "name": "Kereviz (çiğ)",
-    "aliases": [
-      "Celery, raw",
-      "Kereviz"
-    ],
+    "aliases": ["Celery, raw", "Kereviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 14,
@@ -3355,10 +2941,7 @@
   {
     "id": "usda-169342",
     "name": "Kereviz (pişmiş, tuzlu) · SR 11764",
-    "aliases": [
-      "Celery, cooked, boiled, drained, with salt",
-      "Kereviz"
-    ],
+    "aliases": ["Celery, cooked, boiled, drained, with salt", "Kereviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 18,
@@ -3379,10 +2962,7 @@
   {
     "id": "usda-169989",
     "name": "Kereviz (pişmiş, tuzsuz) · SR 11144",
-    "aliases": [
-      "Celery, cooked, boiled, drained, without salt",
-      "Kereviz"
-    ],
+    "aliases": ["Celery, cooked, boiled, drained, without salt", "Kereviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 18,
@@ -3403,10 +2983,7 @@
   {
     "id": "usda-169991",
     "name": "Pazı (çiğ)",
-    "aliases": [
-      "Chard, swiss, raw",
-      "Pazı"
-    ],
+    "aliases": ["Chard, swiss, raw", "Pazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 19,
@@ -3427,10 +3004,7 @@
   {
     "id": "usda-169343",
     "name": "Pazı (pişmiş, tuzlu) · SR 11765",
-    "aliases": [
-      "Chard, swiss, cooked, boiled, drained, with salt",
-      "Pazı"
-    ],
+    "aliases": ["Chard, swiss, cooked, boiled, drained, with salt", "Pazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -3451,10 +3025,7 @@
   {
     "id": "usda-170401",
     "name": "Pazı (pişmiş, tuzsuz) · SR 11148",
-    "aliases": [
-      "Chard, swiss, cooked, boiled, drained, without salt",
-      "Pazı"
-    ],
+    "aliases": ["Chard, swiss, cooked, boiled, drained, without salt", "Pazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -3475,10 +3046,7 @@
   {
     "id": "usda-169993",
     "name": "Hindiba (çiğ)",
-    "aliases": [
-      "Chicory roots, raw",
-      "Hindiba"
-    ],
+    "aliases": ["Chicory roots, raw", "Hindiba"],
     "unit": "g",
     "per": 100,
     "kcalPer": 72,
@@ -3499,10 +3067,7 @@
   {
     "id": "usda-169992",
     "name": "Hindiba (çiğ) · SR 11152",
-    "aliases": [
-      "Chicory greens, raw",
-      "Hindiba"
-    ],
+    "aliases": ["Chicory greens, raw", "Hindiba"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -3523,10 +3088,7 @@
   {
     "id": "usda-170406",
     "name": "Kara lahana (çiğ)",
-    "aliases": [
-      "Collards, raw",
-      "Kara lahana"
-    ],
+    "aliases": ["Collards, raw", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -3547,10 +3109,7 @@
   {
     "id": "usda-168523",
     "name": "Kara lahana (pişmiş, tuzlu) · SR 11768",
-    "aliases": [
-      "Collards, cooked, boiled, drained, with salt",
-      "Kara lahana"
-    ],
+    "aliases": ["Collards, cooked, boiled, drained, with salt", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -3571,10 +3130,7 @@
   {
     "id": "usda-170407",
     "name": "Kara lahana (pişmiş, tuzsuz) · SR 11162",
-    "aliases": [
-      "Collards, cooked, boiled, drained, without salt",
-      "Kara lahana"
-    ],
+    "aliases": ["Collards, cooked, boiled, drained, without salt", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -3595,10 +3151,7 @@
   {
     "id": "usda-170408",
     "name": "Kara lahana (dondurulmuş) · SR 11163",
-    "aliases": [
-      "Collards, frozen, chopped, unprepared",
-      "Kara lahana"
-    ],
+    "aliases": ["Collards, frozen, chopped, unprepared", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -3619,10 +3172,7 @@
   {
     "id": "usda-169219",
     "name": "Mısır (çiğ)",
-    "aliases": [
-      "Cornsalad, raw",
-      "Mısır"
-    ],
+    "aliases": ["Cornsalad, raw", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 21,
@@ -3642,10 +3192,7 @@
   {
     "id": "usda-168538",
     "name": "Mısır (çiğ) · SR 11900",
-    "aliases": [
-      "Corn, sweet, white, raw",
-      "Mısır"
-    ],
+    "aliases": ["Corn, sweet, white, raw", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 86,
@@ -3666,10 +3213,7 @@
   {
     "id": "usda-168540",
     "name": "Mısır (pişmiş, tuzlu) · SR 11902",
-    "aliases": [
-      "Corn, sweet, white, cooked, boiled, drained, with salt",
-      "Mısır"
-    ],
+    "aliases": ["Corn, sweet, white, cooked, boiled, drained, with salt", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 97,
@@ -3690,10 +3234,7 @@
   {
     "id": "usda-168525",
     "name": "Mısır (pişmiş, tuzlu) · SR 11770",
-    "aliases": [
-      "Corn, sweet, yellow, cooked, boiled, drained, with salt",
-      "Mısır"
-    ],
+    "aliases": ["Corn, sweet, yellow, cooked, boiled, drained, with salt", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 96,
@@ -3714,10 +3255,7 @@
   {
     "id": "usda-169698",
     "name": "Mısır · SR 20027",
-    "aliases": [
-      "Cornstarch",
-      "Mısır"
-    ],
+    "aliases": ["Cornstarch", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 381,
@@ -3738,10 +3276,7 @@
   {
     "id": "usda-170289",
     "name": "Mısır · SR 20015",
-    "aliases": [
-      "Corn bran, crude",
-      "Mısır"
-    ],
+    "aliases": ["Corn bran, crude", "Mısır"],
     "unit": "g",
     "per": 100,
     "kcalPer": 224,
@@ -3762,10 +3297,7 @@
   {
     "id": "usda-169225",
     "name": "Salatalık (çiğ)",
-    "aliases": [
-      "Cucumber, peeled, raw",
-      "Salatalık"
-    ],
+    "aliases": ["Cucumber, peeled, raw", "Salatalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 10,
@@ -3786,10 +3318,7 @@
   {
     "id": "usda-168409",
     "name": "Salatalık (çiğ) · SR 11205",
-    "aliases": [
-      "Cucumber, with peel, raw",
-      "Salatalık"
-    ],
+    "aliases": ["Cucumber, with peel, raw", "Salatalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 15,
@@ -3810,10 +3339,7 @@
   {
     "id": "usda-169228",
     "name": "Patlıcan (çiğ)",
-    "aliases": [
-      "Eggplant, raw",
-      "Patlıcan"
-    ],
+    "aliases": ["Eggplant, raw", "Patlıcan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 25,
@@ -3834,10 +3360,7 @@
   {
     "id": "usda-169352",
     "name": "Patlıcan (pişmiş, tuzlu) · SR 11783",
-    "aliases": [
-      "Eggplant, cooked, boiled, drained, with salt",
-      "Patlıcan"
-    ],
+    "aliases": ["Eggplant, cooked, boiled, drained, with salt", "Patlıcan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -3858,10 +3381,7 @@
   {
     "id": "usda-169229",
     "name": "Patlıcan (pişmiş, tuzsuz) · SR 11210",
-    "aliases": [
-      "Eggplant, cooked, boiled, drained, without salt",
-      "Patlıcan"
-    ],
+    "aliases": ["Eggplant, cooked, boiled, drained, without salt", "Patlıcan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -3882,10 +3402,7 @@
   {
     "id": "usda-169892",
     "name": "Patlıcan · SR 43146",
-    "aliases": [
-      "Eggplant, pickled",
-      "Patlıcan"
-    ],
+    "aliases": ["Eggplant, pickled", "Patlıcan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 49,
@@ -3906,10 +3423,7 @@
   {
     "id": "usda-168412",
     "name": "Hindiba (çiğ) · SR 11213",
-    "aliases": [
-      "Endive, raw",
-      "Hindiba"
-    ],
+    "aliases": ["Endive, raw", "Hindiba"],
     "unit": "g",
     "per": 100,
     "kcalPer": 17,
@@ -3930,10 +3444,7 @@
   {
     "id": "usda-169385",
     "name": "Rezene (çiğ)",
-    "aliases": [
-      "Fennel, bulb, raw",
-      "Rezene"
-    ],
+    "aliases": ["Fennel, bulb, raw", "Rezene"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -3954,10 +3465,7 @@
   {
     "id": "usda-169230",
     "name": "Sarımsak (çiğ)",
-    "aliases": [
-      "Garlic, raw",
-      "Sarımsak"
-    ],
+    "aliases": ["Garlic, raw", "Sarımsak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 149,
@@ -3978,10 +3486,7 @@
   {
     "id": "usda-167939",
     "name": "Sarımsak (dondurulmuş) · SR 18963",
-    "aliases": [
-      "Garlic bread, frozen",
-      "Sarımsak"
-    ],
+    "aliases": ["Garlic bread, frozen", "Sarımsak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 350,
@@ -4002,10 +3507,7 @@
   {
     "id": "usda-169231",
     "name": "Zencefil (çiğ)",
-    "aliases": [
-      "Ginger root, raw",
-      "Zencefil"
-    ],
+    "aliases": ["Ginger root, raw", "Zencefil"],
     "unit": "g",
     "per": 100,
     "kcalPer": 80,
@@ -4026,10 +3528,7 @@
   {
     "id": "usda-169765",
     "name": "Zencefil (konserve) · SR 31033",
-    "aliases": [
-      "Ginger root, pickled, canned, with artificial sweetener",
-      "Zencefil"
-    ],
+    "aliases": ["Ginger root, pickled, canned, with artificial sweetener", "Zencefil"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -4050,10 +3549,7 @@
   {
     "id": "usda-168421",
     "name": "Kara lahana (çiğ) · SR 11233",
-    "aliases": [
-      "Kale, raw",
-      "Kara lahana"
-    ],
+    "aliases": ["Kale, raw", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -4074,10 +3570,7 @@
   {
     "id": "usda-169355",
     "name": "Kara lahana (pişmiş, tuzlu) · SR 11790",
-    "aliases": [
-      "Kale, cooked, boiled, drained, with salt",
-      "Kara lahana"
-    ],
+    "aliases": ["Kale, cooked, boiled, drained, with salt", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -4098,10 +3591,7 @@
   {
     "id": "usda-169238",
     "name": "Kara lahana (pişmiş, tuzsuz) · SR 11234",
-    "aliases": [
-      "Kale, cooked, boiled, drained, without salt",
-      "Kara lahana"
-    ],
+    "aliases": ["Kale, cooked, boiled, drained, without salt", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 36,
@@ -4122,10 +3612,7 @@
   {
     "id": "usda-169239",
     "name": "Kara lahana (dondurulmuş) · SR 11235",
-    "aliases": [
-      "Kale, frozen, unprepared",
-      "Kara lahana"
-    ],
+    "aliases": ["Kale, frozen, unprepared", "Kara lahana"],
     "unit": "g",
     "per": 100,
     "kcalPer": 28,
@@ -4146,10 +3633,7 @@
   {
     "id": "usda-168424",
     "name": "Alabaş (çiğ)",
-    "aliases": [
-      "Kohlrabi, raw",
-      "Alabaş"
-    ],
+    "aliases": ["Kohlrabi, raw", "Alabaş"],
     "unit": "g",
     "per": 100,
     "kcalPer": 27,
@@ -4170,10 +3654,7 @@
   {
     "id": "usda-169357",
     "name": "Alabaş (pişmiş, tuzlu) · SR 11793",
-    "aliases": [
-      "Kohlrabi, cooked, boiled, drained, with salt",
-      "Alabaş"
-    ],
+    "aliases": ["Kohlrabi, cooked, boiled, drained, with salt", "Alabaş"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -4194,10 +3675,7 @@
   {
     "id": "usda-168425",
     "name": "Alabaş (pişmiş, tuzsuz) · SR 11242",
-    "aliases": [
-      "Kohlrabi, cooked, boiled, drained, without salt",
-      "Alabaş"
-    ],
+    "aliases": ["Kohlrabi, cooked, boiled, drained, without salt", "Alabaş"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -4218,10 +3696,7 @@
   {
     "id": "usda-169246",
     "name": "Pırasa (çiğ)",
-    "aliases": [
-      "Leeks, (bulb and lower leaf-portion), raw",
-      "Pırasa"
-    ],
+    "aliases": ["Leeks, (bulb and lower leaf-portion), raw", "Pırasa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -4290,10 +3765,7 @@
   {
     "id": "usda-170485",
     "name": "Pırasa (kurutulmuş) · SR 11624",
-    "aliases": [
-      "Leeks, (bulb and lower-leaf portion), freeze-dried",
-      "Pırasa"
-    ],
+    "aliases": ["Leeks, (bulb and lower-leaf portion), freeze-dried", "Pırasa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 321,
@@ -4314,10 +3786,7 @@
   {
     "id": "usda-168431",
     "name": "Marul (çiğ)",
-    "aliases": [
-      "Lettuce, red leaf, raw",
-      "Marul"
-    ],
+    "aliases": ["Lettuce, red leaf, raw", "Marul"],
     "unit": "g",
     "per": 100,
     "kcalPer": 13,
@@ -4338,10 +3807,7 @@
   {
     "id": "usda-169249",
     "name": "Marul (çiğ) · SR 11253",
-    "aliases": [
-      "Lettuce, green leaf, raw",
-      "Marul"
-    ],
+    "aliases": ["Lettuce, green leaf, raw", "Marul"],
     "unit": "g",
     "per": 100,
     "kcalPer": 15,
@@ -4362,10 +3828,7 @@
   {
     "id": "usda-168423",
     "name": "Mantar (çiğ)",
-    "aliases": [
-      "Mushrooms, morel, raw",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, morel, raw", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -4386,10 +3849,7 @@
   {
     "id": "usda-169251",
     "name": "Mantar (çiğ) · SR 11260",
-    "aliases": [
-      "Mushrooms, white, raw",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, white, raw", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -4410,10 +3870,7 @@
   {
     "id": "usda-169253",
     "name": "Mantar (pişmiş) · SR 11263",
-    "aliases": [
-      "Mushrooms, white, stir-fried",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, white, stir-fried", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -4434,10 +3891,7 @@
   {
     "id": "usda-168435",
     "name": "Mantar (pişmiş) · SR 11267",
-    "aliases": [
-      "Mushrooms, shiitake, stir-fried",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, shiitake, stir-fried", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 39,
@@ -4458,10 +3912,7 @@
   {
     "id": "usda-168436",
     "name": "Mantar (kurutulmuş) · SR 11268",
-    "aliases": [
-      "Mushrooms, shiitake, dried",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, shiitake, dried", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 296,
@@ -4482,10 +3933,7 @@
   {
     "id": "usda-169402",
     "name": "Mantar · SR 11992",
-    "aliases": [
-      "Mushrooms, white, microwaved",
-      "Mantar"
-    ],
+    "aliases": ["Mushrooms, white, microwaved", "Mantar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -4506,10 +3954,7 @@
   {
     "id": "usda-169260",
     "name": "Bamya (çiğ)",
-    "aliases": [
-      "Okra, raw",
-      "Bamya"
-    ],
+    "aliases": ["Okra, raw", "Bamya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -4530,10 +3975,7 @@
   {
     "id": "usda-170098",
     "name": "Bamya (pişmiş, tuzlu) · SR 11803",
-    "aliases": [
-      "Okra, cooked, boiled, drained, with salt",
-      "Bamya"
-    ],
+    "aliases": ["Okra, cooked, boiled, drained, with salt", "Bamya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -4554,10 +3996,7 @@
   {
     "id": "usda-169261",
     "name": "Bamya (pişmiş, tuzsuz) · SR 11279",
-    "aliases": [
-      "Okra, cooked, boiled, drained, without salt",
-      "Bamya"
-    ],
+    "aliases": ["Okra, cooked, boiled, drained, without salt", "Bamya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -4578,10 +4017,7 @@
   {
     "id": "usda-169262",
     "name": "Bamya (dondurulmuş) · SR 11280",
-    "aliases": [
-      "Okra, frozen, unprepared",
-      "Bamya"
-    ],
+    "aliases": ["Okra, frozen, unprepared", "Bamya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -4602,10 +4038,7 @@
   {
     "id": "usda-170000",
     "name": "Soğan (çiğ)",
-    "aliases": [
-      "Onions, raw",
-      "Soğan"
-    ],
+    "aliases": ["Onions, raw", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 40,
@@ -4626,10 +4059,7 @@
   {
     "id": "usda-170007",
     "name": "Soğan (çiğ) · SR 11293",
-    "aliases": [
-      "Onions, welsh, raw",
-      "Soğan"
-    ],
+    "aliases": ["Onions, welsh, raw", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 34,
@@ -4650,10 +4080,7 @@
   {
     "id": "usda-170100",
     "name": "Soğan (pişmiş, tuzlu) · SR 11805",
-    "aliases": [
-      "Onions, cooked, boiled, drained, with salt",
-      "Soğan"
-    ],
+    "aliases": ["Onions, cooked, boiled, drained, with salt", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -4674,10 +4101,7 @@
   {
     "id": "usda-170001",
     "name": "Soğan (pişmiş, tuzsuz) · SR 11283",
-    "aliases": [
-      "Onions, cooked, boiled, drained, without salt",
-      "Soğan"
-    ],
+    "aliases": ["Onions, cooked, boiled, drained, without salt", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -4698,10 +4122,7 @@
   {
     "id": "usda-170004",
     "name": "Soğan · SR 11286",
-    "aliases": [
-      "Onions, yellow, sauteed",
-      "Soğan"
-    ],
+    "aliases": ["Onions, yellow, sauteed", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 123,
@@ -4722,10 +4143,7 @@
   {
     "id": "usda-170002",
     "name": "Soğan (kurutulmuş) · SR 11284",
-    "aliases": [
-      "Onions, dehydrated flakes",
-      "Soğan"
-    ],
+    "aliases": ["Onions, dehydrated flakes", "Soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 349,
@@ -4746,10 +4164,7 @@
   {
     "id": "usda-170416",
     "name": "Maydanoz",
-    "aliases": [
-      "Parsley, fresh",
-      "Maydanoz"
-    ],
+    "aliases": ["Parsley, fresh", "Maydanoz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 36,
@@ -4770,10 +4185,7 @@
   {
     "id": "usda-170486",
     "name": "Maydanoz (kurutulmuş) · SR 11625",
-    "aliases": [
-      "Parsley, freeze-dried",
-      "Maydanoz"
-    ],
+    "aliases": ["Parsley, freeze-dried", "Maydanoz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 271,
@@ -4794,10 +4206,7 @@
   {
     "id": "usda-170417",
     "name": "Yabani havuç (çiğ)",
-    "aliases": [
-      "Parsnips, raw",
-      "Yabani havuç"
-    ],
+    "aliases": ["Parsnips, raw", "Yabani havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 75,
@@ -4818,10 +4227,7 @@
   {
     "id": "usda-170508",
     "name": "Yabani havuç (pişmiş, tuzlu) · SR 11808",
-    "aliases": [
-      "Parsnips, cooked, boiled, drained, with salt",
-      "Yabani havuç"
-    ],
+    "aliases": ["Parsnips, cooked, boiled, drained, with salt", "Yabani havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 71,
@@ -4842,10 +4248,7 @@
   {
     "id": "usda-170009",
     "name": "Yabani havuç (pişmiş, tuzsuz) · SR 11299",
-    "aliases": [
-      "Parsnips, cooked, boiled, drained, without salt",
-      "Yabani havuç"
-    ],
+    "aliases": ["Parsnips, cooked, boiled, drained, without salt", "Yabani havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 71,
@@ -4866,10 +4269,7 @@
   {
     "id": "usda-170419",
     "name": "Bezelye (çiğ)",
-    "aliases": [
-      "Peas, green, raw",
-      "Bezelye"
-    ],
+    "aliases": ["Peas, green, raw", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 81,
@@ -4890,10 +4290,7 @@
   {
     "id": "usda-170010",
     "name": "Bezelye (çiğ) · SR 11300",
-    "aliases": [
-      "Peas, edible-podded, raw",
-      "Bezelye"
-    ],
+    "aliases": ["Peas, edible-podded, raw", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -4914,10 +4311,7 @@
   {
     "id": "usda-170102",
     "name": "Bezelye (pişmiş, tuzlu) · SR 11811",
-    "aliases": [
-      "Peas, green, cooked, boiled, drained, with salt",
-      "Bezelye"
-    ],
+    "aliases": ["Peas, green, cooked, boiled, drained, with salt", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 84,
@@ -4938,10 +4332,7 @@
   {
     "id": "usda-170011",
     "name": "Bezelye (pişmiş, tuzsuz) · SR 11301",
-    "aliases": [
-      "Peas, edible-podded, boiled, drained, without salt",
-      "Bezelye"
-    ],
+    "aliases": ["Peas, edible-podded, boiled, drained, without salt", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -4962,10 +4353,7 @@
   {
     "id": "usda-170020",
     "name": "Bezelye (dondurulmuş) · SR 11326",
-    "aliases": [
-      "Peas and onions, frozen, unprepared",
-      "Bezelye"
-    ],
+    "aliases": ["Peas and onions, frozen, unprepared", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 70,
@@ -4986,10 +4374,7 @@
   {
     "id": "usda-170425",
     "name": "Bezelye (dondurulmuş) · SR 11322",
-    "aliases": [
-      "Peas and carrots, frozen, unprepared",
-      "Bezelye"
-    ],
+    "aliases": ["Peas and carrots, frozen, unprepared", "Bezelye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
@@ -5010,10 +4395,7 @@
   {
     "id": "usda-169395",
     "name": "Biber (çiğ)",
-    "aliases": [
-      "Peppers, serrano, raw",
-      "Biber"
-    ],
+    "aliases": ["Peppers, serrano, raw", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -5034,10 +4416,7 @@
   {
     "id": "usda-168576",
     "name": "Biber (çiğ) · SR 11979",
-    "aliases": [
-      "Peppers, jalapeno, raw",
-      "Biber"
-    ],
+    "aliases": ["Peppers, jalapeno, raw", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -5058,10 +4437,7 @@
   {
     "id": "usda-170515",
     "name": "Biber (pişmiş, tuzlu) · SR 11824",
-    "aliases": [
-      "Peppers, sweet, red, cooked, boiled, drained, with salt",
-      "Biber"
-    ],
+    "aliases": ["Peppers, sweet, red, cooked, boiled, drained, with salt", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -5082,10 +4458,7 @@
   {
     "id": "usda-170109",
     "name": "Biber (pişmiş, tuzlu) · SR 11822",
-    "aliases": [
-      "Peppers, sweet, green, cooked, boiled, drained, with salt",
-      "Biber"
-    ],
+    "aliases": ["Peppers, sweet, green, cooked, boiled, drained, with salt", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -5106,10 +4479,7 @@
   {
     "id": "usda-169396",
     "name": "Biber (kurutulmuş) · SR 11978",
-    "aliases": [
-      "Peppers, ancho, dried",
-      "Biber"
-    ],
+    "aliases": ["Peppers, ancho, dried", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 281,
@@ -5130,10 +4500,7 @@
   {
     "id": "usda-168579",
     "name": "Biber (kurutulmuş) · SR 11982",
-    "aliases": [
-      "Peppers, pasilla, dried",
-      "Biber"
-    ],
+    "aliases": ["Peppers, pasilla, dried", "Biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 345,
@@ -5154,10 +4521,7 @@
   {
     "id": "usda-170032",
     "name": "Patates (çiğ)",
-    "aliases": [
-      "Potatoes, raw, skin",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, raw, skin", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 58,
@@ -5178,10 +4542,7 @@
   {
     "id": "usda-170026",
     "name": "Patates (çiğ) · SR 11352",
-    "aliases": [
-      "Potatoes, flesh and skin, raw",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, flesh and skin, raw", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 77,
@@ -5202,10 +4563,7 @@
   {
     "id": "usda-170112",
     "name": "Patates (pişmiş, tuzlu) · SR 11829",
-    "aliases": [
-      "Potatoes, baked, flesh, with salt",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, baked, flesh, with salt", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 93,
@@ -5226,10 +4584,7 @@
   {
     "id": "usda-170034",
     "name": "Patates (pişmiş, tuzsuz) · SR 11364",
-    "aliases": [
-      "Potatoes, baked, skin, without salt",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, baked, skin, without salt", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 198,
@@ -5250,10 +4605,7 @@
   {
     "id": "usda-169768",
     "name": "Patates · SR 31036",
-    "aliases": [
-      "Potatoes, mashed, ready-to-eat",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, mashed, ready-to-eat", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 106,
@@ -5274,10 +4626,7 @@
   {
     "id": "usda-170444",
     "name": "Patates (konserve) · SR 11376",
-    "aliases": [
-      "Potatoes, canned, drained solids",
-      "Patates"
-    ],
+    "aliases": ["Potatoes, canned, drained solids", "Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 60,
@@ -5298,10 +4647,7 @@
   {
     "id": "usda-168448",
     "name": "Bal kabağı (çiğ)",
-    "aliases": [
-      "Pumpkin, raw",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin, raw", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -5322,10 +4668,7 @@
   {
     "id": "usda-169272",
     "name": "Bal kabağı (çiğ) · SR 11418",
-    "aliases": [
-      "Pumpkin leaves, raw",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin leaves, raw", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 19,
@@ -5345,10 +4688,7 @@
   {
     "id": "usda-170526",
     "name": "Bal kabağı (pişmiş, tuzlu) · SR 11845",
-    "aliases": [
-      "Pumpkin, cooked, boiled, drained, with salt",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin, cooked, boiled, drained, with salt", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 18,
@@ -5369,10 +4709,7 @@
   {
     "id": "usda-168449",
     "name": "Bal kabağı (pişmiş, tuzsuz) · SR 11423",
-    "aliases": [
-      "Pumpkin, cooked, boiled, drained, without salt",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin, cooked, boiled, drained, without salt", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -5393,10 +4730,7 @@
   {
     "id": "usda-169273",
     "name": "Bal kabağı (konserve) · SR 11426",
-    "aliases": [
-      "Pumpkin pie mix, canned",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin pie mix, canned", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 104,
@@ -5417,10 +4751,7 @@
   {
     "id": "usda-170527",
     "name": "Bal kabağı (tuzlu, konserve) · SR 11846",
-    "aliases": [
-      "Pumpkin, canned, with salt",
-      "Bal kabağı"
-    ],
+    "aliases": ["Pumpkin, canned, with salt", "Bal kabağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 34,
@@ -5441,10 +4772,7 @@
   {
     "id": "usda-169276",
     "name": "Turp (çiğ)",
-    "aliases": [
-      "Radishes, raw",
-      "Turp"
-    ],
+    "aliases": ["Radishes, raw", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 16,
@@ -5465,10 +4793,7 @@
   {
     "id": "usda-168451",
     "name": "Turp (çiğ) · SR 11430",
-    "aliases": [
-      "Radishes, oriental, raw",
-      "Turp"
-    ],
+    "aliases": ["Radishes, oriental, raw", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 18,
@@ -5489,10 +4814,7 @@
   {
     "id": "usda-170122",
     "name": "Turp (pişmiş, tuzlu) · SR 11850",
-    "aliases": [
-      "Radishes, oriental, cooked, boiled, drained, with salt",
-      "Turp"
-    ],
+    "aliases": ["Radishes, oriental, cooked, boiled, drained, with salt", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 17,
@@ -5513,10 +4835,7 @@
   {
     "id": "usda-168452",
     "name": "Turp (pişmiş, tuzsuz) · SR 11431",
-    "aliases": [
-      "Radishes, oriental, cooked, boiled, drained, without salt",
-      "Turp"
-    ],
+    "aliases": ["Radishes, oriental, cooked, boiled, drained, without salt", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 17,
@@ -5537,10 +4856,7 @@
   {
     "id": "usda-168453",
     "name": "Turp (kurutulmuş) · SR 11432",
-    "aliases": [
-      "Radishes, oriental, dried",
-      "Turp"
-    ],
+    "aliases": ["Radishes, oriental, dried", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 271,
@@ -5561,10 +4877,7 @@
   {
     "id": "usda-169889",
     "name": "Turp · SR 43142",
-    "aliases": [
-      "Radishes, hawaiian style, pickled",
-      "Turp"
-    ],
+    "aliases": ["Radishes, hawaiian style, pickled", "Turp"],
     "unit": "g",
     "per": 100,
     "kcalPer": 28,
@@ -5585,10 +4898,7 @@
   {
     "id": "usda-168454",
     "name": "Şalgam (çiğ)",
-    "aliases": [
-      "Rutabagas, raw",
-      "Şalgam"
-    ],
+    "aliases": ["Rutabagas, raw", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 37,
@@ -5609,10 +4919,7 @@
   {
     "id": "usda-170528",
     "name": "Şalgam (pişmiş, tuzlu) · SR 11851",
-    "aliases": [
-      "Rutabagas, cooked, boiled, drained, with salt",
-      "Şalgam"
-    ],
+    "aliases": ["Rutabagas, cooked, boiled, drained, with salt", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -5633,10 +4940,7 @@
   {
     "id": "usda-168455",
     "name": "Şalgam (pişmiş, tuzsuz) · SR 11436",
-    "aliases": [
-      "Rutabagas, cooked, boiled, drained, without salt",
-      "Şalgam"
-    ],
+    "aliases": ["Rutabagas, cooked, boiled, drained, without salt", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -5657,10 +4961,7 @@
   {
     "id": "usda-170499",
     "name": "Arpacık soğan (çiğ)",
-    "aliases": [
-      "Shallots, raw",
-      "Arpacık soğan"
-    ],
+    "aliases": ["Shallots, raw", "Arpacık soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 72,
@@ -5681,10 +4982,7 @@
   {
     "id": "usda-170082",
     "name": "Arpacık soğan (kurutulmuş) · SR 11640",
-    "aliases": [
-      "Shallots, freeze-dried",
-      "Arpacık soğan"
-    ],
+    "aliases": ["Shallots, freeze-dried", "Arpacık soğan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 348,
@@ -5705,10 +5003,7 @@
   {
     "id": "usda-168462",
     "name": "Ispanak (çiğ)",
-    "aliases": [
-      "Spinach, raw",
-      "Ispanak"
-    ],
+    "aliases": ["Spinach, raw", "Ispanak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -5729,10 +5024,7 @@
   {
     "id": "usda-170531",
     "name": "Ispanak (pişmiş, tuzlu) · SR 11854",
-    "aliases": [
-      "Spinach, cooked, boiled, drained, with salt",
-      "Ispanak"
-    ],
+    "aliases": ["Spinach, cooked, boiled, drained, with salt", "Ispanak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -5753,10 +5045,7 @@
   {
     "id": "usda-168463",
     "name": "Ispanak (pişmiş, tuzsuz) · SR 11458",
-    "aliases": [
-      "Spinach, cooked, boiled, drained, without salt",
-      "Ispanak"
-    ],
+    "aliases": ["Spinach, cooked, boiled, drained, without salt", "Ispanak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -5777,10 +5066,7 @@
   {
     "id": "usda-170494",
     "name": "Ispanak · SR 11658",
-    "aliases": [
-      "Spinach souffle",
-      "Ispanak"
-    ],
+    "aliases": ["Spinach souffle", "Ispanak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 172,
@@ -5801,10 +5087,7 @@
   {
     "id": "usda-169286",
     "name": "Ispanak (konserve) · SR 11461",
-    "aliases": [
-      "Spinach, canned, regular pack, drained solids",
-      "Ispanak"
-    ],
+    "aliases": ["Spinach, canned, regular pack, drained solids", "Ispanak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -5825,10 +5108,7 @@
   {
     "id": "usda-168472",
     "name": "Kabak (çiğ)",
-    "aliases": [
-      "Squash, winter, acorn, raw",
-      "Kabak"
-    ],
+    "aliases": ["Squash, winter, acorn, raw", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 40,
@@ -5849,10 +5129,7 @@
   {
     "id": "usda-168565",
     "name": "Kabak (çiğ) · SR 11953",
-    "aliases": [
-      "Squash, zucchini, baby, raw",
-      "Kabak"
-    ],
+    "aliases": ["Squash, zucchini, baby, raw", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 21,
@@ -5873,10 +5150,7 @@
   {
     "id": "usda-167632",
     "name": "Kabak (pişmiş) · SR 35139",
-    "aliases": [
-      "Squash, Indian, cooked, boiled (Navajo)",
-      "Kabak"
-    ],
+    "aliases": ["Squash, Indian, cooked, boiled (Navajo)", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 16,
@@ -5897,10 +5171,7 @@
   {
     "id": "usda-170537",
     "name": "Kabak (pişmiş, tuzlu) · SR 11868",
-    "aliases": [
-      "Squash, winter, hubbard, baked, with salt",
-      "Kabak"
-    ],
+    "aliases": ["Squash, winter, hubbard, baked, with salt", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 50,
@@ -5921,10 +5192,7 @@
   {
     "id": "usda-168473",
     "name": "Kabak (dondurulmuş) · SR 11487",
-    "aliases": [
-      "Squash, winter, butternut, frozen, unprepared",
-      "Kabak"
-    ],
+    "aliases": ["Squash, winter, butternut, frozen, unprepared", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 57,
@@ -5945,10 +5213,7 @@
   {
     "id": "usda-168471",
     "name": "Kabak (konserve) · SR 11481",
-    "aliases": [
-      "Squash, summer, zucchini, italian style, canned",
-      "Kabak"
-    ],
+    "aliases": ["Squash, summer, zucchini, italian style, canned", "Kabak"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -5968,10 +5233,7 @@
   {
     "id": "usda-169303",
     "name": "Tatlı patates (çiğ)",
-    "aliases": [
-      "Sweet potato leaves, raw",
-      "Tatlı patates"
-    ],
+    "aliases": ["Sweet potato leaves, raw", "Tatlı patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 42,
@@ -6016,10 +5278,7 @@
   {
     "id": "usda-168484",
     "name": "Tatlı patates (pişmiş) · SR 11510",
-    "aliases": [
-      "Sweet potato, cooked, boiled, without skin",
-      "Tatlı patates"
-    ],
+    "aliases": ["Sweet potato, cooked, boiled, without skin", "Tatlı patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 76,
@@ -6040,10 +5299,7 @@
   {
     "id": "usda-170088",
     "name": "Tatlı patates (pişmiş) · SR 11659",
-    "aliases": [
-      "Sweet potato, cooked, candied, home-prepared",
-      "Tatlı patates"
-    ],
+    "aliases": ["Sweet potato, cooked, candied, home-prepared", "Tatlı patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 164,
@@ -6064,10 +5320,7 @@
   {
     "id": "usda-169305",
     "name": "Tatlı patates (konserve) · SR 11514",
-    "aliases": [
-      "Sweet potato, canned, mashed",
-      "Tatlı patates"
-    ],
+    "aliases": ["Sweet potato, canned, mashed", "Tatlı patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 101,
@@ -6088,10 +5341,7 @@
   {
     "id": "usda-168485",
     "name": "Tatlı patates (konserve) · SR 11512",
-    "aliases": [
-      "Sweet potato, canned, vacuum pack",
-      "Tatlı patates"
-    ],
+    "aliases": ["Sweet potato, canned, vacuum pack", "Tatlı patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 91,
@@ -6112,10 +5362,7 @@
   {
     "id": "usda-170456",
     "name": "Domates (çiğ)",
-    "aliases": [
-      "Tomatoes, green, raw",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, green, raw", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 23,
@@ -6136,10 +5383,7 @@
   {
     "id": "usda-170096",
     "name": "Domates (çiğ) · SR 11696",
-    "aliases": [
-      "Tomatoes, yellow, raw",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, yellow, raw", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 15,
@@ -6160,10 +5404,7 @@
   {
     "id": "usda-170050",
     "name": "Domates (pişmiş) · SR 11530",
-    "aliases": [
-      "Tomatoes, red, ripe, cooked",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, red, ripe, cooked", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 18,
@@ -6184,10 +5425,7 @@
   {
     "id": "usda-170052",
     "name": "Domates (pişmiş, konserve) · SR 11533",
-    "aliases": [
-      "Tomatoes, red, ripe, canned, stewed",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, red, ripe, canned, stewed", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 26,
@@ -6208,10 +5446,7 @@
   {
     "id": "usda-168567",
     "name": "Domates (kurutulmuş) · SR 11955",
-    "aliases": [
-      "Tomatoes, sun-dried",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, sun-dried", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 258,
@@ -6232,10 +5467,7 @@
   {
     "id": "usda-170501",
     "name": "Domates (konserve) · SR 11693",
-    "aliases": [
-      "Tomatoes, crushed, canned",
-      "Domates"
-    ],
+    "aliases": ["Tomatoes, crushed, canned", "Domates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 32,
@@ -6256,10 +5488,7 @@
   {
     "id": "usda-170465",
     "name": "Şalgam (çiğ) · SR 11564",
-    "aliases": [
-      "Turnips, raw",
-      "Şalgam"
-    ],
+    "aliases": ["Turnips, raw", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 28,
@@ -6280,10 +5509,7 @@
   {
     "id": "usda-170547",
     "name": "Şalgam (pişmiş, tuzlu) · SR 11889",
-    "aliases": [
-      "Turnips, cooked, boiled, drained, with salt",
-      "Şalgam"
-    ],
+    "aliases": ["Turnips, cooked, boiled, drained, with salt", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -6304,10 +5530,7 @@
   {
     "id": "usda-170058",
     "name": "Şalgam (pişmiş, tuzsuz) · SR 11565",
-    "aliases": [
-      "Turnips, cooked, boiled, drained, without salt",
-      "Şalgam"
-    ],
+    "aliases": ["Turnips, cooked, boiled, drained, without salt", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -6328,10 +5551,7 @@
   {
     "id": "usda-170059",
     "name": "Şalgam (dondurulmuş) · SR 11566",
-    "aliases": [
-      "Turnips, frozen, unprepared",
-      "Şalgam"
-    ],
+    "aliases": ["Turnips, frozen, unprepared", "Şalgam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 16,
@@ -6352,10 +5572,7 @@
   {
     "id": "usda-173744",
     "name": "Kırmızı fasulye (çiğ)",
-    "aliases": [
-      "Beans, kidney, red, mature seeds, raw",
-      "Kırmızı fasulye"
-    ],
+    "aliases": ["Beans, kidney, red, mature seeds, raw", "Kırmızı fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 337,
@@ -6376,10 +5593,7 @@
   {
     "id": "usda-169213",
     "name": "Kırmızı fasulye (çiğ) · SR 11029",
-    "aliases": [
-      "Beans, kidney, mature seeds, sprouted, raw",
-      "Kırmızı fasulye"
-    ],
+    "aliases": ["Beans, kidney, mature seeds, sprouted, raw", "Kırmızı fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -6399,10 +5613,7 @@
   {
     "id": "usda-175242",
     "name": "Kırmızı fasulye (pişmiş, tuzlu) · SR 16333",
-    "aliases": [
-      "Beans, kidney, red, mature seeds, cooked, boiled, with salt",
-      "Kırmızı fasulye"
-    ],
+    "aliases": ["Beans, kidney, red, mature seeds, cooked, boiled, with salt", "Kırmızı fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 127,
@@ -6447,10 +5658,7 @@
   {
     "id": "usda-173741",
     "name": "Kırmızı fasulye (konserve) · SR 16029",
-    "aliases": [
-      "Beans, kidney, all types, mature seeds, canned",
-      "Kırmızı fasulye"
-    ],
+    "aliases": ["Beans, kidney, all types, mature seeds, canned", "Kırmızı fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 84,
@@ -6471,10 +5679,7 @@
   {
     "id": "usda-174285",
     "name": "Kırmızı fasulye (konserve) · SR 16145",
-    "aliases": [
-      "Beans, kidney, red, mature seeds, canned, drained solids",
-      "Kırmızı fasulye"
-    ],
+    "aliases": ["Beans, kidney, red, mature seeds, canned, drained solids", "Kırmızı fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 124,
@@ -6495,10 +5700,7 @@
   {
     "id": "usda-173734",
     "name": "Siyah fasulye (çiğ)",
-    "aliases": [
-      "Beans, black, mature seeds, raw",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black, mature seeds, raw", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 341,
@@ -6519,10 +5721,7 @@
   {
     "id": "usda-175186",
     "name": "Siyah fasulye (çiğ) · SR 16016",
-    "aliases": [
-      "Beans, black turtle, mature seeds, raw",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black turtle, mature seeds, raw", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 339,
@@ -6543,10 +5742,7 @@
   {
     "id": "usda-175237",
     "name": "Siyah fasulye (pişmiş, tuzlu) · SR 16315",
-    "aliases": [
-      "Beans, black, mature seeds, cooked, boiled, with salt",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black, mature seeds, cooked, boiled, with salt", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 132,
@@ -6567,10 +5763,7 @@
   {
     "id": "usda-173735",
     "name": "Siyah fasulye (pişmiş, tuzsuz) · SR 16015",
-    "aliases": [
-      "Beans, black, mature seeds, cooked, boiled, without salt",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black, mature seeds, cooked, boiled, without salt", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 132,
@@ -6591,10 +5784,7 @@
   {
     "id": "usda-175188",
     "name": "Siyah fasulye (konserve) · SR 16018",
-    "aliases": [
-      "Beans, black turtle, mature seeds, canned",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black turtle, mature seeds, canned", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 91,
@@ -6615,10 +5805,7 @@
   {
     "id": "usda-175238",
     "name": "Siyah fasulye (konserve) · SR 16316",
-    "aliases": [
-      "Beans, black, mature seeds, canned, low sodium",
-      "Siyah fasulye"
-    ],
+    "aliases": ["Beans, black, mature seeds, canned, low sodium", "Siyah fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 91,
@@ -6639,10 +5826,7 @@
   {
     "id": "usda-173745",
     "name": "Beyaz fasulye (çiğ)",
-    "aliases": [
-      "Beans, navy, mature seeds, raw",
-      "Beyaz fasulye"
-    ],
+    "aliases": ["Beans, navy, mature seeds, raw", "Beyaz fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 337,
@@ -6663,10 +5847,7 @@
   {
     "id": "usda-169139",
     "name": "Beyaz fasulye (çiğ) · SR 11046",
-    "aliases": [
-      "Beans, navy, mature seeds, sprouted, raw",
-      "Beyaz fasulye"
-    ],
+    "aliases": ["Beans, navy, mature seeds, sprouted, raw", "Beyaz fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 67,
@@ -6686,10 +5867,7 @@
   {
     "id": "usda-173794",
     "name": "Beyaz fasulye (pişmiş, tuzlu) · SR 16338",
-    "aliases": [
-      "Beans, navy, mature seeds, cooked, boiled, with salt",
-      "Beyaz fasulye"
-    ],
+    "aliases": ["Beans, navy, mature seeds, cooked, boiled, with salt", "Beyaz fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 140,
@@ -6710,10 +5888,7 @@
   {
     "id": "usda-173746",
     "name": "Beyaz fasulye (pişmiş, tuzsuz) · SR 16038",
-    "aliases": [
-      "Beans, navy, mature seeds, cooked, boiled, without salt",
-      "Beyaz fasulye"
-    ],
+    "aliases": ["Beans, navy, mature seeds, cooked, boiled, without salt", "Beyaz fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 140,
@@ -6734,10 +5909,7 @@
   {
     "id": "usda-173747",
     "name": "Beyaz fasulye (konserve) · SR 16039",
-    "aliases": [
-      "Beans, navy, mature seeds, canned",
-      "Beyaz fasulye"
-    ],
+    "aliases": ["Beans, navy, mature seeds, canned", "Beyaz fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 113,
@@ -6758,10 +5930,7 @@
   {
     "id": "usda-170086",
     "name": "Barbunya (çiğ)",
-    "aliases": [
-      "Beans, pinto, mature seeds, sprouted, raw",
-      "Barbunya"
-    ],
+    "aliases": ["Beans, pinto, mature seeds, sprouted, raw", "Barbunya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 62,
@@ -6805,10 +5974,7 @@
   {
     "id": "usda-173796",
     "name": "Barbunya (pişmiş, tuzlu) · SR 16343",
-    "aliases": [
-      "Beans, pinto, mature seeds, cooked, boiled, with salt",
-      "Barbunya"
-    ],
+    "aliases": ["Beans, pinto, mature seeds, cooked, boiled, with salt", "Barbunya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 143,
@@ -6829,10 +5995,7 @@
   {
     "id": "usda-175200",
     "name": "Barbunya (pişmiş, tuzsuz) · SR 16043",
-    "aliases": [
-      "Beans, pinto, mature seeds, cooked, boiled, without salt",
-      "Barbunya"
-    ],
+    "aliases": ["Beans, pinto, mature seeds, cooked, boiled, without salt", "Barbunya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 143,
@@ -6853,10 +6016,7 @@
   {
     "id": "usda-174286",
     "name": "Barbunya (konserve) · SR 16146",
-    "aliases": [
-      "Beans, pinto, canned, drained solids",
-      "Barbunya"
-    ],
+    "aliases": ["Beans, pinto, canned, drained solids", "Barbunya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 114,
@@ -6877,10 +6037,7 @@
   {
     "id": "usda-169958",
     "name": "Barbunya (dondurulmuş) · SR 11048",
-    "aliases": [
-      "Beans, pinto, immature seeds, frozen, unprepared",
-      "Barbunya"
-    ],
+    "aliases": ["Beans, pinto, immature seeds, frozen, unprepared", "Barbunya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 170,
@@ -6901,10 +6058,7 @@
   {
     "id": "usda-175202",
     "name": "Kuru fasulye (çiğ)",
-    "aliases": [
-      "Beans, white, mature seeds, raw",
-      "Kuru fasulye"
-    ],
+    "aliases": ["Beans, white, mature seeds, raw", "Kuru fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 333,
@@ -6925,10 +6079,7 @@
   {
     "id": "usda-175249",
     "name": "Kuru fasulye (pişmiş, tuzlu) · SR 16350",
-    "aliases": [
-      "Beans, white, mature seeds, cooked, boiled, with salt",
-      "Kuru fasulye"
-    ],
+    "aliases": ["Beans, white, mature seeds, cooked, boiled, with salt", "Kuru fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 139,
@@ -6949,10 +6100,7 @@
   {
     "id": "usda-175203",
     "name": "Kuru fasulye (pişmiş, tuzsuz) · SR 16050",
-    "aliases": [
-      "Beans, white, mature seeds, cooked, boiled, without salt",
-      "Kuru fasulye"
-    ],
+    "aliases": ["Beans, white, mature seeds, cooked, boiled, without salt", "Kuru fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 139,
@@ -6973,10 +6121,7 @@
   {
     "id": "usda-175204",
     "name": "Kuru fasulye (konserve) · SR 16051",
-    "aliases": [
-      "Beans, white, mature seeds, canned",
-      "Kuru fasulye"
-    ],
+    "aliases": ["Beans, white, mature seeds, canned", "Kuru fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 114,
@@ -6997,10 +6142,7 @@
   {
     "id": "usda-169961",
     "name": "Taze fasulye (çiğ)",
-    "aliases": [
-      "Beans, snap, green, raw",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, green, raw", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -7021,10 +6163,7 @@
   {
     "id": "usda-169320",
     "name": "Taze fasulye (çiğ) · SR 11722",
-    "aliases": [
-      "Beans, snap, yellow, raw",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, yellow, raw", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 31,
@@ -7045,10 +6184,7 @@
   {
     "id": "usda-169321",
     "name": "Taze fasulye (pişmiş, tuzlu) · SR 11723",
-    "aliases": [
-      "Beans, snap, green, cooked, boiled, drained, with salt",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, green, cooked, boiled, drained, with salt", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -7069,10 +6205,7 @@
   {
     "id": "usda-169323",
     "name": "Taze fasulye (pişmiş, tuzlu) · SR 11725",
-    "aliases": [
-      "Beans, snap, yellow, cooked, boiled, drained, with salt",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, yellow, cooked, boiled, drained, with salt", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 35,
@@ -7093,10 +6226,7 @@
   {
     "id": "usda-169965",
     "name": "Taze fasulye · SR 11063",
-    "aliases": [
-      "Beans, snap, green, microwaved",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, green, microwaved", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -7117,10 +6247,7 @@
   {
     "id": "usda-169964",
     "name": "Taze fasulye (dondurulmuş) · SR 11062",
-    "aliases": [
-      "Beans, snap, green, frozen, all styles, microwaved",
-      "Taze fasulye"
-    ],
+    "aliases": ["Beans, snap, green, frozen, all styles, microwaved", "Taze fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 33,
@@ -7141,10 +6268,7 @@
   {
     "id": "usda-170377",
     "name": "Bakla (çiğ)",
-    "aliases": [
-      "Broadbeans, immature seeds, raw",
-      "Bakla"
-    ],
+    "aliases": ["Broadbeans, immature seeds, raw", "Bakla"],
     "unit": "g",
     "per": 100,
     "kcalPer": 72,
@@ -7165,10 +6289,7 @@
   {
     "id": "usda-175205",
     "name": "Bakla (çiğ) · SR 16052",
-    "aliases": [
-      "Broadbeans (fava beans), mature seeds, raw",
-      "Bakla"
-    ],
+    "aliases": ["Broadbeans (fava beans), mature seeds, raw", "Bakla"],
     "unit": "g",
     "per": 100,
     "kcalPer": 341,
@@ -7189,10 +6310,7 @@
   {
     "id": "usda-169328",
     "name": "Bakla (pişmiş, tuzlu) · SR 11738",
-    "aliases": [
-      "Broadbeans, immature seeds, cooked, boiled, drained, with salt",
-      "Bakla"
-    ],
+    "aliases": ["Broadbeans, immature seeds, cooked, boiled, drained, with salt", "Bakla"],
     "unit": "g",
     "per": 100,
     "kcalPer": 62,
@@ -7212,10 +6330,7 @@
   {
     "id": "usda-173798",
     "name": "Bakla (pişmiş, tuzlu) · SR 16353",
-    "aliases": [
-      "Broadbeans (fava beans), mature seeds, cooked, boiled, with salt",
-      "Bakla"
-    ],
+    "aliases": ["Broadbeans (fava beans), mature seeds, cooked, boiled, with salt", "Bakla"],
     "unit": "g",
     "per": 100,
     "kcalPer": 110,
@@ -7236,10 +6351,7 @@
   {
     "id": "usda-173754",
     "name": "Bakla (konserve) · SR 16054",
-    "aliases": [
-      "Broadbeans (fava beans), mature seeds, canned",
-      "Bakla"
-    ],
+    "aliases": ["Broadbeans (fava beans), mature seeds, canned", "Bakla"],
     "unit": "g",
     "per": 100,
     "kcalPer": 71,
@@ -7260,10 +6372,7 @@
   {
     "id": "usda-173756",
     "name": "Nohut (çiğ)",
-    "aliases": [
-      "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
-      "Nohut"
-    ],
+    "aliases": ["Chickpeas (garbanzo beans, bengal gram), mature seeds, raw", "Nohut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 378,
@@ -7380,10 +6489,7 @@
   {
     "id": "usda-172420",
     "name": "Mercimek (çiğ)",
-    "aliases": [
-      "Lentils, raw",
-      "Mercimek"
-    ],
+    "aliases": ["Lentils, raw", "Mercimek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 352,
@@ -7404,10 +6510,7 @@
   {
     "id": "usda-168427",
     "name": "Mercimek (çiğ) · SR 11248",
-    "aliases": [
-      "Lentils, sprouted, raw",
-      "Mercimek"
-    ],
+    "aliases": ["Lentils, sprouted, raw", "Mercimek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 106,
@@ -7427,10 +6530,7 @@
   {
     "id": "usda-168551",
     "name": "Mercimek (pişmiş, tuzlu) · SR 11926",
-    "aliases": [
-      "Lentils, sprouted, cooked, stir-fried, with salt",
-      "Mercimek"
-    ],
+    "aliases": ["Lentils, sprouted, cooked, stir-fried, with salt", "Mercimek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 101,
@@ -7450,10 +6550,7 @@
   {
     "id": "usda-175254",
     "name": "Mercimek (pişmiş, tuzlu) · SR 16370",
-    "aliases": [
-      "Lentils, mature seeds, cooked, boiled, with salt",
-      "Mercimek"
-    ],
+    "aliases": ["Lentils, mature seeds, cooked, boiled, with salt", "Mercimek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 114,
@@ -7474,10 +6571,7 @@
   {
     "id": "usda-169224",
     "name": "Börülce (çiğ)",
-    "aliases": [
-      "Cowpeas, leafy tips, raw",
-      "Börülce"
-    ],
+    "aliases": ["Cowpeas, leafy tips, raw", "Börülce"],
     "unit": "g",
     "per": 100,
     "kcalPer": 29,
@@ -7497,10 +6591,7 @@
   {
     "id": "usda-168405",
     "name": "Börülce (çiğ) · SR 11197",
-    "aliases": [
-      "Cowpeas, young pods with seeds, raw",
-      "Börülce"
-    ],
+    "aliases": ["Cowpeas, young pods with seeds, raw", "Börülce"],
     "unit": "g",
     "per": 100,
     "kcalPer": 44,
@@ -7521,10 +6612,7 @@
   {
     "id": "usda-168529",
     "name": "Börülce (pişmiş, tuzlu) · SR 11780",
-    "aliases": [
-      "Cowpeas, leafy tips, cooked, boiled, drained, with salt",
-      "Börülce"
-    ],
+    "aliases": ["Cowpeas, leafy tips, cooked, boiled, drained, with salt", "Börülce"],
     "unit": "g",
     "per": 100,
     "kcalPer": 22,
@@ -7544,10 +6632,7 @@
   {
     "id": "usda-175251",
     "name": "Börülce (pişmiş, tuzlu) · SR 16361",
-    "aliases": [
-      "Cowpeas, catjang, mature seeds, cooked, boiled, with salt",
-      "Börülce"
-    ],
+    "aliases": ["Cowpeas, catjang, mature seeds, cooked, boiled, with salt", "Börülce"],
     "unit": "g",
     "per": 100,
     "kcalPer": 117,
@@ -7568,10 +6653,7 @@
   {
     "id": "usda-168403",
     "name": "Börülce (dondurulmuş) · SR 11195",
-    "aliases": [
-      "Cowpeas (blackeyes), immature seeds, frozen, unprepared",
-      "Börülce"
-    ],
+    "aliases": ["Cowpeas (blackeyes), immature seeds, frozen, unprepared", "Börülce"],
     "unit": "g",
     "per": 100,
     "kcalPer": 139,
@@ -7616,10 +6698,7 @@
   {
     "id": "usda-168411",
     "name": "Edamame (dondurulmuş)",
-    "aliases": [
-      "Edamame, frozen, prepared",
-      "Edamame"
-    ],
+    "aliases": ["Edamame, frozen, prepared", "Edamame"],
     "unit": "g",
     "per": 100,
     "kcalPer": 121,
@@ -7640,10 +6719,7 @@
   {
     "id": "usda-168410",
     "name": "Edamame (dondurulmuş) · SR 11211",
-    "aliases": [
-      "Edamame, frozen, unprepared",
-      "Edamame"
-    ],
+    "aliases": ["Edamame, frozen, unprepared", "Edamame"],
     "unit": "g",
     "per": 100,
     "kcalPer": 109,
@@ -7664,10 +6740,7 @@
   {
     "id": "usda-169282",
     "name": "Soya fasulyesi (çiğ)",
-    "aliases": [
-      "Soybeans, green, raw",
-      "Soya fasulyesi"
-    ],
+    "aliases": ["Soybeans, green, raw", "Soya fasulyesi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 147,
@@ -7688,10 +6761,7 @@
   {
     "id": "usda-174270",
     "name": "Soya fasulyesi (çiğ) · SR 16108",
-    "aliases": [
-      "Soybeans, mature seeds, raw",
-      "Soya fasulyesi"
-    ],
+    "aliases": ["Soybeans, mature seeds, raw", "Soya fasulyesi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 446,
@@ -7712,10 +6782,7 @@
   {
     "id": "usda-172441",
     "name": "Soya fasulyesi (pişmiş) · SR 16111",
-    "aliases": [
-      "Soybeans, mature seeds, dry roasted",
-      "Soya fasulyesi"
-    ],
+    "aliases": ["Soybeans, mature seeds, dry roasted", "Soya fasulyesi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 449,
@@ -7736,10 +6803,7 @@
   {
     "id": "usda-172440",
     "name": "Soya fasulyesi (pişmiş) · SR 16110",
-    "aliases": [
-      "Soybeans, mature seeds, roasted, salted",
-      "Soya fasulyesi"
-    ],
+    "aliases": ["Soybeans, mature seeds, roasted, salted", "Soya fasulyesi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 469,
@@ -7760,10 +6824,7 @@
   {
     "id": "usda-172475",
     "name": "Tofu (çiğ)",
-    "aliases": [
-      "Tofu, raw, firm, prepared with calcium sulfate",
-      "Tofu"
-    ],
+    "aliases": ["Tofu, raw, firm, prepared with calcium sulfate", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 144,
@@ -7784,10 +6845,7 @@
   {
     "id": "usda-172476",
     "name": "Tofu (çiğ) · SR 16427",
-    "aliases": [
-      "Tofu, raw, regular, prepared with calcium sulfate",
-      "Tofu"
-    ],
+    "aliases": ["Tofu, raw, regular, prepared with calcium sulfate", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 76,
@@ -7808,10 +6866,7 @@
   {
     "id": "usda-172451",
     "name": "Tofu (pişmiş) · SR 16129",
-    "aliases": [
-      "Tofu, fried",
-      "Tofu"
-    ],
+    "aliases": ["Tofu, fried", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 270,
@@ -7832,10 +6887,7 @@
   {
     "id": "usda-174304",
     "name": "Tofu (pişmiş) · SR 16429",
-    "aliases": [
-      "Tofu, fried, prepared with calcium sulfate",
-      "Tofu"
-    ],
+    "aliases": ["Tofu, fried, prepared with calcium sulfate", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 270,
@@ -7856,10 +6908,7 @@
   {
     "id": "usda-167722",
     "name": "Tofu · SR 43476",
-    "aliases": [
-      "Tofu yogurt",
-      "Tofu"
-    ],
+    "aliases": ["Tofu yogurt", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 94,
@@ -7880,10 +6929,7 @@
   {
     "id": "usda-172450",
     "name": "Tofu (dondurulmuş, kurutulmuş) · SR 16128",
-    "aliases": [
-      "Tofu, dried-frozen (koyadofu)",
-      "Tofu"
-    ],
+    "aliases": ["Tofu, dried-frozen (koyadofu)", "Tofu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 477,
@@ -7904,10 +6950,7 @@
   {
     "id": "usda-172467",
     "name": "Tempeh (pişmiş)",
-    "aliases": [
-      "Tempeh, cooked",
-      "Tempeh"
-    ],
+    "aliases": ["Tempeh, cooked", "Tempeh"],
     "unit": "g",
     "per": 100,
     "kcalPer": 195,
@@ -7927,10 +6970,7 @@
   {
     "id": "usda-174272",
     "name": "Tempeh · SR 16114",
-    "aliases": [
-      "Tempeh",
-      "Tempeh"
-    ],
+    "aliases": ["Tempeh", "Tempeh"],
     "unit": "g",
     "per": 100,
     "kcalPer": 192,
@@ -7950,10 +6990,7 @@
   {
     "id": "usda-174263",
     "name": "Yer fıstığı (çiğ)",
-    "aliases": [
-      "Peanuts, spanish, raw",
-      "Yer fıstığı"
-    ],
+    "aliases": ["Peanuts, spanish, raw", "Yer fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 570,
@@ -7974,10 +7011,7 @@
   {
     "id": "usda-172432",
     "name": "Yer fıstığı (çiğ) · SR 16093",
-    "aliases": [
-      "Peanuts, valencia, raw",
-      "Yer fıstığı"
-    ],
+    "aliases": ["Peanuts, valencia, raw", "Yer fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 570,
@@ -7998,10 +7032,7 @@
   {
     "id": "usda-172431",
     "name": "Yer fıstığı (pişmiş, tuzlu) · SR 16092",
-    "aliases": [
-      "Peanuts, spanish, oil-roasted, with salt",
-      "Yer fıstığı"
-    ],
+    "aliases": ["Peanuts, spanish, oil-roasted, with salt", "Yer fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 579,
@@ -8022,10 +7053,7 @@
   {
     "id": "usda-172433",
     "name": "Yer fıstığı (pişmiş, tuzlu) · SR 16094",
-    "aliases": [
-      "Peanuts, valencia, oil-roasted, with salt",
-      "Yer fıstığı"
-    ],
+    "aliases": ["Peanuts, valencia, oil-roasted, with salt", "Yer fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 589,
@@ -8046,10 +7074,7 @@
   {
     "id": "usda-170284",
     "name": "Arpa (çiğ) · SR 20005",
-    "aliases": [
-      "Barley, pearled, raw",
-      "Arpa"
-    ],
+    "aliases": ["Barley, pearled, raw", "Arpa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 352,
@@ -8070,10 +7095,7 @@
   {
     "id": "usda-170285",
     "name": "Arpa (pişmiş) · SR 20006",
-    "aliases": [
-      "Barley, pearled, cooked",
-      "Arpa"
-    ],
+    "aliases": ["Barley, pearled, cooked", "Arpa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 123,
@@ -8094,10 +7116,7 @@
   {
     "id": "usda-170283",
     "name": "Arpa · SR 20004",
-    "aliases": [
-      "Barley, hulled",
-      "Arpa"
-    ],
+    "aliases": ["Barley, hulled", "Arpa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 354,
@@ -8118,10 +7137,7 @@
   {
     "id": "usda-169740",
     "name": "Arpa · SR 20131",
-    "aliases": [
-      "Barley malt flour",
-      "Arpa"
-    ],
+    "aliases": ["Barley malt flour", "Arpa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 361,
@@ -8142,10 +7158,7 @@
   {
     "id": "usda-170685",
     "name": "Karabuğday (çiğ)",
-    "aliases": [
-      "Buckwheat groats, roasted, dry",
-      "Karabuğday"
-    ],
+    "aliases": ["Buckwheat groats, roasted, dry", "Karabuğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 346,
@@ -8166,10 +7179,7 @@
   {
     "id": "usda-170686",
     "name": "Karabuğday (pişmiş) · SR 20010",
-    "aliases": [
-      "Buckwheat groats, roasted, cooked",
-      "Karabuğday"
-    ],
+    "aliases": ["Buckwheat groats, roasted, cooked", "Karabuğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 92,
@@ -8190,10 +7200,7 @@
   {
     "id": "usda-170286",
     "name": "Karabuğday · SR 20008",
-    "aliases": [
-      "Buckwheat",
-      "Karabuğday"
-    ],
+    "aliases": ["Buckwheat", "Karabuğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 343,
@@ -8214,10 +7221,7 @@
   {
     "id": "usda-170687",
     "name": "Karabuğday · SR 20011",
-    "aliases": [
-      "Buckwheat flour, whole-groat",
-      "Karabuğday"
-    ],
+    "aliases": ["Buckwheat flour, whole-groat", "Karabuğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 335,
@@ -8238,10 +7242,7 @@
   {
     "id": "usda-170688",
     "name": "Bulgur (çiğ)",
-    "aliases": [
-      "Bulgur, dry",
-      "Bulgur"
-    ],
+    "aliases": ["Bulgur, dry", "Bulgur"],
     "unit": "g",
     "per": 100,
     "kcalPer": 342,
@@ -8262,10 +7263,7 @@
   {
     "id": "usda-170287",
     "name": "Bulgur (pişmiş) · SR 20013",
-    "aliases": [
-      "Bulgur, cooked",
-      "Bulgur"
-    ],
+    "aliases": ["Bulgur, cooked", "Bulgur"],
     "unit": "g",
     "per": 100,
     "kcalPer": 83,
@@ -8286,10 +7284,7 @@
   {
     "id": "usda-169699",
     "name": "Kuskus (çiğ)",
-    "aliases": [
-      "Couscous, dry",
-      "Kuskus"
-    ],
+    "aliases": ["Couscous, dry", "Kuskus"],
     "unit": "g",
     "per": 100,
     "kcalPer": 376,
@@ -8310,10 +7305,7 @@
   {
     "id": "usda-169700",
     "name": "Kuskus (pişmiş) · SR 20029",
-    "aliases": [
-      "Couscous, cooked",
-      "Kuskus"
-    ],
+    "aliases": ["Couscous, cooked", "Kuskus"],
     "unit": "g",
     "per": 100,
     "kcalPer": 112,
@@ -8334,10 +7326,7 @@
   {
     "id": "usda-169702",
     "name": "Darı (çiğ)",
-    "aliases": [
-      "Millet, raw",
-      "Darı"
-    ],
+    "aliases": ["Millet, raw", "Darı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 378,
@@ -8358,10 +7347,7 @@
   {
     "id": "usda-168871",
     "name": "Darı (pişmiş) · SR 20032",
-    "aliases": [
-      "Millet, cooked",
-      "Darı"
-    ],
+    "aliases": ["Millet, cooked", "Darı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 119,
@@ -8382,10 +7368,7 @@
   {
     "id": "usda-172023",
     "name": "Darı · SR 20647",
-    "aliases": [
-      "Millet flour",
-      "Darı"
-    ],
+    "aliases": ["Millet flour", "Darı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 382,
@@ -8406,10 +7389,7 @@
   {
     "id": "usda-167724",
     "name": "Darı · SR 43483",
-    "aliases": [
-      "Millet, puffed",
-      "Darı"
-    ],
+    "aliases": ["Millet, puffed", "Darı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 354,
@@ -8430,10 +7410,7 @@
   {
     "id": "usda-169705",
     "name": "Yulaf",
-    "aliases": [
-      "Oats (Includes foods for USDA's Food Distribution Program)",
-      "Yulaf"
-    ],
+    "aliases": ["Oats (Includes foods for USDA's Food Distribution Program)", "Yulaf"],
     "unit": "g",
     "per": 100,
     "kcalPer": 389,
@@ -8454,10 +7431,7 @@
   {
     "id": "usda-168874",
     "name": "Kinoa (çiğ)",
-    "aliases": [
-      "Quinoa, uncooked",
-      "Kinoa"
-    ],
+    "aliases": ["Quinoa, uncooked", "Kinoa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 368,
@@ -8478,10 +7452,7 @@
   {
     "id": "usda-168917",
     "name": "Kinoa (pişmiş) · SR 20137",
-    "aliases": [
-      "Quinoa, cooked",
-      "Kinoa"
-    ],
+    "aliases": ["Quinoa, cooked", "Kinoa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 120,
@@ -8502,10 +7473,7 @@
   {
     "id": "usda-169742",
     "name": "Pirinç (çiğ)",
-    "aliases": [
-      "Rice noodles, dry",
-      "Pirinç"
-    ],
+    "aliases": ["Rice noodles, dry", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 364,
@@ -8526,10 +7494,7 @@
   {
     "id": "usda-168879",
     "name": "Pirinç (çiğ) · SR 20050",
-    "aliases": [
-      "Rice, white, medium-grain, raw, enriched",
-      "Pirinç"
-    ],
+    "aliases": ["Rice, white, medium-grain, raw, enriched", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 360,
@@ -8550,10 +7515,7 @@
   {
     "id": "usda-168914",
     "name": "Pirinç (pişmiş) · SR 20134",
-    "aliases": [
-      "Rice noodles, cooked",
-      "Pirinç"
-    ],
+    "aliases": ["Rice noodles, cooked", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 108,
@@ -8574,10 +7536,7 @@
   {
     "id": "usda-168876",
     "name": "Pirinç (pişmiş) · SR 20042",
-    "aliases": [
-      "Rice, brown, parboiled, dry, UNCLE BEN'S",
-      "Pirinç"
-    ],
+    "aliases": ["Rice, brown, parboiled, dry, UNCLE BEN'S", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 370,
@@ -8598,10 +7557,7 @@
   {
     "id": "usda-173161",
     "name": "Pirinç · SR 25071",
-    "aliases": [
-      "Rice crackers",
-      "Pirinç"
-    ],
+    "aliases": ["Rice crackers", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 416,
@@ -8622,10 +7578,7 @@
   {
     "id": "usda-169713",
     "name": "Pirinç · SR 20060",
-    "aliases": [
-      "Rice bran, crude",
-      "Pirinç"
-    ],
+    "aliases": ["Rice bran, crude", "Pirinç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 316,
@@ -8646,10 +7599,7 @@
   {
     "id": "usda-168884",
     "name": "Çavdar",
-    "aliases": [
-      "Rye grain",
-      "Çavdar"
-    ],
+    "aliases": ["Rye grain", "Çavdar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 338,
@@ -8670,10 +7620,7 @@
   {
     "id": "usda-168885",
     "name": "Çavdar · SR 20063",
-    "aliases": [
-      "Rye flour, dark",
-      "Çavdar"
-    ],
+    "aliases": ["Rye flour, dark", "Çavdar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 325,
@@ -8694,10 +7641,7 @@
   {
     "id": "usda-169716",
     "name": "Sorgum",
-    "aliases": [
-      "Sorghum grain",
-      "Sorgum"
-    ],
+    "aliases": ["Sorghum grain", "Sorgum"],
     "unit": "g",
     "per": 100,
     "kcalPer": 329,
@@ -8718,10 +7662,7 @@
   {
     "id": "usda-168943",
     "name": "Sorgum · SR 20648",
-    "aliases": [
-      "Sorghum flour, whole-grain",
-      "Sorgum"
-    ],
+    "aliases": ["Sorghum flour, whole-grain", "Sorgum"],
     "unit": "g",
     "per": 100,
     "kcalPer": 359,
@@ -8742,10 +7683,7 @@
   {
     "id": "usda-168911",
     "name": "Spagetti (çiğ)",
-    "aliases": [
-      "Spaghetti, spinach, dry",
-      "Spagetti"
-    ],
+    "aliases": ["Spaghetti, spinach, dry", "Spagetti"],
     "unit": "g",
     "per": 100,
     "kcalPer": 372,
@@ -8766,10 +7704,7 @@
   {
     "id": "usda-168912",
     "name": "Spagetti (pişmiş) · SR 20127",
-    "aliases": [
-      "Spaghetti, spinach, cooked",
-      "Spagetti"
-    ],
+    "aliases": ["Spaghetti, spinach, cooked", "Spagetti"],
     "unit": "g",
     "per": 100,
     "kcalPer": 130,
@@ -8789,10 +7724,7 @@
   {
     "id": "usda-168934",
     "name": "Spagetti (pişmiş) · SR 20523",
-    "aliases": [
-      "Spaghetti, protein-fortified, cooked, enriched (n x 6.25)",
-      "Spagetti"
-    ],
+    "aliases": ["Spaghetti, protein-fortified, cooked, enriched (n x 6.25)", "Spagetti"],
     "unit": "g",
     "per": 100,
     "kcalPer": 164,
@@ -8813,10 +7745,7 @@
   {
     "id": "usda-172089",
     "name": "Spagetti (dondurulmuş) · SR 22401",
-    "aliases": [
-      "Spaghetti with meat sauce, frozen entree",
-      "Spagetti"
-    ],
+    "aliases": ["Spaghetti with meat sauce, frozen entree", "Spagetti"],
     "unit": "g",
     "per": 100,
     "kcalPer": 90,
@@ -8837,10 +7766,7 @@
   {
     "id": "usda-172099",
     "name": "Spagetti (konserve) · SR 22912",
-    "aliases": [
-      "Spaghetti, with meatballs in tomato sauce, canned",
-      "Spagetti"
-    ],
+    "aliases": ["Spaghetti, with meatballs in tomato sauce, canned", "Spagetti"],
     "unit": "g",
     "per": 100,
     "kcalPer": 100,
@@ -8861,10 +7787,7 @@
   {
     "id": "usda-168903",
     "name": "Makarna (çiğ)",
-    "aliases": [
-      "Macaroni, vegetable, enriched, dry",
-      "Makarna"
-    ],
+    "aliases": ["Macaroni, vegetable, enriched, dry", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 367,
@@ -8885,10 +7808,7 @@
   {
     "id": "usda-173340",
     "name": "Makarna (çiğ) · SR 22959",
-    "aliases": [
-      "Macaroni and cheese dinner with dry sauce mix, boxed, uncooked",
-      "Makarna"
-    ],
+    "aliases": ["Macaroni and cheese dinner with dry sauce mix, boxed, uncooked", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 379,
@@ -8909,10 +7829,7 @@
   {
     "id": "usda-168904",
     "name": "Makarna (pişmiş) · SR 20106",
-    "aliases": [
-      "Macaroni, vegetable, enriched, cooked",
-      "Makarna"
-    ],
+    "aliases": ["Macaroni, vegetable, enriched, cooked", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 128,
@@ -8933,10 +7850,7 @@
   {
     "id": "usda-173325",
     "name": "Makarna (konserve) · SR 22247",
-    "aliases": [
-      "Macaroni and Cheese, canned entree",
-      "Makarna"
-    ],
+    "aliases": ["Macaroni and Cheese, canned entree", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 82,
@@ -8957,10 +7871,7 @@
   {
     "id": "usda-173342",
     "name": "Makarna (dondurulmuş) · SR 22970",
-    "aliases": [
-      "Macaroni and cheese, frozen entree",
-      "Makarna"
-    ],
+    "aliases": ["Macaroni and cheese, frozen entree", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 149,
@@ -8981,10 +7892,7 @@
   {
     "id": "usda-168899",
     "name": "Makarna (çiğ) · SR 20091",
-    "aliases": [
-      "Pasta, gluten-free, corn, dry",
-      "Makarna"
-    ],
+    "aliases": ["Pasta, gluten-free, corn, dry", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 357,
@@ -9029,10 +7937,7 @@
   {
     "id": "usda-168900",
     "name": "Makarna (pişmiş) · SR 20092",
-    "aliases": [
-      "Pasta, gluten-free, corn, cooked",
-      "Makarna"
-    ],
+    "aliases": ["Pasta, gluten-free, corn, cooked", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 126,
@@ -9053,10 +7958,7 @@
   {
     "id": "usda-168901",
     "name": "Makarna (pişmiş) · SR 20097",
-    "aliases": [
-      "Pasta, homemade, made with egg, cooked",
-      "Makarna"
-    ],
+    "aliases": ["Pasta, homemade, made with egg, cooked", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 130,
@@ -9076,10 +7978,7 @@
   {
     "id": "usda-169736",
     "name": "Makarna · SR 20120",
-    "aliases": [
-      "Pasta, dry, enriched",
-      "Makarna"
-    ],
+    "aliases": ["Pasta, dry, enriched", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 371,
@@ -9100,10 +7999,7 @@
   {
     "id": "usda-168927",
     "name": "Makarna · SR 20420",
-    "aliases": [
-      "Pasta, dry, unenriched",
-      "Makarna"
-    ],
+    "aliases": ["Pasta, dry, unenriched", "Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 371,
@@ -9124,10 +8020,7 @@
   {
     "id": "usda-169743",
     "name": "Buğday (çiğ)",
-    "aliases": [
-      "Wheat, khorasan, uncooked",
-      "Buğday"
-    ],
+    "aliases": ["Wheat, khorasan, uncooked", "Buğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 337,
@@ -9148,10 +8041,7 @@
   {
     "id": "usda-169744",
     "name": "Buğday (pişmiş) · SR 20139",
-    "aliases": [
-      "Wheat, khorasan, cooked",
-      "Buğday"
-    ],
+    "aliases": ["Wheat, khorasan, cooked", "Buğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 132,
@@ -9172,10 +8062,7 @@
   {
     "id": "usda-169721",
     "name": "Buğday · SR 20076",
-    "aliases": [
-      "Wheat, durum",
-      "Buğday"
-    ],
+    "aliases": ["Wheat, durum", "Buğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 339,
@@ -9195,10 +8082,7 @@
   {
     "id": "usda-169725",
     "name": "Buğday · SR 20087",
-    "aliases": [
-      "Wheat, sprouted",
-      "Buğday"
-    ],
+    "aliases": ["Wheat, sprouted", "Buğday"],
     "unit": "g",
     "per": 100,
     "kcalPer": 198,
@@ -9219,10 +8103,7 @@
   {
     "id": "usda-168913",
     "name": "Buğday unu",
-    "aliases": [
-      "Wheat flours, bread, unenriched",
-      "Buğday unu"
-    ],
+    "aliases": ["Wheat flours, bread, unenriched", "Buğday unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 361,
@@ -9243,10 +8124,7 @@
   {
     "id": "usda-169723",
     "name": "Buğday unu · SR 20084",
-    "aliases": [
-      "Wheat flour, white, cake, enriched",
-      "Buğday unu"
-    ],
+    "aliases": ["Wheat flour, white, cake, enriched", "Buğday unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 362,
@@ -9267,10 +8145,7 @@
   {
     "id": "usda-168898",
     "name": "Pirinç unu",
-    "aliases": [
-      "Rice flour, brown",
-      "Pirinç unu"
-    ],
+    "aliases": ["Rice flour, brown", "Pirinç unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 363,
@@ -9291,10 +8166,7 @@
   {
     "id": "usda-169714",
     "name": "Pirinç unu · SR 20061",
-    "aliases": [
-      "Rice flour, white, unenriched",
-      "Pirinç unu"
-    ],
+    "aliases": ["Rice flour, white, unenriched", "Pirinç unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 366,
@@ -9315,10 +8187,7 @@
   {
     "id": "usda-169748",
     "name": "Mısır unu",
-    "aliases": [
-      "Corn flour, whole-grain, white",
-      "Mısır unu"
-    ],
+    "aliases": ["Corn flour, whole-grain, white", "Mısır unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 361,
@@ -9339,10 +8208,7 @@
   {
     "id": "usda-170290",
     "name": "Mısır unu · SR 20016",
-    "aliases": [
-      "Corn flour, whole-grain, yellow",
-      "Mısır unu"
-    ],
+    "aliases": ["Corn flour, whole-grain, yellow", "Mısır unu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 361,
@@ -9363,10 +8229,7 @@
   {
     "id": "usda-168872",
     "name": "Yulaf kepeği (çiğ)",
-    "aliases": [
-      "Oat bran, raw",
-      "Yulaf kepeği"
-    ],
+    "aliases": ["Oat bran, raw", "Yulaf kepeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 246,
@@ -9387,10 +8250,7 @@
   {
     "id": "usda-168873",
     "name": "Yulaf kepeği (pişmiş) · SR 20034",
-    "aliases": [
-      "Oat bran, cooked",
-      "Yulaf kepeği"
-    ],
+    "aliases": ["Oat bran, cooked", "Yulaf kepeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 40,
@@ -9411,10 +8271,7 @@
   {
     "id": "usda-169722",
     "name": "Buğday kepeği",
-    "aliases": [
-      "Wheat bran, crude",
-      "Buğday kepeği"
-    ],
+    "aliases": ["Wheat bran, crude", "Buğday kepeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 216,
@@ -9435,10 +8292,7 @@
   {
     "id": "usda-169827",
     "name": "Fındık",
-    "aliases": [
-      "Hazelnuts, beaked (Northern Plains Indians)",
-      "Fındık"
-    ],
+    "aliases": ["Hazelnuts, beaked (Northern Plains Indians)", "Fındık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 628,
@@ -9459,10 +8313,7 @@
   {
     "id": "usda-168592",
     "name": "Badem (pişmiş)",
-    "aliases": [
-      "Nuts, almonds, honey roasted, unblanched",
-      "Badem"
-    ],
+    "aliases": ["Nuts, almonds, honey roasted, unblanched", "Badem"],
     "unit": "g",
     "per": 100,
     "kcalPer": 594,
@@ -9483,10 +8334,7 @@
   {
     "id": "usda-168602",
     "name": "Badem (pişmiş) · SR 12665",
-    "aliases": [
-      "Nuts, almonds, oil roasted, lightly salted",
-      "Badem"
-    ],
+    "aliases": ["Nuts, almonds, oil roasted, lightly salted", "Badem"],
     "unit": "g",
     "per": 100,
     "kcalPer": 607,
@@ -9507,10 +8355,7 @@
   {
     "id": "usda-170567",
     "name": "Badem · SR 12061",
-    "aliases": [
-      "Nuts, almonds",
-      "Badem"
-    ],
+    "aliases": ["Nuts, almonds", "Badem"],
     "unit": "g",
     "per": 100,
     "kcalPer": 579,
@@ -9531,10 +8376,7 @@
   {
     "id": "usda-170568",
     "name": "Badem · SR 12062",
-    "aliases": [
-      "Nuts, almonds, blanched",
-      "Badem"
-    ],
+    "aliases": ["Nuts, almonds, blanched", "Badem"],
     "unit": "g",
     "per": 100,
     "kcalPer": 590,
@@ -9555,10 +8397,7 @@
   {
     "id": "usda-170583",
     "name": "Fındık (pişmiş, tuzsuz) · SR 12122",
-    "aliases": [
-      "Nuts, hazelnuts or filberts, dry roasted, without salt added",
-      "Fındık"
-    ],
+    "aliases": ["Nuts, hazelnuts or filberts, dry roasted, without salt added", "Fındık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 646,
@@ -9579,10 +8418,7 @@
   {
     "id": "usda-170581",
     "name": "Fındık · SR 12120",
-    "aliases": [
-      "Nuts, hazelnuts or filberts",
-      "Fındık"
-    ],
+    "aliases": ["Nuts, hazelnuts or filberts", "Fındık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 628,
@@ -9603,10 +8439,7 @@
   {
     "id": "usda-170582",
     "name": "Fındık · SR 12121",
-    "aliases": [
-      "Nuts, hazelnuts or filberts, blanched",
-      "Fındık"
-    ],
+    "aliases": ["Nuts, hazelnuts or filberts, blanched", "Fındık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 629,
@@ -9627,10 +8460,7 @@
   {
     "id": "usda-170594",
     "name": "Ceviz (pişmiş, tuzlu)",
-    "aliases": [
-      "Nuts, walnuts, dry roasted, with salt added",
-      "Ceviz"
-    ],
+    "aliases": ["Nuts, walnuts, dry roasted, with salt added", "Ceviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 643,
@@ -9651,10 +8481,7 @@
   {
     "id": "usda-170593",
     "name": "Ceviz · SR 12156",
-    "aliases": [
-      "Nuts, walnuts, glazed",
-      "Ceviz"
-    ],
+    "aliases": ["Nuts, walnuts, glazed", "Ceviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 500,
@@ -9675,10 +8502,7 @@
   {
     "id": "usda-170187",
     "name": "Ceviz · SR 12155",
-    "aliases": [
-      "Nuts, walnuts, english",
-      "Ceviz"
-    ],
+    "aliases": ["Nuts, walnuts, english", "Ceviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 654,
@@ -9699,10 +8523,7 @@
   {
     "id": "usda-170184",
     "name": "Antep fıstığı (çiğ)",
-    "aliases": [
-      "Nuts, pistachio nuts, raw",
-      "Antep fıstığı"
-    ],
+    "aliases": ["Nuts, pistachio nuts, raw", "Antep fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 560,
@@ -9723,10 +8544,7 @@
   {
     "id": "usda-169426",
     "name": "Antep fıstığı (pişmiş, tuzlu) · SR 12652",
-    "aliases": [
-      "Nuts, pistachio nuts, dry roasted, with salt added",
-      "Antep fıstığı"
-    ],
+    "aliases": ["Nuts, pistachio nuts, dry roasted, with salt added", "Antep fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 569,
@@ -9747,10 +8565,7 @@
   {
     "id": "usda-170185",
     "name": "Antep fıstığı (pişmiş, tuzsuz) · SR 12152",
-    "aliases": [
-      "Nuts, pistachio nuts, dry roasted, without salt added",
-      "Antep fıstığı"
-    ],
+    "aliases": ["Nuts, pistachio nuts, dry roasted, without salt added", "Antep fıstığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 572,
@@ -9771,10 +8586,7 @@
   {
     "id": "usda-170162",
     "name": "Kaju (çiğ)",
-    "aliases": [
-      "Nuts, cashew nuts, raw",
-      "Kaju"
-    ],
+    "aliases": ["Nuts, cashew nuts, raw", "Kaju"],
     "unit": "g",
     "per": 100,
     "kcalPer": 553,
@@ -9795,10 +8607,7 @@
   {
     "id": "usda-169421",
     "name": "Kaju (pişmiş, tuzlu) · SR 12585",
-    "aliases": [
-      "Nuts, cashew nuts, dry roasted, with salt added",
-      "Kaju"
-    ],
+    "aliases": ["Nuts, cashew nuts, dry roasted, with salt added", "Kaju"],
     "unit": "g",
     "per": 100,
     "kcalPer": 574,
@@ -9819,10 +8628,7 @@
   {
     "id": "usda-169422",
     "name": "Kaju (pişmiş, tuzlu) · SR 12586",
-    "aliases": [
-      "Nuts, cashew nuts, oil roasted, with salt added",
-      "Kaju"
-    ],
+    "aliases": ["Nuts, cashew nuts, oil roasted, with salt added", "Kaju"],
     "unit": "g",
     "per": 100,
     "kcalPer": 581,
@@ -9843,10 +8649,7 @@
   {
     "id": "usda-168597",
     "name": "Kaju (tuzlu) · SR 12588",
-    "aliases": [
-      "Nuts, cashew butter, plain, with salt added",
-      "Kaju"
-    ],
+    "aliases": ["Nuts, cashew butter, plain, with salt added", "Kaju"],
     "unit": "g",
     "per": 100,
     "kcalPer": 609,
@@ -9867,10 +8670,7 @@
   {
     "id": "usda-170163",
     "name": "Kaju (tuzsuz) · SR 12088",
-    "aliases": [
-      "Nuts, cashew butter, plain, without salt added",
-      "Kaju"
-    ],
+    "aliases": ["Nuts, cashew butter, plain, without salt added", "Kaju"],
     "unit": "g",
     "per": 100,
     "kcalPer": 587,
@@ -9891,10 +8691,7 @@
   {
     "id": "usda-169410",
     "name": "Susam (çiğ)",
-    "aliases": [
-      "Seeds, sesame butter, tahini, from raw and stone ground kernels",
-      "Susam"
-    ],
+    "aliases": ["Seeds, sesame butter, tahini, from raw and stone ground kernels", "Susam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 570,
@@ -9915,10 +8712,7 @@
   {
     "id": "usda-170151",
     "name": "Susam (pişmiş) · SR 12024",
-    "aliases": [
-      "Seeds, sesame seeds, whole, roasted and toasted",
-      "Susam"
-    ],
+    "aliases": ["Seeds, sesame seeds, whole, roasted and toasted", "Susam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 565,
@@ -9963,10 +8757,7 @@
   {
     "id": "usda-170191",
     "name": "Susam · SR 12169",
-    "aliases": [
-      "Seeds, sesame butter, paste",
-      "Susam"
-    ],
+    "aliases": ["Seeds, sesame butter, paste", "Susam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 586,
@@ -9987,10 +8778,7 @@
   {
     "id": "usda-170560",
     "name": "Susam · SR 12033",
-    "aliases": [
-      "Seeds, sesame flour, low-fat",
-      "Susam"
-    ],
+    "aliases": ["Seeds, sesame flour, low-fat", "Susam"],
     "unit": "g",
     "per": 100,
     "kcalPer": 333,
@@ -10010,10 +8798,7 @@
   {
     "id": "usda-169414",
     "name": "Keten tohumu",
-    "aliases": [
-      "Seeds, flaxseed",
-      "Keten tohumu"
-    ],
+    "aliases": ["Seeds, flaxseed", "Keten tohumu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 534,
@@ -10034,10 +8819,7 @@
   {
     "id": "usda-170554",
     "name": "Chia tohumu (kurutulmuş)",
-    "aliases": [
-      "Seeds, chia seeds, dried",
-      "Chia tohumu"
-    ],
+    "aliases": ["Seeds, chia seeds, dried", "Chia tohumu"],
     "unit": "g",
     "per": 100,
     "kcalPer": 486,
@@ -10058,10 +8840,7 @@
   {
     "id": "usda-170563",
     "name": "Ay çekirdeği (pişmiş, tuzsuz)",
-    "aliases": [
-      "Seeds, sunflower seed kernels, dry roasted, without salt",
-      "Ay çekirdeği"
-    ],
+    "aliases": ["Seeds, sunflower seed kernels, dry roasted, without salt", "Ay çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 582,
@@ -10082,10 +8861,7 @@
   {
     "id": "usda-170564",
     "name": "Ay çekirdeği (pişmiş, tuzsuz) · SR 12038",
-    "aliases": [
-      "Seeds, sunflower seed kernels, oil roasted, without salt",
-      "Ay çekirdeği"
-    ],
+    "aliases": ["Seeds, sunflower seed kernels, oil roasted, without salt", "Ay çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 592,
@@ -10106,10 +8882,7 @@
   {
     "id": "usda-170562",
     "name": "Ay çekirdeği (kurutulmuş) · SR 12036",
-    "aliases": [
-      "Seeds, sunflower seed kernels, dried",
-      "Ay çekirdeği"
-    ],
+    "aliases": ["Seeds, sunflower seed kernels, dried", "Ay çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 584,
@@ -10130,10 +8903,7 @@
   {
     "id": "usda-170155",
     "name": "Ay çekirdeği (tuzsuz) · SR 12040",
-    "aliases": [
-      "Seeds, sunflower seed butter, without salt",
-      "Ay çekirdeği"
-    ],
+    "aliases": ["Seeds, sunflower seed butter, without salt", "Ay çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 617,
@@ -10154,10 +8924,7 @@
   {
     "id": "usda-170188",
     "name": "Kabak çekirdeği (pişmiş, tuzsuz)",
-    "aliases": [
-      "Seeds, pumpkin and squash seeds, whole, roasted, without salt",
-      "Kabak çekirdeği"
-    ],
+    "aliases": ["Seeds, pumpkin and squash seeds, whole, roasted, without salt", "Kabak çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 446,
@@ -10178,10 +8945,7 @@
   {
     "id": "usda-170557",
     "name": "Kabak çekirdeği (pişmiş, tuzsuz) · SR 12016",
-    "aliases": [
-      "Seeds, pumpkin and squash seed kernels, roasted, without salt",
-      "Kabak çekirdeği"
-    ],
+    "aliases": ["Seeds, pumpkin and squash seed kernels, roasted, without salt", "Kabak çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 574,
@@ -10202,10 +8966,7 @@
   {
     "id": "usda-170556",
     "name": "Kabak çekirdeği (kurutulmuş) · SR 12014",
-    "aliases": [
-      "Seeds, pumpkin and squash seed kernels, dried",
-      "Kabak çekirdeği"
-    ],
+    "aliases": ["Seeds, pumpkin and squash seed kernels, dried", "Kabak çekirdeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 559,
@@ -10226,10 +8987,7 @@
   {
     "id": "usda-171474",
     "name": "Tavuk göğsü (çiğ)",
-    "aliases": [
-      "Chicken, broilers or fryers, breast, meat and skin, raw",
-      "Tavuk göğsü"
-    ],
+    "aliases": ["Chicken, broilers or fryers, breast, meat and skin, raw", "Tavuk göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 172,
@@ -10274,10 +9032,7 @@
   {
     "id": "usda-171078",
     "name": "Tavuk göğsü (pişmiş) · SR 5063",
-    "aliases": [
-      "Chicken, broilers or fryers, breast, meat only, cooked, fried",
-      "Tavuk göğsü"
-    ],
+    "aliases": ["Chicken, broilers or fryers, breast, meat only, cooked, fried", "Tavuk göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 187,
@@ -10298,10 +9053,7 @@
   {
     "id": "usda-171478",
     "name": "Tavuk göğsü (pişmiş) · SR 5065",
-    "aliases": [
-      "Chicken, broilers or fryers, breast, meat only, cooked, stewed",
-      "Tavuk göğsü"
-    ],
+    "aliases": ["Chicken, broilers or fryers, breast, meat only, cooked, stewed", "Tavuk göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 151,
@@ -10322,10 +9074,7 @@
   {
     "id": "usda-172385",
     "name": "Tavuk but (çiğ)",
-    "aliases": [
-      "Chicken, broilers or fryers, thigh, meat and skin, raw",
-      "Tavuk but"
-    ],
+    "aliases": ["Chicken, broilers or fryers, thigh, meat and skin, raw", "Tavuk but"],
     "unit": "g",
     "per": 100,
     "kcalPer": 221,
@@ -10346,10 +9095,7 @@
   {
     "id": "usda-172387",
     "name": "Tavuk but (pişmiş) · SR 5097",
-    "aliases": [
-      "Chicken, broilers or fryers, thigh, meat only, cooked, fried",
-      "Tavuk but"
-    ],
+    "aliases": ["Chicken, broilers or fryers, thigh, meat only, cooked, fried", "Tavuk but"],
     "unit": "g",
     "per": 100,
     "kcalPer": 218,
@@ -10370,10 +9116,7 @@
   {
     "id": "usda-172389",
     "name": "Tavuk but (pişmiş) · SR 5099",
-    "aliases": [
-      "Chicken, broilers or fryers, thigh, meat only, cooked, stewed",
-      "Tavuk but"
-    ],
+    "aliases": ["Chicken, broilers or fryers, thigh, meat only, cooked, stewed", "Tavuk but"],
     "unit": "g",
     "per": 100,
     "kcalPer": 195,
@@ -10442,10 +9185,7 @@
   {
     "id": "usda-174612",
     "name": "Hindi göğsü · SR 7943",
-    "aliases": [
-      "Turkey, breast, smoked, lemon pepper flavor, 97% fat-free",
-      "Hindi göğsü"
-    ],
+    "aliases": ["Turkey, breast, smoked, lemon pepper flavor, 97% fat-free", "Hindi göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 95,
@@ -10466,10 +9206,7 @@
   {
     "id": "usda-171083",
     "name": "Hindi (çiğ) · SR 5171",
-    "aliases": [
-      "Turkey, whole, giblets, raw",
-      "Hindi"
-    ],
+    "aliases": ["Turkey, whole, giblets, raw", "Hindi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 124,
@@ -10490,10 +9227,7 @@
   {
     "id": "usda-171480",
     "name": "Hindi (çiğ) · SR 5167",
-    "aliases": [
-      "Turkey, whole, meat only, raw",
-      "Hindi"
-    ],
+    "aliases": ["Turkey, whole, meat only, raw", "Hindi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 115,
@@ -10514,10 +9248,7 @@
   {
     "id": "usda-171084",
     "name": "Hindi (pişmiş) · SR 5172",
-    "aliases": [
-      "Turkey, whole, giblets, cooked, simmered",
-      "Hindi"
-    ],
+    "aliases": ["Turkey, whole, giblets, cooked, simmered", "Hindi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 173,
@@ -10538,10 +9269,7 @@
   {
     "id": "usda-171091",
     "name": "Hindi (pişmiş) · SR 5188",
-    "aliases": [
-      "Turkey, whole, dark meat, cooked, roasted",
-      "Hindi"
-    ],
+    "aliases": ["Turkey, whole, dark meat, cooked, roasted", "Hindi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 173,
@@ -10562,10 +9290,7 @@
   {
     "id": "usda-171790",
     "name": "Dana kıyma (çiğ)",
-    "aliases": [
-      "Beef, ground, 95% lean meat / 5% fat, raw",
-      "Dana kıyma"
-    ],
+    "aliases": ["Beef, ground, 95% lean meat / 5% fat, raw", "Dana kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 137,
@@ -10586,10 +9311,7 @@
   {
     "id": "usda-173110",
     "name": "Dana kıyma (çiğ) · SR 23472",
-    "aliases": [
-      "Beef, ground, 93% lean meat / 7% fat, raw",
-      "Dana kıyma"
-    ],
+    "aliases": ["Beef, ground, 93% lean meat / 7% fat, raw", "Dana kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 152,
@@ -10610,10 +9332,7 @@
   {
     "id": "usda-172161",
     "name": "Dana kıyma (pişmiş) · SR 23220",
-    "aliases": [
-      "Beef, ground, unspecified fat content, cooked",
-      "Dana kıyma"
-    ],
+    "aliases": ["Beef, ground, unspecified fat content, cooked", "Dana kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 240,
@@ -10634,10 +9353,7 @@
   {
     "id": "usda-169447",
     "name": "Dana kıyma (pişmiş, dondurulmuş) · SR 13317",
-    "aliases": [
-      "Beef, ground, patties, frozen, cooked, broiled",
-      "Dana kıyma"
-    ],
+    "aliases": ["Beef, ground, patties, frozen, cooked, broiled", "Dana kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 295,
@@ -10658,10 +9374,7 @@
   {
     "id": "usda-174370",
     "name": "Kuzu kıyma (çiğ)",
-    "aliases": [
-      "Lamb, ground, raw",
-      "Kuzu kıyma"
-    ],
+    "aliases": ["Lamb, ground, raw", "Kuzu kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 282,
@@ -10682,10 +9395,7 @@
   {
     "id": "usda-172544",
     "name": "Kuzu kıyma (pişmiş) · SR 17225",
-    "aliases": [
-      "Lamb, ground, cooked, broiled",
-      "Kuzu kıyma"
-    ],
+    "aliases": ["Lamb, ground, cooked, broiled", "Kuzu kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 283,
@@ -10706,10 +9416,7 @@
   {
     "id": "usda-173689",
     "name": "Somon (çiğ)",
-    "aliases": [
-      "Fish, salmon, chum, raw",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, chum, raw", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 120,
@@ -10730,10 +9437,7 @@
   {
     "id": "usda-175138",
     "name": "Somon (çiğ) · SR 15083",
-    "aliases": [
-      "Fish, salmon, pink, raw",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, pink, raw", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 127,
@@ -10754,10 +9458,7 @@
   {
     "id": "usda-172000",
     "name": "Somon (pişmiş) · SR 15211",
-    "aliases": [
-      "Fish, salmon, chum, cooked, dry heat",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, chum, cooked, dry heat", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 154,
@@ -10778,10 +9479,7 @@
   {
     "id": "usda-172001",
     "name": "Somon (pişmiş) · SR 15212",
-    "aliases": [
-      "Fish, salmon, pink, cooked, dry heat",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, pink, cooked, dry heat", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 153,
@@ -10802,10 +9500,7 @@
   {
     "id": "usda-173687",
     "name": "Somon · SR 15077",
-    "aliases": [
-      "Fish, salmon, chinook, smoked",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, chinook, smoked", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 117,
@@ -10826,10 +9521,7 @@
   {
     "id": "usda-168054",
     "name": "Somon (kurutulmuş) · SR 35171",
-    "aliases": [
-      "Fish, salmon, chum, dried (Alaska Native)",
-      "Somon"
-    ],
+    "aliases": ["Fish, salmon, chum, dried (Alaska Native)", "Somon"],
     "unit": "g",
     "per": 100,
     "kcalPer": 378,
@@ -10850,10 +9542,7 @@
   {
     "id": "usda-175139",
     "name": "Sardalya (konserve)",
-    "aliases": [
-      "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
-      "Sardalya"
-    ],
+    "aliases": ["Fish, sardine, Atlantic, canned in oil, drained solids with bone", "Sardalya"],
     "unit": "g",
     "per": 100,
     "kcalPer": 208,
@@ -10898,10 +9587,7 @@
   {
     "id": "usda-173706",
     "name": "Ton balığı (çiğ)",
-    "aliases": [
-      "Fish, tuna, fresh, bluefin, raw",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna, fresh, bluefin, raw", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 144,
@@ -10922,10 +9608,7 @@
   {
     "id": "usda-175156",
     "name": "Ton balığı (çiğ) · SR 15123",
-    "aliases": [
-      "Fish, tuna, fresh, skipjack, raw",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna, fresh, skipjack, raw", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 103,
@@ -10946,10 +9629,7 @@
   {
     "id": "usda-173707",
     "name": "Ton balığı (pişmiş) · SR 15118",
-    "aliases": [
-      "Fish, tuna, fresh, bluefin, cooked, dry heat",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna, fresh, bluefin, cooked, dry heat", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 184,
@@ -10970,10 +9650,7 @@
   {
     "id": "usda-172005",
     "name": "Ton balığı (pişmiş) · SR 15220",
-    "aliases": [
-      "Fish, tuna, skipjack, fresh, cooked, dry heat",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna, skipjack, fresh, cooked, dry heat", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 132,
@@ -10994,10 +9671,7 @@
   {
     "id": "usda-175160",
     "name": "Ton balığı · SR 15128",
-    "aliases": [
-      "Fish, tuna salad",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna salad", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 187,
@@ -11018,10 +9692,7 @@
   {
     "id": "usda-173708",
     "name": "Ton balığı (konserve) · SR 15119",
-    "aliases": [
-      "Fish, tuna, light, canned in oil, drained solids",
-      "Ton balığı"
-    ],
+    "aliases": ["Fish, tuna, light, canned in oil, drained solids", "Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 198,
@@ -11042,10 +9713,7 @@
   {
     "id": "usda-175153",
     "name": "Alabalık (çiğ)",
-    "aliases": [
-      "Fish, trout, mixed species, raw",
-      "Alabalık"
-    ],
+    "aliases": ["Fish, trout, mixed species, raw", "Alabalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 148,
@@ -11066,10 +9734,7 @@
   {
     "id": "usda-175154",
     "name": "Alabalık (çiğ) · SR 15115",
-    "aliases": [
-      "Fish, trout, rainbow, wild, raw",
-      "Alabalık"
-    ],
+    "aliases": ["Fish, trout, rainbow, wild, raw", "Alabalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 119,
@@ -11090,10 +9755,7 @@
   {
     "id": "usda-172004",
     "name": "Alabalık (pişmiş) · SR 15219",
-    "aliases": [
-      "Fish, trout, mixed species, cooked, dry heat",
-      "Alabalık"
-    ],
+    "aliases": ["Fish, trout, mixed species, cooked, dry heat", "Alabalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 190,
@@ -11114,10 +9776,7 @@
   {
     "id": "usda-175155",
     "name": "Alabalık (pişmiş) · SR 15116",
-    "aliases": [
-      "Fish, trout, rainbow, wild, cooked, dry heat",
-      "Alabalık"
-    ],
+    "aliases": ["Fish, trout, rainbow, wild, cooked, dry heat", "Alabalık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 150,
@@ -11138,10 +9797,7 @@
   {
     "id": "usda-171955",
     "name": "Morina (çiğ)",
-    "aliases": [
-      "Fish, cod, Atlantic, raw",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Atlantic, raw", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 82,
@@ -11162,10 +9818,7 @@
   {
     "id": "usda-174191",
     "name": "Morina (çiğ, dondurulmuş) · SR 15019",
-    "aliases": [
-      "Fish, cod, Pacific, raw (may have been previously frozen)",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Pacific, raw (may have been previously frozen)", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 69,
@@ -11186,10 +9839,7 @@
   {
     "id": "usda-175178",
     "name": "Morina (pişmiş) · SR 15269",
-    "aliases": [
-      "Fish, cod, Pacific, cooked",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Pacific, cooked", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 84,
@@ -11209,10 +9859,7 @@
   {
     "id": "usda-171956",
     "name": "Morina (pişmiş) · SR 15016",
-    "aliases": [
-      "Fish, cod, Atlantic, cooked, dry heat",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Atlantic, cooked, dry heat", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 105,
@@ -11233,10 +9880,7 @@
   {
     "id": "usda-174190",
     "name": "Morina (kurutulmuş) · SR 15018",
-    "aliases": [
-      "Fish, cod, Atlantic, dried and salted",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Atlantic, dried and salted", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 290,
@@ -11257,10 +9901,7 @@
   {
     "id": "usda-174189",
     "name": "Morina (konserve) · SR 15017",
-    "aliases": [
-      "Fish, cod, Atlantic, canned, solids and liquid",
-      "Morina"
-    ],
+    "aliases": ["Fish, cod, Atlantic, canned, solids and liquid", "Morina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 105,
@@ -11281,10 +9922,7 @@
   {
     "id": "usda-174182",
     "name": "Hamsi (çiğ)",
-    "aliases": [
-      "Fish, anchovy, european, raw",
-      "Hamsi"
-    ],
+    "aliases": ["Fish, anchovy, european, raw", "Hamsi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 131,
@@ -11305,10 +9943,7 @@
   {
     "id": "usda-174183",
     "name": "Hamsi (konserve) · SR 15002",
-    "aliases": [
-      "Fish, anchovy, european, canned in oil, drained solids",
-      "Hamsi"
-    ],
+    "aliases": ["Fish, anchovy, european, canned in oil, drained solids", "Hamsi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 210,
@@ -11329,10 +9964,7 @@
   {
     "id": "usda-175122",
     "name": "Uskumru (çiğ)",
-    "aliases": [
-      "Fish, mackerel, king, raw",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, king, raw", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 105,
@@ -11353,10 +9985,7 @@
   {
     "id": "usda-173673",
     "name": "Uskumru (çiğ) · SR 15051",
-    "aliases": [
-      "Fish, mackerel, spanish, raw",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, spanish, raw", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 139,
@@ -11377,10 +10006,7 @@
   {
     "id": "usda-174236",
     "name": "Uskumru (pişmiş) · SR 15200",
-    "aliases": [
-      "Fish, mackerel, king, cooked, dry heat",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, king, cooked, dry heat", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 134,
@@ -11401,10 +10027,7 @@
   {
     "id": "usda-173674",
     "name": "Uskumru (pişmiş) · SR 15052",
-    "aliases": [
-      "Fish, mackerel, spanish, cooked, dry heat",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, spanish, cooked, dry heat", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 158,
@@ -11425,10 +10048,7 @@
   {
     "id": "usda-168149",
     "name": "Uskumru · SR 83110",
-    "aliases": [
-      "Fish, mackerel, salted",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, salted", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 305,
@@ -11449,10 +10069,7 @@
   {
     "id": "usda-175121",
     "name": "Uskumru (konserve) · SR 15048",
-    "aliases": [
-      "Fish, mackerel, jack, canned, drained solids",
-      "Uskumru"
-    ],
+    "aliases": ["Fish, mackerel, jack, canned, drained solids", "Uskumru"],
     "unit": "g",
     "per": 100,
     "kcalPer": 156,
@@ -11473,10 +10090,7 @@
   {
     "id": "usda-175142",
     "name": "Levrek (çiğ)",
-    "aliases": [
-      "Fish, sea bass, mixed species, raw",
-      "Levrek"
-    ],
+    "aliases": ["Fish, sea bass, mixed species, raw", "Levrek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 97,
@@ -11497,10 +10111,7 @@
   {
     "id": "usda-173694",
     "name": "Levrek (pişmiş) · SR 15092",
-    "aliases": [
-      "Fish, sea bass, mixed species, cooked, dry heat",
-      "Levrek"
-    ],
+    "aliases": ["Fish, sea bass, mixed species, cooked, dry heat", "Levrek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 124,
@@ -11521,10 +10132,7 @@
   {
     "id": "usda-173669",
     "name": "Ringa (çiğ)",
-    "aliases": [
-      "Fish, herring, Pacific, raw",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Pacific, raw", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 195,
@@ -11545,10 +10153,7 @@
   {
     "id": "usda-175116",
     "name": "Ringa (çiğ) · SR 15039",
-    "aliases": [
-      "Fish, herring, Atlantic, raw",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Atlantic, raw", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 158,
@@ -11569,10 +10174,7 @@
   {
     "id": "usda-174233",
     "name": "Ringa (pişmiş) · SR 15197",
-    "aliases": [
-      "Fish, herring, Pacific, cooked, dry heat",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Pacific, cooked, dry heat", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 250,
@@ -11593,10 +10195,7 @@
   {
     "id": "usda-175117",
     "name": "Ringa (pişmiş) · SR 15040",
-    "aliases": [
-      "Fish, herring, Atlantic, cooked, dry heat",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Atlantic, cooked, dry heat", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 203,
@@ -11617,10 +10216,7 @@
   {
     "id": "usda-175118",
     "name": "Ringa · SR 15041",
-    "aliases": [
-      "Fish, herring, Atlantic, pickled",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Atlantic, pickled", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 262,
@@ -11641,10 +10237,7 @@
   {
     "id": "usda-173668",
     "name": "Ringa · SR 15042",
-    "aliases": [
-      "Fish, herring, Atlantic, kippered",
-      "Ringa"
-    ],
+    "aliases": ["Fish, herring, Atlantic, kippered", "Ringa"],
     "unit": "g",
     "per": 100,
     "kcalPer": 217,
@@ -11665,10 +10258,7 @@
   {
     "id": "usda-175179",
     "name": "Karides (çiğ)",
-    "aliases": [
-      "Crustaceans, shrimp, raw",
-      "Karides"
-    ],
+    "aliases": ["Crustaceans, shrimp, raw", "Karides"],
     "unit": "g",
     "per": 100,
     "kcalPer": 85,
@@ -11712,10 +10302,7 @@
   {
     "id": "usda-175180",
     "name": "Karides (pişmiş) · SR 15271",
-    "aliases": [
-      "Crustaceans, shrimp, cooked",
-      "Karides"
-    ],
+    "aliases": ["Crustaceans, shrimp, cooked", "Karides"],
     "unit": "g",
     "per": 100,
     "kcalPer": 99,
@@ -11735,10 +10322,7 @@
   {
     "id": "usda-171970",
     "name": "Karides (pişmiş) · SR 15150",
-    "aliases": [
-      "Crustaceans, shrimp, mixed species, cooked, breaded and fried",
-      "Karides"
-    ],
+    "aliases": ["Crustaceans, shrimp, mixed species, cooked, breaded and fried", "Karides"],
     "unit": "g",
     "per": 100,
     "kcalPer": 242,
@@ -11759,10 +10343,7 @@
   {
     "id": "usda-171972",
     "name": "Karides (konserve) · SR 15152",
-    "aliases": [
-      "Crustaceans, shrimp, mixed species, canned",
-      "Karides"
-    ],
+    "aliases": ["Crustaceans, shrimp, mixed species, canned", "Karides"],
     "unit": "g",
     "per": 100,
     "kcalPer": 100,
@@ -11783,10 +10364,7 @@
   {
     "id": "usda-174216",
     "name": "Midye (çiğ)",
-    "aliases": [
-      "Mollusks, mussel, blue, raw",
-      "Midye"
-    ],
+    "aliases": ["Mollusks, mussel, blue, raw", "Midye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 86,
@@ -11807,10 +10385,7 @@
   {
     "id": "usda-174217",
     "name": "Midye (pişmiş) · SR 15165",
-    "aliases": [
-      "Mollusks, mussel, blue, cooked, moist heat",
-      "Midye"
-    ],
+    "aliases": ["Mollusks, mussel, blue, cooked, moist heat", "Midye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 172,
@@ -11831,10 +10406,7 @@
   {
     "id": "usda-173420",
     "name": "Beyaz peynir (feta)",
-    "aliases": [
-      "Cheese, feta",
-      "Beyaz peynir (feta)"
-    ],
+    "aliases": ["Cheese, feta", "Beyaz peynir (feta)"],
     "unit": "g",
     "per": 100,
     "kcalPer": 265,
@@ -11855,10 +10427,7 @@
   {
     "id": "usda-170899",
     "name": "Çedar",
-    "aliases": [
-      "Cheese, cheddar, sharp, sliced",
-      "Çedar"
-    ],
+    "aliases": ["Cheese, cheddar, sharp, sliced", "Çedar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 410,
@@ -11879,10 +10448,7 @@
   {
     "id": "usda-171295",
     "name": "Çedar · SR 1265",
-    "aliases": [
-      "Cheese, cheddar, nonfat or fat free",
-      "Çedar"
-    ],
+    "aliases": ["Cheese, cheddar, nonfat or fat free", "Çedar"],
     "unit": "g",
     "per": 100,
     "kcalPer": 157,
@@ -11903,10 +10469,7 @@
   {
     "id": "usda-169051",
     "name": "Mozzarella",
-    "aliases": [
-      "Cheese, mozzarella, nonfat",
-      "Mozzarella"
-    ],
+    "aliases": ["Cheese, mozzarella, nonfat", "Mozzarella"],
     "unit": "g",
     "per": 100,
     "kcalPer": 141,
@@ -11927,10 +10490,7 @@
   {
     "id": "usda-167735",
     "name": "Mozzarella · SR 43597",
-    "aliases": [
-      "Cheese, mozzarella, low sodium",
-      "Mozzarella"
-    ],
+    "aliases": ["Cheese, mozzarella, low sodium", "Mozzarella"],
     "unit": "g",
     "per": 100,
     "kcalPer": 280,
@@ -11951,10 +10511,7 @@
   {
     "id": "usda-169078",
     "name": "Taneli taze peynir",
-    "aliases": [
-      "Cheese, cottage, with vegetables",
-      "Taneli taze peynir"
-    ],
+    "aliases": ["Cheese, cottage, with vegetables", "Taneli taze peynir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 95,
@@ -11975,10 +10532,7 @@
   {
     "id": "usda-172182",
     "name": "Taneli taze peynir · SR 1015",
-    "aliases": [
-      "Cheese, cottage, lowfat, 2% milkfat",
-      "Taneli taze peynir"
-    ],
+    "aliases": ["Cheese, cottage, lowfat, 2% milkfat", "Taneli taze peynir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 81,
@@ -11999,10 +10553,7 @@
   {
     "id": "usda-170851",
     "name": "Ricotta",
-    "aliases": [
-      "Cheese, ricotta, whole milk",
-      "Ricotta"
-    ],
+    "aliases": ["Cheese, ricotta, whole milk", "Ricotta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 150,
@@ -12023,10 +10574,7 @@
   {
     "id": "usda-171248",
     "name": "Ricotta · SR 1037",
-    "aliases": [
-      "Cheese, ricotta, part skim milk",
-      "Ricotta"
-    ],
+    "aliases": ["Cheese, ricotta, part skim milk", "Ricotta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 138,
@@ -12047,10 +10595,7 @@
   {
     "id": "usda-170848",
     "name": "Parmesan",
-    "aliases": [
-      "Cheese, parmesan, hard",
-      "Parmesan"
-    ],
+    "aliases": ["Cheese, parmesan, hard", "Parmesan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 392,
@@ -12071,10 +10616,7 @@
   {
     "id": "usda-171247",
     "name": "Parmesan · SR 1032",
-    "aliases": [
-      "Cheese, parmesan, grated",
-      "Parmesan"
-    ],
+    "aliases": ["Cheese, parmesan, grated", "Parmesan"],
     "unit": "g",
     "per": 100,
     "kcalPer": 420,
@@ -12095,10 +10637,7 @@
   {
     "id": "usda-170886",
     "name": "Sade yoğurt",
-    "aliases": [
-      "Yogurt, plain, low fat",
-      "Sade yoğurt"
-    ],
+    "aliases": ["Yogurt, plain, low fat", "Sade yoğurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 63,
@@ -12119,10 +10658,7 @@
   {
     "id": "usda-170887",
     "name": "Sade yoğurt · SR 1118",
-    "aliases": [
-      "Yogurt, plain, skim milk",
-      "Sade yoğurt"
-    ],
+    "aliases": ["Yogurt, plain, skim milk", "Sade yoğurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 56,
@@ -12143,10 +10679,7 @@
   {
     "id": "usda-171265",
     "name": "Tam yağlı süt",
-    "aliases": [
-      "Milk, whole, 3.25% milkfat, with added vitamin D",
-      "Tam yağlı süt"
-    ],
+    "aliases": ["Milk, whole, 3.25% milkfat, with added vitamin D", "Tam yağlı süt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -12287,10 +10820,7 @@
   {
     "id": "usda-171287",
     "name": "Tam yumurta (çiğ)",
-    "aliases": [
-      "Egg, whole, raw, fresh",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, raw, fresh", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 143,
@@ -12311,10 +10841,7 @@
   {
     "id": "usda-170893",
     "name": "Tam yumurta (çiğ, dondurulmuş) · SR 1255",
-    "aliases": [
-      "Egg, whole, raw, frozen, salted, pasteurized",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, raw, frozen, salted, pasteurized", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 138,
@@ -12335,10 +10862,7 @@
   {
     "id": "usda-173423",
     "name": "Tam yumurta (pişmiş) · SR 1128",
-    "aliases": [
-      "Egg, whole, cooked, fried",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, cooked, fried", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 196,
@@ -12359,10 +10883,7 @@
   {
     "id": "usda-172185",
     "name": "Tam yumurta (pişmiş) · SR 1130",
-    "aliases": [
-      "Egg, whole, cooked, omelet",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, cooked, omelet", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 154,
@@ -12383,10 +10904,7 @@
   {
     "id": "usda-172188",
     "name": "Tam yumurta (kurutulmuş) · SR 1133",
-    "aliases": [
-      "Egg, whole, dried",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, dried", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 592,
@@ -12407,10 +10925,7 @@
   {
     "id": "usda-173425",
     "name": "Tam yumurta (kurutulmuş) · SR 1134",
-    "aliases": [
-      "Egg, whole, dried, stabilized, glucose reduced",
-      "Tam yumurta"
-    ],
+    "aliases": ["Egg, whole, dried, stabilized, glucose reduced", "Tam yumurta"],
     "unit": "g",
     "per": 100,
     "kcalPer": 615,
@@ -12431,10 +10946,7 @@
   {
     "id": "usda-172183",
     "name": "Yumurta beyazı (çiğ)",
-    "aliases": [
-      "Egg, white, raw, fresh",
-      "Yumurta beyazı"
-    ],
+    "aliases": ["Egg, white, raw, fresh", "Yumurta beyazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 52,
@@ -12455,10 +10967,7 @@
   {
     "id": "usda-172203",
     "name": "Yumurta beyazı (çiğ, dondurulmuş) · SR 1172",
-    "aliases": [
-      "Egg, white, raw, frozen, pasteurized",
-      "Yumurta beyazı"
-    ],
+    "aliases": ["Egg, white, raw, frozen, pasteurized", "Yumurta beyazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 48,
@@ -12479,10 +10988,7 @@
   {
     "id": "usda-172204",
     "name": "Yumurta beyazı (kurutulmuş) · SR 1173",
-    "aliases": [
-      "Egg, white, dried",
-      "Yumurta beyazı"
-    ],
+    "aliases": ["Egg, white, dried", "Yumurta beyazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 382,
@@ -12503,10 +11009,7 @@
   {
     "id": "usda-170895",
     "name": "Yumurta beyazı (kurutulmuş) · SR 1258",
-    "aliases": [
-      "Egg, white, dried, stabilized, glucose reduced",
-      "Yumurta beyazı"
-    ],
+    "aliases": ["Egg, white, dried, stabilized, glucose reduced", "Yumurta beyazı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 357,
@@ -12527,10 +11030,7 @@
   {
     "id": "usda-170385",
     "name": "Tereyağı (çiğ)",
-    "aliases": [
-      "Butterbur, (fuki), raw",
-      "Tereyağı"
-    ],
+    "aliases": ["Butterbur, (fuki), raw", "Tereyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 14,
@@ -12550,10 +11050,7 @@
   {
     "id": "usda-169334",
     "name": "Tereyağı (pişmiş, tuzlu) · SR 11748",
-    "aliases": [
-      "Butterbur, cooked, boiled, drained, with salt",
-      "Tereyağı"
-    ],
+    "aliases": ["Butterbur, cooked, boiled, drained, with salt", "Tereyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 8,
@@ -12573,10 +11070,7 @@
   {
     "id": "usda-170386",
     "name": "Tereyağı (pişmiş, tuzsuz) · SR 11107",
-    "aliases": [
-      "Butterbur, cooked, boiled, drained, without salt",
-      "Tereyağı"
-    ],
+    "aliases": ["Butterbur, cooked, boiled, drained, without salt", "Tereyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 8,
@@ -12596,10 +11090,7 @@
   {
     "id": "usda-173410",
     "name": "Tereyağı · SR 1001",
-    "aliases": [
-      "Butter, salted",
-      "Tereyağı"
-    ],
+    "aliases": ["Butter, salted", "Tereyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 717,
@@ -12620,10 +11111,7 @@
   {
     "id": "usda-170387",
     "name": "Tereyağı (konserve) · SR 11108",
-    "aliases": [
-      "Butterbur, canned",
-      "Tereyağı"
-    ],
+    "aliases": ["Butterbur, canned", "Tereyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 3,
@@ -12643,10 +11131,7 @@
   {
     "id": "usda-171413",
     "name": "Zeytinyağı",
-    "aliases": [
-      "Oil, olive, salad or cooking",
-      "Zeytinyağı"
-    ],
+    "aliases": ["Oil, olive, salad or cooking", "Zeytinyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 884,
@@ -12667,10 +11152,7 @@
   {
     "id": "usda-171025",
     "name": "Ayçiçek yağı",
-    "aliases": [
-      "Oil, sunflower, linoleic, (approx. 65%)",
-      "Ayçiçek yağı"
-    ],
+    "aliases": ["Oil, sunflower, linoleic, (approx. 65%)", "Ayçiçek yağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 884,
@@ -12691,10 +11173,7 @@
   {
     "id": "usda-171017",
     "name": "Ayçiçek yağı · SR 4060",
-    "aliases": [
-      "Oil, sunflower, linoleic (less than 60%)",
-      "Ayçiçek yağı"
-    ],
+    "aliases": ["Oil, sunflower, linoleic (less than 60%)", "Ayçiçek yağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 884,
@@ -12715,10 +11194,7 @@
   {
     "id": "usda-172336",
     "name": "Kanola yağı",
-    "aliases": [
-      "Oil, canola",
-      "Kanola yağı"
-    ],
+    "aliases": ["Oil, canola", "Kanola yağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 884,
@@ -12739,10 +11215,7 @@
   {
     "id": "usda-172690",
     "name": "Tam buğday ekmeği",
-    "aliases": [
-      "Bread, whole-wheat, prepared from recipe",
-      "Tam buğday ekmeği"
-    ],
+    "aliases": ["Bread, whole-wheat, prepared from recipe", "Tam buğday ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 278,
@@ -12763,10 +11236,7 @@
   {
     "id": "usda-172688",
     "name": "Tam buğday ekmeği · SR 18075",
-    "aliases": [
-      "Bread, whole-wheat, commercially prepared",
-      "Tam buğday ekmeği"
-    ],
+    "aliases": ["Bread, whole-wheat, commercially prepared", "Tam buğday ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 252,
@@ -12787,10 +11257,7 @@
   {
     "id": "usda-172684",
     "name": "Çavdar ekmeği",
-    "aliases": [
-      "Bread, rye",
-      "Çavdar ekmeği"
-    ],
+    "aliases": ["Bread, rye", "Çavdar ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 259,
@@ -12811,10 +11278,7 @@
   {
     "id": "usda-172685",
     "name": "Çavdar ekmeği · SR 18061",
-    "aliases": [
-      "Bread, rye, toasted",
-      "Çavdar ekmeği"
-    ],
+    "aliases": ["Bread, rye, toasted", "Çavdar ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 284,
@@ -12835,10 +11299,7 @@
   {
     "id": "usda-174916",
     "name": "Pide ekmeği",
-    "aliases": [
-      "Bread, pita, whole-wheat",
-      "Pide ekmeği"
-    ],
+    "aliases": ["Bread, pita, whole-wheat", "Pide ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 262,
@@ -12859,10 +11320,7 @@
   {
     "id": "usda-174915",
     "name": "Pide ekmeği · SR 18041",
-    "aliases": [
-      "Bread, pita, white, enriched",
-      "Pide ekmeği"
-    ],
+    "aliases": ["Bread, pita, white, enriched", "Pide ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 275,
@@ -12883,10 +11341,7 @@
   {
     "id": "usda-167532",
     "name": "Beyaz ekmek",
-    "aliases": [
-      "Bread, white wheat",
-      "Beyaz ekmek"
-    ],
+    "aliases": ["Bread, white wheat", "Beyaz ekmek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 238,
@@ -12907,10 +11362,7 @@
   {
     "id": "usda-174925",
     "name": "Beyaz ekmek · SR 18070",
-    "aliases": [
-      "Bread, white, commercially prepared, toasted",
-      "Beyaz ekmek"
-    ],
+    "aliases": ["Bread, white, commercially prepared, toasted", "Beyaz ekmek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 290,
@@ -12931,10 +11383,7 @@
   {
     "id": "usda-169640",
     "name": "Bal · SR 19296",
-    "aliases": [
-      "Honey",
-      "Bal"
-    ],
+    "aliases": ["Honey", "Bal"],
     "unit": "g",
     "per": 100,
     "kcalPer": 304,
@@ -12955,10 +11404,7 @@
   {
     "id": "usda-172943",
     "name": "Bal · SR 7088",
-    "aliases": [
-      "Honey roll sausage, beef",
-      "Bal"
-    ],
+    "aliases": ["Honey roll sausage, beef", "Bal"],
     "unit": "g",
     "per": 100,
     "kcalPer": 182,
@@ -12979,10 +11425,7 @@
   {
     "id": "usda-168833",
     "name": "Şeker",
-    "aliases": [
-      "Sugars, brown",
-      "Şeker"
-    ],
+    "aliases": ["Sugars, brown", "Şeker"],
     "unit": "g",
     "per": 100,
     "kcalPer": 380,
@@ -13003,10 +11446,7 @@
   {
     "id": "usda-169658",
     "name": "Şeker · SR 19340",
-    "aliases": [
-      "Sugars, maple",
-      "Şeker"
-    ],
+    "aliases": ["Sugars, maple", "Şeker"],
     "unit": "g",
     "per": 100,
     "kcalPer": 354,
@@ -13027,10 +11467,7 @@
   {
     "id": "usda-169593",
     "name": "Kakao",
-    "aliases": [
-      "Cocoa, dry powder, unsweetened",
-      "Kakao"
-    ],
+    "aliases": ["Cocoa, dry powder, unsweetened", "Kakao"],
     "unit": "g",
     "per": 100,
     "kcalPer": 228,
@@ -13051,10 +11488,7 @@
   {
     "id": "usda-169594",
     "name": "Kakao · SR 19166",
-    "aliases": [
-      "Cocoa, dry powder, unsweetened, processed with alkali",
-      "Kakao"
-    ],
+    "aliases": ["Cocoa, dry powder, unsweetened, processed with alkali", "Kakao"],
     "unit": "g",
     "per": 100,
     "kcalPer": 220,
@@ -13075,10 +11509,7 @@
   {
     "id": "usda-170272",
     "name": "Bitter çikolata",
-    "aliases": [
-      "Chocolate, dark, 60-69% cacao solids",
-      "Bitter çikolata"
-    ],
+    "aliases": ["Chocolate, dark, 60-69% cacao solids", "Bitter çikolata"],
     "unit": "g",
     "per": 100,
     "kcalPer": 579,
@@ -13099,10 +11530,7 @@
   {
     "id": "usda-170273",
     "name": "Bitter çikolata · SR 19904",
-    "aliases": [
-      "Chocolate, dark, 70-85% cacao solids",
-      "Bitter çikolata"
-    ],
+    "aliases": ["Chocolate, dark, 70-85% cacao solids", "Bitter çikolata"],
     "unit": "g",
     "per": 100,
     "kcalPer": 598,
@@ -13123,10 +11551,7 @@
   {
     "id": "usda-171549",
     "name": "Mercimek çorbası (konserve)",
-    "aliases": [
-      "Soup, lentil with ham, canned, ready-to-serve",
-      "Mercimek çorbası"
-    ],
+    "aliases": ["Soup, lentil with ham, canned, ready-to-serve", "Mercimek çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 56,
@@ -13146,10 +11571,7 @@
   {
     "id": "usda-172882",
     "name": "Domates çorbası (konserve)",
-    "aliases": [
-      "Soup, tomato, canned, condensed",
-      "Domates çorbası"
-    ],
+    "aliases": ["Soup, tomato, canned, condensed", "Domates çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 66,
@@ -13170,10 +11592,7 @@
   {
     "id": "usda-171557",
     "name": "Domates çorbası (konserve) · SR 6063",
-    "aliases": [
-      "Soup, tomato rice, canned, condensed",
-      "Domates çorbası"
-    ],
+    "aliases": ["Soup, tomato rice, canned, condensed", "Domates çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 93,
@@ -13194,10 +11613,7 @@
   {
     "id": "usda-171563",
     "name": "Tavuk çorbası (çiğ)",
-    "aliases": [
-      "Soup, chicken broth cubes, dry",
-      "Tavuk çorbası"
-    ],
+    "aliases": ["Soup, chicken broth cubes, dry", "Tavuk çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 198,
@@ -13218,10 +11634,7 @@
   {
     "id": "usda-171562",
     "name": "Tavuk çorbası (çiğ) · SR 6080",
-    "aliases": [
-      "Soup, chicken broth or bouillon, dry",
-      "Tavuk çorbası"
-    ],
+    "aliases": ["Soup, chicken broth or bouillon, dry", "Tavuk çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 267,
@@ -13242,10 +11655,7 @@
   {
     "id": "usda-171571",
     "name": "Tavuk çorbası · SR 6128",
-    "aliases": [
-      "Soup, chicken noodle, dry, mix",
-      "Tavuk çorbası"
-    ],
+    "aliases": ["Soup, chicken noodle, dry, mix", "Tavuk çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 377,
@@ -13266,10 +11676,7 @@
   {
     "id": "usda-174536",
     "name": "Tavuk çorbası · SR 6194",
-    "aliases": [
-      "Soup, chicken broth, ready-to-serve",
-      "Tavuk çorbası"
-    ],
+    "aliases": ["Soup, chicken broth, ready-to-serve", "Tavuk çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 6,
@@ -13290,10 +11697,7 @@
   {
     "id": "usda-171583",
     "name": "Sebze çorbası",
-    "aliases": [
-      "Soup, vegetable broth, ready to serve",
-      "Sebze çorbası"
-    ],
+    "aliases": ["Soup, vegetable broth, ready to serve", "Sebze çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 5,
@@ -13314,10 +11718,7 @@
   {
     "id": "usda-171163",
     "name": "Sebze çorbası (konserve) · SR 6071",
-    "aliases": [
-      "Soup, vegetable beef, canned, condensed",
-      "Sebze çorbası"
-    ],
+    "aliases": ["Soup, vegetable beef, canned, condensed", "Sebze çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 63,
@@ -13338,10 +11739,7 @@
   {
     "id": "usda-171154",
     "name": "Mantar çorbası (konserve)",
-    "aliases": [
-      "Soup, mushroom barley, canned, condensed",
-      "Mantar çorbası"
-    ],
+    "aliases": ["Soup, mushroom barley, canned, condensed", "Mantar çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 61,
@@ -13361,10 +11759,7 @@
   {
     "id": "usda-171156",
     "name": "Mantar çorbası (konserve) · SR 6044",
-    "aliases": [
-      "Soup, mushroom with beef stock, canned, condensed",
-      "Mantar çorbası"
-    ],
+    "aliases": ["Soup, mushroom with beef stock, canned, condensed", "Mantar çorbası"],
     "unit": "g",
     "per": 100,
     "kcalPer": 68,

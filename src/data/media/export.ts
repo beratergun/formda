@@ -1,4 +1,41 @@
 import { isNative, exportNative } from '../../app/native';
-export function downloadBlob(blob:Blob,name:string){if(isNative()){void exportNative(blob,name).catch(error=>window.dispatchEvent(new CustomEvent('yol-export-error',{detail:error instanceof Error?error.message:'Dosya dışa aktarılamadı.'})));return;}const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
-export async function shareBlob(blob:Blob,name:string){if(isNative()){await exportNative(blob,name);return;}const file=new File([blob],name,{type:blob.type});if(navigator.canShare?.({files:[file]})){try{await navigator.share({files:[file],title:'Yol · Kendime bir adım'});return;}catch(error){if(error instanceof Error&&error.name==='AbortError')return;}}downloadBlob(blob,name);}
-export function recordingMime(){if(typeof MediaRecorder==='undefined')return undefined;return ['video/webm;codecs=vp8','video/webm','video/mp4'].find(m=>MediaRecorder.isTypeSupported(m));}
+export function downloadBlob(blob: Blob, name: string) {
+  if (isNative()) {
+    void exportNative(blob, name).catch((error) =>
+      window.dispatchEvent(
+        new CustomEvent('yol-export-error', {
+          detail: error instanceof Error ? error.message : 'Dosya dışa aktarılamadı.',
+        }),
+      ),
+    );
+    return;
+  }
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = name;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+}
+export async function shareBlob(blob: Blob, name: string) {
+  if (isNative()) {
+    await exportNative(blob, name);
+    return;
+  }
+  const file = new File([blob], name, { type: blob.type });
+  if (navigator.canShare?.({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file], title: 'Yol · Kendime bir adım' });
+      return;
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') return;
+    }
+  }
+  downloadBlob(blob, name);
+}
+export function recordingMime() {
+  if (typeof MediaRecorder === 'undefined') return undefined;
+  return ['video/webm;codecs=vp8', 'video/webm', 'video/mp4'].find((m) =>
+    MediaRecorder.isTypeSupported(m),
+  );
+}

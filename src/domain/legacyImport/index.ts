@@ -133,7 +133,10 @@ export function importLegacy(input: unknown, base: AppData, now = Date.now()): A
         name: text(profile.ad ?? profile.name, next.profile[0].name),
         age: profile.yas ? number(profile.yas) : next.profile[0].age,
         heightCm: number(profile.boy, next.profile[0].heightCm),
-        startWeight: number(profile.w0 ?? profile.kilo ?? profile.baslangic, next.profile[0].startWeight),
+        startWeight: number(
+          profile.w0 ?? profile.kilo ?? profile.baslangic,
+          next.profile[0].startWeight,
+        ),
         sex: profile.cins === 'e' ? 'male' : profile.cins === 'k' ? 'female' : next.profile[0].sex,
       },
     ];

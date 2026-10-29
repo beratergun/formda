@@ -1,19 +1,36 @@
 import type { MediaRecord } from '../../domain/types';
 import { db, type YolDatabase } from '../db';
+import { binaryMedia, blobStorageError } from './binary';
 
-export async function saveMedia(record: Omit<MediaRecord, 'blob' | 'opfsPath' | 'sizeBytes'>, blob: Blob, database = db) {
-  let stored: MediaRecord = { ...record, blob, sizeBytes: blob.size };
+export async function saveMedia(
+  record: Omit<MediaRecord, 'blob' | 'opfsPath' | 'sizeBytes'>,
+  blob: Blob,
+  database = db,
+) {
+  let stored: MediaRecord = { ...record, thumbMime: record.thumb.type, blob, sizeBytes: blob.size };
   try {
     if (!navigator.storage?.getDirectory) throw new Error('OPFS unavailable');
     const root = await navigator.storage.getDirectory();
     const directory = await root.getDirectoryHandle('yol-media', { create: true });
     const file = await directory.getFileHandle(record.id, { create: true });
     const writable = await file.createWritable();
-    await writable.write(blob); await writable.close();
-    stored = { ...record, opfsPath: record.id, sizeBytes: blob.size };
-  } catch { /* The IndexedDB Blob fallback also works without OPFS support. */ }
-  try { await database.media.put(stored); }
-  catch (error) { if (stored.opfsPath) await removeOpfs(stored.opfsPath); throw error; }
+    await writable.write(blob);
+    await writable.close();
+    stored = { ...record, thumbMime: record.thumb.type, opfsPath: record.id, sizeBytes: blob.size };
+  } catch {
+    /* The IndexedDB Blob fallback also works without OPFS support. */
+  }
+  try {
+    await database.media.put(stored);
+  } catch (error) {
+    try {
+      if (!blobStorageError(error)) throw error;
+      await database.media.put(await binaryMedia(stored));
+    } catch (failure) {
+      if (stored.opfsPath) await removeOpfs(stored.opfsPath);
+      throw failure;
+    }
+  }
   return stored;
 }
 export async function readMedia(record: MediaRecord): Promise<Blob> {
@@ -24,7 +41,13 @@ export async function readMedia(record: MediaRecord): Promise<Blob> {
   return (await dir.getFileHandle(record.opfsPath)).getFile();
 }
 export async function removeOpfs(path: string) {
-  try { const root = await navigator.storage.getDirectory(); const dir = await root.getDirectoryHandle('yol-media'); await dir.removeEntry(path); } catch { /* A missing file is already removed. */ }
+  try {
+    const root = await navigator.storage.getDirectory();
+    const dir = await root.getDirectoryHandle('yol-media');
+    await dir.removeEntry(path);
+  } catch {
+    /* A missing file is already removed. */
+  }
 }
 export async function deleteMedia(id: string, database: YolDatabase = db) {
   const record = await database.media.get(id);
@@ -33,13 +56,21 @@ export async function deleteMedia(id: string, database: YolDatabase = db) {
 }
 export async function clearAllData(database = db) {
   const records = await database.media.toArray();
-  await database.transaction('rw', database.tables, async () => { for (const table of database.tables) await table.clear(); });
-  await Promise.all(records.filter(r => r.opfsPath).map(r => removeOpfs(r.opfsPath!)));
+  await database.transaction('rw', database.tables, async () => {
+    for (const table of database.tables) await table.clear();
+  });
+  await Promise.all(records.filter((r) => r.opfsPath).map((r) => removeOpfs(r.opfsPath!)));
 }
 export async function storageInfo(database = db) {
   const records = await database.media.toArray();
-  const estimate = await navigator.storage?.estimate?.() || {};
-  const photo = records.filter(r => r.kind !== 'vlog').reduce((a,r) => a+r.sizeBytes,0);
-  const video = records.filter(r => r.kind === 'vlog').reduce((a,r) => a+r.sizeBytes,0);
-  return { photo, video, usage: estimate.usage || photo+video, quota: estimate.quota || 0, nearLimit: !!estimate.quota && (estimate.usage || 0) / estimate.quota > .85 };
+  const estimate = (await navigator.storage?.estimate?.()) || {};
+  const photo = records.filter((r) => r.kind !== 'vlog').reduce((a, r) => a + r.sizeBytes, 0);
+  const video = records.filter((r) => r.kind === 'vlog').reduce((a, r) => a + r.sizeBytes, 0);
+  return {
+    photo,
+    video,
+    usage: estimate.usage || photo + video,
+    quota: estimate.quota || 0,
+    nearLimit: !!estimate.quota && (estimate.usage || 0) / estimate.quota > 0.85,
+  };
 }

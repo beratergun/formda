@@ -2,10 +2,7 @@
   {
     "id": "egg",
     "name": "Yumurta (tam)",
-    "aliases": [
-      "yumurta",
-      "tam yumurta"
-    ],
+    "aliases": ["yumurta", "tam yumurta"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 72,
@@ -23,9 +20,7 @@
   {
     "id": "eggw",
     "name": "Yumurta beyazı",
-    "aliases": [
-      "yumurta beyazı"
-    ],
+    "aliases": ["yumurta beyazı"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 17,
@@ -43,10 +38,7 @@
   {
     "id": "tavuk",
     "name": "Tavuk göğüs (çiğ)",
-    "aliases": [
-      "tavuk",
-      "tavuk göğsü"
-    ],
+    "aliases": ["tavuk", "tavuk göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 120,
@@ -64,9 +56,7 @@
   {
     "id": "hindi",
     "name": "Hindi göğüs (çiğ)",
-    "aliases": [
-      "Hindi göğüs"
-    ],
+    "aliases": ["Hindi göğüs"],
     "unit": "g",
     "per": 100,
     "kcalPer": 115,
@@ -84,9 +74,7 @@
   {
     "id": "kiyma",
     "name": "Az yağlı kıyma (çiğ)",
-    "aliases": [
-      "Az yağlı kıyma"
-    ],
+    "aliases": ["Az yağlı kıyma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 175,
@@ -104,9 +92,7 @@
   {
     "id": "hamsi",
     "name": "Hamsi (çiğ)",
-    "aliases": [
-      "Hamsi"
-    ],
+    "aliases": ["Hamsi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 130,
@@ -124,9 +110,7 @@
   {
     "id": "ton",
     "name": "Ton balığı (suda, süzülmüş)",
-    "aliases": [
-      "Ton balığı"
-    ],
+    "aliases": ["Ton balığı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 110,
@@ -144,9 +128,7 @@
   {
     "id": "suzme",
     "name": "Süzme yoğurt (az yağlı)",
-    "aliases": [
-      "Süzme yoğurt"
-    ],
+    "aliases": ["Süzme yoğurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 75,
@@ -164,9 +146,7 @@
   {
     "id": "yogurt",
     "name": "Yoğurt (yarım yağlı)",
-    "aliases": [
-      "Yoğurt"
-    ],
+    "aliases": ["Yoğurt"],
     "unit": "g",
     "per": 100,
     "kcalPer": 50,
@@ -184,9 +164,7 @@
   {
     "id": "lor",
     "name": "Lor peyniri",
-    "aliases": [
-      "Lor peyniri"
-    ],
+    "aliases": ["Lor peyniri"],
     "unit": "g",
     "per": 100,
     "kcalPer": 95,
@@ -204,9 +182,7 @@
   {
     "id": "sut",
     "name": "Süt (yarım yağlı)",
-    "aliases": [
-      "Süt"
-    ],
+    "aliases": ["Süt"],
     "unit": "ml",
     "per": 100,
     "kcalPer": 46,
@@ -224,9 +200,7 @@
   {
     "id": "kefir",
     "name": "Kefir (sade)",
-    "aliases": [
-      "Kefir"
-    ],
+    "aliases": ["Kefir"],
     "unit": "ml",
     "per": 100,
     "kcalPer": 55,
@@ -244,10 +218,7 @@
   {
     "id": "ekmek",
     "name": "Tam buğday ekmeği",
-    "aliases": [
-      "ekmek",
-      "tam buğday ekmeği"
-    ],
+    "aliases": ["ekmek", "tam buğday ekmeği"],
     "unit": "g",
     "per": 100,
     "kcalPer": 250,
@@ -265,9 +236,7 @@
   {
     "id": "yulaf",
     "name": "Yulaf (çiğ)",
-    "aliases": [
-      "Yulaf"
-    ],
+    "aliases": ["Yulaf"],
     "unit": "g",
     "per": 100,
     "kcalPer": 375,
@@ -285,9 +254,7 @@
   {
     "id": "mercimek",
     "name": "Kırmızı mercimek (çiğ)",
-    "aliases": [
-      "Kırmızı mercimek"
-    ],
+    "aliases": ["Kırmızı mercimek"],
     "unit": "g",
     "per": 100,
     "kcalPer": 350,
@@ -305,9 +272,7 @@
   {
     "id": "nohut",
     "name": "Nohut (haşlanmış)",
-    "aliases": [
-      "Nohut"
-    ],
+    "aliases": ["Nohut"],
     "unit": "g",
     "per": 100,
     "kcalPer": 164,
@@ -325,9 +290,7 @@
   {
     "id": "fasulye",
     "name": "Kuru fasulye (haşlanmış)",
-    "aliases": [
-      "Kuru fasulye"
-    ],
+    "aliases": ["Kuru fasulye"],
     "unit": "g",
     "per": 100,
     "kcalPer": 127,
@@ -345,9 +308,7 @@
   {
     "id": "patates",
     "name": "Patates (haşlanmış/fırın)",
-    "aliases": [
-      "Patates"
-    ],
+    "aliases": ["Patates"],
     "unit": "g",
     "per": 100,
     "kcalPer": 85,
@@ -365,9 +326,7 @@
   {
     "id": "sebze",
     "name": "Pişmiş sebze",
-    "aliases": [
-      "Pişmiş sebze"
-    ],
+    "aliases": ["Pişmiş sebze"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -385,9 +344,7 @@
   {
     "id": "salata",
     "name": "Salata (yağsız)",
-    "aliases": [
-      "Salata"
-    ],
+    "aliases": ["Salata"],
     "unit": "g",
     "per": 100,
     "kcalPer": 20,
@@ -405,9 +362,7 @@
   {
     "id": "kahvsebze",
     "name": "Domates-salatalık-biber",
-    "aliases": [
-      "Domates-salatalık-biber"
-    ],
+    "aliases": ["Domates-salatalık-biber"],
     "unit": "g",
     "per": 100,
     "kcalPer": 17,
@@ -425,9 +380,7 @@
   {
     "id": "sogan",
     "name": "Soğan-havuç",
-    "aliases": [
-      "Soğan-havuç"
-    ],
+    "aliases": ["Soğan-havuç"],
     "unit": "g",
     "per": 100,
     "kcalPer": 40,
@@ -445,9 +398,7 @@
   {
     "id": "yag",
     "name": "Zeytinyağı",
-    "aliases": [
-      "Zeytinyağı"
-    ],
+    "aliases": ["Zeytinyağı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 900,
@@ -465,9 +416,7 @@
   {
     "id": "zeytin",
     "name": "Zeytin",
-    "aliases": [
-      "Zeytin"
-    ],
+    "aliases": ["Zeytin"],
     "unit": "g",
     "per": 100,
     "kcalPer": 175,
@@ -485,9 +434,7 @@
   {
     "id": "ceviz",
     "name": "Ceviz",
-    "aliases": [
-      "Ceviz"
-    ],
+    "aliases": ["Ceviz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 654,
@@ -505,9 +452,7 @@
   {
     "id": "elma",
     "name": "Elma",
-    "aliases": [
-      "Elma"
-    ],
+    "aliases": ["Elma"],
     "unit": "g",
     "per": 100,
     "kcalPer": 52,
@@ -525,9 +470,7 @@
   {
     "id": "muz",
     "name": "Muz",
-    "aliases": [
-      "Muz"
-    ],
+    "aliases": ["Muz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 89,
@@ -545,9 +488,7 @@
   {
     "id": "mandalina",
     "name": "Mandalina",
-    "aliases": [
-      "Mandalina"
-    ],
+    "aliases": ["Mandalina"],
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
@@ -565,9 +506,7 @@
   {
     "id": "portakal",
     "name": "Portakal",
-    "aliases": [
-      "Portakal"
-    ],
+    "aliases": ["Portakal"],
     "unit": "g",
     "per": 100,
     "kcalPer": 47,
@@ -585,9 +524,7 @@
   {
     "id": "bitter",
     "name": "Bitter çikolata",
-    "aliases": [
-      "Bitter çikolata"
-    ],
+    "aliases": ["Bitter çikolata"],
     "unit": "g",
     "per": 100,
     "kcalPer": 600,
@@ -605,11 +542,7 @@
   {
     "id": "cay",
     "name": "Şekersiz çay/kahve",
-    "aliases": [
-      "çay",
-      "kahve",
-      "şekersiz çay"
-    ],
+    "aliases": ["çay", "kahve", "şekersiz çay"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 2,
@@ -627,9 +560,7 @@
   {
     "id": "beyazpeynir",
     "name": "Beyaz peynir",
-    "aliases": [
-      "Beyaz peynir"
-    ],
+    "aliases": ["Beyaz peynir"],
     "unit": "g",
     "per": 100,
     "kcalPer": 260,
@@ -647,9 +578,7 @@
   {
     "id": "kasar",
     "name": "Kaşar peyniri",
-    "aliases": [
-      "Kaşar peyniri"
-    ],
+    "aliases": ["Kaşar peyniri"],
     "unit": "g",
     "per": 100,
     "kcalPer": 350,
@@ -667,9 +596,7 @@
   {
     "id": "simit",
     "name": "Simit",
-    "aliases": [
-      "Simit"
-    ],
+    "aliases": ["Simit"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 290,
@@ -687,9 +614,7 @@
   {
     "id": "pilav",
     "name": "Pirinç pilavı (pişmiş)",
-    "aliases": [
-      "Pirinç pilavı"
-    ],
+    "aliases": ["Pirinç pilavı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 150,
@@ -707,9 +632,7 @@
   {
     "id": "makarna",
     "name": "Makarna (pişmiş)",
-    "aliases": [
-      "Makarna"
-    ],
+    "aliases": ["Makarna"],
     "unit": "g",
     "per": 100,
     "kcalPer": 158,
@@ -727,9 +650,7 @@
   {
     "id": "bulgur",
     "name": "Bulgur pilavı (pişmiş)",
-    "aliases": [
-      "Bulgur pilavı"
-    ],
+    "aliases": ["Bulgur pilavı"],
     "unit": "g",
     "per": 100,
     "kcalPer": 120,
@@ -747,9 +668,7 @@
   {
     "id": "kofte",
     "name": "Köfte (pişmiş)",
-    "aliases": [
-      "Köfte"
-    ],
+    "aliases": ["Köfte"],
     "unit": "g",
     "per": 100,
     "kcalPer": 230,
@@ -767,10 +686,7 @@
   {
     "id": "tavukpismis",
     "name": "Tavuk göğüs (pişmiş)",
-    "aliases": [
-      "tavuk",
-      "tavuk göğsü"
-    ],
+    "aliases": ["tavuk", "tavuk göğsü"],
     "unit": "g",
     "per": 100,
     "kcalPer": 165,
@@ -788,9 +704,7 @@
   {
     "id": "durum",
     "name": "Tavuk döner dürüm",
-    "aliases": [
-      "Tavuk döner dürüm"
-    ],
+    "aliases": ["Tavuk döner dürüm"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 550,
@@ -808,9 +722,7 @@
   {
     "id": "lahmacun",
     "name": "Lahmacun",
-    "aliases": [
-      "Lahmacun"
-    ],
+    "aliases": ["Lahmacun"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 250,
@@ -828,9 +740,7 @@
   {
     "id": "pide",
     "name": "Kıymalı pide (1 adet)",
-    "aliases": [
-      "Kıymalı pide"
-    ],
+    "aliases": ["Kıymalı pide"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 700,
@@ -848,9 +758,7 @@
   {
     "id": "hamburger",
     "name": "Hamburger",
-    "aliases": [
-      "Hamburger"
-    ],
+    "aliases": ["Hamburger"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 500,
@@ -868,9 +776,7 @@
   {
     "id": "pizza",
     "name": "Pizza (1 dilim)",
-    "aliases": [
-      "Pizza"
-    ],
+    "aliases": ["Pizza"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 285,
@@ -888,9 +794,7 @@
   {
     "id": "kizartma",
     "name": "Patates kızartması",
-    "aliases": [
-      "Patates kızartması"
-    ],
+    "aliases": ["Patates kızartması"],
     "unit": "g",
     "per": 100,
     "kcalPer": 312,
@@ -908,10 +812,7 @@
   {
     "id": "corba",
     "name": "Mercimek çorbası (1 kase)",
-    "aliases": [
-      "mercimek çorbası",
-      "çorba"
-    ],
+    "aliases": ["mercimek çorbası", "çorba"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 180,
@@ -929,9 +830,7 @@
   {
     "id": "ayran",
     "name": "Ayran",
-    "aliases": [
-      "Ayran"
-    ],
+    "aliases": ["Ayran"],
     "unit": "ml",
     "per": 100,
     "kcalPer": 38,
@@ -949,9 +848,7 @@
   {
     "id": "kola",
     "name": "Kola / şekerli gazoz",
-    "aliases": [
-      "Kola / şekerli gazoz"
-    ],
+    "aliases": ["Kola / şekerli gazoz"],
     "unit": "ml",
     "per": 100,
     "kcalPer": 42,
@@ -969,9 +866,7 @@
   {
     "id": "meyvesuyu",
     "name": "Meyve suyu",
-    "aliases": [
-      "Meyve suyu"
-    ],
+    "aliases": ["Meyve suyu"],
     "unit": "ml",
     "per": 100,
     "kcalPer": 45,
@@ -989,9 +884,7 @@
   {
     "id": "sutlucik",
     "name": "Sütlü çikolata",
-    "aliases": [
-      "Sütlü çikolata"
-    ],
+    "aliases": ["Sütlü çikolata"],
     "unit": "g",
     "per": 100,
     "kcalPer": 535,
@@ -1009,9 +902,7 @@
   {
     "id": "biskuvi",
     "name": "Bisküvi",
-    "aliases": [
-      "Bisküvi"
-    ],
+    "aliases": ["Bisküvi"],
     "unit": "g",
     "per": 100,
     "kcalPer": 480,
@@ -1029,9 +920,7 @@
   {
     "id": "findik",
     "name": "Fındık",
-    "aliases": [
-      "Fındık"
-    ],
+    "aliases": ["Fındık"],
     "unit": "g",
     "per": 100,
     "kcalPer": 630,
@@ -1049,9 +938,7 @@
   {
     "id": "badem",
     "name": "Badem",
-    "aliases": [
-      "Badem"
-    ],
+    "aliases": ["Badem"],
     "unit": "g",
     "per": 100,
     "kcalPer": 580,
@@ -1069,9 +956,7 @@
   {
     "id": "hurma",
     "name": "Hurma",
-    "aliases": [
-      "Hurma"
-    ],
+    "aliases": ["Hurma"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 23,
@@ -1089,9 +974,7 @@
   {
     "id": "bal",
     "name": "Bal (1 tatlı kaşığı)",
-    "aliases": [
-      "Bal"
-    ],
+    "aliases": ["Bal"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 21,
@@ -1109,9 +992,7 @@
   {
     "id": "seker",
     "name": "Şeker (1 küçük paket)",
-    "aliases": [
-      "Şeker"
-    ],
+    "aliases": ["Şeker"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 20,
@@ -1129,9 +1010,7 @@
   {
     "id": "proteintozu",
     "name": "Protein tozu (1 ölçek ≈ 30 g)",
-    "aliases": [
-      "Protein tozu"
-    ],
+    "aliases": ["Protein tozu"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 120,
@@ -1149,9 +1028,7 @@
   {
     "id": "karpuz",
     "name": "Karpuz",
-    "aliases": [
-      "Karpuz"
-    ],
+    "aliases": ["Karpuz"],
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
@@ -1169,9 +1046,7 @@
   {
     "id": "uzum",
     "name": "Üzüm",
-    "aliases": [
-      "Üzüm"
-    ],
+    "aliases": ["Üzüm"],
     "unit": "g",
     "per": 100,
     "kcalPer": 69,
@@ -1189,9 +1064,7 @@
   {
     "id": "tostkasar",
     "name": "Kaşarlı tost",
-    "aliases": [
-      "Kaşarlı tost"
-    ],
+    "aliases": ["Kaşarlı tost"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 350,

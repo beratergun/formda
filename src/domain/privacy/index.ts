@@ -1,2 +1,19 @@
-export async function pinHash(pin:string,salt:string){if(!/^\d{4}$/.test(pin))throw new Error('PIN dört rakam olmalı.');const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:150000,hash:'SHA-256'},key,256);return [...new Uint8Array(bits)].map(n=>n.toString(16).padStart(2,'0')).join('');}
-export async function verifyPin(pin:string,salt:string,expected:string){try{return await pinHash(pin,salt)===expected;}catch{return false;}}
+export async function pinHash(pin: string, salt: string) {
+  if (!/^\d{4}$/.test(pin)) throw new Error('PIN dört rakam olmalı.');
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(pin), 'PBKDF2', false, [
+    'deriveBits',
+  ]);
+  const bits = await crypto.subtle.deriveBits(
+    { name: 'PBKDF2', salt: new TextEncoder().encode(salt), iterations: 150000, hash: 'SHA-256' },
+    key,
+    256,
+  );
+  return [...new Uint8Array(bits)].map((n) => n.toString(16).padStart(2, '0')).join('');
+}
+export async function verifyPin(pin: string, salt: string, expected: string) {
+  try {
+    return (await pinHash(pin, salt)) === expected;
+  } catch {
+    return false;
+  }
+}
