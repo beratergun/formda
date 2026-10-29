@@ -680,12 +680,18 @@ function Goals() {
       </label>
       <Button
         disabled={
-          !values.kcal ||
-          !values.protein ||
-          !values.water ||
+          !Number.isFinite(values.kcal) ||
+          values.kcal <= 0 ||
+          !Number.isFinite(values.protein) ||
+          values.protein <= 0 ||
+          !Number.isFinite(values.water) ||
+          values.water <= 0 ||
           !values.bedtime ||
-          !values.goalWeight ||
-          values.goalWeight < 30
+          !Number.isFinite(values.goalWeight) ||
+          values.goalWeight < 30 ||
+          [values.carb, values.fat, values.steps].some(
+            (n) => n !== undefined && (!Number.isFinite(n) || n < 0),
+          )
         }
         onClick={() => {
           mutate(() => ({

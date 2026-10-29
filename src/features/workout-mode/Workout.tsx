@@ -437,7 +437,7 @@ export function Workout() {
                   type="number"
                   min={0}
                   value={log.distanceM || ''}
-                  onChange={(e) => save({ distanceM: +e.target.value })}
+                  onChange={(e) => save({ distanceM: Math.max(0, +e.target.value) })}
                 />
               </label>
             )}
@@ -448,7 +448,9 @@ export function Workout() {
                 min={1}
                 max={10}
                 value={log.rpe || 5}
-                onChange={(e) => save({ rpe: +e.target.value })}
+                onChange={(e) =>
+                  save({ rpe: Math.max(0, Math.min(10, +e.target.value)) || undefined })
+                }
               />
             </label>
             <Segmented

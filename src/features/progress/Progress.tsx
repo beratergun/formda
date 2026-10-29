@@ -259,7 +259,7 @@ export function Progress() {
                 max={400}
                 step={0.1}
                 value={day.day.weight || ''}
-                onChange={(e) => updateDay({ weight: +e.target.value || undefined })}
+                onChange={(e) => updateDay({ weight: Math.max(0, +e.target.value) || undefined })}
               />
             </label>
             <div className="grid2">
@@ -275,7 +275,7 @@ export function Progress() {
                       updateDay({
                         measurements: {
                           ...day.day.measurements,
-                          [key]: +e.target.value || undefined,
+                          [key]: Math.max(0, +e.target.value) || undefined,
                         },
                       })
                     }

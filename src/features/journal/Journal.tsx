@@ -421,7 +421,7 @@ export function Journal() {
                 type="number"
                 min={0}
                 value={day.steps || ''}
-                onChange={(e) => updateDay({ steps: +e.target.value || undefined })}
+                onChange={(e) => updateDay({ steps: Math.max(0, +e.target.value) || undefined })}
               />
             </label>
             <details>

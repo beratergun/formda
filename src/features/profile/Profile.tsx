@@ -65,6 +65,8 @@ export function Profile() {
   };
   const saveProfile = () => {
     if (
+      (profile.age !== undefined &&
+        (!Number.isFinite(profile.age) || profile.age < 18 || profile.age > 100)) ||
       profile.heightCm < 100 ||
       profile.heightCm > 250 ||
       profile.startWeight < 30 ||
@@ -72,7 +74,7 @@ export function Profile() {
       profile.activityFactor < 1 ||
       profile.activityFactor > 2.5
     ) {
-      setError('Boy, kilo ve aktivite değerlerini kontrol et.');
+      setError('Yaş, boy, kilo ve aktivite değerlerini kontrol et.');
       return;
     }
     mutate((v) => ({
