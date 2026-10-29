@@ -8,7 +8,7 @@
 | 4 | Karşılama, Bugün, beslenme | Tamamlandı |
 | 5 | Antrenman ve hareket kütüphanesi | Tamamlandı |
 | 6 | Fotoğraf ve karşılaştırma | Tamamlandı |
-| 7 | Vlog, Günlük, raporlar | Bekliyor |
+| 7 | Vlog, Günlük, raporlar | Tamamlandı |
 | 8 | İlerleme ve Planım | Bekliyor |
 | 9 | Profil, gizlilik, ICS, eski veri aktarımı | Bekliyor |
 | 10 | E2E, erişilebilirlik, performans | Bekliyor |

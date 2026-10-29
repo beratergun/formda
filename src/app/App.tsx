@@ -30,6 +30,8 @@ import type { MealId } from '../domain/types';
 import { Workout } from '../features/workout-mode/Workout';
 import { Library } from '../features/workout-mode/Library';
 import { CameraPage } from '../features/camera/Camera';
+import { Vlog } from '../features/vlog/Vlog';
+import { Journal } from '../features/journal/Journal';
 
 const tabs = [
   ['/', 'Bugün', House],
@@ -95,7 +97,9 @@ function AppLayout() {
                 <Route path="/workout" element={<Workout />} />
                 <Route path="/library" element={<Library />} />
               <Route path="/camera" element={<CameraPage />} />
-                {tabs.slice(1).map(([path, title]) => (
+              <Route path="/vlog" element={<Vlog />} />
+              <Route path="/journal" element={<Journal />} />
+              {tabs.slice(2).map(([path, title]) => (
                   <Route
                     key={path}
                     path={path}
