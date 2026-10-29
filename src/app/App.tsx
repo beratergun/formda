@@ -34,6 +34,9 @@ import { Vlog } from '../features/vlog/Vlog';
 import { Journal } from '../features/journal/Journal';
 import { Progress } from '../features/progress/Progress';
 import { Plan } from '../features/plan/Plan';
+import { Profile } from '../features/profile/Profile';
+import { AppLock } from './AppLock';
+import { LocalReminders } from './LocalReminders';
 
 const tabs = [
   ['/', 'Bugün', House],
@@ -58,6 +61,7 @@ function AppLayout() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+  useEffect(() => { const sync = () => setTheme(localStorage.getItem('yol-theme') || 'system'); window.addEventListener('yol-theme-change', sync); return () => window.removeEventListener('yol-theme-change', sync); }, []);
   const onFood = (meal: MealId = 'kahvalti') => {
     setMeal(meal);
     setEntry('food');
@@ -103,7 +107,8 @@ function AppLayout() {
               <Route path="/journal" element={<Journal />} />
               <Route path="/progress" element={<Progress />} />
               <Route path="/plan" element={<Plan />} />
-              {tabs.slice(4).map(([path, title]) => (
+              <Route path="/profile" element={<Profile />} />
+              {tabs.slice(5).map(([path, title]) => (
                   <Route
                     key={path}
                     path={path}
@@ -205,6 +210,7 @@ function AppLayout() {
         </aside>
       )}
       <PwaPrompt />
+      <LocalReminders />
     </>
   );
 }
@@ -212,7 +218,7 @@ export function App() {
   return (
     <HashRouter>
       <StoreProvider>
-        <AppLayout />
+        <AppLock><AppLayout /></AppLock>
       </StoreProvider>
     </HashRouter>
   );

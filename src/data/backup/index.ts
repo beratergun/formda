@@ -1,5 +1,5 @@
 import { db, seedDatabase, type YolDatabase } from '../db';
-import { clearAllData } from '../media/opfs';
+import { clearAllData, removeOpfs } from '../media/opfs';
 import type { MediaRecord } from '../../domain/types';
 import type { decodeBackup } from './codec';
 
@@ -25,6 +25,7 @@ export async function restoreBackup(blob:Blob, mode:'merge'|'replace', database=
   await applyBackup(decoded,mode,database);
 }
 export async function applyBackup({document,files}:Decoded, mode:'merge'|'replace', database=db) {
+  const previous=await database.media.toArray();
   const media:MediaRecord[]=document.media.map(record=>({...record,blob:new Blob([new Uint8Array(files[`media/${record.id}.bin`])],{type:record.mime}),thumb:new Blob([new Uint8Array(files[`media/${record.id}.thumb`])],{type:'image/webp'})}));
   // All validation and media decoding finish before the atomic replacement begins.
   await database.transaction('rw',database.tables,async()=>{
@@ -32,5 +33,7 @@ export async function applyBackup({document,files}:Decoded, mode:'merge'|'replac
     for(const [name,values]of Object.entries(document.data))await database.table(name).bulkPut(values);
     await database.media.bulkPut(media);await database.exercise.bulkPut(document.exercises);
   });
+  const replaced=new Set(media.map(m=>m.id));
+  await Promise.all(previous.filter(m=>m.opfsPath&&(mode==='replace'||replaced.has(m.id))).map(m=>removeOpfs(m.opfsPath!)));
 }
 export async function resetDatabase() {await clearAllData();await seedDatabase();}

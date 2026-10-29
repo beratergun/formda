@@ -14,9 +14,10 @@ import { useStore } from '../../app/Store';
 import { defaultPlan } from '../../domain/program';
 import { todayKey } from '../../domain/dates';
 import type { Horizon } from '../../domain/types';
+import { restoreBackup } from '../../data/backup';
 
 export function Onboarding() {
-  const { data, mutate, flush, setError } = useStore();
+  const { data, mutate, flush, setError, reload } = useStore();
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [start, setStart] = useState(todayKey);
@@ -331,6 +332,7 @@ export function Onboarding() {
           </Button>
         )}
       </div>
+      {step === 0 && <label className="button quiet file-button">Yedeğimden devam et<input type="file" accept=".zip,application/zip" disabled={busy} onChange={e=>{const file=e.target.files?.[0];if(!file)return;setBusy(true);void restoreBackup(file,'replace').then(reload).catch(error=>setError(error instanceof Error?error.message:'Yedek açılamadı.')).finally(()=>setBusy(false));}} /></label>}
     </div>
   );
 }

@@ -38,3 +38,9 @@ it('rejects malformed data and incomplete media before any data is replaced',asy
   const bytes=await encodeBackup(document,{});expect(()=>decodeBackup(bytes)).toThrow('eksik');expect(await database.food.count()).toBeGreaterThan(300);
   expect(()=>encodeBackup({...document,version:2} as unknown as BackupDocument,{})).toThrow();
 });
+it('rejects a media byte corruption even if the stored file size is unchanged',async()=>{
+  const database=fresh();await seedDatabase(database);const data=await new LocalRepository(database).load();
+  const raw=new Uint8Array([123,45,67,89,231,199]);const document:BackupDocument={format:'yol-backup',version:1,createdAt:'now',data,media:[{id:'crc-test',date:'2026-10-29',kind:'progress',width:1,height:1,sizeBytes:raw.length,tags:[],mime:'image/webp'}],exercises:[]};
+  const bytes=await encodeBackup(document,{'media/crc-test.bin':raw,'media/crc-test.thumb':new Uint8Array([1])});
+  const index=bytes.findIndex((_,i)=>raw.every((value,n)=>bytes[i+n]===value));expect(index).toBeGreaterThan(0);bytes[index]^=1;expect(()=>decodeBackup(bytes)).toThrow('bütünlük');
+});

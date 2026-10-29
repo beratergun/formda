@@ -189,6 +189,7 @@ legend { font-size: 12px; color: var(--sub); margin-bottom: 10px; }
 .media-thumb { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 14px; padding: 0; overflow: hidden; position: relative; background: var(--raise); }
 .media-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .media-thumb span { position: absolute; inset: 0; display: grid; place-items: center; color: white; background: #0003; }
+.media-thumb > svg { margin: auto; color: var(--sub); }
 .safety-note { color: var(--sub); font-size: 9px; text-align: center; padding: 8px; }
 .search-input { position: relative; }
 .search-input svg { position: absolute; left: 12px; top: 15px; color: var(--sub); }
@@ -276,6 +277,8 @@ summary { cursor: pointer; min-height: 44px; padding-block: 10px; font-size: 12p
 .menu-item strong { font-size: 12px; }
 .menu-item small { font-size: 10px; color: var(--sub); }
 .menu-item .compact-input { width: 64px; padding-inline: 4px; }
+.app-lock { padding-top: 12dvh; max-width: 440px; }
+.processing-toast { position: fixed; z-index: 90; bottom: 120px; left: 50%; transform: translateX(-50%); width: min(90%,420px); border: 1px solid var(--line); background: var(--card); border-radius: 14px; padding: 14px; text-align: center; color: var(--accent); box-shadow: var(--shadow); }
 .date-picker { max-width: 190px; }
 @media print {
   body { background: white; color: #172e2d; }

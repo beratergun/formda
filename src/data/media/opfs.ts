@@ -23,7 +23,7 @@ export async function readMedia(record: MediaRecord): Promise<Blob> {
   const dir = await root.getDirectoryHandle('yol-media');
   return (await dir.getFileHandle(record.opfsPath)).getFile();
 }
-async function removeOpfs(path: string) {
+export async function removeOpfs(path: string) {
   try { const root = await navigator.storage.getDirectory(); const dir = await root.getDirectoryHandle('yol-media'); await dir.removeEntry(path); } catch { /* A missing file is already removed. */ }
 }
 export async function deleteMedia(id: string, database: YolDatabase = db) {

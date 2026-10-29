@@ -10,7 +10,7 @@
 | 6 | Fotoğraf ve karşılaştırma | Tamamlandı |
 | 7 | Vlog, Günlük, raporlar | Tamamlandı |
 | 8 | İlerleme ve Planım | Tamamlandı |
-| 9 | Profil, gizlilik, ICS, eski veri aktarımı | Bekliyor |
+| 9 | Profil, gizlilik, ICS, eski veri aktarımı | Tamamlandı |
 | 9b | Uygulama yükleme deneyimi, Capacitor Android, APK iş akışı | Bekliyor |
 | 10 | E2E, erişilebilirlik, performans | Bekliyor |
 | 11 | README ve görseller | Bekliyor |

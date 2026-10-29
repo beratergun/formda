@@ -9,6 +9,7 @@ import {
   Dumbbell,
   Flame,
   Leaf,
+  LockKeyhole,
   Moon,
   Plus,
   RefreshCw,
@@ -50,6 +51,7 @@ export function useBlobUrl(blob?: Blob) {
 }
 export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?: () => void }) {
   const url = useBlobUrl(record.thumb);
+  const hidden = useStore().data.profile[0].hidePhotos;
   return (
     <button
       type="button"
@@ -57,11 +59,11 @@ export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?:
       onClick={onClick}
       aria-label={`${record.kind === 'vlog' ? 'Vlog' : 'Fotoğraf'} · ${dateLabel(record.date)}`}
     >
-      <img
+      {hidden ? <LockKeyhole size={25} aria-label="Anı küçük resmi gizli" /> : <img
         src={url || undefined}
         alt={record.title || `${record.pose || 'Anı'} · ${dateLabel(record.date)}`}
         loading="lazy"
-      />
+      />}
       {record.kind === 'vlog' && <span>▶</span>}
     </button>
   );
