@@ -38,6 +38,7 @@ export function Workout() {
   const [kg, setKg] = useState(10);
   const [reps, setReps] = useState(10);
   const [rpe, setRpe] = useState(7);
+  const [confirmedSet, setConfirmedSet] = useState(0);
   const [restUntil, setRestUntil] = useState(0);
   const [now, setNow] = useState(Date.now);
   const [guide, setGuide] = useState(false);
@@ -104,6 +105,7 @@ export function Workout() {
       done: true,
     };
     save({ sets: [...log.sets, set] });
+    setConfirmedSet((n) => n + 1);
     alerted.current = false;
     const timestamp = Date.now();
     setNow(timestamp);
@@ -139,7 +141,7 @@ export function Workout() {
     return (
       <div className="workout-mode">
         <div className="stack">
-          <div className="celebration">
+          <div className={`celebration ${records.some((r) => r.record) ? 'new-record' : ''}`}>
             <Trophy size={44} />
           </div>
           <p className="eyebrow">BİR ADIM DAHA</p>
@@ -329,6 +331,11 @@ export function Workout() {
                   />
                 </label>
               </div>
+              {confirmedSet > 0 && (
+                <p key={confirmedSet} className="set-confirmation" role="status">
+                  <Check size={18} /> Set tamamlandı. Nefeslen.
+                </p>
+              )}
               <Button onClick={completeSet} disabled={kg < 0 || reps < 1 || rpe < 1 || rpe > 10}>
                 Seti bitir
                 <Check size={18} />

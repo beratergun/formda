@@ -212,6 +212,69 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           Bugüne dön
         </Button>
       )}
+      <Card className="coach-card stack">
+        <div className="row between">
+          <p className="eyebrow">BUGÜN KOÇUNLA</p>
+          <Chip>
+            {plan.deload ? 'Hafif hafta' : plan.assessment ? 'Değerlendirme' : 'Hazırsın'}
+          </Chip>
+        </div>
+        <h2>{done ? 'Bugünün emeği kayıtta.' : plan.title}</h2>
+        <p>
+          {done
+            ? 'Harika iş. Şimdi toparlanmaya ve öğünlerine yer aç.'
+            : plan.type === 'strength'
+              ? 'Isınmayı atlama. İlk set hafif, her tekrar kontrollü.'
+              : plan.type === 'swim'
+                ? 'İlk uzunlukları rahat yüz. Nefesini bul, sonra ritmini koru.'
+                : 'Bugün bedenini dinle. Küçük bir kayıt da ilerlemenin parçası.'}
+        </p>
+        {!done && plan.type !== 'rest' ? (
+          <Link className="button primary" to="/workout">
+            Antrenmanı başlat <ArrowUpRight size={18} />
+          </Link>
+        ) : (
+          <Button onClick={() => onFood()}>
+            Öğün ekle <Plus size={18} />
+          </Button>
+        )}
+      </Card>
+      <Card className="dashboard-rings">
+        <div>
+          <Ring
+            value={macros.kcal}
+            max={targets.kcal}
+            label="Alınan kalori"
+            unit="kcal"
+            size={104}
+          />
+          <h3>Alınan</h3>
+          <small className="muted">{targets.kcal} kcal hedef</small>
+        </div>
+        <div>
+          <Ring value={macros.protein} max={targets.protein} label="Protein" unit="g" size={104} />
+          <h3>Protein</h3>
+          <small className="muted">{targets.protein} g hedef</small>
+        </div>
+        <div>
+          <Ring
+            value={day.activeKcal || 0}
+            max={Math.max(1, day.activeKcal || 0)}
+            label="Harcanan kalori tahmini"
+            unit="kcal"
+            size={104}
+          />
+          <h3>Harcanan</h3>
+          <small className="muted">Tahmini · kota yok</small>
+        </div>
+        <div>
+          <Ring value={day.steps || 0} max={targets.steps || 8000} label="Adım" size={104} />
+          <h3>Adım</h3>
+          <small className="muted">
+            {targets.steps ? targets.steps.toLocaleString('tr') + ' hedef' : 'Günlük hareket'}
+          </small>
+        </div>
+      </Card>
       <Card className="hero">
         <div className="row between">
           <Chip>HER ADIMIN KIYMETLİ</Chip>
@@ -289,29 +352,9 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         <span className="eyebrow">KENDİ RİTMİNDE</span>
       </div>
       <Card className="stack">
-        <div className="nutrition-grid">
-          <div>
-            <Ring value={macros.kcal} max={targets.kcal} label="Kalori" unit="kcal" size={108} />
-            <h3>Kalori</h3>
-            <small className="muted">/ {targets.kcal.toLocaleString('tr')} kcal</small>
-            <p className="remaining">
-              {Math.max(0, Math.round(targets.kcal - macros.kcal))} kcal kaldı
-            </p>
-          </div>
-          <div>
-            <Ring
-              value={macros.protein}
-              max={targets.protein}
-              label="Protein"
-              unit="g"
-              size={108}
-            />
-            <h3>Protein</h3>
-            <small className="muted">/ {targets.protein} g</small>
-            <p className="remaining">
-              {Math.max(0, Math.ceil(targets.protein - macros.protein))} g kaldı
-            </p>
-          </div>
+        <div className="row between small">
+          <b>${Math.max(0, Math.round(targets.kcal - macros.kcal))} kcal kaldı</b>
+          <b>${Math.max(0, Math.ceil(targets.protein - macros.protein))} g protein kaldı</b>
         </div>
         {macros.carb !== undefined && entries.length > 0 && <MacroBreakdown macros={macros} />}
         <div className="divider" />

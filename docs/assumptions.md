@@ -23,3 +23,5 @@
 - Android uygulama kimliği kullanıcı isteğiyle io.github.beratergun.formda oldu. Ayrı Android sandbox'ları otomatik okunamaz: eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp Formda'ya geri yükle. Eski kurulumu yedek doğrulanmadan kaldırma.
 - Eski PWA'nın önbelleğe alınmış sürümü çevrimdışı çalışabilir; yönlendirme internet bağlantısıyla alınır. Yönlendirme hiçbir IndexedDB/OPFS/localStorage verisini silmez.
 - Android workflow push, published release ve workflow_dispatch tetiklerinde koşulsuz apk job çalıştırır; yalnızca imzalama adımları Secrets'a bağlıdır.
+
+- Aylık hikâye çizimi öncelikle worker/OffscreenCanvas ile çalışır. Windows WebKit worker çizimini desteklemediğinde tek bir 1080×1920 kart HTML canvas ile üretilir; ağ kullanılmaz. İki tarayıcıda indirme testi zorunludur.

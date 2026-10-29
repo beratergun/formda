@@ -19,5 +19,7 @@
 
 ## Formda v2 (30 Ekim 2026)
 
-- A — Yerel marka/veri/Android çalışması tamamlandı; 96 birim, 8 E2E, 18 Axe görünümü, Lighthouse 99/100/100. Repo formda olarak yeniden adlandırıldı. Commit sonrası Pages/Android CI ve eski adres yönlendirmesi doğrulanacak.
+- A — Yerel marka/veri/Android çalışması tamamlandı; 96 birim, 8 E2E, 18 Axe görünümü, Lighthouse 99/100/100. Repo formda olarak yeniden adlandırıldı. Pages/Android CI başarılı, canlı uygulama HTTP 200 ve çevrimdışı veri doğrulandı. Eski adres yönlendirmesi yayında. Commit 28a4b09.
 - B, C, D, E, F — Sırayla bekliyor. Henüz uygulanmış veya yayınlanmış sayılmaz.
+
+- B — Koç ana ekranı, ortak tasarım, motivasyon galerileri ve paylaşılabilir aylık hikâyeler uygulandı. 96 birim, 10 E2E, 18 Axe görünümünde sıfır ihlal ve Lighthouse 100/100/100; tamamlandı. Sıradaki aşama C.

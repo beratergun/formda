@@ -96,7 +96,9 @@ test('Friday swim schedule, all templates and two themes without overflow', asyn
   await expect(page.getByRole('button', { name: 'Hareket ekle', exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Bugün', exact: true }).click();
   await page.locator('.date-strip').getByRole('button', { name: /Cuma$/ }).click();
-  await expect(page.getByRole('heading', { name: 'Yüzme', exact: true })).toBeVisible();
+  await expect(
+    page.locator('.workout-card').getByRole('heading', { name: 'Yüzme', exact: true }),
+  ).toBeVisible();
   for (const theme of ['dark', 'light']) {
     await page.evaluate((t) => {
       localStorage.setItem('yol-theme', t);
@@ -135,4 +137,26 @@ test('Friday swim schedule, all templates and two themes without overflow', asyn
   await expect(page.getByLabel('Bugünkü kilo (kg)', { exact: true })).toHaveValue('');
   await page.getByLabel('Bel (cm)', { exact: true }).fill('-1');
   await expect(page.getByLabel('Bel (cm)', { exact: true })).toHaveValue('');
+});
+
+test('coach dashboard and monthly story stay local and export a vertical card', async ({
+  page,
+}, info) => {
+  await page.addInitScript(() =>
+    Object.defineProperty(navigator, 'canShare', { value: () => false, configurable: true }),
+  );
+  await onboard(page);
+  await expect(page.locator('.coach-card .button')).toHaveCount(1);
+  await expect(page.locator('.dashboard-rings [role="img"]')).toHaveCount(4);
+  await page.getByRole('link', { name: 'İlerleme', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Rozet galerisi' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kişisel rekor duvarı' })).toBeVisible();
+  await page.getByRole('button', { name: 'Aylık özet hikâyem' }).click();
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Kartı paylaş / indir', exact: true }).first().click();
+  const card = await download;
+  expect(card.suggestedFilename()).toMatch(/^formda-.*-hikaye-1\.png$/);
+  await card.saveAs(info.outputPath('story.png'));
+  await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
 });

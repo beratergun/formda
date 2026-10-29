@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Motivation } from './Motivation';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Award, Camera, ChevronRight, TrendingUp } from 'lucide-react';
+import { Camera, ChevronRight, TrendingUp } from 'lucide-react';
 import { useStore } from '../../app/Store';
 import { Card, Chip, Segmented } from '../../ui';
 import { Chart, type ChartPoint } from '../../ui/Chart';
@@ -211,26 +212,7 @@ export function Progress() {
               </div>
             ))}
           </Card>
-          <Card className="stack">
-            <h2>Küçük kutlamalar</h2>
-            {[
-              { label: 'İlk kayıt', done: data.mealEntry.length > 0 },
-              {
-                label: 'İlk seans',
-                done: data.workoutLog.some((w) => w.done && w.type !== 'rest'),
-              },
-              { label: '7 gün seri', done: streak.best >= 7 },
-              { label: '30 gün seri', done: streak.best >= 30 },
-              { label: '100 gün seri', done: streak.best >= 100 },
-              { label: '365 gün seri', done: streak.best >= 365 },
-            ].map((badge) => (
-              <div className={`badge-row ${badge.done ? 'earned' : ''}`} key={badge.label}>
-                <Award size={24} />
-                <span>{badge.label}</span>
-                <Chip>{badge.done ? 'Sana ait' : 'Yolun üzerinde'}</Chip>
-              </div>
-            ))}
-          </Card>
+          <Motivation />
         </>
       )}
       {tab === 'body' && (

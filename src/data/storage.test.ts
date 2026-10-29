@@ -107,7 +107,12 @@ it('uses IndexedDB Blob fallback and removes a media record', async () => {
 it('round-trips all data and media through zip, delete, restore exactly', async () => {
   const database = fresh();
   await seedDatabase(database);
-  await database.dayLog.put({ ...emptyDay('2026-10-29'), note: 'Türkçe günlük', water: 5 });
+  await database.dayLog.put({
+    ...emptyDay('2026-10-29'),
+    note: 'Türkçe günlük',
+    water: 5,
+    activeKcal: 321,
+  });
   const data = await new LocalRepository(database).load();
   const raw = new Uint8Array([0, 1, 128, 255]);
   const thumb = new Uint8Array([3, 4, 5]);

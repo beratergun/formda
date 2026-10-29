@@ -13,6 +13,7 @@ const day = z.object({
   boxOverrides: z.record(z.string(), z.boolean()).optional(),
   water: num,
   steps: num.optional(),
+  activeKcal: num.optional(),
   sleepAt: clock.optional(),
   sleepQuality: num.max(5).optional(),
   energy: num.max(5).optional(),

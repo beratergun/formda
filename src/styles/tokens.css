@@ -56,3 +56,16 @@
   --danger: #ffa3a3;
   --shadow: 0 4px 20px #0002;
 }
+
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --radius-card: 24px;
+  --text-caption: 12px;
+  --text-body: 14px;
+  --text-card: 20px;
+  --text-screen: 36px;
+  --text-metric: 40px;
+}

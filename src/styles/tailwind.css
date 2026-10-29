@@ -1737,3 +1737,183 @@ summary {
     border: 1px solid #ddd;
   }
 }
+
+/* Formda shared training interface */
+body {
+  font-variant-numeric: tabular-nums;
+}
+.stack {
+  gap: var(--space-3);
+}
+.card {
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+  box-shadow: var(--shadow);
+}
+h1 {
+  font-size: clamp(30px, 8vw, var(--text-screen));
+  font-weight: 700;
+}
+h2 {
+  font-size: var(--text-card);
+}
+small {
+  font-size: var(--text-caption);
+}
+.brand-dot {
+  display: none;
+}
+.coach-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+}
+.coach-card h2 {
+  font-size: 28px;
+  max-width: 90%;
+}
+.coach-card p {
+  max-width: 36ch;
+}
+.coach-card .button {
+  width: 100%;
+  margin-top: 8px;
+}
+.dashboard-rings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  text-align: center;
+}
+.dashboard-rings .metric-ring {
+  margin: 0 auto 8px;
+  color: var(--accent);
+}
+.dashboard-rings h3 {
+  margin: 0;
+  font-size: 14px;
+}
+.dashboard-rings .metric-ring b {
+  font-size: 26px;
+}
+.badge-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.badge-tile {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+  background: var(--raise);
+}
+.badge-tile.locked > svg {
+  opacity: 0.35;
+}
+.badge-tile.earned {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.badge-tile small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--sub);
+}
+.record-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background: var(--raise);
+  border-radius: 16px;
+}
+.record-tile small {
+  display: block;
+}
+.record-tile > b {
+  font-size: 24px;
+  white-space: nowrap;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.comparison-grid > div {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.story-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 520px;
+  aspect-ratio: 9/16;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  color: #f1f6e9;
+  background: #102e30;
+}
+.story-card h3 {
+  font-size: 28px;
+}
+.story-value {
+  font-size: 72px;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+.story-card .button {
+  margin-top: auto;
+}
+.set-confirmation {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--accent);
+  animation: set-confirm 0.35s ease-out;
+}
+.celebration.new-record {
+  animation: record-celebrate 0.7s ease-out;
+}
+@keyframes set-confirm {
+  from {
+    transform: translateY(8px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes record-celebrate {
+  0% {
+    transform: scale(0.8) rotate(-8deg);
+  }
+  55% {
+    transform: scale(1.12) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .set-confirmation,
+  .celebration.new-record {
+    animation: none;
+  }
+}
+
+.story-card .eyebrow {
+  color: #badbd0;
+}

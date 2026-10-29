@@ -50,6 +50,7 @@ export interface DayLog {
   boxOverrides?: Partial<Record<'h' | 's' | 'k' | 'u', boolean>>;
   water: number;
   steps?: number;
+  activeKcal?: number;
   sleepAt?: string;
   sleepQuality?: number;
   energy?: number;
