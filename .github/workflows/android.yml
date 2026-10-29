@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   apk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     env:
@@ -21,21 +21,22 @@ jobs:
       ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
       ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
       ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-      ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/yol-release.jks
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: 22
           cache: npm
-      - uses: actions/setup-java@v4
+      - name: Set signing file path
+        run: echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/yol-release.jks" >> "$GITHUB_ENV"
+      - uses: actions/setup-java@v6.1.0
         with:
           distribution: temurin
           java-version: '21'
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4.0.4
       - run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
-      - uses: gradle/actions/setup-gradle@v4
-      - uses: actions/cache@v4
+      - uses: gradle/actions/setup-gradle@v6.4.1
+      - uses: actions/cache@v6.1.0
         with:
           path: ~/.android/debug.keystore
           key: yol-debug-certificate-v1
@@ -74,11 +75,11 @@ jobs:
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
           "$BUILD_TOOLS/apksigner" verify --verbose "apk/Yol-v$VERSION.apk"
           sha256sum "apk/Yol-v$VERSION.apk" > "apk/Yol-v$VERSION.apk.sha256"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         with:
           name: Yol-android-apk
           path: apk/
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         with:
           name: Yol-android-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
@@ -90,4 +91,7 @@ jobs:
         run: gh release upload "$RELEASE_TAG" apk/* --clobber
       - name: Remove runner signing file
         if: always()
-        run: rm -f "$ANDROID_KEYSTORE_PATH"
+        run: |
+          if [ -n "${ANDROID_KEYSTORE_PATH:-}" ]; then
+            rm -f "$ANDROID_KEYSTORE_PATH"
+          fi
