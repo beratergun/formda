@@ -25,3 +25,5 @@
 - Android workflow push, published release ve workflow_dispatch tetiklerinde koşulsuz apk job çalıştırır; yalnızca imzalama adımları Secrets'a bağlıdır.
 
 - Aylık hikâye çizimi öncelikle worker/OffscreenCanvas ile çalışır. Windows WebKit worker çizimini desteklemediğinde tek bir 1080×1920 kart HTML canvas ile üretilir; ağ kullanılmaz. İki tarayıcıda indirme testi zorunludur.
+
+- Program değiştirmek seans geçmişini değiştirmez; eski kişisel hafta saklanır. Ekipman/deneyim değişikliğinden sonra “Tercihlerimle haftayı yeniden kur” seçili programı yeniler. Havuz seansının ev alternatifi yüzme tekniği yerine sırt/omuz/kalça için kara desteğidir. Kısa gün süreleri tahminidir; ısınma ve dinlenmeyle 20–25 dakika amaçlanır.

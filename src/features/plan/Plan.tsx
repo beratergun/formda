@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { ProgramPicker } from './ProgramPicker';
+import { selectProgram, type ProgramId } from '../../domain/program/programs';
+import { ChangeExercise } from './DailyAlternative';
 import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowUp, CalendarDays, Check, Plus, RefreshCw, Trash2 } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
@@ -91,6 +94,9 @@ export function Plan() {
       />
       {tab === 'training' && (
         <>
+          <Card>
+            <ProgramPicker settings={settings} onChange={(next) => patch(next)} />
+          </Card>
           <Card className="stack">
             <div className="row between">
               <h2>Önündeki yol</h2>
@@ -134,19 +140,6 @@ export function Plan() {
             </label>
             <div className="grid2">
               <label className="field">
-                Haftalık gün
-                <select
-                  value={settings.daysPerWeek}
-                  onChange={(e) => patch({ daysPerWeek: +e.target.value })}
-                >
-                  {[2, 3, 4, 5].map((n) => (
-                    <option key={n} value={n}>
-                      {n} gün
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="field">
                 Deneyim
                 <select
                   value={settings.experience}
@@ -184,11 +177,10 @@ export function Plan() {
               disabled={!settings.equipment.length}
               onClick={() =>
                 patch({
-                  ...defaultPlan(
-                    settings.startDate,
+                  ...selectProgram(
+                    settings,
+                    (settings.programId || 'personal') as ProgramId,
                     settings.daysPerWeek,
-                    settings.equipment,
-                    settings.experience,
                   ),
                   horizon: settings.horizon,
                 })
@@ -404,6 +396,10 @@ export function Plan() {
                     </Button>
                   </div>
                 </div>
+                <ChangeExercise
+                  exerciseId={item.exerciseId}
+                  onSelect={(exerciseId) => editMovement(index, { exerciseId })}
+                />
                 <div className="grid2">
                   <label className="field">
                     Set

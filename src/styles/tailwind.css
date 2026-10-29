@@ -1917,3 +1917,32 @@ small {
 .story-card .eyebrow {
   color: #badbd0;
 }
+
+.program-grid {
+  display: grid;
+  gap: 8px;
+}
+.program-choice {
+  text-align: left;
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  min-height: 88px;
+}
+.program-choice[aria-pressed='true'] {
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 15px;
+}
+.program-choice small {
+  color: var(--sub);
+}
+.alternative-preview {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}

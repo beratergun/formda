@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { DailyAlternative } from '../plan/DailyAlternative';
 import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
@@ -372,6 +373,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         <Stepper value={day.water} onChange={(water) => updateDay({ water })} label="Su" max={40} />
       </Card>
       <Card className={`workout-card tone-${plan.type}`}>
+        <DailyAlternative />
         <div className="row between">
           <span className="type-icon">
             <Dumbbell size={21} />

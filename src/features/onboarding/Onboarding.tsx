@@ -1,12 +1,7 @@
 import { useState } from 'react';
-import {
-  ArrowRight,
-  ArrowLeft,
-  Check,
-  LockKeyhole,
-  Leaf,
-  Camera,
-} from 'lucide-react';
+import { ProgramPicker } from '../plan/ProgramPicker';
+import { selectProgram, type ProgramId } from '../../domain/program/programs';
+import { ArrowRight, ArrowLeft, Check, LockKeyhole, Leaf, Camera } from 'lucide-react';
 import { Button, Card, Chip, Sheet } from '../../ui';
 import { CameraCapture } from '../camera/Camera';
 import { useStore } from '../../app/Store';
@@ -22,6 +17,7 @@ export function Onboarding() {
   const [name, setName] = useState('');
   const [start, setStart] = useState(todayKey);
   const [horizon, setHorizon] = useState<Horizon>('6m');
+  const [programId, setProgramId] = useState<ProgramId>('personal');
   const [days, setDays] = useState(4);
   const [equipment, setEquipment] = useState(['salon', 'havuz']);
   const [experience, setExperience] = useState('beginner');
@@ -41,7 +37,13 @@ export function Onboarding() {
           { ...value.profile[0], name: name.trim(), heightCm: height, startWeight: weight },
         ],
         targets: [{ ...value.targets[0], kcal, protein, goalWeight: goal }],
-        planSettings: [{ ...defaultPlan(start, days, equipment), horizon, experience }],
+        planSettings: [
+          {
+            ...selectProgram(defaultPlan(start, days, equipment, experience), programId, days),
+            horizon,
+            experience,
+          },
+        ],
         meta: [
           ...value.meta.filter((m) => m.key !== 'onboardingDone'),
           { key: 'onboardingDone', value: 'true' },
@@ -224,16 +226,13 @@ export function Onboarding() {
             </h1>
           </div>
           <Card className="stack">
-            <label className="field">
-              Haftada kaç gün?
-              <select value={days} onChange={(e) => setDays(+e.target.value)}>
-                {[2, 3, 4, 5].map((n) => (
-                  <option key={n} value={n}>
-                    {n} gün
-                  </option>
-                ))}
-              </select>
-            </label>
+            <ProgramPicker
+              settings={{ ...defaultPlan(start, days, equipment, experience), programId }}
+              onChange={(next) => {
+                setProgramId(next.programId as ProgramId);
+                setDays(next.daysPerWeek);
+              }}
+            />
             <fieldset>
               <legend>Nerede hareket edeceksin?</legend>
               <div className="choice-grid">

@@ -91,13 +91,6 @@ const food = z.object({
   lastUsedAt: num.optional(),
   useCount: num,
 });
-const weekDay = z.object({
-  type,
-  title: z.string(),
-  time: clock,
-  note: z.string(),
-  templateId: id.optional(),
-});
 const template = z.object({
   exerciseId: id,
   sets: num,
@@ -106,7 +99,25 @@ const template = z.object({
   restSec: num,
   alternative: z.string().optional(),
 });
+const weekDay = z.object({
+  alternative: z
+    .object({
+      kind: z.enum(['busy', 'home', 'short', 'custom']),
+      exercises: z.array(template),
+      type,
+      durationMin: num.positive(),
+    })
+    .optional(),
+  type,
+  title: z.string(),
+  time: clock,
+  note: z.string(),
+  templateId: id.optional(),
+});
 const plan = z.object({
+  programId: z.string().optional(),
+  personalWeekTemplate: z.array(weekDay).length(7).optional(),
+  personalDaysPerWeek: num.max(7).optional(),
   id: z.literal('main'),
   startDate: date,
   horizon: z.enum(['6m', '1y', '3y', '5y', 'forever']),

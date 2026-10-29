@@ -1,4 +1,9 @@
 import { it, expect, afterEach, vi } from 'vitest';
+import {
+  selectProgram,
+  chooseDayAlternative,
+  replaceDayExercise,
+} from '../domain/program/programs';
 import { FormdaDatabase, seedDatabase } from './db';
 import { LocalRepository } from './repositories';
 import { saveMedia, readMedia, deleteMedia, clearAllData } from './media/opfs';
@@ -113,6 +118,15 @@ it('round-trips all data and media through zip, delete, restore exactly', async 
     water: 5,
     activeKcal: 321,
   });
+  const plan = (await database.planSettings.get('main'))!;
+  await database.planSettings.put(
+    replaceDayExercise(
+      chooseDayAlternative(selectProgram(plan, 'ppl', 6), '2026-10-29', 'home'),
+      '2026-10-29',
+      0,
+      'push-up',
+    ),
+  );
   const data = await new LocalRepository(database).load();
   const raw = new Uint8Array([0, 1, 128, 255]);
   const thumb = new Uint8Array([3, 4, 5]);

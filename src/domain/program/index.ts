@@ -11,6 +11,16 @@ export const PHASES = [
   'Sürdürme döngüsü',
 ];
 export const TEMPLATE_NAMES: Record<string, string> = {
+  'program-full-a': 'Tüm vücut A',
+  'program-full-b': 'Tüm vücut B',
+  'program-full-c': 'Tüm vücut C',
+  'program-upper': 'Üst vücut',
+  'program-lower': 'Alt vücut',
+  'program-push': 'İtiş',
+  'program-pull': 'Çekiş',
+  'program-legs': 'Bacak',
+  'program-home-a': 'Ev A',
+  'program-home-b': 'Ev B',
   A: 'Kuvvet A',
   B: 'Kuvvet B',
   C: 'Kuvvet C',
@@ -101,6 +111,7 @@ export function planFor(
   const day = overrides[date] || settings.overrides?.[date] || settings.weekTemplate[weekday(date)];
   return {
     ...day,
+    type: day.alternative?.type || day.type,
     week,
     phase: PHASES[phaseIndex],
     phaseIndex,
@@ -109,7 +120,11 @@ export function planFor(
     beforeStart: days < 0,
     ended: days >= limit,
     swimM: settings.swimTargetM || Math.min(1500, 150 + (week - 1) * 25),
-    exercises: (settings.templates[day.templateId || ''] || []).map((e) => ({
+    exercises: (
+      day.alternative?.exercises ||
+      settings.templates[day.templateId || day.type] ||
+      []
+    ).map((e) => ({
       ...e,
       sets: deload
         ? Math.max(1, e.sets - 1)

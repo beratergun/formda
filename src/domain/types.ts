@@ -109,7 +109,14 @@ export interface TemplateExercise {
   restSec: number;
   alternative?: string;
 }
+export interface DayAlternative {
+  kind: 'busy' | 'home' | 'short' | 'custom';
+  exercises: TemplateExercise[];
+  type: WorkoutType;
+  durationMin: number;
+}
 export interface WeekDay {
+  alternative?: DayAlternative;
   type: WorkoutType;
   title: string;
   time: string;
@@ -118,6 +125,9 @@ export interface WeekDay {
 }
 export type Horizon = '6m' | '1y' | '3y' | '5y' | 'forever';
 export interface PlanSettings {
+  programId?: string;
+  personalWeekTemplate?: WeekDay[];
+  personalDaysPerWeek?: number;
   id: 'main';
   startDate: string;
   horizon: Horizon;

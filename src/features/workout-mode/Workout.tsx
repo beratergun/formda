@@ -8,6 +8,8 @@ import { epley, progression, volume } from '../../domain/progression';
 import { emptyDay, type WorkoutLog, type WorkoutType, type SetLog } from '../../domain/types';
 import { EXERCISES } from '../../data/seed/exercises';
 import { ExerciseGuide } from './Library';
+import { ChangeExercise } from '../plan/DailyAlternative';
+import { replaceDayExercise } from '../../domain/program/programs';
 
 function sound() {
   if (navigator.vibrate) navigator.vibrate([150, 70, 150]);
@@ -271,6 +273,16 @@ export function Workout() {
                 {current + 1} / {list.length} HAREKET
               </p>
               <h1>{exercise.name}</h1>
+              <ChangeExercise
+                exerciseId={exercise.id}
+                onSelect={(exerciseId) =>
+                  mutate(() => ({
+                    planSettings: [
+                      replaceDayExercise(data.planSettings[0], date, current, exerciseId),
+                    ],
+                  }))
+                }
+              />
               <p className="muted">
                 {planned?.sets || 3} set · {planned?.minReps || 8}–{planned?.maxReps || 12} tekrar
               </p>
