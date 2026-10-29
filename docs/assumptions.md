@@ -10,3 +10,4 @@
 - Şartnamedeki 4 haftalık blok (3 yüklenme + 1 hafif hafta) prototipin tek 13. hafta molasının yerine geçer. Her 12. haftada değerlendirme vardır.
 - Besinler için uydurma veri yerine resmi USDA dağıtımı kullanıldı. Referans kayıtlar yaklaşık kaynak etiketiyle korundu; tür ve marka farklarını gizlemek için eksik makrolar tamamlanmadı.
 - Fotoğraf/video kare hazırlığı OffscreenCanvas worker'larında yapılır. MediaRecorder ve HTMLCanvasElement.captureStream DOM API'leri olduğundan son kayıt ana iş parçacığında requestAnimationFrame ile akıtılır. Bu tarayıcı kısıtı, ağır senkron iş yapılarak aşılmaz.
+- Ek Android teslimi aynı React kodunu Capacitor içinde paketler. Release keystore'u kullanıcıya aittir; sırlar yoksa Android'in standart geliştirme sertifikalı debug APK'sı sağlanır. Kurulabilen Android APK'ları bir sertifika gerektirir; debug sertifikası mağaza/release imzası olarak sunulmaz.

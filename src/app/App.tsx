@@ -32,6 +32,8 @@ import { Library } from '../features/workout-mode/Library';
 import { CameraPage } from '../features/camera/Camera';
 import { Vlog } from '../features/vlog/Vlog';
 import { Journal } from '../features/journal/Journal';
+import { Progress } from '../features/progress/Progress';
+import { Plan } from '../features/plan/Plan';
 
 const tabs = [
   ['/', 'Bugün', House],
@@ -99,7 +101,9 @@ function AppLayout() {
               <Route path="/camera" element={<CameraPage />} />
               <Route path="/vlog" element={<Vlog />} />
               <Route path="/journal" element={<Journal />} />
-              {tabs.slice(2).map(([path, title]) => (
+              <Route path="/progress" element={<Progress />} />
+              <Route path="/plan" element={<Plan />} />
+              {tabs.slice(4).map(([path, title]) => (
                   <Route
                     key={path}
                     path={path}
