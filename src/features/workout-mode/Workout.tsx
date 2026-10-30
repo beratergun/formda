@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Check, ChevronRight, Clock3, Pause, Play, Trophy } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
-import { NumericInput, Button, Card, Chip, Segmented, Stepper } from '../../ui';
+import { NumericInput, Button, Card, Chip, Segmented, Stepper, Sheet } from '../../ui';
 import { planFor } from '../../domain/program';
 import { epley, progression, volume } from '../../domain/progression';
 import { emptyDay, type WorkoutLog, type WorkoutType, type SetLog } from '../../domain/types';
@@ -10,7 +10,16 @@ import { EXERCISES } from '../../data/seed/exercises';
 import { ExerciseGuide } from './Library';
 import { workoutEnergy } from '../../domain/energy';
 import { ChangeExercise } from '../plan/DailyAlternative';
-import { replaceDayExercise } from '../../domain/program/programs';
+import {
+  newSession,
+  workoutElapsedMs,
+  intervalElapsedMs,
+  pauseSession,
+  resumeSession,
+  finishSession,
+} from '../../domain/workout/session';
+import type { WorkoutSession } from '../../domain/types';
+import { SessionExercises } from './SessionExercises';
 function sound() {
   if (navigator.vibrate) navigator.vibrate([150, 70, 150]);
   try {
@@ -28,42 +37,72 @@ function sound() {
   }
 }
 export function Workout() {
-  const { data, date, mutate, updateDay, flush } = useStore();
+  const { data, date, mutate, updateDay, flush, setError, status } = useStore();
+  const navigate = useNavigate();
+  const location = useLocation();
   const plan = planFor(date, data.planSettings[0]);
-  const existing = data.workoutLog.find((w) => w.date === date && !w.done);
-  const [id] = useState(existing?.id || newId);
-  const [startedAt] = useState(existing?.startedAt || Date.now);
-  const [localType, setLocalType] = useState<WorkoutType>(
-    existing?.type || (plan.type === 'rest' ? 'strength' : plan.type),
-  );
-  const [current, setCurrent] = useState(0);
+  const [initial] = useState<WorkoutLog>(() => {
+    const requested = new URLSearchParams(location.search).get('session');
+    const existing =
+      data.workoutLog.find(
+        (w) => w.id === requested && w.date === date && w.cancelledAt === undefined,
+      ) ?? data.workoutLog.find((w) => w.date === date && !w.done && w.cancelledAt === undefined);
+    return {
+      ...(existing ?? {
+        id: newId(),
+        date,
+        type: plan.type === 'rest' ? 'strength' : plan.type,
+        startedAt: Date.now(),
+        done: false,
+        sets: [],
+      }),
+      session:
+        existing?.session ??
+        newSession(plan.exercises.length ? plan.exercises : data.planSettings[0].templates.A),
+    };
+  });
+  const id = initial.id;
   const [kg, setKg] = useState(10);
   const [reps, setReps] = useState(10);
   const [rpe, setRpe] = useState(7);
   const [confirmedSet, setConfirmedSet] = useState(0);
-  const [restUntil, setRestUntil] = useState(0);
   const [now, setNow] = useState(Date.now);
   const [guide, setGuide] = useState(false);
-  const [finished, setFinished] = useState(false);
-  const [intervalRunning, setIntervalRunning] = useState(false);
-  const [intervalSeconds, setIntervalSeconds] = useState(0);
-  const [phaseTimer, setPhaseTimer] = useState<'warmup' | 'cooldown'>();
-  const [phaseEnd, setPhaseEnd] = useState(0);
+  const [finished, setFinished] = useState(initial.done);
+  const [busy, setBusy] = useState(false);
+  const [cancel, setCancel] = useState(false);
   const [lastAlarm, setLastAlarm] = useState(0);
-  const [workoutNote, setWorkoutNote] = useState('');
   const alerted = useRef(false);
-  const log = data.workoutLog.find((w) => w.id === id) || {
-    id,
-    date,
-    type: localType,
-    startedAt,
-    done: false,
-    sets: [],
-  };
+  const log = data.workoutLog.find((w) => w.id === id) ?? initial;
+  const session = log.session ?? initial.session!;
   const type = log.type;
-  const list = plan.exercises.length ? plan.exercises : data.planSettings[0].templates.A;
-  const planned = list[Math.min(current, list.length - 1)];
-  const exercise = EXERCISES.find((e) => e.id === planned?.exerciseId) || EXERCISES[0];
+  const list = session.exercises;
+  const current = Math.min(session.current, Math.max(0, list.length - 1));
+  const paused = session.pausedAt !== undefined;
+  const restUntil = session.restUntil ?? 0;
+  const phaseTimer = session.phase;
+  const phaseEnd = session.phaseUntil ?? 0;
+  const intervalRunning = session.intervalStartedAt !== undefined;
+  const intervalSeconds = Math.floor(intervalElapsedMs(session, now) / 1000);
+  const workoutNote = log.note ?? '';
+  const planned = list[current];
+  const exercise = EXERCISES.find((e) => e.id === planned?.exerciseId) ?? EXERCISES[0];
+  useEffect(() => {
+    if (new URLSearchParams(location.search).get('session') !== initial.id)
+      navigate(`/workout?session=${encodeURIComponent(initial.id)}`, { replace: true });
+  }, [initial.id, location.search, navigate]);
+  useEffect(() => {
+    mutate((v) => {
+      const stored = v.workoutLog.find((w) => w.id === initial.id);
+      if (stored?.session) return {};
+      return {
+        workoutLog: [
+          ...v.workoutLog.filter((w) => w.id !== initial.id),
+          stored ? { ...stored, session: initial.session } : initial,
+        ],
+      };
+    });
+  }, [initial, mutate]);
   const sets = log.sets.filter((s) => s.exerciseId === exercise.id);
   const previous = data.workoutLog
     .filter(
@@ -73,31 +112,49 @@ export function Workout() {
     .sort((a, b) => b.startedAt - a.startedAt)[0];
   const previousSets = previous?.sets.filter((s) => s.exerciseId === exercise.id) || [];
   const day = data.dayLog.find((d) => d.date === date) || emptyDay(date);
-  const rest = Math.max(0, Math.ceil((restUntil - now) / 1000));
+  const rest = Math.max(
+    0,
+    Math.ceil((paused ? (session.restRemainingMs ?? 0) : restUntil - now) / 1000),
+  );
   const save = (patch: Partial<WorkoutLog>) =>
     mutate((v) => ({
-      workoutLog: [...v.workoutLog.filter((w) => w.id !== id), { ...log, ...patch }],
+      workoutLog: [
+        ...v.workoutLog.filter((w) => w.id !== id),
+        { ...(v.workoutLog.find((w) => w.id === id) ?? initial), ...patch },
+      ],
     }));
+  const saveSession = (change: (previous: WorkoutSession) => WorkoutSession) =>
+    mutate((v) => {
+      const latest = v.workoutLog.find((w) => w.id === id) ?? initial;
+      return {
+        workoutLog: [
+          ...v.workoutLog.filter((w) => w.id !== id),
+          { ...latest, session: change(latest.session ?? initial.session!) },
+        ],
+      };
+    });
+  const setCurrent = (current: number) => saveSession((previous) => ({ ...previous, current }));
+  const setRestUntil = (restUntil: number) =>
+    saveSession((previous) => ({ ...previous, restUntil: restUntil || undefined }));
+  const setWorkoutNote = (note: string) => save({ note });
   useEffect(() => {
-    const timer = setInterval(() => {
-      setNow(Date.now());
-      if (intervalRunning) setIntervalSeconds((s) => s + 1);
-    }, 1000);
+    const timer = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(timer);
-  }, [intervalRunning]);
+  }, []);
   useEffect(() => {
-    if (restUntil > 0 && rest === 0 && !alerted.current) {
+    if (!paused && restUntil > 0 && rest === 0 && !alerted.current) {
       sound();
       alerted.current = true;
     }
-  }, [rest, restUntil]);
+  }, [rest, restUntil, paused]);
   useEffect(() => {
-    if (phaseTimer && phaseEnd <= now && lastAlarm !== phaseEnd) {
+    if (!paused && phaseTimer && phaseEnd <= now && lastAlarm !== phaseEnd) {
       sound();
       setLastAlarm(phaseEnd);
     }
-  }, [phaseEnd, phaseTimer, now, lastAlarm]);
+  }, [phaseEnd, phaseTimer, now, lastAlarm, paused]);
   const completeSet = () => {
+    if (paused || busy) return;
     const set: SetLog = {
       exerciseId: exercise.id,
       setNo: sets.length + 1,
@@ -106,20 +163,65 @@ export function Workout() {
       rpe,
       done: true,
     };
-    save({ sets: [...log.sets, set] });
+    const timestamp = Date.now();
+    mutate((value) => {
+      const latest = value.workoutLog.find((w) => w.id === id) ?? initial;
+      const nextSet = {
+        ...set,
+        setNo: latest.sets.filter((s) => s.exerciseId === exercise.id).length + 1,
+      };
+      return {
+        workoutLog: [
+          ...value.workoutLog.filter((w) => w.id !== id),
+          {
+            ...latest,
+            sets: [...latest.sets, nextSet],
+            session: {
+              ...(latest.session ?? initial.session!),
+              restUntil: timestamp + (planned?.restSec || exercise.defaultRestSec) * 1000,
+            },
+          },
+        ],
+      };
+    });
     setConfirmedSet((n) => n + 1);
     alerted.current = false;
-    const timestamp = Date.now();
     setNow(timestamp);
-    setRestUntil(timestamp + (planned?.restSec || exercise.defaultRestSec) * 1000);
+    void flush().catch(() => {});
   };
   const finish = async () => {
-    save({ done: true, endedAt: Date.now(), note: workoutNote });
+    if (busy) return;
+    setBusy(true);
+    const completed = finishSession(log, Date.now());
+    save(completed);
     updateDay({ boxes: { ...day.boxes, s: day.boxOverrides?.s ?? true } });
-    setFinished(true);
-    await flush().catch(() => {});
+    try {
+      await flush();
+      setFinished(true);
+    } catch (e) {
+      save({ done: false, endedAt: undefined, session: log.session });
+      updateDay({ boxes: day.boxes });
+      setError(e instanceof Error ? e.message : 'Seans kaydedilemedi.');
+    } finally {
+      setBusy(false);
+    }
   };
-  const seconds = Math.max(0, Math.floor((now - startedAt) / 1000));
+  const cancelWorkout = async () => {
+    if (busy) return;
+    setBusy(true);
+    const ended = finishSession(log, Date.now());
+    save({ ...ended, done: false, endedAt: undefined, cancelledAt: ended.endedAt });
+    try {
+      await flush();
+      navigate('/');
+    } catch (e) {
+      save({ done: false, endedAt: undefined, cancelledAt: undefined, session: log.session });
+      setError(e instanceof Error ? e.message : 'Seans kaydedilemedi.');
+    } finally {
+      setBusy(false);
+    }
+  };
+  const seconds = Math.floor(workoutElapsedMs(log, now) / 1000);
   if (finished) {
     const records = [...new Set(log.sets.map((s) => s.exerciseId))].map((exerciseId) => {
       const max = Math.max(
@@ -155,8 +257,10 @@ export function Workout() {
           <Card className="stack">
             <div className="stats-grid">
               <div>
-                <b>{Math.max(1, Math.round(seconds / 60))}</b>
-                <small>dakika</small>
+                <b>
+                  {Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, '0')}
+                </b>
+                <small>süre · dk:sn</small>
               </div>
               <div>
                 <b>{volume(log.sets).toLocaleString('tr')}</b>
@@ -213,12 +317,39 @@ export function Workout() {
             Kütüphane
           </Link>
         </header>
+        <p className="local-status" role="status" aria-live="polite">
+          {status}
+        </p>
+        <div className="row between">
+          <Button
+            variant="secondary"
+            disabled={busy}
+            onClick={() => {
+              setNow(Date.now());
+              saveSession((previous) =>
+                paused ? resumeSession(previous, Date.now()) : pauseSession(previous, Date.now()),
+              );
+              void flush().catch(() => {});
+            }}
+          >
+            {paused ? <Play size={18} /> : <Pause size={18} />}{' '}
+            {paused ? 'Seansa devam et' : 'Seansı duraklat'}
+          </Button>
+          <Button variant="quiet" disabled={busy} onClick={() => setCancel(true)}>
+            Seansı iptal et
+          </Button>
+        </div>
+        {paused && (
+          <p role="status" className="notice">
+            Seans duraklatıldı. Süre ve sayaçlar bekliyor.
+          </p>
+        )}
         <label className="field">
           Seans türü
           <select
             value={type}
+            disabled={paused || busy}
             onChange={(e) => {
-              setLocalType(e.target.value as WorkoutType);
               save({ type: e.target.value as WorkoutType });
             }}
           >
@@ -228,283 +359,357 @@ export function Workout() {
             <option value="recovery">Mobilite / toparlanma</option>
           </select>
         </label>
-        <Card className="stack">
-          <div className="row between">
-            <h3>Isınma ve soğuma</h3>
-            <Clock3 size={18} />
-          </div>
-          <div className="row">
-            <Button
-              variant="secondary"
-              onClick={() => {
-                setPhaseTimer('warmup');
-                setPhaseEnd(Date.now() + 8 * 60000);
-              }}
-            >
-              Isınma · 8 dk
-            </Button>
-            <Button
-              variant="secondary"
-              onClick={() => {
-                setPhaseTimer('cooldown');
-                setPhaseEnd(Date.now() + 5 * 60000);
-              }}
-            >
-              Soğuma · 5 dk
-            </Button>
-          </div>
-          {phaseTimer && (
-            <>
-              <p role="timer">
-                {Math.max(0, Math.ceil((phaseEnd - now) / 60000))} dakika kaldı ·{' '}
-                {phaseTimer === 'warmup'
-                  ? 'Rahat yürüyüş, eklem hareketleri ve hafif deneme seti.'
-                  : 'Tempoyu düşür, rahat nefes ve hafif esneme.'}
-              </p>
+        <fieldset className="session-controls stack" disabled={paused || busy}>
+          <legend className="sr-only">Seans kayıtları</legend>
+          <Card className="stack">
+            <div className="row between">
+              <h3>Isınma ve soğuma</h3>
+              <Clock3 size={18} />
+            </div>
+            <div className="row">
               <Button
-                variant="quiet"
+                variant="secondary"
                 onClick={() => {
-                  save(phaseTimer === 'warmup' ? { warmupDone: true } : { cooldownDone: true });
-                  setPhaseTimer(undefined);
+                  saveSession((previous) => ({
+                    ...previous,
+                    phase: 'warmup',
+                    phaseUntil: Date.now() + 8 * 60000,
+                  }));
                 }}
               >
-                Tamamladım
+                Isınma · 8 dk
               </Button>
-            </>
-          )}
-        </Card>
-        {type === 'strength' ? (
-          <>
-            <div>
-              <p className="eyebrow">
-                {current + 1} / {list.length} HAREKET
-              </p>
-              <h1>{exercise.name}</h1>
-              <ChangeExercise
-                exerciseId={exercise.id}
-                onSelect={(exerciseId) =>
-                  mutate(() => ({
-                    planSettings: [
-                      replaceDayExercise(data.planSettings[0], date, current, exerciseId),
-                    ],
-                  }))
-                }
-              />
-              <p className="muted">
-                {planned?.sets || 3} set · {planned?.minReps || 8}–{planned?.maxReps || 12} tekrar
-              </p>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  saveSession((previous) => ({
+                    ...previous,
+                    phase: 'cooldown',
+                    phaseUntil: Date.now() + 5 * 60000,
+                  }));
+                }}
+              >
+                Soğuma · 5 dk
+              </Button>
             </div>
-            <Button variant="secondary" aria-expanded={guide} onClick={() => setGuide(!guide)}>
-              Nasıl yapılır?
-            </Button>
-            {guide && <ExerciseGuide exercise={exercise} />}
-            <Card className="stack">
-              <p className="eyebrow">ÖNCEKİ SEANS</p>
-              <p>
-                {previousSets.length
-                  ? `${previousSets.length} × ${previousSets[0].reps} · ${previousSets[0].kg} kg`
-                  : 'İlk kaydın. Rahat ve kontrollü bir ağırlık seç.'}
-              </p>
-              <p className="notice">
-                {progression(
-                  previousSets,
-                  planned?.maxReps || 12,
-                  data.planSettings[0].progression,
-                  Object.values(day.soreness || {}).some((n) => n > 1),
-                  (day.sleepQuality ?? 5) <= 2,
-                )}
-              </p>
-            </Card>
-            <Card className="stack">
-              <h2>{sets.length + 1}. set</h2>
-              <div className="set-inputs">
-                <label className="field">
-                  Ağırlık (kg)
-                  <NumericInput
-                    min={0}
-                    max={1000}
-                    step={0.5}
-                    value={kg}
-                    onValueChange={(text) => setKg(+text)}
-                    aria-label={'Ağırlık (kg)'}
-                  />
-                </label>
-                <label className="field">
-                  Tekrar
-                  <NumericInput
-                    min={1}
-                    max={100}
-                    precision={0}
-                    value={reps}
-                    onValueChange={(text) => setReps(+text)}
-                    aria-label={'Tekrar'}
-                  />
-                </label>
-                <label className="field">
-                  RPE
-                  <NumericInput
-                    min={1}
-                    max={10}
-                    value={rpe}
-                    onValueChange={(text) => setRpe(+text)}
-                    aria-label={'RPE'}
-                  />
-                </label>
-              </div>
-              {confirmedSet > 0 && (
-                <p key={confirmedSet} className="set-confirmation" role="status">
-                  <Check size={18} /> Set tamamlandı. Nefeslen.
+            {phaseTimer && (
+              <>
+                <p role="timer">
+                  {Math.max(
+                    0,
+                    Math.ceil((paused ? (session.phaseRemainingMs ?? 0) : phaseEnd - now) / 60000),
+                  )}{' '}
+                  dakika kaldı ·{' '}
+                  {phaseTimer === 'warmup'
+                    ? 'Rahat yürüyüş, eklem hareketleri ve hafif deneme seti.'
+                    : 'Tempoyu düşür, rahat nefes ve hafif esneme.'}
                 </p>
-              )}
-              <Button onClick={completeSet} disabled={kg < 0 || reps < 1 || rpe < 1 || rpe > 10}>
-                Seti bitir
-                <Check size={18} />
-              </Button>
-              <p className="muted small">RPE: 1 çok kolay, 10 yapabildiğin en zor tekrar.</p>
-              {sets.map((s) => (
-                <div key={s.setNo} className="row between completed">
-                  <span>{s.setNo}. set</span>
-                  <span>
-                    {s.kg} kg × {s.reps} · RPE {s.rpe}
-                  </span>
-                  <Check size={16} />
-                </div>
-              ))}
+                <Button
+                  variant="quiet"
+                  onClick={() => {
+                    save(phaseTimer === 'warmup' ? { warmupDone: true } : { cooldownDone: true });
+                    saveSession((previous) => ({
+                      ...previous,
+                      phase: undefined,
+                      phaseUntil: undefined,
+                    }));
+                  }}
+                >
+                  Tamamladım
+                </Button>
+              </>
+            )}
+          </Card>
+          {type === 'strength' && list.length === 0 ? (
+            <Card>
+              <h2>İlk hareketini seç</h2>
+              <p>Seans hareketleri bölümünden bir hareket ekleyerek başlayabilirsin.</p>
             </Card>
-            {restUntil > 0 && (
-              <Card className="rest-timer">
-                <p className="eyebrow">DİNLENME</p>
-                <b role="timer" aria-label="Dinlenme sayacı">
-                  {Math.floor(rest / 60)}:{String(rest % 60).padStart(2, '0')}
+          ) : type === 'strength' ? (
+            <>
+              <div>
+                <p className="eyebrow">
+                  {current + 1} / {list.length} HAREKET
+                </p>
+                <h1>{exercise.name}</h1>
+                <ChangeExercise
+                  exerciseId={exercise.id}
+                  onSelect={(exerciseId) => {
+                    if (
+                      list.some(
+                        (item, index) => index !== current && item.exerciseId === exerciseId,
+                      )
+                    ) {
+                      setError('Bu hareket zaten seansında. Başka bir alternatif seçebilirsin.');
+                      return;
+                    }
+                    saveSession((previous) => ({
+                      ...previous,
+                      exercises: previous.exercises.map((e, i) =>
+                        i === current ? { ...e, exerciseId } : e,
+                      ),
+                    }));
+                  }}
+                />
+                <p className="muted">
+                  {planned?.sets || 3} set · {planned?.minReps || 8}–{planned?.maxReps || 12} tekrar
+                </p>
+              </div>
+              <Button variant="secondary" aria-expanded={guide} onClick={() => setGuide(!guide)}>
+                Nasıl yapılır?
+              </Button>
+              {guide && <ExerciseGuide exercise={exercise} />}
+              <Card className="stack">
+                <p className="eyebrow">ÖNCEKİ SEANS</p>
+                <p>
+                  {previousSets.length
+                    ? `${previousSets.length} × ${previousSets[0].reps} · ${previousSets[0].kg} kg`
+                    : 'İlk kaydın. Rahat ve kontrollü bir ağırlık seç.'}
+                </p>
+                <p className="notice">
+                  {progression(
+                    previousSets,
+                    planned?.maxReps || 12,
+                    data.planSettings[0].progression,
+                    Object.values(day.soreness || {}).some((n) => n > 1),
+                    (day.sleepQuality ?? 5) <= 2,
+                  )}
+                </p>
+              </Card>
+              <Card className="stack">
+                <h2>{sets.length + 1}. set</h2>
+                <div className="set-inputs">
+                  <label className="field">
+                    Ağırlık (kg)
+                    <NumericInput
+                      min={0}
+                      max={1000}
+                      step={0.5}
+                      value={kg}
+                      onValueChange={(text) => setKg(+text)}
+                      aria-label={'Ağırlık (kg)'}
+                    />
+                  </label>
+                  <label className="field">
+                    Tekrar
+                    <NumericInput
+                      min={1}
+                      max={100}
+                      precision={0}
+                      value={reps}
+                      onValueChange={(text) => setReps(+text)}
+                      aria-label={'Tekrar'}
+                    />
+                  </label>
+                  <label className="field">
+                    RPE
+                    <NumericInput
+                      min={1}
+                      max={10}
+                      value={rpe}
+                      onValueChange={(text) => setRpe(+text)}
+                      aria-label={'RPE'}
+                    />
+                  </label>
+                </div>
+                {confirmedSet > 0 && (
+                  <p key={confirmedSet} className="set-confirmation" role="status">
+                    <Check size={18} /> Set tamamlandı. Nefeslen.
+                  </p>
+                )}
+                <Button
+                  onClick={completeSet}
+                  disabled={paused || busy || kg < 0 || reps < 1 || rpe < 1 || rpe > 10}
+                >
+                  Seti bitir
+                  <Check size={18} />
+                </Button>
+                <p className="muted small">RPE: 1 çok kolay, 10 yapabildiğin en zor tekrar.</p>
+                {sets.map((s) => (
+                  <div key={s.setNo} className="row between completed">
+                    <span>{s.setNo}. set</span>
+                    <span>
+                      {s.kg} kg × {s.reps} · RPE {s.rpe}
+                    </span>
+                    <Check size={16} />
+                  </div>
+                ))}
+              </Card>
+              {(restUntil > 0 || session.restRemainingMs !== undefined) && (
+                <Card className="rest-timer">
+                  <p className="eyebrow">DİNLENME</p>
+                  <b role="timer" aria-label="Dinlenme sayacı">
+                    {Math.floor(rest / 60)}:{String(rest % 60).padStart(2, '0')}
+                  </b>
+                  <div className="row">
+                    <Button
+                      variant="secondary"
+                      onClick={() => setRestUntil(Math.max(Date.now(), restUntil - 15000))}
+                    >
+                      −15 sn
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      onClick={() => {
+                        alerted.current = false;
+                        setRestUntil(restUntil + 15000);
+                      }}
+                    >
+                      +15 sn
+                    </Button>
+                    <Button variant="quiet" onClick={() => setRestUntil(0)}>
+                      Bitir
+                    </Button>
+                  </div>
+                </Card>
+              )}
+              <div className="row">
+                <Button
+                  variant="secondary"
+                  disabled={current === 0}
+                  onClick={() => {
+                    setCurrent(current - 1);
+                    setGuide(false);
+                  }}
+                >
+                  Önceki
+                </Button>
+                <Button
+                  variant="secondary"
+                  className="grow"
+                  disabled={current >= list.length - 1}
+                  onClick={() => {
+                    setCurrent(current + 1);
+                    setGuide(false);
+                  }}
+                >
+                  Sıradaki hareket
+                  <ChevronRight size={18} />
+                </Button>
+              </div>
+            </>
+          ) : (
+            <Card className="stack">
+              <h1>{type === 'swim' ? 'Her uzunluk bir adım.' : 'Kendi temponda.'}</h1>
+              {type === 'swim' && (
+                <Stepper
+                  label="Yüzme mesafesi (m)"
+                  value={log.distanceM || 0}
+                  step={25}
+                  max={50000}
+                  onChange={(distanceM) => save({ distanceM })}
+                />
+              )}
+              <div className="rest-timer">
+                <p className="eyebrow">ARALIK SAYACI</p>
+                <b role="timer">
+                  {Math.floor(intervalSeconds / 60)}:{String(intervalSeconds % 60).padStart(2, '0')}
                 </b>
                 <div className="row">
                   <Button
-                    variant="secondary"
-                    onClick={() => setRestUntil(Math.max(Date.now(), restUntil - 15000))}
+                    onClick={() =>
+                      saveSession((previous) => ({
+                        ...previous,
+                        intervalElapsedMs: intervalElapsedMs(previous, Date.now()),
+                        intervalStartedAt: intervalRunning ? undefined : Date.now(),
+                      }))
+                    }
                   >
-                    −15 sn
+                    {intervalRunning ? <Pause size={18} /> : <Play size={18} />}{' '}
+                    {intervalRunning ? 'Duraklat' : 'Başlat'}
                   </Button>
                   <Button
                     variant="secondary"
                     onClick={() => {
-                      alerted.current = false;
-                      setRestUntil(restUntil + 15000);
+                      saveSession((previous) => ({
+                        ...previous,
+                        intervalElapsedMs: 0,
+                        intervalStartedAt: undefined,
+                      }));
                     }}
                   >
-                    +15 sn
-                  </Button>
-                  <Button variant="quiet" onClick={() => setRestUntil(0)}>
-                    Bitir
+                    Sıfırla
                   </Button>
                 </div>
-              </Card>
-            )}
-            <div className="row">
-              <Button
-                variant="secondary"
-                disabled={current === 0}
-                onClick={() => {
-                  setCurrent(current - 1);
-                  setGuide(false);
-                }}
-              >
-                Önceki
-              </Button>
-              <Button
-                variant="secondary"
-                className="grow"
-                disabled={current >= list.length - 1}
-                onClick={() => {
-                  setCurrent(current + 1);
-                  setGuide(false);
-                }}
-              >
-                Sıradaki hareket
-                <ChevronRight size={18} />
-              </Button>
-            </div>
-          </>
-        ) : (
-          <Card className="stack">
-            <h1>{type === 'swim' ? 'Her uzunluk bir adım.' : 'Kendi temponda.'}</h1>
-            {type === 'swim' && (
-              <Stepper
-                label="Yüzme mesafesi (m)"
-                value={log.distanceM || 0}
-                step={25}
-                max={50000}
-                onChange={(distanceM) => save({ distanceM })}
-              />
-            )}
-            <div className="rest-timer">
-              <p className="eyebrow">ARALIK SAYACI</p>
-              <b role="timer">
-                {Math.floor(intervalSeconds / 60)}:{String(intervalSeconds % 60).padStart(2, '0')}
-              </b>
-              <div className="row">
-                <Button onClick={() => setIntervalRunning(!intervalRunning)}>
-                  {intervalRunning ? <Pause size={18} /> : <Play size={18} />}{' '}
-                  {intervalRunning ? 'Duraklat' : 'Başlat'}
-                </Button>
-                <Button
-                  variant="secondary"
-                  onClick={() => {
-                    setIntervalSeconds(0);
-                    setIntervalRunning(false);
-                  }}
-                >
-                  Sıfırla
-                </Button>
               </div>
-            </div>
-            {type !== 'swim' && (
+              {type !== 'swim' && (
+                <label className="field">
+                  Mesafe (m, isteğe bağlı)
+                  <NumericInput
+                    min={0}
+                    value={log.distanceM || ''}
+                    onValueChange={(text) => save({ distanceM: Math.max(0, +text) })}
+                    allowEmpty
+                    aria-label={'Mesafe (m, isteğe bağlı)'}
+                  />
+                </label>
+              )}
               <label className="field">
-                Mesafe (m, isteğe bağlı)
+                Algılanan zorluk (1–10)
                 <NumericInput
-                  min={0}
-                  value={log.distanceM || ''}
-                  onValueChange={(text) => save({ distanceM: Math.max(0, +text) })}
-                  allowEmpty
-                  aria-label={'Mesafe (m, isteğe bağlı)'}
+                  min={1}
+                  max={10}
+                  value={log.rpe || 5}
+                  onValueChange={(text) =>
+                    save({ rpe: Math.max(0, Math.min(10, +text)) || undefined })
+                  }
+                  aria-label={'Algılanan zorluk (1–10)'}
                 />
               </label>
-            )}
-            <label className="field">
-              Algılanan zorluk (1–10)
-              <NumericInput
-                min={1}
-                max={10}
-                value={log.rpe || 5}
-                onValueChange={(text) =>
-                  save({ rpe: Math.max(0, Math.min(10, +text)) || undefined })
-                }
-                aria-label={'Algılanan zorluk (1–10)'}
-              />
-            </label>
-            <Segmented
-              label="Yüzme stili"
-              value={workoutNote}
-              onChange={setWorkoutNote}
-              options={[
-                { value: 'Serbest', label: 'Serbest' },
-                { value: 'Sırtüstü', label: 'Sırtüstü' },
-                { value: 'Tahtayla ayak', label: 'Tahtayla ayak' },
-              ]}
+              {type === 'swim' && (
+                <Segmented
+                  label="Yüzme stili"
+                  value={log.swimStyle ?? 'Serbest'}
+                  onChange={(swimStyle) => save({ swimStyle })}
+                  options={[
+                    { value: 'Serbest', label: 'Serbest' },
+                    { value: 'Sırtüstü', label: 'Sırtüstü' },
+                    { value: 'Tahtayla ayak', label: 'Tahtayla ayak' },
+                  ]}
+                />
+              )}
+            </Card>
+          )}
+          {type === 'strength' && (
+            <SessionExercises
+              exercises={list}
+              current={current}
+              onChange={(exercises, current) =>
+                saveSession((previous) => ({ ...previous, exercises, current }))
+              }
             />
-          </Card>
-        )}
+          )}
+        </fieldset>
         <label className="field">
           Seans notu
           <textarea
+            aria-label="Seans notu"
             value={workoutNote}
             onChange={(e) => setWorkoutNote(e.target.value)}
             placeholder="Bugün nasıl hissettin?"
           />
         </label>
-        <Button onClick={() => void finish()}>
+        <Button
+          disabled={busy || (type === 'strength' && !list.length)}
+          onClick={() => void finish()}
+        >
           Antrenmanı tamamla
           <Check size={18} />
         </Button>
+        {cancel && (
+          <Sheet title="Seans iptal edilsin mi?" onClose={() => setCancel(false)}>
+            <p>
+              Girdiğin setler iptal edilmiş seans olarak geçmişinde kalır. Bu seans tamamlanan
+              antrenman sayısına eklenmez.
+            </p>
+            <Button variant="secondary" onClick={() => setCancel(false)}>
+              Seansa dön
+            </Button>
+            <Button variant="danger" disabled={busy} onClick={() => void cancelWorkout()}>
+              Evet, seansı iptal et
+            </Button>
+          </Sheet>
+        )}
         <p className="safety-note">Göğüs ağrısı, bayılma, olağan dışı nefes darlığı → dur, 112.</p>
       </div>
     </div>

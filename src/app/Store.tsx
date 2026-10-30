@@ -68,6 +68,7 @@ export function StoreProvider({ children }: PropsWithChildren) {
     (change: (data: AppData) => Partial<AppData>) => {
       if (!current.current) return;
       const patch = change(current.current);
+      if (!Object.keys(patch).length) return;
       current.current = { ...current.current, ...patch };
       setData(current.current);
       pending.current = { ...pending.current, ...patch };

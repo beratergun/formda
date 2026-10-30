@@ -1,3 +1,4 @@
+import { workoutElapsedMs } from '../../domain/workout/session';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, ChevronLeft, ChevronRight, Download, Printer, Share2, Video } from 'lucide-react';
@@ -337,7 +338,14 @@ export function Journal() {
               report.workouts.map((workout) => (
                 <div className="stack" key={workout.id}>
                   <Chip>
-                    {workout.done ? 'Tamamlandı' : 'Devam ediyor'} ·{' '}
+                    {workout.cancelledAt !== undefined
+                      ? 'İptal edildi'
+                      : workout.done
+                        ? 'Tamamlandı'
+                        : workout.session?.pausedAt !== undefined
+                          ? 'Duraklatıldı'
+                          : 'Devam ediyor'}{' '}
+                    ·{' '}
                     {workout.type === 'strength'
                       ? 'Kuvvet'
                       : workout.type === 'swim'
@@ -346,24 +354,31 @@ export function Journal() {
                           ? 'Dinlenme'
                           : 'Hareket'}
                   </Chip>
+                  <p className="small muted">
+                    {Math.floor(workoutElapsedMs(workout) / 60000)} dk{' '}
+                    {Math.floor(workoutElapsedMs(workout) / 1000) % 60} sn
+                    {workout.swimStyle ? ' · ' + workout.swimStyle : ''}
+                  </p>
                   {workout.distanceM !== undefined && <p>{workout.distanceM} m</p>}
-                  {workout.sets
-                    .filter((s) => s.done && s.kg && s.reps)
-                    .some(
-                      (s) =>
-                        !data.workoutLog
-                          .filter(
-                            (w) => w.id !== workout.id && w.done && w.startedAt < workout.startedAt,
-                          )
-                          .some((w) =>
-                            w.sets.some(
-                              (old) =>
-                                old.exerciseId === s.exerciseId &&
-                                old.done &&
-                                (old.kg || 0) >= (s.kg || 0),
+                  {workout.done &&
+                    workout.sets
+                      .filter((s) => s.done && s.kg && s.reps)
+                      .some(
+                        (s) =>
+                          !data.workoutLog
+                            .filter(
+                              (w) =>
+                                w.id !== workout.id && w.done && w.startedAt < workout.startedAt,
+                            )
+                            .some((w) =>
+                              w.sets.some(
+                                (old) =>
+                                  old.exerciseId === s.exerciseId &&
+                                  old.done &&
+                                  (old.kg || 0) >= (s.kg || 0),
+                              ),
                             ),
-                          ),
-                    ) && <p className="notice">Bu seansta yeni bir ağırlık rekoru kaydettin.</p>}
+                      ) && <p className="notice">Bu seansta yeni bir ağırlık rekoru kaydettin.</p>}
                   {workout.sets.map((s, i) => (
                     <p key={i} className="small">
                       {EXERCISES.find((e) => e.id === s.exerciseId)?.name} · {s.setNo}. set ·{' '}

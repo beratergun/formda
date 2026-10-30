@@ -68,7 +68,32 @@ const set = z.object({
   rpe: num.max(10).optional(),
   done: z.boolean(),
 });
+const template = z.object({
+  exerciseId: id,
+  sets: num,
+  minReps: num,
+  maxReps: num,
+  restSec: num,
+  alternative: z.string().optional(),
+});
+const session = z.object({
+  exercises: z.array(template),
+  current: num.int(),
+  pausedMs: num,
+  pausedAt: num.optional(),
+  restUntil: num.optional(),
+  restRemainingMs: num.optional(),
+  phase: z.enum(['warmup', 'cooldown']).optional(),
+  phaseUntil: num.optional(),
+  phaseRemainingMs: num.optional(),
+  intervalStartedAt: num.optional(),
+  intervalElapsedMs: num,
+  intervalWasRunning: z.boolean().optional(),
+});
 const workout = z.object({
+  swimStyle: z.string().optional(),
+  session: session.optional(),
+  cancelledAt: num.optional(),
   healthSource: z.string().optional(),
   healthRecordId: z.string().optional(),
   id,
@@ -108,14 +133,6 @@ const food = z.object({
   favorite: z.boolean().optional(),
   lastUsedAt: num.optional(),
   useCount: num,
-});
-const template = z.object({
-  exerciseId: id,
-  sets: num,
-  minReps: num,
-  maxReps: num,
-  restSec: num,
-  alternative: z.string().optional(),
 });
 const weekDay = z.object({
   alternative: z

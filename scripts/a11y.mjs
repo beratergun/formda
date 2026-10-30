@@ -118,6 +118,15 @@ try {
     await page.getByRole('button', { name: 'Özel besin', exact: true }).click();
     await scan('Özel besin-' + theme);
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.goto(url + '#/workout');
+    await page.locator('.workout-mode').waitFor();
+    const resume = page.getByRole('button', { name: 'Seansa devam et', exact: true });
+    if (await resume.count()) await resume.click();
+    await page.getByLabel('Seans türü').selectOption('strength');
+    await scan('Aktif antrenman-' + theme);
+    await page.getByRole('button', { name: 'Seansı duraklat', exact: true }).click();
+    await scan('Duraklatılmış antrenman-' + theme);
+    await page.getByRole('link', { name: "Bugün'e dön", exact: true }).click();
   }
   const output = `docs/qa/${new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Istanbul' }).format(new Date())}`;
   await mkdir(output, { recursive: true });

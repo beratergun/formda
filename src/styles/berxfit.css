@@ -1,4 +1,37 @@
 /* Semantic surface and interaction rules shared by every BERxFIT screen. */
+.session-controls {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+.session-exercise-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.session-exercise-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  background: var(--raise);
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+.session-exercise-list li[aria-current='step'] {
+  border-color: var(--accent);
+}
+.session-exercise-list li > span {
+  min-width: 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.session-exercise-list li > .row {
+  gap: 0;
+}
 .weight-observations {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,5 @@
 import type { DayLog, Profile, WorkoutLog } from '../types';
+import { workoutElapsedMs } from '../workout/session';
 // 2024 Adult Compendium: https://pacompendium.com/conditioning-exercise/
 // https://pacompendium.com/water-activities/ · https://pacompendium.com/walking/
 export const MET = {
@@ -12,7 +13,7 @@ export const MET = {
 export function workoutEnergy(workout: WorkoutLog, weight: number) {
   const minutes = Math.max(
     0,
-    Math.min(24 * 60, ((workout.endedAt || workout.startedAt) - workout.startedAt) / 60000),
+    Math.min(24 * 60, workoutElapsedMs(workout, workout.endedAt ?? workout.startedAt) / 60000),
   );
   if (!workout.done || !Number.isFinite(weight) || weight <= 0 || workout.type === 'rest')
     return { gross: 0, active: 0, minutes, met: 0 };

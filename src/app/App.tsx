@@ -72,6 +72,7 @@ function AppLayout() {
   const [theme, setTheme] = useState(() => localStorage.getItem('yol-theme') || 'dark');
   const navigate = useNavigate();
   const location = useLocation();
+  const workoutActive = location.pathname === '/workout';
   useEffect(() => {
     if (theme === 'system') delete document.documentElement.dataset.theme;
     else document.documentElement.dataset.theme = theme;
@@ -110,31 +111,33 @@ function AppLayout() {
       <div className="app-shell">
         {onboarded ? (
           <>
-            <header className="topbar">
-              <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
-                <span className="brand-plaque">
-                  <img
-                    src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
-                    width="134"
-                    height="70"
-                    alt=""
-                  />
-                </span>
-              </NavLink>
-              <div className="row">
-                <span className="local-status" role="status">
-                  <i />
-                  {status}
-                </span>
-                <Button
-                  variant="quiet"
-                  aria-label="Temayı değiştir"
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                >
-                  <Sun size={20} />
-                </Button>
-              </div>
-            </header>
+            {!workoutActive && (
+              <header className="topbar">
+                <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
+                  <span className="brand-plaque">
+                    <img
+                      src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+                      width="134"
+                      height="70"
+                      alt=""
+                    />
+                  </span>
+                </NavLink>
+                <div className="row">
+                  <span className="local-status" role="status">
+                    <i />
+                    {status}
+                  </span>
+                  <Button
+                    variant="quiet"
+                    aria-label="Temayı değiştir"
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  >
+                    <Sun size={20} />
+                  </Button>
+                </div>
+              </header>
+            )}
             <main id="main" tabIndex={-1}>
               <Suspense
                 fallback={
@@ -189,10 +192,12 @@ function AppLayout() {
                 </Routes>
               </Suspense>
             </main>
-            <p className="footer-note">
-              <LockKeyhole size={12} />
-              Sana ait. Cihazında kalır.
-            </p>
+            {!workoutActive && (
+              <p className="footer-note">
+                <LockKeyhole size={12} />
+                Sana ait. Cihazında kalır.
+              </p>
+            )}
           </>
         ) : (
           <main id="main" tabIndex={-1}>
@@ -200,7 +205,7 @@ function AppLayout() {
           </main>
         )}
       </div>
-      {onboarded && (
+      {onboarded && !workoutActive && (
         <nav className="bottom-nav" aria-label="Ana gezinme">
           {tabs.map(([path, title, Icon]) => (
             <NavLink key={path} to={path} end>

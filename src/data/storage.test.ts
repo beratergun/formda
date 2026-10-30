@@ -10,6 +10,7 @@ import { saveMedia, readMedia, deleteMedia, clearAllData } from './media/opfs';
 import { decodeBackup, encodeBackup, encodeBlobStream } from './backup/codec';
 import { applyBackup } from './backup';
 import { emptyDay } from '../domain/types';
+import { newSession, pauseSession } from '../domain/workout/session';
 import type { BackupDocument } from './backup/schema';
 import { decodeBlobBackup } from './backup/stream';
 import { zipSync, strToU8 } from 'fflate';
@@ -187,6 +188,26 @@ it('round-trips all data and media through zip, delete, restore exactly', async 
       'push-up',
     ),
   );
+  await database.workoutLog.put({
+    id: 'paused-session',
+    date: '2026-10-29',
+    type: 'strength',
+    startedAt: 1000,
+    done: false,
+    note: 'Kurgusal seans notu',
+    swimStyle: 'Serbest',
+    sets: [{ exerciseId: 'rdl', setNo: 1, kg: 12.5, reps: 10, rpe: 7, done: true }],
+    session: pauseSession(
+      {
+        ...newSession([{ exerciseId: 'rdl', sets: 3, minReps: 8, maxReps: 12, restSec: 90 }]),
+        restUntil: 121000,
+        phase: 'warmup',
+        phaseUntil: 181000,
+        intervalStartedAt: 1000,
+      },
+      61000,
+    ),
+  });
   const data = await new LocalRepository(database).load();
   const raw = new Uint8Array([0, 1, 128, 255]);
   const thumb = new Uint8Array([3, 4, 5]);

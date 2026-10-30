@@ -1,3 +1,4 @@
+import { workoutElapsedMs } from '../../domain/workout/session';
 import { MealEditor } from './MealEditor';
 import { WeeklySnapshot } from './WeeklySnapshot';
 import type { MealEntry } from '../../domain/types';
@@ -312,13 +313,8 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           <div className="row completed">
             <Check size={18} />
             <span>
-              Tamamlandı ·{' '}
-              {Math.round(
-                ((workouts.find((w) => w.done)?.endedAt || 0) -
-                  (workouts.find((w) => w.done)?.startedAt || 0)) /
-                  60000,
-              )}{' '}
-              dk
+              Tamamlandı · {Math.floor(workoutElapsedMs(workouts.find((w) => w.done)!) / 60000)} dk{' '}
+              {Math.floor(workoutElapsedMs(workouts.find((w) => w.done)!) / 1000) % 60} sn
               {workouts.some((w) => w.done && w.sets.length > 0) &&
                 ` · ${volume(workouts.filter((w) => w.done).flatMap((w) => w.sets)).toLocaleString('tr')} kg hacim`}
             </span>

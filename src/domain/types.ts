@@ -89,6 +89,9 @@ export interface SetLog {
   done: boolean;
 }
 export interface WorkoutLog {
+  swimStyle?: string;
+  session?: WorkoutSession;
+  cancelledAt?: number;
   healthSource?: string;
   healthRecordId?: string;
   id: string;
@@ -104,6 +107,20 @@ export interface WorkoutLog {
   sets: SetLog[];
   warmupDone?: boolean;
   cooldownDone?: boolean;
+}
+export interface WorkoutSession {
+  exercises: TemplateExercise[];
+  current: number;
+  pausedMs: number;
+  pausedAt?: number;
+  restUntil?: number;
+  restRemainingMs?: number;
+  phase?: 'warmup' | 'cooldown';
+  phaseUntil?: number;
+  phaseRemainingMs?: number;
+  intervalStartedAt?: number;
+  intervalElapsedMs: number;
+  intervalWasRunning?: boolean;
 }
 export interface Exercise {
   apparatusId?: string;
