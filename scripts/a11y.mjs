@@ -111,6 +111,13 @@ try {
     await page.getByRole('button', { name: 'Fotoğraf', exact: true }).click();
     await scan('Fotoğraf önerisi onayı-' + theme);
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.locator('.meal-items button').first().click();
+    await scan('Öğün düzenleme-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.getByRole('button', { name: 'Kahvaltı ekle', exact: true }).click();
+    await page.getByRole('button', { name: 'Özel besin', exact: true }).click();
+    await scan('Özel besin-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
   }
   const output = `docs/qa/${new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Istanbul' }).format(new Date())}`;
   await mkdir(output, { recursive: true });

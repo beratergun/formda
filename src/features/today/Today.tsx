@@ -1,3 +1,6 @@
+import { MealEditor } from './MealEditor';
+import { WeeklySnapshot } from './WeeklySnapshot';
+import type { MealEntry } from '../../domain/types';
 import { DailyOverview } from './DailyOverview';
 import { useEffect, useState } from 'react';
 import { DailyAlternative } from '../plan/DailyAlternative';
@@ -16,7 +19,7 @@ import {
   Moon,
   Plus,
   RefreshCw,
-  Trash2,
+  Pencil,
 } from 'lucide-react';
 import { liveQuery } from 'dexie';
 import { db, newId, useStore } from '../../app/Store';
@@ -80,6 +83,8 @@ export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?:
 }
 export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
   const { data, date, setDate, updateDay, mutate, addMeals } = useStore();
+  const [editing, setEditing] = useState<MealEntry>();
+  const [deleted, setDeleted] = useState<MealEntry>();
   const day = data.dayLog.find((d) => d.date === date) || emptyDay(date);
   const expenditure = dailyEnergy(day, data.workoutLog, data.profile[0]);
   const targets = {
@@ -391,14 +396,10 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
                       </div>
                       <Button
                         variant="quiet"
-                        aria-label={`${entry.name} sil`}
-                        onClick={() =>
-                          mutate((v) => ({
-                            mealEntry: v.mealEntry.filter((e) => e.id !== entry.id),
-                          }))
-                        }
+                        aria-label={`${entry.name} düzenle`}
+                        onClick={() => setEditing(entry)}
                       >
-                        <Trash2 size={15} />
+                        <Pencil size={16} />
                       </Button>
                     </li>
                   ))}
@@ -459,6 +460,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           ))}
         </Card>
       )}
+      <WeeklySnapshot />
       <Card className="hero">
         <div className="row between">
           <Chip>HER ADIMIN KIYMETLİ</Chip>
@@ -630,6 +632,32 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           <p className="muted small meal-empty">Bugünden sana kalan bir kare, bir cümle, bir an.</p>
         )}
       </Card>
+      {editing && (
+        <MealEditor
+          key={editing.id}
+          entry={editing}
+          onClose={() => setEditing(undefined)}
+          onDeleted={setDeleted}
+        />
+      )}
+      {deleted && (
+        <div role="status" className="undo-notice row between">
+          <span>{deleted.name} silindi.</span>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              mutate((v) => ({
+                mealEntry: v.mealEntry.some((e) => e.id === deleted.id)
+                  ? v.mealEntry
+                  : [...v.mealEntry, deleted],
+              }));
+              setDeleted(undefined);
+            }}
+          >
+            Geri al
+          </Button>
+        </div>
+      )}
       <p className="safety-note">Göğüs ağrısı, bayılma, olağan dışı nefes darlığı → dur, 112.</p>
     </div>
   );

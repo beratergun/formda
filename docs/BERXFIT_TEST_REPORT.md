@@ -28,3 +28,13 @@ Orijinal sahip logosu header, karşılama, web/PWA ikonları, iOS splash ve Andr
 Son kapı: **lint/typecheck/173 birim/build; 20/20 mobil E2E; iki temada 26 Axe görünümünde sıfır ihlal.** İlk tur açık tema puan kartındaki üç eski renk ve eski dört halka CSS seçicisi tespit edildi; semantik renkler ve dört gerçek metriği ayrı doğrulayan assertion ile düzeltildi, tam paket tekrar geçti. Hareket/öğün, offline, medya ve tam yedek regresyonları korundu.
 
 Playwright MCP: 390×844 ve 412×915 iki tema; yazıyla öğün, toplam güncellemesi ve yenileme sonrası kalıcılık; 320/360/390/412/430/768/1024/1440 ana ekran taşma yok; 1024 px beş ana ekranın iki temasında taşma yok, pageerror yok. Ekran görüntüleri ignored `docs/qa/berxfit-phase2-*`. Native kaynak ikonları üretildi; yeni APK derlemesi/telefona kurulum bu aşamada **NOT RUN**. CI ve yayın kapısı sonraki teslim aşamasında.
+
+## Faz 3 · Beslenme ve gerçek haftalık özet
+
+Öğün miktarı düzenleme, aynı snapshot ile tekrar ekleme, onaylı silme ve kimlik bazında tekil geri alma uygulandı. Kopya fotoğrafı ödünç almaz; orijinal medya korunur. Kaydedilen kcal/protein/carb/fat, kaydın kendi miktarına göre orantılanır; güncel katalog eski değeri değiştirmez. Sıfır miktarlı legacy kalem sessizce tahmin edilmez. Özel besinler kullanıcı beyanı kaynağıyla kaydedilir, miktar/porsiyon onayı ayrıdır; eksik makrolar bilinmiyor kalır. Başarısız yazımdan sonra tekrar deneme aynı yeni kayıt kimliğini kullanır.
+
+Haftalık kart gerçek beslenme günleri, tamamlanmış seanslar ve tarihli manuel/Health Connect tartılarından türetilir. Boş günler ortalamaya sıfır katılmaz. Hesap domain’i geçersiz kaynak, finite olmayan referans ve sayı taşmasını reddeder.
+
+Son kapı: **lint/typecheck/188 birim/build yeşil; Pixel 7 + iPhone 14 yeni nutrition E2E 2/2; iki temada genişletilmiş 30 Axe görünümünde sıfır ihlal.** E2E özel besin 200 kcal/20 g protein/10 g carb/5 g fat referansından 150 g = 300/30/15/7,5 hesabını, 75 g düzenlemeyi, boş miktarın engellenmesini, kopya/sil/geri al ve tam ZIP geri yükleme sonrası iki kaydın/toplamların eşleşmesini doğrular. WebKit uzun entegrasyon ilk 90 sn sınırını restore devam ederken aştı; medya kurtarma senaryosuna benzer şekilde bu kapsamlı test 180 sn sınırla 96 sn’de geçti. Başarı assertion’ları korunmuştur.
+
+Playwright MCP 390×844/412×915 iki tema: `1,5` miktar girişi, kaydet/yenile, editör ve özel besin ekranları; taşma ve pageerror yok. Mevcut Faz 2 tam 20 E2E regresyonunun yerine bu iki test geçirilmiş sayılmaz; tam birleşik paket teslim kapısında tekrar çalıştırılacak. Yeni sourceKind user yedek şemasında desteklenir, eski format/alanlar korunur. Fiziksel cihaz: NOT RUN.

@@ -1,3 +1,4 @@
+import { CustomFood } from './CustomFood';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Recognition, FOOD_MATCHES } from './Recognition';
 import { Camera, Check, Copy, Search, Star, Trash2 } from 'lucide-react';
@@ -18,6 +19,7 @@ const tabs = [
   { value: 'packaged', label: 'Paketli ürün' },
   { value: 'recipes', label: 'Tarif' },
   { value: 'copy', label: 'Kopyala' },
+  { value: 'custom', label: 'Özel besin' },
 ] as const;
 export function FoodSheet({
   onClose,
@@ -692,6 +694,14 @@ export function FoodSheet({
                 </>
               )}
             </>
+          )}
+          {tab === 'custom' && (
+            <CustomFood
+              onCreated={(food) => {
+                setTab('search');
+                choose(food);
+              }}
+            />
           )}
           {tab === 'copy' && (
             <>

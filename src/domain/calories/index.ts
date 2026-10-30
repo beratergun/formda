@@ -1,15 +1,24 @@
 import type { Food, Macros, Recipe } from '../types';
 
 export function calculate(food: Food, qty: number): Macros {
-  if (!Number.isFinite(qty) || qty < 0 || food.per <= 0)
+  if (!Number.isFinite(qty) || qty < 0 || !Number.isFinite(food.per) || food.per <= 0)
     throw new Error('Miktar geçerli ve sıfırdan büyük olmalı.');
+  if (
+    ![food.kcalPer, food.proteinPer, food.carbPer ?? 0, food.fatPer ?? 0].every(
+      (n) => Number.isFinite(n) && n >= 0,
+    )
+  )
+    throw new Error('Besinin besin değerleri geçersiz.');
   const factor = qty / food.per;
-  return {
+  const result = {
     kcal: food.kcalPer * factor,
     protein: food.proteinPer * factor,
     ...(food.carbPer === undefined ? {} : { carb: food.carbPer * factor }),
     ...(food.fatPer === undefined ? {} : { fat: food.fatPer * factor }),
   };
+  if (!Object.values(result).every(Number.isFinite))
+    throw new Error('Porsiyon hesabı sayı sınırını aşıyor.');
+  return result;
 }
 export function total(items: Macros[]): Macros {
   return items.reduce<Macros>(
