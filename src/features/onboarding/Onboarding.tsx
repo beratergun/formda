@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ProgramPicker } from '../plan/ProgramPicker';
 import { selectProgram, type ProgramId } from '../../domain/program/programs';
-import { ArrowRight, ArrowLeft, Check, LockKeyhole, Leaf, Camera } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, LockKeyhole, Camera } from 'lucide-react';
 import { NumericInput, Button, Card, Chip, Sheet } from '../../ui';
 import { CameraCapture } from '../camera/Camera';
 import { useStore } from '../../app/Store';
@@ -59,11 +59,13 @@ export function Onboarding() {
   return (
     <div data-validation-scope className="onboarding stack page-enter">
       <div className="row between">
-        <span className="brand">
-          <span className="brand-mark">
-            <img src={import.meta.env.BASE_URL + 'icons/icon.svg'} width="28" height="28" alt="" />
-          </span>
-          Formda<span className="brand-dot">/</span>
+        <span className="brand-plaque">
+          <img
+            src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+            width="134"
+            height="70"
+            alt="BERxFIT"
+          />
         </span>
         <Chip>{step + 1} / 4</Chip>
       </div>
@@ -74,37 +76,13 @@ export function Onboarding() {
       </div>
       {step === 0 && (
         <>
-          <div className="welcome-art">
-            <svg viewBox="0 0 300 220" aria-hidden="true">
-              <path
-                d="M45 196c-12-68 110-31 85-85S204 54 253 25"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="34"
-                strokeLinecap="round"
-                opacity=".12"
-              />
-              <path
-                d="M45 196c-12-68 110-31 85-85S204 54 253 25"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeDasharray="5 8"
-              />
-              <circle cx="45" cy="196" r="10" fill="currentColor" />
-              <path d="m247 18 15 5-9 13" fill="none" stroke="currentColor" strokeWidth="3" />
-              <circle cx="160" cy="86" r="15" fill="#d7e9a2" />
-              <path
-                d="m159 103-8 35 25 24m-25-24-18 31m23-58 25 16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="7"
-                strokeLinecap="round"
-              />
-            </svg>
-            <span className="art-badge">
-              <Leaf size={16} /> Küçük adımlar, sana ait bir yol.
-            </span>
+          <div className="welcome-brand">
+            <img
+              src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+              width="1190"
+              height="623"
+              alt="BERxFIT — kişisel spor ve beslenme koçun"
+            />
           </div>
           <div>
             <p className="eyebrow">KİŞİSEL SPOR VE BESLENME KOÇUN</p>

@@ -1,12 +1,21 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      try {
+        const theme = localStorage.getItem('yol-theme') || 'dark';
+        if (theme === 'system') delete document.documentElement.dataset.theme;
+        else document.documentElement.dataset.theme = theme;
+      } catch {
+        /* Default dark theme remains available without storage. */
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#087e83" />
+    <meta name="theme-color" content="#070b12" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Formda" />
+    <meta name="apple-mobile-web-app-title" content="BERxFIT" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link
       rel="preload"
@@ -44,11 +53,11 @@
     />
     <meta
       name="description"
-      content="Formda: Kişisel spor ve beslenme koçun. Çevrimdışı çalışır, verilerin cihazında kalır."
+      content="BERxFIT: Kişisel spor ve beslenme koçun. Çevrimdışı çalışır, verilerin cihazında kalır."
     />
     <link rel="icon" href="%BASE_URL%icons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="%BASE_URL%icons/apple-touch-icon.png" />
-    <title>Formda · Kişisel spor ve beslenme koçun</title>
+    <title>BERxFIT · Kişisel spor ve beslenme koçun</title>
   </head>
   <body>
     <div id="root">
@@ -60,12 +69,12 @@
           place-content: center;
           gap: 16px;
           text-align: center;
-          background: #126c6a;
+          background: #070b12;
           color: #e6f0df;
           font-family: system-ui;
         "
       >
-        <span style="font-size: 64px; font-weight: 700; letter-spacing: -4px">Formda</span
+        <span style="font-size: 64px; font-weight: 700; letter-spacing: -4px">BERxFIT</span
         ><span style="font-size: 12px; letter-spacing: 2px">Kişisel spor ve beslenme koçun</span>
       </div>
     </div>

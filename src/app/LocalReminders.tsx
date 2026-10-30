@@ -40,7 +40,7 @@ export function LocalReminders() {
       if (!message) return;
       const key = `yol-reminder-${today}-${message}`;
       if (localStorage.getItem(key)) return;
-      new Notification('Formda · Kendine bir adım', {
+      new Notification('BERxFIT · Kendine bir adım', {
         body: message,
         icon: import.meta.env.BASE_URL + 'icons/icon-192.png',
         tag: key,

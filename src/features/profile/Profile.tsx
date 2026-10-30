@@ -171,7 +171,7 @@ export function Profile() {
     <div className="stack page-enter">
       <div>
         <p className="eyebrow">SENİN ALANIN</p>
-        <h1>Formda, sana göre.</h1>
+        <h1>BERxFIT, sana göre.</h1>
         <p className="muted">Tercihlerin, gizliliğin ve cihazındaki veriler.</p>
       </div>
       <InstallCard force />
@@ -295,7 +295,7 @@ export function Profile() {
         <label className="field">
           Tema
           <select
-            defaultValue={localStorage.getItem('yol-theme') || 'system'}
+            defaultValue={localStorage.getItem('yol-theme') || 'dark'}
             onChange={(e) => {
               localStorage.setItem('yol-theme', e.target.value);
               if (e.target.value === 'system') delete document.documentElement.dataset.theme;

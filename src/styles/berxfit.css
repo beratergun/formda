@@ -1,0 +1,357 @@
+/* Semantic surface and interaction rules shared by every BERxFIT screen. */
+body {
+  font-size: 15px;
+}
+.app-shell {
+  max-width: 620px;
+  padding-inline: 20px;
+}
+.topbar {
+  min-height: 96px;
+}
+.brand-plaque {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 138px;
+  height: 64px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: #edf3fa;
+}
+.brand-plaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.welcome-brand {
+  background: #edf3fa;
+  border-radius: 24px;
+  padding: 28px;
+  margin-block: 8px;
+}
+.welcome-brand img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+.card {
+  padding: 20px;
+}
+.stack {
+  gap: 20px;
+}
+h1 {
+  font-size: clamp(28px, 7.5vw, 36px);
+  letter-spacing: -0.04em;
+}
+h2 {
+  margin: 0;
+}
+.eyebrow {
+  font-size: 10px;
+}
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+:root .primary,
+:root[data-theme] .primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.quick-add {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--shadow);
+  width: 52px;
+  height: 52px;
+  right: calc(50% - 26px);
+}
+.bottom-nav {
+  width: min(100%, 620px);
+  border-radius: 22px 22px 0 0;
+}
+.bottom-nav a {
+  font-size: 11px;
+  min-height: 52px;
+}
+.bottom-nav a.active {
+  background: var(--accent-soft);
+  border-radius: 12px;
+  padding-inline: 8px;
+}
+.coach-card {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+}
+.coach-card h2 {
+  font-size: 26px;
+}
+.coach-card p {
+  color: var(--sub);
+  max-width: 48ch;
+}
+.coach-card .button {
+  margin-top: 0;
+}
+.hero,
+.quote-card,
+.assistant-card,
+.story-card {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--line);
+}
+.hero .chip,
+.hero .eyebrow,
+.quote-card p,
+.story-card .eyebrow {
+  color: var(--sub);
+}
+.hero .metric-ring {
+  color: var(--brand-green);
+}
+.hero-score p:not(.eyebrow),
+.hero-score small,
+.hero-bottom,
+.hero-bottom span:first-child,
+.hero .metric-ring small {
+  color: var(--sub);
+}
+.hero .metric-ring b {
+  color: var(--ink);
+}
+.hero .ring-track {
+  stroke: var(--line);
+}
+.hero-bottom {
+  border-color: var(--line);
+}
+.hero .chip {
+  background: var(--raise);
+}
+.hero .xp-track {
+  background: var(--raise);
+}
+.hero .xp-track i {
+  background: var(--brand-green);
+}
+.energy-overview {
+  gap: 20px;
+}
+.calorie-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+.calorie-summary .metric-ring {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.calorie-summary .metric-ring b {
+  font-size: 34px;
+}
+.calorie-context {
+  min-width: 0;
+}
+.target-number {
+  font: 650 25px var(--display);
+}
+.target-number small {
+  font: 12px var(--body);
+  color: var(--sub);
+}
+.calorie-context .divider {
+  margin: 12px 0;
+}
+.remaining-number {
+  font-size: 28px;
+}
+.nutrient-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.nutrient-item {
+  min-width: 0;
+}
+.nutrient-item > span {
+  font-size: 12px;
+  color: var(--sub);
+}
+.nutrient-item p {
+  margin: 6px 0;
+}
+.nutrient-item b {
+  font-size: 22px;
+}
+.nutrient-item small {
+  color: var(--sub);
+  font-size: 11px;
+}
+.nutrient-track {
+  height: 5px;
+  background: var(--raise);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.nutrient-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+.nutrient-item.carb i {
+  background: var(--cyan);
+}
+.nutrient-item.fat i {
+  background: var(--strength);
+}
+.activity-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  gap: 16px;
+}
+.activity-strip > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+.activity-strip svg {
+  color: var(--cyan);
+  margin-top: 4px;
+}
+.activity-strip b {
+  font-size: 22px;
+}
+.activity-strip span,
+.activity-strip small {
+  display: block;
+  font-size: 11px;
+  color: var(--sub);
+}
+.activity-strip b small {
+  display: inline;
+  font-weight: 500;
+}
+.meal-grid {
+  gap: 16px;
+}
+.meal-card .meal-empty {
+  padding-block: 16px;
+}
+.section-title {
+  margin-top: 8px;
+}
+.section-heading .avatar {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.completed,
+.set-confirmation {
+  color: var(--success);
+}
+.row > div,
+.row > label {
+  min-width: 0;
+}
+.story-card {
+  border: 1px solid var(--line);
+}
+@media (max-width: 359px) {
+  .app-shell {
+    padding-inline: 12px;
+  }
+  .card {
+    padding: 16px;
+  }
+  .calorie-summary {
+    gap: 10px;
+  }
+  .calorie-summary .metric-ring {
+    width: 130px !important;
+    height: 130px !important;
+  }
+  .nutrient-strip {
+    gap: 8px;
+  }
+  .nutrient-item > span {
+    font-size: 11px;
+  }
+  .bottom-nav a {
+    font-size: 10px;
+    min-width: 44px;
+  }
+}
+@media (min-width: 900px) {
+  .app-shell {
+    max-width: 1120px;
+    padding: 0 32px 80px 208px;
+  }
+  .bottom-nav {
+    left: max(16px, calc(50% - 544px));
+    top: 120px;
+    bottom: auto;
+    transform: none;
+    width: 160px;
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+  }
+  .bottom-nav a {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px;
+    font-size: 13px;
+  }
+  .bottom-nav .quick-add {
+    position: static;
+    margin: 16px auto 0;
+  }
+  .today-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .today-page > * {
+    grid-column: 1 / -1;
+  }
+  .today-page > .coach-card,
+  .today-page > .energy-overview {
+    grid-column: auto;
+    height: 100%;
+  }
+  .today-page > .coach-card {
+    align-content: center;
+  }
+  .meal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sheet {
+    width: min(100%, 640px);
+  }
+  .onboarding {
+    max-width: 560px;
+    margin-inline: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

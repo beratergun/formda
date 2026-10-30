@@ -38,14 +38,14 @@ async function slideshow(
       reader.readAsDataURL(blob);
     });
     frames.push(
-      `<figure style="animation-delay:${i}s"><img src="${url}" alt="${record.date}"><figcaption>Formda · ${record.date}</figcaption></figure>`,
+      `<figure style="animation-delay:${i}s"><img src="${url}" alt="${record.date}"><figcaption>BERxFIT · ${record.date}</figcaption></figure>`,
     );
     onProgress(Math.round(((i + 1) / records.length) * 100));
   }
   const duration = Math.max(1, records.length);
   return new Blob(
     [
-      `<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Formda · Anılarım</title><style>body{margin:0;background:#102e2c;color:#e5f3dc;font:20px system-ui;text-align:center}main{position:relative;height:85vh;max-width:720px;margin:auto}figure{position:absolute;inset:0;margin:0;opacity:0;animation:slide ${duration}s infinite}img{width:100%;height:90%;object-fit:contain}figcaption{padding:12px}@keyframes slide{0%,${99 / duration}%{opacity:1}${Math.min(100, 100 / duration)}%,100%{opacity:0}}@media(prefers-reduced-motion:reduce){main{height:auto}figure{position:static;opacity:1;animation:none}img{max-height:80vh}}</style><h1>Yolundan anılar.</h1><p>Bu cihaz video oluşturmayı desteklemiyor. Karelerin yerel slayt gösterisinde.</p><main>${frames.join('')}</main></html>`,
+      `<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>BERxFIT · Anılarım</title><style>body{margin:0;background:#102e2c;color:#e5f3dc;font:20px system-ui;text-align:center}main{position:relative;height:85vh;max-width:720px;margin:auto}figure{position:absolute;inset:0;margin:0;opacity:0;animation:slide ${duration}s infinite}img{width:100%;height:90%;object-fit:contain}figcaption{padding:12px}@keyframes slide{0%,${99 / duration}%{opacity:1}${Math.min(100, 100 / duration)}%,100%{opacity:0}}@media(prefers-reduced-motion:reduce){main{height:auto}figure{position:static;opacity:1;animation:none}img{max-height:80vh}}</style><h1>Yolundan anılar.</h1><p>Bu cihaz video oluşturmayı desteklemiyor. Karelerin yerel slayt gösterisinde.</p><main>${frames.join('')}</main></html>`,
     ],
     { type: 'text/html' },
   );
@@ -102,7 +102,7 @@ export async function createMontage(
             context.drawImage(video, (720 - w) / 2, (860 - h) / 2, w, h);
             context.fillStyle = '#e5f3dc';
             context.font = '30px sans-serif';
-            context.fillText('Formda · ' + record.date, 35, 918);
+            context.fillText('BERxFIT · ' + record.date, 35, 918);
             await nextFrame();
           }
         } finally {

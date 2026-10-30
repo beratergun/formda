@@ -25,7 +25,7 @@ export async function shareBlob(blob: Blob, name: string) {
   const file = new File([blob], name, { type: blob.type });
   if (navigator.canShare?.({ files: [file] })) {
     try {
-      await navigator.share({ files: [file], title: 'Formda · Kendime bir adım' });
+      await navigator.share({ files: [file], title: 'BERxFIT · Kendime bir adım' });
       return;
     } catch (error) {
       if (error instanceof Error && error.name === 'AbortError') return;

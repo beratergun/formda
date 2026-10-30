@@ -2,16 +2,16 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.github.beratergun.formda',
-  appName: 'Formda',
+  appName: 'BERxFIT',
   webDir: 'dist-native',
-  backgroundColor: '#f3f6f4',
+  backgroundColor: '#070b12',
   loggingBehavior: 'none',
   android: { allowMixedContent: false, webContentsDebuggingEnabled: false, minWebViewVersion: 101 },
   plugins: {
     SplashScreen: {
       launchShowDuration: 800,
       launchAutoHide: true,
-      backgroundColor: '#126c6a',
+      backgroundColor: '#070b12',
       showSpinner: false,
       androidScaleType: 'CENTER_INSIDE',
     },

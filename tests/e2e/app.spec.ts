@@ -169,7 +169,11 @@ test('coach dashboard and monthly story stay local and export a vertical card', 
   );
   await onboard(page);
   await expect(page.locator('.coach-card .button')).toHaveCount(1);
-  await expect(page.locator('.dashboard-rings [role="img"]')).toHaveCount(4);
+  await expect(page.getByRole('img', { name: /Alınan kalori:/ })).toBeVisible();
+  await expect(page.getByRole('img', { name: /Protein:/ })).toBeVisible();
+  await expect(page.getByRole('img', { name: /Harcanan kalori tahmini:/ })).toBeVisible();
+  await expect(page.getByRole('img', { name: /^Adım:/ })).toBeVisible();
+  await expect(page.locator('.activity-strip .metric-ring')).toHaveCount(0);
   await page.getByRole('link', { name: 'İlerleme', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Rozet galerisi' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Kişisel rekor duvarı' })).toBeVisible();

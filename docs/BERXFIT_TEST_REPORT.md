@@ -20,3 +20,11 @@ Son Faz 1 kapısı: **lint/typecheck/173 birim/build yeşil; Pixel 7/Chromium ve
 DB/OPFS adları, kişisel kayıtlar, eski meal snapshot değerleri ve backup formatı değişmedi. Bu aşamada veri migration'ı gerekmedi. UI NumericInput sınırları domain'e geçersiz taslak göndermez; otomatik kayıt alanlarında son geçerli değer korunur, optional alan temizliği yokluk olarak saklanır.
 
 Fiziksel Android/iPhone testi: **NOT RUN**, bu oturumda bağlı fiziksel cihaz doğrulaması yok. Yeni BERxFIT marka, ana ekran, rehber ve yeni özellik aşamaları henüz tamamlanmış veya yayınlanmış sayılmaz.
+
+## Faz 2 · Marka ve tasarım sistemi
+
+Orijinal sahip logosu header, karşılama, web/PWA ikonları, iOS splash ve Android launcher/splash için içerik kesilmeden türetildi. Dark-first navy/blue/cyan tema, açık tema, semantic renkler, kompakt kalori/makro ve tahmini aktivite, öne alınmış su/öğünler ve desktop gezinme uygulandı. `3.0.0-rc.1` yerel geliştirme sürümü; appId ve yerel veri kimlikleri değişmedi.
+
+Son kapı: **lint/typecheck/173 birim/build; 20/20 mobil E2E; iki temada 26 Axe görünümünde sıfır ihlal.** İlk tur açık tema puan kartındaki üç eski renk ve eski dört halka CSS seçicisi tespit edildi; semantik renkler ve dört gerçek metriği ayrı doğrulayan assertion ile düzeltildi, tam paket tekrar geçti. Hareket/öğün, offline, medya ve tam yedek regresyonları korundu.
+
+Playwright MCP: 390×844 ve 412×915 iki tema; yazıyla öğün, toplam güncellemesi ve yenileme sonrası kalıcılık; 320/360/390/412/430/768/1024/1440 ana ekran taşma yok; 1024 px beş ana ekranın iki temasında taşma yok, pageerror yok. Ekran görüntüleri ignored `docs/qa/berxfit-phase2-*`. Native kaynak ikonları üretildi; yeni APK derlemesi/telefona kurulum bu aşamada **NOT RUN**. CI ve yayın kapısı sonraki teslim aşamasında.

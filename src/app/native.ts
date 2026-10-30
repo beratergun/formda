@@ -32,7 +32,7 @@ export async function exportNative(blob: Blob, name: string) {
   }
   const { uri } = await Filesystem.getUri({ path, directory: Directory.Cache });
   await Share.share({
-    title: 'Formda · Dosyan yanında',
+    title: 'BERxFIT · Dosyan yanında',
     url: uri,
     dialogTitle: 'Cihaza kaydet veya paylaş',
   });

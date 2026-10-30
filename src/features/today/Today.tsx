@@ -1,3 +1,4 @@
+import { DailyOverview } from './DailyOverview';
 import { useEffect, useState } from 'react';
 import { DailyAlternative } from '../plan/DailyAlternative';
 import { dailyEnergy, adjustedTarget } from '../../domain/energy';
@@ -171,7 +172,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
     );
   };
   return (
-    <div className="stack page-enter">
+    <div className="stack page-enter today-page">
       <div>
         <p className="eyebrow">
           {greeting.toLocaleUpperCase('tr')}
@@ -181,7 +182,6 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           <h1>
             Bugün, kendin için<span className="accent">.</span>
           </h1>
-          <span className="day-flower">✳</span>
         </div>
         <div className="row between">
           <p className="muted small">{dateLabel(date)}</p>
@@ -250,127 +250,22 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           </Button>
         )}
       </Card>
-      <Card className="dashboard-rings">
-        <div>
-          <Ring
-            value={macros.kcal}
-            max={targets.kcal}
-            label="Alınan kalori"
-            unit="kcal"
-            size={104}
-          />
-          <h3>Alınan</h3>
-          <small className="muted">{targets.kcal} kcal hedef</small>
-        </div>
-        <div>
-          <Ring value={macros.protein} max={targets.protein} label="Protein" unit="g" size={104} />
-          <h3>Protein</h3>
-          <small className="muted">{targets.protein} g hedef</small>
-        </div>
-        <div>
-          <Ring
-            value={expenditure.active}
-            max={Math.max(1, expenditure.active)}
-            label="Harcanan kalori tahmini"
-            unit="kcal"
-            size={104}
-          />
-          <h3>Harcanan</h3>
-          <small className="muted">Tahmini · {expenditure.source}</small>
-        </div>
-        <div>
-          <Ring
-            value={day.steps ?? day.health?.steps ?? 0}
-            max={targets.steps || 8000}
-            label="Adım"
-            size={104}
-          />
-          <h3>Adım</h3>
-          <small className="muted">
-            {targets.steps ? targets.steps.toLocaleString('tr') + ' hedef' : 'Günlük hareket'}
-          </small>
-        </div>
-      </Card>
-      <Card className="hero">
-        <div className="row between">
-          <Chip>HER ADIMIN KIYMETLİ</Chip>
-          <ArrowUpRight size={23} />
-        </div>
-        <div className="row hero-score">
-          <Ring value={points.total} label="Gün puanı" />
-          <div>
-            <p className="eyebrow">SENİN YOLCULUĞUN</p>
-            <h2>{xp.name}</h2>
-            <p>
-              Biriken küçük adımlar.
-              <br />
-              Sana ait bir ilerleme.
-            </p>
-            <div className="xp-track">
-              <i style={{ width: `${xp.into / 6}%` }} />
-            </div>
-            <small>
-              {xp.into} / 600 XP · Seviye {xp.level}
-            </small>
-          </div>
-        </div>
-        <div className="hero-bottom">
-          <span>
-            <Flame size={17} />
-            {streak.current} gün seri
-          </span>
-          <span>En iyi seri · {Math.max(streak.best, savedBest)} gün</span>
-        </div>
-      </Card>
-      <div className="row section-heading">
-        <span className="avatar">
-          <Leaf size={20} />
-        </span>
-        <div>
-          <p className="eyebrow">KİŞİSEL KOÇUN</p>
-          <h2>Bugünün küçük notları</h2>
-        </div>
-      </div>
-      <Card className="stack assistant-card">
-        {messages.map((message) => (
-          <p key={message}>{message}</p>
-        ))}
-      </Card>
-      {quote && (
-        <Card className="quote-card">
-          <span className="quote-mark">“</span>
-          <blockquote>{quote.text}</blockquote>
-          <div className="row between">
-            <p>GÜNÜN SÖZÜ</p>
-            <Button
-              variant="quiet"
-              aria-label="Başka söz"
-              onClick={() => setQuoteOffset(quoteOffset + 1)}
-            >
-              <RefreshCw size={15} />
-            </Button>
-          </div>
-        </Card>
-      )}
-      {date === todayKey() && dateDiff(date, lastPhoto) >= data.profile[0].photoReminderDays && (
-        <Card className="stack">
-          <h3>Bugünden bir kare saklamak ister misin?</h3>
-          <p className="muted small">
-            İlerleme fotoğrafı günün geldi. İstersen aynı açıdan bir anı ekle.
-          </p>
-          <Link className="button secondary" to="/camera">
-            Fotoğrafımı ekle
-          </Link>
-        </Card>
-      )}
+      <DailyOverview
+        macros={macros}
+        targets={targets}
+        active={expenditure.active}
+        source={expenditure.source}
+        steps={day.steps ?? day.health?.steps}
+        onFood={() => onFood()}
+      />
       <div className="row between section-title">
         <h2>Günün dengesi</h2>
         <span className="eyebrow">KENDİ RİTMİNDE</span>
       </div>
       <Card className="stack">
         <div className="row between small">
-          <b>${Math.max(0, Math.round(targets.kcal - macros.kcal))} kcal kaldı</b>
-          <b>${Math.max(0, Math.ceil(targets.protein - macros.protein))} g protein kaldı</b>
+          <b>{Math.max(0, Math.round(targets.kcal - macros.kcal))} kcal kaldı</b>
+          <b>{Math.max(0, Math.ceil(targets.protein - macros.protein))} g protein kaldı</b>
         </div>
         {macros.carb !== undefined && entries.length > 0 && <MacroBreakdown macros={macros} />}
         <div className="divider" />
@@ -456,7 +351,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
           Ekle
         </Button>
       </div>
-      <div className="stack">
+      <div className="stack meal-grid">
         {MEALS.map((meal) => {
           const items = entries.filter((e) => e.mealId === meal.id);
           const sum = total(items);
@@ -562,6 +457,78 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
               </b>
             </button>
           ))}
+        </Card>
+      )}
+      <Card className="hero">
+        <div className="row between">
+          <Chip>HER ADIMIN KIYMETLİ</Chip>
+          <ArrowUpRight size={23} />
+        </div>
+        <div className="row hero-score">
+          <Ring value={points.total} label="Gün puanı" />
+          <div>
+            <p className="eyebrow">SENİN YOLCULUĞUN</p>
+            <h2>{xp.name}</h2>
+            <p>
+              Biriken küçük adımlar.
+              <br />
+              Sana ait bir ilerleme.
+            </p>
+            <div className="xp-track">
+              <i style={{ width: `${xp.into / 6}%` }} />
+            </div>
+            <small>
+              {xp.into} / 600 XP · Seviye {xp.level}
+            </small>
+          </div>
+        </div>
+        <div className="hero-bottom">
+          <span>
+            <Flame size={17} />
+            {streak.current} gün seri
+          </span>
+          <span>En iyi seri · {Math.max(streak.best, savedBest)} gün</span>
+        </div>
+      </Card>
+      <div className="row section-heading">
+        <span className="avatar">
+          <Leaf size={20} />
+        </span>
+        <div>
+          <p className="eyebrow">KİŞİSEL KOÇUN</p>
+          <h2>Bugünün küçük notları</h2>
+        </div>
+      </div>
+      <Card className="stack assistant-card">
+        {messages.map((message) => (
+          <p key={message}>{message}</p>
+        ))}
+      </Card>
+      {quote && (
+        <Card className="quote-card">
+          <span className="quote-mark">“</span>
+          <blockquote>{quote.text}</blockquote>
+          <div className="row between">
+            <p>GÜNÜN SÖZÜ</p>
+            <Button
+              variant="quiet"
+              aria-label="Başka söz"
+              onClick={() => setQuoteOffset(quoteOffset + 1)}
+            >
+              <RefreshCw size={15} />
+            </Button>
+          </div>
+        </Card>
+      )}
+      {date === todayKey() && dateDiff(date, lastPhoto) >= data.profile[0].photoReminderDays && (
+        <Card className="stack">
+          <h3>Bugünden bir kare saklamak ister misin?</h3>
+          <p className="muted small">
+            İlerleme fotoğrafı günün geldi. İstersen aynı açıdan bir anı ekle.
+          </p>
+          <Link className="button secondary" to="/camera">
+            Fotoğrafımı ekle
+          </Link>
         </Card>
       )}
       <Card className="stack">

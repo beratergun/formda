@@ -99,7 +99,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
         </div>
         <div>
           <p className="eyebrow">HEP BİR DOKUNUŞ UZAĞINDA</p>
-          <h2>Formda, cebinde olsun.</h2>
+          <h2>BERxFIT, cebinde olsun.</h2>
           <p className="muted small">
             Ana ekranından aç. Çevrimdışı kaydet. Kendi ritminde devam et.
           </p>
@@ -111,7 +111,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
         <p className="install-footnote">Ücretsiz · Hesap yok · Verilerin cihazında</p>
       </Card>
       {guide && (
-        <Sheet title="Formda'yı telefonuna yükle" onClose={() => setGuide(false)}>
+        <Sheet title="BERxFIT'yı telefonuna yükle" onClose={() => setGuide(false)}>
           <div className="choice-grid">
             <button
               className="choice"
@@ -135,11 +135,11 @@ export function InstallCard({ force = false }: { force?: boolean }) {
                   <span className="guide-island" />
                   <img
                     src={import.meta.env.BASE_URL + 'icons/icon-192.png'}
-                    alt="Formda uygulama simgesi"
+                    alt="BERxFIT uygulama simgesi"
                   />
-                  <b>Formda</b>
+                  <b>BERxFIT</b>
                   <div className="guide-browser">
-                    <span>Formda</span>
+                    <span>BERxFIT</span>
                     <ArrowUpFromLine size={22} />
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
               <div className="android-install-art">
                 <Smartphone size={50} />
                 <ArrowDownToLine size={28} />
-                <img src={import.meta.env.BASE_URL + 'icons/icon-192.png'} alt="Formda simgesi" />
+                <img src={import.meta.env.BASE_URL + 'icons/icon-192.png'} alt="BERxFIT simgesi" />
               </div>
               <ol className="instruction-list">
                 <li>Chrome'da bu uygulamayı aç.</li>
@@ -180,7 +180,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
                   Tarayıcı menüsünden <Ellipsis size={18} /> Uygulamayı yükle veya Ana ekrana
                   ekle'yi seç.
                 </li>
-                <li>Yükle'ye dokun. Formda'yı ana ekranındaki simgeden aç.</li>
+                <li>Yükle'ye dokun. BERxFIT'yı ana ekranındaki simgeden aç.</li>
               </ol>
               {event && <Button onClick={() => void install()}>Şimdi yükle</Button>}
             </>

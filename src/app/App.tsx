@@ -69,7 +69,7 @@ function AppLayout() {
   const [quick, setQuick] = useState(false);
   const [entry, setEntry] = useState<'food' | 'weight' | 'note'>();
   const [meal, setMeal] = useState<MealId>('kahvalti');
-  const [theme, setTheme] = useState(() => localStorage.getItem('yol-theme') || 'system');
+  const [theme, setTheme] = useState(() => localStorage.getItem('yol-theme') || 'dark');
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
@@ -112,16 +112,14 @@ function AppLayout() {
           <>
             <header className="topbar">
               <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
-                <span className="brand-mark">
+                <span className="brand-plaque">
                   <img
-                    src={import.meta.env.BASE_URL + 'icons/icon.svg'}
-                    width="28"
-                    height="28"
+                    src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+                    width="134"
+                    height="70"
                     alt=""
                   />
                 </span>
-                {APP_NAME}
-                <span className="brand-dot">/</span>
               </NavLink>
               <div className="row">
                 <span className="local-status" role="status">

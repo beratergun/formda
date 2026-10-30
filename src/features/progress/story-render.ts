@@ -10,16 +10,16 @@ export function drawStory(
   c: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
   d: StoryData,
 ) {
-  c.fillStyle = '#102e30';
+  c.fillStyle = '#070b12';
   c.fillRect(0, 0, 1080, 1920);
-  c.strokeStyle = '#74d8c5';
+  c.strokeStyle = '#82b5ff';
   c.lineWidth = 12;
   c.beginPath();
   c.arc(820, 600, 400, 0, Math.PI * 2);
   c.stroke();
-  c.fillStyle = '#f1f6e9';
+  c.fillStyle = '#f4f7fb';
   c.font = 'bold 72px sans-serif';
-  c.fillText('Formda', 80, 160);
+  c.fillText('BERxFIT', 80, 160);
   c.font = '32px sans-serif';
   c.fillText(d.date, 80, 240);
   c.font = 'bold 48px sans-serif';

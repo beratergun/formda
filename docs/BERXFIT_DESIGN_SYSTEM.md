@@ -1,6 +1,6 @@
 # BERxFIT · Tasarım sistemi
 
-Durum: Faz 2 uygulama hedefi; görsel doğrulama tamamlanmadan teslim edilmiş sayılmaz.
+Durum: Faz 2 uygulandı; kalite kapısı ve iki temalı görsel kontrol sonuçları test raporunda tutulur.
 
 ## Marka kaynağı
 
@@ -10,7 +10,7 @@ Koyu tipografi siyah üstünde kaybolduğu için header/splash/launcher üzerind
 
 ## Semantik renkler
 
-- Koyu temel: #070B12, yüzey #0D1421 / #131E2D, çizgi #253247.
+- Koyu temel: #070B12, yüzey #0F1826 / #172335, çizgi #29394E.
 - Metin #F4F7FB, ikincil #A1B0C3. Açık tema ayrıca, aynı hiyerarşiyle korunacak.
 - Etkileşim: erişilebilir mavi; veri çizgileri blue/cyan; gerçek başarı ve marka #39D96B.
 - Uyarı ve hata ayrı semantik token; durumlar yalnızca renkle anlatılmayacak.
@@ -35,3 +35,9 @@ Görseli doğrulanmamış varyantlar için anatomik doğruluk iddiası taşıyan
 ## Durumlar ve doğrulama
 
 Boş/yükleniyor/hata/başarı/disabled durumları tüm kayıt akışlarında açık olacak. Reduced motion altında hareketler duracak veya statik pozlara dönecek. Tamamlanan veriler ve haftalık/kilo özetleri yalnızca kayıt ve hedeflerden türetilecek. Görsel inceleme gerçek tarayıcıda, iki temada yapılacak; tasarım hedefleri tek başına test sonucu değildir.
+
+## Varlık üretimi ve uyumluluk
+
+Orijinal `public/brand/berxfit-original.png` SHA-256: `e68d27dcc46bfbf82f6239e05a0937beb98fc4c9b01ca7befff15821bb2934e8`. `scripts/brand-assets.mjs` yalnızca şeffaf kenarları temizler ve orantılı raster türevler üretir. SVG ikon dosyası aynı rasterı taşıyan bir kapsayıcıdır; yeniden çizilmiş vektör değildir. Android adaptive foreground 432 px tuvalde 238 px genişliğe sığar; logo güvenli orta bölgede kalır. Tema tercihi bulunmayan yeni kurulum koyu başlar; mevcut `yol-theme` korunur.
+
+Repo ve canlı Pages yolu yayın aşamasına kadar `/formda/` kalır. Android appId `io.github.beratergun.formda`, veritabanı `yol-local`, medya alanı `yol-media` ve yedek biçimi `yol-backup` korunur. 3.0.0-rc.1 geliştirme sürümüdür; v2.0.0 yayını değiştirilmedi.
