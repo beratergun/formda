@@ -181,6 +181,8 @@ export function Stepper({
     </div>
   );
 }
+let openSheets = 0;
+let overflowBeforeSheets = '';
 export function Sheet({
   title,
   children,
@@ -196,10 +198,13 @@ export function Sheet({
     const node = dialog.current!;
     const active = document.activeElement as HTMLElement | null;
     node.showModal();
+    if (openSheets === 0) overflowBeforeSheets = document.body.style.overflow;
+    openSheets += 1;
     document.body.style.overflow = 'hidden';
     return () => {
       node.close();
-      document.body.style.overflow = '';
+      openSheets = Math.max(0, openSheets - 1);
+      if (openSheets === 0) document.body.style.overflow = overflowBeforeSheets;
       active?.focus();
     };
   }, []);
@@ -211,6 +216,7 @@ export function Sheet({
       aria-labelledby={id}
       onCancel={(e) => {
         e.preventDefault();
+        e.stopPropagation();
         onClose();
       }}
       onClick={(e) => {

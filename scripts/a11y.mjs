@@ -95,6 +95,18 @@ try {
     await page.getByRole('button', { name: 'Nasıl yapılır? · Hack squat', exact: true }).click();
     await scan('Hareket rehberi-' + theme);
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.goto(url + '#/library');
+    await page.getByLabel('Hareket ara', { exact: true }).fill('Goblet squat');
+    await page.getByText('Goblet squat', { exact: true }).click();
+    await scan('Kaynaklı teknik şema-' + theme);
+    await page.getByRole('button', { name: 'Teknik rehberi büyüt', exact: true }).click();
+    await scan('Büyük teknik rehber-' + theme);
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await page.getByLabel('Hareket ara', { exact: true }).fill('Plank');
+    await page.getByText('Plank', { exact: true }).click();
+    await scan('Statik plank rehberi-' + theme);
+    await page.keyboard.press('Escape');
   }
   for (const theme of ['light', 'dark']) {
     await page.evaluate((t) => {

@@ -50,3 +50,13 @@ Son kapı: **lint/typecheck/194 birim/build; mevcut iki set senaryosu + yeni sea
 MCP 390×844 ve 412×915, açık/koyu tercih localStorage ile yenilemede korunarak kontrol edildi; doğru tema, Cihazda kayıtlı durumu, seans URL kimliği ve taşmasız ekran doğrulandı. Kaydedilmiş not ve dinlenme önceki tarayıcı kontrolünde de korundu, pageerror yoktu. İlk E2E turu not alanının reload etiket sorgusunu yakaladı; sabit ad düzeltmesi sonrası geçti. İlk genişletilmiş Axe koşusunda otomasyonun duraklatılmış seçiciyi devam etmeden değiştirmesi engellendi; uygulama kontrolü aşılmadı, senaryo sırası düzeltilerek 34 tarama tamamlandı.
 
 Faz 4b görsel rehber çalışması bu sonuca dahil değildir. Fiziksel cihaz: NOT RUN. Yeni optional session/cancelledAt/swimStyle alanları aynı DB ve v1 yedek formatında korunur.
+
+## Faz 4b · Teknik rehber ve süreli tutuş
+
+Çekirdek 10 + goblet için ayrı kaynaklı özgün 2D şema, ortak oranlar/ekipman/yön/ipuçları; başlangıç/bitiş, karşılaştır, oynat/duraklat/başa al, hız ve büyük görünüm tamamlandı. 159 hareket/34 alet ve mevcut metinler korunur; 11 şema, 148 açık metin/kas rehberi fallback. Genel figür yanlış varyanta atanmaz. Kaynaklar, tercih edilen yaklaşım ve sınırlar `BERXFIT_EXERCISE_GUIDANCE.md` içinde. Kütüphaneye kas/ekipman yanında zorluk, hareket türü, ortam ve odak filtreleri/boş sonuç durumu eklendi.
+
+Plank ve belirlenen statik tutuşlar saniye kaydeder; uydurma kg/tekrar yok. Geçmiş ve önceki seans doğru birimi gösterir. Ana/destek kas grupları ayrılır, ön kol etiketi anatomik olarak üst kol etiketlerinden ayrıldı. İç içe pencerelerde Escape yalnızca en üst pencereyi kapatır ve kaydırma kilidi son pencereye kadar kalır. Bir bileşen testi ve gerçek tarayıcı iki katmanlı Escape senaryosu bu hatayı doğrular.
+
+Son kapı: **lint/typecheck/200 birim/build; sekiz ilgili E2E 8/8 iki motorda; 40 Axe görünümü sıfır ihlal.** On çekirdek hareketin iki pozu, oynat/duraklat/başa al/hız/büyüt, statik plank, azaltılmış hareket, 45 sn tutuşun geçmişe doğru kaydı, aparat fallback ve mevcut seans yaşam döngüsü testlendi. WebKit poz geçişi assertion’ı gerçek zamanlı yükte kararsız olduğundan resmi Playwright Clock API ile 1.201 ms kontrollü ilerletilir; geçiş assertion’ı kaldırılmadı.
+
+MCP 19 çekirdek poz ve goblet kareleri görsel incelendi; 390×844/412×915 açık-koyu Goblet/Plank/Row, büyüt/iki Escape, taşma ve pageerror yok. Son göğüs hizası düzeltmesi iki temada ayrıca yeniden görüldü. Görseller ignored docs/qa altında. Şemalar uzman tarafından kişiye özel form doğrulaması veya kesintisiz video olarak sunulmaz. Fiziksel cihaz: NOT RUN. Tam birleşik E2E, kapsam ve yayın kapısı teslim aşamasında tekrar çalıştırılacak.

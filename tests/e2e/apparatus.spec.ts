@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-test('learns an apparatus, views two poses and adds its movement to the program', async ({
+test('learns an apparatus with honest guide coverage and adds its movement to the program', async ({
   page,
 }) => {
   await page.goto('./');
@@ -15,8 +15,8 @@ test('learns an apparatus, views two poses and adds its movement to the program'
     .click();
   await expect(page.getByRole('heading', { name: 'Bu alet ne işe yarar?' })).toBeVisible();
   await page.getByRole('button', { name: 'Nasıl yapılır? · Hack squat', exact: true }).click();
-  await expect(page.getByRole('img', { name: 'Hack squat · Başlangıç pozu' })).toBeVisible();
-  await expect(page.getByRole('img', { name: 'Hack squat · Bitiş pozu' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Metin ve kas rehberi' })).toBeVisible();
+  await expect(page.locator('.technical-pose')).toHaveCount(0);
   await expect(page.getByRole('heading', { name: 'Nefes', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Arka', exact: true }).click();
   await page.getByRole('button', { name: 'Kapat', exact: true }).click();

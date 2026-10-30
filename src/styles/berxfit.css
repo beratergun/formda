@@ -1,4 +1,97 @@
 /* Semantic surface and interaction rules shared by every BERxFIT screen. */
+.set-inputs.timed-inputs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.technique-viewer {
+  --figure-skin: #b8c7d8;
+  --figure-far: #66788f;
+  --figure-outline: #28394e;
+  --figure-shirt: #3d76ad;
+  --figure-pants: #527398;
+  --figure-shoe: #617f9e;
+  --figure-equipment: #172738;
+  --figure-equipment-line: #8092a9;
+  --figure-padding: #4f667e;
+}
+.technique-stage {
+  border: 1px solid var(--line);
+  background: var(--raise);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.technique-stage figure {
+  margin: 0;
+}
+.technical-pose {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+}
+.pose-grid {
+  opacity: 0.4;
+}
+.technique-stage figcaption {
+  display: grid;
+  gap: 8px;
+  padding: 0 20px 20px;
+}
+.technique-stage figcaption b {
+  font-size: 17px;
+}
+.technique-stage figcaption span {
+  color: var(--sub);
+  font-size: 13px;
+}
+.technique-stage.compare-poses {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.compare-poses figure + figure {
+  border-left: 1px solid var(--line);
+}
+.compare-poses figcaption {
+  padding: 0 12px 16px;
+}
+.compare-poses figcaption b {
+  font-size: 14px;
+}
+.compare-poses figcaption span {
+  font-size: 12px;
+}
+.technique-controls {
+  gap: 12px;
+}
+.speed-field {
+  max-width: 104px;
+  font-size: 11px;
+}
+.speed-field select {
+  min-height: 44px;
+}
+.guide-fallback {
+  background: var(--accent-soft);
+}
+.guide-fallback svg {
+  color: var(--accent);
+}
+.technique-expanded {
+  --figure-skin: #b8c7d8;
+  --figure-far: #66788f;
+  --figure-outline: #28394e;
+  --figure-shirt: #3d76ad;
+  --figure-pants: #527398;
+  --figure-shoe: #617f9e;
+  --figure-equipment: #172738;
+  --figure-equipment-line: #8092a9;
+  --figure-padding: #4f667e;
+}
+.sheet:has(.technique-expanded) {
+  width: min(100%, 860px);
+}
+.technique-expanded .technical-pose {
+  max-height: min(58dvh, 500px);
+}
 .session-controls {
   border: 0;
   padding: 0;

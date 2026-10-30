@@ -1,3 +1,4 @@
+import { isTimedExercise } from '../../domain/exercises/technique';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Check, ChevronRight, Clock3, Pause, Play, Trophy } from 'lucide-react';
@@ -63,6 +64,7 @@ export function Workout() {
   });
   const id = initial.id;
   const [kg, setKg] = useState(10);
+  const [holdSeconds, setHoldSeconds] = useState(30);
   const [reps, setReps] = useState(10);
   const [rpe, setRpe] = useState(7);
   const [confirmedSet, setConfirmedSet] = useState(0);
@@ -87,6 +89,7 @@ export function Workout() {
   const workoutNote = log.note ?? '';
   const planned = list[current];
   const exercise = EXERCISES.find((e) => e.id === planned?.exerciseId) ?? EXERCISES[0];
+  const timed = isTimedExercise(exercise.id);
   useEffect(() => {
     if (new URLSearchParams(location.search).get('session') !== initial.id)
       navigate(`/workout?session=${encodeURIComponent(initial.id)}`, { replace: true });
@@ -158,8 +161,7 @@ export function Workout() {
     const set: SetLog = {
       exerciseId: exercise.id,
       setNo: sets.length + 1,
-      kg,
-      reps,
+      ...(timed ? { kg: 0, seconds: holdSeconds } : { kg, reps }),
       rpe,
       done: true,
     };
@@ -452,7 +454,10 @@ export function Workout() {
                   }}
                 />
                 <p className="muted">
-                  {planned?.sets || 3} set · {planned?.minReps || 8}–{planned?.maxReps || 12} tekrar
+                  {planned?.sets || 3} set ·{' '}
+                  {timed
+                    ? '15–30 sn kontrollü tutuş'
+                    : `${planned?.minReps || 8}–${planned?.maxReps || 12} tekrar`}
                 </p>
               </div>
               <Button variant="secondary" aria-expanded={guide} onClick={() => setGuide(!guide)}>
@@ -463,44 +468,65 @@ export function Workout() {
                 <p className="eyebrow">ÖNCEKİ SEANS</p>
                 <p>
                   {previousSets.length
-                    ? `${previousSets.length} × ${previousSets[0].reps} · ${previousSets[0].kg} kg`
+                    ? timed
+                      ? `${previousSets.length} set · ${previousSets[0].seconds ?? 0} sn tutuş`
+                      : `${previousSets.length} × ${previousSets[0].reps} · ${previousSets[0].kg} kg`
                     : 'İlk kaydın. Rahat ve kontrollü bir ağırlık seç.'}
                 </p>
                 <p className="notice">
-                  {progression(
-                    previousSets,
-                    planned?.maxReps || 12,
-                    data.planSettings[0].progression,
-                    Object.values(day.soreness || {}).some((n) => n > 1),
-                    (day.sleepQuality ?? 5) <= 2,
-                  )}
+                  {timed
+                    ? 'Önce tutuşunu koru. Formun bozulmadan birkaç saniye ekleyebilirsin.'
+                    : progression(
+                        previousSets,
+                        planned?.maxReps || 12,
+                        data.planSettings[0].progression,
+                        Object.values(day.soreness || {}).some((n) => n > 1),
+                        (day.sleepQuality ?? 5) <= 2,
+                      )}
                 </p>
               </Card>
               <Card className="stack">
                 <h2>{sets.length + 1}. set</h2>
-                <div className="set-inputs">
-                  <label className="field">
-                    Ağırlık (kg)
-                    <NumericInput
-                      min={0}
-                      max={1000}
-                      step={0.5}
-                      value={kg}
-                      onValueChange={(text) => setKg(+text)}
-                      aria-label={'Ağırlık (kg)'}
-                    />
-                  </label>
-                  <label className="field">
-                    Tekrar
-                    <NumericInput
-                      min={1}
-                      max={100}
-                      precision={0}
-                      value={reps}
-                      onValueChange={(text) => setReps(+text)}
-                      aria-label={'Tekrar'}
-                    />
-                  </label>
+                <div className={`set-inputs ${timed ? 'timed-inputs' : ''}`}>
+                  {timed ? (
+                    <label className="field">
+                      Süre (sn)
+                      <NumericInput
+                        aria-label="Tutuş süresi (sn)"
+                        value={holdSeconds}
+                        min={1}
+                        max={3600}
+                        precision={0}
+                        onValueChange={(text) => setHoldSeconds(+text)}
+                      />
+                    </label>
+                  ) : (
+                    <>
+                      {' '}
+                      <label className="field">
+                        Ağırlık (kg)
+                        <NumericInput
+                          min={0}
+                          max={1000}
+                          step={0.5}
+                          value={kg}
+                          onValueChange={(text) => setKg(+text)}
+                          aria-label={'Ağırlık (kg)'}
+                        />
+                      </label>
+                      <label className="field">
+                        Tekrar
+                        <NumericInput
+                          min={1}
+                          max={100}
+                          precision={0}
+                          value={reps}
+                          onValueChange={(text) => setReps(+text)}
+                          aria-label={'Tekrar'}
+                        />
+                      </label>
+                    </>
+                  )}
                   <label className="field">
                     RPE
                     <NumericInput
@@ -519,7 +545,13 @@ export function Workout() {
                 )}
                 <Button
                   onClick={completeSet}
-                  disabled={paused || busy || kg < 0 || reps < 1 || rpe < 1 || rpe > 10}
+                  disabled={
+                    paused ||
+                    busy ||
+                    (timed ? holdSeconds < 1 : kg < 0 || reps < 1) ||
+                    rpe < 1 ||
+                    rpe > 10
+                  }
                 >
                   Seti bitir
                   <Check size={18} />
@@ -529,7 +561,8 @@ export function Workout() {
                   <div key={s.setNo} className="row between completed">
                     <span>{s.setNo}. set</span>
                     <span>
-                      {s.kg} kg × {s.reps} · RPE {s.rpe}
+                      {s.seconds !== undefined ? `${s.seconds} sn` : `${s.kg} kg × ${s.reps}`} · RPE{' '}
+                      {s.rpe}
                     </span>
                     <Check size={16} />
                   </div>

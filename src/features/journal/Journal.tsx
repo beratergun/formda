@@ -382,7 +382,10 @@ export function Journal() {
                   {workout.sets.map((s, i) => (
                     <p key={i} className="small">
                       {EXERCISES.find((e) => e.id === s.exerciseId)?.name} · {s.setNo}. set ·{' '}
-                      {s.kg || 0} kg × {s.reps || 0} · RPE {s.rpe || '—'}
+                      {s.seconds !== undefined
+                        ? `${s.seconds} sn`
+                        : `${s.kg || 0} kg × ${s.reps || 0}`}{' '}
+                      · RPE {s.rpe || '—'}
                     </p>
                   ))}
                   {workout.note && <p className="muted small">{workout.note}</p>}

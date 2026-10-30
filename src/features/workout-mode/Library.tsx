@@ -3,35 +3,54 @@ import { Link } from 'react-router-dom';
 import { MovementFrames } from '../../ui/MovementFrames';
 import { APPARATUS } from '../../data/seed/apparatus';
 import { EXERCISES } from '../../data/seed/exercises';
-import { Button, Card, Chip, Sheet } from '../../ui';
+import { Button, Card, Chip, Sheet, EmptyState } from '../../ui';
 import { BodyMap, MUSCLES } from '../../ui/BodyMap';
 import { normalize } from '../../domain/parser';
 import type { Exercise } from '../../domain/types';
+import { TECHNIQUES, TECHNIQUE_MUSCLES } from '../../domain/exercises/technique';
 
 export function ExerciseGuide({ exercise }: { exercise: Exercise }) {
+  const technique = TECHNIQUES[exercise.id];
+  const muscles = TECHNIQUE_MUSCLES[exercise.id];
   return (
     <div className="stack">
-      <MovementFrames exercise={exercise} />
+      <MovementFrames key={exercise.id} exercise={exercise} />
       <Card className="stack">
         <h3>Başlangıç ayarı</h3>
-        <p>{exercise.setup || exercise.howTo[0]}</p>
+        <p>{technique?.setup || exercise.setup || exercise.howTo[0]}</p>
         <p className="small muted">
           {APPARATUS.find((a) => a.id === exercise.apparatusId)?.name || exercise.equipment}
         </p>
-        <p className="notice">{exercise.prescription}</p>
+        <p className="notice">
+          {technique?.static
+            ? '2–3 set × 15–30 sn · form bozulmadan dinlen'
+            : exercise.prescription}
+        </p>
       </Card>
       <div className="row">
         <Chip>{exercise.equipment}</Chip>
         <Chip>{exercise.level}</Chip>
       </div>
+      {muscles && (
+        <Card className="grid2">
+          <div>
+            <h3>Ana kas grupları</h3>
+            <p className="small muted">{muscles.primary.map((id) => MUSCLES[id]).join(' · ')}</p>
+          </div>
+          <div>
+            <h3>Destekleyen kaslar</h3>
+            <p className="small muted">{muscles.secondary.map((id) => MUSCLES[id]).join(' · ')}</p>
+          </div>
+        </Card>
+      )}
       <ol className="instruction-list">
-        {exercise.howTo.map((step) => (
+        {(technique?.steps || exercise.howTo).map((step) => (
           <li key={step}>{step}</li>
         ))}
       </ol>
       <Card className="stack">
         <h3>Sık hatalar</h3>
-        {exercise.mistakes.map((m) => (
+        {(technique?.mistakes || exercise.mistakes).map((m) => (
           <p className="small muted" key={m}>
             {m}
           </p>
@@ -40,13 +59,25 @@ export function ExerciseGuide({ exercise }: { exercise: Exercise }) {
       </Card>
       <Card className="stack">
         <h3>Nefes</h3>
-        <p>{exercise.breathing}</p>
+        <p>{technique?.breathing || exercise.breathing}</p>
         <h3>Daha kolay</h3>
         <p>{exercise.easier}</p>
         <h3>Daha zor</h3>
         <p>{exercise.harder}</p>
       </Card>
-      <BodyMap active={exercise.muscles} />
+      <BodyMap active={muscles ? [...muscles.primary, ...muscles.secondary] : exercise.muscles} />
+      {technique && (
+        <details className="card">
+          <summary>Teknik kaynak</summary>
+          <p className="small muted">
+            Şema özgün çizimdir. Teknik adımlar aşağıdaki kaynağa göre gözden geçirildi; şema kişiye
+            özel form değerlendirmesi yapmaz.
+          </p>
+          <a className="button quiet" href={technique.source} target="_blank" rel="noreferrer">
+            Teknik referansı aç
+          </a>
+        </details>
+      )}
       <div>
         <h3>Alternatiflerin</h3>
         <ul className="instruction-list">
@@ -72,12 +103,32 @@ export function Library({ onSelect }: { onSelect?: (id: string) => void }) {
   const [query, setQuery] = useState('');
   const [muscle, setMuscle] = useState('');
   const [equipment, setEquipment] = useState('');
+  const [level, setLevel] = useState('');
+  const [movement, setMovement] = useState('');
+  const [environment, setEnvironment] = useState('');
+  const [goal, setGoal] = useState('');
   const [selected, setSelected] = useState<Exercise>();
   const filtered = EXERCISES.filter(
     (e) =>
-      normalize(e.name).includes(normalize(query)) &&
+      normalize(e.name + ' ' + e.muscles.map((id) => MUSCLES[id] || id).join(' ')).includes(
+        normalize(query),
+      ) &&
       (!muscle || e.muscles.includes(muscle)) &&
-      (!equipment || e.equipment === equipment),
+      (!equipment || e.equipment === equipment) &&
+      (!level || e.level === level) &&
+      (!movement || e.svgKey === movement) &&
+      (!environment ||
+        (environment === 'pool'
+          ? e.equipment === 'havuz'
+          : environment === 'home'
+            ? ['vücut ağırlığı', 'bant', 'dumbbell'].includes(e.equipment)
+            : e.equipment !== 'havuz')) &&
+      (!goal ||
+        (['cardio', 'swim'].includes(e.svgKey)
+          ? 'conditioning'
+          : e.svgKey === 'mobility'
+            ? 'mobility'
+            : 'strength') === goal),
   );
   return (
     <div className="stack">
@@ -119,6 +170,81 @@ export function Library({ onSelect }: { onSelect?: (id: string) => void }) {
           </select>
         </label>
       </div>
+      <details className="card stack">
+        <summary>Diğer filtreler</summary>
+        <div className="grid2">
+          <label className="field">
+            Zorluk
+            <select value={level} onChange={(e) => setLevel(e.target.value)}>
+              <option value="">Tümü</option>
+              {[...new Set(EXERCISES.map((e) => e.level))].map((value) => (
+                <option key={value}>{value}</option>
+              ))}
+            </select>
+          </label>
+          <label className="field">
+            Hareket türü
+            <select value={movement} onChange={(e) => setMovement(e.target.value)}>
+              <option value="">Tümü</option>
+              {Object.entries({
+                press: 'İtiş',
+                pull: 'Çekiş',
+                squat: 'Diz baskın',
+                hinge: 'Kalça baskın',
+                core: 'Gövde',
+                isolation: 'Tek eklem',
+                cardio: 'Kardiyo',
+                swim: 'Yüzme',
+                mobility: 'Mobilite',
+              }).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="field">
+            Ortam
+            <select value={environment} onChange={(e) => setEnvironment(e.target.value)}>
+              <option value="">Tümü</option>
+              <option value="home">Ev / az ekipman</option>
+              <option value="gym">Salon</option>
+              <option value="pool">Havuz</option>
+            </select>
+          </label>
+          <label className="field">
+            Çalışma odağı
+            <select value={goal} onChange={(e) => setGoal(e.target.value)}>
+              <option value="">Tümü</option>
+              <option value="strength">Kuvvet</option>
+              <option value="conditioning">Dayanıklılık</option>
+              <option value="mobility">Mobilite</option>
+            </select>
+          </label>
+        </div>
+        <Button
+          variant="quiet"
+          onClick={() => {
+            setQuery('');
+            setMuscle('');
+            setEquipment('');
+            setLevel('');
+            setMovement('');
+            setEnvironment('');
+            setGoal('');
+          }}
+        >
+          Filtreleri temizle
+        </Button>
+      </details>
+      <p className="small muted" aria-live="polite">
+        {filtered.length} hareket bulundu
+      </p>
+      {!filtered.length && (
+        <EmptyState title="Bu filtrelerde hareket yok">
+          Aramayı kısaltabilir veya filtrelerini değiştirebilirsin.
+        </EmptyState>
+      )}
       {filtered.map((exercise) => (
         <Card key={exercise.id}>
           <button className="library-item" onClick={() => setSelected(exercise)}>
