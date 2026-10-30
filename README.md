@@ -1,138 +1,95 @@
-<p align="center"><img src="public/icons/icon.svg" width="76" alt="Formda uygulama ikonu"></p>
+<p align="center"><img src="public/icons/icon.svg" width="80" alt="Formda logosu"></p>
 <h1 align="center">Formda</h1>
-<p align="center"><strong>Kişisel spor ve beslenme koçun.</strong><br>Cebindeki kişisel spor ve beslenme asistanı.</p>
+<p align="center"><strong>Kişisel spor ve beslenme koçun.</strong><br>Hesapsız, ücretsiz, cihazında.</p>
 <p align="center">
-  <a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle (PWA)"></a>
-  <a href="https://github.com/beratergun/formda/releases/download/v1.0.0/Yol-v1.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
+<a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle"></a>
+<a href="https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
 </p>
 <p align="center">
-  <a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
-  <a href="https://github.com/beratergun/formda/actions/workflows/android.yml"><img src="https://github.com/beratergun/formda/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/lisans-MIT-076f74" alt="MIT lisansı"></a>
-  <img src="https://img.shields.io/badge/PWA-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-076f74" alt="Çevrimdışı PWA">
-  <img src="https://img.shields.io/badge/TypeScript-strict-3178c6" alt="Strict TypeScript">
+<a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
+<a href="https://github.com/beratergun/formda/actions/workflows/android.yml"><img src="https://github.com/beratergun/formda/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-087e83" alt="MIT"></a>
+<img src="https://img.shields.io/badge/PWA-offline-087e83" alt="Offline PWA">
+<img src="https://img.shields.io/badge/TypeScript-strict-3178c6" alt="Strict TypeScript">
 </p>
-<p align="center"><a href="#english">English</a> · <a href="https://beratergun.github.io/formda/">Uygulamayı aç</a> · <a href="https://github.com/beratergun/formda/releases/tag/v1.0.0">v1.0.0</a></p>
+<p align="center"><a href="#english">English</a> · <a href="https://github.com/beratergun/formda/releases/tag/v2.0.0">v2.0.0 ve SHA-256</a></p>
 
-![Telefon çerçevesinde Bugün, Antrenman ve fotoğraf karşılaştırması](docs/screenshots/light-collage.png)
+![Formda: Bugün, antrenman ve fotoğraf; telefon çerçevelerinde kurgusal demo](docs/screenshots/light-collage.png)
 
-<p align="center"><img src="docs/demo.gif" width="360" alt="Formda uygulamasının altı ekranlık kısa demo GIF'i"></p>
+<p align="center"><img src="docs/demo.gif" width="360" alt="Formda: kurgusal verilerle 24 saniyelik demo"></p>
 
-**Formda**, ne yediğini, nasıl hareket ettiğini ve gününün nasıl geçtiğini aynı yerde tutan, telefona kurulabilen bir uygulama. PWA olarak Android ve iPhone'da; aynı React kodunun Capacitor paketiyle Android APK olarak çalışır. Hesap açmanı veya abonelik başlatmanı istemez.
+Formda, öğünlerini, antrenmanını ve günlüğünü aynı yerde tutan kişisel bir spor ve beslenme uygulaması. Android ve iPhone'da PWA olarak kurulabilir; Android APK arayüzü de cihazda paketler. Tüm ekranlar Türkçedir. Görsellerdeki Deniz, ölçüler, günlükler ve silüetler **tamamen kurgusaldır**.
 
-Ekran görüntülerindeki Deniz, günlükler ve ölçüler tamamen **kurgusaldır**. Fotoğraflar çizilmiş silüetlerden oluşur. Gerçek kişi fotoğrafı, videosu veya sağlık kaydı bu repoda bulunmaz.
+## Telefona yükle
 
-## Telefona kur
+- **Android / PWA:** [Uygulamayı aç](https://beratergun.github.io/formda/) → Profil → Telefona yükle. Chrome menüsündeki “Uygulamayı yükle” seçeneği de kullanılabilir.
+- **iPhone / PWA:** Safari → Paylaş → Ana Ekrana Ekle.
+- **Android / APK:** [Formda-v2.0.0.apk](https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk), Android 8+. İndirme iznini Android sorar. Release Secrets yoksa APK geliştirme sertifikalı debug yapısıdır; mağaza imzalı paket olarak sunulmaz. [İmzalama rehberi](docs/android.md).
 
-- **Android PWA:** uygulamayı Chrome'da aç, ilk açılıştaki **Uygulamayı yükle** kartına dokun. Kurulum olayı desteklenmiyorsa tarayıcı menüsünden ana ekrana ekle.
-- **iPhone:** Safari'de aç → **Paylaş** → **Ana Ekrana Ekle**. Uygulamadaki görsel rehber adımları gösterir.
-- **Android APK:** üstteki düğmeden APK'yı indir ve cihazının kurulum istemini izle. GitHub Secrets'ta release anahtarı yoksa indirilen dosya, Android geliştirme sertifikalı **debug APK**'dır. İmza doğrulaması ve SHA-256 dosyası release'te bulunur; Play Store paketi olarak sunulmaz.
+Eski web adresi yeni adrese yönlenir; aynı origin üzerindeki yerel veri adları korunur. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp Formda'ya geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
 
-Kurulduğunda ayrı bir uygulama penceresinde açılır: `standalone` görünüm, açılış ekranları, maskable ikonlar ve safe-area desteği vardır. İlk açılış için internet gerekir; varlıklar kaydedildikten sonra çevrimdışı açılır ve kayıt alır. Yeni sürüm, **Yeni sürüm hazır → Güncelle** kartıyla gelir.
+## Günlük koçun
 
-GitHub Pages, uygulamanın statik dağıtım adresidir. PWA ve APK ayrı cihaz alanları kullanır; aralarında geçiş için tam ZIP yedeğini dışa aktar ve diğerinde geri yükle.
+| Alan      | Yapabileceklerin                                                                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Bugün     | Günün planı ve tek eylemli koç kartı; kalori, protein, tahmini harcama ve adım halkaları; su, enerji ve kısa notlar                                    |
+| Beslenme  | Türkçe yazarak ekleme, 797 kaynaklı yiyecek, 160 malzemeli örnek tarif, porsiyon/gram ve çiğ/pişmiş dönüşümü; açık Open Food Facts isim/barkod araması |
+| Antrenman | 5 hazır program + kişisel plan; salon/ev/kısa gün alternatifleri; set, kg, tekrar, RPE, dinlenme, önceki seans ve ilerleme önerisi                     |
+| Rehber    | 159 hareket, 34 alet, kas haritaları, başlangıç/bitiş vektör pozları, nefes, güvenlik ve programa ekleme                                               |
+| İlerleme  | 6 ay–5 yıl planlama, hafif haftalar; grafikler, rekorlar, seri koruyucu, kilitli rozetler ve cihazda üretilen aylık hikâye kartları                    |
+| Anılar    | Hayalet hizalama, karşılaştırma kaydırıcısı, fotoğraf zaman tüneli, vlog ve yerel montaj; günlük/haftalık/aylık raporlar                               |
+| Veri      | PIN, tam ZIP yedek/geri yükleme, CSV, ICS, eski JSON aktarımı ve kurgusal demo modu                                                                    |
 
-## Cebindeki yol arkadaşı
+<p align="center"><img src="docs/screenshots/frames/programs-light.png" width="280" alt="Program seçenekleri"><img src="docs/screenshots/frames/apparatus-dark.png" width="280" alt="Alet rehberi, koyu tema"></p>
 
-|                     | Yapabildiklerin                                                                                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🥗 Beslenme         | 619 kaynaklı yiyecek; favori ve son kullanılanlar, Türkçe bulanık arama, yerel cümle ayrıştırma, porsiyon ve tarif hesabı, öğün fotoğrafı, dünden/plandan kopyalama        |
-| ⚖️ Çiğ / pişmiş     | Ayrı yiyecek kayıtları ve açık durum rozeti; tavuk, pirinç, makarna ve mercimek için iki yönlü gramaj dönüşümü                                                             |
-| 🏋️ Antrenman        | 84 hareketin adımları, hata ve güvenlik ipuçları, kas haritası, alternatifleri; set/kg/tekrar/RPE, önceki seans, dinlenme alarmı, ısınma/soğuma, hacim, rekor ve Epley 1RM |
-| 🏊 Kendi ritmin     | Yüzme uzunluk ve aralık sayacı, kardiyo mesafesi/süresi; 6 ay, 1/3/5 yıl ve süresiz plan; 4 haftalık bloklar, hafif haftalar ve 12 haftalık değerlendirme                  |
-| 📷 Fotoğraf takibi  | Ön/yan/arka poz, %30 hayalet hizalama, zamanlayıcı, galeriden ekleme, EXIF temizliği, önce/sonra kaydırıcısı, seçili fotoğraflarla yerel dönüşüm videosu                   |
-| 🎞️ Vlog             | Kamerayla kayıt veya yükleme, gerçek kırpma, kapak karesi, başlık/ruh hâli/etiket; her gün bir saniyelik anı montajı                                                       |
-| 📔 Günlük           | Günlük, haftalık ve aylık rapor; duygu ve hassasiyet haritası, not/etiket araması, fotoğraf karşılaştırması, PNG kartı ve PDF için yazdırma görünümü                       |
-| ✳️ Yerel asistan    | Gerçek kayıtlardan trendler, kalan kalori/protein kombinasyonları, nazik hatırlatmalar, dönüm noktaları ve 153 özgün Türkçe söz                                            |
-| 📈 İlerleme         | Puan/XP/seri, ısı haritası, kilo ve vücut ölçüleri, makrolar, antrenman ve alışkanlık grafikleri; hedefte duran, açıkça tahmin etiketli projeksiyon                        |
-| 🔐 Verinin kontrolü | PIN uygulama kilidi, küçük resimleri gizleme, depolama yönetimi, tam ZIP yedeği, birleştir/üzerine yaz, CSV, ICS ve eski JSON aktarımı                                     |
+## Kaynağı açık hesaplar
 
-Tahminler bir kilo hızı sözü değildir. Uygulama tıbbi tavsiye veya egzersiz kalorisi/telafi kotası üretmez.
+619 eski besin kaydı resmi USDA SR Legacy dağıtımıyla denetlendi. Geçmiş öğünlerin kayıtlı kalorileri yeniden hesaplanmaz. Her güncel yiyecek kaynak kimliği ve hazırlama durumunu taşır. Karma yemeklerde malzemeler, bitmiş ağırlık ve porsiyonlar görülebilir; tarif ve markaya göre gerçek değer değişir. [Besin denetimi](docs/food-sources.md).
 
-![Koyu temada Bugün, kilo projeksiyonu ve Günlük](docs/screenshots/dark-collage.png)
+Harcanan enerji, Compendium MET değerleri ve set/RPE/süre ya da boy/kilo/adım hesabıyla **tahmin** edilir. Hedefe geri ekleme varsayılan kapalıdır; Profil'de kullanıcı kendi yüzdesini seçebilir. Bir kaynak günlük toplamı varsa seanslar tekrar eklenmez. Kalori yakma kotası veya telafi mesajı yoktur.
 
-## Neden yerel öncelikli?
+Android Health Connect, açık izinle **yalnızca** adım, aktif kalori, egzersiz, kilo ve uyku okur. Önizleme onaylanmadan kaydetmez, kaynaklara yazmaz. Health Connect yoksa veya izin reddedilirse elle kayıt sürer. PWA'da adım ve aktif kalori elle girilir; iPhone HealthKit bu sürümde yoktur.
 
-Günlüklerin bir hesabın veya servis aboneliğinin arkasında kalmasın istedim. Yapılandırılmış kayıtlar cihazın **IndexedDB** alanında, fotoğraf ve videolar öncelikle **OPFS**'te saklanır. OPFS yoksa IndexedDB Blob; Blob yazımını reddeden motorlarda aynı baytları koruyan ikili uyumluluk kodlaması kullanılır.
+Fotoğraftan yemek önerisi isteğe bağlıdır: Apache-2.0 Food101 modeli ilk açılışta yaklaşık 100 MB indirilir, cihazda önbelleğe alınır ve üç öneri verir. Fotoğraf gönderilmez; yiyecek ve porsiyon kullanıcı tarafından onaylanır. Model 101 sınıfla sınırlıdır, Türk yemeklerini karıştırabilir. 10 farklı doğrulama örneğinde 10/10 ilk üç isabet ve çevrimdışı yeniden açılış test edilmiştir; bu küçük örneklem genel doğruluk garantisi değildir. [Ölçüm kaydı](docs/model-evaluation.json).
 
-Uygulama sunucusu, analitik, otomatik bulut eşitlemesi veya uzaktan fotoğraf tanıma yoktur. Tek isteğe bağlı dış sorgu, sen **Paketli ürün ara** dediğinde Open Food Facts'e gönderilen ürün adı/barkodudur. Günlük, fotoğraf veya profil bu isteğe eklenmez. Fontlar ve görseller uygulamayla birlikte paketlenir.
+## Gizlilik ve mimari
 
-PIN bir uygulama kilididir; cihaz şifrelemesinin yerini almaz. Tarayıcı verisini temizlemek kayıtları da kaldırabilir. Tam yedeğini cihaz dışında güvenli bir yerde sen saklarsın. Kamera, mikrofon ve paylaşım tercihleri her zaman ilgili işlemi başlattığında devreye girer.
-
-## Teknoloji ve mimari
-
-React 18 · strict TypeScript · Vite 6 · Tailwind CSS 4 · React Router · Dexie · Zod · date-fns · Recharts · framer-motion · fflate · Workbox / vite-plugin-pwa · Capacitor 8.
+Sunucu, kullanıcı hesabı, abonelik veya analitik yok. GitHub Pages statik dosyaları dağıtır; günlük ve medya cihazda IndexedDB/OPFS ile saklanır. Ağ, uygulama dosyaları, kullanıcının açık ürün araması ve açık onaylı model indirmesi içindir. Fotoğraf, video ve sağlık verisi yüklenmez. Yedek paylaşımı yalnızca kullanıcının sistem paylaşım panelinden seçtiği hedefe yapılır.
 
 ```mermaid
 flowchart LR
-  UI[React arayüzü] --> Store[Yerel Store ve Repository]
-  UI --> Domain[Saf domain fonksiyonları]
-  Store --> DB[(IndexedDB / Dexie)]
-  Store --> Media[(OPFS / yerel medya)]
-  UI --> Workers[Worker: görüntü, ZIP, kare hazırlığı]
-  Workers --> DB
-  UI --> PWA[PWA / Workbox]
-  UI --> Android[Capacitor / Android]
-  UI -. yalnızca açık ürün sorgusu .-> OFF[Open Food Facts]
+  UI[React ekranları] --> Domain[Saf domain hesapları]
+  UI --> Store[Yerel store ve repository]
+  Store --> DB[(Dexie / IndexedDB)]
+  Store --> Media[(OPFS / Blob)]
+  UI --> Workers[ZIP, görsel, hikâye ve model worker]
+  UI --> Native[Capacitor / salt okuma Health Connect]
+  Workers --> Cache[İsteğe bağlı model önbelleği]
 ```
 
-Hesaplar React'ten bağımsız `src/domain/` altında. 5 yıllık plan depoya gün gün yazılmaz; yalnızca görünen tarih deterministik olarak hesaplanır. ZIP ve görüntü işlemleri worker kullanır. Tarayıcıdaki kayıt API'leri gerektiğinde DOM canvas ile akıtılır; destek yoksa tek dosyalık yerel slayt gösterisi üretilir.
+React 18, strict TypeScript, Vite, Tailwind, Dexie, Workbox, Recharts, Zod, fflate ve Capacitor kullanılır. Ağır işlemler worker'a ayrılır; medya API'si desteklenmezse yerel uyumluluk yolu devreye girer. [Mimari](docs/architecture.md), [Android](docs/android.md), [varsayımlar](docs/assumptions.md), [üçüncü taraf lisansları](NOTICE.md).
 
-[Mimari ve veri akışları](docs/architecture.md) · [Besin kaynakları](docs/food-sources.md) · [Android derleme ve imza](docs/android.md).
+## Geliştirme ve kalite
 
-## Geliştir
-
-Node.js **22.12+** ve npm gerekir. Android için JDK 21, Android SDK 36 ve Android Studio kullanabilirsin.
+Node.js 22.12+ gerekir. Android için ayrıca JDK 21 ve SDK 36 kullanılır.
 
 ```sh
-git clone https://github.com/beratergun/formda.git
-cd formda
 npm ci
 npm run dev
-```
-
-Vite adresinin `/formda/` yolunu aç. Statik dağıtım için hash yönlendirme kullanılır.
-
-```sh
-npm run lint
-npm run typecheck
-npm run test
+npm run lint && npm run typecheck && npm run test && npm run build
 npm run test:coverage
-npm run build
 npx playwright install chromium webkit
-npm run test:e2e
-npm run preview
-```
-
-Android için aynı kaynak kodu paketle:
-
-```sh
+npx playwright test
 npm run android:sync
-npm run android:open
 ```
 
-`main` üzerindeki Actions iş akışları kaliteyi, Pages dağıtımını ve APK derlemesini yürütür. Dört imza sırrı varsa release APK; yoksa debug APK üretilir. Anahtar üretme ve Secrets ekleme adımları [Android rehberinde](docs/android.md).
+140 birim testi; Pixel 7/Chromium ve iPhone 14/WebKit boyutlarında 18 E2E; iki temada 26 WCAG görünümü. Eski/yeni yedek alanları ve medya baytları gidiş dönüşte karşılaştırılır. [Güncel kalite ölçümleri](docs/quality.md) ve [kabul matrisi](docs/acceptance-matrix.md) kapsamı ve fiziksel cihaz sınırlarını açıklar. Masaüstü WebKit sonucu fiziksel iPhone testi değildir.
 
-## Test ve kalite
+## Yol haritası ve katkı
 
-- **95 birim testi:** 40'tan fazla Türkçe ayrıştırma örneği, referans kalori hesapları, puan/seri, program, TDEE, projeksiyon, ilerleme, asistan, ICS, eski veri ve yedek bütünlüğü.
-- **Domain kapsamı:** satır %100, fonksiyon %100, dal %98,14; ölçülen ifade kapsamı %99,6.
-- **8 E2E testi:** Pixel 7 / Chromium ve iPhone 14 / WebKit boyutlarında kalıcı kayıt, çevrimdışı açılış, antrenman, fotoğraf ve tam yedek eşitliği. Sahte kamera ve çalışma anında üretilen vlog Chromium'da; Windows WebKit portunda galeri ve depolama uyumluluk yolu doğrulanır.
-- **Erişilebilirlik:** açık/koyu temada 18 görünümde otomatik WCAG A/AA denetimi; klavye, odak ve telefon taşma kontrolleri.
-- **Mobil Lighthouse:** yerel üretim ölçümleri **96–99 / 100 / 100** (performans / erişilebilirlik / en iyi uygulamalar). Eşikler 90 / 95 / 95. Sonuç cihaz ve ağ koşuluna göre değişir.
+Fiziksel cihazlarla Health Connect kaynak uyumluluğunu genişletmek; iOS HealthKit dağıtımı ve gerekli Apple geliştirici hesabı; saat entegrasyonu; daha geniş Türk yemeği veri seti ve model değerlendirmesi. Güvenilir olmayan web hareket sensörü adım sayacı bu sürüme eklenmedi.
 
-[Doğrulama kapsamı ve yeniden çalıştırma](docs/quality.md). Ekranları yenilemek için önizleme sunucusu açıkken `node scripts/capture-demo.mjs`, ardından `node scripts/presentation-assets.mjs` çalıştır. Bu akış ayrı oturumda yalnızca kurgusal demo üretir.
-
-## Yol haritası
-
-- İsteğe bağlı ve açık onaylı bulut eşitlemesi
-- Health Connect / Apple Health aktarımı
-- Saat uygulaması
-- İsteğe bağlı fotoğraf tanıma eklentisi
-
-Bu entegrasyonlar mevcut sürümde etkin değildir; yerel kullanım bunlara bağlı değildir.
-
-Katkılar için [CONTRIBUTING](CONTRIBUTING.md), güvenlik için [SECURITY](SECURITY.md), sürümler için [CHANGELOG](CHANGELOG.md). **MIT** · [Seyid Berat Ergün](https://github.com/beratergun).
+[Katkı rehberi](CONTRIBUTING.md) ve [güvenlik politikası](SECURITY.md). Uygulama kodu [MIT](LICENSE), Seyid Berat Ergün. Üçüncü taraf font, eklenti ve modeller kendi lisanslarını korur.
 
 ---
 
@@ -140,16 +97,16 @@ Katkılar için [CONTRIBUTING](CONTRIBUTING.md), güvenlik için [SECURITY](SECU
 
 ## English
 
-**Formda is a personal fitness and nutrition app that stays on your device.** Install the PWA on Android or iPhone, or download the Android APK above. Both use the same React source. GitHub Pages distributes the static app; it does not receive your journal or media.
+**Formda is your personal fitness and nutrition coach, on your device.** Install the [PWA](https://beratergun.github.io/formda/) on Android or iPhone, or download the [Android APK](https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk) for Android 8+. The interface is Turkish. All demo records, measurements and silhouettes are fictional.
 
-Track meals using local Turkish sentence parsing, search, recipes, portions and explicit raw/cooked food entries. Follow workouts set by set with weight, reps, RPE, rest alarms, previous sessions and progression suggestions. An 84-exercise library includes instructions, safety guidance, muscle maps and alternatives. Swimming and cardio have dedicated recording controls.
+Choose five ready-made programs or keep your personal plan. Adapt a single day to a busy gym, home equipment or a short session. Track sets, weight, reps, RPE and rest, with previous-session guidance. Explore 159 exercises and 34 apparatus entries with original vector poses, muscle maps and safety instructions. Follow long-term plans, deload weeks, records, badges and shareable monthly stories.
 
-Progress photos support ghost alignment, before/after sliders and local montage export. Record or upload video journals, trim clips and assemble one-second memories. Daily, weekly and monthly reports bring together meals, training, energy, mood and notes. A local rule engine uses actual records for trends and suggestions. Plans cover six months through five years, with repeating maintenance cycles, deloads and assessments.
+Nutrition includes 797 sourced foods, 160 ingredient-based example recipes, Turkish sentence parsing, portions and raw/cooked conversion. The original 619 entries were audited against official USDA data. Historical meal snapshots remain unchanged. Calories burned are estimates and are not added to the daily goal by default.
 
-**No account, subscription, analytics or application backend.** Records live in IndexedDB; media prefers OPFS with local storage fallbacks. The only optional external query is a product name/barcode sent to Open Food Facts when you explicitly request a packaged-product search. Photos, videos and health records are not attached. The PIN is an application lock, not device encryption. Export a full ZIP backup before clearing app data or moving between the PWA and APK.
+Android Health Connect reads five categories with explicit permission and never writes back. Missing support or denied permission leaves manual tracking available. The PWA supports manual steps and active calories. Optional Apache-2.0 Food101 recognition downloads only after consent, runs locally, offers three suggestions, and requires food/portion confirmation. It covers 101 classes, not all Turkish cuisine. A ten-class, ten-image smoke evaluation achieved 10/10 top-three hits and offline worker reopening; this is not a population accuracy claim.
 
-The downloadable APK is a development-certificate **debug build** when release-signing Secrets are absent. Signed release builds use a user-owned keystore configured through GitHub Secrets; see [Android instructions](docs/android.md). Physical-device camera permission and installation dialogs still depend on the operating system. Desktop WebKit tests are not presented as physical iPhone tests.
+No account, subscription, analytics or personal-data server. IndexedDB stores records; OPFS stores media with Blob fallback. Explicit product search and model download are the only optional external services. Photos, videos and health records are never uploaded. Export full ZIP backups to move between devices or the PWA and APK. Before replacing the old Yol APK, export and verify its backup, then import it into Formda.
 
-**Measured quality:** 95 unit tests; 100% domain line/function coverage and 98.14% branch coverage; eight mobile-browser E2E tests; two-theme automated accessibility checks; local mobile Lighthouse 96–99/100/100. The full backup round trip verifies structured records and binary media equality. Scores can vary by device and network.
+The APK uses a development certificate when release-signing Secrets are absent; see the [signing guide](docs/android.md). Automated desktop browsers cannot verify physical OS permission and installation panels. Use Node 22.12+, `npm ci`, `npm run dev`, and the validation commands above. The project includes 140 unit tests, 18 mobile-browser E2E cases and 26 two-theme accessibility views. See [quality evidence](docs/quality.md) for current results and limits.
 
-Use Node 22.12+, run `npm ci` and `npm run dev`. Validation commands and native build commands are listed above. The interface is Turkish. All screenshots, measurements and silhouette images shown here are fictional demo content. Contributions are welcome under the [MIT license](LICENSE).
+Built with React, TypeScript, Vite, Dexie, Workbox, Capacitor and local workers. Contributions are welcome under the MIT license. Roadmap: broader physical-device Health Connect checks, iOS HealthKit distribution, wearables, and wider Turkish-food evaluation.

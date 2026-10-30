@@ -1,5 +1,5 @@
 name: Özellik öner
-description: Yol için bir ihtiyacı ve beklediğin davranışı anlat.
+description: Formda için bir ihtiyacı ve beklediğin davranışı anlat.
 labels: [enhancement]
 body:
   - type: textarea

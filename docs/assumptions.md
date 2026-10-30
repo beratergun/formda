@@ -8,7 +8,7 @@
 - Puanın kalori bileşeni şartnameye göre yalnızca üç ayrı öğün kaydı ve hedef ±250 kcal ile verilir; prototipteki aralık dışı yarım puan taşınmaz.
 - Uyarlanabilir TDEE hesabında kilo değişimi son ortalama eksi ilk ortalamadır; enerji dengesi için bu fark alımdan çıkarılır. Kilo kaybı böylece harcamayı artıran kanıt olur.
 - Şartnamedeki 4 haftalık blok (3 yüklenme + 1 hafif hafta) prototipin tek 13. hafta molasının yerine geçer. Her 12. haftada değerlendirme vardır.
-- Besinler için uydurma veri yerine resmi USDA dağıtımı kullanıldı. Referans kayıtlar yaklaşık kaynak etiketiyle korundu; tür ve marka farklarını gizlemek için eksik makrolar tamamlanmadı.
+- v1 başlangıcında resmi USDA dağıtımı kullanıldı ve referans kayıtlar yaklaşık etiketiyle korundu. v2 kaynak denetimi bu 60 kaydın gelecekte kullanılan değerlerini düzeltti; tarihsel öğünler ve eski aktarım hesabı korunur. Tür/marka farkları ve bilinmeyen makrolar gizlenmez.
 - Fotoğraf/video kare hazırlığı OffscreenCanvas worker'larında yapılır. MediaRecorder ve HTMLCanvasElement.captureStream DOM API'leri olduğundan son kayıt ana iş parçacığında requestAnimationFrame ile akıtılır. Bu tarayıcı kısıtı, ağır senkron iş yapılarak aşılmaz.
 - Ek Android teslimi aynı React kodunu Capacitor içinde paketler. Release keystore'u kullanıcıya aittir; sırlar yoksa Android'in standart geliştirme sertifikalı debug APK'sı sağlanır. Kurulabilen Android APK'ları bir sertifika gerektirir; debug sertifikası mağaza/release imzası olarak sunulmaz.
 - Fotoğraf sıkıştırma öncelikle worker'da yapılır. Worker içindeki görüntü API'lerini desteklemeyen tarayıcılarda HTMLImageElement/canvas uyumluluk yolu kullanılır; 1600 px sınırı, kalite ve EXIF temizleme korunur.

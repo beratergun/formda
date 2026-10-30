@@ -82,8 +82,20 @@ try {
       .getByRole('heading', { name: 'İki an, aynı yol', exact: true })
       .evaluate((el) => el.scrollIntoView({ block: 'start' }));
     await shot(`photos-${theme}`);
+    await page.goto(base + '#/apparatus');
+    await page.getByRole('heading', { name: 'Aletler', exact: true }).waitFor();
+    await shot(`apparatus-${theme}`);
+    await page.getByRole('link', { name: 'Profil', exact: true }).click();
+    await page.getByRole('button', { name: 'Kaynakları ve izinleri yönet' }).click();
+    await shot(`sources-${theme}`);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.getByRole('link', { name: 'Planım', exact: true }).click();
+    await page
+      .getByText('Hazır programın', { exact: true })
+      .evaluate((el) => el.scrollIntoView({ block: 'start' }));
+    await shot(`programs-${theme}`);
   }
-  console.log('16 screenshots captured from an isolated fictional demo.');
+  console.log('22 screenshots captured from an isolated fictional demo.');
 } finally {
   await context.close();
   await browser.close();

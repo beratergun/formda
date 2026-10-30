@@ -1,7 +1,7 @@
 reference/
 PROMPT.md
 AGENTS.md
-CODEX_MESAJI.txt
+CODEX_MESAJI*.txt
 node_modules/
 dist/
 docs/qa/

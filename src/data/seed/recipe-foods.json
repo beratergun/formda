@@ -24,7 +24,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ezogelin",
@@ -51,7 +52,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yayla",
@@ -78,7 +80,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-domates-corbasi",
@@ -105,7 +108,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-suyu",
@@ -132,7 +136,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sebze-corbasi",
@@ -159,7 +164,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mantar-corbasi",
@@ -186,7 +192,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-brokoli-corbasi",
@@ -213,7 +220,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kabak-corbasi",
@@ -240,7 +248,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-pirasa-corbasi",
@@ -267,7 +276,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ispanak-corbasi",
@@ -294,7 +304,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-nohut-corbasi",
@@ -321,7 +332,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-bulgur-corbasi",
@@ -348,7 +360,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-pirinc-corbasi",
@@ -375,7 +388,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sehriye-corbasi",
@@ -402,7 +416,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kereviz-corbasi",
@@ -429,7 +444,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-balkabagi-corbasi",
@@ -456,7 +472,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-karnabahar-corbasi",
@@ -483,7 +500,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yogurtlu-bugday",
@@ -510,7 +528,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-terbiyeli-sebze",
@@ -537,7 +556,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-zeytinyagli-fasulye",
@@ -564,7 +584,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-fasulye",
@@ -591,7 +612,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-zeytinyagli-pirasa",
@@ -618,7 +640,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-zeytinyagli-enginar",
@@ -645,7 +668,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-zeytinyagli-kereviz",
@@ -672,7 +696,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ispanak-yemegi",
@@ -699,7 +724,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-ispanak",
@@ -726,7 +752,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yumurtali-ispanak",
@@ -753,7 +780,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kabak-yemegi",
@@ -780,7 +808,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-kabak",
@@ -807,7 +836,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kabak-dolmasi",
@@ -834,7 +864,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-biber-dolmasi",
@@ -861,7 +892,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-biber-dolmasi",
@@ -888,7 +920,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-lahana-sarmasi",
@@ -915,7 +948,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-lahana-sarmasi",
@@ -942,7 +976,8 @@
         "qty": 280
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kapuska",
@@ -969,7 +1004,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-kapuska",
@@ -996,7 +1032,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-bamya-yemegi",
@@ -1023,7 +1060,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-bamya",
@@ -1050,7 +1088,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-bezelye-yemegi",
@@ -1077,7 +1116,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-bezelye",
@@ -1104,7 +1144,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-turlu",
@@ -1131,7 +1172,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-turlu",
@@ -1158,7 +1200,8 @@
         "qty": 280
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-imambayildi",
@@ -1185,7 +1228,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-karniyarik",
@@ -1212,7 +1256,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patlican-musakka",
@@ -1239,7 +1284,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-firinda-karnabahar",
@@ -1266,7 +1312,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-brokoli-sote",
@@ -1293,7 +1340,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mantar-sote",
@@ -1320,7 +1368,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patates-oturtma",
@@ -1347,7 +1396,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kuru-fasulye",
@@ -1374,7 +1424,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-kuru-fasulye",
@@ -1401,7 +1452,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-nohut-yemegi",
@@ -1428,7 +1480,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-nohut",
@@ -1455,7 +1508,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yesil-mercimek",
@@ -1482,7 +1536,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-eristeli-mercimek",
@@ -1509,7 +1564,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mercimek-koftesi",
@@ -1536,7 +1592,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kisr",
@@ -1563,7 +1620,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-pirinc-pilavi",
@@ -1590,7 +1648,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sehriyeli-pilav",
@@ -1617,7 +1676,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-nohutlu-pilav",
@@ -1644,7 +1704,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuklu-pilav",
@@ -1671,7 +1732,8 @@
         "qty": 260
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-bulgur-pilavi",
@@ -1698,7 +1760,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sebzeli-bulgur",
@@ -1725,7 +1788,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mercimekli-bulgur",
@@ -1752,7 +1816,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sade-makarna",
@@ -1779,7 +1844,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-domatesli-makarna",
@@ -1806,7 +1872,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yogurtlu-makarna",
@@ -1833,7 +1900,8 @@
         "qty": 280
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-firinda-makarna",
@@ -1860,7 +1928,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sebzeli-makarna",
@@ -1887,7 +1956,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-izgara-kofte",
@@ -1914,7 +1984,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-izmir-kofte",
@@ -1941,7 +2012,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sulu-kofte",
@@ -1968,7 +2040,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-firinda-kofte",
@@ -1995,7 +2068,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kadinbudu-kofte",
@@ -2022,7 +2096,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-sote",
@@ -2049,7 +2124,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mantarlı-tavuk",
@@ -2076,7 +2152,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-firinda-tavuk",
@@ -2103,7 +2180,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-haslama",
@@ -2130,7 +2208,8 @@
         "qty": 350
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-sis",
@@ -2157,7 +2236,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-et-sote",
@@ -2184,7 +2264,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tas-kebabi",
@@ -2211,7 +2292,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-etli-guvec",
@@ -2238,7 +2320,8 @@
         "qty": 320
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kuzu-sebzeli",
@@ -2265,7 +2348,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-patates",
@@ -2292,7 +2376,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-bulgur",
@@ -2319,7 +2404,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-tavuk-durum",
@@ -2346,7 +2432,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-lahmacun",
@@ -2373,7 +2460,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-pide",
@@ -2400,7 +2488,8 @@
         "qty": 350
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-pide",
@@ -2427,7 +2516,8 @@
         "qty": 325
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-manti",
@@ -2454,7 +2544,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-menemen",
@@ -2481,7 +2572,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-soganli-menemen",
@@ -2508,7 +2600,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sade-omlet",
@@ -2535,7 +2628,8 @@
         "qty": 125
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-omlet",
@@ -2562,7 +2656,8 @@
         "qty": 175
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mantarlı-omlet",
@@ -2589,7 +2684,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ispanakli-omlet",
@@ -2616,7 +2712,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patatesli-omlet",
@@ -2643,7 +2740,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-cilbir",
@@ -2670,7 +2768,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-gozleme",
@@ -2697,7 +2796,8 @@
         "qty": 225
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ispanakli-gozleme",
@@ -2724,7 +2824,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patatesli-gozleme",
@@ -2751,7 +2852,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-gozleme",
@@ -2778,7 +2880,8 @@
         "qty": 275
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-borek",
@@ -2805,7 +2908,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ispanakli-borek",
@@ -2832,7 +2936,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patatesli-borek",
@@ -2859,7 +2964,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kiymali-borek",
@@ -2886,7 +2992,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-pogaca",
@@ -2913,7 +3020,8 @@
         "qty": 75
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-simit",
@@ -2940,7 +3048,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-acma",
@@ -2967,7 +3076,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-pisi",
@@ -2994,7 +3104,8 @@
         "qty": 75
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kabak-mucver",
@@ -3021,7 +3132,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patates-mucver",
@@ -3048,7 +3160,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-havuclu-mucver",
@@ -3075,7 +3188,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-peynirli-tost",
@@ -3102,7 +3216,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yumurtali-ekmek",
@@ -3129,7 +3244,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-coban-salata",
@@ -3156,7 +3272,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kasik-salata",
@@ -3183,7 +3300,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-gavurdagi",
@@ -3210,7 +3328,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-piyaz",
@@ -3237,7 +3356,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-nohut-salata",
@@ -3264,7 +3384,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mercimek-salata",
@@ -3291,7 +3412,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-patates-salata",
@@ -3318,7 +3440,8 @@
         "qty": 220
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-yogurtlu-havuc",
@@ -3345,7 +3468,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-cacik",
@@ -3372,7 +3496,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-haydari",
@@ -3399,7 +3524,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sutlac",
@@ -3426,7 +3552,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-firin-sutlac",
@@ -3453,7 +3580,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-muhallebi",
@@ -3480,7 +3608,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kakaolu-muhallebi",
@@ -3507,7 +3636,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-irmik-tatlisi",
@@ -3534,7 +3664,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-irmik-helvasi",
@@ -3561,7 +3692,8 @@
         "qty": 120
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-un-helvasi",
@@ -3588,7 +3720,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-revani",
@@ -3615,7 +3748,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-irmik-sekerpare",
@@ -3642,7 +3776,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-cevizli-baklava",
@@ -3669,7 +3804,8 @@
         "qty": 80
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kabak-tatlisi",
@@ -3696,7 +3832,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-elma-tatlisi",
@@ -3723,7 +3860,8 @@
         "qty": 180
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-elmalı-kurabiye",
@@ -3750,7 +3888,8 @@
         "qty": 60
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kurabiye",
@@ -3777,7 +3916,8 @@
         "qty": 40
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-cevizli-kek",
@@ -3804,7 +3944,8 @@
         "qty": 80
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-havuclu-kek",
@@ -3831,7 +3972,8 @@
         "qty": 80
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kakaolu-kek",
@@ -3858,7 +4000,8 @@
         "qty": 80
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-mozaik-tatli",
@@ -3885,7 +4028,8 @@
         "qty": 80
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-asure-ornek",
@@ -3912,7 +4056,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-meyveli-yogurt",
@@ -3939,7 +4084,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-ayran",
@@ -3966,7 +4112,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-naneli-ayran",
@@ -3993,7 +4140,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-limonata",
@@ -4020,7 +4168,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-portakal-suyu",
@@ -4047,7 +4196,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-cilek-icecek",
@@ -4074,7 +4224,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-muzlu-sut",
@@ -4101,7 +4252,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kakaolu-sut",
@@ -4128,7 +4280,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sutlu-kahve",
@@ -4155,7 +4308,8 @@
         "qty": 300
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-soguk-cay",
@@ -4182,7 +4336,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-elma-komposto",
@@ -4209,7 +4364,8 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-salata-yagsiz",
@@ -4236,7 +4392,8 @@
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-kahvalti-sebzesi",
@@ -4263,7 +4420,8 @@
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-sogan-havuc",
@@ -4290,7 +4448,8 @@
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   },
   {
     "id": "tr-recipe-haslanmis-sebze",
@@ -4317,6 +4476,7 @@
         "qty": 250
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "readyToEat": true
   }
 ]

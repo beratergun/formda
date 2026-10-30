@@ -1,10 +1,11 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, rename, rm } from 'node:fs/promises';
+import { setTimeout as delay } from 'node:timers/promises';
 import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 
 const sourcePath =
   process.argv[2] ||
-  `${tmpdir()}/yol-food-source/FoodData_Central_sr_legacy_food_json_2018-04.json`;
+  `${tmpdir()}/formda-food-source/FoodData_Central_sr_legacy_food_json_2018-04.json`;
 const bytes = await readFile(sourcePath),
   official = JSON.parse(bytes).SRLegacyFoods;
 const originals = new Map(official.map((f) => [f.fdcId, f]));
@@ -293,6 +294,7 @@ const descriptions = {
   patates: 'Patates (haşlanmış, kabuksuz)',
   cay: 'Şekersiz demlenmiş çay (200 g)',
 };
+for (const food of recipeFoods) food.readyToEat = true;
 for (const food of reference) {
   const before = { kcal: food.kcalPer, protein: food.proteinPer };
   if (direct[food.id]) {
@@ -311,6 +313,17 @@ for (const food of reference) {
     food.sourceId = `fdc:${id}`;
     food.sourceKind = 'usda';
     food.sourceDescription = f.description;
+    food.readyToEat = [
+      'elma',
+      'muz',
+      'mandalina',
+      'portakal',
+      'meyvesuyu',
+      'karpuz',
+      'uzum',
+    ].includes(food.id);
+    if (/\braw\b/i.test(f.description)) food.state = 'raw';
+    else if (/\bcooked\b/i.test(f.description)) food.state = 'cooked';
     food.source = `USDA FoodData Central · FDC ${id} · ${grams} g / kayıt birimi${['egg', 'eggw'].includes(food.id) ? '; adet kcal tam sayıya, protein 0,1 g hassasiyete yuvarlandı' : ''} · https://fdc.nal.usda.gov/food-details/${id}/nutrients`;
   } else {
     const recipe = recipeFoods.find((r) => r.id === `tr-recipe-${recipeAliases[food.id]}`);
@@ -365,8 +378,23 @@ for (const [path, value] of Object.entries({
     corrected: reference.length,
     recipes: recipes.length,
   },
-}))
-  await writeFile(path, JSON.stringify(value, null, 2) + '\n');
+})) {
+  const temporary = `${path}.tmp`;
+  try {
+    await writeFile(temporary, JSON.stringify(value, null, 2) + '\n');
+    for (let attempt = 0; ; attempt++) {
+      try {
+        await rename(temporary, path);
+        break;
+      } catch (error) {
+        if (attempt >= 4) throw error;
+        await delay(200);
+      }
+    }
+  } finally {
+    await rm(temporary, { force: true });
+  }
+}
 console.log(
   JSON.stringify({
     audited: audit.length,

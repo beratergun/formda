@@ -7,7 +7,23 @@ import usdaFoods from './usda-foods.json';
 import type { Food, MenuPlan, Recipe } from '../../domain/types';
 
 export const FOODS = [...referenceFoods, ...usdaFoods, ...recipeFoods] as Food[];
-export const DEFAULT_MENU = menu as MenuPlan;
+export const DEFAULT_MENU: MenuPlan = {
+  ...menu,
+  days: menu.days.map((day) =>
+    Object.fromEntries(
+      Object.entries(day).map(([mealId, meal]) => [
+        mealId,
+        {
+          ...meal,
+          items: meal.items.map((item) => ({
+            ...item,
+            state: FOODS.find((food) => food.id === item.foodId)?.state || item.state,
+          })),
+        },
+      ]),
+    ),
+  ),
+} as MenuPlan;
 
 export const LEGACY_FOODS = legacyFoods as Food[];
 export const TURKISH_RECIPES = recipes as Recipe[];

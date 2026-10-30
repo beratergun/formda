@@ -41,7 +41,8 @@ try {
       items: a.details.items.slice(0, 4),
     }));
   console.log(JSON.stringify({ url, scores, failures }, null, 2));
-  if (scores.performance < 90 || scores.accessibility < 95 || scores['best-practices'] < 95)
+  // Preserve the published v1 CI baseline; never lower the release gate for v2.
+  if (scores.performance < 96 || scores.accessibility < 100 || scores['best-practices'] < 100)
     process.exitCode = 1;
 } finally {
   await browser.close();

@@ -1,40 +1,43 @@
-# Kalite doğrulaması
+# Formda v2 · Kalite doğrulaması
 
-Kayıtlar ve medya testlerde tamamen kurgusaldır. Ham tarayıcı raporları ve ekran görüntüleri `docs/qa/` altında yerel tutulur; repoya yüklenmez.
+Tüm uygulama kayıtları ve tanıtım silüetleri kurgusaldır. Ham tarayıcı raporları `docs/qa/` altında yerel tutulur. Model değerlendirmesinde kullanılan herkese açık Food101 fotoğrafları da bu ignored klasördedir; repoya eklenmez.
 
-Son canlı mobil Lighthouse ölçümü **100/100/100**, CI ölçümü **96/100/100**. İlk canlı ölçüm 90/100/100 olarak kaydedildi; sonuçların ağ ve cihazla değişebildiği açıktır. APK, Android lint ve apksigner doğrulaması CI'da geçti ve v1.0.0 release'ine eklendi. Yayın dosyaları tekrar indirilip hash ve paket kimliği doğrulandı.
+| Kontrol                                   | Yerel sonuç / kapsam                                                                                                |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| ESLint / strict TypeScript / üretim build | Geçti; son v2 yayın kapısında tekrar çalıştırılır                                                                   |
+| Vitest                                    | 140 test: hesaplar, Türkçe ayrıştırma, plan, alternatifler, kaynaklar, enerji, izin hataları, eski veri ve depolama |
+| Domain kapsamı                            | Satır %100 · fonksiyon %100 · dal %97,37 · ifade %99,67                                                             |
+| Playwright                                | Pixel 7/Chromium ve iPhone 14/WebKit: 18/18; yeni model/kalıcı profil değişikliğinin 4 testi ayrıca geçti           |
+| Erişilebilirlik                           | Açık/koyu temada 26 WCAG A/AA görünümünde sıfır ihlal                                                               |
+| Mobil Lighthouse                          | v2 üretim ölçümü 96/100/100; v1 CI tabanı 96/100/100 korunur                                                        |
+| Görsel QA                                 | Playwright MCP, 390×844 ve 412×915, iki tema; kaynak/öğün/plan/rehber akışları, taşma ve konsol kontrolü            |
+| Gerçek yemek modeli                       | 10 ayrı Food101 sınıfında 10/10 ilk üç; yeni worker çevrimdışı çalıştı; ağ yazımı yok                               |
+| Veri koruma                               | Tarihsel kcal, favoriler, özel tarifler, yeni profil/sağlık alanları ve medya baytları yedek gidiş dönüşünde eşit   |
+| Android                                   | Yerel native sync geçti; v2 Gradle/lint, birleşmiş manifest, APK imzası ve SHA-256 son CI'da doğrulanır             |
+| Sunum                                     | 22 ekran, 24 saniye GIF, 1280×640 sosyal görsel, 7 carousel; TR 193 / EN 218 kelime                                 |
 
-| Kontrol                    | Sonuç / kapsam                                                                                                              |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| ESLint / strict TypeScript | Geçti                                                                                                                       |
-| Vitest                     | 95 test; kalori, Türkçe ayrıştırma, plan, puan, projeksiyon, asistan, ICS, eski veri ve depolama                            |
-| Domain kapsamı             | Satır %100 · dal %98,14 · fonksiyon %100 · ifade %99,6                                                                      |
-| Playwright                 | Pixel 7 / Chromium ve iPhone 14 / WebKit: 8/8 geçti; tüm kayıtlar ve medya baytları yedek gidiş dönüşünde eşit              |
-| Mobil Lighthouse           | Yerel üretim ölçümleri: performans 96–99 · erişilebilirlik 100 · en iyi uygulamalar 100. Yayın öncesi son ölçüm 99/100/100. |
-| WCAG otomasyonu            | Kurgusal demo ile iki temada 18 görünüm; WCAG A/AA bulgusu yok                                                              |
-| Görsel QA                  | 390×844 ve 412×915; açık/koyu tema, taşma ve konsol kontrolleri                                                             |
-| Android kaynak paketi      | `npm run android:sync` geçti; uzak sunucu adresi kullanılmıyor                                                              |
-| APK                        | Gradle, Android lint, imza ve SHA-256 doğrulaması geçti; v1.0.0 eki hazır                                                   |
+Lighthouse performansı cihaz ve çalışma yüküyle değişir. Script artık eski yayın tabanı olan 96/100/100 altını başarısız sayar. Model ölçümü küçük bir smoke değerlendirmesidir; Türk mutfağının tamamı için %100 doğruluk iddiası değildir. Model 101 sınıfla sınırlı ve isteğe bağlıdır.
 
-Tarayıcı testleri karşılama, tam 219 kcal öğün, kalıcı kayıt, çevrimdışı su kaydı, iki antrenman seti ve dinlenme sayacı, ilerleme grafiği, Cuma planı, fotoğraf karşılaştırması, vlog oynatma ve tam yedek gidiş dönüşünü kapsar. Kamera akışı ve vlog dosyası çalışma anında üretilir; kişisel veya dışarıdan indirilmiş medya kullanılmaz.
+Tarayıcı testleri karşılama, güncel 220 kcal öğün, kalıcı kayıt, çevrimdışı su, set/dinlenme/özet, program/alternatif/hareket değiştirme, alet rehberi, aylık hikâye, fotoğraf/vlog ve tam ZIP geri yüklemeyi kapsar. Health Connect yokluğu, salt okuma çağrıları ve ret/kısmi hata birimlerde; PWA güvenli devam E2E'de doğrulanır.
 
-Windows WebKit portunda OffscreenCanvas, canvas.captureStream ve IndexedDB Blob davranışları gerçek iPhone Safari'den farklıdır. Bu portta galeri yükleme ve ikili medya uyumluluk yolu doğrulanır. Fiziksel iPhone/Android kamera izinleri, ana ekran kurulum menüleri ve işletim sistemi paylaşım panelleri masaüstü otomasyonunun yerine geçen fiziksel cihaz sonucu olarak sunulmaz.
+Fiziksel Android Health Connect izin paneli ve gerçek veri sağlayıcıları bu masaüstü oturumunda denenmedi. Windows WebKit sonucu fiziksel iPhone testi değildir. İşletim sistemi kurulum, kamera ve paylaşım panelleri telefonda doğrulanmalıdır. Release anahtarı kullanıcıya aittir; Secrets yoksa APK geliştirme sertifikalıdır.
 
-## Yeniden çalıştırma
+## Tekrar çalıştırma
 
 ```sh
 npm ci
-npm run lint
-npm run typecheck
+npm run lint && npm run typecheck && npm run test && npm run build
 npm run test:coverage
-npm run build
 npx playwright install chromium webkit
 npx playwright test
-npm run preview -- --port 4173
-# Ayrı terminalde:
+# Ayrı terminalde: npm run preview -- --port 4173
 node scripts/a11y.mjs
 node scripts/lighthouse.mjs
+node scripts/evaluate-food-model.mjs
+node scripts/check-docs.mjs
+node scripts/check-presentation.mjs
 npm run android:sync
+node scripts/check-apk.mjs /path/to/Formda-v2.0.0.apk
 ```
 
-Lighthouse puanları cihaz ve çalışma yüküne göre değişebilir; script 90/95/95 altını başarısız sayar. Lighthouse 13'te bulunmayan PWA kategorisi yerine manifest, maskable ikon, etkin service worker, Chrome kurulum denetimi ve çevrimdışı yeniden açılış test edilir. Üretimde ağ yalnızca statik uygulama varlıkları ve kullanıcının açık ürün aramasından oluşur.
+Lighthouse 13'te PWA kategorisi yerine manifest, maskable ikon, service worker, Chrome kurulabilirlik denetimi ve çevrimdışı yeniden açılış ayrıca sınanır. Son canlı/CI sonuçları [yayın kontrolünde](release-check.md) kaydedilir.

@@ -8,6 +8,7 @@ export const MEALS: { id: MealId; name: string; time: string }[] = [
 ];
 export interface Food {
   sourceId?: string;
+  readyToEat?: boolean;
   sourceKind?: 'usda' | 'recipe' | 'legacy' | 'off';
   sourceDescription?: string;
   recipeId?: string;

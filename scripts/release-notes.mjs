@@ -10,7 +10,7 @@ const body = lines
   .filter((line) => !line.startsWith(`[${version}]:`))
   .join('\n')
   .trim();
-const notes = `${body}\n\n**[Telefona yükle (PWA)](https://beratergun.github.io/formda/)** · **[Android APK indir](https://github.com/beratergun/formda/releases/download/v${version}/Yol-v${version}.apk)**\n\nKaynak kodu ve APK iş akışı aynı sürüme aittir. Fotoğraf, video ve günlükler cihazda saklanır. İndirilen APK'nın SHA-256 dosyası aşağıdaki eklerdedir. Release imza anahtarı eklemek için [Android rehberini](https://github.com/beratergun/formda/blob/v${version}/docs/android.md) izleyebilirsin.\n\n![Formda uygulaması · kurgusal demo](https://raw.githubusercontent.com/beratergun/formda/v${version}/docs/screenshots/light-collage.png)\n\n![Kısa demo](https://raw.githubusercontent.com/beratergun/formda/v${version}/docs/demo.gif)\n`;
-await mkdir('../yol-launch/releases', { recursive: true });
-await writeFile(`../yol-launch/releases/v${version}-notes.md`, notes);
+const notes = `${body}\n\n**[Telefona yükle (PWA)](https://beratergun.github.io/formda/)** · **[Android APK indir](https://github.com/beratergun/formda/releases/download/v${version}/Formda-v${version}.apk)**\n\nKaynak kodu ve APK iş akışı aynı sürüme aittir. Fotoğraf, video ve günlükler cihazda saklanır. İndirilen APK'nın SHA-256 dosyası aşağıdaki eklerdedir. Release imza anahtarı eklemek için [Android rehberini](https://github.com/beratergun/formda/blob/v${version}/docs/android.md) izleyebilirsin.\n\n![Formda uygulaması · kurgusal demo](https://raw.githubusercontent.com/beratergun/formda/v${version}/docs/screenshots/light-collage.png)\n\n![Kısa demo](https://raw.githubusercontent.com/beratergun/formda/v${version}/docs/demo.gif)\n`;
+await mkdir('../formda-launch/releases', { recursive: true });
+await writeFile(`../formda-launch/releases/v${version}-notes.md`, notes);
 console.log(`v${version} notes prepared from CHANGELOG.`);

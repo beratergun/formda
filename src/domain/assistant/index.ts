@@ -53,7 +53,7 @@ export class LocalAssistant implements AssistantProvider {
 export function remainingSuggestions(foods: Food[], kcal: number, protein: number) {
   if (kcal <= 0 || protein <= 0) return [];
   const candidates = foods
-    .filter((f) => f.proteinPer > 0 && f.state !== 'raw')
+    .filter((f) => f.proteinPer > 0 && (f.state !== 'raw' || f.readyToEat === true))
     .sort(
       (a, b) =>
         Number(b.favorite || false) - Number(a.favorite || false) || b.useCount - a.useCount,

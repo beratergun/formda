@@ -2,6 +2,8 @@
 
 Formda v2 kataloğu 797 kayıt içerir: 577 USDA kaydı, eski menü kimliklerini koruyan 60 kaynaklı karşılık ve 160 malzemeli örnek tarif. Her kayıtta kaynak, kaynak kimliği ve zorunlu çiğ/pişmiş/uygulanamaz durumu bulunur. Toplamlar yuvarlanmamış değerlerden hesaplanır.
 
+Kaynak açıklamasında çiğ veya pişmiş olarak belirtilen durum katalog ve yeni varsayılan menüde aynen korunur. Çiğ yenebilen meyve ve hazırlanmış salatalar ayrıca `readyToEat` bilgisi taşır; çiğ yumurta/et gibi malzemeler doğrudan yenebilir kombinasyon olarak önerilmez. Kişisel menüler ve geçmiş öğün durumları otomatik değiştirilmez.
+
 Ek kayıtlar [USDA FoodData Central SR Legacy, Nisan 2018](https://fdc.nal.usda.gov/download-datasets/) JSON dağıtımından gelir. Kalori (1008), protein (1003), karbonhidrat (1005), yağ (1004), lif (1079) değerleri 100 gram için aynen alınır. Her satır kendi FDC kimliğini ve kaynak URL'sini içerir. Veri kamu malıdır; uygulama hiçbir USDA API çağrısı yapmaz.
 
 `docs/food-audit.json` ilk 619 kaydın denetimini ve resmi kaynak arşivin SHA-256 değerini içerir. 559 USDA kaydının kcal/protein değerleri birebir eşleşti; 60 yaklaşık prototip kaydı kaynaklı karşılık veya tarifle düzeltildi. 35 yaygın malzemenin kcal/protein değerleri bağımsız resmi kaynak sabitiyle testlidir. Yedi günün menü toplamları ve pişme dönüşümleri de test edilir.

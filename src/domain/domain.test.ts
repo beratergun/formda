@@ -373,7 +373,7 @@ describe('local assistant and quotes', () => {
     expect(remainingSuggestions(FOODS, 500, 0)).toEqual([]);
     expect(
       remainingSuggestions(
-        [{ ...food('egg'), favorite: true, useCount: 3, portions: [] }],
+        [{ ...food('egg'), state: 'cooked', favorite: true, useCount: 3, portions: [] }],
         200,
         20,
       )[0].qty,

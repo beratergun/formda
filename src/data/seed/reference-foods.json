@@ -7,7 +7,7 @@
     "per": 1,
     "kcalPer": 72,
     "proteinPer": 6.3,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 171287 · 50 g / kayıt birimi; adet kcal tam sayıya, protein 0,1 g hassasiyete yuvarlandı · https://fdc.nal.usda.gov/food-details/171287/nutrients",
     "portions": [
       {
@@ -20,7 +20,8 @@
     "sourceKind": "usda",
     "carbPer": 0.36,
     "fatPer": 4.755,
-    "sourceDescription": "Egg, whole, raw, fresh"
+    "sourceDescription": "Egg, whole, raw, fresh",
+    "readyToEat": false
   },
   {
     "id": "eggw",
@@ -30,7 +31,7 @@
     "per": 1,
     "kcalPer": 17,
     "proteinPer": 3.6,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 172183 · 33 g / kayıt birimi; adet kcal tam sayıya, protein 0,1 g hassasiyete yuvarlandı · https://fdc.nal.usda.gov/food-details/172183/nutrients",
     "portions": [
       {
@@ -43,7 +44,8 @@
     "sourceKind": "usda",
     "carbPer": 0.2409,
     "fatPer": 0.056100000000000004,
-    "sourceDescription": "Egg, white, raw, fresh"
+    "sourceDescription": "Egg, white, raw, fresh",
+    "readyToEat": false
   },
   {
     "id": "tavuk",
@@ -66,7 +68,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 2.62,
-    "sourceDescription": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw"
+    "sourceDescription": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+    "readyToEat": false
   },
   {
     "id": "hindi",
@@ -89,7 +92,8 @@
     "sourceKind": "usda",
     "carbPer": 0.14,
     "fatPer": 1.48,
-    "sourceDescription": "Turkey, whole, breast, meat only, raw"
+    "sourceDescription": "Turkey, whole, breast, meat only, raw",
+    "readyToEat": false
   },
   {
     "id": "kiyma",
@@ -112,7 +116,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 7,
-    "sourceDescription": "Beef, ground, 93% lean meat / 7% fat, raw"
+    "sourceDescription": "Beef, ground, 93% lean meat / 7% fat, raw",
+    "readyToEat": false
   },
   {
     "id": "hamsi",
@@ -135,7 +140,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 4.84,
-    "sourceDescription": "Fish, anchovy, european, raw"
+    "sourceDescription": "Fish, anchovy, european, raw",
+    "readyToEat": false
   },
   {
     "id": "ton",
@@ -158,7 +164,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 0.82,
-    "sourceDescription": "Fish, tuna, light, canned in water, without salt, drained solids"
+    "sourceDescription": "Fish, tuna, light, canned in water, without salt, drained solids",
+    "readyToEat": false
   },
   {
     "id": "suzme",
@@ -181,7 +188,8 @@
     "sourceKind": "usda",
     "carbPer": 3.94,
     "fatPer": 1.92,
-    "sourceDescription": "Yogurt, Greek, plain, lowfat"
+    "sourceDescription": "Yogurt, Greek, plain, lowfat",
+    "readyToEat": false
   },
   {
     "id": "yogurt",
@@ -204,7 +212,8 @@
     "sourceKind": "usda",
     "carbPer": 7.04,
     "fatPer": 1.55,
-    "sourceDescription": "Yogurt, plain, low fat"
+    "sourceDescription": "Yogurt, plain, low fat",
+    "readyToEat": false
   },
   {
     "id": "lor",
@@ -227,7 +236,8 @@
     "sourceKind": "usda",
     "carbPer": 4.76,
     "fatPer": 2.27,
-    "sourceDescription": "Cheese, cottage, lowfat, 2% milkfat"
+    "sourceDescription": "Cheese, cottage, lowfat, 2% milkfat",
+    "readyToEat": false
   },
   {
     "id": "sut",
@@ -250,7 +260,8 @@
     "sourceKind": "usda",
     "carbPer": 4.88,
     "fatPer": 2.013,
-    "sourceDescription": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D"
+    "sourceDescription": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "readyToEat": false
   },
   {
     "id": "kefir",
@@ -273,7 +284,8 @@
     "sourceKind": "usda",
     "carbPer": 4.77,
     "fatPer": 1.02,
-    "sourceDescription": "Kefir, lowfat, plain, LIFEWAY"
+    "sourceDescription": "Kefir, lowfat, plain, LIFEWAY",
+    "readyToEat": false
   },
   {
     "id": "ekmek",
@@ -296,7 +308,8 @@
     "sourceKind": "usda",
     "carbPer": 42.7,
     "fatPer": 3.5,
-    "sourceDescription": "Bread, whole-wheat, commercially prepared"
+    "sourceDescription": "Bread, whole-wheat, commercially prepared",
+    "readyToEat": false
   },
   {
     "id": "yulaf",
@@ -319,7 +332,8 @@
     "sourceKind": "usda",
     "carbPer": 66.3,
     "fatPer": 6.9,
-    "sourceDescription": "Oats (Includes foods for USDA's Food Distribution Program)"
+    "sourceDescription": "Oats (Includes foods for USDA's Food Distribution Program)",
+    "readyToEat": false
   },
   {
     "id": "mercimek",
@@ -342,7 +356,8 @@
     "sourceKind": "usda",
     "carbPer": 63.4,
     "fatPer": 1.06,
-    "sourceDescription": "Lentils, raw"
+    "sourceDescription": "Lentils, raw",
+    "readyToEat": false
   },
   {
     "id": "nohut",
@@ -365,7 +380,8 @@
     "sourceKind": "usda",
     "carbPer": 27.4,
     "fatPer": 2.59,
-    "sourceDescription": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt"
+    "sourceDescription": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "readyToEat": false
   },
   {
     "id": "fasulye",
@@ -388,7 +404,8 @@
     "sourceKind": "usda",
     "carbPer": 25.1,
     "fatPer": 0.35,
-    "sourceDescription": "Beans, white, mature seeds, cooked, boiled, without salt"
+    "sourceDescription": "Beans, white, mature seeds, cooked, boiled, without salt",
+    "readyToEat": false
   },
   {
     "id": "patates",
@@ -411,7 +428,8 @@
     "sourceKind": "usda",
     "carbPer": 20.1,
     "fatPer": 0.1,
-    "sourceDescription": "Potatoes, boiled, cooked in skin, flesh, without salt"
+    "sourceDescription": "Potatoes, boiled, cooked in skin, flesh, without salt",
+    "readyToEat": false
   },
   {
     "id": "sebze",
@@ -526,7 +544,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 100,
-    "sourceDescription": "Oil, olive, salad or cooking"
+    "sourceDescription": "Oil, olive, salad or cooking",
+    "readyToEat": false
   },
   {
     "id": "zeytin",
@@ -549,7 +568,8 @@
     "sourceKind": "usda",
     "carbPer": 3.84,
     "fatPer": 15.3,
-    "sourceDescription": "Olives, pickled, canned or bottled, green"
+    "sourceDescription": "Olives, pickled, canned or bottled, green",
+    "readyToEat": false
   },
   {
     "id": "ceviz",
@@ -572,7 +592,8 @@
     "sourceKind": "usda",
     "carbPer": 13.7,
     "fatPer": 65.2,
-    "sourceDescription": "Nuts, walnuts, english"
+    "sourceDescription": "Nuts, walnuts, english",
+    "readyToEat": false
   },
   {
     "id": "elma",
@@ -582,7 +603,7 @@
     "per": 100,
     "kcalPer": 52,
     "proteinPer": 0.26,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 171688 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171688/nutrients",
     "portions": [
       {
@@ -595,7 +616,8 @@
     "sourceKind": "usda",
     "carbPer": 13.8,
     "fatPer": 0.17,
-    "sourceDescription": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)"
+    "sourceDescription": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+    "readyToEat": true
   },
   {
     "id": "muz",
@@ -605,7 +627,7 @@
     "per": 100,
     "kcalPer": 89,
     "proteinPer": 1.09,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 173944 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173944/nutrients",
     "portions": [
       {
@@ -618,7 +640,8 @@
     "sourceKind": "usda",
     "carbPer": 22.8,
     "fatPer": 0.33,
-    "sourceDescription": "Bananas, raw"
+    "sourceDescription": "Bananas, raw",
+    "readyToEat": true
   },
   {
     "id": "mandalina",
@@ -628,7 +651,7 @@
     "per": 100,
     "kcalPer": 53,
     "proteinPer": 0.81,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 169105 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169105/nutrients",
     "portions": [
       {
@@ -641,7 +664,8 @@
     "sourceKind": "usda",
     "carbPer": 13.3,
     "fatPer": 0.31,
-    "sourceDescription": "Tangerines, (mandarin oranges), raw"
+    "sourceDescription": "Tangerines, (mandarin oranges), raw",
+    "readyToEat": true
   },
   {
     "id": "portakal",
@@ -651,7 +675,7 @@
     "per": 100,
     "kcalPer": 47,
     "proteinPer": 0.94,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 169097 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169097/nutrients",
     "portions": [
       {
@@ -664,7 +688,8 @@
     "sourceKind": "usda",
     "carbPer": 11.8,
     "fatPer": 0.12,
-    "sourceDescription": "Oranges, raw, all commercial varieties"
+    "sourceDescription": "Oranges, raw, all commercial varieties",
+    "readyToEat": true
   },
   {
     "id": "bitter",
@@ -687,7 +712,8 @@
     "sourceKind": "usda",
     "carbPer": 45.9,
     "fatPer": 42.6,
-    "sourceDescription": "Chocolate, dark, 70-85% cacao solids"
+    "sourceDescription": "Chocolate, dark, 70-85% cacao solids",
+    "readyToEat": false
   },
   {
     "id": "cay",
@@ -710,7 +736,8 @@
     "sourceKind": "usda",
     "carbPer": 0.6,
     "fatPer": 0,
-    "sourceDescription": "Beverages, tea, black, brewed, prepared with tap water"
+    "sourceDescription": "Beverages, tea, black, brewed, prepared with tap water",
+    "readyToEat": false
   },
   {
     "id": "beyazpeynir",
@@ -733,7 +760,8 @@
     "sourceKind": "usda",
     "carbPer": 3.88,
     "fatPer": 21.5,
-    "sourceDescription": "Cheese, feta"
+    "sourceDescription": "Cheese, feta",
+    "readyToEat": false
   },
   {
     "id": "kasar",
@@ -756,7 +784,8 @@
     "sourceKind": "usda",
     "carbPer": 2.22,
     "fatPer": 27.4,
-    "sourceDescription": "Cheese, gouda"
+    "sourceDescription": "Cheese, gouda",
+    "readyToEat": false
   },
   {
     "id": "simit",
@@ -825,7 +854,8 @@
     "sourceKind": "usda",
     "carbPer": 30.9,
     "fatPer": 0.93,
-    "sourceDescription": "Pasta, cooked, unenriched, without added salt"
+    "sourceDescription": "Pasta, cooked, unenriched, without added salt",
+    "readyToEat": false
   },
   {
     "id": "bulgur",
@@ -894,7 +924,8 @@
     "sourceKind": "usda",
     "carbPer": 0,
     "fatPer": 3.57,
-    "sourceDescription": "Chicken, broilers or fryers, breast, meat only, cooked, roasted"
+    "sourceDescription": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "readyToEat": false
   },
   {
     "id": "durum",
@@ -986,7 +1017,8 @@
     "sourceKind": "usda",
     "carbPer": 34.650000000000006,
     "fatPer": 13.200000000000001,
-    "sourceDescription": "Fast foods, hamburger; single, regular patty; plain"
+    "sourceDescription": "Fast foods, hamburger; single, regular patty; plain",
+    "readyToEat": false
   },
   {
     "id": "pizza",
@@ -996,7 +1028,7 @@
     "per": 1,
     "kcalPer": 286.76,
     "proteinPer": 11.128000000000002,
-    "state": "na",
+    "state": "cooked",
     "source": "USDA FoodData Central · FDC 170317 · 107 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170317/nutrients",
     "portions": [
       {
@@ -1009,7 +1041,8 @@
     "sourceKind": "usda",
     "carbPer": 31.03,
     "fatPer": 13.161000000000001,
-    "sourceDescription": "Pizza, cheese topping, regular crust, frozen, cooked"
+    "sourceDescription": "Pizza, cheese topping, regular crust, frozen, cooked",
+    "readyToEat": false
   },
   {
     "id": "kizartma",
@@ -1032,7 +1065,8 @@
     "sourceKind": "usda",
     "carbPer": 41.4,
     "fatPer": 14.7,
-    "sourceDescription": "Fast foods, potato, french fried in vegetable oil"
+    "sourceDescription": "Fast foods, potato, french fried in vegetable oil",
+    "readyToEat": false
   },
   {
     "id": "corba",
@@ -1101,7 +1135,8 @@
     "sourceKind": "usda",
     "carbPer": 10.4,
     "fatPer": 0.25,
-    "sourceDescription": "Beverages, carbonated, cola, regular"
+    "sourceDescription": "Beverages, carbonated, cola, regular",
+    "readyToEat": false
   },
   {
     "id": "meyvesuyu",
@@ -1111,7 +1146,7 @@
     "per": 100,
     "kcalPer": 45,
     "proteinPer": 0.7,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 169098 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169098/nutrients",
     "portions": [
       {
@@ -1124,7 +1159,8 @@
     "sourceKind": "usda",
     "carbPer": 10.4,
     "fatPer": 0.2,
-    "sourceDescription": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)"
+    "sourceDescription": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "readyToEat": true
   },
   {
     "id": "sutlucik",
@@ -1147,7 +1183,8 @@
     "sourceKind": "usda",
     "carbPer": 59.4,
     "fatPer": 29.7,
-    "sourceDescription": "Candies, milk chocolate"
+    "sourceDescription": "Candies, milk chocolate",
+    "readyToEat": false
   },
   {
     "id": "biskuvi",
@@ -1170,7 +1207,8 @@
     "sourceKind": "usda",
     "carbPer": 68.9,
     "fatPer": 18.8,
-    "sourceDescription": "Cookies, butter, commercially prepared, unenriched"
+    "sourceDescription": "Cookies, butter, commercially prepared, unenriched",
+    "readyToEat": false
   },
   {
     "id": "findik",
@@ -1193,7 +1231,8 @@
     "sourceKind": "usda",
     "carbPer": 16.7,
     "fatPer": 60.8,
-    "sourceDescription": "Nuts, hazelnuts or filberts"
+    "sourceDescription": "Nuts, hazelnuts or filberts",
+    "readyToEat": false
   },
   {
     "id": "badem",
@@ -1216,7 +1255,8 @@
     "sourceKind": "usda",
     "carbPer": 21.6,
     "fatPer": 49.9,
-    "sourceDescription": "Nuts, almonds"
+    "sourceDescription": "Nuts, almonds",
+    "readyToEat": false
   },
   {
     "id": "hurma",
@@ -1239,7 +1279,8 @@
     "sourceKind": "usda",
     "carbPer": 5.250000000000001,
     "fatPer": 0.027300000000000005,
-    "sourceDescription": "Dates, deglet noor"
+    "sourceDescription": "Dates, deglet noor",
+    "readyToEat": false
   },
   {
     "id": "bal",
@@ -1262,7 +1303,8 @@
     "sourceKind": "usda",
     "carbPer": 5.768000000000001,
     "fatPer": 0,
-    "sourceDescription": "Honey"
+    "sourceDescription": "Honey",
+    "readyToEat": false
   },
   {
     "id": "seker",
@@ -1285,7 +1327,8 @@
     "sourceKind": "usda",
     "carbPer": 5,
     "fatPer": 0,
-    "sourceDescription": "Sugars, granulated"
+    "sourceDescription": "Sugars, granulated",
+    "readyToEat": false
   },
   {
     "id": "proteintozu",
@@ -1308,7 +1351,8 @@
     "sourceKind": "usda",
     "carbPer": 1.875,
     "fatPer": 0.46799999999999997,
-    "sourceDescription": "Beverages, Protein powder whey based"
+    "sourceDescription": "Beverages, Protein powder whey based",
+    "readyToEat": false
   },
   {
     "id": "karpuz",
@@ -1318,7 +1362,7 @@
     "per": 100,
     "kcalPer": 30,
     "proteinPer": 0.61,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 167765 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/167765/nutrients",
     "portions": [
       {
@@ -1331,7 +1375,8 @@
     "sourceKind": "usda",
     "carbPer": 7.55,
     "fatPer": 0.15,
-    "sourceDescription": "Watermelon, raw"
+    "sourceDescription": "Watermelon, raw",
+    "readyToEat": true
   },
   {
     "id": "uzum",
@@ -1341,7 +1386,7 @@
     "per": 100,
     "kcalPer": 69,
     "proteinPer": 0.72,
-    "state": "na",
+    "state": "raw",
     "source": "USDA FoodData Central · FDC 174683 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/174683/nutrients",
     "portions": [
       {
@@ -1354,7 +1399,8 @@
     "sourceKind": "usda",
     "carbPer": 18.1,
     "fatPer": 0.16,
-    "sourceDescription": "Grapes, red or green (European type, such as Thompson seedless), raw"
+    "sourceDescription": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "readyToEat": true
   },
   {
     "id": "tostkasar",

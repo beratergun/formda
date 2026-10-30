@@ -69,6 +69,7 @@ export async function seedDatabase(database = db) {
     if (!(await database.meta.get('seedVersion'))) {
       await database.food.bulkPut(FOODS);
       await database.exercise.bulkPut(EXERCISES);
+      await database.recipe.bulkPut(TURKISH_RECIPES);
       await database.quote.bulkPut(QUOTES);
       await database.targets.put(DEFAULT_TARGETS);
       await database.menuPlan.put(DEFAULT_MENU);
@@ -84,6 +85,8 @@ export async function seedDatabase(database = db) {
       await database.meta.bulkPut([
         { key: 'schemaVersion', value: '1' },
         { key: 'seedVersion', value: '1' },
+        { key: 'foodCatalogVersion', value: '2' },
+        { key: 'libraryVersion', value: '2' },
       ]);
     }
     if ((await database.meta.get('foodCatalogVersion'))?.value !== '2') {

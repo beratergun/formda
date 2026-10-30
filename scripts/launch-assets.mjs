@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 import { mkdir } from 'node:fs/promises';
-const out = '../yol-launch/linkedin-media';
+const out = '../formda-launch/linkedin-media';
 await mkdir(out, { recursive: true });
 const svg = (w, h, body) =>
   Buffer.from(
@@ -13,7 +13,7 @@ const frame = async (name, height) =>
 const cover = svg(
   1200,
   1200,
-  `<defs><radialGradient id="g"><stop stop-color="#235e59"/><stop offset="1" stop-color="#0d3032"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#8ac4a3" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#94c8b1" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'Formda', 110, '#e9f2df', 750)}${text(78, 295, 'Her gün kendine', 48, '#e9f2df', 650)}${text(78, 360, 'bir adım.', 48, '#e9f2df', 650)}${text(78, 450, 'Yerel spor ve', 30, '#bbd5c9')}${text(78, 495, 'beslenme asistanı.', 30, '#bbd5c9')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#d8e9a5"/>${text(101, 593, 'PWA + Android', 25, '#183c37', 650)}${text(78, 688, 'Hesap yok.', 29, '#e9f2df', 600)}${text(78, 733, 'Sunucu yok.', 29, '#e9f2df', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#e9f2df', 600)}${text(78, 914, '95 test · 8 mobil E2E', 24, '#bbd5c9')}${text(78, 955, '%100 domain satır kapsamı', 24, '#bbd5c9')}${text(78, 1085, 'beratergun.github.io/formda', 25, '#e9f2df', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#94b9ae')}`,
+  `<defs><radialGradient id="g"><stop stop-color="#235e59"/><stop offset="1" stop-color="#0d3032"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#8ac4a3" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#94c8b1" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'Formda', 110, '#e9f2df', 750)}${text(78, 295, 'Kişisel spor ve', 48, '#e9f2df', 650)}${text(78, 360, 'beslenme koçun.', 48, '#e9f2df', 650)}${text(78, 450, 'Yerel spor ve', 30, '#bbd5c9')}${text(78, 495, 'beslenme asistanı.', 30, '#bbd5c9')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#d8e9a5"/>${text(101, 593, 'PWA + Android', 25, '#183c37', 650)}${text(78, 688, 'Hesap yok.', 29, '#e9f2df', 600)}${text(78, 733, 'Sunucu yok.', 29, '#e9f2df', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#e9f2df', 600)}${text(78, 914, '140 test · 18 mobil E2E', 24, '#bbd5c9')}${text(78, 955, '%100 domain satır kapsamı', 24, '#bbd5c9')}${text(78, 1085, 'beratergun.github.io/formda', 25, '#e9f2df', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#94b9ae')}`,
 );
 await sharp(cover)
   .composite([{ input: await frame('today-light', 885), left: 748, top: 215 }])
@@ -30,7 +30,7 @@ const layouts = [
   {
     file: '02-training.png',
     title: 'Set set, yanında.',
-    sub: '84 hareket · Önceki seans · Dinlenme sayacı',
+    sub: '159 hareket · Önceki seans · Dinlenme sayacı',
     phones: ['workout-light', 'progress-dark'],
     dark: true,
   },
@@ -39,6 +39,34 @@ const layouts = [
     title: 'Sana ait. Cihazında.',
     sub: 'Fotoğraf, vlog ve günlük. Hesap yok. Sunucu yok.',
     phones: ['photos-light', 'journal-dark'],
+    dark: false,
+  },
+  {
+    file: '04-programs.png',
+    title: 'Planın gününe uysun.',
+    sub: '5 hazır program + kişisel plan · Günlük alternatifler',
+    phones: ['programs-light', 'plan-dark'],
+    dark: true,
+  },
+  {
+    file: '05-apparatus.png',
+    title: 'Aleti tanı, doğru başla.',
+    sub: '159 hareket · 34 alet · Vektör pozlar ve kas haritası',
+    phones: ['apparatus-light', 'workout-dark'],
+    dark: false,
+  },
+  {
+    file: '06-sources.png',
+    title: 'Kaynağı belli, cihazında.',
+    sub: '797 besin · 160 tarif · Sağlık verisinde yalnızca okuma',
+    phones: ['sources-light', 'food-dark'],
+    dark: true,
+  },
+  {
+    file: '07-start.png',
+    title: 'Kendi ritminle başla.',
+    sub: 'Ücretsiz · Hesapsız · Açık kaynak · PWA + Android',
+    phones: ['today-dark', 'progress-light'],
     dark: false,
   },
 ];
@@ -59,4 +87,4 @@ for (const layout of layouts) {
     .png()
     .toFile(`${out}/${layout.file}`);
 }
-console.log('1200×1200 cover and three 1080×1350 collages created outside the repository.');
+console.log('1200×1200 cover and seven 1080×1350 carousel slides created outside the repository.');

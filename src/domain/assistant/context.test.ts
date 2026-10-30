@@ -111,8 +111,8 @@ it('celebrates actual streaks and summarizes meals and activity without cross-da
 it('offers actual edible combinations, excludes raw ingredients and respects remaining energy', () => {
   const egg = FOODS.find((f) => f.id === 'egg')!;
   const foods = [
-    { ...egg, id: 'a', favorite: true },
-    { ...egg, id: 'b' },
+    { ...egg, id: 'a', favorite: true, state: 'cooked' as const },
+    { ...egg, id: 'b', state: 'cooked' as const },
     { ...egg, id: 'raw', state: 'raw' as const },
   ];
   const choices = remainingSuggestions(foods, 144, 12.6);
@@ -121,6 +121,10 @@ it('offers actual edible combinations, excludes raw ingredients and respects rem
   expect(choices.flatMap((c) => c.items).some((i) => i.food.id === 'raw')).toBe(false);
   expect(remainingSuggestions(foods, 0, 10)).toEqual([]);
   expect(remainingSuggestions(foods, 20, 10)).toEqual([]);
+  const apple = FOODS.find((f) => f.id === 'elma')!;
+  expect(apple.state).toBe('raw');
+  expect(remainingSuggestions([apple], 500, 10).length).toBeGreaterThan(0);
+  expect(remainingSuggestions([egg], 500, 10)).toEqual([]);
 });
 it('includes all named templates and adapts introductory sets to experience and equipment', () => {
   const home = defaultPlan(date, 3, ['ev'], 'experienced');

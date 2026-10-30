@@ -36,7 +36,13 @@ TDEE başlangıçta Mifflin-St Jeor ve aktivite katsayısını kullanır. Yeterl
 
 ## Ağ ve Android
 
-Yalnızca açık kullanıcı eylemiyle Open Food Facts ürün adı/barkod sorgusu yapılır. Profil ve günlük bu isteğin parçası değildir. Yerel fontlar, çizilmiş görseller ve Workbox önbelleği çevrimdışı kullanımı sağlar.
+Yalnızca açık kullanıcı eylemiyle Open Food Facts ürün adı/barkod sorgusu ve açık onayla model dosyası indirmesi yapılır. Profil, günlük ve fotoğraf bu isteklerin parçası değildir. Yerel fontlar, çizilmiş görseller ve Workbox önbelleği çevrimdışı kullanımı sağlar.
+
+Program seçimi haftalık şablonu üretir; alternatifler ve hareket değişimleri tarih istisnasında saklanır. Kişisel planın önceki hali ayrıca korunur. Katalog sürümü 2 kaynaklı yiyecekleri güncellerken tarihsel öğün anlık görüntülerini, favorileri ve kişisel tarifleri korur.
+
+Enerji hesabı saf domain fonksiyonudur: brüt MET hesabından aktif değer ayrılır; set/RPE ve adım tahminleri etiketlenir. Elle/Health Connect günlük toplamı varsa seanslar eklenmez. Health Connect eklentisi yalnızca beş okuma kategorisiyle çağrılır; manifestte yazma izinleri kaldırılır. Okuma önizlemesi ayrı onayla yerel kayda dönüşür.
+
+İsteğe bağlı yemek tanıma worker'ı sabit Apache-2.0 model revizyonunu ONNX/WASM ile çalıştırır. Model ilk açık eylemde indirilir; çalışma dosyaları ve ağırlıkları tarayıcı önbelleğinde kalır. Bilinen görüntü bileşenleri doğrudan yüklenerek çevrimdışı dosya keşfi önlenir. Yeni fotoğraf önceki worker/önerileri sıfırlar; kullanıcı onayından önce hiçbir yiyecek kaydı oluşturulmaz.
 
 Android paketi uzak `server.url` kullanmaz; `dist-native` varlıklarını içerir. Kamera/mikrofon izni yerel eklentiyle istenir. Dışa aktarma cache dosyasını Android paylaşım paneline sunar. Otomatik bulut ve cihazlar arası yedek kapalıdır. PWA ile APK ayrı origin/uygulama alanlarıdır; ZIP ile taşınır.
 

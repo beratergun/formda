@@ -18,6 +18,9 @@ it('gives every catalog record a source identifier and explicit preparation stat
     expect(food.sourceKind, food.id).not.toBe('legacy');
     expect(['raw', 'cooked', 'na']).toContain(food.state);
     expect(Number.isFinite(food.kcalPer)).toBe(true);
+    if (/\braw\b/i.test(food.sourceDescription || '')) expect(food.state, food.id).toBe('raw');
+    else if (/\bcooked\b/i.test(food.sourceDescription || ''))
+      expect(food.state, food.id).toBe('cooked');
   }
 });
 it('recalculates at least 150 Turkish recipes from traceable ingredient quantities without intermediate rounding', () => {

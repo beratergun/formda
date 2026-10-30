@@ -48,6 +48,12 @@ const names = [
   'workout-dark',
   'photos-light',
   'photos-dark',
+  'apparatus-light',
+  'apparatus-dark',
+  'sources-light',
+  'sources-dark',
+  'programs-light',
+  'programs-dark',
 ];
 const phones = {};
 for (const name of names) {
@@ -145,6 +151,6 @@ for (const [name, label] of sequence) {
   );
 }
 await sharp(frames, { join: { animated: true } })
-  .gif({ delay: frames.map(() => 1600), loop: 0, colours: 128, dither: 0.1, effort: 7 })
+  .gif({ delay: frames.map(() => 4000), loop: 0, colours: 128, dither: 0.1, effort: 7 })
   .toFile('docs/demo.gif');
 console.log('Phone frames, collages, buttons, social preview and six-frame demo GIF generated.');

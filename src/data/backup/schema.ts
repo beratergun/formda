@@ -87,6 +87,7 @@ const workout = z.object({
 });
 const food = z.object({
   sourceId: z.string().optional(),
+  readyToEat: z.boolean().optional(),
   sourceKind: z.enum(['usda', 'recipe', 'legacy', 'off']).optional(),
   sourceDescription: z.string().optional(),
   recipeId: z.string().optional(),

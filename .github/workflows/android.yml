@@ -75,6 +75,7 @@ jobs:
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
           "$BUILD_TOOLS/apksigner" verify --verbose "apk/Formda-v$VERSION.apk"
           (cd apk && sha256sum "Formda-v$VERSION.apk" > "Formda-v$VERSION.apk.sha256")
+          node scripts/check-apk.mjs "apk/Formda-v$VERSION.apk"
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: Formda-android-apk
