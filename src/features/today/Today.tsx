@@ -1,3 +1,4 @@
+import { WaterTracker } from './WaterTracker';
 import { workoutElapsedMs } from '../../domain/workout/session';
 import { MealEditor } from './MealEditor';
 import { WeeklySnapshot } from './WeeklySnapshot';
@@ -12,7 +13,6 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
-  Droplets,
   Dumbbell,
   Flame,
   Leaf,
@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import { liveQuery } from 'dexie';
 import { db, newId, useStore } from '../../app/Store';
-import { Button, Card, Chip, Ring, Stepper } from '../../ui';
+import { Button, Card, Chip, Ring } from '../../ui';
 import { total, calculate } from '../../domain/calories';
 import { dateDiff, dateLabel, monday, shiftDate, todayKey, weekday } from '../../domain/dates';
 import { assistantMessages, assistantContext, remainingSuggestions } from '../../domain/assistant';
@@ -264,30 +264,13 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         steps={day.steps ?? day.health?.steps}
         onFood={() => onFood()}
       />
-      <div className="row between section-title">
-        <h2>Günün dengesi</h2>
-        <span className="eyebrow">KENDİ RİTMİNDE</span>
-      </div>
-      <Card className="stack">
-        <div className="row between small">
-          <b>{Math.max(0, Math.round(targets.kcal - macros.kcal))} kcal kaldı</b>
-          <b>{Math.max(0, Math.ceil(targets.protein - macros.protein))} g protein kaldı</b>
-        </div>
-        {macros.carb !== undefined && entries.length > 0 && <MacroBreakdown macros={macros} />}
-        <div className="divider" />
-        <div className="row between">
-          <div className="row">
-            <Droplets size={20} className="accent" />
-            <div>
-              <h3>Bir bardak iyi gelir.</h3>
-              <p className="small muted">
-                {day.water} / {targets.water} bardak · 1 bardak ≈ 250 ml
-              </p>
-            </div>
-          </div>
-        </div>
-        <Stepper value={day.water} onChange={(water) => updateDay({ water })} label="Su" max={40} />
-      </Card>
+      <WaterTracker />
+      {macros.carb !== undefined && entries.length > 0 && (
+        <details className="card">
+          <summary>Makro enerji dağılımı</summary>
+          <MacroBreakdown macros={macros} />
+        </details>
+      )}
       <Card className={`workout-card tone-${plan.type}`}>
         <DailyAlternative />
         <div className="row between">

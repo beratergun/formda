@@ -46,7 +46,7 @@ try {
   await page.getByRole('button', { name: 'Su artır' }).click();
   await expect(page.getByRole('status').filter({ hasText: 'Kaydedildi' })).toBeVisible();
   await page.reload();
-  await expect(page.getByText(/1 \/ 8 bardak/)).toBeVisible();
+  await expect(page.locator('.water-total')).toHaveText('250 / 2.000 ml');
   await context.setOffline(false);
   const cdp = await context.newCDPSession(page),
     installability = await cdp.send('Page.getInstallabilityErrors');

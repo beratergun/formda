@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { validWaterLedger } from '../../domain/water';
 
 const num = z.number().finite().nonnegative();
 const id = z.string().min(1).max(200);
@@ -7,43 +8,52 @@ const state = z.enum(['raw', 'cooked', 'na']);
 const type = z.enum(['strength', 'swim', 'cardio', 'recovery', 'rest']);
 const clock = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/);
 const strings = z.array(z.string());
-const day = z.object({
-  health: z
-    .object({
-      steps: num.optional(),
-      activeKcal: num.optional(),
-      weight: num.optional(),
-      sleepMinutes: num.optional(),
-      sleepAt: clock.optional(),
-      syncedAt: num,
-      sources: strings,
-    })
-    .optional(),
-  date,
-  boxes: z.object({ h: z.boolean(), s: z.boolean(), k: z.boolean(), u: z.boolean() }),
-  boxOverrides: z.record(z.string(), z.boolean()).optional(),
-  water: num,
-  steps: num.optional(),
-  activeKcal: num.optional(),
-  sleepAt: clock.optional(),
-  sleepQuality: num.max(5).optional(),
-  energy: num.max(5).optional(),
-  mood: num.max(5).optional(),
-  soreness: z.record(z.string(), num.max(3)).optional(),
-  weight: num.optional(),
-  measurements: z
-    .object({
-      waist: num.optional(),
-      chest: num.optional(),
-      hip: num.optional(),
-      arm: num.optional(),
-    })
-    .optional(),
-  note: z.string().optional(),
-  tags: strings,
-  guard: z.boolean().optional(),
-  updatedAt: num,
-});
+const day = z
+  .object({
+    waterBaseMl: num.optional(),
+    waterEntries: z
+      .array(z.object({ id, ml: num.int().min(1).max(5000), createdAt: num.max(8640000000000000) }))
+      .optional(),
+    health: z
+      .object({
+        steps: num.optional(),
+        activeKcal: num.optional(),
+        weight: num.optional(),
+        sleepMinutes: num.optional(),
+        sleepAt: clock.optional(),
+        syncedAt: num,
+        sources: strings,
+      })
+      .optional(),
+    date,
+    boxes: z.object({ h: z.boolean(), s: z.boolean(), k: z.boolean(), u: z.boolean() }),
+    boxOverrides: z.record(z.string(), z.boolean()).optional(),
+    water: num,
+    steps: num.optional(),
+    activeKcal: num.optional(),
+    sleepAt: clock.optional(),
+    sleepQuality: num.max(5).optional(),
+    energy: num.max(5).optional(),
+    mood: num.max(5).optional(),
+    soreness: z.record(z.string(), num.max(3)).optional(),
+    weight: num.optional(),
+    measurements: z
+      .object({
+        waist: num.optional(),
+        chest: num.optional(),
+        hip: num.optional(),
+        arm: num.optional(),
+      })
+      .optional(),
+    note: z.string().optional(),
+    tags: strings,
+    guard: z.boolean().optional(),
+    updatedAt: num,
+  })
+  .refine(validWaterLedger, {
+    message: 'Su geçmişi ve günlük toplam eşleşmiyor veya yinelenen kayıt var.',
+    path: ['water'],
+  });
 const macros = { kcal: num, protein: num, carb: num.optional(), fat: num.optional() };
 const meal = z.object({
   id,

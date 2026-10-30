@@ -119,6 +119,17 @@ try {
     await scan('Bağlı kaynaklar-' + theme);
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
     await page.getByRole('link', { name: 'Bugün', exact: true }).click();
+    await page.getByRole('button', { name: '100 ml su ekle', exact: true }).click();
+    await page.getByText('Su hedefini düzenle', { exact: true }).click();
+    await scan('Su hedefi-' + theme);
+    await page.getByText(/Su kayıt geçmişi ·/).click();
+    await scan('Su kayıt geçmişi-' + theme);
+    await page
+      .getByRole('button', { name: '100 ml su kaydını düzenle', exact: true })
+      .first()
+      .click();
+    await scan('Su kaydı düzenleme-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
     await page.getByRole('button', { name: 'Kahvaltı ekle', exact: true }).click();
     await page.getByRole('button', { name: 'Fotoğraf', exact: true }).click();
     await scan('Fotoğraf önerisi onayı-' + theme);

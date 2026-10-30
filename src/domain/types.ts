@@ -59,6 +59,8 @@ export interface HealthDay {
   sources: string[];
 }
 export interface DayLog {
+  waterBaseMl?: number;
+  waterEntries?: WaterEntry[];
   health?: HealthDay;
   date: string;
   boxes: { h: boolean; s: boolean; k: boolean; u: boolean };
@@ -77,6 +79,11 @@ export interface DayLog {
   tags: string[];
   guard?: boolean;
   updatedAt: number;
+}
+export interface WaterEntry {
+  id: string;
+  ml: number;
+  createdAt: number;
 }
 export type WorkoutType = 'strength' | 'swim' | 'cardio' | 'recovery' | 'rest';
 export interface SetLog {

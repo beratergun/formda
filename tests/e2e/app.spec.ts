@@ -49,7 +49,7 @@ test('onboarding, exact food arithmetic, local persistence and offline entry', a
   await page.getByRole('button', { name: 'Su artır' }).click();
   await saved(page);
   await page.reload();
-  await expect(page.getByText(/1 \/ 8 bardak/)).toBeVisible();
+  await expect(page.locator('.water-total')).toHaveText('250 / 2.000 ml');
   await context.setOffline(false);
   expect(errors).toEqual([]);
   expect(external).toEqual([]);

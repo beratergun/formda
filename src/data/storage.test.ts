@@ -166,6 +166,11 @@ it('round-trips all data and media through zip, delete, restore exactly', async 
     ...emptyDay('2026-10-29'),
     note: 'Türkçe günlük',
     water: 5,
+    waterBaseMl: 625,
+    waterEntries: [
+      { id: 'water-one', ml: 500, createdAt: 1000 },
+      { id: 'water-two', ml: 125, createdAt: 2000 },
+    ],
     activeKcal: 321,
     health: {
       steps: 8000,
@@ -286,6 +291,26 @@ it('rejects malformed data and incomplete media before any data is replaced', as
   const bytes = await encodeBackup(document, {});
   expect(() => decodeBackup(bytes)).toThrow('eksik');
   expect(await database.food.count()).toBeGreaterThan(300);
+  for (const day of [
+    { ...emptyDay('2026-10-29'), water: 1, waterBaseMl: 0, waterEntries: [] },
+    {
+      ...emptyDay('2026-10-29'),
+      water: 2,
+      waterBaseMl: 0,
+      waterEntries: [
+        { id: 'same', ml: 250, createdAt: 1000 },
+        { id: 'same', ml: 250, createdAt: 1000 },
+      ],
+    },
+  ]) {
+    const corrupt = zipSync({
+      'data.json': strToU8(
+        JSON.stringify({ ...document, media: [], data: { ...data, dayLog: [day] } }),
+      ),
+    });
+    expect(() => decodeBackup(corrupt)).toThrow();
+    expect(await new LocalRepository(database).load()).toEqual(data);
+  }
   expect(() =>
     encodeBackup({ ...document, version: 2 } as unknown as BackupDocument, {}),
   ).toThrow();

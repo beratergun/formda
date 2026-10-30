@@ -60,3 +60,13 @@ Plank ve belirlenen statik tutuşlar saniye kaydeder; uydurma kg/tekrar yok. Ge�
 Son kapı: **lint/typecheck/200 birim/build; sekiz ilgili E2E 8/8 iki motorda; 40 Axe görünümü sıfır ihlal.** On çekirdek hareketin iki pozu, oynat/duraklat/başa al/hız/büyüt, statik plank, azaltılmış hareket, 45 sn tutuşun geçmişe doğru kaydı, aparat fallback ve mevcut seans yaşam döngüsü testlendi. WebKit poz geçişi assertion’ı gerçek zamanlı yükte kararsız olduğundan resmi Playwright Clock API ile 1.201 ms kontrollü ilerletilir; geçiş assertion’ı kaldırılmadı.
 
 MCP 19 çekirdek poz ve goblet kareleri görsel incelendi; 390×844/412×915 açık-koyu Goblet/Plank/Row, büyüt/iki Escape, taşma ve pageerror yok. Son göğüs hizası düzeltmesi iki temada ayrıca yeniden görüldü. Görseller ignored docs/qa altında. Şemalar uzman tarafından kişiye özel form doğrulaması veya kesintisiz video olarak sunulmaz. Fiziksel cihaz: NOT RUN. Tam birleşik E2E, kapsam ve yayın kapısı teslim aşamasında tekrar çalıştırılacak.
+
+## Faz 5a · Su giriş defteri
+
+Eski 250 ml bardak toplamı ilk yeni kayıtta ayrı bir taban olarak korunur. Yeni 100/250/500 ml ve özel miktar girişleri kimlik/saat taşır. Hedef ml ile düzenlenir; geçmişte tek giriş veya saati bilinmeyen eski toplam düzeltilebilir ve onayla silinebilir. Bir girişin değiştirilmesi diğer girişleri etkilemez. Tarih seçimi günleri ayırır. Anlık Store güncellemesi hızlı çift tıklamada iki gerçek giriş oluşturur; aynı kimliğin yeniden uygulanması tekildir.
+
+210 birim, lint/typecheck/build geçti. ZIP round-trip yeni taban/giriş/saatleri ve diğer alanları birebir geri getirir. Tutarsız toplam ve yinelenen kimlik içeren ZIP, mevcut kayıtlara dokunmadan reddedilir. İlk 10 ilgili E2E'de 8 geçti; iki eski offline assertion bardak metnini aradığı için güncellendi. Son dört tekrarda offline + yeni su akışı iki motorda 4/4 geçti; yeni akış tarih ayrımını da doğrular. Önceki altı antrenman/tema/hikâye E2E aynı derlemede geçti.
+
+Playwright MCP 390×844 ve 412×915 iki tema: ekle, geçmiş, düzenle, kaydet; taşma ve pageerror yok. Açık/koyu kart ve düzenleyici ekran görüntüleri ignored docs/qa altında incelendi. Genişletilmiş Axe sonucu bu aşamanın kapanışında kaydedilecek. Fiziksel cihaz NOT RUN; yeni yayın henüz yok.
+
+Faz 5a kapanışı: iki temada **46 Axe görünümü, sıfır ihlal**. Son lint/typecheck tekrar yeşil. Toplam 210 birim; uygulama derlemesi aynı ve başarılı. Su/çevrimdışı 4/4 son tekrar + diğer altı ilgili E2E geçti.
