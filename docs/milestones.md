@@ -20,10 +20,12 @@
 ## Formda v2 (30 Ekim 2026)
 
 - A — Yerel marka/veri/Android çalışması tamamlandı; 96 birim, 8 E2E, 18 Axe görünümü, Lighthouse 99/100/100. Repo formda olarak yeniden adlandırıldı. Pages/Android CI başarılı, canlı uygulama HTTP 200 ve çevrimdışı veri doğrulandı. Eski adres yönlendirmesi yayında. Commit 28a4b09.
-- D, E, F — Sırayla bekliyor. Henüz uygulanmış veya yayınlanmış sayılmaz.
+- F — E tamamlandıktan sonra sıradaki aşama. Henüz yayınlanmış sayılmaz.
 
 - B — Koç ana ekranı, ortak tasarım, motivasyon galerileri ve paylaşılabilir aylık hikâyeler uygulandı. 96 birim, 10 E2E, 18 Axe görünümünde sıfır ihlal ve Lighthouse 100/100/100; tamamlandı. Sıradaki aşama C.
 
 - C — Altı program, güne özel üç alternatif ve hareket değiştirme uygulandı. 125 birim, iki yeni mobil program E2E, lint/typecheck/build, 18 Axe görünümü ve %99,79 domain satır kapsamı yeşil. 12/12 tam regresyon geçti. Aynı hareketin yinelenmesini önleyen son düzeltmenin iki mobil E2E ve 29 domain testi de doğrulandı. Tamamlandı; sıradaki aşama D.
 
 - D — 159 hareket, 34 alet, ayrıntılı rehber, iki vektör poz ve döngü, alet ekranından programa ekleme tamamlandı. 127 birim, iki mobil alet E2E, lint/typecheck/build ve 22 Axe görünümü geçti. Son iki mobil alet E2E ve reduced-motion poz döngüsü kontrolü geçti. Tamamlandı; sıradaki aşama E.
+
+- E — 619 kayıt denetimi, 797 yiyecek/160 tarif, MET/adım enerji tahmini, isteğe bağlı hedef yüzdesi, Android beş kategoride salt okuma ve PWA elle kayıt tamamlandı. 140 birim, 18 tam E2E, son model/kalıcı kayıt değişikliğinin 4 mobil E2E testi ve 26 Axe görünümü geçti; lint/typecheck/build yeşil. Lighthouse 97/100/100. Gerçek model 10 ayrı Food101 sınıfında 10/10 ilk üç ve yeni worker ile çevrimdışı testi geçti; ağ yazımı yok. Fiziksel Android Health Connect izinleri henüz telefonda denenmedi. Sıradaki F: v2.0.0 sürümü, tanıtım görselleri, tam yayın kapısı, Pages/APK CI ve release.

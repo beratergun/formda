@@ -96,6 +96,22 @@ try {
     await scan('Hareket rehberi-' + theme);
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
   }
+  for (const theme of ['light', 'dark']) {
+    await page.evaluate((t) => {
+      document.documentElement.dataset.theme = t;
+      localStorage.setItem('yol-theme', t);
+      window.dispatchEvent(new Event('formda-theme-change'));
+    }, theme);
+    await page.getByRole('link', { name: 'Profil', exact: true }).click();
+    await page.getByRole('button', { name: 'Kaynakları ve izinleri yönet' }).click();
+    await scan('Bağlı kaynaklar-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.getByRole('link', { name: 'Bugün', exact: true }).click();
+    await page.getByRole('button', { name: 'Kahvaltı ekle', exact: true }).click();
+    await page.getByRole('button', { name: 'Fotoğraf', exact: true }).click();
+    await scan('Fotoğraf önerisi onayı-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+  }
   const output = `docs/qa/${new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Istanbul' }).format(new Date())}`;
   await mkdir(output, { recursive: true });
   await writeFile(`${output}/axe.json`, JSON.stringify(findings, null, 2));

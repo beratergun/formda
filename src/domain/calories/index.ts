@@ -44,6 +44,9 @@ export function recipeFood(recipe: Recipe, foods: Food[]): Food {
     fatPer: values.fat,
     state: 'cooked',
     source: 'Kendi tarifin · girilen malzemelerden hesaplandı',
+    sourceId: `recipe:${recipe.id}`,
+    sourceKind: 'recipe',
+    recipeId: recipe.id,
     portions: [{ label: 'porsiyon', qty: recipe.cookedWeightG / recipe.servings }],
     useCount: 0,
   };

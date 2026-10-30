@@ -1,0 +1,4690 @@
+[
+  {
+    "id": "tr-recipe-mercimek-corbasi",
+    "name": "Mercimek çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-ezogelin",
+    "name": "Ezogelin çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170688",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1200
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5.6
+  },
+  {
+    "id": "tr-recipe-yayla",
+    "name": "Yayla çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 800
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-domates-corbasi",
+    "name": "Domates çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 400
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-tavuk-suyu",
+    "name": "Tavuk suyu çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-168927",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-sebze-corbasi",
+    "name": "Sebze çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-169291",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.2
+  },
+  {
+    "id": "tr-recipe-mantar-corbasi",
+    "name": "Sütlü mantar çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-169251",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 400
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-brokoli-corbasi",
+    "name": "Brokoli çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170379",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kabak-corbasi",
+    "name": "Kabak çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-169291",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-pirasa-corbasi",
+    "name": "Pırasa çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-169246",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-ispanak-corbasi",
+    "name": "Ispanak çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-168462",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-nohut-corbasi",
+    "name": "Nohut çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-173756",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1100
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-bulgur-corbasi",
+    "name": "Bulgur çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-pirinc-corbasi",
+    "name": "Pirinç çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-168877",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-sehriye-corbasi",
+    "name": "Şehriye çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-kereviz-corbasi",
+    "name": "Kereviz çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170400",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-balkabagi-corbasi",
+    "name": "Bal kabağı çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-168448",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-karnabahar-corbasi",
+    "name": "Karnabahar çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-169986",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-yogurtlu-bugday",
+    "name": "Yoğurtlu bulgur çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-173756",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 850
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-terbiyeli-sebze",
+    "name": "Terbiyeli sebze çorbası",
+    "ingredients": [
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170419",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 850
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-fasulye",
+    "name": "Zeytinyağlı taze fasulye",
+    "ingredients": [
+      {
+        "foodId": "usda-169961",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4.5
+  },
+  {
+    "id": "tr-recipe-kiymali-fasulye",
+    "name": "Kıymalı taze fasulye",
+    "ingredients": [
+      {
+        "foodId": "usda-169961",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-pirasa",
+    "name": "Zeytinyağlı pırasa",
+    "ingredients": [
+      {
+        "foodId": "usda-169246",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 950,
+    "servings": 3.8
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-enginar",
+    "name": "Zeytinyağlı enginar",
+    "ingredients": [
+      {
+        "foodId": "usda-169205",
+        "qty": 550
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170419",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-kereviz",
+    "name": "Zeytinyağlı kereviz",
+    "ingredients": [
+      {
+        "foodId": "usda-170400",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169097",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-ispanak-yemegi",
+    "name": "Ispanak yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-168462",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kiymali-ispanak",
+    "name": "Kıymalı ıspanak",
+    "ingredients": [
+      {
+        "foodId": "usda-168462",
+        "qty": 750
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-yumurtali-ispanak",
+    "name": "Yumurtalı ıspanak",
+    "ingredients": [
+      {
+        "foodId": "usda-168462",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 800,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kabak-yemegi",
+    "name": "Kabak yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-169291",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 150
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kiymali-kabak",
+    "name": "Kıymalı kabak",
+    "ingredients": [
+      {
+        "foodId": "usda-169291",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 150
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kabak-dolmasi",
+    "name": "Kabak dolması",
+    "ingredients": [
+      {
+        "foodId": "usda-169291",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-biber-dolmasi",
+    "name": "Biber dolması",
+    "ingredients": [
+      {
+        "foodId": "usda-170427",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 45
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-etli-biber-dolmasi",
+    "name": "Etli biber dolması",
+    "ingredients": [
+      {
+        "foodId": "usda-170427",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 130
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-lahana-sarmasi",
+    "name": "Lahana sarması",
+    "ingredients": [
+      {
+        "foodId": "usda-169975",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.2
+  },
+  {
+    "id": "tr-recipe-etli-lahana-sarmasi",
+    "name": "Etli lahana sarması",
+    "ingredients": [
+      {
+        "foodId": "usda-169975",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-kapuska",
+    "name": "Kapuska",
+    "ingredients": [
+      {
+        "foodId": "usda-169975",
+        "qty": 900
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-etli-kapuska",
+    "name": "Etli kapuska",
+    "ingredients": [
+      {
+        "foodId": "usda-169975",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-bamya-yemegi",
+    "name": "Bamya yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-169260",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-etli-bamya",
+    "name": "Etli bamya",
+    "ingredients": [
+      {
+        "foodId": "usda-169260",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-bezelye-yemegi",
+    "name": "Bezelye yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-170419",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-etli-bezelye",
+    "name": "Etli bezelye",
+    "ingredients": [
+      {
+        "foodId": "usda-170419",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-turlu",
+    "name": "Sebze türlü",
+    "ingredients": [
+      {
+        "foodId": "usda-169228",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169291",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169961",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-etli-turlu",
+    "name": "Etli türlü",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-169228",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169291",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-imambayildi",
+    "name": "İmam bayıldı",
+    "ingredients": [
+      {
+        "foodId": "usda-169228",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 70
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-karniyarik",
+    "name": "Fırında karnıyarık",
+    "ingredients": [
+      {
+        "foodId": "usda-169228",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 45
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-patlican-musakka",
+    "name": "Patlıcan musakka",
+    "ingredients": [
+      {
+        "foodId": "usda-169228",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 45
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-firinda-karnabahar",
+    "name": "Fırında karnabahar",
+    "ingredients": [
+      {
+        "foodId": "usda-169986",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-brokoli-sote",
+    "name": "Brokoli sote",
+    "ingredients": [
+      {
+        "foodId": "usda-170379",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 650,
+    "servings": 3.25
+  },
+  {
+    "id": "tr-recipe-mantar-sote",
+    "name": "Mantar sote",
+    "ingredients": [
+      {
+        "foodId": "usda-169251",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 750,
+    "servings": 3.75
+  },
+  {
+    "id": "tr-recipe-patates-oturtma",
+    "name": "Patates oturtma",
+    "ingredients": [
+      {
+        "foodId": "usda-170026",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kuru-fasulye",
+    "name": "Kuru fasulye yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-175202",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5.6
+  },
+  {
+    "id": "tr-recipe-etli-kuru-fasulye",
+    "name": "Etli kuru fasulye",
+    "ingredients": [
+      {
+        "foodId": "usda-175202",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 5.333333333333333
+  },
+  {
+    "id": "tr-recipe-nohut-yemegi",
+    "name": "Nohut yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-173756",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5.6
+  },
+  {
+    "id": "tr-recipe-etli-nohut",
+    "name": "Etli nohut",
+    "ingredients": [
+      {
+        "foodId": "usda-173756",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 5.333333333333333
+  },
+  {
+    "id": "tr-recipe-yesil-mercimek",
+    "name": "Yeşil mercimek yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 850
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.2
+  },
+  {
+    "id": "tr-recipe-eristeli-mercimek",
+    "name": "Erişteli mercimek",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 280
+      },
+      {
+        "foodId": "usda-168927",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 950
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5.6
+  },
+  {
+    "id": "tr-recipe-mercimek-koftesi",
+    "name": "Mercimek köftesi",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170688",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 8
+  },
+  {
+    "id": "tr-recipe-kisr",
+    "name": "Kısır",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 70
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5.5
+  },
+  {
+    "id": "tr-recipe-pirinc-pilavi",
+    "name": "Pirinç pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-168877",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5.555555555555555
+  },
+  {
+    "id": "tr-recipe-sehriyeli-pilav",
+    "name": "Şehriyeli pirinç pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-168877",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-168927",
+        "qty": 70
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 750
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 6.111111111111111
+  },
+  {
+    "id": "tr-recipe-nohutlu-pilav",
+    "name": "Nohutlu pilav",
+    "ingredients": [
+      {
+        "foodId": "usda-168877",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-173756",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.909090909090909
+  },
+  {
+    "id": "tr-recipe-tavuklu-pilav",
+    "name": "Tavuklu pilav",
+    "ingredients": [
+      {
+        "foodId": "usda-168877",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-171077",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 800
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-bulgur-pilavi",
+    "name": "Domatesli bulgur pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5.5
+  },
+  {
+    "id": "tr-recipe-sebzeli-bulgur",
+    "name": "Sebzeli bulgur pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-169291",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170419",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 750
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.909090909090909
+  },
+  {
+    "id": "tr-recipe-mercimekli-bulgur",
+    "name": "Mercimekli bulgur pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-172420",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 45
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 850
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.909090909090909
+  },
+  {
+    "id": "tr-recipe-sade-makarna",
+    "name": "Sade makarna",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-domatesli-makarna",
+    "name": "Domatesli makarna",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 5.2
+  },
+  {
+    "id": "tr-recipe-yogurtlu-makarna",
+    "name": "Yoğurtlu makarna",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-firinda-makarna",
+    "name": "Fırında sütlü makarna",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-sebzeli-makarna",
+    "name": "Sebzeli makarna",
+    "ingredients": [
+      {
+        "foodId": "usda-168927",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-169291",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169251",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-izgara-kofte",
+    "name": "Izgara köfte",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 20
+      }
+    ],
+    "cookedWeightG": 700,
+    "servings": 4.666666666666667
+  },
+  {
+    "id": "tr-recipe-izmir-kofte",
+    "name": "İzmir köfte",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 4.666666666666667
+  },
+  {
+    "id": "tr-recipe-sulu-kofte",
+    "name": "Sulu köfte",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-firinda-kofte",
+    "name": "Fırında köfte patates",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 4.333333333333333
+  },
+  {
+    "id": "tr-recipe-kadinbudu-kofte",
+    "name": "Fırında kadınbudu köfte",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 150
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5.555555555555555
+  },
+  {
+    "id": "tr-recipe-tavuk-sote",
+    "name": "Tavuk sote",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-mantarlı-tavuk",
+    "name": "Mantarlı tavuk",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-169251",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-firinda-tavuk",
+    "name": "Fırında tavuk sebze",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 4.666666666666667
+  },
+  {
+    "id": "tr-recipe-tavuk-haslama",
+    "name": "Tavuk haşlama",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 4.571428571428571
+  },
+  {
+    "id": "tr-recipe-tavuk-sis",
+    "name": "Tavuk şiş",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 850,
+    "servings": 4.25
+  },
+  {
+    "id": "tr-recipe-et-sote",
+    "name": "Et sote",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 750
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-tas-kebabi",
+    "name": "Tas kebabı",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-etli-guvec",
+    "name": "Etli sebze güveç",
+    "ingredients": [
+      {
+        "foodId": "usda-171790",
+        "qty": 700
+      },
+      {
+        "foodId": "usda-169228",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-169961",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-kuzu-sebzeli",
+    "name": "Sebzeli kuzu yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-174370",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 350
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 4.666666666666667
+  },
+  {
+    "id": "tr-recipe-kiymali-patates",
+    "name": "Kıymalı patates yemeği",
+    "ingredients": [
+      {
+        "foodId": "usda-170026",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 400
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 4.666666666666667
+  },
+  {
+    "id": "tr-recipe-tavuk-bulgur",
+    "name": "Tavuklu bulgur pilavı",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170688",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 700
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-tavuk-durum",
+    "name": "Ev yapımı tavuk dürüm",
+    "ingredients": [
+      {
+        "foodId": "usda-171077",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 150
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-lahmacun",
+    "name": "Ev yapımı lahmacun",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 220
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-kiymali-pide",
+    "name": "Ev yapımı kıymalı pide",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-peynirli-pide",
+    "name": "Beyaz peynirli pide",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kiymali-manti",
+    "name": "Yoğurtlu kıymalı mantı",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1700,
+    "servings": 5.666666666666667
+  },
+  {
+    "id": "tr-recipe-menemen",
+    "name": "Menemen",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 800,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-soganli-menemen",
+    "name": "Soğanlı menemen",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-sade-omlet",
+    "name": "Sade omlet",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 10
+      }
+    ],
+    "cookedWeightG": 250,
+    "servings": 2
+  },
+  {
+    "id": "tr-recipe-peynirli-omlet",
+    "name": "Beyaz peynirli omlet",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 10
+      }
+    ],
+    "cookedWeightG": 350,
+    "servings": 2
+  },
+  {
+    "id": "tr-recipe-mantarlı-omlet",
+    "name": "Mantarlı omlet",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169251",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      }
+    ],
+    "cookedWeightG": 450,
+    "servings": 2
+  },
+  {
+    "id": "tr-recipe-ispanakli-omlet",
+    "name": "Ispanaklı omlet",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-168462",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      }
+    ],
+    "cookedWeightG": 450,
+    "servings": 2
+  },
+  {
+    "id": "tr-recipe-patatesli-omlet",
+    "name": "Patatesli omlet",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 550,
+    "servings": 2.75
+  },
+  {
+    "id": "tr-recipe-cilbir",
+    "name": "Çılbır",
+    "ingredients": [
+      {
+        "foodId": "usda-171287",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      }
+    ],
+    "cookedWeightG": 650,
+    "servings": 2.9545454545454546
+  },
+  {
+    "id": "tr-recipe-peynirli-gozleme",
+    "name": "Beyaz peynirli gözleme",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 220
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-ispanakli-gozleme",
+    "name": "Ispanaklı gözleme",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-168462",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 220
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-patatesli-gozleme",
+    "name": "Patatesli gözleme",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 220
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-kiymali-gozleme",
+    "name": "Kıymalı gözleme",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 220
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-peynirli-borek",
+    "name": "Beyaz peynirli börek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 90
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 7.777777777777778
+  },
+  {
+    "id": "tr-recipe-ispanakli-borek",
+    "name": "Ispanaklı börek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-168462",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 90
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 8
+  },
+  {
+    "id": "tr-recipe-patatesli-borek",
+    "name": "Patatesli börek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170026",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 90
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1800,
+    "servings": 9
+  },
+  {
+    "id": "tr-recipe-kiymali-borek",
+    "name": "Kıymalı börek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171790",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1700,
+    "servings": 8.5
+  },
+  {
+    "id": "tr-recipe-peynirli-pogaca",
+    "name": "Beyaz peynirli poğaça",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 50
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 14.666666666666666
+  },
+  {
+    "id": "tr-recipe-simit",
+    "name": "Ev yapımı simit",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170150",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 380
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 10
+  },
+  {
+    "id": "tr-recipe-acma",
+    "name": "Ev yapımı açma",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 11
+  },
+  {
+    "id": "tr-recipe-pisi",
+    "name": "Pişi",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 250
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 13.333333333333334
+  },
+  {
+    "id": "tr-recipe-kabak-mucver",
+    "name": "Fırında kabak mücver",
+    "ingredients": [
+      {
+        "foodId": "usda-169291",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 35
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 6.111111111111111
+  },
+  {
+    "id": "tr-recipe-patates-mucver",
+    "name": "Fırında patates mücver",
+    "ingredients": [
+      {
+        "foodId": "usda-170026",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 6.111111111111111
+  },
+  {
+    "id": "tr-recipe-havuclu-mucver",
+    "name": "Fırında havuç mücver",
+    "ingredients": [
+      {
+        "foodId": "usda-170393",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-peynirli-tost",
+    "name": "Beyaz peynirli ev tostu",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 180
+      }
+    ],
+    "cookedWeightG": 600,
+    "servings": 3
+  },
+  {
+    "id": "tr-recipe-yumurtali-ekmek",
+    "name": "Fırında yumurtalı ekmek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 180
+      }
+    ],
+    "cookedWeightG": 650,
+    "servings": 4.333333333333333
+  },
+  {
+    "id": "tr-recipe-coban-salata",
+    "name": "Çoban salata",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 40
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-kasik-salata",
+    "name": "Kaşık salata",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 40
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-gavurdagi",
+    "name": "Gavurdağı salatası",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 50
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-piyaz",
+    "name": "Fasulye piyazı",
+    "ingredients": [
+      {
+        "foodId": "usda-175202",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-nohut-salata",
+    "name": "Nohut salatası",
+    "ingredients": [
+      {
+        "foodId": "usda-173756",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170457",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-mercimek-salata",
+    "name": "Mercimek salatası",
+    "ingredients": [
+      {
+        "foodId": "usda-172420",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 40
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 60
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-patates-salata",
+    "name": "Patates salatası",
+    "ingredients": [
+      {
+        "foodId": "usda-170026",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-170000",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 45
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 60
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-yogurtlu-havuc",
+    "name": "Yoğurtlu havuç",
+    "ingredients": [
+      {
+        "foodId": "usda-170393",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 800,
+    "servings": 5.333333333333333
+  },
+  {
+    "id": "tr-recipe-cacik",
+    "name": "Cacık",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 15
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-haydari",
+    "name": "Haydari",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173420",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169230",
+        "qty": 10
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 25
+      }
+    ],
+    "cookedWeightG": 650,
+    "servings": 6.5
+  },
+  {
+    "id": "tr-recipe-sutlac",
+    "name": "Sütlaç",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 400
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 7
+  },
+  {
+    "id": "tr-recipe-firin-sutlac",
+    "name": "Fırın sütlaç",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-168877",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 160
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 350
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 6.5
+  },
+  {
+    "id": "tr-recipe-muhallebi",
+    "name": "Muhallebi",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 6.666666666666667
+  },
+  {
+    "id": "tr-recipe-kakaolu-muhallebi",
+    "name": "Kakaolu muhallebi",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 80
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 160
+      },
+      {
+        "foodId": "usda-169593",
+        "qty": 35
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      }
+    ],
+    "cookedWeightG": 1250,
+    "servings": 6.944444444444445
+  },
+  {
+    "id": "tr-recipe-irmik-tatlisi",
+    "name": "Sütlü irmik tatlısı",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-168933",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 170
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 20
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 7.222222222222222
+  },
+  {
+    "id": "tr-recipe-irmik-helvasi",
+    "name": "İrmik helvası",
+    "ingredients": [
+      {
+        "foodId": "usda-168933",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 9.166666666666666
+  },
+  {
+    "id": "tr-recipe-un-helvasi",
+    "name": "Un helvası",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 350
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 9
+  },
+  {
+    "id": "tr-recipe-revani",
+    "name": "Revani",
+    "ingredients": [
+      {
+        "foodId": "usda-168933",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-169761",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1700,
+    "servings": 11.333333333333334
+  },
+  {
+    "id": "tr-recipe-irmik-sekerpare",
+    "name": "Şekerpare",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-168933",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 600
+      }
+    ],
+    "cookedWeightG": 1600,
+    "servings": 16
+  },
+  {
+    "id": "tr-recipe-cevizli-baklava",
+    "name": "Ev yapımı cevizli baklava",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 650
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1700,
+    "servings": 21.25
+  },
+  {
+    "id": "tr-recipe-kabak-tatlisi",
+    "name": "Kabak tatlısı",
+    "ingredients": [
+      {
+        "foodId": "usda-168448",
+        "qty": 1200
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 6.666666666666667
+  },
+  {
+    "id": "tr-recipe-elma-tatlisi",
+    "name": "Fırında elma tatlısı",
+    "ingredients": [
+      {
+        "foodId": "usda-171688",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-168165",
+        "qty": 80
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 6.111111111111111
+  },
+  {
+    "id": "tr-recipe-elmalı-kurabiye",
+    "name": "Elmalı kurabiye",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-171284",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-171688",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 21.666666666666668
+  },
+  {
+    "id": "tr-recipe-kurabiye",
+    "name": "Sade ev kurabiyesi",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 100
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 25
+  },
+  {
+    "id": "tr-recipe-cevizli-kek",
+    "name": "Cevizli kek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 150
+      }
+    ],
+    "cookedWeightG": 1250,
+    "servings": 15.625
+  },
+  {
+    "id": "tr-recipe-havuclu-kek",
+    "name": "Havuçlu kek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      }
+    ],
+    "cookedWeightG": 1400,
+    "servings": 17.5
+  },
+  {
+    "id": "tr-recipe-kakaolu-kek",
+    "name": "Kakaolu kek",
+    "ingredients": [
+      {
+        "foodId": "usda-169761",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171287",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-171413",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169593",
+        "qty": 50
+      }
+    ],
+    "cookedWeightG": 1300,
+    "servings": 16.25
+  },
+  {
+    "id": "tr-recipe-mozaik-tatli",
+    "name": "Kakaolu yulaflı mozaik",
+    "ingredients": [
+      {
+        "foodId": "usda-169705",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-173410",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-169593",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 12.5
+  },
+  {
+    "id": "tr-recipe-asure-ornek",
+    "name": "Bulgurlu aşure örneği",
+    "ingredients": [
+      {
+        "foodId": "usda-170688",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-173756",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-175202",
+        "qty": 120
+      },
+      {
+        "foodId": "usda-168165",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170187",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1600
+      }
+    ],
+    "cookedWeightG": 2200,
+    "servings": 8.8
+  },
+  {
+    "id": "tr-recipe-meyveli-yogurt",
+    "name": "Çilekli yoğurt kâsesi",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-167762",
+        "qty": 200
+      },
+      {
+        "foodId": "usda-169640",
+        "qty": 30
+      },
+      {
+        "foodId": "usda-169705",
+        "qty": 60
+      }
+    ],
+    "cookedWeightG": 750,
+    "servings": 3
+  },
+  {
+    "id": "tr-recipe-ayran",
+    "name": "Ayran",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  },
+  {
+    "id": "tr-recipe-naneli-ayran",
+    "name": "Salatalıklı ayran",
+    "ingredients": [
+      {
+        "foodId": "usda-171284",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-limonata",
+    "name": "Ev limonatası",
+    "ingredients": [
+      {
+        "foodId": "usda-167747",
+        "qty": 250
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 900
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-portakal-suyu",
+    "name": "Portakallı ev içeceği",
+    "ingredients": [
+      {
+        "foodId": "usda-169097",
+        "qty": 800
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1100,
+    "servings": 4.4
+  },
+  {
+    "id": "tr-recipe-cilek-icecek",
+    "name": "Çilekli ev içeceği",
+    "ingredients": [
+      {
+        "foodId": "usda-167762",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 50
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 650
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-muzlu-sut",
+    "name": "Muzlu süt",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-173944",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 900,
+    "servings": 3
+  },
+  {
+    "id": "tr-recipe-kakaolu-sut",
+    "name": "Kakaolu süt",
+    "ingredients": [
+      {
+        "foodId": "usda-171267",
+        "qty": 750
+      },
+      {
+        "foodId": "usda-169593",
+        "qty": 25
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 35
+      }
+    ],
+    "cookedWeightG": 800,
+    "servings": 3.2
+  },
+  {
+    "id": "tr-recipe-sutlu-kahve",
+    "name": "Sütlü kahve",
+    "ingredients": [
+      {
+        "foodId": "usda-171890",
+        "qty": 300
+      },
+      {
+        "foodId": "usda-171267",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 600,
+    "servings": 2
+  },
+  {
+    "id": "tr-recipe-soguk-cay",
+    "name": "Limonlu soğuk çay",
+    "ingredients": [
+      {
+        "foodId": "usda-173227",
+        "qty": 1000
+      },
+      {
+        "foodId": "usda-167747",
+        "qty": 100
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 70
+      }
+    ],
+    "cookedWeightG": 1200,
+    "servings": 4.8
+  },
+  {
+    "id": "tr-recipe-elma-komposto",
+    "name": "Elma kompostosu",
+    "ingredients": [
+      {
+        "foodId": "usda-171688",
+        "qty": 600
+      },
+      {
+        "foodId": "usda-169655",
+        "qty": 180
+      },
+      {
+        "foodId": "usda-173647",
+        "qty": 1000
+      }
+    ],
+    "cookedWeightG": 1500,
+    "servings": 6
+  },
+  {
+    "id": "tr-recipe-salata-yagsiz",
+    "name": "Yağsız karışık salata",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 450
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 350
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 150
+      },
+      {
+        "foodId": "usda-170416",
+        "qty": 50
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 5
+  },
+  {
+    "id": "tr-recipe-kahvalti-sebzesi",
+    "name": "Kahvaltılık domates salatalık biber",
+    "ingredients": [
+      {
+        "foodId": "usda-170457",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-168409",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170427",
+        "qty": 200
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 6.666666666666667
+  },
+  {
+    "id": "tr-recipe-sogan-havuc",
+    "name": "Soğan ve havuç karışımı",
+    "ingredients": [
+      {
+        "foodId": "usda-170000",
+        "qty": 500
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 500
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 10
+  },
+  {
+    "id": "tr-recipe-haslanmis-sebze",
+    "name": "Haşlanmış karışık sebze",
+    "ingredients": [
+      {
+        "foodId": "usda-170379",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-169986",
+        "qty": 400
+      },
+      {
+        "foodId": "usda-170393",
+        "qty": 300
+      }
+    ],
+    "cookedWeightG": 1000,
+    "servings": 4
+  }
+]

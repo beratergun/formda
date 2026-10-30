@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ConnectedSources } from './ConnectedSources';
 import {
   Database,
   Download,
@@ -63,7 +64,7 @@ export function Profile() {
       setBusy(false);
     }
   };
-  const saveProfile = () => {
+  const saveProfile = async () => {
     if (
       (profile.age !== undefined &&
         (!Number.isFinite(profile.age) || profile.age < 18 || profile.age > 100)) ||
@@ -87,10 +88,17 @@ export function Profile() {
           heightCm: profile.heightCm,
           startWeight: profile.startWeight,
           activityFactor: profile.activityFactor,
+          addBurnedToTarget: profile.addBurnedToTarget,
+          burnedTargetPercent: profile.burnedTargetPercent,
         },
       ],
     }));
-    setMessage('Profilin kaydedildi.');
+    try {
+      await flush();
+      setMessage('Profilin kaydedildi.');
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Profil kaydedilemedi.');
+    }
   };
   const backup = () =>
     action(async () => {
@@ -168,6 +176,7 @@ export function Profile() {
         <p className="muted">Tercihlerin, gizliliğin ve cihazındaki veriler.</p>
       </div>
       <InstallCard force />
+      <ConnectedSources />
       <Card className="stack">
         <div className="row">
           <span className="avatar">
@@ -246,6 +255,38 @@ export function Profile() {
             onChange={(e) => setProfile({ ...profile, activityFactor: +e.target.value })}
           />
         </label>
+        <label className="check-field">
+          <input
+            type="checkbox"
+            checked={profile.addBurnedToTarget || false}
+            onChange={(e) =>
+              setProfile({
+                ...profile,
+                addBurnedToTarget: e.target.checked,
+                burnedTargetPercent: profile.burnedTargetPercent ?? 50,
+              })
+            }
+          />
+          Harcananı hedefe ekle
+        </label>
+        <label className="field">
+          Harcananın hedefe eklenecek yüzdesi
+          <input
+            type="number"
+            min={0}
+            max={100}
+            value={profile.burnedTargetPercent ?? 50}
+            onChange={(e) =>
+              setProfile({
+                ...profile,
+                burnedTargetPercent: Math.max(0, Math.min(100, +e.target.value)),
+              })
+            }
+          />
+        </label>
+        <p className="muted small">
+          Varsayılan kapalı. Harcama bir tahmindir; hedefe eklemek senin seçimin.
+        </p>
         <Button onClick={saveProfile}>Profilimi kaydet</Button>
       </Card>
       <Card className="stack">
@@ -552,8 +593,8 @@ export function Profile() {
           Her gün kendine bir adım. Cihazında çalışan kişisel spor asistanı ve günlüğü.
         </p>
         <p className="source-label">
-          Besin kaynakları: referans menü (yaklaşık), USDA FoodData Central SR Legacy 2018 ve açıkça
-          aradığın Open Food Facts ürünleri.
+          Besin kaynakları: USDA FoodData Central SR Legacy 2018, malzemeleri belirtilen örnek
+          tarifler ve açıkça aradığın Open Food Facts ürünleri.
         </p>
       </Card>
       {message && (

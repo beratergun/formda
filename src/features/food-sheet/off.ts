@@ -35,6 +35,8 @@ export async function searchPackaged(query: string, signal?: AbortSignal): Promi
       fatPer: p.nutriments!.fat_100g,
       state: 'na',
       source: `Open Food Facts · ${p.code}`,
+      sourceId: `off:${p.code}`,
+      sourceKind: 'off',
       barcode: p.code,
       portions: [{ label: '100 g', qty: 100 }],
       useCount: 0,

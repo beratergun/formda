@@ -8,6 +8,17 @@ const type = z.enum(['strength', 'swim', 'cardio', 'recovery', 'rest']);
 const clock = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/);
 const strings = z.array(z.string());
 const day = z.object({
+  health: z
+    .object({
+      steps: num.optional(),
+      activeKcal: num.optional(),
+      weight: num.optional(),
+      sleepMinutes: num.optional(),
+      sleepAt: clock.optional(),
+      syncedAt: num,
+      sources: strings,
+    })
+    .optional(),
   date,
   boxes: z.object({ h: z.boolean(), s: z.boolean(), k: z.boolean(), u: z.boolean() }),
   boxOverrides: z.record(z.string(), z.boolean()).optional(),
@@ -58,6 +69,8 @@ const set = z.object({
   done: z.boolean(),
 });
 const workout = z.object({
+  healthSource: z.string().optional(),
+  healthRecordId: z.string().optional(),
   id,
   date,
   type,
@@ -73,6 +86,10 @@ const workout = z.object({
   cooldownDone: z.boolean().optional(),
 });
 const food = z.object({
+  sourceId: z.string().optional(),
+  sourceKind: z.enum(['usda', 'recipe', 'legacy', 'off']).optional(),
+  sourceDescription: z.string().optional(),
+  recipeId: z.string().optional(),
   id,
   name: z.string(),
   aliases: strings,
@@ -155,6 +172,8 @@ const targets = z.object({
   scoreWeights: z.array(num).length(6).optional(),
 });
 const profile = z.object({
+  addBurnedToTarget: z.boolean().optional(),
+  burnedTargetPercent: num.max(100).optional(),
   id: z.literal('main'),
   name: z.string().optional(),
   age: num.optional(),

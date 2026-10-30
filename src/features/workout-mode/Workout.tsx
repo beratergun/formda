@@ -8,6 +8,7 @@ import { epley, progression, volume } from '../../domain/progression';
 import { emptyDay, type WorkoutLog, type WorkoutType, type SetLog } from '../../domain/types';
 import { EXERCISES } from '../../data/seed/exercises';
 import { ExerciseGuide } from './Library';
+import { workoutEnergy } from '../../domain/energy';
 import { ChangeExercise } from '../plan/DailyAlternative';
 import { replaceDayExercise } from '../../domain/program/programs';
 
@@ -176,6 +177,13 @@ export function Workout() {
                   {record.record ? ' · Yeni kişisel rekor!' : ''}
                 </p>
               ))}
+            <p className="notice">
+              {Math.round(
+                workoutEnergy(log, day.weight || day.health?.weight || data.profile[0].startWeight)
+                  .gross,
+              )}{' '}
+              kcal · Tahmini seans harcaması
+            </p>
             {type === 'swim' && <p>{log.distanceM || 0} m yüzme</p>}
           </Card>
           <Link className="button secondary" to="/camera">

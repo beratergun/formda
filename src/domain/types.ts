@@ -7,6 +7,10 @@ export const MEALS: { id: MealId; name: string; time: string }[] = [
   { id: 'aksam', name: 'Akşam', time: '19.00' },
 ];
 export interface Food {
+  sourceId?: string;
+  sourceKind?: 'usda' | 'recipe' | 'legacy' | 'off';
+  sourceDescription?: string;
+  recipeId?: string;
   id: string;
   name: string;
   aliases: string[];
@@ -44,7 +48,17 @@ export interface MealEntry extends Macros {
   freeText?: string;
   createdAt: number;
 }
+export interface HealthDay {
+  steps?: number;
+  activeKcal?: number;
+  weight?: number;
+  sleepMinutes?: number;
+  sleepAt?: string;
+  syncedAt: number;
+  sources: string[];
+}
 export interface DayLog {
+  health?: HealthDay;
   date: string;
   boxes: { h: boolean; s: boolean; k: boolean; u: boolean };
   boxOverrides?: Partial<Record<'h' | 's' | 'k' | 'u', boolean>>;
@@ -74,6 +88,8 @@ export interface SetLog {
   done: boolean;
 }
 export interface WorkoutLog {
+  healthSource?: string;
+  healthRecordId?: string;
   id: string;
   date: string;
   type: WorkoutType;
@@ -169,6 +185,8 @@ export interface Targets {
   scoreWeights?: number[];
 }
 export interface Profile {
+  addBurnedToTarget?: boolean;
+  burnedTargetPercent?: number;
   id: 'main';
   name?: string;
   age?: number;

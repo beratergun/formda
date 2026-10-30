@@ -56,10 +56,11 @@ export const db = new FormdaDatabase();
 export async function seedDatabase(database = db) {
   if (
     (await database.meta.get('seedVersion')) &&
-    (await database.meta.get('libraryVersion'))?.value === '2'
+    (await database.meta.get('libraryVersion'))?.value === '2' &&
+    (await database.meta.get('foodCatalogVersion'))?.value === '2'
   )
     return;
-  const [{ FOODS, DEFAULT_MENU }, { QUOTES }, { EXERCISES }] = await Promise.all([
+  const [{ FOODS, DEFAULT_MENU, TURKISH_RECIPES }, { QUOTES }, { EXERCISES }] = await Promise.all([
     import('./seed/foods'),
     import('./seed/quotes'),
     import('./seed/exercises'),
@@ -84,6 +85,23 @@ export async function seedDatabase(database = db) {
         { key: 'schemaVersion', value: '1' },
         { key: 'seedVersion', value: '1' },
       ]);
+    }
+    if ((await database.meta.get('foodCatalogVersion'))?.value !== '2') {
+      const old = new Map((await database.food.toArray()).map((f) => [f.id, f]));
+      await database.food.bulkPut(
+        FOODS.map((food) => {
+          const existing = old.get(food.id);
+          return {
+            ...food,
+            favorite: existing?.favorite,
+            lastUsedAt: existing?.lastUsedAt,
+            useCount: existing?.useCount || 0,
+          };
+        }),
+      );
+      const existingRecipes = new Set(await database.recipe.toCollection().primaryKeys());
+      await database.recipe.bulkPut(TURKISH_RECIPES.filter((r) => !existingRecipes.has(r.id)));
+      await database.meta.put({ key: 'foodCatalogVersion', value: '2' });
     }
     if ((await database.meta.get('libraryVersion'))?.value !== '2') {
       const old = new Map((await database.exercise.toArray()).map((e) => [e.id, e]));

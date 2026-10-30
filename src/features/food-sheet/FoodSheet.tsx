@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Recognition, FOOD_MATCHES } from './Recognition';
 import { Camera, Check, Copy, Search, Star, Trash2 } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
 import { Button, Card, Chip, EmptyState, Segmented, Sheet, Stepper } from '../../ui';
@@ -35,6 +36,7 @@ export function FoodSheet({
   const [state, setState] = useState<FoodState | ''>('');
   const [text, setText] = useState('');
   const [rows, setRows] = useState<ReturnType<typeof parseMeal>>([]);
+  const [recognitionPhoto, setRecognitionPhoto] = useState<Blob>();
   const [photoIds, setPhotoIds] = useState<string[]>([]);
   const [online, setOnline] = useState(navigator.onLine);
   const [products, setProducts] = useState<Food[]>([]);
@@ -112,9 +114,11 @@ export function FoodSheet({
     }
   };
   const upload = async (file: File) => {
+    setRecognitionPhoto(file);
     setLoading(true);
     try {
       const media = await addImage(file, date, 'meal');
+      setRecognitionPhoto(file);
       setPhotoIds([...photoIds, media.id]);
       setMessage('Fotoğraf cihazına kaydedildi. İçeriğini arayarak veya yazarak ekle.');
     } catch (e) {
@@ -314,6 +318,27 @@ export function FoodSheet({
               </Button>
             ))}
           </div>
+          <div className="choice-grid">
+            {[
+              ['Küçük', 0.75],
+              ['Orta', 1],
+              ['Büyük', 1.5],
+            ].map(([label, factor]) => (
+              <Button
+                key={label}
+                variant="secondary"
+                onClick={() =>
+                  setQty(
+                    (selected.portions.find((p) => p.label.includes('porsiyon'))?.qty ||
+                      selected.portions[0]?.qty ||
+                      selected.per) * Number(factor),
+                  )
+                }
+              >
+                {label} porsiyon
+              </Button>
+            ))}
+          </div>
           <Card className="macro-preview">
             <b>{Math.round(macros!.kcal)} kcal</b>
             <span>{macros!.protein.toFixed(1)} g protein</span>
@@ -330,6 +355,29 @@ export function FoodSheet({
             </p>
           )}
           <p className="source-label">{selected.source}</p>
+          <p className="source-label">Kaynak kimliği: {selected.sourceId || selected.id}</p>
+          {selected.recipeId && (
+            <details>
+              <summary>Tarif malzemeleri ve porsiyon hesabı</summary>
+              {data.recipe
+                .filter((r) => r.id === selected.recipeId)
+                .map((r) => (
+                  <div className="stack" key={r.id}>
+                    <p className="small muted">
+                      Örnek tarif; bitmiş ağırlık {r.cookedWeightG} g. Kendi tarifini tartarak daha
+                      doğru sonuç alabilirsin.
+                    </p>
+                    <ul>
+                      {r.ingredients.map((i) => (
+                        <li key={i.foodId}>
+                          {data.food.find((f) => f.id === i.foodId)?.name} · {i.qty} g
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </details>
+          )}
           <Button
             onClick={() => {
               if (selected.id.startsWith('off-'))
@@ -413,6 +461,20 @@ export function FoodSheet({
                         hesaplanır.
                       </p>
                       {photoIds.length > 0 && <Chip>{photoIds.length} fotoğraf eklendi</Chip>}
+                      <Recognition
+                        image={recognitionPhoto}
+                        onChoose={(prediction, label) => {
+                          const food = data.food.find(
+                            (f) => f.id === FOOD_MATCHES[prediction.label],
+                          );
+                          if (food) choose(food);
+                          else {
+                            setQuery(label);
+                            setTab('search');
+                            setMessage('Öneriyi doğru yiyecekle eşleştir veya aramayı düzelt.');
+                          }
+                        }}
+                      />
                     </>
                   )}
                   {tab === 'recipes' && (

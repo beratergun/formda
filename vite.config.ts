@@ -57,6 +57,16 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{html,js,css,woff2,png,svg,json}'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/.*\.(?:wasm|mjs)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'formda-model-runtime-v1',
+              expiration: { maxEntries: 2, maxAgeSeconds: 31536000 },
+            },
+          },
+        ],
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 5000000,

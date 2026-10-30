@@ -8,7 +8,7 @@ async function onboard(page: Page) {
   await expect(page.getByRole('heading', { name: 'Bugün, kendin için.' })).toBeVisible();
 }
 async function saved(page: Page) {
-  await expect(page.getByRole('status').filter({ hasText: 'Kaydedildi' })).toBeVisible();
+  await expect(page.getByRole('status').filter({ hasText: /^Kaydedildi$/ })).toBeVisible();
 }
 test('onboarding, exact food arithmetic, local persistence and offline entry', async ({
   page,
@@ -34,11 +34,11 @@ test('onboarding, exact food arithmetic, local persistence and offline entry', a
   await page.getByRole('button', { name: 'Yazarak', exact: true }).click();
   await page.getByRole('textbox', { name: 'Ne yedin?' }).fill('2 yumurta, 1 dilim ekmek');
   await page.getByRole('button', { name: 'Kalemlere ayır' }).click();
-  await expect(page.getByText('219 kcal', { exact: true })).toBeVisible();
+  await expect(page.getByText('220 kcal', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Tümünü öğüne ekle' }).click();
   await saved(page);
   await page.reload();
-  await expect(page.getByText('219 kcal', { exact: true })).toBeVisible();
+  await expect(page.getByText('220 kcal', { exact: true })).toBeVisible();
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
   });

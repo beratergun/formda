@@ -39,10 +39,10 @@ try {
   await expect(page.getByRole('status').filter({ hasText: 'Kaydedildi' })).toBeVisible();
   await page.evaluate(async () => navigator.serviceWorker.ready);
   await page.reload();
-  await expect(page.getByText('219 kcal', { exact: true })).toBeVisible();
+  await expect(page.getByText('220 kcal', { exact: true })).toBeVisible();
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByText('219 kcal', { exact: true })).toBeVisible();
+  await expect(page.getByText('220 kcal', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Su artır' }).click();
   await expect(page.getByRole('status').filter({ hasText: 'Kaydedildi' })).toBeVisible();
   await page.reload();
@@ -54,7 +54,7 @@ try {
   const result = {
     url,
     http: response.status(),
-    mealKcal: 219,
+    mealKcal: 220,
     offlineWater: 1,
     installability,
     external: [...new Set(external)],

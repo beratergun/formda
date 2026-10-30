@@ -15,6 +15,55 @@ import { decodeBlobBackup } from './backup/stream';
 import { zipSync, strToU8 } from 'fflate';
 
 const databases: FormdaDatabase[] = [];
+it('corrects the catalog without changing historical meal snapshots, favorites, recipes or personal data', async () => {
+  const database = fresh();
+  await seedDatabase(database);
+  const beforeFood = (await database.food.get('ekmek'))!;
+  await database.food.put({
+    ...beforeFood,
+    kcalPer: 250,
+    proteinPer: 10,
+    favorite: true,
+    useCount: 12,
+    lastUsedAt: 123,
+  });
+  await database.mealEntry.put({
+    id: 'historical-meal',
+    date: '2026-10-29',
+    mealId: 'kahvalti',
+    foodId: 'ekmek',
+    name: 'Historical bread',
+    qty: 30,
+    unit: 'g',
+    state: 'na',
+    kcal: 75,
+    protein: 3,
+    photoIds: [],
+    createdAt: 1,
+  });
+  await database.recipe.put({
+    id: 'my-recipe',
+    name: 'My own recipe',
+    ingredients: [{ foodId: 'egg', qty: 2 }],
+    cookedWeightG: 180,
+    servings: 2,
+  });
+  await database.meta.put({ key: 'foodCatalogVersion', value: '1' });
+  await seedDatabase(database);
+  expect(await database.food.get('ekmek')).toMatchObject({
+    kcalPer: 252,
+    favorite: true,
+    useCount: 12,
+    lastUsedAt: 123,
+  });
+  expect(await database.mealEntry.get('historical-meal')).toMatchObject({
+    kcal: 75,
+    protein: 3,
+    name: 'Historical bread',
+  });
+  expect((await database.recipe.get('my-recipe'))?.name).toBe('My own recipe');
+  expect((await database.meta.get('foodCatalogVersion'))?.value).toBe('2');
+});
 it('rejects oversized ZIP32 output before reading media or replacing any records', async () => {
   const database = fresh();
   await seedDatabase(database);
@@ -39,7 +88,7 @@ it('rejects oversized ZIP32 output before reading media or replacing any records
     };
   }
   await expect(encodeBlobStream(document, files())).rejects.toThrow('ZIP32');
-  expect(await database.food.count()).toBe(619);
+  expect(await database.food.count()).toBe(data.food.length);
 });
 function fresh() {
   const database = new FormdaDatabase(`test-${crypto.randomUUID()}`);
@@ -117,7 +166,18 @@ it('round-trips all data and media through zip, delete, restore exactly', async 
     note: 'Türkçe günlük',
     water: 5,
     activeKcal: 321,
+    health: {
+      steps: 8000,
+      activeKcal: 300,
+      weight: 80,
+      sleepMinutes: 420,
+      sleepAt: '23:30',
+      syncedAt: 123,
+      sources: ['Fictional health source'],
+    },
   });
+  const profile = (await database.profile.get('main'))!;
+  await database.profile.put({ ...profile, addBurnedToTarget: true, burnedTargetPercent: 50 });
   const plan = (await database.planSettings.get('main'))!;
   await database.planSettings.put(
     replaceDayExercise(

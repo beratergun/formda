@@ -1,0 +1,2134 @@
+[
+  [
+    "mercimek-corbasi",
+    "Mercimek çorbası",
+    1200,
+    250,
+    {
+      "lentil": 180,
+      "onion": 100,
+      "carrot": 80,
+      "oil": 20,
+      "water": 1000
+    }
+  ],
+  [
+    "ezogelin",
+    "Ezogelin çorbası",
+    1400,
+    250,
+    {
+      "lentil": 150,
+      "bulgur": 50,
+      "rice": 30,
+      "tomato": 150,
+      "onion": 100,
+      "oil": 20,
+      "water": 1200
+    }
+  ],
+  [
+    "yayla",
+    "Yayla çorbası",
+    1200,
+    250,
+    {
+      "yogurt": 400,
+      "rice": 60,
+      "egg": 50,
+      "flour": 15,
+      "butter": 15,
+      "water": 800
+    }
+  ],
+  [
+    "domates-corbasi",
+    "Domates çorbası",
+    1100,
+    250,
+    {
+      "tomato": 700,
+      "flour": 30,
+      "milk": 150,
+      "butter": 20,
+      "water": 400
+    }
+  ],
+  [
+    "tavuk-suyu",
+    "Tavuk suyu çorbası",
+    1200,
+    250,
+    {
+      "chicken": 180,
+      "pasta": 60,
+      "carrot": 80,
+      "onion": 60,
+      "oil": 10,
+      "water": 1000
+    }
+  ],
+  [
+    "sebze-corbasi",
+    "Sebze çorbası",
+    1300,
+    250,
+    {
+      "carrot": 150,
+      "potato": 180,
+      "zucchini": 180,
+      "onion": 100,
+      "oil": 20,
+      "water": 900
+    }
+  ],
+  [
+    "mantar-corbasi",
+    "Sütlü mantar çorbası",
+    1000,
+    250,
+    {
+      "mushroom": 400,
+      "milk": 300,
+      "flour": 25,
+      "butter": 20,
+      "water": 400
+    }
+  ],
+  [
+    "brokoli-corbasi",
+    "Brokoli çorbası",
+    1000,
+    250,
+    {
+      "broccoli": 400,
+      "potato": 150,
+      "milk": 200,
+      "oil": 15,
+      "water": 500
+    }
+  ],
+  [
+    "kabak-corbasi",
+    "Kabak çorbası",
+    1100,
+    250,
+    {
+      "zucchini": 500,
+      "yogurt": 200,
+      "flour": 20,
+      "oil": 15,
+      "water": 600
+    }
+  ],
+  [
+    "pirasa-corbasi",
+    "Pırasa çorbası",
+    1100,
+    250,
+    {
+      "leek": 400,
+      "potato": 150,
+      "carrot": 100,
+      "oil": 20,
+      "water": 650
+    }
+  ],
+  [
+    "ispanak-corbasi",
+    "Ispanak çorbası",
+    1100,
+    250,
+    {
+      "spinach": 400,
+      "rice": 40,
+      "onion": 100,
+      "yogurt": 150,
+      "oil": 20,
+      "water": 600
+    }
+  ],
+  [
+    "nohut-corbasi",
+    "Nohut çorbası",
+    1200,
+    250,
+    {
+      "chickpea": 180,
+      "onion": 100,
+      "tomato": 150,
+      "oil": 20,
+      "water": 1100
+    }
+  ],
+  [
+    "bulgur-corbasi",
+    "Bulgur çorbası",
+    1100,
+    250,
+    {
+      "bulgur": 100,
+      "tomato": 250,
+      "onion": 100,
+      "oil": 20,
+      "water": 900
+    }
+  ],
+  [
+    "pirinc-corbasi",
+    "Pirinç çorbası",
+    1100,
+    250,
+    {
+      "rice": 100,
+      "tomato": 200,
+      "carrot": 100,
+      "oil": 20,
+      "water": 900
+    }
+  ],
+  [
+    "sehriye-corbasi",
+    "Şehriye çorbası",
+    1100,
+    250,
+    {
+      "pasta": 100,
+      "tomato": 250,
+      "oil": 20,
+      "water": 900
+    }
+  ],
+  [
+    "kereviz-corbasi",
+    "Kereviz çorbası",
+    1100,
+    250,
+    {
+      "celeriac": 400,
+      "potato": 150,
+      "carrot": 100,
+      "oil": 20,
+      "water": 700
+    }
+  ],
+  [
+    "balkabagi-corbasi",
+    "Bal kabağı çorbası",
+    1100,
+    250,
+    {
+      "pumpkin": 500,
+      "milk": 200,
+      "onion": 100,
+      "butter": 20,
+      "water": 600
+    }
+  ],
+  [
+    "karnabahar-corbasi",
+    "Karnabahar çorbası",
+    1100,
+    250,
+    {
+      "cauliflower": 450,
+      "potato": 150,
+      "milk": 200,
+      "oil": 20,
+      "water": 600
+    }
+  ],
+  [
+    "yogurtlu-bugday",
+    "Yoğurtlu bulgur çorbası",
+    1200,
+    250,
+    {
+      "bulgur": 120,
+      "yogurt": 400,
+      "chickpea": 60,
+      "oil": 15,
+      "water": 850
+    }
+  ],
+  [
+    "terbiyeli-sebze",
+    "Terbiyeli sebze çorbası",
+    1200,
+    250,
+    {
+      "carrot": 150,
+      "potato": 180,
+      "peas": 120,
+      "egg": 50,
+      "lemon": 30,
+      "oil": 20,
+      "water": 850
+    }
+  ],
+  [
+    "zeytinyagli-fasulye",
+    "Zeytinyağlı taze fasulye",
+    900,
+    200,
+    {
+      "greenbeans": 700,
+      "tomato": 250,
+      "onion": 120,
+      "oil": 40,
+      "water": 200
+    }
+  ],
+  [
+    "kiymali-fasulye",
+    "Kıymalı taze fasulye",
+    1000,
+    250,
+    {
+      "greenbeans": 650,
+      "beef": 200,
+      "tomato": 200,
+      "onion": 100,
+      "oil": 20,
+      "water": 200
+    }
+  ],
+  [
+    "zeytinyagli-pirasa",
+    "Zeytinyağlı pırasa",
+    950,
+    250,
+    {
+      "leek": 650,
+      "carrot": 180,
+      "rice": 50,
+      "oil": 40,
+      "lemon": 30,
+      "water": 250
+    }
+  ],
+  [
+    "zeytinyagli-enginar",
+    "Zeytinyağlı enginar",
+    1000,
+    250,
+    {
+      "artichoke": 550,
+      "carrot": 150,
+      "peas": 150,
+      "potato": 150,
+      "oil": 40,
+      "water": 250
+    }
+  ],
+  [
+    "zeytinyagli-kereviz",
+    "Zeytinyağlı kereviz",
+    1000,
+    250,
+    {
+      "celeriac": 600,
+      "carrot": 150,
+      "potato": 150,
+      "orange": 150,
+      "oil": 40,
+      "water": 200
+    }
+  ],
+  [
+    "ispanak-yemegi",
+    "Ispanak yemeği",
+    900,
+    225,
+    {
+      "spinach": 800,
+      "rice": 50,
+      "onion": 120,
+      "tomato": 150,
+      "oil": 30,
+      "water": 200
+    }
+  ],
+  [
+    "kiymali-ispanak",
+    "Kıymalı ıspanak",
+    1000,
+    250,
+    {
+      "spinach": 750,
+      "beef": 200,
+      "onion": 100,
+      "tomato": 150,
+      "oil": 20,
+      "water": 200
+    }
+  ],
+  [
+    "yumurtali-ispanak",
+    "Yumurtalı ıspanak",
+    800,
+    200,
+    {
+      "spinach": 600,
+      "egg": 200,
+      "onion": 100,
+      "oil": 25
+    }
+  ],
+  [
+    "kabak-yemegi",
+    "Kabak yemeği",
+    1000,
+    250,
+    {
+      "zucchini": 800,
+      "tomato": 250,
+      "onion": 100,
+      "rice": 40,
+      "oil": 30,
+      "water": 150
+    }
+  ],
+  [
+    "kiymali-kabak",
+    "Kıymalı kabak",
+    1100,
+    275,
+    {
+      "zucchini": 800,
+      "beef": 200,
+      "tomato": 200,
+      "onion": 100,
+      "oil": 20,
+      "water": 150
+    }
+  ],
+  [
+    "kabak-dolmasi",
+    "Kabak dolması",
+    1100,
+    250,
+    {
+      "zucchini": 700,
+      "rice": 150,
+      "beef": 200,
+      "onion": 100,
+      "tomato": 150,
+      "oil": 25,
+      "water": 250
+    }
+  ],
+  [
+    "biber-dolmasi",
+    "Biber dolması",
+    1100,
+    250,
+    {
+      "pepper": 600,
+      "rice": 180,
+      "onion": 150,
+      "tomato": 250,
+      "oil": 45,
+      "water": 300
+    }
+  ],
+  [
+    "etli-biber-dolmasi",
+    "Etli biber dolması",
+    1200,
+    300,
+    {
+      "pepper": 600,
+      "rice": 130,
+      "beef": 300,
+      "onion": 100,
+      "tomato": 200,
+      "oil": 25,
+      "water": 300
+    }
+  ],
+  [
+    "lahana-sarmasi",
+    "Lahana sarması",
+    1300,
+    250,
+    {
+      "cabbage": 800,
+      "rice": 200,
+      "onion": 180,
+      "tomato": 200,
+      "oil": 50,
+      "water": 300
+    }
+  ],
+  [
+    "etli-lahana-sarmasi",
+    "Etli lahana sarması",
+    1400,
+    280,
+    {
+      "cabbage": 800,
+      "rice": 150,
+      "beef": 300,
+      "onion": 150,
+      "tomato": 200,
+      "oil": 25,
+      "water": 300
+    }
+  ],
+  [
+    "kapuska",
+    "Kapuska",
+    1100,
+    275,
+    {
+      "cabbage": 900,
+      "onion": 150,
+      "tomato": 250,
+      "rice": 50,
+      "oil": 30,
+      "water": 250
+    }
+  ],
+  [
+    "etli-kapuska",
+    "Etli kapuska",
+    1200,
+    300,
+    {
+      "cabbage": 800,
+      "beef": 250,
+      "onion": 120,
+      "tomato": 250,
+      "oil": 20,
+      "water": 250
+    }
+  ],
+  [
+    "bamya-yemegi",
+    "Bamya yemeği",
+    900,
+    225,
+    {
+      "okra": 650,
+      "tomato": 250,
+      "onion": 100,
+      "lemon": 30,
+      "oil": 30,
+      "water": 250
+    }
+  ],
+  [
+    "etli-bamya",
+    "Etli bamya",
+    1100,
+    275,
+    {
+      "okra": 600,
+      "beef": 300,
+      "tomato": 200,
+      "onion": 100,
+      "oil": 20,
+      "lemon": 30,
+      "water": 300
+    }
+  ],
+  [
+    "bezelye-yemegi",
+    "Bezelye yemeği",
+    1100,
+    275,
+    {
+      "peas": 500,
+      "potato": 250,
+      "carrot": 150,
+      "onion": 100,
+      "tomato": 200,
+      "oil": 30,
+      "water": 300
+    }
+  ],
+  [
+    "etli-bezelye",
+    "Etli bezelye",
+    1200,
+    300,
+    {
+      "peas": 450,
+      "beef": 250,
+      "potato": 200,
+      "carrot": 100,
+      "onion": 100,
+      "tomato": 200,
+      "oil": 20,
+      "water": 300
+    }
+  ],
+  [
+    "turlu",
+    "Sebze türlü",
+    1200,
+    300,
+    {
+      "eggplant": 250,
+      "zucchini": 250,
+      "potato": 250,
+      "greenbeans": 200,
+      "tomato": 250,
+      "onion": 100,
+      "oil": 35,
+      "water": 200
+    }
+  ],
+  [
+    "etli-turlu",
+    "Etli türlü",
+    1400,
+    280,
+    {
+      "beef": 300,
+      "eggplant": 250,
+      "zucchini": 250,
+      "potato": 250,
+      "tomato": 250,
+      "onion": 100,
+      "oil": 25,
+      "water": 250
+    }
+  ],
+  [
+    "imambayildi",
+    "İmam bayıldı",
+    1000,
+    250,
+    {
+      "eggplant": 700,
+      "onion": 250,
+      "tomato": 350,
+      "garlic": 20,
+      "oil": 70
+    }
+  ],
+  [
+    "karniyarik",
+    "Fırında karnıyarık",
+    1100,
+    275,
+    {
+      "eggplant": 700,
+      "beef": 300,
+      "onion": 150,
+      "tomato": 250,
+      "pepper": 100,
+      "oil": 45
+    }
+  ],
+  [
+    "patlican-musakka",
+    "Patlıcan musakka",
+    1100,
+    275,
+    {
+      "eggplant": 700,
+      "beef": 250,
+      "tomato": 300,
+      "onion": 150,
+      "oil": 45
+    }
+  ],
+  [
+    "firinda-karnabahar",
+    "Fırında karnabahar",
+    900,
+    225,
+    {
+      "cauliflower": 800,
+      "milk": 200,
+      "flour": 30,
+      "butter": 25
+    }
+  ],
+  [
+    "brokoli-sote",
+    "Brokoli sote",
+    650,
+    200,
+    {
+      "broccoli": 600,
+      "carrot": 100,
+      "garlic": 10,
+      "oil": 25
+    }
+  ],
+  [
+    "mantar-sote",
+    "Mantar sote",
+    750,
+    200,
+    {
+      "mushroom": 650,
+      "pepper": 150,
+      "tomato": 200,
+      "onion": 100,
+      "oil": 30
+    }
+  ],
+  [
+    "patates-oturtma",
+    "Patates oturtma",
+    1200,
+    300,
+    {
+      "potato": 700,
+      "beef": 300,
+      "tomato": 250,
+      "onion": 150,
+      "oil": 40
+    }
+  ],
+  [
+    "kuru-fasulye",
+    "Kuru fasulye yemeği",
+    1400,
+    250,
+    {
+      "beans": 350,
+      "onion": 180,
+      "tomato": 300,
+      "oil": 40,
+      "water": 900
+    }
+  ],
+  [
+    "etli-kuru-fasulye",
+    "Etli kuru fasulye",
+    1600,
+    300,
+    {
+      "beans": 350,
+      "beef": 300,
+      "onion": 150,
+      "tomato": 300,
+      "oil": 30,
+      "water": 1000
+    }
+  ],
+  [
+    "nohut-yemegi",
+    "Nohut yemeği",
+    1400,
+    250,
+    {
+      "chickpea": 350,
+      "onion": 150,
+      "tomato": 300,
+      "oil": 40,
+      "water": 900
+    }
+  ],
+  [
+    "etli-nohut",
+    "Etli nohut",
+    1600,
+    300,
+    {
+      "chickpea": 350,
+      "beef": 300,
+      "onion": 150,
+      "tomato": 300,
+      "oil": 25,
+      "water": 1000
+    }
+  ],
+  [
+    "yesil-mercimek",
+    "Yeşil mercimek yemeği",
+    1300,
+    250,
+    {
+      "lentil": 350,
+      "onion": 150,
+      "tomato": 300,
+      "oil": 35,
+      "water": 850
+    }
+  ],
+  [
+    "eristeli-mercimek",
+    "Erişteli mercimek",
+    1400,
+    250,
+    {
+      "lentil": 280,
+      "pasta": 100,
+      "onion": 150,
+      "tomato": 250,
+      "oil": 30,
+      "water": 950
+    }
+  ],
+  [
+    "mercimek-koftesi",
+    "Mercimek köftesi",
+    1200,
+    150,
+    {
+      "lentil": 300,
+      "bulgur": 200,
+      "onion": 180,
+      "tomato": 150,
+      "parsley": 50,
+      "oil": 50,
+      "water": 600
+    }
+  ],
+  [
+    "kisr",
+    "Kısır",
+    1100,
+    200,
+    {
+      "bulgur": 300,
+      "tomato": 300,
+      "cucumber": 200,
+      "onion": 100,
+      "parsley": 80,
+      "lemon": 70,
+      "oil": 60,
+      "water": 300
+    }
+  ],
+  [
+    "pirinc-pilavi",
+    "Pirinç pilavı",
+    1000,
+    180,
+    {
+      "rice": 350,
+      "butter": 35,
+      "oil": 10,
+      "water": 700
+    }
+  ],
+  [
+    "sehriyeli-pilav",
+    "Şehriyeli pirinç pilavı",
+    1100,
+    180,
+    {
+      "rice": 350,
+      "pasta": 70,
+      "butter": 40,
+      "water": 750
+    }
+  ],
+  [
+    "nohutlu-pilav",
+    "Nohutlu pilav",
+    1300,
+    220,
+    {
+      "rice": 350,
+      "chickpea": 120,
+      "butter": 35,
+      "water": 1000
+    }
+  ],
+  [
+    "tavuklu-pilav",
+    "Tavuklu pilav",
+    1300,
+    260,
+    {
+      "rice": 350,
+      "chicken": 400,
+      "butter": 30,
+      "water": 800
+    }
+  ],
+  [
+    "bulgur-pilavi",
+    "Domatesli bulgur pilavı",
+    1100,
+    200,
+    {
+      "bulgur": 350,
+      "tomato": 300,
+      "onion": 150,
+      "pepper": 100,
+      "oil": 40,
+      "water": 700
+    }
+  ],
+  [
+    "sebzeli-bulgur",
+    "Sebzeli bulgur pilavı",
+    1300,
+    220,
+    {
+      "bulgur": 350,
+      "zucchini": 200,
+      "carrot": 150,
+      "peas": 150,
+      "onion": 100,
+      "oil": 35,
+      "water": 750
+    }
+  ],
+  [
+    "mercimekli-bulgur",
+    "Mercimekli bulgur pilavı",
+    1300,
+    220,
+    {
+      "bulgur": 250,
+      "lentil": 200,
+      "onion": 200,
+      "oil": 45,
+      "water": 850
+    }
+  ],
+  [
+    "sade-makarna",
+    "Sade makarna",
+    1000,
+    200,
+    {
+      "pasta": 400,
+      "oil": 20,
+      "water": 650
+    }
+  ],
+  [
+    "domatesli-makarna",
+    "Domatesli makarna",
+    1300,
+    250,
+    {
+      "pasta": 400,
+      "tomato": 500,
+      "garlic": 15,
+      "oil": 35,
+      "water": 650
+    }
+  ],
+  [
+    "yogurtlu-makarna",
+    "Yoğurtlu makarna",
+    1400,
+    280,
+    {
+      "pasta": 400,
+      "yogurt": 500,
+      "garlic": 10,
+      "butter": 25,
+      "water": 650
+    }
+  ],
+  [
+    "firinda-makarna",
+    "Fırında sütlü makarna",
+    1500,
+    300,
+    {
+      "pasta": 400,
+      "milk": 500,
+      "feta": 200,
+      "egg": 100,
+      "butter": 35,
+      "water": 500
+    }
+  ],
+  [
+    "sebzeli-makarna",
+    "Sebzeli makarna",
+    1500,
+    300,
+    {
+      "pasta": 400,
+      "zucchini": 250,
+      "mushroom": 250,
+      "tomato": 300,
+      "oil": 35,
+      "water": 600
+    }
+  ],
+  [
+    "izgara-kofte",
+    "Izgara köfte",
+    700,
+    150,
+    {
+      "beef": 700,
+      "onion": 120,
+      "flour": 50,
+      "egg": 50,
+      "parsley": 20
+    }
+  ],
+  [
+    "izmir-kofte",
+    "İzmir köfte",
+    1400,
+    300,
+    {
+      "beef": 600,
+      "potato": 500,
+      "onion": 120,
+      "flour": 50,
+      "tomato": 400,
+      "oil": 35
+    }
+  ],
+  [
+    "sulu-kofte",
+    "Sulu köfte",
+    1500,
+    300,
+    {
+      "beef": 500,
+      "rice": 60,
+      "flour": 30,
+      "potato": 300,
+      "carrot": 150,
+      "onion": 100,
+      "oil": 20,
+      "water": 700
+    }
+  ],
+  [
+    "firinda-kofte",
+    "Fırında köfte patates",
+    1300,
+    300,
+    {
+      "beef": 600,
+      "potato": 500,
+      "onion": 120,
+      "flour": 50,
+      "tomato": 300,
+      "oil": 30
+    }
+  ],
+  [
+    "kadinbudu-kofte",
+    "Fırında kadınbudu köfte",
+    1000,
+    180,
+    {
+      "beef": 600,
+      "rice": 100,
+      "onion": 120,
+      "egg": 150,
+      "flour": 60,
+      "oil": 35,
+      "water": 150
+    }
+  ],
+  [
+    "tavuk-sote",
+    "Tavuk sote",
+    1100,
+    250,
+    {
+      "chicken": 700,
+      "tomato": 300,
+      "pepper": 200,
+      "onion": 120,
+      "oil": 30
+    }
+  ],
+  [
+    "mantarlı-tavuk",
+    "Mantarlı tavuk",
+    1200,
+    250,
+    {
+      "chicken": 650,
+      "mushroom": 400,
+      "onion": 120,
+      "milk": 150,
+      "oil": 30
+    }
+  ],
+  [
+    "firinda-tavuk",
+    "Fırında tavuk sebze",
+    1400,
+    300,
+    {
+      "chicken": 800,
+      "potato": 450,
+      "carrot": 200,
+      "onion": 150,
+      "oil": 35
+    }
+  ],
+  [
+    "tavuk-haslama",
+    "Tavuk haşlama",
+    1600,
+    350,
+    {
+      "chicken": 700,
+      "potato": 400,
+      "carrot": 250,
+      "onion": 150,
+      "oil": 15,
+      "water": 700
+    }
+  ],
+  [
+    "tavuk-sis",
+    "Tavuk şiş",
+    850,
+    200,
+    {
+      "chicken": 800,
+      "pepper": 200,
+      "onion": 150,
+      "yogurt": 100,
+      "oil": 25
+    }
+  ],
+  [
+    "et-sote",
+    "Et sote",
+    1100,
+    250,
+    {
+      "beef": 750,
+      "tomato": 300,
+      "pepper": 200,
+      "onion": 150,
+      "oil": 30
+    }
+  ],
+  [
+    "tas-kebabi",
+    "Tas kebabı",
+    1500,
+    300,
+    {
+      "beef": 800,
+      "potato": 400,
+      "carrot": 200,
+      "onion": 150,
+      "tomato": 200,
+      "oil": 30,
+      "water": 500
+    }
+  ],
+  [
+    "etli-guvec",
+    "Etli sebze güveç",
+    1600,
+    320,
+    {
+      "beef": 700,
+      "eggplant": 350,
+      "greenbeans": 250,
+      "tomato": 400,
+      "onion": 150,
+      "pepper": 150,
+      "oil": 30,
+      "water": 300
+    }
+  ],
+  [
+    "kuzu-sebzeli",
+    "Sebzeli kuzu yemeği",
+    1400,
+    300,
+    {
+      "lamb": 650,
+      "potato": 400,
+      "carrot": 200,
+      "onion": 150,
+      "tomato": 200,
+      "oil": 15,
+      "water": 350
+    }
+  ],
+  [
+    "kiymali-patates",
+    "Kıymalı patates yemeği",
+    1400,
+    300,
+    {
+      "potato": 800,
+      "beef": 300,
+      "onion": 150,
+      "tomato": 250,
+      "oil": 25,
+      "water": 400
+    }
+  ],
+  [
+    "tavuk-bulgur",
+    "Tavuklu bulgur pilavı",
+    1500,
+    300,
+    {
+      "chicken": 600,
+      "bulgur": 300,
+      "onion": 150,
+      "tomato": 300,
+      "oil": 30,
+      "water": 700
+    }
+  ],
+  [
+    "tavuk-durum",
+    "Ev yapımı tavuk dürüm",
+    1100,
+    275,
+    {
+      "chicken": 500,
+      "flour": 250,
+      "tomato": 200,
+      "onion": 100,
+      "yogurt": 100,
+      "oil": 30,
+      "water": 150
+    }
+  ],
+  [
+    "lahmacun",
+    "Ev yapımı lahmacun",
+    1100,
+    220,
+    {
+      "flour": 400,
+      "beef": 350,
+      "tomato": 250,
+      "pepper": 100,
+      "onion": 150,
+      "oil": 20,
+      "water": 220
+    }
+  ],
+  [
+    "kiymali-pide",
+    "Ev yapımı kıymalı pide",
+    1400,
+    350,
+    {
+      "flour": 500,
+      "beef": 450,
+      "tomato": 250,
+      "onion": 180,
+      "pepper": 100,
+      "oil": 30,
+      "water": 300
+    }
+  ],
+  [
+    "peynirli-pide",
+    "Beyaz peynirli pide",
+    1300,
+    325,
+    {
+      "flour": 500,
+      "feta": 400,
+      "egg": 100,
+      "parsley": 40,
+      "oil": 25,
+      "water": 300
+    }
+  ],
+  [
+    "kiymali-manti",
+    "Yoğurtlu kıymalı mantı",
+    1700,
+    300,
+    {
+      "flour": 500,
+      "beef": 350,
+      "onion": 120,
+      "egg": 50,
+      "yogurt": 600,
+      "butter": 30,
+      "tomato": 150,
+      "water": 300
+    }
+  ],
+  [
+    "menemen",
+    "Menemen",
+    800,
+    200,
+    {
+      "egg": 300,
+      "tomato": 500,
+      "pepper": 180,
+      "oil": 30
+    }
+  ],
+  [
+    "soganli-menemen",
+    "Soğanlı menemen",
+    900,
+    225,
+    {
+      "egg": 300,
+      "tomato": 500,
+      "pepper": 150,
+      "onion": 150,
+      "oil": 30
+    }
+  ],
+  [
+    "sade-omlet",
+    "Sade omlet",
+    250,
+    125,
+    {
+      "egg": 250,
+      "oil": 10
+    }
+  ],
+  [
+    "peynirli-omlet",
+    "Beyaz peynirli omlet",
+    350,
+    175,
+    {
+      "egg": 250,
+      "feta": 100,
+      "oil": 10
+    }
+  ],
+  [
+    "mantarlı-omlet",
+    "Mantarlı omlet",
+    450,
+    225,
+    {
+      "egg": 250,
+      "mushroom": 250,
+      "oil": 15
+    }
+  ],
+  [
+    "ispanakli-omlet",
+    "Ispanaklı omlet",
+    450,
+    225,
+    {
+      "egg": 250,
+      "spinach": 250,
+      "oil": 15
+    }
+  ],
+  [
+    "patatesli-omlet",
+    "Patatesli omlet",
+    550,
+    200,
+    {
+      "egg": 250,
+      "potato": 350,
+      "oil": 25
+    }
+  ],
+  [
+    "cilbir",
+    "Çılbır",
+    650,
+    220,
+    {
+      "egg": 250,
+      "yogurt": 400,
+      "garlic": 10,
+      "butter": 20
+    }
+  ],
+  [
+    "peynirli-gozleme",
+    "Beyaz peynirli gözleme",
+    900,
+    225,
+    {
+      "flour": 400,
+      "feta": 300,
+      "parsley": 40,
+      "oil": 25,
+      "water": 220
+    }
+  ],
+  [
+    "ispanakli-gozleme",
+    "Ispanaklı gözleme",
+    1100,
+    250,
+    {
+      "flour": 400,
+      "spinach": 500,
+      "onion": 120,
+      "oil": 35,
+      "water": 220
+    }
+  ],
+  [
+    "patatesli-gozleme",
+    "Patatesli gözleme",
+    1200,
+    300,
+    {
+      "flour": 400,
+      "potato": 650,
+      "onion": 120,
+      "oil": 35,
+      "water": 220
+    }
+  ],
+  [
+    "kiymali-gozleme",
+    "Kıymalı gözleme",
+    1100,
+    275,
+    {
+      "flour": 400,
+      "beef": 400,
+      "onion": 150,
+      "oil": 25,
+      "water": 220
+    }
+  ],
+  [
+    "peynirli-borek",
+    "Beyaz peynirli börek",
+    1400,
+    180,
+    {
+      "flour": 500,
+      "feta": 400,
+      "egg": 150,
+      "milk": 300,
+      "oil": 90,
+      "water": 250
+    }
+  ],
+  [
+    "ispanakli-borek",
+    "Ispanaklı börek",
+    1600,
+    200,
+    {
+      "flour": 500,
+      "spinach": 800,
+      "onion": 200,
+      "egg": 100,
+      "milk": 200,
+      "oil": 90,
+      "water": 250
+    }
+  ],
+  [
+    "patatesli-borek",
+    "Patatesli börek",
+    1800,
+    200,
+    {
+      "flour": 500,
+      "potato": 1000,
+      "onion": 200,
+      "egg": 100,
+      "milk": 200,
+      "oil": 90,
+      "water": 250
+    }
+  ],
+  [
+    "kiymali-borek",
+    "Kıymalı börek",
+    1700,
+    200,
+    {
+      "flour": 500,
+      "beef": 650,
+      "onion": 250,
+      "egg": 100,
+      "milk": 200,
+      "oil": 80,
+      "water": 250
+    }
+  ],
+  [
+    "peynirli-pogaca",
+    "Beyaz peynirli poğaça",
+    1100,
+    75,
+    {
+      "flour": 500,
+      "feta": 250,
+      "egg": 100,
+      "yogurt": 200,
+      "butter": 100,
+      "oil": 50
+    }
+  ],
+  [
+    "simit",
+    "Ev yapımı simit",
+    1000,
+    100,
+    {
+      "flour": 600,
+      "sesame": 120,
+      "sugar": 30,
+      "oil": 30,
+      "water": 380
+    }
+  ],
+  [
+    "acma",
+    "Ev yapımı açma",
+    1100,
+    100,
+    {
+      "flour": 600,
+      "milk": 300,
+      "butter": 120,
+      "sugar": 40,
+      "egg": 50
+    }
+  ],
+  [
+    "pisi",
+    "Pişi",
+    1000,
+    75,
+    {
+      "flour": 600,
+      "yogurt": 200,
+      "oil": 120,
+      "water": 250
+    }
+  ],
+  [
+    "kabak-mucver",
+    "Fırında kabak mücver",
+    1100,
+    180,
+    {
+      "zucchini": 800,
+      "egg": 200,
+      "flour": 150,
+      "feta": 120,
+      "parsley": 40,
+      "oil": 35
+    }
+  ],
+  [
+    "patates-mucver",
+    "Fırında patates mücver",
+    1100,
+    180,
+    {
+      "potato": 800,
+      "egg": 200,
+      "flour": 100,
+      "onion": 120,
+      "oil": 40
+    }
+  ],
+  [
+    "havuclu-mucver",
+    "Fırında havuç mücver",
+    900,
+    180,
+    {
+      "carrot": 650,
+      "egg": 150,
+      "flour": 120,
+      "yogurt": 100,
+      "oil": 30
+    }
+  ],
+  [
+    "peynirli-tost",
+    "Beyaz peynirli ev tostu",
+    600,
+    200,
+    {
+      "flour": 300,
+      "feta": 200,
+      "butter": 20,
+      "tomato": 100,
+      "water": 180
+    }
+  ],
+  [
+    "yumurtali-ekmek",
+    "Fırında yumurtalı ekmek",
+    650,
+    150,
+    {
+      "flour": 300,
+      "egg": 200,
+      "milk": 100,
+      "oil": 25,
+      "water": 180
+    }
+  ],
+  [
+    "coban-salata",
+    "Çoban salata",
+    1000,
+    200,
+    {
+      "tomato": 450,
+      "cucumber": 300,
+      "pepper": 120,
+      "onion": 100,
+      "parsley": 30,
+      "oil": 30,
+      "lemon": 40
+    }
+  ],
+  [
+    "kasik-salata",
+    "Kaşık salata",
+    1000,
+    200,
+    {
+      "tomato": 500,
+      "cucumber": 250,
+      "pepper": 100,
+      "onion": 100,
+      "parsley": 30,
+      "oil": 40,
+      "lemon": 40
+    }
+  ],
+  [
+    "gavurdagi",
+    "Gavurdağı salatası",
+    1000,
+    200,
+    {
+      "tomato": 500,
+      "pepper": 150,
+      "onion": 100,
+      "walnut": 100,
+      "parsley": 40,
+      "oil": 40,
+      "lemon": 50
+    }
+  ],
+  [
+    "piyaz",
+    "Fasulye piyazı",
+    1100,
+    220,
+    {
+      "beans": 300,
+      "onion": 150,
+      "tomato": 250,
+      "parsley": 50,
+      "egg": 100,
+      "oil": 40,
+      "lemon": 60,
+      "water": 600
+    }
+  ],
+  [
+    "nohut-salata",
+    "Nohut salatası",
+    1100,
+    220,
+    {
+      "chickpea": 300,
+      "tomato": 250,
+      "cucumber": 200,
+      "parsley": 50,
+      "oil": 40,
+      "lemon": 60,
+      "water": 600
+    }
+  ],
+  [
+    "mercimek-salata",
+    "Mercimek salatası",
+    1100,
+    220,
+    {
+      "lentil": 300,
+      "pepper": 150,
+      "carrot": 150,
+      "parsley": 60,
+      "onion": 100,
+      "oil": 40,
+      "lemon": 60,
+      "water": 600
+    }
+  ],
+  [
+    "patates-salata",
+    "Patates salatası",
+    1100,
+    220,
+    {
+      "potato": 1000,
+      "onion": 150,
+      "parsley": 50,
+      "oil": 45,
+      "lemon": 60
+    }
+  ],
+  [
+    "yogurtlu-havuc",
+    "Yoğurtlu havuç",
+    800,
+    150,
+    {
+      "carrot": 500,
+      "yogurt": 400,
+      "garlic": 10,
+      "oil": 25
+    }
+  ],
+  [
+    "cacik",
+    "Cacık",
+    1200,
+    250,
+    {
+      "yogurt": 600,
+      "cucumber": 350,
+      "garlic": 10,
+      "oil": 15,
+      "water": 300
+    }
+  ],
+  [
+    "haydari",
+    "Haydari",
+    650,
+    100,
+    {
+      "yogurt": 500,
+      "feta": 100,
+      "garlic": 10,
+      "oil": 25
+    }
+  ],
+  [
+    "sutlac",
+    "Sütlaç",
+    1400,
+    200,
+    {
+      "milk": 1000,
+      "rice": 100,
+      "sugar": 150,
+      "water": 400
+    }
+  ],
+  [
+    "firin-sutlac",
+    "Fırın sütlaç",
+    1300,
+    200,
+    {
+      "milk": 1000,
+      "rice": 100,
+      "sugar": 160,
+      "egg": 50,
+      "water": 350
+    }
+  ],
+  [
+    "muhallebi",
+    "Muhallebi",
+    1200,
+    180,
+    {
+      "milk": 1000,
+      "flour": 80,
+      "sugar": 150,
+      "butter": 20
+    }
+  ],
+  [
+    "kakaolu-muhallebi",
+    "Kakaolu muhallebi",
+    1250,
+    180,
+    {
+      "milk": 1000,
+      "flour": 80,
+      "sugar": 160,
+      "cocoa": 35,
+      "butter": 20
+    }
+  ],
+  [
+    "irmik-tatlisi",
+    "Sütlü irmik tatlısı",
+    1300,
+    180,
+    {
+      "milk": 1000,
+      "semolina": 180,
+      "sugar": 170,
+      "butter": 20
+    }
+  ],
+  [
+    "irmik-helvasi",
+    "İrmik helvası",
+    1100,
+    120,
+    {
+      "semolina": 350,
+      "butter": 120,
+      "sugar": 250,
+      "milk": 400,
+      "water": 300
+    }
+  ],
+  [
+    "un-helvasi",
+    "Un helvası",
+    900,
+    100,
+    {
+      "flour": 350,
+      "butter": 150,
+      "sugar": 250,
+      "water": 350
+    }
+  ],
+  [
+    "revani",
+    "Revani",
+    1700,
+    150,
+    {
+      "semolina": 300,
+      "flour": 200,
+      "egg": 200,
+      "yogurt": 250,
+      "oil": 120,
+      "sugar": 450,
+      "water": 500
+    }
+  ],
+  [
+    "irmik-sekerpare",
+    "Şekerpare",
+    1600,
+    100,
+    {
+      "flour": 500,
+      "semolina": 100,
+      "butter": 180,
+      "egg": 100,
+      "sugar": 500,
+      "water": 600
+    }
+  ],
+  [
+    "cevizli-baklava",
+    "Ev yapımı cevizli baklava",
+    1700,
+    80,
+    {
+      "flour": 600,
+      "walnut": 350,
+      "butter": 250,
+      "egg": 100,
+      "milk": 150,
+      "sugar": 650,
+      "water": 650
+    }
+  ],
+  [
+    "kabak-tatlisi",
+    "Kabak tatlısı",
+    1200,
+    180,
+    {
+      "pumpkin": 1200,
+      "sugar": 350,
+      "walnut": 100
+    }
+  ],
+  [
+    "elma-tatlisi",
+    "Fırında elma tatlısı",
+    1100,
+    180,
+    {
+      "apple": 1000,
+      "sugar": 150,
+      "walnut": 100,
+      "raisin": 80
+    }
+  ],
+  [
+    "elmalı-kurabiye",
+    "Elmalı kurabiye",
+    1300,
+    60,
+    {
+      "flour": 500,
+      "butter": 180,
+      "yogurt": 150,
+      "sugar": 180,
+      "apple": 600,
+      "walnut": 100
+    }
+  ],
+  [
+    "kurabiye",
+    "Sade ev kurabiyesi",
+    1000,
+    40,
+    {
+      "flour": 500,
+      "butter": 200,
+      "sugar": 200,
+      "egg": 100,
+      "milk": 100
+    }
+  ],
+  [
+    "cevizli-kek",
+    "Cevizli kek",
+    1250,
+    80,
+    {
+      "flour": 400,
+      "egg": 200,
+      "milk": 250,
+      "sugar": 250,
+      "oil": 150,
+      "walnut": 150
+    }
+  ],
+  [
+    "havuclu-kek",
+    "Havuçlu kek",
+    1400,
+    80,
+    {
+      "flour": 400,
+      "egg": 200,
+      "sugar": 250,
+      "oil": 150,
+      "carrot": 400,
+      "walnut": 100
+    }
+  ],
+  [
+    "kakaolu-kek",
+    "Kakaolu kek",
+    1300,
+    80,
+    {
+      "flour": 400,
+      "egg": 200,
+      "milk": 300,
+      "sugar": 250,
+      "oil": 150,
+      "cocoa": 50
+    }
+  ],
+  [
+    "mozaik-tatli",
+    "Kakaolu yulaflı mozaik",
+    1000,
+    80,
+    {
+      "oats": 400,
+      "milk": 250,
+      "butter": 100,
+      "sugar": 180,
+      "cocoa": 50,
+      "walnut": 100
+    }
+  ],
+  [
+    "asure-ornek",
+    "Bulgurlu aşure örneği",
+    2200,
+    250,
+    {
+      "bulgur": 250,
+      "chickpea": 120,
+      "beans": 120,
+      "raisin": 150,
+      "sugar": 350,
+      "walnut": 100,
+      "water": 1600
+    }
+  ],
+  [
+    "meyveli-yogurt",
+    "Çilekli yoğurt kâsesi",
+    750,
+    250,
+    {
+      "yogurt": 500,
+      "strawberry": 200,
+      "honey": 30,
+      "oats": 60
+    }
+  ],
+  [
+    "ayran",
+    "Ayran",
+    1000,
+    250,
+    {
+      "yogurt": 500,
+      "water": 500
+    }
+  ],
+  [
+    "naneli-ayran",
+    "Salatalıklı ayran",
+    1100,
+    250,
+    {
+      "yogurt": 500,
+      "cucumber": 150,
+      "water": 500
+    }
+  ],
+  [
+    "limonata",
+    "Ev limonatası",
+    1200,
+    250,
+    {
+      "lemon": 250,
+      "sugar": 150,
+      "water": 900
+    }
+  ],
+  [
+    "portakal-suyu",
+    "Portakallı ev içeceği",
+    1100,
+    250,
+    {
+      "orange": 800,
+      "lemon": 100,
+      "water": 200
+    }
+  ],
+  [
+    "cilek-icecek",
+    "Çilekli ev içeceği",
+    1200,
+    250,
+    {
+      "strawberry": 500,
+      "sugar": 100,
+      "lemon": 50,
+      "water": 650
+    }
+  ],
+  [
+    "muzlu-sut",
+    "Muzlu süt",
+    900,
+    300,
+    {
+      "milk": 600,
+      "banana": 300
+    }
+  ],
+  [
+    "kakaolu-sut",
+    "Kakaolu süt",
+    800,
+    250,
+    {
+      "milk": 750,
+      "cocoa": 25,
+      "sugar": 35
+    }
+  ],
+  [
+    "sutlu-kahve",
+    "Sütlü kahve",
+    600,
+    300,
+    {
+      "coffee": 300,
+      "milk": 300
+    }
+  ],
+  [
+    "soguk-cay",
+    "Limonlu soğuk çay",
+    1200,
+    250,
+    {
+      "tea": 1000,
+      "lemon": 100,
+      "sugar": 70
+    }
+  ],
+  [
+    "elma-komposto",
+    "Elma kompostosu",
+    1500,
+    250,
+    {
+      "apple": 600,
+      "sugar": 180,
+      "water": 1000
+    }
+  ],
+  [
+    "salata-yagsiz",
+    "Yağsız karışık salata",
+    1000,
+    200,
+    {
+      "tomato": 450,
+      "cucumber": 350,
+      "pepper": 150,
+      "parsley": 50
+    }
+  ],
+  [
+    "kahvalti-sebzesi",
+    "Kahvaltılık domates salatalık biber",
+    1000,
+    150,
+    {
+      "tomato": 400,
+      "cucumber": 400,
+      "pepper": 200
+    }
+  ],
+  [
+    "sogan-havuc",
+    "Soğan ve havuç karışımı",
+    1000,
+    100,
+    {
+      "onion": 500,
+      "carrot": 500
+    }
+  ],
+  [
+    "haslanmis-sebze",
+    "Haşlanmış karışık sebze",
+    1000,
+    250,
+    {
+      "broccoli": 400,
+      "cauliflower": 400,
+      "carrot": 300
+    }
+  ]
+]

@@ -1,0 +1,4322 @@
+[
+  {
+    "id": "tr-recipe-mercimek-corbasi",
+    "name": "Mercimek çorbası",
+    "aliases": ["Mercimek çorbası", "mercimek corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 73.6,
+    "proteinPer": 3.8436666666666666,
+    "carbPer": 10.927,
+    "fatPer": 1.8499999999999999,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170000, FDC 170393, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-mercimek-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mercimek-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ezogelin",
+    "name": "Ezogelin çorbası",
+    "aliases": ["Ezogelin çorbası", "ezogelin"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 75.16428571428571,
+    "proteinPer": 3.400642857142857,
+    "carbPer": 12.301785714285716,
+    "fatPer": 1.632357142857143,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170688, FDC 168877, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-ezogelin",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ezogelin",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yayla",
+    "name": "Yayla çorbası",
+    "aliases": ["Yayla çorbası", "yayla"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 58.05416666666666,
+    "proteinPer": 2.177541666666667,
+    "carbPer": 6.537833333333333,
+    "fatPer": 2.538583333333333,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 168877, FDC 171287, FDC 169761, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-yayla",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yayla",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-domates-corbasi",
+    "name": "Domates çorbası",
+    "aliases": ["Domates çorbası", "domates corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 41.236363636363635,
+    "proteinPer": 1.3063636363636362,
+    "carbPer": 5.212000000000001,
+    "fatPer": 1.8985454545454545,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 169761, FDC 171267, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-domates-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-domates-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-suyu",
+    "name": "Tavuk suyu çorbası",
+    "aliases": ["Tavuk suyu çorbası", "tavuk suyu"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 48.650000000000006,
+    "proteinPer": 4.1419999999999995,
+    "carbPer": 4.8406666666666665,
+    "fatPer": 1.322833333333333,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 168927, FDC 170393, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-tavuk-suyu",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-suyu",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sebze-corbasi",
+    "name": "Sebze çorbası",
+    "aliases": ["Sebze çorbası", "sebze corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 34.42307692307692,
+    "proteinPer": 0.6433076923076922,
+    "carbPer": 4.677538461538461,
+    "fatPer": 1.6306153846153846,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170393, FDC 170026, FDC 169291, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sebze-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sebze-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mantar-corbasi",
+    "name": "Sütlü mantar çorbası",
+    "aliases": ["Sütlü mantar çorbası", "mantar corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 47.24,
+    "proteinPer": 2.5004999999999997,
+    "carbPer": 4.6527,
+    "fatPer": 2.3765,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169251, FDC 171267, FDC 169761, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-mantar-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mantar-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-brokoli-corbasi",
+    "name": "Brokoli çorbası",
+    "aliases": ["Brokoli çorbası", "brokoli corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 48.410000000000004,
+    "proteinPer": 2.0955,
+    "carbPer": 6.2410000000000005,
+    "fatPer": 2.0575,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170379, FDC 170026, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-brokoli-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-brokoli-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kabak-corbasi",
+    "name": "Kabak çorbası",
+    "aliases": ["Kabak çorbası", "kabak corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 37.49090909090909,
+    "proteinPer": 1.3681818181818182,
+    "carbPer": 3.6481818181818184,
+    "fatPer": 2.1178181818181816,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169291, FDC 171284, FDC 169761, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kabak-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kabak-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-pirasa-corbasi",
+    "name": "Pırasa çorbası",
+    "aliases": ["Pırasa çorbası", "pirasa corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 52.48181818181818,
+    "proteinPer": 0.9095454545454543,
+    "carbPer": 8.42090909090909,
+    "fatPer": 1.9613636363636364,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169246, FDC 170026, FDC 170393, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-pirasa-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-pirasa-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ispanak-corbasi",
+    "name": "Ispanak çorbası",
+    "aliases": ["Ispanak çorbası", "ispanak corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 49.66363636363636,
+    "proteinPer": 1.8724545454545456,
+    "carbPer": 5.713636363636364,
+    "fatPer": 2.436272727272727,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168462, FDC 168877, FDC 170000, FDC 171284, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-ispanak-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ispanak-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-nohut-corbasi",
+    "name": "Nohut çorbası",
+    "aliases": ["Nohut çorbası", "nohut corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 77.01666666666667,
+    "proteinPer": 3.2766666666666664,
+    "carbPer": 10.714583333333334,
+    "fatPer": 2.606,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 173756, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-nohut-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-nohut-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-bulgur-corbasi",
+    "name": "Bulgur çorbası",
+    "aliases": ["Bulgur çorbası", "bulgur corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 54.89090909090909,
+    "proteinPer": 1.418181818181818,
+    "carbPer": 8.63318181818182,
+    "fatPer": 1.9936363636363637,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-bulgur-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-bulgur-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-pirinc-corbasi",
+    "name": "Pirinç çorbası",
+    "aliases": ["Pirinç çorbası", "pirinc corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 56.25454545454544,
+    "proteinPer": 0.8927272727272728,
+    "carbPer": 8.850909090909092,
+    "fatPer": 1.9363636363636365,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 170457, FDC 170393, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-pirinc-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-pirinc-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sehriye-corbasi",
+    "name": "Şehriye çorbası",
+    "aliases": ["Şehriye çorbası", "sehriye corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 53.89090909090909,
+    "proteinPer": 1.3818181818181818,
+    "carbPer": 7.675,
+    "fatPer": 2.0009090909090905,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sehriye-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sehriye-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kereviz-corbasi",
+    "name": "Kereviz çorbası",
+    "aliases": ["Kereviz çorbası", "kereviz corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 45.57272727272728,
+    "proteinPer": 0.9095454545454543,
+    "carbPer": 6.602727272727273,
+    "fatPer": 1.9613636363636364,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170400, FDC 170026, FDC 170393, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kereviz-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kereviz-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-balkabagi-corbasi",
+    "name": "Bal kabağı çorbası",
+    "aliases": ["Bal kabağı çorbası", "balkabagi corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 37.58181818181818,
+    "proteinPer": 1.17,
+    "carbPer": 4.677454545454545,
+    "fatPer": 1.889090909090909,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168448, FDC 171267, FDC 170000, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-balkabagi-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-balkabagi-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-karnabahar-corbasi",
+    "name": "Karnabahar çorbası",
+    "aliases": ["Karnabahar çorbası", "karnabahar corbasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 45.89090909090909,
+    "proteinPer": 1.6649999999999998,
+    "carbPer": 5.292272727272727,
+    "fatPer": 2.305,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169986, FDC 170026, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-karnabahar-corbasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-karnabahar-corbasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yogurtlu-bugday",
+    "name": "Yoğurtlu bulgur çorbası",
+    "aliases": ["Yoğurtlu bulgur çorbası", "yogurtlu bugday"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 84.48333333333335,
+    "proteinPer": 3.411666666666666,
+    "carbPer": 12.293333333333333,
+    "fatPer": 2.7683333333333335,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 171284, FDC 173756, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-yogurtlu-bugday",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yogurtlu-bugday",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-terbiyeli-sebze",
+    "name": "Terbiyeli sebze çorbası",
+    "aliases": ["Terbiyeli sebze çorbası", "terbiyeli sebze"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 46.01666666666667,
+    "proteinPer": 1.4995,
+    "carbPer": 5.465,
+    "fatPer": 2.152416666666667,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170393, FDC 170026, FDC 170419, FDC 171287, FDC 167747, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-terbiyeli-sebze",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-terbiyeli-sebze",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-fasulye",
+    "name": "Zeytinyağlı taze fasulye",
+    "aliases": ["Zeytinyağlı taze fasulye", "zeytinyagli fasulye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 73.73333333333333,
+    "proteinPer": 1.8144444444444445,
+    "carbPer": 7.747,
+    "fatPer": 4.684444444444444,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169961, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-zeytinyagli-fasulye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-zeytinyagli-fasulye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-fasulye",
+    "name": "Kıymalı taze fasulye",
+    "aliases": ["Kıymalı taze fasulye", "kiymali fasulye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 72.83,
+    "proteinPer": 5.7555,
+    "carbPer": 6.2425,
+    "fatPer": 3.193,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169961, FDC 171790, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-fasulye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-fasulye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-pirasa",
+    "name": "Zeytinyağlı pırasa",
+    "aliases": ["Zeytinyağlı pırasa", "zeytinyagli pirasa"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 106.63157894736841,
+    "proteinPer": 1.5888421052631578,
+    "carbPer": 15.95936842105263,
+    "fatPer": 4.503578947368422,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169246, FDC 170393, FDC 168877, FDC 171413, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-zeytinyagli-pirasa",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-zeytinyagli-pirasa",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-enginar",
+    "name": "Zeytinyağlı enginar",
+    "aliases": ["Zeytinyağlı enginar", "zeytinyagli enginar"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 91.06,
+    "proteinPer": 3.0584999999999996,
+    "carbPer": 11.997,
+    "fatPer": 4.192,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169205, FDC 170393, FDC 170419, FDC 170026, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-zeytinyagli-enginar",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-zeytinyagli-enginar",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-zeytinyagli-kereviz",
+    "name": "Zeytinyağlı kereviz",
+    "aliases": ["Zeytinyağlı kereviz", "zeytinyagli kereviz"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 85.31,
+    "proteinPer": 1.488,
+    "carbPer": 11.352,
+    "fatPer": 4.2475,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170400, FDC 170393, FDC 170026, FDC 169097, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-zeytinyagli-kereviz",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-zeytinyagli-kereviz",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ispanak-yemegi",
+    "name": "Ispanak yemeği",
+    "aliases": ["Ispanak yemeği", "ispanak yemegi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 78.52222222222223,
+    "proteinPer": 3.231666666666667,
+    "carbPer": 9.564777777777776,
+    "fatPer": 3.763333333333333,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168462, FDC 168877, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-ispanak-yemegi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ispanak-yemegi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-ispanak",
+    "name": "Kıymalı ıspanak",
+    "aliases": ["Kıymalı ıspanak", "kiymali ispanak"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 69.02999999999999,
+    "proteinPer": 6.666999999999999,
+    "carbPer": 4.24,
+    "fatPer": 3.3325,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168462, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-ispanak",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-ispanak",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yumurtali-ispanak",
+    "name": "Yumurtalı ıspanak",
+    "aliases": ["Yumurtalı ıspanak", "yumurtali ispanak"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 85.625,
+    "proteinPer": 5.4325,
+    "carbPer": 4.07,
+    "fatPer": 5.8075,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168462, FDC 171287, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-yumurtali-ispanak",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yumurtali-ispanak",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kabak-yemegi",
+    "name": "Kabak yemeği",
+    "aliases": ["Kabak yemeği", "kabak yemegi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 63.22000000000001,
+    "proteinPer": 1.5832,
+    "carbPer": 7.5945,
+    "fatPer": 3.3424,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169291, FDC 170457, FDC 170000, FDC 168877, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kabak-yemegi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kabak-yemegi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-kabak",
+    "name": "Kıymalı kabak",
+    "aliases": ["Kıymalı kabak", "kiymali kabak"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 60.25454545454545,
+    "proteinPer": 5.03090909090909,
+    "carbPer": 3.8181818181818183,
+    "fatPer": 3.0054545454545454,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169291, FDC 171790, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-kabak",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-kabak",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kabak-dolmasi",
+    "name": "Kabak dolması",
+    "aliases": ["Kabak dolması", "kabak dolmasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 111.68181818181817,
+    "proteinPer": 5.853181818181817,
+    "carbPer": 14.267727272727274,
+    "fatPer": 3.5118181818181817,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169291, FDC 168877, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kabak-dolmasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kabak-dolmasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-biber-dolmasi",
+    "name": "Biber dolması",
+    "aliases": ["Biber dolması", "biber dolmasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 116.34545454545456,
+    "proteinPer": 1.9858181818181817,
+    "carbPer": 17.779545454545453,
+    "fatPer": 4.350727272727273,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170427, FDC 168877, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-biber-dolmasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-biber-dolmasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-biber-dolmasi",
+    "name": "Etli biber dolması",
+    "aliases": ["Etli biber dolması", "etli biber dolmasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 108.54166666666667,
+    "proteinPer": 6.790750000000001,
+    "carbPer": 12.413333333333334,
+    "fatPer": 3.5315,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170427, FDC 168877, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-biber-dolmasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-biber-dolmasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-lahana-sarmasi",
+    "name": "Lahana sarması",
+    "aliases": ["Lahana sarması", "lahana sarmasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 113.84615384615384,
+    "proteinPer": 2.1723076923076925,
+    "carbPer": 17.768615384615387,
+    "fatPer": 4.0538461538461545,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169975, FDC 168877, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-lahana-sarmasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-lahana-sarmasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-lahana-sarmasi",
+    "name": "Etli lahana sarması",
+    "aliases": ["Etli lahana sarması", "etli lahana sarmasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 105.39285714285714,
+    "proteinPer": 6.324642857142858,
+    "carbPer": 13.442142857142859,
+    "fatPer": 3.024285714285714,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169975, FDC 168877, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-lahana-sarmasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-lahana-sarmasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (280 g)",
+        "qty": 280
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kapuska",
+    "name": "Kapuska",
+    "aliases": ["Kapuska", "kapuska"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 70.7,
+    "proteinPer": 1.7213636363636364,
+    "carbPer": 10.539545454545454,
+    "fatPer": 2.898181818181818,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169975, FDC 170000, FDC 170457, FDC 168877, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kapuska",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kapuska",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-kapuska",
+    "name": "Etli kapuska",
+    "aliases": ["Etli kapuska", "etli kapuska"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 67.69166666666666,
+    "proteinPer": 5.605,
+    "carbPer": 5.611083333333333,
+    "fatPer": 2.826666666666667,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169975, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-kapuska",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-kapuska",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-bamya-yemegi",
+    "name": "Bamya yemeği",
+    "aliases": ["Bamya yemeği", "bamya yemegi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 63.477777777777774,
+    "proteinPer": 1.7722222222222221,
+    "carbPer": 7.728888888888888,
+    "fatPer": 3.5452222222222227,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169260, FDC 170457, FDC 170000, FDC 167747, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-bamya-yemegi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-bamya-yemegi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-bamya",
+    "name": "Etli bamya",
+    "aliases": ["Etli bamya", "etli bamya"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 78.94545454545454,
+    "proteinPer": 7.158636363636364,
+    "carbPer": 5.808181818181819,
+    "fatPer": 3.3374545454545457,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169260, FDC 171790, FDC 170457, FDC 170000, FDC 171413, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-etli-bamya",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-bamya",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-bezelye-yemegi",
+    "name": "Bezelye yemeği",
+    "aliases": ["Bezelye yemeği", "bezelye yemegi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 90.92727272727274,
+    "proteinPer": 3.316363636363637,
+    "carbPer": 13.385454545454548,
+    "fatPer": 3.007727272727273,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170419, FDC 170026, FDC 170393, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-bezelye-yemegi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-bezelye-yemegi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-bezelye",
+    "name": "Etli bezelye",
+    "aliases": ["Etli bezelye", "etli bezelye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 96.23333333333332,
+    "proteinPer": 7.1483333333333325,
+    "carbPer": 10.541666666666668,
+    "fatPer": 2.9349999999999996,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170419, FDC 171790, FDC 170026, FDC 170393, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-bezelye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-bezelye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-turlu",
+    "name": "Sebze türlü",
+    "aliases": ["Sebze türlü", "turlu"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 62.824999999999996,
+    "proteinPer": 1.4633333333333336,
+    "carbPer": 8.269166666666667,
+    "fatPer": 3.1262499999999998,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169228, FDC 169291, FDC 170026, FDC 169961, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-turlu",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-turlu",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-turlu",
+    "name": "Etli türlü",
+    "aliases": ["Etli türlü", "etli turlu"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 72.46428571428571,
+    "proteinPer": 5.578571428571429,
+    "carbPer": 6.092142857142856,
+    "fatPer": 3.005357142857143,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 169228, FDC 169291, FDC 170026, FDC 170457, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-turlu",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-turlu",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (280 g)",
+        "qty": 280
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-imambayildi",
+    "name": "İmam bayıldı",
+    "aliases": ["İmam bayıldı", "imambayildi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 98.66,
+    "proteinPer": 1.3962,
+    "carbPer": 8.474499999999999,
+    "fatPer": 7.231,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169228, FDC 170000, FDC 170457, FDC 169230, FDC 171413",
+    "sourceId": "tr-recipe-imambayildi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-imambayildi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-karniyarik",
+    "name": "Fırında karnıyarık",
+    "aliases": ["Fırında karnıyarık", "karniyarik"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 100.8,
+    "proteinPer": 6.8881818181818195,
+    "carbPer": 6.321363636363636,
+    "fatPer": 5.643636363636364,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169228, FDC 171790, FDC 170000, FDC 170457, FDC 170427, FDC 171413",
+    "sourceId": "tr-recipe-karniyarik",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-karniyarik",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patlican-musakka",
+    "name": "Patlıcan musakka",
+    "aliases": ["Patlıcan musakka", "patlican musakka"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 93.57272727272728,
+    "proteinPer": 5.877272727272728,
+    "carbPer": 6.076363636363637,
+    "fatPer": 5.409999999999999,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169228, FDC 171790, FDC 170457, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-patlican-musakka",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patlican-musakka",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-firinda-karnabahar",
+    "name": "Fırında karnabahar",
+    "aliases": ["Fırında karnabahar", "firinda karnabahar"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 65.38333333333334,
+    "proteinPer": 2.806944444444444,
+    "carbPer": 8.029444444444444,
+    "fatPer": 2.974333333333333,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169986, FDC 171267, FDC 169761, FDC 173410",
+    "sourceId": "tr-recipe-firinda-karnabahar",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-firinda-karnabahar",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-brokoli-sote",
+    "name": "Brokoli sote",
+    "aliases": ["Brokoli sote", "brokoli sote"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 73.98461538461538,
+    "proteinPer": 2.844,
+    "carbPer": 8.112307692307692,
+    "fatPer": 4.2323076923076925,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170379, FDC 170393, FDC 169230, FDC 171413",
+    "sourceId": "tr-recipe-brokoli-sote",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-brokoli-sote",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mantar-sote",
+    "name": "Mantar sote",
+    "aliases": ["Mantar sote", "mantar sote"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 68.56000000000002,
+    "proteinPer": 3.231333333333334,
+    "carbPer": 6.036,
+    "fatPer": 4.395333333333333,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169251, FDC 170427, FDC 170457, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-mantar-sote",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mantar-sote",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patates-oturtma",
+    "name": "Patates oturtma",
+    "aliases": ["Patates oturtma", "patates oturtma"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 117.38333333333333,
+    "proteinPer": 6.866666666666667,
+    "carbPer": 12.186249999999998,
+    "fatPer": 4.69,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170026, FDC 171790, FDC 170457, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-patates-oturtma",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patates-oturtma",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kuru-fasulye",
+    "name": "Kuru fasulye yemeği",
+    "aliases": ["Kuru fasulye yemeği", "kuru fasulye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 117.50714285714285,
+    "proteinPer": 6.18,
+    "carbPer": 17.109428571428573,
+    "fatPer": 3.1253571428571427,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 175202, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kuru-fasulye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kuru-fasulye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-kuru-fasulye",
+    "name": "Etli kuru fasulye",
+    "aliases": ["Etli kuru fasulye", "etli kuru fasulye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 122.23125000000002,
+    "proteinPer": 9.399375,
+    "carbPer": 14.795624999999998,
+    "fatPer": 3.0453125,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 175202, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-kuru-fasulye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-kuru-fasulye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-nohut-yemegi",
+    "name": "Nohut yemeği",
+    "aliases": ["Nohut yemeği", "nohut yemegi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 127.89999999999999,
+    "proteinPer": 5.4314285714285715,
+    "carbPer": 17.584285714285713,
+    "fatPer": 4.420714285714285,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 173756, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-nohut-yemegi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-nohut-yemegi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-nohut",
+    "name": "Etli nohut",
+    "aliases": ["Etli nohut", "etli nohut"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 129.3125,
+    "proteinPer": 8.764999999999999,
+    "carbPer": 15.386249999999999,
+    "fatPer": 3.868125,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 173756, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-nohut",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-nohut",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yesil-mercimek",
+    "name": "Yeşil mercimek yemeği",
+    "aliases": ["Yeşil mercimek yemeği", "yesil mercimek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 127.33846153846156,
+    "proteinPer": 6.953076923076923,
+    "carbPer": 19.044615384615383,
+    "fatPer": 3.0353846153846153,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-yesil-mercimek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yesil-mercimek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-eristeli-mercimek",
+    "name": "Erişteli mercimek",
+    "aliases": ["Erişteli mercimek", "eristeli mercimek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 123.34285714285713,
+    "proteinPer": 6.123571428571429,
+    "carbPer": 19.71107142857143,
+    "fatPer": 2.509142857142857,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 168927, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-eristeli-mercimek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-eristeli-mercimek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mercimek-koftesi",
+    "name": "Mercimek köftesi",
+    "aliases": ["Mercimek köftesi", "mercimek koftesi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 191.58333333333331,
+    "proteinPer": 8.59875,
+    "carbPer": 30.651,
+    "fatPer": 4.72625,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170688, FDC 170000, FDC 170457, FDC 170416, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-mercimek-koftesi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mercimek-koftesi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kisr",
+    "name": "Kısır",
+    "aliases": ["Kısır", "kisr"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 156.78181818181818,
+    "proteinPer": 4.050999999999999,
+    "carbPer": 24.169454545454546,
+    "fatPer": 5.973636363636363,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 170457, FDC 168409, FDC 170000, FDC 170416, FDC 167747, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kisr",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kisr",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-pirinc-pilavi",
+    "name": "Pirinç pilavı",
+    "aliases": ["Pirinç pilavı", "pirinc pilavi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 161.685,
+    "proteinPer": 2.5252499999999998,
+    "carbPer": 28.002100000000002,
+    "fatPer": 4.069500000000001,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 173410, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-pirinc-pilavi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-pirinc-pilavi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sehriyeli-pilav",
+    "name": "Şehriyeli pirinç pilavı",
+    "aliases": ["Şehriyeli pirinç pilavı", "sehriyeli pilav"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 165.8181818181818,
+    "proteinPer": 3.126818181818182,
+    "carbPer": 30.210363636363642,
+    "fatPer": 3.2551818181818173,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 168927, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-sehriyeli-pilav",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sehriyeli-pilav",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-nohutlu-pilav",
+    "name": "Nohutlu pilav",
+    "aliases": ["Nohutlu pilav", "nohutlu pilav"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 152.4653846153846,
+    "proteinPer": 3.834807692307692,
+    "carbPer": 27.35546153846154,
+    "fatPer": 2.9186923076923077,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 173756, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-nohutlu-pilav",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-nohutlu-pilav",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuklu-pilav",
+    "name": "Tavuklu pilav",
+    "aliases": ["Tavuklu pilav", "tavuklu pilav"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 151.73846153846154,
+    "proteinPer": 8.862307692307692,
+    "carbPer": 21.539846153846153,
+    "fatPer": 2.855384615384615,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 171077, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-tavuklu-pilav",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuklu-pilav",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (260 g)",
+        "qty": 260
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-bulgur-pilavi",
+    "name": "Domatesli bulgur pilavı",
+    "aliases": ["Domatesli bulgur pilavı", "bulgur pilavi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 153.14545454545453,
+    "proteinPer": 4.381818181818181,
+    "carbPer": 26.90636363636364,
+    "fatPer": 4.1431818181818185,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 170457, FDC 170000, FDC 170427, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-bulgur-pilavi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-bulgur-pilavi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sebzeli-bulgur",
+    "name": "Sebzeli bulgur pilavı",
+    "aliases": ["Sebzeli bulgur pilavı", "sebzeli bulgur"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 135.64615384615385,
+    "proteinPer": 4.315,
+    "carbPer": 24.398461538461543,
+    "fatPer": 3.181153846153846,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 169291, FDC 170393, FDC 170419, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sebzeli-bulgur",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sebzeli-bulgur",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mercimekli-bulgur",
+    "name": "Mercimekli bulgur pilavı",
+    "aliases": ["Mercimekli bulgur pilavı", "mercimekli bulgur"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 156.67692307692306,
+    "proteinPer": 6.31923076923077,
+    "carbPer": 25.78692307692308,
+    "fatPer": 3.8957692307692313,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 172420, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-mercimekli-bulgur",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mercimekli-bulgur",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sade-makarna",
+    "name": "Sade makarna",
+    "aliases": ["Sade makarna", "sade makarna"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 166.08,
+    "proteinPer": 5.2,
+    "carbPer": 29.880000000000003,
+    "fatPer": 2.604,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sade-makarna",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sade-makarna",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-domatesli-makarna",
+    "name": "Domatesli makarna",
+    "aliases": ["Domatesli makarna", "domatesli makarna"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 146.59615384615387,
+    "proteinPer": 4.411846153846153,
+    "carbPer": 24.862692307692306,
+    "fatPer": 3.2396153846153846,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 170457, FDC 169230, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-domatesli-makarna",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-domatesli-makarna",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yogurtlu-makarna",
+    "name": "Yoğurtlu makarna",
+    "aliases": ["Yoğurtlu makarna", "yogurtlu makarna"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 141.65357142857144,
+    "proteinPer": 5.0141785714285705,
+    "carbPer": 23.244642857142857,
+    "fatPer": 3.043928571428571,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 171284, FDC 169230, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-yogurtlu-makarna",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yogurtlu-makarna",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (280 g)",
+        "qty": 280
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-firinda-makarna",
+    "name": "Fırında sütlü makarna",
+    "aliases": ["Fırında sütlü makarna", "firinda makarna"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 177.19666666666666,
+    "proteinPer": 7.319833333333333,
+    "carbPer": 22.086733333333335,
+    "fatPer": 6.4556666666666676,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 171267, FDC 173420, FDC 171287, FDC 173410, FDC 173647",
+    "sourceId": "tr-recipe-firinda-makarna",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-firinda-makarna",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sebzeli-makarna",
+    "name": "Sebzeli makarna",
+    "aliases": ["Sebzeli makarna", "sebzeli makarna"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 129.66,
+    "proteinPer": 4.359333333333333,
+    "carbPer": 21.759666666666668,
+    "fatPer": 2.886,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168927, FDC 169291, FDC 169251, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sebzeli-makarna",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sebzeli-makarna",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-izgara-kofte",
+    "name": "Izgara köfte",
+    "aliases": ["Izgara köfte", "izgara kofte"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 181.10000000000002,
+    "proteinPer": 23.309142857142856,
+    "carbPer": 7.283428571428571,
+    "fatPer": 5.789000000000001,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170000, FDC 169761, FDC 171287, FDC 170416",
+    "sourceId": "tr-recipe-izgara-kofte",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-izgara-kofte",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-izmir-kofte",
+    "name": "İzmir köfte",
+    "aliases": ["İzmir köfte", "izmir kofte"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 129.8857142857143,
+    "proteinPer": 10.61714285714286,
+    "carbPer": 10.887,
+    "fatPer": 4.775714285714286,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170026, FDC 170000, FDC 169761, FDC 170457, FDC 171413",
+    "sourceId": "tr-recipe-izmir-kofte",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-izmir-kofte",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sulu-kofte",
+    "name": "Sulu köfte",
+    "aliases": ["Sulu köfte", "sulu kofte"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 101.49999999999999,
+    "proteinPer": 8.200866666666668,
+    "carbPer": 9.806666666666667,
+    "fatPer": 3.094666666666667,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 168877, FDC 169761, FDC 170026, FDC 170393, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-sulu-kofte",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sulu-kofte",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-firinda-kofte",
+    "name": "Fırında köfte patates",
+    "aliases": ["Fırında köfte patates", "firinda kofte"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 135.09230769230768,
+    "proteinPer": 11.366153846153844,
+    "carbPer": 11.425230769230769,
+    "fatPer": 4.743076923076923,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170026, FDC 170000, FDC 169761, FDC 170457, FDC 171413",
+    "sourceId": "tr-recipe-firinda-kofte",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-firinda-kofte",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kadinbudu-kofte",
+    "name": "Fırında kadınbudu köfte",
+    "aliases": ["Fırında kadınbudu köfte", "kadinbudu kofte"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 197.73000000000002,
+    "proteinPer": 16.193,
+    "carbPer": 13.806799999999999,
+    "fatPer": 8.063300000000002,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 168877, FDC 170000, FDC 171287, FDC 169761, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kadinbudu-kofte",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kadinbudu-kofte",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-sote",
+    "name": "Tavuk sote",
+    "aliases": ["Tavuk sote", "tavuk sote"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 113.38181818181819,
+    "proteinPer": 14.834545454545452,
+    "carbPer": 2.9234545454545455,
+    "fatPer": 4.490909090909091,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 170457, FDC 170427, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-tavuk-sote",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-sote",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mantarlı-tavuk",
+    "name": "Mantarlı tavuk",
+    "aliases": ["Mantarlı tavuk", "mantarlı tavuk"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 104.68333333333332,
+    "proteinPer": 13.74,
+    "carbPer": 2.6206666666666663,
+    "fatPer": 4.29,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 169251, FDC 170000, FDC 171267, FDC 171413",
+    "sourceId": "tr-recipe-mantarlı-tavuk",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mantarlı-tavuk",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-firinda-tavuk",
+    "name": "Fırında tavuk sebze",
+    "aliases": ["Fırında tavuk sebze", "firinda tavuk"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 125.56428571428573,
+    "proteinPer": 13.766785714285716,
+    "carbPer": 7.994285714285715,
+    "fatPer": 4.071071428571429,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 170026, FDC 170393, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-firinda-tavuk",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-firinda-tavuk",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-haslama",
+    "name": "Tavuk haşlama",
+    "aliases": ["Tavuk haşlama", "tavuk haslama"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 90.19375,
+    "proteinPer": 10.604687499999999,
+    "carbPer": 6.7475000000000005,
+    "fatPer": 2.153125,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 170026, FDC 170393, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-tavuk-haslama",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-haslama",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (350 g)",
+        "qty": 350
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-sis",
+    "name": "Tavuk şiş",
+    "aliases": ["Tavuk şiş", "tavuk sis"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 157.88235294117646,
+    "proteinPer": 21.981176470588235,
+    "carbPer": 3.2882352941176465,
+    "fatPer": 5.847058823529412,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 170427, FDC 170000, FDC 171284, FDC 171413",
+    "sourceId": "tr-recipe-tavuk-sis",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-sis",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-et-sote",
+    "name": "Et sote",
+    "aliases": ["Et sote", "et sote"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 131.51818181818183,
+    "proteinPer": 15.137272727272725,
+    "carbPer": 3.178181818181818,
+    "fatPer": 6.235454545454546,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170457, FDC 170427, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-et-sote",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-et-sote",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tas-kebabi",
+    "name": "Tas kebabı",
+    "aliases": ["Tas kebabı", "tas kebabi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 123.14666666666668,
+    "proteinPer": 12.311333333333332,
+    "carbPer": 7.3966666666666665,
+    "fatPer": 4.759333333333332,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170026, FDC 170393, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-tas-kebabi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tas-kebabi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-etli-guvec",
+    "name": "Etli sebze güveç",
+    "aliases": ["Etli sebze güveç", "etli guvec"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 96.95,
+    "proteinPer": 10.2665625,
+    "carbPer": 4.6584375,
+    "fatPer": 4.211562499999999,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 169228, FDC 169961, FDC 170457, FDC 170000, FDC 170427, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-etli-guvec",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-etli-guvec",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (320 g)",
+        "qty": 320
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kuzu-sebzeli",
+    "name": "Sebzeli kuzu yemeği",
+    "aliases": ["Sebzeli kuzu yemeği", "kuzu sebzeli"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 175.1142857142857,
+    "proteinPer": 8.669285714285717,
+    "carbPer": 7.925,
+    "fatPer": 12.035000000000002,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 174370, FDC 170026, FDC 170393, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kuzu-sebzeli",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kuzu-sebzeli",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-patates",
+    "name": "Kıymalı patates yemeği",
+    "aliases": ["Kıymalı patates yemeği", "kiymali patates"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 96.64285714285714,
+    "proteinPer": 6.0321428571428575,
+    "carbPer": 11.695357142857143,
+    "fatPer": 2.9550000000000005,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170026, FDC 171790, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-patates",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-patates",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-bulgur",
+    "name": "Tavuklu bulgur pilavı",
+    "aliases": ["Tavuklu bulgur pilavı", "tavuk bulgur"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 141.67999999999998,
+    "proteinPer": 11.745999999999999,
+    "carbPer": 16.892,
+    "fatPer": 3.3640000000000003,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 170688, FDC 170000, FDC 170457, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-tavuk-bulgur",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-bulgur",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-tavuk-durum",
+    "name": "Ev yapımı tavuk dürüm",
+    "aliases": ["Ev yapımı tavuk dürüm", "tavuk durum"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 173.83636363636364,
+    "proteinPer": 13.143636363636363,
+    "carbPer": 19.32090909090909,
+    "fatPer": 4.4818181818181815,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 169761, FDC 170457, FDC 170000, FDC 171284, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-tavuk-durum",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-tavuk-durum",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-lahmacun",
+    "name": "Ev yapımı lahmacun",
+    "aliases": ["Ev yapımı lahmacun", "lahmacun"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 203.39090909090908,
+    "proteinPer": 10.982727272727272,
+    "carbPer": 30.324999999999996,
+    "fatPer": 3.8400000000000003,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170457, FDC 170427, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-lahmacun",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-lahmacun",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-pide",
+    "name": "Ev yapımı kıymalı pide",
+    "aliases": ["Ev yapımı kıymalı pide", "kiymali pide"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 202.76428571428568,
+    "proteinPer": 10.917142857142856,
+    "carbPer": 29.476928571428573,
+    "fatPer": 4.160714285714286,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170457, FDC 170000, FDC 170427, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-pide",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-pide",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (350 g)",
+        "qty": 350
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-pide",
+    "name": "Beyaz peynirli pide",
+    "aliases": ["Beyaz peynirli pide", "peynirli pide"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 250.64615384615388,
+    "proteinPer": 9.391384615384615,
+    "carbPer": 30.790153846153846,
+    "fatPer": 9.671230769230771,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 171287, FDC 170416, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-peynirli-pide",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-pide",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (325 g)",
+        "qty": 325
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-manti",
+    "name": "Yoğurtlu kıymalı mantı",
+    "aliases": ["Yoğurtlu kıymalı mantı", "kiymali manti"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 178.06470588235294,
+    "proteinPer": 9.200882352941173,
+    "carbPer": 25.110647058823528,
+    "fatPer": 4.200294117647059,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170000, FDC 171287, FDC 171284, FDC 173410, FDC 170457, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-manti",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-manti",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-menemen",
+    "name": "Menemen",
+    "aliases": ["Menemen", "menemen"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 102.525,
+    "proteinPer": 5.4685,
+    "carbPer": 3.745249999999999,
+    "fatPer": 7.4795,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 170457, FDC 170427, FDC 171413",
+    "sourceId": "tr-recipe-menemen",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-menemen",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-soganli-menemen",
+    "name": "Soğanlı menemen",
+    "aliases": ["Soğanlı menemen", "soganli menemen"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 97.13333333333334,
+    "proteinPer": 5.015555555555555,
+    "carbPer": 4.731111111111111,
+    "fatPer": 6.6594444444444445,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 170457, FDC 170427, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-soganli-menemen",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-soganli-menemen",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sade-omlet",
+    "name": "Sade omlet",
+    "aliases": ["Sade omlet", "sade omlet"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 178.35999999999999,
+    "proteinPer": 12.6,
+    "carbPer": 0.72,
+    "fatPer": 13.51,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 171413",
+    "sourceId": "tr-recipe-sade-omlet",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sade-omlet",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (125 g)",
+        "qty": 125
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-omlet",
+    "name": "Beyaz peynirli omlet",
+    "aliases": ["Beyaz peynirli omlet", "peynirli omlet"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 203.1142857142857,
+    "proteinPer": 13.057142857142859,
+    "carbPer": 1.622857142857143,
+    "fatPer": 15.792857142857141,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 173420, FDC 171413",
+    "sourceId": "tr-recipe-peynirli-omlet",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-omlet",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (175 g)",
+        "qty": 175
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mantarlı-omlet",
+    "name": "Mantarlı omlet",
+    "aliases": ["Mantarlı omlet", "mantarlı omlet"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 121.13333333333334,
+    "proteinPer": 8.716666666666667,
+    "carbPer": 2.2111111111111112,
+    "fatPer": 8.805555555555555,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 169251, FDC 171413",
+    "sourceId": "tr-recipe-mantarlı-omlet",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mantarlı-omlet",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ispanakli-omlet",
+    "name": "Ispanaklı omlet",
+    "aliases": ["Ispanaklı omlet", "ispanakli omlet"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 121.6888888888889,
+    "proteinPer": 8.588888888888889,
+    "carbPer": 2.4166666666666665,
+    "fatPer": 8.833333333333334,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 168462, FDC 171413",
+    "sourceId": "tr-recipe-ispanakli-omlet",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ispanakli-omlet",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patatesli-omlet",
+    "name": "Patatesli omlet",
+    "aliases": ["Patatesli omlet", "patatesli omlet"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 154.1818181818182,
+    "proteinPer": 7.03181818181818,
+    "carbPer": 11.463636363636363,
+    "fatPer": 8.925454545454546,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 170026, FDC 171413",
+    "sourceId": "tr-recipe-patatesli-omlet",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patatesli-omlet",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-cilbir",
+    "name": "Çılbır",
+    "aliases": ["Çılbır", "cilbir"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 116.8923076923077,
+    "proteinPer": 7.105538461538464,
+    "carbPer": 3.655692307692308,
+    "fatPer": 8.16076923076923,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171287, FDC 171284, FDC 169230, FDC 173410",
+    "sourceId": "tr-recipe-cilbir",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-cilbir",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-gozleme",
+    "name": "Beyaz peynirli gözleme",
+    "aliases": ["Beyaz peynirli gözleme", "peynirli gozleme"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 276.26666666666665,
+    "proteinPer": 9.443111111111113,
+    "carbPer": 35.48577777777777,
+    "fatPer": 10.415111111111111,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 170416, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-peynirli-gozleme",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-gozleme",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (225 g)",
+        "qty": 225
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ispanakli-gozleme",
+    "name": "Ispanaklı gözleme",
+    "aliases": ["Ispanaklı gözleme", "ispanakli gozleme"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 175.3090909090909,
+    "proteinPer": 5.165454545454545,
+    "carbPer": 30.414363636363635,
+    "fatPer": 3.7263636363636365,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 168462, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-ispanakli-gozleme",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ispanakli-gozleme",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patatesli-gozleme",
+    "name": "Patatesli gözleme",
+    "aliases": ["Patatesli gözleme", "patatesli gozleme"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 192.825,
+    "proteinPer": 4.6537500000000005,
+    "carbPer": 35.846500000000006,
+    "fatPer": 3.302083333333333,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 170026, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-patatesli-gozleme",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patatesli-gozleme",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-gozleme",
+    "name": "Kıymalı gözleme",
+    "aliases": ["Kıymalı gözleme", "kiymali gozleme"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 207.72727272727272,
+    "proteinPer": 11.677272727272726,
+    "carbPer": 29.019090909090906,
+    "fatPer": 4.460909090909091,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170000, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-gozleme",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-gozleme",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (275 g)",
+        "qty": 275
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-borek",
+    "name": "Beyaz peynirli börek",
+    "aliases": ["Beyaz peynirli börek", "peynirli borek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 288.5785714285714,
+    "proteinPer": 9.792857142857143,
+    "carbPer": 29.464285714285708,
+    "fatPer": 14.36464285714286,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 171287, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-peynirli-borek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-borek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ispanakli-borek",
+    "name": "Ispanaklı börek",
+    "aliases": ["Ispanaklı börek", "ispanakli borek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 195.1625,
+    "proteinPer": 5.986249999999999,
+    "carbPer": 27.47125,
+    "fatPer": 6.980625,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 168462, FDC 170000, FDC 171287, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-ispanakli-borek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ispanakli-borek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patatesli-borek",
+    "name": "Patatesli börek",
+    "aliases": ["Patatesli börek", "patatesli borek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 206.03333333333333,
+    "proteinPer": 5.188888888888889,
+    "carbPer": 32.52777777777778,
+    "fatPer": 6.081666666666666,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 170026, FDC 170000, FDC 171287, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-patatesli-borek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patatesli-borek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kiymali-borek",
+    "name": "Kıymalı börek",
+    "aliases": ["Kıymalı börek", "kiymali borek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 221.2176470588235,
+    "proteinPer": 12.502941176470586,
+    "carbPer": 24.421764705882357,
+    "fatPer": 7.712941176470589,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170000, FDC 171287, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-kiymali-borek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kiymali-borek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-pogaca",
+    "name": "Beyaz peynirli poğaça",
+    "aliases": ["Beyaz peynirli poğaça", "peynirli pogaca"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 355.1363636363636,
+    "proteinPer": 9.762727272727272,
+    "carbPer": 36.481818181818184,
+    "fatPer": 18.705454545454543,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 171287, FDC 171284, FDC 173410, FDC 171413",
+    "sourceId": "tr-recipe-peynirli-pogaca",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-pogaca",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (75 g)",
+        "qty": 75
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-simit",
+    "name": "Ev yapımı simit",
+    "aliases": ["Ev yapımı simit", "simit"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 325.28999999999996,
+    "proteinPer": 8.303999999999998,
+    "carbPer": 51.588,
+    "fatPer": 9.552,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 170150, FDC 169655, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-simit",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-simit",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-acma",
+    "name": "Ev yapımı açma",
+    "aliases": ["Ev yapımı açma", "acma"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 310.9727272727273,
+    "proteinPer": 7.183636363636363,
+    "carbPer": 46.60290909090909,
+    "fatPer": 10.354090909090907,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171267, FDC 173410, FDC 169655, FDC 171287",
+    "sourceId": "tr-recipe-acma",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-acma",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-pisi",
+    "name": "Pişi",
+    "aliases": ["Pişi", "pisi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 336.68,
+    "proteinPer": 6.874,
+    "carbPer": 46.711999999999996,
+    "fatPer": 13.238,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171284, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-pisi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-pisi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (75 g)",
+        "qty": 75
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kabak-mucver",
+    "name": "Fırında kabak mücver",
+    "aliases": ["Fırında kabak mücver", "kabak mucver"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 146.34545454545454,
+    "proteinPer": 6.2325454545454555,
+    "carbPer": 13.450727272727276,
+    "fatPer": 7.651454545454545,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169291, FDC 171287, FDC 169761, FDC 173420, FDC 170416, FDC 171413",
+    "sourceId": "tr-recipe-kabak-mucver",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kabak-mucver",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patates-mucver",
+    "name": "Fırında patates mücver",
+    "aliases": ["Fırında patates mücver", "patates mucver"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 151.6,
+    "proteinPer": 4.838181818181817,
+    "carbPer": 20.813454545454547,
+    "fatPer": 5.530909090909091,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170026, FDC 171287, FDC 169761, FDC 170000, FDC 171413",
+    "sourceId": "tr-recipe-patates-mucver",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patates-mucver",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-havuclu-mucver",
+    "name": "Fırında havuç mücver",
+    "aliases": ["Fırında havuç mücver", "havuclu mucver"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 138.22222222222223,
+    "proteinPer": 4.530555555555556,
+    "carbPer": 17.729999999999997,
+    "fatPer": 5.583444444444445,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170393, FDC 171287, FDC 169761, FDC 171284, FDC 171413",
+    "sourceId": "tr-recipe-havuclu-mucver",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-havuclu-mucver",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-peynirli-tost",
+    "name": "Beyaz peynirli ev tostu",
+    "aliases": ["Beyaz peynirli ev tostu", "peynirli tost"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 297.23333333333335,
+    "proteinPer": 10.058333333333334,
+    "carbPer": 40.093666666666664,
+    "fatPer": 10.393333333333334,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 173410, FDC 170457, FDC 173647",
+    "sourceId": "tr-recipe-peynirli-tost",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-peynirli-tost",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yumurtali-ekmek",
+    "name": "Fırında yumurtalı ekmek",
+    "aliases": ["Fırında yumurtalı ekmek", "yumurtali ekmek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 253.6923076923077,
+    "proteinPer": 9.138461538461536,
+    "carbPer": 36.17538461538462,
+    "fatPer": 7.529230769230769,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171287, FDC 171267, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-yumurtali-ekmek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yumurtali-ekmek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-coban-salata",
+    "name": "Çoban salata",
+    "aliases": ["Çoban salata", "coban salata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 47.48,
+    "proteinPer": 0.9073000000000001,
+    "carbPer": 4.7962,
+    "fatPer": 3.1867,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427, FDC 170000, FDC 170416, FDC 171413, FDC 167747",
+    "sourceId": "tr-recipe-coban-salata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-coban-salata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kasik-salata",
+    "name": "Kaşık salata",
+    "aliases": ["Kaşık salata", "kasik salata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 56.07000000000001,
+    "proteinPer": 0.9016000000000002,
+    "carbPer": 4.7164,
+    "fatPer": 4.187799999999999,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427, FDC 170000, FDC 170416, FDC 171413, FDC 167747",
+    "sourceId": "tr-recipe-kasik-salata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kasik-salata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-gavurdagi",
+    "name": "Gavurdağı salatası",
+    "aliases": ["Gavurdağı salatası", "gavurdagi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 119.30000000000001,
+    "proteinPer": 2.3353,
+    "carbPer": 5.543200000000001,
+    "fatPer": 10.699100000000001,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 170427, FDC 170000, FDC 170187, FDC 170416, FDC 171413, FDC 167747",
+    "sourceId": "tr-recipe-gavurdagi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-gavurdagi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-piyaz",
+    "name": "Fasulye piyazı",
+    "aliases": ["Fasulye piyazı", "piyaz"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 148.34545454545454,
+    "proteinPer": 8.031363636363636,
+    "carbPer": 19.332727272727272,
+    "fatPer": 4.840818181818182,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 175202, FDC 170000, FDC 170457, FDC 170416, FDC 171287, FDC 171413, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-piyaz",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-piyaz",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-nohut-salata",
+    "name": "Nohut salatası",
+    "aliases": ["Nohut salatası", "nohut salata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 144.8909090909091,
+    "proteinPer": 6.063181818181818,
+    "carbPer": 19.389999999999997,
+    "fatPer": 5.398090909090909,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 173756, FDC 170457, FDC 168409, FDC 170416, FDC 171413, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-nohut-salata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-nohut-salata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mercimek-salata",
+    "name": "Mercimek salatası",
+    "aliases": ["Mercimek salatası", "mercimek salata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 143.26363636363635,
+    "proteinPer": 7.234272727272725,
+    "carbPer": 20.800727272727272,
+    "fatPer": 4.046636363636363,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170427, FDC 170393, FDC 170416, FDC 170000, FDC 171413, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-mercimek-salata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mercimek-salata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-patates-salata",
+    "name": "Patates salatası",
+    "aliases": ["Patates salatası", "patates salata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 114.45454545454545,
+    "proteinPer": 2.1677272727272725,
+    "carbPer": 17.84681818181818,
+    "fatPer": 4.235363636363636,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170026, FDC 170000, FDC 170416, FDC 171413, FDC 167747",
+    "sourceId": "tr-recipe-patates-salata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-patates-salata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (220 g)",
+        "qty": 220
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-yogurtlu-havuc",
+    "name": "Yoğurtlu havuç",
+    "aliases": ["Yoğurtlu havuç", "yogurtlu havuc"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 85.6125,
+    "proteinPer": 2.39575,
+    "carbPer": 8.73125,
+    "fatPer": 4.90625,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170393, FDC 171284, FDC 169230, FDC 171413",
+    "sourceId": "tr-recipe-yogurtlu-havuc",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-yogurtlu-havuc",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-cacik",
+    "name": "Cacık",
+    "aliases": ["Cacık", "cacik"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 47.16666666666667,
+    "proteinPer": 1.9775833333333332,
+    "carbPer": 3.6645833333333337,
+    "fatPer": 2.9112500000000003,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 168409, FDC 169230, FDC 171413, FDC 173647",
+    "sourceId": "tr-recipe-cacik",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-cacik",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-haydari",
+    "name": "Haydari",
+    "aliases": ["Haydari", "haydari"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 123.98461538461538,
+    "proteinPer": 4.951692307692308,
+    "carbPer": 4.69076923076923,
+    "fatPer": 9.661538461538461,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 173420, FDC 169230, FDC 171413",
+    "sourceId": "tr-recipe-haydari",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-haydari",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sutlac",
+    "name": "Sütlaç",
+    "aliases": ["Sütlaç", "sutlac"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 103.25,
+    "proteinPer": 2.8664285714285715,
+    "carbPer": 19.857142857142858,
+    "fatPer": 1.4614285714285715,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 168877, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-sutlac",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sutlac",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-firin-sutlac",
+    "name": "Fırın sütlaç",
+    "aliases": ["Fırın sütlaç", "firin sutlac"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 119.66923076923078,
+    "proteinPer": 3.5715384615384616,
+    "carbPer": 22.181538461538462,
+    "fatPer": 1.9396153846153847,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 168877, FDC 169655, FDC 171287, FDC 173647",
+    "sourceId": "tr-recipe-firin-sutlac",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-firin-sutlac",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-muhallebi",
+    "name": "Muhallebi",
+    "aliases": ["Muhallebi", "muhallebi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 126.25833333333334,
+    "proteinPer": 3.4508333333333336,
+    "carbPer": 21.587666666666664,
+    "fatPer": 3.067,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 169761, FDC 169655, FDC 173410",
+    "sourceId": "tr-recipe-muhallebi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-muhallebi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kakaolu-muhallebi",
+    "name": "Kakaolu muhallebi",
+    "aliases": ["Kakaolu muhallebi", "kakaolu muhallebi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 130.68800000000002,
+    "proteinPer": 3.8616000000000006,
+    "carbPer": 23.145359999999997,
+    "fatPer": 3.3279199999999993,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 169761, FDC 169655, FDC 169593, FDC 173410",
+    "sourceId": "tr-recipe-kakaolu-muhallebi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kakaolu-muhallebi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-irmik-tatlisi",
+    "name": "Sütlü irmik tatlısı",
+    "aliases": ["Sütlü irmik tatlısı", "irmik tatlisi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 149.94615384615386,
+    "proteinPer": 4.31,
+    "carbPer": 26.850153846153844,
+    "fatPer": 2.9161538461538457,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 168933, FDC 169655, FDC 173410",
+    "sourceId": "tr-recipe-irmik-tatlisi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-irmik-tatlisi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-irmik-helvasi",
+    "name": "İrmik helvası",
+    "aliases": ["İrmik helvası", "irmik helvasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 298.9,
+    "proteinPer": 5.333636363636364,
+    "carbPer": 47.64290909090909,
+    "fatPer": 9.901363636363635,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168933, FDC 173410, FDC 169655, FDC 171267, FDC 173647",
+    "sourceId": "tr-recipe-irmik-helvasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-irmik-helvasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (120 g)",
+        "qty": 120
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-un-helvasi",
+    "name": "Un helvası",
+    "aliases": ["Un helvası", "un helvasi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 368.55555555555554,
+    "proteinPer": 4.147222222222222,
+    "carbPer": 57.46,
+    "fatPer": 13.897777777777778,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173410, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-un-helvasi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-un-helvasi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-revani",
+    "name": "Revani",
+    "aliases": ["Revani", "revani"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 296.98823529411766,
+    "proteinPer": 5.445588235294118,
+    "carbPer": 49.06411764705882,
+    "fatPer": 8.956176470588236,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168933, FDC 169761, FDC 171287, FDC 171284, FDC 171413, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-revani",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-revani",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-irmik-sekerpare",
+    "name": "Şekerpare",
+    "aliases": ["Şekerpare", "irmik sekerpare"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 346.7875,
+    "proteinPer": 4.895625,
+    "carbPer": 59.6955,
+    "fatPer": 10.089999999999998,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 168933, FDC 173410, FDC 171287, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-irmik-sekerpare",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-irmik-sekerpare",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-cevizli-baklava",
+    "name": "Ev yapımı cevizli baklava",
+    "aliases": ["Ev yapımı cevizli baklava", "cevizli baklava"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 529.3529411764706,
+    "proteinPer": 7.922058823529412,
+    "carbPer": 68.46000000000001,
+    "fatPer": 26.43,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 170187, FDC 173410, FDC 171287, FDC 171267, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-cevizli-baklava",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-cevizli-baklava",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (80 g)",
+        "qty": 80
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kabak-tatlisi",
+    "name": "Kabak tatlısı",
+    "aliases": ["Kabak tatlısı", "kabak tatlisi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 193.375,
+    "proteinPer": 2.2666666666666666,
+    "carbPer": 36.80833333333333,
+    "fatPer": 5.533333333333334,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168448, FDC 169655, FDC 170187",
+    "sourceId": "tr-recipe-kabak-tatlisi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kabak-tatlisi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-elma-tatlisi",
+    "name": "Fırında elma tatlısı",
+    "aliases": ["Fırında elma tatlısı", "elma tatlisi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 181.24545454545455,
+    "proteinPer": 1.8581818181818182,
+    "carbPer": 33.194545454545455,
+    "fatPer": 6.1000000000000005,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171688, FDC 169655, FDC 170187, FDC 168165",
+    "sourceId": "tr-recipe-elma-tatlisi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-elma-tatlisi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (180 g)",
+        "qty": 180
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-elmalı-kurabiye",
+    "name": "Elmalı kurabiye",
+    "aliases": ["Elmalı kurabiye", "elmalı kurabiye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 374.2076923076923,
+    "proteinPer": 5.768846153846154,
+    "carbPer": 51.161384615384605,
+    "fatPer": 17.075000000000003,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173410, FDC 171284, FDC 169655, FDC 171688, FDC 170187",
+    "sourceId": "tr-recipe-elmalı-kurabiye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-elmalı-kurabiye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (60 g)",
+        "qty": 60
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kurabiye",
+    "name": "Sade ev kurabiyesi",
+    "aliases": ["Sade ev kurabiyesi", "kurabiye"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 422.1,
+    "proteinPer": 6.909999999999999,
+    "carbPer": 58.714,
+    "fatPer": 17.858999999999998,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173410, FDC 169655, FDC 171287, FDC 171267",
+    "sourceId": "tr-recipe-kurabiye",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kurabiye",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (40 g)",
+        "qty": 40
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-cevizli-kek",
+    "name": "Cevizli kek",
+    "aliases": ["Cevizli kek", "cevizli kek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 411.32,
+    "proteinPer": 7.796,
+    "carbPer": 47.13519999999999,
+    "fatPer": 22.0552,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171287, FDC 171267, FDC 169655, FDC 171413, FDC 170187",
+    "sourceId": "tr-recipe-cevizli-kek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-cevizli-kek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (80 g)",
+        "qty": 80
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-havuclu-kek",
+    "name": "Havuçlu kek",
+    "aliases": ["Havuçlu kek", "havuclu kek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 346.67857142857144,
+    "proteinPer": 6.094285714285714,
+    "carbPer": 43.47571428571429,
+    "fatPer": 17.07857142857143,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171287, FDC 169655, FDC 171413, FDC 170393, FDC 170187",
+    "sourceId": "tr-recipe-havuclu-kek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-havuclu-kek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (80 g)",
+        "qty": 80
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kakaolu-kek",
+    "name": "Kakaolu kek",
+    "aliases": ["Kakaolu kek", "kakaolu kek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 330.7307692307692,
+    "proteinPer": 6.6230769230769235,
+    "carbPer": 46.153076923076924,
+    "fatPer": 14.286923076923074,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171287, FDC 171267, FDC 169655, FDC 171413, FDC 169593",
+    "sourceId": "tr-recipe-kakaolu-kek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kakaolu-kek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (80 g)",
+        "qty": 80
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-mozaik-tatli",
+    "name": "Kakaolu yulaflı mozaik",
+    "aliases": ["Kakaolu yulaflı mozaik", "mozaik tatli"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 386.26,
+    "proteinPer": 10.169999999999998,
+    "carbPer": 49.991,
+    "fatPer": 18.569999999999997,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169705, FDC 171267, FDC 173410, FDC 169655, FDC 169593, FDC 170187",
+    "sourceId": "tr-recipe-mozaik-tatli",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-mozaik-tatli",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (80 g)",
+        "qty": 80
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-asure-ornek",
+    "name": "Bulgurlu aşure örneği",
+    "aliases": ["Bulgurlu aşure örneği", "asure ornek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 189.3272727272727,
+    "proteinPer": 4.708181818181819,
+    "carbPer": 37.289090909090916,
+    "fatPer": 3.5076363636363643,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 173756, FDC 175202, FDC 168165, FDC 169655, FDC 170187, FDC 173647",
+    "sourceId": "tr-recipe-asure-ornek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-asure-ornek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-meyveli-yogurt",
+    "name": "Çilekli yoğurt kâsesi",
+    "aliases": ["Çilekli yoğurt kâsesi", "meyveli yogurt"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 92.48,
+    "proteinPer": 3.8560000000000003,
+    "carbPer": 13.754666666666665,
+    "fatPer": 2.798666666666667,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 167762, FDC 169640, FDC 169705",
+    "sourceId": "tr-recipe-meyveli-yogurt",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-meyveli-yogurt",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-ayran",
+    "name": "Ayran",
+    "aliases": ["Ayran", "ayran"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 30.5,
+    "proteinPer": 1.735,
+    "carbPer": 2.33,
+    "fatPer": 1.625,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 173647",
+    "sourceId": "tr-recipe-ayran",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-ayran",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-naneli-ayran",
+    "name": "Salatalıklı ayran",
+    "aliases": ["Salatalıklı ayran", "naneli ayran"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 29.772727272727273,
+    "proteinPer": 1.6659090909090912,
+    "carbPer": 2.6131818181818183,
+    "fatPer": 1.4922727272727272,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 168409, FDC 173647",
+    "sourceId": "tr-recipe-naneli-ayran",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-naneli-ayran",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-limonata",
+    "name": "Ev limonatası",
+    "aliases": ["Ev limonatası", "limonata"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 52.95833333333333,
+    "proteinPer": 0.07291666666666667,
+    "carbPer": 13.9375,
+    "fatPer": 0.05,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 167747, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-limonata",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-limonata",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-portakal-suyu",
+    "name": "Portakallı ev içeceği",
+    "aliases": ["Portakallı ev içeceği", "portakal suyu"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 36.18181818181818,
+    "proteinPer": 0.7154545454545455,
+    "carbPer": 9.209090909090909,
+    "fatPer": 0.1090909090909091,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169097, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-portakal-suyu",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-portakal-suyu",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-cilek-icecek",
+    "name": "Çilekli ev içeceği",
+    "aliases": ["Çilekli ev içeceği", "cilek icecek"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 46.5,
+    "proteinPer": 0.29375,
+    "carbPer": 11.820833333333333,
+    "fatPer": 0.135,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 167762, FDC 169655, FDC 167747, FDC 173647",
+    "sourceId": "tr-recipe-cilek-icecek",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-cilek-icecek",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-muzlu-sut",
+    "name": "Muzlu süt",
+    "aliases": ["Muzlu süt", "muzlu sut"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 63,
+    "proteinPer": 2.5633333333333335,
+    "carbPer": 10.8,
+    "fatPer": 1.4300000000000002,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 173944",
+    "sourceId": "tr-recipe-muzlu-sut",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-muzlu-sut",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kakaolu-sut",
+    "name": "Kakaolu süt",
+    "aliases": ["Kakaolu süt", "kakaolu sut"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 70.93125,
+    "proteinPer": 3.70625,
+    "carbPer": 10.684375,
+    "fatPer": 2.284375,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171267, FDC 169593, FDC 169655",
+    "sourceId": "tr-recipe-kakaolu-sut",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kakaolu-sut",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sutlu-kahve",
+    "name": "Sütlü kahve",
+    "aliases": ["Sütlü kahve", "sutlu kahve"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 25.5,
+    "proteinPer": 1.71,
+    "carbPer": 2.4,
+    "fatPer": 1,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171890, FDC 171267",
+    "sourceId": "tr-recipe-sutlu-kahve",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sutlu-kahve",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (300 g)",
+        "qty": 300
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-soguk-cay",
+    "name": "Limonlu soğuk çay",
+    "aliases": ["Limonlu soğuk çay", "soguk cay"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 25.241666666666664,
+    "proteinPer": 0.029166666666666664,
+    "carbPer": 6.658333333333334,
+    "fatPer": 0.019999999999999997,
+    "state": "na",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 173227, FDC 167747, FDC 169655",
+    "sourceId": "tr-recipe-soguk-cay",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-soguk-cay",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-elma-komposto",
+    "name": "Elma kompostosu",
+    "aliases": ["Elma kompostosu", "elma komposto"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 67.24,
+    "proteinPer": 0.10400000000000001,
+    "carbPer": 17.52,
+    "fatPer": 0.06800000000000002,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171688, FDC 169655, FDC 173647",
+    "sourceId": "tr-recipe-elma-komposto",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-elma-komposto",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-salata-yagsiz",
+    "name": "Yağsız karışık salata",
+    "aliases": ["Yağsız karışık salata", "salata yagsiz"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 18.15,
+    "proteinPer": 0.901,
+    "carbPer": 4.0335,
+    "fatPer": 0.19350000000000003,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427, FDC 170416",
+    "sourceId": "tr-recipe-salata-yagsiz",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-salata-yagsiz",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (200 g)",
+        "qty": 200
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-kahvalti-sebzesi",
+    "name": "Kahvaltılık domates salatalık biber",
+    "aliases": ["Kahvaltılık domates salatalık biber", "kahvalti sebzesi"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 17.2,
+    "proteinPer": 0.784,
+    "carbPer": 3.936,
+    "fatPer": 0.158,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427",
+    "sourceId": "tr-recipe-kahvalti-sebzesi",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-kahvalti-sebzesi",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (150 g)",
+        "qty": 150
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-sogan-havuc",
+    "name": "Soğan ve havuç karışımı",
+    "aliases": ["Soğan ve havuç karışımı", "sogan havuc"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 40.5,
+    "proteinPer": 1.0150000000000001,
+    "carbPer": 9.459999999999999,
+    "fatPer": 0.16999999999999998,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170000, FDC 170393",
+    "sourceId": "tr-recipe-sogan-havuc",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-sogan-havuc",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (100 g)",
+        "qty": 100
+      }
+    ],
+    "useCount": 0
+  },
+  {
+    "id": "tr-recipe-haslanmis-sebze",
+    "name": "Haşlanmış karışık sebze",
+    "aliases": ["Haşlanmış karışık sebze", "haslanmis sebze"],
+    "unit": "g",
+    "per": 100,
+    "kcalPer": 35.9,
+    "proteinPer": 2.175,
+    "carbPer": 7.518,
+    "fatPer": 0.3320000000000001,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170379, FDC 169986, FDC 170393",
+    "sourceId": "tr-recipe-haslanmis-sebze",
+    "sourceKind": "recipe",
+    "recipeId": "tr-recipe-haslanmis-sebze",
+    "portions": [
+      {
+        "label": "100 g",
+        "qty": 100
+      },
+      {
+        "label": "1 porsiyon (250 g)",
+        "qty": 250
+      }
+    ],
+    "useCount": 0
+  }
+]

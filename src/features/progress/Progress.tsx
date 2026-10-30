@@ -46,6 +46,7 @@ export function Progress() {
   const allPoints = scoreHistory(data.dayLog, data.mealEntry, data.workoutLog, target);
   const streak = streaks(allPoints, date);
   const weights = data.dayLog
+    .map((d) => ({ ...d, weight: d.weight ?? d.health?.weight }))
     .filter((d) => d.weight !== undefined && d.date <= date)
     .sort((a, b) => a.date.localeCompare(b.date));
   const startWeight = weights.at(-1)?.weight || profile.startWeight;

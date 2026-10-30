@@ -1,0 +1,282 @@
+[
+  {
+    "key": "egg",
+    "id": "usda-171287",
+    "sourceId": "fdc:171287",
+    "description": "Egg, whole, raw, fresh",
+    "kcal": 143,
+    "protein": 12.6
+  },
+  {
+    "key": "beef",
+    "id": "usda-171790",
+    "sourceId": "fdc:171790",
+    "description": "Beef, ground, 95% lean meat / 5% fat, raw",
+    "kcal": 137,
+    "protein": 21.4
+  },
+  {
+    "key": "lamb",
+    "id": "usda-174370",
+    "sourceId": "fdc:174370",
+    "description": "Lamb, ground, raw",
+    "kcal": 282,
+    "protein": 16.6
+  },
+  {
+    "key": "rice",
+    "id": "usda-168877",
+    "sourceId": "fdc:168877",
+    "description": "Rice, white, long-grain, regular, raw, enriched",
+    "kcal": 365,
+    "protein": 7.13
+  },
+  {
+    "key": "flour",
+    "id": "usda-169761",
+    "sourceId": "fdc:169761",
+    "description": "Wheat flour, white, all-purpose, unenriched",
+    "kcal": 364,
+    "protein": 10.3
+  },
+  {
+    "key": "lentil",
+    "id": "usda-172420",
+    "sourceId": "fdc:172420",
+    "description": "Lentils, raw",
+    "kcal": 352,
+    "protein": 24.6
+  },
+  {
+    "key": "beans",
+    "id": "usda-175202",
+    "sourceId": "fdc:175202",
+    "description": "Beans, white, mature seeds, raw",
+    "kcal": 333,
+    "protein": 23.4
+  },
+  {
+    "key": "chickpea",
+    "id": "usda-173756",
+    "sourceId": "fdc:173756",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+    "kcal": 378,
+    "protein": 20.5
+  },
+  {
+    "key": "bulgur",
+    "id": "usda-170688",
+    "sourceId": "fdc:170688",
+    "description": "Bulgur, dry",
+    "kcal": 342,
+    "protein": 12.3
+  },
+  {
+    "key": "onion",
+    "id": "usda-170000",
+    "sourceId": "fdc:170000",
+    "description": "Onions, raw",
+    "kcal": 40,
+    "protein": 1.1
+  },
+  {
+    "key": "tomato",
+    "id": "usda-170457",
+    "sourceId": "fdc:170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "kcal": 18,
+    "protein": 0.88
+  },
+  {
+    "key": "pepper",
+    "id": "usda-170427",
+    "sourceId": "fdc:170427",
+    "description": "Peppers, sweet, green, raw",
+    "kcal": 20,
+    "protein": 0.86
+  },
+  {
+    "key": "zucchini",
+    "id": "usda-169291",
+    "sourceId": "fdc:169291",
+    "description": "Squash, summer, zucchini, includes skin, raw",
+    "kcal": 17,
+    "protein": 1.21
+  },
+  {
+    "key": "eggplant",
+    "id": "usda-169228",
+    "sourceId": "fdc:169228",
+    "description": "Eggplant, raw",
+    "kcal": 25,
+    "protein": 0.98
+  },
+  {
+    "key": "potato",
+    "id": "usda-170026",
+    "sourceId": "fdc:170026",
+    "description": "Potatoes, flesh and skin, raw",
+    "kcal": 77,
+    "protein": 2.05
+  },
+  {
+    "key": "carrot",
+    "id": "usda-170393",
+    "sourceId": "fdc:170393",
+    "description": "Carrots, raw",
+    "kcal": 41,
+    "protein": 0.93
+  },
+  {
+    "key": "spinach",
+    "id": "usda-168462",
+    "sourceId": "fdc:168462",
+    "description": "Spinach, raw",
+    "kcal": 23,
+    "protein": 2.86
+  },
+  {
+    "key": "milk",
+    "id": "usda-171267",
+    "sourceId": "fdc:171267",
+    "description": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "kcal": 50,
+    "protein": 3.3
+  },
+  {
+    "key": "yogurt",
+    "id": "usda-171284",
+    "sourceId": "fdc:171284",
+    "description": "Yogurt, plain, whole milk",
+    "kcal": 61,
+    "protein": 3.47
+  },
+  {
+    "key": "feta",
+    "id": "usda-173420",
+    "sourceId": "fdc:173420",
+    "description": "Cheese, feta",
+    "kcal": 265,
+    "protein": 14.2
+  },
+  {
+    "key": "mushroom",
+    "id": "usda-169251",
+    "sourceId": "fdc:169251",
+    "description": "Mushrooms, white, raw",
+    "kcal": 22,
+    "protein": 3.09
+  },
+  {
+    "key": "greenbeans",
+    "id": "usda-169961",
+    "sourceId": "fdc:169961",
+    "description": "Beans, snap, green, raw",
+    "kcal": 31,
+    "protein": 1.83
+  },
+  {
+    "key": "okra",
+    "id": "usda-169260",
+    "sourceId": "fdc:169260",
+    "description": "Okra, raw",
+    "kcal": 33,
+    "protein": 1.93
+  },
+  {
+    "key": "leek",
+    "id": "usda-169246",
+    "sourceId": "fdc:169246",
+    "description": "Leeks, (bulb and lower leaf-portion), raw",
+    "kcal": 61,
+    "protein": 1.5
+  },
+  {
+    "key": "cabbage",
+    "id": "usda-169975",
+    "sourceId": "fdc:169975",
+    "description": "Cabbage, raw",
+    "kcal": 25,
+    "protein": 1.28
+  },
+  {
+    "key": "cauliflower",
+    "id": "usda-169986",
+    "sourceId": "fdc:169986",
+    "description": "Cauliflower, raw",
+    "kcal": 25,
+    "protein": 1.92
+  },
+  {
+    "key": "broccoli",
+    "id": "usda-170379",
+    "sourceId": "fdc:170379",
+    "description": "Broccoli, raw",
+    "kcal": 34,
+    "protein": 2.82
+  },
+  {
+    "key": "peas",
+    "id": "usda-170419",
+    "sourceId": "fdc:170419",
+    "description": "Peas, green, raw",
+    "kcal": 81,
+    "protein": 5.42
+  },
+  {
+    "key": "artichoke",
+    "id": "usda-169205",
+    "sourceId": "fdc:169205",
+    "description": "Artichokes, (globe or french), raw",
+    "kcal": 47,
+    "protein": 3.27
+  },
+  {
+    "key": "celeriac",
+    "id": "usda-170400",
+    "sourceId": "fdc:170400",
+    "description": "Celeriac, raw",
+    "kcal": 42,
+    "protein": 1.5
+  },
+  {
+    "key": "pumpkin",
+    "id": "usda-168448",
+    "sourceId": "fdc:168448",
+    "description": "Pumpkin, raw",
+    "kcal": 26,
+    "protein": 1
+  },
+  {
+    "key": "oil",
+    "id": "usda-171413",
+    "sourceId": "fdc:171413",
+    "description": "Oil, olive, salad or cooking",
+    "kcal": 884,
+    "protein": 0
+  },
+  {
+    "key": "butter",
+    "id": "usda-173410",
+    "sourceId": "fdc:173410",
+    "description": "Butter, salted",
+    "kcal": 717,
+    "protein": 0.85
+  },
+  {
+    "key": "sugar",
+    "id": "usda-169655",
+    "sourceId": "fdc:169655",
+    "description": "Sugars, granulated",
+    "kcal": 387,
+    "protein": 0
+  },
+  {
+    "key": "honey",
+    "id": "usda-169640",
+    "sourceId": "fdc:169640",
+    "description": "Honey",
+    "kcal": 304,
+    "protein": 0.3
+  }
+]

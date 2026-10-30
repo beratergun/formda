@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FOODS, DEFAULT_MENU } from '../data/seed/foods';
+import { FOODS, DEFAULT_MENU, LEGACY_FOODS } from '../data/seed/foods';
 import { calculate, total, recipeFood } from './calories';
 import { convertWeight } from './cooking';
 import { parseMeal, searchFoods, normalize } from './parser';
@@ -21,22 +21,42 @@ import { DEFAULT_TARGETS, emptyDay, type Food, type SetLog } from './types';
 const food = (id: string) => FOODS.find((f) => f.id === id)!;
 describe('nutrition arithmetic', () => {
   it('matches the exact reference eggs and raw chicken', () => {
-    expect(calculate(food('egg'), 2)).toEqual({ kcal: 144, protein: 12.6 });
-    expect(calculate(food('tavuk'), 130)).toEqual({ kcal: 156, protein: 29.25 });
+    expect(calculate(food('egg'), 2)).toMatchObject({ kcal: 144, protein: 12.6 });
+    expect(calculate(food('tavuk'), 130)).toMatchObject({ kcal: 156, protein: 29.25 });
     const monday = total(
       Object.values(DEFAULT_MENU.days[0]).flatMap((m) =>
-        m.items.map((i) => calculate(food(i.foodId), i.qty)),
+        m.items.map((i) =>
+          calculate(
+            LEGACY_FOODS.find((f) => f.id === i.foodId)!,
+            i.qty,
+          ),
+        ),
       ),
     );
     expect(monday.kcal).toBe(1458.5);
     expect(Math.round(monday.kcal)).toBe(1459);
-    expect(Math.round(total([monday, calculate(food('cay'), 4)]).kcal)).toBe(1467);
+    expect(
+      Math.round(
+        total([
+          monday,
+          calculate(
+            LEGACY_FOODS.find((f) => f.id === 'cay')!,
+            4,
+          ),
+        ]).kcal,
+      ),
+    ).toBe(1467);
   });
   it('sums unrounded macros and preserves unknown macros', () => {
     const enriched: Food = { ...food('egg'), carbPer: 1.2, fatPer: 5 };
     expect(total([calculate(enriched, 0.1), calculate(enriched, 0.2)]).protein).toBeCloseTo(1.89);
     expect(total([calculate(enriched, 1)])).toMatchObject({ carb: 1.2, fat: 5 });
-    expect(total([calculate(enriched, 1), calculate(food('egg'), 1)]).carb).toBeUndefined();
+    expect(
+      total([
+        calculate(enriched, 1),
+        calculate({ ...food('egg'), carbPer: undefined, fatPer: undefined }, 1),
+      ]).carb,
+    ).toBeUndefined();
     expect(total([]).kcal).toBe(0);
     for (const qty of [-1, NaN, Infinity]) expect(() => calculate(enriched, qty)).toThrow();
     expect(() => calculate({ ...enriched, per: 0 }, 2)).toThrow();
@@ -115,7 +135,7 @@ describe('Turkish meal parser', () => {
     ).toHaveLength(5);
     expect(
       total(parseMeal('2 yumurta, 1 dilim ekmek', FOODS).map((p) => calculate(p.food!, p.qty))),
-    ).toMatchObject({ kcal: 219, protein: 15.6 });
+    ).toMatchObject({ kcal: 219.6, protein: 16.32 });
   });
   it('keeps unresolved and ambiguous entries for confirmation', () => {
     expect(parseMeal('1 zargana tatlısı', FOODS)[0].issue).toBe('Eşleşmedi, seç');

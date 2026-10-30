@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { LEGACY_FOODS } from '../../data/seed/foods';
 import type { AppData } from '../../data/repositories';
 import { calculate } from '../calories';
 import { normalize } from '../parser';
@@ -49,7 +50,8 @@ export function importLegacy(input: unknown, base: AppData, now = Date.now()): A
       const entries = Array.isArray(meals[meal.id]) ? (meals[meal.id] as unknown[]) : [];
       entries.forEach((entry, index) => {
         const item = object(entry);
-        const food = next.food.find((f) => f.id === item.k);
+        const food =
+          LEGACY_FOODS.find((f) => f.id === item.k) || next.food.find((f) => f.id === item.k);
         const qty = number(item.mik ?? item.qty, 1);
         const id = `legacy-meal-${date}-${meal.id}-${index}`;
         if (mealIds.has(id)) throw new Error('Yinelenen öğün.');
@@ -206,7 +208,9 @@ export function importLegacy(input: unknown, base: AppData, now = Date.now()): A
                 title: text(item.t ?? item.title, result[meal.id].title),
                 items: item.items.map((raw) => {
                   const pair = Array.isArray(raw) ? raw : [];
-                  const food = next.food.find((f) => f.id === pair[0]);
+                  const food =
+                    LEGACY_FOODS.find((f) => f.id === pair[0]) ||
+                    next.food.find((f) => f.id === pair[0]);
                   if (!food) throw new Error('Eski menüde tanınmayan yiyecek var.');
                   return { foodId: food.id, qty: number(pair[1]), state: food.state };
                 }),

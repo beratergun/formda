@@ -8,14 +8,19 @@
     "kcalPer": 72,
     "proteinPer": 6.3,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171287 · 50 g / kayıt birimi; adet kcal tam sayıya, protein 0,1 g hassasiyete yuvarlandı · https://fdc.nal.usda.gov/food-details/171287/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171287",
+    "sourceKind": "usda",
+    "carbPer": 0.36,
+    "fatPer": 4.755,
+    "sourceDescription": "Egg, whole, raw, fresh"
   },
   {
     "id": "eggw",
@@ -26,14 +31,19 @@
     "kcalPer": 17,
     "proteinPer": 3.6,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 172183 · 33 g / kayıt birimi; adet kcal tam sayıya, protein 0,1 g hassasiyete yuvarlandı · https://fdc.nal.usda.gov/food-details/172183/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:172183",
+    "sourceKind": "usda",
+    "carbPer": 0.2409,
+    "fatPer": 0.056100000000000004,
+    "sourceDescription": "Egg, white, raw, fresh"
   },
   {
     "id": "tavuk",
@@ -44,14 +54,19 @@
     "kcalPer": 120,
     "proteinPer": 22.5,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171077 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171077/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171077",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 2.62,
+    "sourceDescription": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw"
   },
   {
     "id": "hindi",
@@ -59,35 +74,45 @@
     "aliases": ["Hindi göğüs"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 115,
-    "proteinPer": 24,
+    "kcalPer": 114,
+    "proteinPer": 23.7,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171098 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171098/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171098",
+    "sourceKind": "usda",
+    "carbPer": 0.14,
+    "fatPer": 1.48,
+    "sourceDescription": "Turkey, whole, breast, meat only, raw"
   },
   {
     "id": "kiyma",
-    "name": "Az yağlı kıyma (çiğ)",
+    "name": "Dana kıyma (çiğ, %7 yağ)",
     "aliases": ["Az yağlı kıyma"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 175,
-    "proteinPer": 20,
+    "kcalPer": 152,
+    "proteinPer": 20.8,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173110 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173110/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173110",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 7,
+    "sourceDescription": "Beef, ground, 93% lean meat / 7% fat, raw"
   },
   {
     "id": "hamsi",
@@ -95,17 +120,22 @@
     "aliases": ["Hamsi"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 130,
-    "proteinPer": 20,
+    "kcalPer": 131,
+    "proteinPer": 20.4,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 174182 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/174182/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:174182",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 4.84,
+    "sourceDescription": "Fish, anchovy, european, raw"
   },
   {
     "id": "ton",
@@ -113,17 +143,22 @@
     "aliases": ["Ton balığı"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 110,
-    "proteinPer": 25,
+    "kcalPer": 116,
+    "proteinPer": 25.5,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171986 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171986/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171986",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 0.82,
+    "sourceDescription": "Fish, tuna, light, canned in water, without salt, drained solids"
   },
   {
     "id": "suzme",
@@ -131,17 +166,22 @@
     "aliases": ["Süzme yoğurt"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 75,
-    "proteinPer": 9,
+    "kcalPer": 73,
+    "proteinPer": 9.95,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170903 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170903/nutrients",
     "portions": [
       {
         "label": "kase",
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170903",
+    "sourceKind": "usda",
+    "carbPer": 3.94,
+    "fatPer": 1.92,
+    "sourceDescription": "Yogurt, Greek, plain, lowfat"
   },
   {
     "id": "yogurt",
@@ -149,35 +189,45 @@
     "aliases": ["Yoğurt"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 50,
-    "proteinPer": 4,
+    "kcalPer": 63,
+    "proteinPer": 5.25,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170886 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170886/nutrients",
     "portions": [
       {
         "label": "kase",
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170886",
+    "sourceKind": "usda",
+    "carbPer": 7.04,
+    "fatPer": 1.55,
+    "sourceDescription": "Yogurt, plain, low fat"
   },
   {
     "id": "lor",
-    "name": "Lor peyniri",
+    "name": "Taneli taze peynir (%2 yağlı, lor için referans)",
     "aliases": ["Lor peyniri"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 95,
-    "proteinPer": 13,
+    "kcalPer": 81,
+    "proteinPer": 10.4,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 172182 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/172182/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:172182",
+    "sourceKind": "usda",
+    "carbPer": 4.76,
+    "fatPer": 2.27,
+    "sourceDescription": "Cheese, cottage, lowfat, 2% milkfat"
   },
   {
     "id": "sut",
@@ -185,35 +235,45 @@
     "aliases": ["Süt"],
     "unit": "ml",
     "per": 100,
-    "kcalPer": 46,
-    "proteinPer": 3.3,
+    "kcalPer": 50.83333333333333,
+    "proteinPer": 3.3549999999999995,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171267 · 101.66666666666666 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171267/nutrients",
     "portions": [
       {
         "label": "bardak",
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171267",
+    "sourceKind": "usda",
+    "carbPer": 4.88,
+    "fatPer": 2.013,
+    "sourceDescription": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D"
   },
   {
     "id": "kefir",
-    "name": "Kefir (sade)",
+    "name": "Kefir (sade, az yağlı, LIFEWAY referansı)",
     "aliases": ["Kefir"],
     "unit": "ml",
     "per": 100,
-    "kcalPer": 55,
-    "proteinPer": 3.4,
+    "kcalPer": 43,
+    "proteinPer": 3.79,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170904 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170904/nutrients",
     "portions": [
       {
         "label": "bardak",
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170904",
+    "sourceKind": "usda",
+    "carbPer": 4.77,
+    "fatPer": 1.02,
+    "sourceDescription": "Kefir, lowfat, plain, LIFEWAY"
   },
   {
     "id": "ekmek",
@@ -221,17 +281,22 @@
     "aliases": ["ekmek", "tam buğday ekmeği"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 250,
-    "proteinPer": 10,
+    "kcalPer": 252,
+    "proteinPer": 12.4,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 172688 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/172688/nutrients",
     "portions": [
       {
         "label": "dilim",
         "qty": 30
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:172688",
+    "sourceKind": "usda",
+    "carbPer": 42.7,
+    "fatPer": 3.5,
+    "sourceDescription": "Bread, whole-wheat, commercially prepared"
   },
   {
     "id": "yulaf",
@@ -239,17 +304,22 @@
     "aliases": ["Yulaf"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 375,
-    "proteinPer": 12.5,
+    "kcalPer": 389,
+    "proteinPer": 16.9,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169705 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169705/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169705",
+    "sourceKind": "usda",
+    "carbPer": 66.3,
+    "fatPer": 6.9,
+    "sourceDescription": "Oats (Includes foods for USDA's Food Distribution Program)"
   },
   {
     "id": "mercimek",
@@ -257,17 +327,22 @@
     "aliases": ["Kırmızı mercimek"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 350,
-    "proteinPer": 24,
+    "kcalPer": 352,
+    "proteinPer": 24.6,
     "state": "raw",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 172420 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/172420/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:172420",
+    "sourceKind": "usda",
+    "carbPer": 63.4,
+    "fatPer": 1.06,
+    "sourceDescription": "Lentils, raw"
   },
   {
     "id": "nohut",
@@ -276,16 +351,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 164,
-    "proteinPer": 8.9,
+    "proteinPer": 8.86,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173757 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173757/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173757",
+    "sourceKind": "usda",
+    "carbPer": 27.4,
+    "fatPer": 2.59,
+    "sourceDescription": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt"
   },
   {
     "id": "fasulye",
@@ -293,35 +373,45 @@
     "aliases": ["Kuru fasulye"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 127,
-    "proteinPer": 8.7,
+    "kcalPer": 139,
+    "proteinPer": 9.73,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 175203 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/175203/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:175203",
+    "sourceKind": "usda",
+    "carbPer": 25.1,
+    "fatPer": 0.35,
+    "sourceDescription": "Beans, white, mature seeds, cooked, boiled, without salt"
   },
   {
     "id": "patates",
-    "name": "Patates (haşlanmış/fırın)",
+    "name": "Patates (haşlanmış, kabuksuz)",
     "aliases": ["Patates"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 85,
-    "proteinPer": 2,
+    "kcalPer": 87,
+    "proteinPer": 1.87,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170438 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170438/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170438",
+    "sourceKind": "usda",
+    "carbPer": 20.1,
+    "fatPer": 0.1,
+    "sourceDescription": "Potatoes, boiled, cooked in skin, flesh, without salt"
   },
   {
     "id": "sebze",
@@ -329,17 +419,22 @@
     "aliases": ["Pişmiş sebze"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 30,
-    "proteinPer": 1.6,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 35.9,
+    "proteinPer": 2.175,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170379, FDC 169986, FDC 170393",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-haslanmis-sebze",
+    "sourceKind": "recipe",
+    "carbPer": 7.518,
+    "fatPer": 0.3320000000000001,
+    "recipeId": "tr-recipe-haslanmis-sebze"
   },
   {
     "id": "salata",
@@ -347,17 +442,22 @@
     "aliases": ["Salata"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 20,
-    "proteinPer": 1,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 18.15,
+    "proteinPer": 0.9010000000000001,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427, FDC 170416",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-salata-yagsiz",
+    "sourceKind": "recipe",
+    "carbPer": 4.0335,
+    "fatPer": 0.19350000000000006,
+    "recipeId": "tr-recipe-salata-yagsiz"
   },
   {
     "id": "kahvsebze",
@@ -365,17 +465,22 @@
     "aliases": ["Domates-salatalık-biber"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 17,
-    "proteinPer": 0.8,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 17.2,
+    "proteinPer": 0.784,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170457, FDC 168409, FDC 170427",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-kahvalti-sebzesi",
+    "sourceKind": "recipe",
+    "carbPer": 3.9360000000000004,
+    "fatPer": 0.158,
+    "recipeId": "tr-recipe-kahvalti-sebzesi"
   },
   {
     "id": "sogan",
@@ -383,17 +488,22 @@
     "aliases": ["Soğan-havuç"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 40,
-    "proteinPer": 1,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 40.5,
+    "proteinPer": 1.0150000000000001,
+    "state": "raw",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170000, FDC 170393",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-sogan-havuc",
+    "sourceKind": "recipe",
+    "carbPer": 9.459999999999999,
+    "fatPer": 0.17,
+    "recipeId": "tr-recipe-sogan-havuc"
   },
   {
     "id": "yag",
@@ -401,17 +511,22 @@
     "aliases": ["Zeytinyağı"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 900,
+    "kcalPer": 884,
     "proteinPer": 0,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171413 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171413/nutrients",
     "portions": [
       {
         "label": "kaşık",
         "qty": 10
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171413",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 100,
+    "sourceDescription": "Oil, olive, salad or cooking"
   },
   {
     "id": "zeytin",
@@ -419,17 +534,22 @@
     "aliases": ["Zeytin"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 175,
-    "proteinPer": 1,
+    "kcalPer": 145,
+    "proteinPer": 1.03,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169096 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169096/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169096",
+    "sourceKind": "usda",
+    "carbPer": 3.84,
+    "fatPer": 15.3,
+    "sourceDescription": "Olives, pickled, canned or bottled, green"
   },
   {
     "id": "ceviz",
@@ -438,16 +558,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 654,
-    "proteinPer": 15,
+    "proteinPer": 15.2,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170187 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170187/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170187",
+    "sourceKind": "usda",
+    "carbPer": 13.7,
+    "fatPer": 65.2,
+    "sourceDescription": "Nuts, walnuts, english"
   },
   {
     "id": "elma",
@@ -456,16 +581,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 52,
-    "proteinPer": 0.3,
+    "proteinPer": 0.26,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171688 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171688/nutrients",
     "portions": [
       {
         "label": "orta boy",
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171688",
+    "sourceKind": "usda",
+    "carbPer": 13.8,
+    "fatPer": 0.17,
+    "sourceDescription": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)"
   },
   {
     "id": "muz",
@@ -474,16 +604,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 89,
-    "proteinPer": 1.1,
+    "proteinPer": 1.09,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173944 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173944/nutrients",
     "portions": [
       {
         "label": "orta boy",
         "qty": 120
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173944",
+    "sourceKind": "usda",
+    "carbPer": 22.8,
+    "fatPer": 0.33,
+    "sourceDescription": "Bananas, raw"
   },
   {
     "id": "mandalina",
@@ -492,16 +627,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 53,
-    "proteinPer": 0.8,
+    "proteinPer": 0.81,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169105 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169105/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169105",
+    "sourceKind": "usda",
+    "carbPer": 13.3,
+    "fatPer": 0.31,
+    "sourceDescription": "Tangerines, (mandarin oranges), raw"
   },
   {
     "id": "portakal",
@@ -510,16 +650,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 47,
-    "proteinPer": 0.9,
+    "proteinPer": 0.94,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169097 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169097/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169097",
+    "sourceKind": "usda",
+    "carbPer": 11.8,
+    "fatPer": 0.12,
+    "sourceDescription": "Oranges, raw, all commercial varieties"
   },
   {
     "id": "bitter",
@@ -527,35 +672,45 @@
     "aliases": ["Bitter çikolata"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 600,
-    "proteinPer": 8,
+    "kcalPer": 598,
+    "proteinPer": 7.79,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170273 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170273/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170273",
+    "sourceKind": "usda",
+    "carbPer": 45.9,
+    "fatPer": 42.6,
+    "sourceDescription": "Chocolate, dark, 70-85% cacao solids"
   },
   {
     "id": "cay",
-    "name": "Şekersiz çay/kahve",
+    "name": "Şekersiz demlenmiş çay (200 g)",
     "aliases": ["çay", "kahve", "şekersiz çay"],
     "unit": "adet",
     "per": 1,
     "kcalPer": 2,
     "proteinPer": 0,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173227 · 200 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173227/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173227",
+    "sourceKind": "usda",
+    "carbPer": 0.6,
+    "fatPer": 0,
+    "sourceDescription": "Beverages, tea, black, brewed, prepared with tap water"
   },
   {
     "id": "beyazpeynir",
@@ -563,35 +718,45 @@
     "aliases": ["Beyaz peynir"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 260,
-    "proteinPer": 17,
+    "kcalPer": 265,
+    "proteinPer": 14.2,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173420 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173420/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173420",
+    "sourceKind": "usda",
+    "carbPer": 3.88,
+    "fatPer": 21.5,
+    "sourceDescription": "Cheese, feta"
   },
   {
     "id": "kasar",
-    "name": "Kaşar peyniri",
+    "name": "Gouda peyniri (kaşar için referans)",
     "aliases": ["Kaşar peyniri"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 350,
-    "proteinPer": 25,
+    "kcalPer": 356,
+    "proteinPer": 24.9,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171241 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171241/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171241",
+    "sourceKind": "usda",
+    "carbPer": 2.22,
+    "fatPer": 27.4,
+    "sourceDescription": "Cheese, gouda"
   },
   {
     "id": "simit",
@@ -599,17 +764,22 @@
     "aliases": ["Simit"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 290,
-    "proteinPer": 9,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 325.28999999999996,
+    "proteinPer": 8.303999999999998,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 170150, FDC 169655, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-simit",
+    "sourceKind": "recipe",
+    "carbPer": 51.588,
+    "fatPer": 9.552,
+    "recipeId": "tr-recipe-simit"
   },
   {
     "id": "pilav",
@@ -617,17 +787,22 @@
     "aliases": ["Pirinç pilavı"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 150,
-    "proteinPer": 2.7,
+    "kcalPer": 161.685,
+    "proteinPer": 2.5252499999999998,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 168877, FDC 173410, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-pirinc-pilavi",
+    "sourceKind": "recipe",
+    "carbPer": 28.0021,
+    "fatPer": 4.069500000000001,
+    "recipeId": "tr-recipe-pirinc-pilavi"
   },
   {
     "id": "makarna",
@@ -638,14 +813,19 @@
     "kcalPer": 158,
     "proteinPer": 5.8,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 168928 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/168928/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 150
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:168928",
+    "sourceKind": "usda",
+    "carbPer": 30.9,
+    "fatPer": 0.93,
+    "sourceDescription": "Pasta, cooked, unenriched, without added salt"
   },
   {
     "id": "bulgur",
@@ -653,17 +833,22 @@
     "aliases": ["Bulgur pilavı"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 120,
-    "proteinPer": 3.5,
+    "kcalPer": 153.14545454545453,
+    "proteinPer": 4.381818181818181,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 170688, FDC 170457, FDC 170000, FDC 170427, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-bulgur-pilavi",
+    "sourceKind": "recipe",
+    "carbPer": 26.90636363636364,
+    "fatPer": 4.1431818181818185,
+    "recipeId": "tr-recipe-bulgur-pilavi"
   },
   {
     "id": "kofte",
@@ -671,17 +856,22 @@
     "aliases": ["Köfte"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 230,
-    "proteinPer": 18,
+    "kcalPer": 181.10000000000002,
+    "proteinPer": 23.309142857142856,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171790, FDC 170000, FDC 169761, FDC 171287, FDC 170416",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-izgara-kofte",
+    "sourceKind": "recipe",
+    "carbPer": 7.28342857142857,
+    "fatPer": 5.789000000000001,
+    "recipeId": "tr-recipe-izgara-kofte"
   },
   {
     "id": "tavukpismis",
@@ -692,14 +882,19 @@
     "kcalPer": 165,
     "proteinPer": 31,
     "state": "cooked",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171477 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171477/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171477",
+    "sourceKind": "usda",
+    "carbPer": 0,
+    "fatPer": 3.57,
+    "sourceDescription": "Chicken, broilers or fryers, breast, meat only, cooked, roasted"
   },
   {
     "id": "durum",
@@ -707,17 +902,22 @@
     "aliases": ["Tavuk döner dürüm"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 550,
-    "proteinPer": 32,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 478.05,
+    "proteinPer": 36.144999999999996,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171077, FDC 169761, FDC 170457, FDC 170000, FDC 171284, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-tavuk-durum",
+    "sourceKind": "recipe",
+    "carbPer": 53.1325,
+    "fatPer": 12.325,
+    "recipeId": "tr-recipe-tavuk-durum"
   },
   {
     "id": "lahmacun",
@@ -725,17 +925,22 @@
     "aliases": ["Lahmacun"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 250,
-    "proteinPer": 11,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 447.46,
+    "proteinPer": 24.162,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170457, FDC 170427, FDC 170000, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-lahmacun",
+    "sourceKind": "recipe",
+    "carbPer": 66.71499999999999,
+    "fatPer": 8.448,
+    "recipeId": "tr-recipe-lahmacun"
   },
   {
     "id": "pide",
@@ -743,53 +948,68 @@
     "aliases": ["Kıymalı pide"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 700,
-    "proteinPer": 30,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 709.6749999999998,
+    "proteinPer": 38.209999999999994,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 171790, FDC 170457, FDC 170000, FDC 170427, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-kiymali-pide",
+    "sourceKind": "recipe",
+    "carbPer": 103.16925,
+    "fatPer": 14.5625,
+    "recipeId": "tr-recipe-kiymali-pide"
   },
   {
     "id": "hamburger",
-    "name": "Hamburger",
+    "name": "Hamburger (sade, tek küçük köfte, 110 g)",
     "aliases": ["Hamburger"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 500,
-    "proteinPer": 25,
+    "kcalPer": 326.70000000000005,
+    "proteinPer": 18.150000000000002,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170693 · 110 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170693/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170693",
+    "sourceKind": "usda",
+    "carbPer": 34.650000000000006,
+    "fatPer": 13.200000000000001,
+    "sourceDescription": "Fast foods, hamburger; single, regular patty; plain"
   },
   {
     "id": "pizza",
-    "name": "Pizza (1 dilim)",
+    "name": "Peynirli pizza (pişmiş, 107 g dilim)",
     "aliases": ["Pizza"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 285,
-    "proteinPer": 12,
+    "kcalPer": 286.76,
+    "proteinPer": 11.128000000000002,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170317 · 107 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170317/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170317",
+    "sourceKind": "usda",
+    "carbPer": 31.03,
+    "fatPer": 13.161000000000001,
+    "sourceDescription": "Pizza, cheese topping, regular crust, frozen, cooked"
   },
   {
     "id": "kizartma",
@@ -798,16 +1018,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 312,
-    "proteinPer": 3.4,
+    "proteinPer": 3.43,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170698 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170698/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170698",
+    "sourceKind": "usda",
+    "carbPer": 41.4,
+    "fatPer": 14.7,
+    "sourceDescription": "Fast foods, potato, french fried in vegetable oil"
   },
   {
     "id": "corba",
@@ -815,17 +1040,22 @@
     "aliases": ["mercimek çorbası", "çorba"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 180,
-    "proteinPer": 9,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 184,
+    "proteinPer": 9.609166666666667,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 172420, FDC 170000, FDC 170393, FDC 171413, FDC 173647",
     "portions": [
       {
         "label": "kase",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-mercimek-corbasi",
+    "sourceKind": "recipe",
+    "carbPer": 27.3175,
+    "fatPer": 4.624999999999999,
+    "recipeId": "tr-recipe-mercimek-corbasi"
   },
   {
     "id": "ayran",
@@ -833,17 +1063,22 @@
     "aliases": ["Ayran"],
     "unit": "ml",
     "per": 100,
-    "kcalPer": 38,
-    "proteinPer": 1.8,
+    "kcalPer": 30.5,
+    "proteinPer": 1.735,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 171284, FDC 173647",
     "portions": [
       {
         "label": "bardak",
         "qty": 200
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-ayran",
+    "sourceKind": "recipe",
+    "carbPer": 2.33,
+    "fatPer": 1.625,
+    "recipeId": "tr-recipe-ayran"
   },
   {
     "id": "kola",
@@ -854,14 +1089,19 @@
     "kcalPer": 42,
     "proteinPer": 0,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 174852 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/174852/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:174852",
+    "sourceKind": "usda",
+    "carbPer": 10.4,
+    "fatPer": 0.25,
+    "sourceDescription": "Beverages, carbonated, cola, regular"
   },
   {
     "id": "meyvesuyu",
@@ -870,16 +1110,21 @@
     "unit": "ml",
     "per": 100,
     "kcalPer": 45,
-    "proteinPer": 0.5,
+    "proteinPer": 0.7,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169098 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169098/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169098",
+    "sourceKind": "usda",
+    "carbPer": 10.4,
+    "fatPer": 0.2,
+    "sourceDescription": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)"
   },
   {
     "id": "sutlucik",
@@ -888,16 +1133,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 535,
-    "proteinPer": 7.6,
+    "proteinPer": 7.65,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 167587 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/167587/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:167587",
+    "sourceKind": "usda",
+    "carbPer": 59.4,
+    "fatPer": 29.7,
+    "sourceDescription": "Candies, milk chocolate"
   },
   {
     "id": "biskuvi",
@@ -905,17 +1155,22 @@
     "aliases": ["Bisküvi"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 480,
-    "proteinPer": 6,
+    "kcalPer": 467,
+    "proteinPer": 6.1,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 172819 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/172819/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:172819",
+    "sourceKind": "usda",
+    "carbPer": 68.9,
+    "fatPer": 18.8,
+    "sourceDescription": "Cookies, butter, commercially prepared, unenriched"
   },
   {
     "id": "findik",
@@ -923,17 +1178,22 @@
     "aliases": ["Fındık"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 630,
+    "kcalPer": 628,
     "proteinPer": 15,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170581 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170581/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170581",
+    "sourceKind": "usda",
+    "carbPer": 16.7,
+    "fatPer": 60.8,
+    "sourceDescription": "Nuts, hazelnuts or filberts"
   },
   {
     "id": "badem",
@@ -941,17 +1201,22 @@
     "aliases": ["Badem"],
     "unit": "g",
     "per": 100,
-    "kcalPer": 580,
-    "proteinPer": 21,
+    "kcalPer": 579,
+    "proteinPer": 21.2,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 170567 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/170567/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:170567",
+    "sourceKind": "usda",
+    "carbPer": 21.6,
+    "fatPer": 49.9,
+    "sourceDescription": "Nuts, almonds"
   },
   {
     "id": "hurma",
@@ -959,17 +1224,22 @@
     "aliases": ["Hurma"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 23,
-    "proteinPer": 0.2,
+    "kcalPer": 19.740000000000002,
+    "proteinPer": 0.17150000000000004,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 171726 · 7 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/171726/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:171726",
+    "sourceKind": "usda",
+    "carbPer": 5.250000000000001,
+    "fatPer": 0.027300000000000005,
+    "sourceDescription": "Dates, deglet noor"
   },
   {
     "id": "bal",
@@ -977,17 +1247,22 @@
     "aliases": ["Bal"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 21,
-    "proteinPer": 0,
+    "kcalPer": 21.28,
+    "proteinPer": 0.021,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169640 · 7 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169640/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169640",
+    "sourceKind": "usda",
+    "carbPer": 5.768000000000001,
+    "fatPer": 0,
+    "sourceDescription": "Honey"
   },
   {
     "id": "seker",
@@ -995,35 +1270,45 @@
     "aliases": ["Şeker"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 20,
+    "kcalPer": 19.35,
     "proteinPer": 0,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 169655 · 5 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/169655/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:169655",
+    "sourceKind": "usda",
+    "carbPer": 5,
+    "fatPer": 0,
+    "sourceDescription": "Sugars, granulated"
   },
   {
     "id": "proteintozu",
-    "name": "Protein tozu (1 ölçek ≈ 30 g)",
+    "name": "Peynir altı suyu protein tozu (USDA referansı, 30 g)",
     "aliases": ["Protein tozu"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 120,
-    "proteinPer": 24,
+    "kcalPer": 105.6,
+    "proteinPer": 23.429999999999996,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 173180 · 30 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/173180/nutrients",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:173180",
+    "sourceKind": "usda",
+    "carbPer": 1.875,
+    "fatPer": 0.46799999999999997,
+    "sourceDescription": "Beverages, Protein powder whey based"
   },
   {
     "id": "karpuz",
@@ -1032,16 +1317,21 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 30,
-    "proteinPer": 0.6,
+    "proteinPer": 0.61,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 167765 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/167765/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:167765",
+    "sourceKind": "usda",
+    "carbPer": 7.55,
+    "fatPer": 0.15,
+    "sourceDescription": "Watermelon, raw"
   },
   {
     "id": "uzum",
@@ -1050,33 +1340,43 @@
     "unit": "g",
     "per": 100,
     "kcalPer": 69,
-    "proteinPer": 0.7,
+    "proteinPer": 0.72,
     "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "source": "USDA FoodData Central · FDC 174683 · 100 g / kayıt birimi · https://fdc.nal.usda.gov/food-details/174683/nutrients",
     "portions": [
       {
         "label": "porsiyon",
         "qty": 100
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "fdc:174683",
+    "sourceKind": "usda",
+    "carbPer": 18.1,
+    "fatPer": 0.16,
+    "sourceDescription": "Grapes, red or green (European type, such as Thompson seedless), raw"
   },
   {
     "id": "tostkasar",
-    "name": "Kaşarlı tost",
+    "name": "Beyaz peynirli ev tostu (200 g)",
     "aliases": ["Kaşarlı tost"],
     "unit": "adet",
     "per": 1,
-    "kcalPer": 350,
-    "proteinPer": 15,
-    "state": "na",
-    "source": "Referans menü · yaklaşık değer; tarif/markaya göre değişir",
+    "kcalPer": 594.4666666666667,
+    "proteinPer": 20.116666666666667,
+    "state": "cooked",
+    "source": "Örnek tarif · USDA malzemeleriyle hesaplandı; porsiyon/yönteme göre değişir · FDC 169761, FDC 173420, FDC 173410, FDC 170457, FDC 173647",
     "portions": [
       {
         "label": "adet",
         "qty": 1
       }
     ],
-    "useCount": 0
+    "useCount": 0,
+    "sourceId": "tr-recipe-peynirli-tost",
+    "sourceKind": "recipe",
+    "carbPer": 80.18733333333333,
+    "fatPer": 20.78666666666667,
+    "recipeId": "tr-recipe-peynirli-tost"
   }
 ]

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { DailyAlternative } from '../plan/DailyAlternative';
+import { dailyEnergy, adjustedTarget } from '../../domain/energy';
 import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
@@ -79,7 +80,16 @@ export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?:
 export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
   const { data, date, setDate, updateDay, mutate, addMeals } = useStore();
   const day = data.dayLog.find((d) => d.date === date) || emptyDay(date);
-  const targets = data.targets[0];
+  const expenditure = dailyEnergy(day, data.workoutLog, data.profile[0]);
+  const targets = {
+    ...data.targets[0],
+    kcal: adjustedTarget(
+      data.targets[0].kcal,
+      expenditure.active,
+      data.profile[0].addBurnedToTarget,
+      data.profile[0].burnedTargetPercent,
+    ),
+  };
   const plan = planFor(date, data.planSettings[0]);
   const entries = data.mealEntry.filter((e) => e.date === date);
   const macros = total(entries);
@@ -259,17 +269,22 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         </div>
         <div>
           <Ring
-            value={day.activeKcal || 0}
-            max={Math.max(1, day.activeKcal || 0)}
+            value={expenditure.active}
+            max={Math.max(1, expenditure.active)}
             label="Harcanan kalori tahmini"
             unit="kcal"
             size={104}
           />
           <h3>Harcanan</h3>
-          <small className="muted">Tahmini · kota yok</small>
+          <small className="muted">Tahmini · {expenditure.source}</small>
         </div>
         <div>
-          <Ring value={day.steps || 0} max={targets.steps || 8000} label="Adım" size={104} />
+          <Ring
+            value={day.steps ?? day.health?.steps ?? 0}
+            max={targets.steps || 8000}
+            label="Adım"
+            size={104}
+          />
           <h3>Adım</h3>
           <small className="muted">
             {targets.steps ? targets.steps.toLocaleString('tr') + ' hedef' : 'Günlük hareket'}
