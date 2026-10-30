@@ -70,3 +70,13 @@ Eski 250 ml bardak toplamı ilk yeni kayıtta ayrı bir taban olarak korunur. Ye
 Playwright MCP 390×844 ve 412×915 iki tema: ekle, geçmiş, düzenle, kaydet; taşma ve pageerror yok. Açık/koyu kart ve düzenleyici ekran görüntüleri ignored docs/qa altında incelendi. Genişletilmiş Axe sonucu bu aşamanın kapanışında kaydedilecek. Fiziksel cihaz NOT RUN; yeni yayın henüz yok.
 
 Faz 5a kapanışı: iki temada **46 Axe görünümü, sıfır ihlal**. Son lint/typecheck tekrar yeşil. Toplam 210 birim; uygulama derlemesi aynı ve başarılı. Su/çevrimdışı 4/4 son tekrar + diğer altı ilgili E2E geçti.
+
+## Faz 5b · Tartı ve gerçek ilerleme
+
+Ortak tarihli tartı sayfası hızlı ekleme ve İlerleme bölümünden açılır. Bir tarihte tek manuel tartı tutulur; güncelleme yalnızca kilo alanını değiştirir. Silme ayrı onay ister, günlük not/su/ölçüler ve bağlı kaynak tartısı korunur. Manuel tartı önceliği açıkça belirtilir. Tarih değişince sayı taslağı sıfırlanır; geçersiz tarih/gelecek ve geçersiz sayılar reddedilir. Kaydetme kalıcı yazımı bekler; hata olduğunda pencere açık kalır. Not hızlı eklemesi de kalıcı yazımı bekler.
+
+Dönem raporları gün, öğün ve antrenman tarihlerinin birleşimini kapsar; öğün olmayan günler beslenme ortalamasına sıfır katılmaz. Beslenme günü sayısı ayrı belirtilir, veri yokken arayüz — gösterir. Tartı farkı manuel/bağlı kaynak önceliğini korur. Su hedefi/koç/geçmiş grafiği/günlük ml birimiyle tutarlıdır, kayıtsız su günleri grafikte null kalır. Süreli hareketler saniye grafiği ve saniye rekoru gösterir; eski süresiz kayıttan süre tahmini yapılmaz. Mevcut ağırlık/tekrar/1RM özelliği diğer hareketlerde korunur.
+
+İlk ve son lint/typecheck/215 birim/build geçti. Yeni domain regresyonları tarihli düzenleme/silmede diğer verilerin korunması, bağlı kaynak fallback, bir tarihte tek kayıt, geçersiz tarih/kilo ve yalnızca kayıtlı beslenme günlerinden ortalamayı doğrular. Tam ZIP testi manuel + sağlık tartısını birlikte korur. MCP iki telefon/iki temada tartı gir/düzenle akışı, taşmasız ekran, pageerror yok; dört ekran görüntüsü incelendi. E2E ve genişletilmiş Axe son kapısı henüz sürüyor; aşağıdaki kapanış sonucu olmadan tamamlandı sayılmaz.
+
+Faz 5b kapanışı: son lint/typecheck/215 birim/build yeşil; iki motorda yeni tartı/süre grafiği/sayı/su **10/10**, mevcut plan/tema/doğrulama senaryosu **2/2**; **48 Axe görünümü sıfır ihlal**. Hareket seçicisinin sabit erişilebilir adı eksikti; ilk genişletilmiş test bu seçicide bekledi, düzeltilip tüm ilgili paket baştan geçti. MCP gerçek 45 sn tamamlanmış plank grafiğini iki telefon/iki temada ayrıca doğruladı; grafikte gerçek 45 sn noktası ve rekor var, 1RM kartı yok. Su hedefi Bugün 2500 → Planım 2500 → Planım 3000 → Bugün 3000 akışı geçti. Fiziksel cihaz NOT RUN. Tam birleşik teslim kapısı sırada.

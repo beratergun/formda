@@ -79,7 +79,8 @@ it('summarizes logged days, volumes and measurement changes', () => {
   const r = periodReport(data, '2026-10-29', 7);
   expect(r).toMatchObject({
     loggedDays: 2,
-    averageKcal: 72,
+    averageKcal: 144,
+    mealDays: 1,
     sessions: 2,
     volume: 400,
     swimM: 150,
@@ -88,9 +89,40 @@ it('summarizes logged days, volumes and measurement changes', () => {
     bestDate: '2026-10-29',
   });
   expect(r.highlights).toHaveLength(3);
-  const empty = periodReport({ ...data, dayLog: [], workoutLog: [] }, '2026-10-29', 30);
+  const empty = periodReport(
+    { ...data, dayLog: [], workoutLog: [], mealEntry: [] },
+    '2026-10-29',
+    30,
+  );
   expect(empty.loggedDays).toBe(0);
   expect(empty.weightChange).toBeUndefined();
   expect(empty.waistChange).toBeUndefined();
   expect(empty.highlights).toHaveLength(2);
+});
+it('does not count water-only days as zero nutrition and includes meals without a day row', () => {
+  const report = periodReport(
+    { ...data, dayLog: [{ ...emptyDay('2026-10-28'), water: 4 }] },
+    '2026-10-29',
+    7,
+  );
+  expect(report.mealDays).toBe(1);
+  expect(report.averageKcal).toBe(144);
+  expect(report.averageProtein).toBe(12.6);
+  const noMeals = periodReport({ ...data, mealEntry: [] }, '2026-10-29', 7);
+  expect(noMeals.mealDays).toBe(0);
+  expect(noMeals.averageKcal).toBe(0);
+});
+it('uses health weights only when a manual override is absent', () => {
+  const report = periodReport(
+    {
+      ...data,
+      dayLog: [
+        { ...emptyDay('2026-10-28'), health: { weight: 80, syncedAt: 1, sources: [] } },
+        { ...emptyDay('2026-10-29'), weight: 79, health: { weight: 82, syncedAt: 2, sources: [] } },
+      ],
+    },
+    '2026-10-29',
+    7,
+  );
+  expect(report.weightChange).toBe(-1);
 });

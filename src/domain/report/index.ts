@@ -28,21 +28,31 @@ export function dailyReport(data: AppData, date: string) {
   return { date, day, meals, workouts, macros, points, comments };
 }
 export function periodReport(data: AppData, date: string, days: number) {
-  const logs = data.dayLog
-    .filter((d) => dateDiff(date, d.date) >= 0 && dateDiff(date, d.date) < days)
+  const recordedDates = new Set([
+    ...data.dayLog.map((d) => d.date),
+    ...data.mealEntry.map((m) => m.date),
+    ...data.workoutLog.map((w) => w.date),
+  ]);
+  const logs = [...recordedDates]
+    .filter((d) => dateDiff(date, d) >= 0 && dateDiff(date, d) < days)
+    .map((d) => data.dayLog.find((log) => log.date === d) ?? emptyDay(d))
     .sort((a, b) => a.date.localeCompare(b.date));
   const reports = logs.map((d) => dailyReport(data, d.date));
   const workouts = data.workoutLog.filter(
     (w) => w.done && dateDiff(date, w.date) >= 0 && dateDiff(date, w.date) < days,
   );
-  const weights = logs.filter((d) => d.weight !== undefined);
+  const weights = logs
+    .map((d) => ({ ...d, weight: d.weight ?? d.health?.weight }))
+    .filter((d) => d.weight !== undefined);
+  const mealReports = reports.filter((r) => r.meals.length > 0);
   const waists = logs.filter((d) => d.measurements?.waist !== undefined);
   const best = [...reports].sort((a, b) => b.points.total - a.points.total)[0];
   return {
     days,
     loggedDays: logs.length,
-    averageKcal: average(reports.map((r) => r.macros.kcal)),
-    averageProtein: average(reports.map((r) => r.macros.protein)),
+    mealDays: mealReports.length,
+    averageKcal: average(mealReports.map((r) => r.macros.kcal)),
+    averageProtein: average(mealReports.map((r) => r.macros.protein)),
     averageScore: average(reports.map((r) => r.points.total)),
     sessions: workouts.filter((w) => w.type !== 'rest').length,
     volume: volume(workouts.flatMap((w) => w.sets)),

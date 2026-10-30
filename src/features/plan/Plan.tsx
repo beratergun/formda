@@ -645,7 +645,7 @@ function Goals() {
             { key: 'protein', label: 'Protein (g)', min: 1, max: 1000 },
             { key: 'carb', label: 'Karbonhidrat (g)', min: 0, max: 3000 },
             { key: 'fat', label: 'Yağ (g)', min: 0, max: 1000 },
-            { key: 'water', label: 'Su (bardak)', min: 1, max: 100 },
+            { key: 'water', label: 'Su (ml)', min: 1, max: 10000 },
             { key: 'steps', label: 'Adım', min: 0, max: 200000 },
             { key: 'goalWeight', label: 'Hedef kilo (kg)', min: 30, max: 400 },
           ] as const
@@ -655,9 +655,14 @@ function Goals() {
             <NumericInput
               min={field.min}
               max={field.max}
-              precision={field.key === 'steps' ? 0 : 2}
-              value={values[field.key] ?? ''}
-              onValueChange={(text) => patch({ [field.key]: text === '' ? undefined : +text })}
+              precision={field.key === 'steps' || field.key === 'water' ? 0 : 2}
+              value={field.key === 'water' ? values.water * 250 : (values[field.key] ?? '')}
+              onValueChange={(text) =>
+                patch({
+                  [field.key]:
+                    text === '' ? undefined : field.key === 'water' ? +text / 250 : +text,
+                })
+              }
               allowEmpty={field.key === 'carb' || field.key === 'fat' || field.key === 'steps'}
               aria-label={('' + field.label).trim()}
             />

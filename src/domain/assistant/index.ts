@@ -40,7 +40,9 @@ export function assistantMessages({
   else if (macros.protein < targets.protein)
     result.push(`Protein hedefine ${Math.ceil(targets.protein - macros.protein)} g kaldı.`);
   if (day.water < targets.water)
-    result.push(`Su hedefine ${targets.water - day.water} bardak kaldı.`);
+    result.push(
+      `Su hedefine ${Math.ceil((targets.water - day.water) * 250).toLocaleString('tr-TR')} ml kaldı.`,
+    );
   result.push(...insights);
   if (!result.length) result.push('Kendi ritminde devam et. Bugünkü emeğin kıymetli.');
   return result.slice(0, 4);

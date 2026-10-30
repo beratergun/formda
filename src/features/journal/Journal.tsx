@@ -229,7 +229,7 @@ export function Journal() {
                 <small>ortalama puan</small>
               </div>
               <div>
-                <b>{Math.round(period.averageKcal)}</b>
+                <b>{period.mealDays ? Math.round(period.averageKcal) : '—'}</b>
                 <small>kayıtlı gün kcal ort.</small>
               </div>
               <div>
@@ -238,8 +238,9 @@ export function Journal() {
               </div>
             </div>
             <p>
-              {Math.round(period.averageProtein)} g protein ortalaması ·{' '}
-              {period.volume.toLocaleString('tr')} kg hacim · {period.swimM} m yüzme
+              {period.mealDays ? Math.round(period.averageProtein) : '—'} g protein ortalaması /{' '}
+              {period.mealDays} beslenme günü · {period.volume.toLocaleString('tr')} kg hacim ·{' '}
+              {period.swimM} m yüzme
             </p>
             {period.weightChange !== undefined && (
               <p>Kilo değişimi: {period.weightChange.toFixed(1)} kg</p>
@@ -276,8 +277,8 @@ export function Journal() {
                 <small>protein</small>
               </div>
               <div>
-                <b>{day.water}</b>
-                <small>bardak su</small>
+                <b>{(day.water * 250).toLocaleString('tr-TR', { maximumFractionDigits: 1 })}</b>
+                <small>ml su</small>
               </div>
             </div>
             <div className="row between muted small">

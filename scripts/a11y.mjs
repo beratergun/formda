@@ -76,6 +76,11 @@ try {
         for (const segment of ['Kilo ve vücut', 'Beslenme', 'Antrenman', 'Alışkanlık']) {
           await page.getByRole('button', { name: segment, exact: true }).click();
           await scan(`${segment}-${theme}`);
+          if (segment === 'Kilo ve vücut') {
+            await page.getByRole('button', { name: 'Tartı ekle veya düzenle' }).click();
+            await scan('Tartı geçmişi-' + theme);
+            await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+          }
         }
     }
   }

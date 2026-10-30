@@ -264,7 +264,7 @@ export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
         steps={day.steps ?? day.health?.steps}
         onFood={() => onFood()}
       />
-      <WaterTracker />
+      <WaterTracker key={date} />
       {macros.carb !== undefined && entries.length > 0 && (
         <details className="card">
           <summary>Makro enerji dağılımı</summary>

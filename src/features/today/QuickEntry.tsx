@@ -1,39 +1,37 @@
 import { useState } from 'react';
 import { useStore } from '../../app/Store';
 import { emptyDay } from '../../domain/types';
-import { NumericInput, Button, Sheet } from '../../ui';
+import { Button, Sheet } from '../../ui';
+import { WeightLogSheet } from './WeightLogSheet';
 export function QuickEntry({ kind, onClose }: { kind: 'weight' | 'note'; onClose: () => void }) {
-  const { data, date, updateDay } = useStore();
+  return kind === 'weight' ? <WeightLogSheet onClose={onClose} /> : <NoteEntry onClose={onClose} />;
+}
+function NoteEntry({ onClose }: { onClose: () => void }) {
+  const { data, date, updateDay, flush } = useStore();
   const day = data.dayLog.find((d) => d.date === date) || emptyDay(date);
-  const [weight, setWeight] = useState(day.weight?.toString() || '');
   const [note, setNote] = useState(day.note || '');
+  const [busy, setBusy] = useState(false);
   return (
-    <Sheet title={kind === 'weight' ? 'Tartı kaydı' : 'Bugünden bir not'} onClose={onClose}>
-      {kind === 'weight' ? (
-        <label className="field">
-          Kilo (kg)
-          <NumericInput
-            autoFocus
-            inputMode="decimal"
-            min={30}
-            max={400}
-            step={0.1}
-            value={weight}
-            onValueChange={(text) => setWeight(text)}
-            aria-label={'Kilo (kg)'}
-          />
-        </label>
-      ) : (
-        <label className="field">
-          Notun
-          <textarea autoFocus rows={4} value={note} onChange={(e) => setNote(e.target.value)} />
-        </label>
-      )}
+    <Sheet title="Bugünden bir not" onClose={onClose}>
+      <label className="field">
+        Notun
+        <textarea
+          aria-label="Notun"
+          autoFocus
+          rows={4}
+          value={note}
+          onChange={(e) => setNote(e.target.value)}
+        />
+      </label>
       <Button
-        disabled={kind === 'weight' && (+weight < 30 || +weight > 400)}
+        disabled={busy}
         onClick={() => {
-          updateDay(kind === 'weight' ? { weight: +weight } : { note });
-          onClose();
+          setBusy(true);
+          updateDay({ note });
+          void flush()
+            .then(onClose)
+            .catch(() => {})
+            .finally(() => setBusy(false));
         }}
       >
         Kaydet

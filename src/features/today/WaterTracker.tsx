@@ -107,7 +107,7 @@ export function WaterTracker() {
           Miktarı ekle
         </Button>
       </div>
-      <details className="stack">
+      <details className="water-details">
         <summary>Su hedefini düzenle</summary>
         <div data-validation-scope className="stack">
           <label className="field">
@@ -135,7 +135,7 @@ export function WaterTracker() {
           </p>
         </div>
       </details>
-      <details className="stack">
+      <details className="water-details">
         <summary>Su kayıt geçmişi · {entries.length} giriş</summary>
         <div className="stack">
           {(day.waterBaseMl ?? total) > 0 && (

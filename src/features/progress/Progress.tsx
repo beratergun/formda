@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Camera, ChevronRight, TrendingUp } from 'lucide-react';
 import { useStore } from '../../app/Store';
-import { NumericInput, Card, Chip, Segmented } from '../../ui';
+import { NumericInput, Button, Card, Chip, Segmented } from '../../ui';
 import { Chart, type ChartPoint } from '../../ui/Chart';
 import { MUSCLES } from '../../ui/BodyMap';
 import { PhotoTimeline } from '../camera/Camera';
@@ -20,6 +20,9 @@ import { scoreHistory } from '../../domain/score';
 import { MacroBreakdown } from '../../ui/MacroBreakdown';
 import { MEALS, type Horizon } from '../../domain/types';
 import { EXERCISES } from '../../data/seed/exercises';
+import { WeightLogSheet } from '../today/WeightLogSheet';
+import { isTimedExercise } from '../../domain/exercises/technique';
+import { waterMl, GLASS_ML } from '../../domain/water';
 const segments = [
   { value: 'general', label: 'Genel' },
   { value: 'body', label: 'Kilo ve vücut' },
@@ -29,6 +32,7 @@ const segments = [
 ];
 export function Progress() {
   const { data, date, updateDay } = useStore();
+  const [weightOpen, setWeightOpen] = useState(false);
   const [tab, setTab] = useState('general');
   const [heatWeeks, setHeatWeeks] = useState(26);
   const [desiredRate, setDesiredRate] = useState(0.5);
@@ -96,6 +100,7 @@ export function Progress() {
           .map((d) => total(data.mealEntry.filter((m) => m.date === d.date)).kcal),
       ) || null,
   }));
+  const timed = isTimedExercise(exercise);
   const movement = data.workoutLog
     .filter((w) => w.done && w.date <= date && w.sets.some((s) => s.exerciseId === exercise))
     .sort((a, b) => a.startedAt - b.startedAt)
@@ -107,13 +112,16 @@ export function Progress() {
         reps: Math.max(0, ...sets.map((s) => s.reps || 0)),
         rm: Math.max(0, ...sets.map((s) => epley(s.kg || 0, s.reps || 0))),
         volume: volume(sets),
+        seconds: sets.some((s) => s.seconds !== undefined)
+          ? Math.max(...sets.map((s) => s.seconds ?? 0))
+          : null,
       };
     });
   const habitPoints = recent.map((r) => {
     const clock = r.day.sleepAt?.split(':').map(Number);
     return {
       label: dateLabel(r.date, 'd MMM'),
-      water: r.day.water,
+      water: r.day.water > 0 || r.day.waterEntries !== undefined ? waterMl(r.day) : null,
       energy: r.day.energy ?? null,
       mood: r.day.mood ?? null,
       sleepQuality: r.day.sleepQuality ?? null,
@@ -233,18 +241,13 @@ export function Progress() {
                 <small>tartı kaydı</small>
               </div>
             </div>
-            <label className="field">
-              Bugünkü kilo (kg)
-              <NumericInput
-                min={30}
-                max={400}
-                step={0.1}
-                value={day.day.weight || ''}
-                onValueChange={(text) => updateDay({ weight: Math.max(0, +text) || undefined })}
-                allowEmpty
-                aria-label={'Bugünkü kilo (kg)'}
-              />
-            </label>
+            <Button onClick={() => setWeightOpen(true)}>Tartı ekle veya düzenle</Button>
+            {!weights.length && (
+              <p className="notice">
+                Henüz tarihli tartı kaydın yok. Aşağıdaki tahmin başlangıç profilinden hesaplanır;
+                gerçek ölçüm değildir.
+              </p>
+            )}
             <div className="grid2">
               {(['waist', 'chest', 'hip', 'arm'] as const).map((key, i) => (
                 <label className="field" key={key}>
@@ -514,7 +517,11 @@ export function Progress() {
           </Card>
           <label className="field">
             Hareket
-            <select value={exercise} onChange={(e) => setExercise(e.target.value)}>
+            <select
+              aria-label="İlerleme hareketi"
+              value={exercise}
+              onChange={(e) => setExercise(e.target.value)}
+            >
               {EXERCISES.filter((e) => e.equipment !== 'havuz').map((e) => (
                 <option key={e.id} value={e.id}>
                   {e.name}
@@ -522,29 +529,46 @@ export function Progress() {
               ))}
             </select>
           </label>
-          <Card>
-            <h2>Ağırlık ve tahmini 1RM</h2>
-            <Chart
-              label="Hareket ağırlığı ve Epley 1RM grafiği"
-              data={movement}
-              series={[
-                { key: 'kg', name: 'Ağırlık (kg)' },
-                { key: 'rm', name: 'Tahmini 1RM (kg)' },
-              ]}
-            />
-          </Card>
-          <Card>
-            <h2>Tekrar ve toplam hacim</h2>
-            <Chart
-              label="Hareket tekrar grafiği"
-              data={movement}
-              series={[{ key: 'reps', name: 'En yüksek tekrar' }]}
-            />
-            <p className="muted small">
-              Son 28 gün toplam hacim: {period.volume.toLocaleString('tr')} kg · Yüzme:{' '}
-              {period.swimM} m
-            </p>
-          </Card>
+          {timed ? (
+            <Card>
+              <h2>Tutuş süren</h2>
+              <Chart
+                label="Hareket tutuş süresi grafiği"
+                data={movement}
+                series={[{ key: 'seconds', name: 'En uzun tutuş (sn)' }]}
+              />
+              <p className="small muted">
+                Yalnızca tamamlanan setlerde kaydedilmiş süreler gösterilir. Eski süresiz
+                kayıtlardan süre tahmin edilmez.
+              </p>
+            </Card>
+          ) : (
+            <>
+              <Card>
+                <h2>Ağırlık ve tahmini 1RM</h2>
+                <Chart
+                  label="Hareket ağırlığı ve Epley 1RM grafiği"
+                  data={movement}
+                  series={[
+                    { key: 'kg', name: 'Ağırlık (kg)' },
+                    { key: 'rm', name: 'Tahmini 1RM (kg)' },
+                  ]}
+                />
+              </Card>
+              <Card>
+                <h2>Tekrar ve toplam hacim</h2>
+                <Chart
+                  label="Hareket tekrar grafiği"
+                  data={movement}
+                  series={[{ key: 'reps', name: 'En yüksek tekrar' }]}
+                />
+                <p className="muted small">
+                  Son 28 gün toplam hacim: {period.volume.toLocaleString('tr')} kg · Yüzme:{' '}
+                  {period.swimM} m
+                </p>
+              </Card>
+            </>
+          )}
           <Card className="stack">
             <h2>Kişisel rekorların</h2>
             {EXERCISES.filter((e) =>
@@ -557,9 +581,19 @@ export function Progress() {
                 <div className="row between small" key={e.id}>
                   <span>{e.name}</span>
                   <b>
-                    {Math.max(0, ...sets.map((s) => s.kg || 0))} kg ·{' '}
-                    {Math.max(0, ...sets.map((s) => epley(s.kg || 0, s.reps || 0))).toFixed(1)}{' '}
-                    tahmini 1RM
+                    {isTimedExercise(e.id) ? (
+                      sets.some((s) => s.seconds !== undefined) ? (
+                        Math.max(...sets.map((s) => s.seconds ?? 0)) + ' sn'
+                      ) : (
+                        'Kayıtlı süre yok'
+                      )
+                    ) : (
+                      <>
+                        {Math.max(0, ...sets.map((s) => s.kg || 0))} kg ·{' '}
+                        {Math.max(0, ...sets.map((s) => epley(s.kg || 0, s.reps || 0))).toFixed(1)}{' '}
+                        tahmini 1RM
+                      </>
+                    )}
                   </b>
                 </div>
               );
@@ -620,8 +654,8 @@ export function Progress() {
             <Chart
               label="Su tüketimi"
               data={habitPoints}
-              series={[{ key: 'water', name: 'Bardak' }]}
-              goal={target.water}
+              series={[{ key: 'water', name: 'Su (ml)' }]}
+              goal={target.water * GLASS_ML}
             />
           </Card>
           <Card>
@@ -654,6 +688,7 @@ export function Progress() {
           </Card>
         </>
       )}
+      {weightOpen && <WeightLogSheet onClose={() => setWeightOpen(false)} />}
     </motion.div>
   );
 }

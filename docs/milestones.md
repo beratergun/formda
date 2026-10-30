@@ -55,3 +55,7 @@
 - BERxFIT Faz 5a sürüyor: eski toplamı ayrı taban olarak koruyan ml su defteri, hızlı/özel giriş, hedef, saatli geçmiş ve onaylı düzeltme/silme uygulandı. 210 birim/lint/typecheck geçti; build ve iki motorlu su E2E/görsel/Axe kapısı bekleniyor. Son commit 5a95bcd; su değişiklikleri henüz commit edilmedi. Sıradaki 5b tarihli tartı yönetimi ve ilerleme doğruluğu. Yayın yok.
 
 - BERxFIT Faz 5a tamamlandı: eski toplamı koruyan ml defteri, hızlı/özel miktar, hedef ve saatli düzeltme/silme. Lint/typecheck/210 birim/build yeşil, iki motorda su+offline son 4/4 ve diğer altı ilgili E2E geçti. 46 Axe sıfır ihlal; iki telefon/iki tema görsel kontrol temiz. Sıradaki 5b: tarihli tartı yönetimi, kayıtlı gün ortalamaları ve süreli hareket grafikleri. Yayın yok.
+
+- BERxFIT Faz 5b sürüyor: tarihli manuel tartı CRUD ve bağlı kaynak ayrımı, notta kalıcı yazımı bekleme, beslenme günü ortalamaları, Health tartı fallback, ml su gösterimleri ve süreli hareket grafiği/rekoru uygulandı. İlk lint/typecheck/215 birim yeşil; son kapı/build ve yeni tartı + güncellenmiş mobil regresyonlar bekleniyor. Son commit 3da2807; 5b henüz commit edilmedi. Yayın yok.
+
+- BERxFIT Faz 5b tamamlandı: tarihli tartı CRUD, veri koruyan silme ve sağlık kaynağı ayrımı; gerçek beslenme günü ortalamaları; ml tutarlılığı; süre grafiği/rekoru. Lint/typecheck/215 birim/build, ilgili E2E 10/10 + plan/tema 2/2, 48 Axe sıfır ihlal. Sıradaki Faz 6: son bütünleşik denetim, WCAG 2.2, performans, marka/yayın varlıkları, native CI, güncel README ve yayın. Henüz BERxFIT push/release yok.

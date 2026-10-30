@@ -8,6 +8,7 @@ import { periodReport } from '../../domain/report';
 import { planFor } from '../../domain/program';
 import { epley } from '../../domain/progression';
 import { scoreHistory, streaks } from '../../domain/score';
+import { isTimedExercise } from '../../domain/exercises/technique';
 import { EXERCISES } from '../../data/seed/exercises';
 import { shareBlob } from '../../data/media/export';
 
@@ -47,12 +48,20 @@ export function Motivation() {
       .filter((w) => w.done && w.date <= date)
       .flatMap((w) => w.sets)
       .filter(
-        (s) => s.done && s.exerciseId === exercise.id && (s.kg || 0) > 0 && (s.reps || 0) > 0,
+        (s) =>
+          s.done &&
+          s.exerciseId === exercise.id &&
+          (isTimedExercise(exercise.id)
+            ? (s.seconds ?? 0) > 0
+            : (s.kg || 0) > 0 && (s.reps || 0) > 0),
       );
     return sets.length
       ? [
           {
             exercise,
+            seconds: isTimedExercise(exercise.id)
+              ? Math.max(...sets.map((s) => s.seconds ?? 0))
+              : undefined,
             kg: Math.max(...sets.map((s) => s.kg || 0)),
             rm: Math.max(...sets.map((s) => epley(s.kg || 0, s.reps || 0))),
           },
@@ -76,7 +85,7 @@ export function Motivation() {
       title: 'Kendi ritminde devam',
       value: String(streak.current),
       unit: 'gün seri',
-      detail: `${Math.round(month.averageProtein)} g ortalama protein · ${month.loggedDays} kayıtlı gün`,
+      detail: `${Math.round(month.averageProtein)} g ortalama protein · ${month.mealDays} beslenme günü`,
     },
   ];
   const share = async (index: number) => {
@@ -165,16 +174,20 @@ export function Motivation() {
           <h2>Kişisel rekor duvarı</h2>
         </div>
         {records.length ? (
-          records.map(({ exercise, kg, rm }) => (
+          records.map(({ exercise, kg, rm, seconds }) => (
             <div className="record-tile" key={exercise.id}>
               <span>
                 {exercise.name}
                 <small className="muted">
-                  Tahmini 1RM · {rm.toLocaleString('tr', { maximumFractionDigits: 1 })} kg
+                  {seconds !== undefined ? (
+                    'En uzun kayıtlı tutuş'
+                  ) : (
+                    <>Tahmini 1RM · {rm.toLocaleString('tr', { maximumFractionDigits: 1 })} kg</>
+                  )}
                 </small>
               </span>
               <b>
-                {kg} <small>kg</small>
+                {seconds ?? kg} <small>{seconds !== undefined ? 'sn' : 'kg'}</small>
               </b>
             </div>
           ))
@@ -212,7 +225,7 @@ export function Motivation() {
           {slides.map((slide, i) => (
             <article className="story-card" key={slide.title}>
               <p className="eyebrow">
-                FORMDA · {dateLabel(date, 'MMMM yyyy')} · {i + 1}/3
+                BERxFIT · {dateLabel(date, 'MMMM yyyy')} · {i + 1}/3
               </p>
               <h3>{slide.title}</h3>
               <b className="story-value">{slide.value}</b>

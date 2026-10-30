@@ -47,6 +47,9 @@
   border: 1px solid var(--line);
   border-radius: 12px;
 }
+.water-details[open] > div {
+  margin-top: 14px;
+}
 .water-entry small {
   display: block;
   color: var(--sub);

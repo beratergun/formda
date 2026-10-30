@@ -118,4 +118,14 @@ test('records a plank hold as seconds without fabricated weight or repetitions',
   await page.getByRole('link', { name: "Bugün'e dön", exact: true }).click();
   await page.getByRole('link', { name: 'Günlük', exact: true }).click();
   await expect(page.getByText('Plank · 1. set · 45 sn · RPE 7', { exact: true })).toBeVisible();
+  await page.getByRole('link', { name: 'İlerleme', exact: true }).click();
+  await page.getByRole('button', { name: 'Antrenman', exact: true }).click();
+  await page.getByLabel('İlerleme hareketi', { exact: true }).selectOption('plank');
+  await expect(
+    page.getByRole('figure', { name: 'Hareket tutuş süresi grafiği', exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Ağırlık ve tahmini 1RM', exact: true }),
+  ).toHaveCount(0);
+  await expect(page.getByText('45 sn', { exact: true })).toBeVisible();
 });

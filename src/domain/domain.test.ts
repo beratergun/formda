@@ -337,7 +337,7 @@ describe('local assistant and quotes', () => {
   it('uses real remaining values and deterministic messages', () => {
     expect(assistantMessages(base)).toEqual([
       'Protein hedefine 22 g kaldı.',
-      'Su hedefine 8 bardak kaldı.',
+      'Su hedefine 2.000 ml kaldı.',
     ]);
     expect(new LocalAssistant().messages(base)).toEqual(assistantMessages(base));
   });

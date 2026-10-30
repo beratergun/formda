@@ -165,6 +165,7 @@ it('round-trips all data and media through zip, delete, restore exactly', async 
   await database.dayLog.put({
     ...emptyDay('2026-10-29'),
     note: 'Türkçe günlük',
+    weight: 79.5,
     water: 5,
     waterBaseMl: 625,
     waterEntries: [
