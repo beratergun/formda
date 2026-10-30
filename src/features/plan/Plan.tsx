@@ -475,6 +475,9 @@ export function Plan() {
               <Plus size={17} />
               Hareket ekle
             </Button>
+            <Link className="button secondary" to="/apparatus">
+              Aletleri keşfet
+            </Link>
             <Link className="button quiet" to="/library">
               Hareketleri tanı
             </Link>

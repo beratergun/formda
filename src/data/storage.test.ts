@@ -261,3 +261,25 @@ it('reopens the original database after rebranding without resetting records', a
   expect((await reopened.profile.get('main'))?.name).toBe('Local fixture');
   expect((await reopened.food.get('egg'))?.favorite).toBe(true);
 });
+
+it('upgrades the exercise library without replacing custom records or settings', async () => {
+  const database = fresh();
+  await seedDatabase(database);
+  const original = (await database.exercise.get('leg-press'))!;
+  await database.exercise.put({ ...original, howTo: ['My setup', 'My step', 'My cue'] });
+  await database.exercise.put({
+    ...original,
+    id: 'custom-exercise',
+    name: 'Local custom movement',
+  });
+  await database.meta.put({ key: 'libraryVersion', value: '1' });
+  await database.dayLog.put({ ...emptyDay('2026-10-30'), note: 'Keep this journal' });
+  const plan = (await database.planSettings.get('main'))!;
+  await seedDatabase(database);
+  expect((await database.exercise.get('leg-press'))?.howTo[0]).toBe('My setup');
+  expect((await database.exercise.get('custom-exercise'))?.name).toBe('Local custom movement');
+  expect(await database.exercise.count()).toBeGreaterThanOrEqual(151);
+  expect((await database.meta.get('libraryVersion'))?.value).toBe('2');
+  expect(await database.planSettings.get('main')).toEqual(plan);
+  expect((await database.dayLog.get('2026-10-30'))?.note).toBe('Keep this journal');
+});

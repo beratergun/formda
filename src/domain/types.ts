@@ -89,6 +89,12 @@ export interface WorkoutLog {
   cooldownDone?: boolean;
 }
 export interface Exercise {
+  apparatusId?: string;
+  setup?: string;
+  breathing?: string;
+  prescription?: string;
+  easier?: string;
+  harder?: string;
   id: string;
   name: string;
   muscles: string[];

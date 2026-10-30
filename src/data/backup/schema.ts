@@ -185,6 +185,12 @@ const media = z.object({
   mime: z.string(),
 });
 const exercise = z.object({
+  apparatusId: z.string().optional(),
+  setup: z.string().optional(),
+  breathing: z.string().optional(),
+  prescription: z.string().optional(),
+  easier: z.string().optional(),
+  harder: z.string().optional(),
   id,
   name: z.string(),
   muscles: strings,

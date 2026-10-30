@@ -1,14 +1,25 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { MovementFrames } from '../../ui/MovementFrames';
+import { APPARATUS } from '../../data/seed/apparatus';
 import { EXERCISES } from '../../data/seed/exercises';
 import { Button, Card, Chip, Sheet } from '../../ui';
-import { BodyMap, ExerciseFigure, MUSCLES } from '../../ui/BodyMap';
+import { BodyMap, MUSCLES } from '../../ui/BodyMap';
 import { normalize } from '../../domain/parser';
 import type { Exercise } from '../../domain/types';
 
 export function ExerciseGuide({ exercise }: { exercise: Exercise }) {
   return (
     <div className="stack">
-      <ExerciseFigure type={exercise.svgKey} />
+      <MovementFrames exercise={exercise} />
+      <Card className="stack">
+        <h3>Başlangıç ayarı</h3>
+        <p>{exercise.setup || exercise.howTo[0]}</p>
+        <p className="small muted">
+          {APPARATUS.find((a) => a.id === exercise.apparatusId)?.name || exercise.equipment}
+        </p>
+        <p className="notice">{exercise.prescription}</p>
+      </Card>
       <div className="row">
         <Chip>{exercise.equipment}</Chip>
         <Chip>{exercise.level}</Chip>
@@ -26,6 +37,14 @@ export function ExerciseGuide({ exercise }: { exercise: Exercise }) {
           </p>
         ))}
         <p className="notice">{exercise.safety}</p>
+      </Card>
+      <Card className="stack">
+        <h3>Nefes</h3>
+        <p>{exercise.breathing}</p>
+        <h3>Daha kolay</h3>
+        <p>{exercise.easier}</p>
+        <h3>Daha zor</h3>
+        <p>{exercise.harder}</p>
       </Card>
       <BodyMap active={exercise.muscles} />
       <div>
@@ -67,6 +86,9 @@ export function Library({ onSelect }: { onSelect?: (id: string) => void }) {
         <h1>Hareket kütüphanesi</h1>
         <p className="muted small">{EXERCISES.length} hareket · kendi ritminde öğren</p>
       </div>
+      <Link className="button secondary" to="/apparatus">
+        Aletleri keşfet
+      </Link>
       <label className="field">
         Hareket ara
         <input

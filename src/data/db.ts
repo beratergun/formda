@@ -54,7 +54,10 @@ export class FormdaDatabase extends Dexie {
 }
 export const db = new FormdaDatabase();
 export async function seedDatabase(database = db) {
-  if ((await database.meta.get('seedVersion')) && (await database.meta.get('libraryVersion')))
+  if (
+    (await database.meta.get('seedVersion')) &&
+    (await database.meta.get('libraryVersion'))?.value === '2'
+  )
     return;
   const [{ FOODS, DEFAULT_MENU }, { QUOTES }, { EXERCISES }] = await Promise.all([
     import('./seed/foods'),
@@ -82,8 +85,9 @@ export async function seedDatabase(database = db) {
         { key: 'seedVersion', value: '1' },
       ]);
     }
-    if (!(await database.meta.get('libraryVersion'))) {
-      await database.exercise.bulkPut(EXERCISES);
+    if ((await database.meta.get('libraryVersion'))?.value !== '2') {
+      const old = new Map((await database.exercise.toArray()).map((e) => [e.id, e]));
+      await database.exercise.bulkPut(EXERCISES.map((e) => ({ ...e, ...old.get(e.id) })));
       const plan = await database.planSettings.get('main');
       if (plan)
         await database.planSettings.put({
@@ -94,7 +98,7 @@ export async function seedDatabase(database = db) {
             ...plan.templates,
           },
         });
-      await database.meta.put({ key: 'libraryVersion', value: '1' });
+      await database.meta.put({ key: 'libraryVersion', value: '2' });
     }
   });
 }

@@ -25,3 +25,5 @@
 - B — Koç ana ekranı, ortak tasarım, motivasyon galerileri ve paylaşılabilir aylık hikâyeler uygulandı. 96 birim, 10 E2E, 18 Axe görünümünde sıfır ihlal ve Lighthouse 100/100/100; tamamlandı. Sıradaki aşama C.
 
 - C — Altı program, güne özel üç alternatif ve hareket değiştirme uygulandı. 125 birim, iki yeni mobil program E2E, lint/typecheck/build, 18 Axe görünümü ve %99,79 domain satır kapsamı yeşil. 12/12 tam regresyon geçti. Aynı hareketin yinelenmesini önleyen son düzeltmenin iki mobil E2E ve 29 domain testi de doğrulandı. Tamamlandı; sıradaki aşama D.
+
+- D — 159 hareket, 34 alet, ayrıntılı rehber, iki vektör poz ve döngü, alet ekranından programa ekleme tamamlandı. 127 birim, iki mobil alet E2E, lint/typecheck/build ve 22 Axe görünümü geçti. Son iki mobil alet E2E ve reduced-motion poz döngüsü kontrolü geçti. Tamamlandı; sıradaki aşama E.

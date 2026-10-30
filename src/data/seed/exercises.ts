@@ -1,4 +1,6 @@
 import type { Exercise } from '../../domain/types';
+import { EXTRA_EXERCISES } from './extra-exercises';
+import { apparatusIdFor } from './apparatus';
 
 const patterns: Record<string, { steps: string[]; mistake: string; safety: string }> = {
   press: {
@@ -82,7 +84,7 @@ const patterns: Record<string, { steps: string[]; mistake: string; safety: strin
     safety: 'Hafif bir gerilme yeterli; ağrı veya uyuşmada hareketi bırak.',
   },
 };
-type Row = [string, string, string[], string, string, string, string];
+export type Row = [string, string, string[], string, string, string, string];
 const rows: Row[] = [
   [
     'leg-press',
@@ -841,10 +843,35 @@ const rows: Row[] = [
     'Küçük omuz daireleriyle başla; ağrısız aralıkta genişlet.',
   ],
 ];
-export const EXERCISES: Exercise[] = rows.map(
+const allRows = [...rows, ...EXTRA_EXERCISES];
+export const EXERCISES: Exercise[] = allRows.map(
   ([id, name, muscles, equipment, pattern, setup, cue]) => ({
     id,
     name,
+    apparatusId: apparatusIdFor(id, equipment),
+    setup,
+    breathing:
+      pattern === 'swim'
+        ? 'Yüzünü suya verdiğinde rahatça nefes ver; nefes almak için zorlanmadan dön. Nefes tutma çalışması yapma.'
+        : pattern === 'cardio' || pattern === 'core' || pattern === 'mobility'
+          ? 'Rahat ve düzenli nefes alıp ver; nefesini tutma.'
+          : 'Zorlandığın kaldırma/itiş/çekiş bölümünde nefes ver; dönüşte nefes al.',
+    prescription:
+      pattern === 'swim'
+        ? '4–8 kısa aralık; aralarda 30–60 sn dinlenme'
+        : pattern === 'cardio'
+          ? '15–30 dk rahat tempo; ilk ve son 3–5 dk kolay'
+          : pattern === 'core' || pattern === 'mobility'
+            ? '2–3 set × 15–30 sn veya 6–12 kontrollü tekrar'
+            : '2–3 set × 8–12 kontrollü tekrar',
+    easier:
+      pattern === 'swim'
+        ? 'Daha kısa mesafe; sık dinlenme ve eğitmen desteği.'
+        : 'Daha hafif yük, destekli duruş ve ağrısız daha kısa hareket aralığı.',
+    harder:
+      pattern === 'swim'
+        ? 'Teknik ve nefes rahatlığı korunuyorsa bir kısa aralık daha ekle.'
+        : 'Önce aynı yükle kontrollü tekrarları artır; teknik korunuyorsa küçük direnç artışı.',
     muscles,
     equipment,
     level: ['barbell', 'havuz'].includes(equipment) ? 'Orta' : 'Başlangıç',
@@ -852,11 +879,9 @@ export const EXERCISES: Exercise[] = rows.map(
     mistakes: [patterns[pattern].mistake],
     safety: patterns[pattern].safety,
     alternatives: (() => {
-      const matches = rows.filter(
+      const matches = allRows.filter(
         (r) =>
-          r[0] !== id &&
-          r[2].some((m) => muscles.includes(m)) &&
-          (r[4] === pattern || pattern === 'isolation'),
+          r[0] !== id && r[2].includes(muscles[0]) && (r[4] === pattern || pattern === 'isolation'),
       );
       const busy = matches.find((r) => r[3] !== equipment) || matches[0];
       const home = matches.find((r) => ['vücut ağırlığı', 'bant'].includes(r[3])) || busy;

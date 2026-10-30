@@ -32,6 +32,9 @@ import type { MealId } from '../domain/types';
 const Workout = lazy(() =>
   import('../features/workout-mode/Workout').then((m) => ({ default: m.Workout })),
 );
+const Apparatus = lazy(() =>
+  import('../features/workout-mode/Apparatus').then((m) => ({ default: m.Apparatus })),
+);
 const Library = lazy(() =>
   import('../features/workout-mode/Library').then((m) => ({ default: m.Library })),
 );
@@ -110,7 +113,12 @@ function AppLayout() {
             <header className="topbar">
               <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
                 <span className="brand-mark">
-                  <img src={import.meta.env.BASE_URL + 'icons/icon.svg'} width="28" height="28" alt="" />
+                  <img
+                    src={import.meta.env.BASE_URL + 'icons/icon.svg'}
+                    width="28"
+                    height="28"
+                    alt=""
+                  />
                 </span>
                 {APP_NAME}
                 <span className="brand-dot">/</span>
@@ -141,6 +149,7 @@ function AppLayout() {
                   <Route path="/" element={<Today onFood={onFood} />} />
                   <Route path="/workout" element={<Workout />} />
                   <Route path="/library" element={<Library />} />
+                  <Route path="/apparatus" element={<Apparatus />} />
                   <Route path="/camera" element={<CameraPage />} />
                   <Route path="/vlog" element={<Vlog />} />
                   <Route path="/journal" element={<Journal />} />

@@ -79,6 +79,23 @@ try {
         }
     }
   }
+  for (const theme of ['light', 'dark']) {
+    await page.evaluate((t) => {
+      document.documentElement.dataset.theme = t;
+      localStorage.setItem('yol-theme', t);
+      window.dispatchEvent(new Event('formda-theme-change'));
+    }, theme);
+    await page.goto(url + '#/apparatus');
+    await page.getByRole('heading', { name: 'Aletler', exact: true }).waitFor();
+    await scan('Aletler-' + theme);
+    await page
+      .locator('.apparatus-grid')
+      .getByRole('button', { name: 'Hack squat', exact: true })
+      .click();
+    await page.getByRole('button', { name: 'Nasıl yapılır? · Hack squat', exact: true }).click();
+    await scan('Hareket rehberi-' + theme);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+  }
   const output = `docs/qa/${new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Istanbul' }).format(new Date())}`;
   await mkdir(output, { recursive: true });
   await writeFile(`${output}/axe.json`, JSON.stringify(findings, null, 2));
