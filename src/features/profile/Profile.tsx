@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '../../app/Store';
 import { APP_NAME, APP_VERSION } from '../../app/config';
-import { Button, Card, Chip, Sheet } from '../../ui';
+import { NumericInput, Button, Card, Chip, Sheet } from '../../ui';
 import { createBackup, restoreBackup, resetDatabase } from '../../data/backup';
 import { clearAllData, storageInfo } from '../../data/media/opfs';
 import { seedDatabase } from '../../data/db';
@@ -25,7 +25,6 @@ import { dateDiff, dateLabel, shiftDate, todayKey } from '../../domain/dates';
 import { downloadBlob } from '../../data/media/export';
 import type { Profile as UserProfile } from '../../domain/types';
 import { InstallCard } from '../../app/InstallCard';
-
 const mb = (n: number) =>
   `${(n / 1024 / 1024).toLocaleString('tr', { maximumFractionDigits: 1 })} MB`;
 export function Profile() {
@@ -201,12 +200,14 @@ export function Profile() {
         <div className="grid2">
           <label className="field">
             Yaş
-            <input
-              type="number"
+            <NumericInput
               min={18}
               max={100}
+              precision={0}
               value={profile.age || ''}
-              onChange={(e) => setProfile({ ...profile, age: +e.target.value || undefined })}
+              onValueChange={(text) => setProfile({ ...profile, age: +text || undefined })}
+              allowEmpty
+              aria-label={'Yaş'}
             />
           </label>
           <label className="field">
@@ -224,35 +225,35 @@ export function Profile() {
           </label>
           <label className="field">
             Boy (cm)
-            <input
-              type="number"
+            <NumericInput
               min={100}
               max={250}
               value={profile.heightCm}
-              onChange={(e) => setProfile({ ...profile, heightCm: +e.target.value })}
+              onValueChange={(text) => setProfile({ ...profile, heightCm: +text })}
+              aria-label={'Boy (cm)'}
             />
           </label>
           <label className="field">
             Başlangıç kilosu (kg)
-            <input
-              type="number"
+            <NumericInput
               min={30}
               max={400}
               step={0.1}
               value={profile.startWeight}
-              onChange={(e) => setProfile({ ...profile, startWeight: +e.target.value })}
+              onValueChange={(text) => setProfile({ ...profile, startWeight: +text })}
+              aria-label={'Başlangıç kilosu (kg)'}
             />
           </label>
         </div>
         <label className="field">
           Aktivite katsayısı
-          <input
-            type="number"
+          <NumericInput
             min={1}
             max={2.5}
             step={0.05}
             value={profile.activityFactor}
-            onChange={(e) => setProfile({ ...profile, activityFactor: +e.target.value })}
+            onValueChange={(text) => setProfile({ ...profile, activityFactor: +text })}
+            aria-label={'Aktivite katsayısı'}
           />
         </label>
         <label className="check-field">
@@ -271,17 +272,17 @@ export function Profile() {
         </label>
         <label className="field">
           Harcananın hedefe eklenecek yüzdesi
-          <input
-            type="number"
+          <NumericInput
             min={0}
             max={100}
             value={profile.burnedTargetPercent ?? 50}
-            onChange={(e) =>
+            onValueChange={(text) =>
               setProfile({
                 ...profile,
-                burnedTargetPercent: Math.max(0, Math.min(100, +e.target.value)),
+                burnedTargetPercent: Math.max(0, Math.min(100, +text)),
               })
             }
+            aria-label={'Harcananın hedefe eklenecek yüzdesi'}
           />
         </label>
         <p className="muted small">
@@ -309,16 +310,17 @@ export function Profile() {
         </label>
         <label className="field">
           Fotoğraf hatırlatma aralığı (gün)
-          <input
-            type="number"
+          <NumericInput
             min={1}
             max={90}
+            precision={0}
             value={data.profile[0].photoReminderDays}
-            onChange={(e) => {
-              const days = +e.target.value;
+            onValueChange={(text) => {
+              const days = +text;
               if (days >= 1 && days <= 90)
                 mutate((v) => ({ profile: [{ ...v.profile[0], photoReminderDays: days }] }));
             }}
+            aria-label={'Fotoğraf hatırlatma aralığı (gün)'}
           />
         </label>
         <p className="muted small">
@@ -407,22 +409,21 @@ export function Profile() {
         {['Kutular', 'Protein', 'Kalori', 'Hareket', 'Su', 'Uyku'].map((label, i) => (
           <label className="field" key={label}>
             {label}
-            <input
-              type="number"
+            <NumericInput
               min={0}
               max={100}
               value={weights[i]}
-              onChange={(e) =>
-                setWeights(
-                  weights.map((n, index) => (index === i ? Math.max(0, +e.target.value) : n)),
-                )
+              onValueChange={(text) =>
+                setWeights(weights.map((n, index) => (index === i ? Math.max(0, +text) : n)))
               }
+              aria-label={('' + label).trim()}
             />
           </label>
         ))}
         <Button
           variant="secondary"
           disabled={!weights.some((n) => n > 0)}
+          validate
           onClick={() => mutate((v) => ({ targets: [{ ...v.targets[0], scoreWeights: weights }] }))}
         >
           Puan ağırlıklarını kaydet

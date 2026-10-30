@@ -5,7 +5,7 @@ import { ChangeExercise } from './DailyAlternative';
 import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowUp, CalendarDays, Check, Plus, RefreshCw, Trash2 } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
-import { Button, Card, Chip, Segmented, Sheet } from '../../ui';
+import { NumericInput, Button, Card, Chip, Segmented, Sheet } from '../../ui';
 import { defaultPlan, PHASES, planFor, TEMPLATE_NAMES } from '../../domain/program';
 import { adjustment } from '../../domain/progression';
 import { dateDiff, monday, shiftDate, weekday } from '../../domain/dates';
@@ -18,11 +18,11 @@ import {
   type WorkoutType,
 } from '../../domain/types';
 import { calculate, total } from '../../domain/calories';
+import { parseWeightMilestones } from '../../domain/numeric';
 import { searchFoods } from '../../domain/parser';
 import { DEFAULT_MENU } from '../../data/seed/foods';
 import { Library } from '../workout-mode/Library';
 import { EXERCISES } from '../../data/seed/exercises';
-
 const weekdays = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
 export function Plan() {
   const { data, date, mutate, updateDay } = useStore();
@@ -129,13 +129,14 @@ export function Plan() {
             </div>
             <label className="field">
               Yüzme hedefi (m)
-              <input
-                type="number"
+              <NumericInput
                 min={25}
                 step={25}
                 value={settings.swimTargetM || ''}
                 placeholder="Faza göre ilerlesin"
-                onChange={(e) => patch({ swimTargetM: +e.target.value || undefined })}
+                onValueChange={(text) => patch({ swimTargetM: +text || undefined })}
+                allowEmpty
+                aria-label={'Yüzme hedefi (m)'}
               />
             </label>
             <div className="grid2">
@@ -403,53 +404,56 @@ export function Plan() {
                 <div className="grid2">
                   <label className="field">
                     Set
-                    <input
-                      type="number"
+                    <NumericInput
                       min={1}
                       max={10}
                       value={item.sets}
-                      onChange={(e) => {
-                        if (+e.target.value > 0) editMovement(index, { sets: +e.target.value });
+                      onValueChange={(text) => {
+                        if (+text > 0) editMovement(index, { sets: +text });
                       }}
+                      aria-label={'Set'}
+                      precision={0}
                     />
                   </label>
                   <label className="field">
                     Dinlenme (sn)
-                    <input
-                      type="number"
+                    <NumericInput
                       min={15}
                       max={600}
                       step={15}
                       value={item.restSec}
-                      onChange={(e) => {
-                        if (+e.target.value > 0) editMovement(index, { restSec: +e.target.value });
+                      onValueChange={(text) => {
+                        if (+text > 0) editMovement(index, { restSec: +text });
                       }}
+                      aria-label={'Dinlenme (sn)'}
+                      precision={0}
                     />
                   </label>
                   <label className="field">
                     Alt tekrar
-                    <input
-                      type="number"
+                    <NumericInput
                       min={1}
                       max={item.maxReps}
                       value={item.minReps}
-                      onChange={(e) => {
-                        if (+e.target.value > 0 && +e.target.value <= item.maxReps)
-                          editMovement(index, { minReps: +e.target.value });
+                      onValueChange={(text) => {
+                        if (+text > 0 && +text <= item.maxReps)
+                          editMovement(index, { minReps: +text });
                       }}
+                      aria-label={'Alt tekrar'}
+                      precision={0}
                     />
                   </label>
                   <label className="field">
                     Üst tekrar
-                    <input
-                      type="number"
+                    <NumericInput
                       min={item.minReps}
                       max={100}
                       value={item.maxReps}
-                      onChange={(e) => {
-                        if (+e.target.value >= item.minReps)
-                          editMovement(index, { maxReps: +e.target.value });
+                      onValueChange={(text) => {
+                        if (+text >= item.minReps) editMovement(index, { maxReps: +text });
                       }}
+                      aria-label={'Üst tekrar'}
+                      precision={0}
                     />
                   </label>
                 </div>
@@ -625,7 +629,8 @@ function Goals() {
   const { data, mutate } = useStore();
   const [values, setValues] = useState<Targets>(data.targets[0]);
   const [saved, setSaved] = useState(false);
-  const [milestonesText, setMilestonesText] = useState(data.targets[0].milestones.join(', '));
+  const [milestonesText, setMilestonesText] = useState(data.targets[0].milestones.join('; '));
+  const milestones = parseWeightMilestones(milestonesText);
   const patch = (value: Partial<Targets>) => {
     setValues({ ...values, ...value });
     setSaved(false);
@@ -636,24 +641,25 @@ function Goals() {
       <div className="grid2">
         {(
           [
-            { key: 'kcal', label: 'Kalori (kcal)', min: 1 },
-            { key: 'protein', label: 'Protein (g)', min: 1 },
-            { key: 'carb', label: 'Karbonhidrat (g)', min: 0 },
-            { key: 'fat', label: 'Yağ (g)', min: 0 },
-            { key: 'water', label: 'Su (bardak)', min: 1 },
-            { key: 'steps', label: 'Adım', min: 0 },
-            { key: 'goalWeight', label: 'Hedef kilo (kg)', min: 30 },
+            { key: 'kcal', label: 'Kalori (kcal)', min: 1, max: 20000 },
+            { key: 'protein', label: 'Protein (g)', min: 1, max: 1000 },
+            { key: 'carb', label: 'Karbonhidrat (g)', min: 0, max: 3000 },
+            { key: 'fat', label: 'Yağ (g)', min: 0, max: 1000 },
+            { key: 'water', label: 'Su (bardak)', min: 1, max: 100 },
+            { key: 'steps', label: 'Adım', min: 0, max: 200000 },
+            { key: 'goalWeight', label: 'Hedef kilo (kg)', min: 30, max: 400 },
           ] as const
         ).map((field) => (
           <label className="field" key={field.key}>
             {field.label}
-            <input
-              type="number"
+            <NumericInput
               min={field.min}
+              max={field.max}
+              precision={field.key === 'steps' ? 0 : 2}
               value={values[field.key] ?? ''}
-              onChange={(e) =>
-                patch({ [field.key]: e.target.value === '' ? undefined : +e.target.value })
-              }
+              onValueChange={(text) => patch({ [field.key]: text === '' ? undefined : +text })}
+              allowEmpty={field.key === 'carb' || field.key === 'fat' || field.key === 'steps'}
+              aria-label={('' + field.label).trim()}
             />
           </label>
         ))}
@@ -668,17 +674,26 @@ function Goals() {
       </div>
       {values.kcal < 1500 && <p className="notice">Bu hedefi hekim/diyetisyeninle netleştir.</p>}
       <label className="field">
-        Kilo basamakları (virgülle ayır)
+        Kilo basamakları (noktalı virgülle ayır)
         <input
           value={milestonesText}
+          placeholder="90; 85,5; 80"
+          aria-invalid={!milestones.valid || undefined}
+          aria-describedby={!milestones.valid ? 'milestone-error' : undefined}
           onChange={(e) => {
             setMilestonesText(e.target.value);
             setSaved(false);
           }}
         />
       </label>
+      {!milestones.valid && (
+        <p className="field-error" role="alert" id="milestone-error">
+          {milestones.message}
+        </p>
+      )}
       <Button
         disabled={
+          !milestones.valid ||
           !Number.isFinite(values.kcal) ||
           values.kcal <= 0 ||
           !Number.isFinite(values.protein) ||
@@ -697,10 +712,7 @@ function Goals() {
             targets: [
               {
                 ...values,
-                milestones: milestonesText
-                  .split(',')
-                  .map(Number)
-                  .filter((n) => Number.isFinite(n) && n > 0),
+                milestones: milestones.valid ? milestones.values : values.milestones,
               },
             ],
           }));
@@ -789,19 +801,16 @@ function MenuEditor() {
                     {Math.round(calculate(food, item.qty).kcal)} kcal
                   </small>
                 </div>
-                <input
-                  type="number"
+                <NumericInput
                   min={0.25}
                   className="compact-input"
                   aria-label={`${food.name} plan miktarı`}
                   value={item.qty}
-                  onChange={(e) => {
-                    if (+e.target.value > 0)
+                  onValueChange={(text) => {
+                    if (+text > 0)
                       update(
                         meal.id,
-                        selected[meal.id].items.map((v, n) =>
-                          n === i ? { ...v, qty: +e.target.value } : v,
-                        ),
+                        selected[meal.id].items.map((v, n) => (n === i ? { ...v, qty: +text } : v)),
                       );
                   }}
                 />

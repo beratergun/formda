@@ -113,29 +113,51 @@ test('Friday swim schedule, all templates and two themes without overflow', asyn
   }
   await page.getByLabel('Yaş', { exact: true }).fill('-1');
   await page.getByRole('button', { name: 'Profilimi kaydet', exact: true }).click();
-  await expect(page.getByRole('alert')).toContainText(
-    'Yaş, boy, kilo ve aktivite değerlerini kontrol et.',
-  );
-  await page.getByRole('button', { name: 'Hata mesajını kapat', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('18 ile 100 arasında bir değer gir.');
+  await expect(page.getByLabel('Yaş', { exact: true })).toHaveAttribute('aria-invalid', 'true');
   await page.getByLabel('Yaş', { exact: true }).fill('30');
   await page.getByRole('button', { name: 'Profilimi kaydet', exact: true }).click();
   await page.getByRole('link', { name: 'Planım', exact: true }).click();
   await page.getByRole('button', { name: 'Hedefler', exact: true }).click();
   await page.getByLabel('Kalori (kcal)', { exact: true }).fill('-1');
-  await expect(page.getByRole('button', { name: 'Hedefleri kaydet', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Hedefleri kaydet', exact: true }).click();
+  await expect(page.getByLabel('Kalori (kcal)', { exact: true })).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  );
   await page.getByLabel('Kalori (kcal)', { exact: true }).fill('1900');
   await page.getByLabel('Karbonhidrat (g)', { exact: true }).fill('-1');
-  await expect(page.getByRole('button', { name: 'Hedefleri kaydet', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Hedefleri kaydet', exact: true }).click();
+  await expect(page.getByLabel('Karbonhidrat (g)', { exact: true })).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  );
   await page.getByLabel('Karbonhidrat (g)', { exact: true }).fill('');
   await expect(page.getByRole('button', { name: 'Hedefleri kaydet', exact: true })).toBeEnabled();
   await page.getByRole('link', { name: 'Günlük', exact: true }).click();
   await page.getByLabel('Adım sayısı', { exact: true }).fill('-10');
-  await expect(page.getByLabel('Adım sayısı', { exact: true })).toHaveValue('');
+  await page.getByLabel('Adım sayısı', { exact: true }).blur();
+  await expect(page.getByLabel('Adım sayısı', { exact: true })).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  );
   await page.getByRole('link', { name: 'İlerleme', exact: true }).click();
   await page.getByRole('button', { name: 'Kilo ve vücut', exact: true }).click();
   await page.getByLabel('Bugünkü kilo (kg)', { exact: true }).fill('-10');
-  await expect(page.getByLabel('Bugünkü kilo (kg)', { exact: true })).toHaveValue('');
+  await page.getByLabel('Bugünkü kilo (kg)', { exact: true }).blur();
+  await expect(page.getByLabel('Bugünkü kilo (kg)', { exact: true })).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  );
   await page.getByLabel('Bel (cm)', { exact: true }).fill('-1');
+  await page.getByLabel('Bel (cm)', { exact: true }).blur();
+  await expect(page.getByLabel('Bel (cm)', { exact: true })).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  );
+  await page.reload();
+  await page.getByRole('button', { name: 'Kilo ve vücut', exact: true }).click();
+  await expect(page.getByLabel('Bugünkü kilo (kg)', { exact: true })).toHaveValue('');
   await expect(page.getByLabel('Bel (cm)', { exact: true })).toHaveValue('');
 });
 

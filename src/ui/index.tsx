@@ -7,20 +7,58 @@ import {
   type ReactNode,
 } from 'react';
 import { X, Plus, Minus } from 'lucide-react';
-
+import { NumericInput } from './NumericInput';
+export { NumericInput };
 export function Button({
   className = '',
   variant = 'primary',
+  validate = variant === 'primary',
+  onClick,
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary' | 'quiet' | 'danger';
+  validate?: boolean;
 }) {
-  return <button type="button" className={`button ${variant} ${className}`} {...props} />;
+  return (
+    <button
+      type="button"
+      className={`button ${variant} ${className}`}
+      {...props}
+      onClick={(event) => {
+        if (validate) {
+          const scope = event.currentTarget.closest('[data-validation-scope]');
+          const invalid = scope?.querySelector<HTMLInputElement>(
+            'input:invalid, select:invalid, textarea:invalid',
+          );
+          if (invalid) {
+            invalid.reportValidity();
+            invalid.focus();
+            return;
+          }
+        }
+        onClick?.(event);
+      }}
+    />
+  );
 }
-export function Card({ children, className = '' }: PropsWithChildren<{ className?: string }>) {
-  return <section className={`card ${className}`}>{children}</section>;
+export function Card({
+  children,
+  className = '',
+}: PropsWithChildren<{
+  className?: string;
+}>) {
+  return (
+    <section data-validation-scope className={`card ${className}`}>
+      {children}
+    </section>
+  );
 }
-export function Chip({ children, tone = '' }: PropsWithChildren<{ tone?: string }>) {
+export function Chip({
+  children,
+  tone = '',
+}: PropsWithChildren<{
+  tone?: string;
+}>) {
   return <span className={`chip ${tone}`}>{children}</span>;
 }
 export function Ring({
@@ -70,7 +108,10 @@ export function Segmented<T extends string>({
 }: {
   value: T;
   onChange: (value: T) => void;
-  options: readonly { value: T; label: string }[];
+  options: readonly {
+    value: T;
+    label: string;
+  }[];
   label: string;
 }) {
   return (
@@ -118,14 +159,13 @@ export function Stepper({
       <label>
         {label}
         <span>
-          <input
+          <NumericInput
             aria-label={label}
-            type="number"
             min={min}
             max={max}
             step={step}
             value={value}
-            onChange={(e) => onChange(Math.max(min, Math.min(max, Number(e.target.value))))}
+            onValueChange={(text) => onChange(Math.max(min, Math.min(max, Number(text))))}
           />
           {suffix}
         </span>
@@ -145,7 +185,10 @@ export function Sheet({
   title,
   children,
   onClose,
-}: PropsWithChildren<{ title: string; onClose: () => void }>) {
+}: PropsWithChildren<{
+  title: string;
+  onClose: () => void;
+}>) {
   const dialog = useRef<HTMLDialogElement>(null);
   const startY = useRef<number | null>(null);
   const id = useId();
@@ -164,6 +207,7 @@ export function Sheet({
     <dialog
       ref={dialog}
       className="sheet"
+      data-validation-scope
       aria-labelledby={id}
       onCancel={(e) => {
         e.preventDefault();
@@ -202,7 +246,10 @@ export function EmptyState({
   title,
   children,
   action,
-}: PropsWithChildren<{ title: string; action?: ReactNode }>) {
+}: PropsWithChildren<{
+  title: string;
+  action?: ReactNode;
+}>) {
   return (
     <div className="empty-state">
       <svg viewBox="0 0 160 100" aria-hidden="true">

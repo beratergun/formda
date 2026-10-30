@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Recognition, FOOD_MATCHES } from './Recognition';
 import { Camera, Check, Copy, Search, Star, Trash2 } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
-import { Button, Card, Chip, EmptyState, Segmented, Sheet, Stepper } from '../../ui';
+import { NumericInput, Button, Card, Chip, EmptyState, Segmented, Sheet, Stepper } from '../../ui';
 import { MEALS, type Food, type FoodState, type MealEntry, type MealId } from '../../domain/types';
 import { calculate, recipeFood, total } from '../../domain/calories';
 import { parseMeal, searchFoods } from '../../domain/parser';
@@ -11,7 +11,6 @@ import { shiftDate, weekday } from '../../domain/dates';
 import { addImage } from '../../data/media/images';
 import { searchPackaged } from './off';
 import { ensureMediaPermissions } from '../../app/native';
-
 const tabs = [
   { value: 'search', label: 'Ara' },
   { value: 'text', label: 'Yazarak' },
@@ -49,7 +48,12 @@ export function FoodSheet({
   const [conversionFood, setConversionFood] = useState('chicken');
   const [conversionState, setConversionState] = useState<'raw' | 'cooked'>('cooked');
   const [conversionQty, setConversionQty] = useState(150);
-  const [recipeItems, setRecipeItems] = useState<{ foodId: string; qty: number }[]>([]);
+  const [recipeItems, setRecipeItems] = useState<
+    {
+      foodId: string;
+      qty: number;
+    }[]
+  >([]);
   const request = useRef<AbortController>();
   useEffect(() => {
     const status = () => setOnline(navigator.onLine);
@@ -128,9 +132,17 @@ export function FoodSheet({
     }
   };
   const scan = async () => {
-    type Detector = { detect: (video: HTMLVideoElement) => Promise<{ rawValue: string }[]> };
+    type Detector = {
+      detect: (video: HTMLVideoElement) => Promise<
+        {
+          rawValue: string;
+        }[]
+      >;
+    };
     const ctor = (
-      window as unknown as { BarcodeDetector?: new (options: { formats: string[] }) => Detector }
+      window as unknown as {
+        BarcodeDetector?: new (options: { formats: string[] }) => Detector;
+      }
     ).BarcodeDetector;
     if (!ctor) {
       setMessage('Bu tarayıcıda barkodu elle yazabilirsin.');
@@ -256,11 +268,11 @@ export function FoodSheet({
           </label>
           <label className="field">
             Ağırlık (g)
-            <input
-              type="number"
+            <NumericInput
               min={0}
               value={conversionQty}
-              onChange={(e) => setConversionQty(Math.max(0, +e.target.value))}
+              onValueChange={(text) => setConversionQty(Math.max(0, +text))}
+              aria-label={'Ağırlık (g)'}
             />
           </label>
         </div>
@@ -492,17 +504,15 @@ export function FoodSheet({
                           <span className="grow">
                             {data.food.find((f) => f.id === item.foodId)?.name}
                           </span>
-                          <input
+                          <NumericInput
                             className="compact-input"
-                            type="number"
                             min={1}
                             value={item.qty}
                             aria-label={`Malzeme ${i + 1} miktarı`}
-                            onChange={(e) =>
+                            max={100000}
+                            onValueChange={(text) =>
                               setRecipeItems(
-                                recipeItems.map((v, n) =>
-                                  n === i ? { ...v, qty: +e.target.value } : v,
-                                ),
+                                recipeItems.map((v, n) => (n === i ? { ...v, qty: +text } : v)),
                               )
                             }
                           />
@@ -518,20 +528,22 @@ export function FoodSheet({
                       <div className="grid2">
                         <label className="field">
                           Pişmiş toplam (g)
-                          <input
-                            type="number"
+                          <NumericInput
                             min={1}
                             value={cookedWeight}
-                            onChange={(e) => setCookedWeight(+e.target.value)}
+                            onValueChange={(text) => setCookedWeight(+text)}
+                            aria-label={'Pişmiş toplam (g)'}
+                            max={100000}
                           />
                         </label>
                         <label className="field">
                           Porsiyon sayısı
-                          <input
-                            type="number"
+                          <NumericInput
                             min={1}
                             value={servings}
-                            onChange={(e) => setServings(+e.target.value)}
+                            onValueChange={(text) => setServings(+text)}
+                            aria-label={'Porsiyon sayısı'}
+                            max={1000}
                           />
                         </label>
                       </div>

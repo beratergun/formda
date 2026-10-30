@@ -53,13 +53,16 @@ export class FormdaDatabase extends Dexie {
   }
 }
 export const db = new FormdaDatabase();
+export async function databaseIsCurrent(database = db) {
+  const [seed, library, catalog] = await Promise.all([
+    database.meta.get('seedVersion'),
+    database.meta.get('libraryVersion'),
+    database.meta.get('foodCatalogVersion'),
+  ]);
+  return !!seed && library?.value === '2' && catalog?.value === '2';
+}
 export async function seedDatabase(database = db) {
-  if (
-    (await database.meta.get('seedVersion')) &&
-    (await database.meta.get('libraryVersion'))?.value === '2' &&
-    (await database.meta.get('foodCatalogVersion'))?.value === '2'
-  )
-    return;
+  if (await databaseIsCurrent(database)) return;
   const [{ FOODS, DEFAULT_MENU, TURKISH_RECIPES }, { QUOTES }, { EXERCISES }] = await Promise.all([
     import('./seed/foods'),
     import('./seed/quotes'),

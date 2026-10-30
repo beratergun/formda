@@ -3,6 +3,9 @@
 @source '../features';
 @source '../ui';
 @import './tokens.css';
+.numeric-control { display: grid; min-width: 0; flex: 1; gap: 6px; }
+.numeric-control input { width: 100%; min-width: 0; }
+.field-error { color: var(--danger); font-size: 12px; line-height: 1.5; font-weight: 500; }
 .compare-pane {
   position: relative;
   min-width: 0;

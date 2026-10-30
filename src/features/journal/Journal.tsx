@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, ChevronLeft, ChevronRight, Download, Printer, Share2, Video } from 'lucide-react';
 import { useStore } from '../../app/Store';
-import { Button, Card, Chip, EmptyState, Segmented, Sheet } from '../../ui';
+import { NumericInput, Button, Card, Chip, EmptyState, Segmented, Sheet } from '../../ui';
 import { BodyMap } from '../../ui/BodyMap';
 import { dailyReport, periodReport } from '../../domain/report';
 import { dateDiff, dateLabel, shiftDate } from '../../domain/dates';
@@ -14,7 +14,6 @@ import { PhotoTimeline } from '../camera/Camera';
 import { createMontage } from '../../data/media/montage';
 import { downloadBlob, shareBlob } from '../../data/media/export';
 import { useBlobUrl, useMedia, MediaThumb } from '../today/Today';
-
 function MediaViewer({ record, onClose }: { record: MediaRecord; onClose: () => void }) {
   const [blob, setBlob] = useState<Blob>();
   const [confirm, setConfirm] = useState(false);
@@ -116,7 +115,12 @@ export function Journal() {
         const worker = new Worker(new URL('./report.worker.ts', import.meta.url), {
           type: 'module',
         });
-        worker.onmessage = (e: MessageEvent<{ blob: Blob; error?: string }>) => {
+        worker.onmessage = (
+          e: MessageEvent<{
+            blob: Blob;
+            error?: string;
+          }>,
+        ) => {
           worker.terminate();
           if (e.data.error) reject(new Error(e.data.error));
           else resolve(e.data.blob);
@@ -417,11 +421,14 @@ export function Journal() {
             </div>
             <label className="field">
               Adım sayısı
-              <input
-                type="number"
+              <NumericInput
                 min={0}
-                value={day.steps || ''}
-                onChange={(e) => updateDay({ steps: Math.max(0, +e.target.value) || undefined })}
+                value={day.steps ?? ''}
+                max={200000}
+                precision={0}
+                onValueChange={(text) => updateDay({ steps: text === '' ? undefined : +text })}
+                allowEmpty
+                aria-label={'Adım sayısı'}
               />
             </label>
             <details>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useStore } from '../../app/Store';
-import { Button, Card, Sheet } from '../../ui';
+import { NumericInput, Button, Card, Sheet } from '../../ui';
 import {
   healthAvailability,
   readHealthDay,
@@ -45,16 +45,17 @@ export function ConnectedSources() {
       </Button>
       <label className="field">
         Elle aktif kalori (kcal)
-        <input
-          type="number"
+        <NumericInput
           min={0}
           max={20000}
           value={day?.activeKcal ?? ''}
-          onChange={(e) =>
+          onValueChange={(text) =>
             updateDay({
-              activeKcal: e.target.value === '' ? undefined : Math.max(0, +e.target.value),
+              activeKcal: text === '' ? undefined : Math.max(0, +text),
             })
           }
+          allowEmpty
+          aria-label={'Elle aktif kalori (kcal)'}
         />
       </label>
       <p className="small muted">

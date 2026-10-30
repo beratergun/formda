@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ProgramPicker } from '../plan/ProgramPicker';
 import { selectProgram, type ProgramId } from '../../domain/program/programs';
 import { ArrowRight, ArrowLeft, Check, LockKeyhole, Leaf, Camera } from 'lucide-react';
-import { Button, Card, Chip, Sheet } from '../../ui';
+import { NumericInput, Button, Card, Chip, Sheet } from '../../ui';
 import { CameraCapture } from '../camera/Camera';
 import { useStore } from '../../app/Store';
 import { defaultPlan } from '../../domain/program';
@@ -10,7 +10,6 @@ import { todayKey } from '../../domain/dates';
 import type { Horizon } from '../../domain/types';
 import { restoreBackup } from '../../data/backup';
 import { InstallCard } from '../../app/InstallCard';
-
 export function Onboarding() {
   const { data, mutate, flush, setError, reload } = useStore();
   const [step, setStep] = useState(0);
@@ -58,7 +57,7 @@ export function Onboarding() {
     }
   };
   return (
-    <div className="onboarding stack page-enter">
+    <div data-validation-scope className="onboarding stack page-enter">
       <div className="row between">
         <span className="brand">
           <span className="brand-mark">
@@ -162,20 +161,22 @@ export function Onboarding() {
             <div className="grid2">
               <label className="field">
                 Kalori hedefi
-                <input
-                  type="number"
+                <NumericInput
                   min={1}
                   value={kcal}
-                  onChange={(e) => setKcal(+e.target.value)}
+                  onValueChange={(text) => setKcal(+text)}
+                  aria-label={'Kalori hedefi'}
+                  max={20000}
                 />
               </label>
               <label className="field">
                 Protein hedefi (g)
-                <input
-                  type="number"
+                <NumericInput
                   min={1}
                   value={protein}
-                  onChange={(e) => setProtein(+e.target.value)}
+                  onValueChange={(text) => setProtein(+text)}
+                  aria-label={'Protein hedefi (g)'}
+                  max={1000}
                 />
               </label>
             </div>
@@ -183,33 +184,33 @@ export function Onboarding() {
             <div className="grid2">
               <label className="field">
                 Başlangıç kilosu (kg)
-                <input
-                  type="number"
+                <NumericInput
                   min={30}
                   max={400}
                   value={weight}
-                  onChange={(e) => setWeight(+e.target.value)}
+                  onValueChange={(text) => setWeight(+text)}
+                  aria-label={'Başlangıç kilosu (kg)'}
                 />
               </label>
               <label className="field">
                 Hedef kilo (kg)
-                <input
-                  type="number"
+                <NumericInput
                   min={30}
                   max={400}
                   value={goal}
-                  onChange={(e) => setGoal(+e.target.value)}
+                  onValueChange={(text) => setGoal(+text)}
+                  aria-label={'Hedef kilo (kg)'}
                 />
               </label>
             </div>
             <label className="field">
               Boy (cm)
-              <input
-                type="number"
+              <NumericInput
                 min={100}
                 max={250}
                 value={height}
-                onChange={(e) => setHeight(+e.target.value)}
+                onValueChange={(text) => setHeight(+text)}
+                aria-label={'Boy (cm)'}
               />
             </label>
           </Card>

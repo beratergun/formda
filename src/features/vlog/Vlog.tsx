@@ -2,13 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Circle, Square, Video, Upload } from 'lucide-react';
 import { newId, useStore } from '../../app/Store';
-import { Button, Card, Chip } from '../../ui';
+import { NumericInput, Button, Card, Chip } from '../../ui';
 import { useBlobUrl } from '../today/Today';
 import { recordingMime } from '../../data/media/export';
 import { videoInfo, trimVideo, type VideoInfo } from '../../data/media/video';
 import { saveMedia } from '../../data/media/opfs';
 import { ensureMediaPermissions } from '../../app/native';
-
 export function Vlog() {
   const { date, setError } = useStore();
   const [active, setActive] = useState(false);
@@ -248,24 +247,24 @@ export function Vlog() {
           <div className="grid2">
             <label className="field">
               Başlangıç (sn)
-              <input
-                type="number"
+              <NumericInput
                 min={0}
-                max={to - 0.1}
+                max={Math.max(0, to - Math.min(0.1, info.duration))}
                 step={0.1}
                 value={from}
-                onChange={(e) => setFrom(+e.target.value)}
+                onValueChange={(text) => setFrom(+text)}
+                aria-label={'Başlangıç (sn)'}
               />
             </label>
             <label className="field">
               Bitiş (sn)
-              <input
-                type="number"
-                min={from + 0.1}
+              <NumericInput
+                min={Math.min(info.duration, from + Math.min(0.1, info.duration))}
                 max={info.duration}
                 step={0.1}
                 value={to}
-                onChange={(e) => setTo(+e.target.value)}
+                onValueChange={(text) => setTo(+text)}
+                aria-label={'Bitiş (sn)'}
               />
             </label>
           </div>

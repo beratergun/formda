@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Check, ChevronRight, Clock3, Pause, Play, Trophy } from 'lucide-react';
 import { useStore, newId } from '../../app/Store';
-import { Button, Card, Chip, Segmented, Stepper } from '../../ui';
+import { NumericInput, Button, Card, Chip, Segmented, Stepper } from '../../ui';
 import { planFor } from '../../domain/program';
 import { epley, progression, volume } from '../../domain/progression';
 import { emptyDay, type WorkoutLog, type WorkoutType, type SetLog } from '../../domain/types';
@@ -11,7 +11,6 @@ import { ExerciseGuide } from './Library';
 import { workoutEnergy } from '../../domain/energy';
 import { ChangeExercise } from '../plan/DailyAlternative';
 import { replaceDayExercise } from '../../domain/program/programs';
-
 function sound() {
   if (navigator.vibrate) navigator.vibrate([150, 70, 150]);
   try {
@@ -201,7 +200,7 @@ export function Workout() {
     );
   }
   return (
-    <div className="workout-mode">
+    <div data-validation-scope className="workout-mode">
       <div className="stack">
         <header className="row between">
           <Link className="button quiet" aria-label="Bugün'e dön" to="/">
@@ -321,33 +320,34 @@ export function Workout() {
               <div className="set-inputs">
                 <label className="field">
                   Ağırlık (kg)
-                  <input
-                    type="number"
+                  <NumericInput
                     min={0}
                     max={1000}
                     step={0.5}
                     value={kg}
-                    onChange={(e) => setKg(+e.target.value)}
+                    onValueChange={(text) => setKg(+text)}
+                    aria-label={'Ağırlık (kg)'}
                   />
                 </label>
                 <label className="field">
                   Tekrar
-                  <input
-                    type="number"
+                  <NumericInput
                     min={1}
                     max={100}
+                    precision={0}
                     value={reps}
-                    onChange={(e) => setReps(+e.target.value)}
+                    onValueChange={(text) => setReps(+text)}
+                    aria-label={'Tekrar'}
                   />
                 </label>
                 <label className="field">
                   RPE
-                  <input
-                    type="number"
+                  <NumericInput
                     min={1}
                     max={10}
                     value={rpe}
-                    onChange={(e) => setRpe(+e.target.value)}
+                    onValueChange={(text) => setRpe(+text)}
+                    aria-label={'RPE'}
                   />
                 </label>
               </div>
@@ -460,24 +460,25 @@ export function Workout() {
             {type !== 'swim' && (
               <label className="field">
                 Mesafe (m, isteğe bağlı)
-                <input
-                  type="number"
+                <NumericInput
                   min={0}
                   value={log.distanceM || ''}
-                  onChange={(e) => save({ distanceM: Math.max(0, +e.target.value) })}
+                  onValueChange={(text) => save({ distanceM: Math.max(0, +text) })}
+                  allowEmpty
+                  aria-label={'Mesafe (m, isteğe bağlı)'}
                 />
               </label>
             )}
             <label className="field">
               Algılanan zorluk (1–10)
-              <input
-                type="number"
+              <NumericInput
                 min={1}
                 max={10}
                 value={log.rpe || 5}
-                onChange={(e) =>
-                  save({ rpe: Math.max(0, Math.min(10, +e.target.value)) || undefined })
+                onValueChange={(text) =>
+                  save({ rpe: Math.max(0, Math.min(10, +text)) || undefined })
                 }
+                aria-label={'Algılanan zorluk (1–10)'}
               />
             </label>
             <Segmented

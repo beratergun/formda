@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useStore } from '../../app/Store';
 import { emptyDay } from '../../domain/types';
-import { Button, Sheet } from '../../ui';
-
+import { NumericInput, Button, Sheet } from '../../ui';
 export function QuickEntry({ kind, onClose }: { kind: 'weight' | 'note'; onClose: () => void }) {
   const { data, date, updateDay } = useStore();
   const day = data.dayLog.find((d) => d.date === date) || emptyDay(date);
@@ -13,15 +12,15 @@ export function QuickEntry({ kind, onClose }: { kind: 'weight' | 'note'; onClose
       {kind === 'weight' ? (
         <label className="field">
           Kilo (kg)
-          <input
+          <NumericInput
             autoFocus
-            type="number"
             inputMode="decimal"
             min={30}
             max={400}
             step={0.1}
             value={weight}
-            onChange={(e) => setWeight(e.target.value)}
+            onValueChange={(text) => setWeight(text)}
+            aria-label={'Kilo (kg)'}
           />
         </label>
       ) : (

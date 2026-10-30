@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Camera, ChevronRight, TrendingUp } from 'lucide-react';
 import { useStore } from '../../app/Store';
-import { Card, Chip, Segmented } from '../../ui';
+import { NumericInput, Card, Chip, Segmented } from '../../ui';
 import { Chart, type ChartPoint } from '../../ui/Chart';
 import { MUSCLES } from '../../ui/BodyMap';
 import { PhotoTimeline } from '../camera/Camera';
@@ -20,7 +20,6 @@ import { scoreHistory } from '../../domain/score';
 import { MacroBreakdown } from '../../ui/MacroBreakdown';
 import { MEALS, type Horizon } from '../../domain/types';
 import { EXERCISES } from '../../data/seed/exercises';
-
 const segments = [
   { value: 'general', label: 'Genel' },
   { value: 'body', label: 'Kilo ve vücut' },
@@ -236,32 +235,35 @@ export function Progress() {
             </div>
             <label className="field">
               Bugünkü kilo (kg)
-              <input
-                type="number"
+              <NumericInput
                 min={30}
                 max={400}
                 step={0.1}
                 value={day.day.weight || ''}
-                onChange={(e) => updateDay({ weight: Math.max(0, +e.target.value) || undefined })}
+                onValueChange={(text) => updateDay({ weight: Math.max(0, +text) || undefined })}
+                allowEmpty
+                aria-label={'Bugünkü kilo (kg)'}
               />
             </label>
             <div className="grid2">
               {(['waist', 'chest', 'hip', 'arm'] as const).map((key, i) => (
                 <label className="field" key={key}>
                   {['Bel', 'Göğüs', 'Kalça', 'Kol'][i]} (cm)
-                  <input
-                    type="number"
+                  <NumericInput
                     min={1}
+                    max={key === 'arm' ? 150 : 400}
                     step={0.1}
                     value={day.day.measurements?.[key] || ''}
-                    onChange={(e) =>
+                    onValueChange={(text) =>
                       updateDay({
                         measurements: {
                           ...day.day.measurements,
-                          [key]: Math.max(0, +e.target.value) || undefined,
+                          [key]: Math.max(0, +text) || undefined,
                         },
                       })
                     }
+                    allowEmpty
+                    aria-label={('' + ['Bel', 'Göğüs', 'Kalça', 'Kol'][i] + ' (cm) ').trim()}
                   />
                 </label>
               ))}
