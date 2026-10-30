@@ -4,16 +4,16 @@ Tüm uygulama kayıtları ve tanıtım silüetleri kurgusaldır. Ham tarayıcı 
 
 | Kontrol                                   | Yerel sonuç / kapsam                                                                                                |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| ESLint / strict TypeScript / üretim build | Geçti; son v2 yayın kapısında tekrar çalıştırılır                                                                   |
+| ESLint / strict TypeScript / üretim build | Yerel ve CI son kapı geçti                                                                                          |
 | Vitest                                    | 140 test: hesaplar, Türkçe ayrıştırma, plan, alternatifler, kaynaklar, enerji, izin hataları, eski veri ve depolama |
 | Domain kapsamı                            | Satır %100 · fonksiyon %100 · dal %97,37 · ifade %99,67                                                             |
 | Playwright                                | Pixel 7/Chromium ve iPhone 14/WebKit: 18/18; yeni model/kalıcı profil değişikliğinin 4 testi ayrıca geçti           |
 | Erişilebilirlik                           | Açık/koyu temada 26 WCAG A/AA görünümünde sıfır ihlal                                                               |
-| Mobil Lighthouse                          | v2 üretim ölçümü 96/100/100; v1 CI tabanı 96/100/100 korunur                                                        |
+| Mobil Lighthouse                          | CI ve canlı 100/100/100; yerel Windows 96/100/100; v1 tabanı korunur                                                |
 | Görsel QA                                 | Playwright MCP, 390×844 ve 412×915, iki tema; kaynak/öğün/plan/rehber akışları, taşma ve konsol kontrolü            |
 | Gerçek yemek modeli                       | 10 ayrı Food101 sınıfında 10/10 ilk üç; yeni worker çevrimdışı çalıştı; ağ yazımı yok                               |
 | Veri koruma                               | Tarihsel kcal, favoriler, özel tarifler, yeni profil/sağlık alanları ve medya baytları yedek gidiş dönüşünde eşit   |
-| Android                                   | Yerel native sync geçti; v2 Gradle/lint, birleşmiş manifest, APK imzası ve SHA-256 son CI'da doğrulanır             |
+| Android                                   | Gradle/lint, beş salt okuma izni, APK Signature v2 ve son release SHA-256 doğrulandı                                |
 | Sunum                                     | 22 ekran, 24 saniye GIF, 1280×640 sosyal görsel, 7 carousel; TR 193 / EN 218 kelime                                 |
 
 Lighthouse performansı cihaz ve çalışma yüküyle değişir. Script artık eski yayın tabanı olan 96/100/100 altını başarısız sayar. Model ölçümü küçük bir smoke değerlendirmesidir; Türk mutfağının tamamı için %100 doğruluk iddiası değildir. Model 101 sınıfla sınırlı ve isteğe bağlıdır.

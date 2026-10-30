@@ -20,7 +20,7 @@
 ## Formda v2 (30 Ekim 2026)
 
 - A — Yerel marka/veri/Android çalışması tamamlandı; 96 birim, 8 E2E, 18 Axe görünümü, Lighthouse 99/100/100. Repo formda olarak yeniden adlandırıldı. Pages/Android CI başarılı, canlı uygulama HTTP 200 ve çevrimdışı veri doğrulandı. Eski adres yönlendirmesi yayında. Commit 28a4b09.
-- F — E tamamlandıktan sonra sıradaki aşama. Henüz yayınlanmış sayılmaz.
+- F — Tamamlandı. v2.0.0 yayınlandı; son doğrulama aşağıda.
 
 - B — Koç ana ekranı, ortak tasarım, motivasyon galerileri ve paylaşılabilir aylık hikâyeler uygulandı. 96 birim, 10 E2E, 18 Axe görünümünde sıfır ihlal ve Lighthouse 100/100/100; tamamlandı. Sıradaki aşama C.
 
@@ -30,6 +30,4 @@
 
 - E — 619 kayıt denetimi, 797 yiyecek/160 tarif, MET/adım enerji tahmini, isteğe bağlı hedef yüzdesi, Android beş kategoride salt okuma ve PWA elle kayıt tamamlandı. 140 birim, 18 tam E2E, son model/kalıcı kayıt değişikliğinin 4 mobil E2E testi ve 26 Axe görünümü geçti; lint/typecheck/build yeşil. Lighthouse 97/100/100. Gerçek model 10 ayrı Food101 sınıfında 10/10 ilk üç ve yeni worker ile çevrimdışı testi geçti; ağ yazımı yok. Fiziksel Android Health Connect izinleri henüz telefonda denenmedi. Sıradaki F: v2.0.0 sürümü, tanıtım görselleri, tam yayın kapısı, Pages/APK CI ve release.
 
-- F devam ediyor — Sürüm 2.0.0/versionCode 2, yeni TR/EN README, 22 ekran, 24 saniyelik GIF, sosyal önizleme ve yedi carousel hazır. `../formda-launch/` TR/EN yazı, senaryo, CV, profil eki ve kontrol listesi tamam; boyut/süre/kelime doğrulamaları geçti. Eski marka denetimi yazıldı. İlk açılışta yinelenen katalog yazımı kaldırıldı ve başlık fontları önden yükleniyor. Sonraki adım: tam lint/typecheck/test/build, 18 E2E, 26 Axe, Lighthouse; owner commit; release-check sonrası main push; v2 Pages/APK CI, APK manifest/imza/SHA doğrulaması ve v2.0.0 release. Yayın henüz tamamlanmış değil.
-
-- F yerel yayın kapısı geçti: lint/typecheck/140 birim/build, 18 E2E, 26 Axe, Lighthouse 96/100/100, README yerel bağlantıları ve tanıtım boyut/süre/kelime kontrolleri yeşil. Kaynak hazırlığı commit edilip main'e gönderilecek; Pages/APK CI ve v2.0.0 release hâlâ bekliyor. Çiğ/pişmiş kaynak etiketleri ve yenebilir meyve önerileri düzeltildi; geçmiş kayıtlar korunuyor.
+- F tamamlandı — Kaynak commit 3b21296, etiket/release v2.0.0. Pages CI 41012177668, push APK CI 41012177729 ve release APK CI 41012891384 başarılı. 140 birim, 18 E2E, 26 Axe; CI ve canlı Lighthouse 100/100/100. Canlı HTTP 200, kurulabilirlik ve çevrimdışı kayıt; eski adres yönlendirmesi doğrulandı. Son APK/PWA ZIP tekrar indirilip SHA-256 ile eşleşti; Formda appId/sürüm, yalnızca beş sağlık READ izni ve WRITE yokluğu doğrulandı. Yeni TR/EN README, 22 ekran, 24 saniye GIF ve ../formda-launch içindeki yedi carousel/metin/senaryo/CV/profil eki hazır. v1.0.0 notuna v2 bağlantısı eklendi. Otomatik iş kalmadı. Kullanıcının işleri: sosyal önizleme, profil sabitleme, isteğe bağlı imza Secrets ve fiziksel telefon izin/veri denemeleri. Detay: docs/qa-stage-f.md.
