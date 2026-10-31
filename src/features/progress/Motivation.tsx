@@ -116,7 +116,7 @@ export function Motivation() {
       }).catch(() =>
         storyFallback({ ...slides[index], date: dateLabel(date, 'MMMM yyyy'), index: index + 1 }),
       );
-      await shareBlob(blob, `formda-${date.slice(0, 7)}-hikaye-${index + 1}.png`);
+      await shareBlob(blob, `berxfit-${date.slice(0, 7)}-hikaye-${index + 1}.png`);
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Hikâye paylaşılamadı.');
     } finally {

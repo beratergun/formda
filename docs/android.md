@@ -1,4 +1,4 @@
-# Formda Android uygulaması
+# BERxFIT Android uygulaması
 
 Uygulama kimliği: `io.github.beratergun.formda`. Android, PWA ile aynı React/TypeScript kaynaklarını kullanır. `dist-native/` derlemesi APK içine paketlenir; açılışta GitHub Pages veya başka bir sunucudan arayüz yüklenmez.
 
@@ -21,13 +21,13 @@ Android 8+ (API 26) gerekir. Health Connect desteklenen cihazda kurulu ve kullan
 
 ## Otomatik APK
 
-`.github/workflows/android.yml`, `main` push'unda ve elle tetiklendiğinde kalite kontrollerini, native derlemeyi, Android lint'i ve APK imza doğrulamasını çalıştırır. `Formda-android-apk` artifact'ında `Formda-v<version>.apk` ve SHA-256 dosyası bulunur. Release yayınlandığında aynı dosyalar release'e eklenir.
+`.github/workflows/android.yml`, `main` push'unda ve elle tetiklendiğinde kalite kontrollerini, native derlemeyi, Android lint'i ve APK imza doğrulamasını çalıştırır. `BERxFIT-android-apk` artifact'ında `BERxFIT-v<version>.apk` ve SHA-256 dosyası bulunur. Release yayınlandığında aynı dosyalar release'e eklenir.
 
-Dört imza sırrı varsa release APK; yoksa standart Android geliştirme sertifikalı debug APK seçilir. Kurulabilen APK bir sertifika gerektirir; debug APK mağaza/release imzası olarak sunulmaz. Debug sertifikası farklı koşularda değişebilir; gelecekte farklı sertifikaya geçmeden önce tam yedek al.
+Dört imza sırrı varsa release APK; yoksa standart Android geliştirme sertifikalı debug APK seçilir. Kurulabilen APK bir sertifika gerektirir; debug APK mağaza/release imzası olarak sunulmaz. Mevcut debug keystore cache anahtarı korunur. CI, yeni APK sertifikasının yayımlanmış Formda v2.0.0 sertifikasıyla aynı olduğunu apksigner ile doğrular; eşleşmezse yayın durur. ApplicationId aynı kaldığından sertifika eşitliği yerinde güncelleme için zorunludur. Fiziksel cihazdaki güncelleme ayrıca denenmelidir.
 
 ## Kullanıcının release anahtarı
 
-Bu komutları kendi bilgisayarında uygula. Anahtar repoya girmez; parolaları yalnızca etkileşimli istemlere yaz.
+Aşağıdaki örnek gelecekte yeni bir dağıtım anahtarı oluşturmak içindir; mevcut debug kurulumuna yerinde güncelleme sağlamaz. Yeni anahtar, v2 sertifika eşitliği kapısını bilinçli bir anahtar/veri geçiş planı olmadan geçemez. Bu sürüm için yeni anahtar oluşturmak veya eski kurulumu kaldırmak gerekmez. Karar verildiğinde bu komutları kendi bilgisayarında uygula. Anahtar repoya girmez; parolaları yalnızca etkileşimli istemlere yaz.
 
 ```powershell
 $keyDirectory = Join-Path $env:USERPROFILE '.android-keys'

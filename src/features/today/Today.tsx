@@ -1,3 +1,4 @@
+import { useMedia, MediaThumb } from '../../ui/media';
 import { WaterTracker } from './WaterTracker';
 import { workoutElapsedMs } from '../../domain/workout/session';
 import { MealEditor } from './MealEditor';
@@ -16,14 +17,12 @@ import {
   Dumbbell,
   Flame,
   Leaf,
-  LockKeyhole,
   Moon,
   Plus,
   RefreshCw,
   Pencil,
 } from 'lucide-react';
-import { liveQuery } from 'dexie';
-import { db, newId, useStore } from '../../app/Store';
+import { newId, useStore } from '../../app/Store';
 import { Button, Card, Chip, Ring } from '../../ui';
 import { total, calculate } from '../../domain/calories';
 import { dateDiff, dateLabel, monday, shiftDate, todayKey, weekday } from '../../domain/dates';
@@ -34,54 +33,8 @@ import { volume } from '../../domain/progression';
 import { EXERCISES } from '../../data/seed/exercises';
 import { MacroBreakdown } from '../../ui/MacroBreakdown';
 import { selectQuote } from '../../domain/quotes';
-import { emptyDay, MEALS, type MediaRecord, type MealId } from '../../domain/types';
+import { emptyDay, MEALS, type MealId } from '../../domain/types';
 
-export function useMedia(date?: string) {
-  const [media, setMedia] = useState<MediaRecord[]>([]);
-  useEffect(() => {
-    const sub = liveQuery(() =>
-      date ? db.media.where('date').equals(date).toArray() : db.media.toArray(),
-    ).subscribe({ next: setMedia });
-    return () => sub.unsubscribe();
-  }, [date]);
-  return media;
-}
-export function useBlobUrl(blob?: Blob) {
-  const [url, setUrl] = useState('');
-  useEffect(() => {
-    if (!blob) {
-      setUrl('');
-      return;
-    }
-    const next = URL.createObjectURL(blob);
-    setUrl(next);
-    return () => URL.revokeObjectURL(next);
-  }, [blob]);
-  return url;
-}
-export function MediaThumb({ record, onClick }: { record: MediaRecord; onClick?: () => void }) {
-  const url = useBlobUrl(record.thumb);
-  const hidden = useStore().data.profile[0].hidePhotos;
-  return (
-    <button
-      type="button"
-      className="media-thumb"
-      onClick={onClick}
-      aria-label={`${record.kind === 'vlog' ? 'Vlog' : 'Fotoğraf'} · ${dateLabel(record.date)}`}
-    >
-      {hidden ? (
-        <LockKeyhole size={25} aria-label="Anı küçük resmi gizli" />
-      ) : (
-        <img
-          src={url || undefined}
-          alt={record.title || `${record.pose || 'Anı'} · ${dateLabel(record.date)}`}
-          loading="lazy"
-        />
-      )}
-      {record.kind === 'vlog' && <span>▶</span>}
-    </button>
-  );
-}
 export function Today({ onFood }: { onFood: (meal?: MealId) => void }) {
   const { data, date, setDate, updateDay, mutate, addMeals } = useStore();
   const [editing, setEditing] = useState<MealEntry>();

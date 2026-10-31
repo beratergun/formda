@@ -102,7 +102,7 @@ export function Profile() {
   const backup = () =>
     action(async () => {
       const blob = await createBackup();
-      downloadBlob(blob, `formda-tam-yedek-${todayKey()}.zip`);
+      downloadBlob(blob, `berxfit-tam-yedek-${todayKey()}.zip`);
       setMessage('Tam yedeğin cihaza indiriliyor.');
     });
   const setNewPin = () =>
@@ -137,7 +137,7 @@ export function Profile() {
       new Blob(['\ufeff' + rows.map((row) => row.map(safe).join(';')).join('\r\n')], {
         type: 'text/csv;charset=utf-8',
       }),
-      `formda-beslenme-${todayKey()}.csv`,
+      `berxfit-beslenme-${todayKey()}.csv`,
     );
   };
   const notify = async () => {
@@ -563,7 +563,7 @@ export function Profile() {
                 new Blob([createIcs(data.planSettings[0], icsStart, icsEnd)], {
                   type: 'text/calendar;charset=utf-8',
                 }),
-                'formda-plan.ics',
+                'berxfit-plan.ics',
               );
             } catch (e) {
               setError(e instanceof Error ? e.message : 'Takvim hazırlanamadı.');

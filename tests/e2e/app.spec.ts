@@ -111,6 +111,22 @@ test('Friday swim schedule, all templates and two themes without overflow', asyn
         .toBe(true);
     }
   }
+  const originalViewport = page.viewportSize()!;
+  await page.setViewportSize({ width: 320, height: 844 });
+  await page.getByRole('link', { name: 'Günlük', exact: true }).click();
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+    .toBe(true);
+  const calendar = page.getByRole('region', { name: 'Aylık takvim', exact: true });
+  await expect(calendar).toBeVisible();
+  const sunday = calendar.getByRole('button', { name: /Pazar/ }).first();
+  await sunday.click();
+  await expect(sunday).toHaveAttribute('aria-pressed', 'true');
+  const targetSize = await sunday.boundingBox();
+  expect(targetSize!.width).toBeGreaterThanOrEqual(44);
+  expect(targetSize!.height).toBeGreaterThanOrEqual(44);
+  await page.setViewportSize(originalViewport);
+  await page.getByRole('link', { name: 'Profil', exact: true }).click();
   await page.getByLabel('Yaş', { exact: true }).fill('-1');
   await page.getByRole('button', { name: 'Profilimi kaydet', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('18 ile 100 arasında bir değer gir.');
@@ -185,7 +201,7 @@ test('coach dashboard and monthly story stay local and export a vertical card', 
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Kartı paylaş / indir', exact: true }).first().click();
   const card = await download;
-  expect(card.suggestedFilename()).toMatch(/^formda-.*-hikaye-1\.png$/);
+  expect(card.suggestedFilename()).toMatch(/^berxfit-.*-hikaye-1\.png$/);
   await card.saveAs(info.outputPath('story.png'));
   await page.getByRole('button', { name: 'Kapat', exact: true }).click();
   await expect(page.getByRole('dialog')).toHaveCount(0);

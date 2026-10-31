@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 const { version } = JSON.parse(readFileSync('package.json', 'utf8'));
-const file = process.argv[2] || `../formda-launch/android/Formda-v${version}.apk`;
+const file = process.argv[2] || `../berxfit-launch/android/BERxFIT-v${version}.apk`;
 const files = unzipSync(new Uint8Array(readFileSync(file)), {
   filter: (f) => ['AndroidManifest.xml', 'assets/capacitor.config.json'].includes(f.name),
 });
@@ -22,6 +22,7 @@ const result = {
 console.log(JSON.stringify(result, null, 2));
 if (
   result.appId !== 'io.github.beratergun.formda' ||
+  result.appName !== 'BERxFIT' ||
   result.remoteServer ||
   !result.manifestId ||
   !result.manifestVersion ||

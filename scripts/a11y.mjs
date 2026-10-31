@@ -17,11 +17,47 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 const findings = [];
+const scan = async (name) => {
+  await page.locator('main').evaluate(async (element) => {
+    await Promise.all(
+      element
+        .getAnimations({ subtree: true })
+        .filter((a) => a.effect?.getTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
+  const result = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+    .analyze();
+  findings.push({
+    name,
+    violations: result.violations.map((v) => ({
+      id: v.id,
+      impact: v.impact,
+      nodes: v.nodes.map((n) => ({ target: n.target, summary: n.failureSummary })),
+    })),
+  });
+};
+const scanSetup = async (name) => {
+  for (const theme of ['light', 'dark']) {
+    await page.evaluate((t) => {
+      document.documentElement.dataset.theme = t;
+      localStorage.setItem('yol-theme', t);
+    }, theme);
+    await scan(name + '-' + theme);
+  }
+};
 try {
   await page.goto(url);
+  await page.getByRole('button', { name: 'Yolculuğuma başla' }).waitFor();
+  await scanSetup('Karşılama');
   await page.getByRole('button', { name: 'Yolculuğuma başla' }).click();
+  await scanSetup('Kurulum hedefleri');
   await page.getByRole('button', { name: 'Devam et', exact: true }).click();
+  await page.getByText('Hazır programın', { exact: true }).waitFor();
+  await scanSetup('Kurulum programı');
   await page.getByRole('button', { name: 'Devam et', exact: true }).click();
+  await scanSetup('Kurulum fotoğrafı');
   await page.getByRole('button', { name: 'Şimdilik atla ve başla' }).click();
   await page.getByRole('link', { name: 'Profil', exact: true }).click();
   await page.getByRole('button', { name: 'Demo verisi yükle', exact: true }).click();
@@ -29,27 +65,6 @@ try {
   await page.getByRole('dialog').waitFor({ state: 'hidden' });
   await page.getByRole('link', { name: 'Bugün', exact: true }).click();
   await page.locator('main h1').waitFor();
-  const scan = async (name) => {
-    await page.locator('main').evaluate(async (element) => {
-      await Promise.all(
-        element
-          .getAnimations({ subtree: true })
-          .filter((a) => a.effect?.getTiming().iterations !== Infinity)
-          .map((a) => a.finished.catch(() => {})),
-      );
-    });
-    const result = await new AxeBuilder({ page })
-      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
-      .analyze();
-    findings.push({
-      name,
-      violations: result.violations.map((v) => ({
-        id: v.id,
-        impact: v.impact,
-        nodes: v.nodes.map((n) => ({ target: n.target, summary: n.failureSummary })),
-      })),
-    });
-  };
   for (const theme of ['light', 'dark']) {
     await page.evaluate((t) => {
       localStorage.setItem('yol-theme', t);

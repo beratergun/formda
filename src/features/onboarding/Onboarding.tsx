@@ -1,14 +1,17 @@
-import { useState } from 'react';
-import { ProgramPicker } from '../plan/ProgramPicker';
-import { selectProgram, type ProgramId } from '../../domain/program/programs';
+import { lazy, Suspense, useState } from 'react';
+const ProgramPicker = lazy(() =>
+  import('../plan/ProgramPicker').then((m) => ({ default: m.ProgramPicker })),
+);
+import type { ProgramId } from '../../domain/program/programs';
 import { ArrowRight, ArrowLeft, Check, LockKeyhole, Camera } from 'lucide-react';
 import { NumericInput, Button, Card, Chip, Sheet } from '../../ui';
-import { CameraCapture } from '../camera/Camera';
+const CameraCapture = lazy(() =>
+  import('../camera/Camera').then((m) => ({ default: m.CameraCapture })),
+);
 import { useStore } from '../../app/Store';
 import { defaultPlan } from '../../domain/program';
 import { todayKey } from '../../domain/dates';
 import type { Horizon } from '../../domain/types';
-import { restoreBackup } from '../../data/backup';
 import { InstallCard } from '../../app/InstallCard';
 export function Onboarding() {
   const { data, mutate, flush, setError, reload } = useStore();
@@ -31,6 +34,7 @@ export function Onboarding() {
   const finish = async () => {
     setBusy(true);
     try {
+      const { selectProgram } = await import('../../domain/program/programs');
       mutate((value) => ({
         profile: [
           { ...value.profile[0], name: name.trim(), heightCm: height, startWeight: weight },
@@ -57,16 +61,27 @@ export function Onboarding() {
     }
   };
   return (
-    <div data-validation-scope className="onboarding stack page-enter">
+    <div data-validation-scope className="onboarding stack">
       <div className="row between">
-        <span className="brand-plaque">
-          <img
-            src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
-            width="134"
-            height="70"
-            alt="BERxFIT"
-          />
-        </span>
+        {step > 0 ? (
+          <span className="brand-plaque">
+            <img
+              src={import.meta.env.BASE_URL + 'brand/berxfit-240.webp'}
+              srcSet={
+                import.meta.env.BASE_URL +
+                'brand/berxfit-240.webp 240w, ' +
+                import.meta.env.BASE_URL +
+                'brand/berxfit-360.webp 360w'
+              }
+              sizes="134px"
+              width="134"
+              height="70"
+              alt="BERxFIT"
+            />
+          </span>
+        ) : (
+          <span className="eyebrow">SANA AİT. CİHAZINDA.</span>
+        )}
         <Chip>{step + 1} / 4</Chip>
       </div>
       <div className="onboarding-dots" role="img" aria-label={`Adım ${step + 1}/4`}>
@@ -78,7 +93,15 @@ export function Onboarding() {
         <>
           <div className="welcome-brand">
             <img
-              src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+              src={import.meta.env.BASE_URL + 'brand/berxfit-500.webp'}
+              srcSet={
+                import.meta.env.BASE_URL +
+                'brand/berxfit-500.webp 500w, ' +
+                import.meta.env.BASE_URL +
+                'brand/berxfit-680.webp 680w'
+              }
+              sizes="(max-width: 376px) calc(100vw - 96px), 280px"
+              fetchPriority="high"
               width="1190"
               height="623"
               alt="BERxFIT — kişisel spor ve beslenme koçun"
@@ -205,13 +228,15 @@ export function Onboarding() {
             </h1>
           </div>
           <Card className="stack">
-            <ProgramPicker
-              settings={{ ...defaultPlan(start, days, equipment, experience), programId }}
-              onChange={(next) => {
-                setProgramId(next.programId as ProgramId);
-                setDays(next.daysPerWeek);
-              }}
-            />
+            <Suspense fallback={<p role="status">Programlar hazırlanıyor…</p>}>
+              <ProgramPicker
+                settings={{ ...defaultPlan(start, days, equipment, experience), programId }}
+                onChange={(next) => {
+                  setProgramId(next.programId as ProgramId);
+                  setDays(next.daysPerWeek);
+                }}
+              />
+            </Suspense>
             <fieldset>
               <legend>Nerede hareket edeceksin?</legend>
               <div className="choice-grid">
@@ -281,12 +306,14 @@ export function Onboarding() {
           {photoCount > 0 && <Chip>{photoCount} fotoğraf cihazına kaydedildi</Chip>}
           {photoOpen && (
             <Sheet title="Başlangıç fotoğrafın" onClose={() => setPhotoOpen(false)}>
-              <CameraCapture
-                onSaved={() => {
-                  setPhotoCount((n) => n + 1);
-                  setPhotoOpen(false);
-                }}
-              />
+              <Suspense fallback={<p role="status">Kamera hazırlanıyor…</p>}>
+                <CameraCapture
+                  onSaved={() => {
+                    setPhotoCount((n) => n + 1);
+                    setPhotoOpen(false);
+                  }}
+                />
+              </Suspense>
             </Sheet>
           )}
         </>
@@ -333,7 +360,8 @@ export function Onboarding() {
               const file = e.target.files?.[0];
               if (!file) return;
               setBusy(true);
-              void restoreBackup(file, 'replace')
+              void import('../../data/backup')
+                .then(({ restoreBackup }) => restoreBackup(file, 'replace'))
                 .then(reload)
                 .catch((error) =>
                   setError(error instanceof Error ? error.message : 'Yedek açılamadı.'),

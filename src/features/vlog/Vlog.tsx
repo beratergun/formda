@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Circle, Square, Video, Upload } from 'lucide-react';
 import { newId, useStore } from '../../app/Store';
 import { NumericInput, Button, Card, Chip } from '../../ui';
-import { useBlobUrl } from '../today/Today';
+import { useBlobUrl } from '../../ui/media';
 import { recordingMime } from '../../data/media/export';
 import { videoInfo, trimVideo, type VideoInfo } from '../../data/media/video';
 import { saveMedia } from '../../data/media/opfs';

@@ -115,6 +115,8 @@ test('records a plank hold as seconds without fabricated weight or repetitions',
   await expect(page.getByText('45 sn · RPE 7', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Antrenmanı tamamla', exact: true }).click();
   await expect(page.getByText('tamamlanan set', { exact: true })).toBeVisible();
+  await expect(page.getByText('sn toplam tutuş', { exact: true })).toBeVisible();
+  await expect(page.getByText(/Plank · En uzun tutuş 45 sn/)).toBeVisible();
   await page.getByRole('link', { name: "Bugün'e dön", exact: true }).click();
   await page.getByRole('link', { name: 'Günlük', exact: true }).click();
   await expect(page.getByText('Plank · 1. set · 45 sn · RPE 7', { exact: true })).toBeVisible();

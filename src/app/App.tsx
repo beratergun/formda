@@ -23,7 +23,7 @@ import { Button, Card, EmptyState, Sheet } from '../ui';
 import { PwaPrompt } from './PwaPrompt';
 import { StoreProvider, useStore } from './Store';
 import { Onboarding } from '../features/onboarding/Onboarding';
-import { Today } from '../features/today/Today';
+const Today = lazy(() => import('../features/today/Today').then((m) => ({ default: m.Today })));
 const FoodSheet = lazy(() =>
   import('../features/food-sheet/FoodSheet').then((m) => ({ default: m.FoodSheet })),
 );
@@ -116,7 +116,14 @@ function AppLayout() {
                 <NavLink to="/" className="brand" aria-label={`${APP_NAME} ana sayfa`}>
                   <span className="brand-plaque">
                     <img
-                      src={import.meta.env.BASE_URL + 'brand/berxfit-logo.png'}
+                      src={import.meta.env.BASE_URL + 'brand/berxfit-240.webp'}
+                      srcSet={
+                        import.meta.env.BASE_URL +
+                        'brand/berxfit-240.webp 240w, ' +
+                        import.meta.env.BASE_URL +
+                        'brand/berxfit-360.webp 360w'
+                      }
+                      sizes="134px"
                       width="134"
                       height="70"
                       alt=""

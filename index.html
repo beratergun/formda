@@ -19,17 +19,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link
       rel="preload"
-      href="/node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-ext-wght-normal.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
+      as="image"
+      href="%BASE_URL%brand/berxfit-500.webp"
+      imagesrcset="%BASE_URL%brand/berxfit-500.webp 500w, %BASE_URL%brand/berxfit-680.webp 680w"
+      imagesizes="(max-width: 376px) calc(100vw - 96px), 280px"
+      fetchpriority="high"
     />
     <link
       rel="apple-touch-startup-image"
@@ -55,7 +49,7 @@
       name="description"
       content="BERxFIT: Kişisel spor ve beslenme koçun. Çevrimdışı çalışır, verilerin cihazında kalır."
     />
-    <link rel="icon" href="%BASE_URL%icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="%BASE_URL%icons/icon-48.png" type="image/png" sizes="48x48" />
     <link rel="apple-touch-icon" href="%BASE_URL%icons/apple-touch-icon.png" />
     <title>BERxFIT · Kişisel spor ve beslenme koçun</title>
   </head>

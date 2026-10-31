@@ -38,6 +38,8 @@ Boş/yükleniyor/hata/başarı/disabled durumları tüm kayıt akışlarında a�
 
 ## Varlık üretimi ve uyumluluk
 
-Orijinal `public/brand/berxfit-original.png` SHA-256: `e68d27dcc46bfbf82f6239e05a0937beb98fc4c9b01ca7befff15821bb2934e8`. `scripts/brand-assets.mjs` yalnızca şeffaf kenarları temizler ve orantılı raster türevler üretir. SVG ikon dosyası aynı rasterı taşıyan bir kapsayıcıdır; yeniden çizilmiş vektör değildir. Android adaptive foreground 432 px tuvalde 238 px genişliğe sığar; logo güvenli orta bölgede kalır. Tema tercihi bulunmayan yeni kurulum koyu başlar; mevcut `yol-theme` korunur.
+Orijinal `public/brand/berxfit-original.png` SHA-256: `e68d27dcc46bfbf82f6239e05a0937beb98fc4c9b01ca7befff15821bb2934e8`. `scripts/brand-assets.mjs` yalnızca şeffaf kenarları temizler ve orantılı raster türevler üretir. SVG ikon dosyası aynı rasterı taşıyan bir kapsayıcıdır; yeniden çizilmiş vektör değildir. Android adaptive foreground 432 px tuvalde 232 px genişliğe sığar; logo güvenli orta bölgede kalır. Tema tercihi bulunmayan yeni kurulum koyu başlar; mevcut `yol-theme` korunur.
 
-Repo ve canlı Pages yolu yayın aşamasına kadar `/formda/` kalır. Android appId `io.github.beratergun.formda`, veritabanı `yol-local`, medya alanı `yol-media` ve yedek biçimi `yol-backup` korunur. 3.0.0-rc.1 geliştirme sürümüdür; v2.0.0 yayını değiştirilmedi.
+Repo ve canlı Pages yolu kurulu PWA başlangıcını korumak için `/formda/` kalır. Android appId `io.github.beratergun.formda`, veritabanı `yol-local`, medya alanı `yol-media` ve yedek biçimi `yol-backup` korunur. Yeni major sürüm 3.0.0 olarak hazırlanır; v1/v2 etiket ve ekleri değiştirilmez.
+
+Başlangıç logosu için 240/360/560/680 px kayıpsız WebP türevleri ve eşleşen srcset/preload kullanılır; orijinal PNG değişmez. Kamera, program seçimi, ZIP geri yükleme ve Bugün ekranı ihtiyaçta yüklenir. Medya hook/küçük resimleri ortak modüldedir; karşılama kullanılmayan dashboard kodunu çekmez. Karşılama ana içeriği giriş animasyonuyla geciktirilmez.

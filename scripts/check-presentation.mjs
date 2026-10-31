@@ -1,6 +1,6 @@
 import { readFile, readdir } from 'node:fs/promises';
 import sharp from 'sharp';
-const root = '../formda-launch';
+const root = '../berxfit-launch';
 const words = {};
 for (const lang of ['tr', 'en']) {
   const content = await readFile(`${root}/linkedin-post-${lang}.md`, 'utf8');

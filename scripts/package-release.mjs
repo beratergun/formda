@@ -15,9 +15,9 @@ async function collect(directory, prefix = '') {
 await collect('dist');
 if (!files['index.html'] || !files['manifest.webmanifest'] || !files['sw.js'])
   throw new Error('Incomplete PWA build');
-const out = '../formda-launch/releases';
+const out = '../berxfit-launch/releases';
 await mkdir(out, { recursive: true });
-const name = `Formda-v${version}-pwa.zip`,
+const name = `BERxFIT-v${version}-pwa.zip`,
   bytes = zipSync(files, { level: 6 });
 await writeFile(`${out}/${name}`, bytes);
 const sha = createHash('sha256').update(bytes).digest('hex');

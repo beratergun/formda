@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import { readFile, writeFile, mkdir, readdir, access } from 'node:fs/promises';
 const icon = await readFile('public/icons/icon.svg');
 const artwork = await sharp('public/brand/berxfit-logo.png')
-  .resize(238, 125, { fit: 'inside' })
+  .resize(232, 122, { fit: 'inside' })
   .png()
   .toBuffer();
 const foreground = await sharp({
@@ -11,6 +11,9 @@ const foreground = await sharp({
   .composite([{ input: artwork, gravity: 'centre' }])
   .png()
   .toBuffer();
+const bounds = await sharp(artwork).metadata();
+if (Math.hypot(bounds.width, bounds.height) > 264)
+  throw new Error('Adaptive artwork exceeds the centered 66 dp safe circle.');
 const root = 'android/app/src/main/res';
 for (const [name, scale] of Object.entries({
   mdpi: 1,

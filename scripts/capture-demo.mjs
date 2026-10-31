@@ -65,6 +65,8 @@ try {
     await page.getByRole('button', { name: 'Kapat', exact: true }).click();
     await page.getByRole('button', { name: 'Hızlı ekle' }).click();
     await page.getByRole('button', { name: 'Antrenman', exact: true }).click();
+    const resume = page.getByRole('button', { name: 'Seansa devam et', exact: true });
+    if (await resume.count()) await resume.click();
     await page.getByLabel('Seans türü').selectOption('strength');
     await page
       .getByRole('heading', { name: '1. set', exact: true })
@@ -94,8 +96,21 @@ try {
       .getByText('Hazır programın', { exact: true })
       .evaluate((el) => el.scrollIntoView({ block: 'start' }));
     await shot(`programs-${theme}`);
+    await home();
+    await page.locator('.water-tracker').scrollIntoViewIfNeeded();
+    await shot(`water-${theme}`);
+    await page.getByRole('link', { name: 'İlerleme', exact: true }).click();
+    await page.getByRole('button', { name: 'Kilo ve vücut', exact: true }).click();
+    await page.getByRole('button', { name: 'Tartı ekle veya düzenle' }).click();
+    await shot(`weight-${theme}`);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
+    await page.goto(base + '#/library');
+    await page.getByLabel('Hareket ara', { exact: true }).fill('Goblet squat');
+    await page.getByText('Goblet squat', { exact: true }).click();
+    await shot(`technique-${theme}`);
+    await page.getByRole('button', { name: 'Kapat', exact: true }).click();
   }
-  console.log('22 screenshots captured from an isolated fictional demo.');
+  console.log('28 screenshots captured from an isolated fictional demo.');
 } finally {
   await context.close();
   await browser.close();

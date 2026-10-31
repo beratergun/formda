@@ -25,7 +25,7 @@ export default defineConfig({
     VitePWA({
       disable: native,
       registerType: 'prompt',
-      includeAssets: ['icons/*.png', 'icons/*.svg'],
+      includeAssets: ['icons/*.png'],
       manifest: {
         name: 'BERxFIT · Kişisel spor ve beslenme koçun',
         short_name: 'BERxFIT',
@@ -56,7 +56,12 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{html,js,css,woff2,png,svg,json}'],
+        globPatterns: ['**/*.{html,js,css,woff2,png,webp,svg,json}'],
+        globIgnores: [
+          '**/brand/berxfit-original.png',
+          '**/brand/berxfit-logo.png',
+          '**/icons/icon.svg',
+        ],
         runtimeCaching: [
           {
             urlPattern: /\/assets\/.*\.(?:wasm|mjs)$/,

@@ -14,7 +14,7 @@ import { readMedia, deleteMedia } from '../../data/media/opfs';
 import { PhotoTimeline } from '../camera/Camera';
 import { createMontage } from '../../data/media/montage';
 import { downloadBlob, shareBlob } from '../../data/media/export';
-import { useBlobUrl, useMedia, MediaThumb } from '../today/Today';
+import { useBlobUrl, useMedia, MediaThumb } from '../../ui/media';
 function MediaViewer({ record, onClose }: { record: MediaRecord; onClose: () => void }) {
   const [blob, setBlob] = useState<Blob>();
   const [confirm, setConfirm] = useState(false);
@@ -56,7 +56,7 @@ function MediaViewer({ record, onClose }: { record: MediaRecord; onClose: () => 
           if (blob)
             downloadBlob(
               blob,
-              `formda-${record.date}.${record.kind === 'vlog' ? (record.mime.includes('mp4') ? 'mp4' : 'webm') : 'webp'}`,
+              `berxfit-${record.date}.${record.kind === 'vlog' ? (record.mime.includes('mp4') ? 'mp4' : 'webm') : 'webp'}`,
             );
         }}
       >
@@ -140,7 +140,7 @@ export function Journal() {
           photo: photo?.thumb,
         });
       });
-      await shareBlob(blob, `formda-rapor-${date}.png`);
+      await shareBlob(blob, `berxfit-rapor-${date}.png`);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Rapor hazırlanamadı.');
     } finally {
@@ -165,7 +165,7 @@ export function Journal() {
       const blob = await createMontage(unique, setMontageProgress, controller.current.signal);
       await shareBlob(
         blob,
-        `formda-bir-saniye.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
+        `berxfit-bir-saniye.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Montaj hazırlanamadı.');
@@ -530,39 +530,44 @@ export function Journal() {
             }}
           />
         </label>
-        <div className="calendar-grid">
-          {['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pa'].map((d) => (
-            <small key={d}>{d}</small>
-          ))}
-          {Array.from({ length: firstDay }, (_, i) => (
-            <span key={`empty${i}`} />
-          ))}
-          {Array.from(
-            { length: daysInMonth },
-            (_, i) => `${month}-${String(i + 1).padStart(2, '0')}`,
-          ).map((d) => {
-            const entries = media.filter((m) => m.date === d);
-            const score = dailyReport(data, d).points.total;
-            return (
-              <button
-                key={d}
-                aria-label={`${dateLabel(d)} · ${score} puan${entries.some((m) => m.kind === 'vlog') ? ' · vlog' : ''}`}
-                aria-pressed={date === d}
-                style={{ background: score >= 40 ? 'var(--accent-soft)' : undefined }}
-                onClick={() => {
-                  setDate(d);
-                  setTab('day');
-                }}
-              >
-                <b>{d.slice(-2)}</b>
-                <span>
-                  {entries.some((m) => m.kind === 'vlog') && <Video size={9} />}
-                  {entries.some((m) => m.kind !== 'vlog') && <Camera size={9} />}
-                </span>
-              </button>
-            );
-          })}
+        <div className="calendar-scroll" role="region" aria-label="Aylık takvim" tabIndex={0}>
+          <div className="calendar-grid">
+            {['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pa'].map((d) => (
+              <small key={d}>{d}</small>
+            ))}
+            {Array.from({ length: firstDay }, (_, i) => (
+              <span key={`empty${i}`} />
+            ))}
+            {Array.from(
+              { length: daysInMonth },
+              (_, i) => `${month}-${String(i + 1).padStart(2, '0')}`,
+            ).map((d) => {
+              const entries = media.filter((m) => m.date === d);
+              const score = dailyReport(data, d).points.total;
+              return (
+                <button
+                  key={d}
+                  aria-label={`${dateLabel(d)} · ${score} puan${entries.some((m) => m.kind === 'vlog') ? ' · vlog' : ''}`}
+                  aria-pressed={date === d}
+                  style={{ background: score >= 40 ? 'var(--accent-soft)' : undefined }}
+                  onClick={() => {
+                    setDate(d);
+                    setTab('day');
+                  }}
+                >
+                  <b>{d.slice(-2)}</b>
+                  <span>
+                    {entries.some((m) => m.kind === 'vlog') && <Video size={9} />}
+                    {entries.some((m) => m.kind !== 'vlog') && <Camera size={9} />}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
+        <p className="calendar-scroll-hint small muted">
+          Tüm günleri görmek için takvimi yatay kaydırabilirsin.
+        </p>
       </Card>
       <label className="field">
         Not, yiyecek ve etiketlerde ara

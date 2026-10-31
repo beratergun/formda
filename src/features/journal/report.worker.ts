@@ -12,11 +12,11 @@ self.onmessage = async (e: MessageEvent<CardData>) => {
     const d = e.data;
     const canvas = new OffscreenCanvas(1080, 1350);
     const context = canvas.getContext('2d')!;
-    context.fillStyle = '#f3f6f4';
+    context.fillStyle = '#edf3fa';
     context.fillRect(0, 0, 1080, 1350);
-    context.fillStyle = '#126c6a';
+    context.fillStyle = '#0d1727';
     context.fillRect(50, 50, 980, 1250);
-    context.fillStyle = '#e6f0df';
+    context.fillStyle = '#f4f7fb';
     context.font = 'bold 64px sans-serif';
     context.fillText('BERxFIT', 110, 165);
     context.font = '26px sans-serif';
@@ -29,7 +29,7 @@ self.onmessage = async (e: MessageEvent<CardData>) => {
     context.fillText('gün puanı', 110, 545);
     const rows = [
       `${Math.round(d.kcal)} kcal · ${Math.round(d.protein)} g protein`,
-      `${d.water} bardak su · ${d.sessions} seans`,
+      `${(d.water * 250).toLocaleString('tr-TR', { maximumFractionDigits: 1 })} ml su · ${d.sessions} seans`,
     ];
     context.font = '32px sans-serif';
     rows.forEach((text, i) => context.fillText(text, 110, 650 + i * 70));

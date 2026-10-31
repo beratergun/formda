@@ -4,12 +4,12 @@ const svg = (width, height, body) =>
   Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><g font-family="Segoe UI,Arial,sans-serif">${body}</g></svg>`,
   );
-const text = (x, y, value, size = 18, color = '#172e2d', weight = 400) =>
+const text = (x, y, value, size = 18, color = '#13243c', weight = 400) =>
   `<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}">${value}</text>`;
 export async function phone(name) {
   const dark = name.endsWith('dark'),
-    bg = dark ? '#0d1718' : '#f3f6f4',
-    ink = dark ? '#e9f2ed' : '#172e2d';
+    bg = dark ? '#070b12' : '#f3f6fc',
+    ink = dark ? '#f4f7fb' : '#13243c';
   const screen = await sharp(`docs/screenshots/raw/${name}.png`)
     .composite([
       {
@@ -22,7 +22,7 @@ export async function phone(name) {
   const base = svg(
     414,
     908,
-    `<rect x="3" y="3" width="408" height="902" rx="40" fill="${bg}" stroke="#263c3c" stroke-width="6"/>${text(28, 26, '9:41', 12, ink, 600)}<rect x="175" y="12" width="64" height="17" rx="9" fill="#0a1112"/><g fill="none" stroke="${ink}" stroke-width="1.5"><path d="M338 22h3v-3h3v-3h3v-3"/><path d="M356 17q6-5 12 0m-10 3q4-3 8 0m-5 3h2"/><rect x="375" y="14" width="16" height="9" rx="2"/></g><rect x="377" y="16" width="11" height="5" fill="${ink}"/><rect x="162" y="893" width="90" height="4" rx="2" fill="${ink}"/>`,
+    `<rect x="3" y="3" width="408" height="902" rx="40" fill="${bg}" stroke="#304158" stroke-width="6"/>${text(28, 26, '9:41', 12, ink, 600)}<rect x="175" y="12" width="64" height="17" rx="9" fill="#070b12"/><g fill="none" stroke="${ink}" stroke-width="1.5"><path d="M338 22h3v-3h3v-3h3v-3"/><path d="M356 17q6-5 12 0m-10 3q4-3 8 0m-5 3h2"/><rect x="375" y="14" width="16" height="9" rx="2"/></g><rect x="377" y="16" width="11" height="5" fill="${ink}"/><rect x="162" y="893" width="90" height="4" rx="2" fill="${ink}"/>`,
   );
   return sharp(base)
     .composite([{ input: screen, left: 12, top: 38 }])
@@ -54,6 +54,12 @@ const names = [
   'sources-dark',
   'programs-light',
   'programs-dark',
+  'water-light',
+  'water-dark',
+  'weight-light',
+  'weight-dark',
+  'technique-light',
+  'technique-dark',
 ];
 const phones = {};
 for (const name of names) {
@@ -62,9 +68,9 @@ for (const name of names) {
 }
 for (const theme of ['light', 'dark']) {
   const dark = theme === 'dark',
-    bg = dark ? '#0d2224' : '#e9f1ed',
-    ink = dark ? '#e8f1de' : '#183b3a',
-    sub = dark ? '#9cbdb7' : '#526d67';
+    bg = dark ? '#070b12' : '#edf3fa',
+    ink = dark ? '#f4f7fb' : '#13243c',
+    sub = dark ? '#a5b6cc' : '#506680';
   const chosen =
     theme === 'light'
       ? ['today-light', 'workout-light', 'photos-light']
@@ -76,7 +82,7 @@ for (const theme of ['light', 'dark']) {
   const base = svg(
     1280,
     1024,
-    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'Formda', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Kişisel spor ve beslenme koçun.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
+    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'BERxFIT', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Kişisel spor ve beslenme koçun.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
   );
   const layers = [];
   for (let i = 0; i < 3; i++) {
@@ -96,7 +102,7 @@ for (const theme of ['light', 'dark']) {
 const social = svg(
   1280,
   640,
-  `<defs><radialGradient id="g"><stop stop-color="#236764"/><stop offset="1" stop-color="#0e3435"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#9ac8a8" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#99c8b3" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'Formda', 78, '#e9f2df', 750)}${text(68, 238, 'Kişisel spor ve', 40, '#e9f2df', 650)}${text(68, 290, 'beslenme koçun.', 40, '#e9f2df', 650)}${text(68, 352, 'Kişisel hedeflerin, cihazında.', 21, '#bdd8ca')}${text(68, 420, 'PWA + Android', 18, '#d8eaa6', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#bdd8ca')}${text(68, 570, 'beratergun.github.io/formda', 20, '#e9f2df', 600)}`,
+  `<defs><radialGradient id="g"><stop stop-color="#183452"/><stop offset="1" stop-color="#070b12"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#7db3ff" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#7db3ff" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'BERxFIT', 78, '#f4f7fb', 750)}${text(68, 238, 'Kişisel spor ve', 40, '#f4f7fb', 650)}${text(68, 290, 'beslenme koçun.', 40, '#f4f7fb', 650)}${text(68, 352, 'Kişisel hedeflerin, cihazında.', 21, '#a5b6cc')}${text(68, 420, 'PWA + Android', 18, '#62d9ef', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#a5b6cc')}${text(68, 570, 'beratergun.github.io/formda', 20, '#f4f7fb', 600)}`,
 );
 await sharp(social)
   .composite([
@@ -115,16 +121,16 @@ await sharp(social)
   .toFile('docs/social-preview.png');
 for (const [file, label, subtitle, dark] of [
   ['pwa', 'Telefona yükle (PWA)', 'Android · iPhone', false],
-  ['apk', 'Android APK indir', 'v1.0.0 · cihazına kur', true],
+  ['apk', 'Android APK indir', 'v3.0.0 · cihazına kur', true],
 ]) {
-  const bg = dark ? '#173536' : '#076f74',
+  const bg = dark ? '#132b4e' : '#245aca',
     mark = dark ? 'M21 18v16m-6-6 6 6 6-6m-14 8v5h16v-5' : 'M16 15h12v24H16zM20 35h4';
   await writeFile(
     `docs/buttons/${file}.svg`,
     svg(
       310,
       68,
-      `<rect width="310" height="68" rx="15" fill="${bg}"/><path d="${mark}" fill="none" stroke="#eaf2e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>${text(48, 30, label, 18, '#fff', 650)}${text(48, 50, subtitle, 12, '#c3ded1')}`,
+      `<rect width="310" height="68" rx="15" fill="${bg}"/><path d="${mark}" fill="none" stroke="#f4f7fb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>${text(48, 30, label, 18, '#fff', 650)}${text(48, 50, subtitle, 12, '#c7dcff')}`,
     ),
   );
 }
@@ -141,7 +147,7 @@ for (const [name, label] of sequence) {
   const bg = svg(
     550,
     1060,
-    `<rect width="550" height="1060" fill="#e9f1ed"/>${text(68, 43, 'Formda', 28, '#173f3c', 750)}${text(68, 76, label, 18, '#526d67')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#526d67')}`,
+    `<rect width="550" height="1060" fill="#edf3fa"/>${text(68, 43, 'BERxFIT', 28, '#13243c', 750)}${text(68, 76, label, 18, '#506680')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#506680')}`,
   );
   frames.push(
     await sharp(bg)

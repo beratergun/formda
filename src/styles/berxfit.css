@@ -50,6 +50,24 @@
 .water-details[open] > div {
   margin-top: 14px;
 }
+.calendar-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  overscroll-behavior-x: contain;
+}
+.calendar-scroll > .calendar-grid {
+  min-width: 308px;
+  margin-inline: 0;
+}
+.calendar-scroll-hint {
+  display: none;
+}
+@media (max-width: 389px) {
+  .calendar-scroll-hint {
+    display: block;
+  }
+}
 .water-entry small {
   display: block;
   color: var(--sub);
@@ -242,6 +260,10 @@ body {
   border-radius: 24px;
   padding: 28px;
   margin-block: 8px;
+}
+.welcome-brand img {
+  max-width: 280px;
+  margin-inline: auto;
 }
 .welcome-brand img {
   width: 100%;

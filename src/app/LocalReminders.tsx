@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useStore } from './Store';
-import { useMedia } from '../features/today/Today';
+import { useMedia } from '../ui/media';
 import { dateDiff, todayKey } from '../domain/dates';
 import { planFor } from '../domain/program';
 

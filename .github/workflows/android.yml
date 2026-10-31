@@ -62,34 +62,48 @@ jobs:
         run: ./gradlew assembleRelease --no-daemon
       - name: Select APK and verify signature
         shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           VERSION=$(node -p "require('./package.json').version")
+          if [ "$GITHUB_EVENT_NAME" = "release" ] && [ "$RELEASE_TAG" != "v$VERSION" ]; then
+            echo "Release tag does not match source version" >&2
+            exit 1
+          fi
           mkdir -p apk
           if [ "$HAS_SIGNING" = "true" ]; then
-            cp android/app/build/outputs/apk/release/app-release.apk "apk/Formda-v$VERSION.apk"
+            cp android/app/build/outputs/apk/release/app-release.apk "apk/BERxFIT-v$VERSION.apk"
             echo "Release signing configured" >> "$GITHUB_STEP_SUMMARY"
           else
-            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/Formda-v$VERSION.apk"
+            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/BERxFIT-v$VERSION.apk"
             echo "Debug APK: Android development certificate; release secrets are not configured" >> "$GITHUB_STEP_SUMMARY"
           fi
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
-          "$BUILD_TOOLS/apksigner" verify --verbose "apk/Formda-v$VERSION.apk"
-          (cd apk && sha256sum "Formda-v$VERSION.apk" > "Formda-v$VERSION.apk.sha256")
-          node scripts/check-apk.mjs "apk/Formda-v$VERSION.apk"
+          "$BUILD_TOOLS/apksigner" verify --verbose "apk/BERxFIT-v$VERSION.apk"
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/formda-v2.apk" "https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk"
+          PREVIOUS_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "$RUNNER_TEMP/formda-v2.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          CURRENT_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "apk/BERxFIT-v$VERSION.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          if [ -z "$PREVIOUS_CERT" ] || [ "$PREVIOUS_CERT" != "$CURRENT_CERT" ]; then
+            echo "APK certificate differs from v2.0.0; an in-place update is not verified" >&2
+            exit 1
+          fi
+          echo "APK certificate matches v2.0.0; application ID retained" >> "$GITHUB_STEP_SUMMARY"
+          (cd apk && sha256sum "BERxFIT-v$VERSION.apk" > "BERxFIT-v$VERSION.apk.sha256")
+          node scripts/check-apk.mjs "apk/BERxFIT-v$VERSION.apk"
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: Formda-android-apk
+          name: BERxFIT-android-apk
           path: apk/
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: Formda-android-debug
+          name: BERxFIT-android-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
       - name: Attach APK to release
         if: github.event_name == 'release'
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
-        run: gh release upload "$RELEASE_TAG" apk/* --clobber
+        run: gh release upload "$RELEASE_TAG" apk/*
       - name: Remove runner signing file
         if: always()
         run: |

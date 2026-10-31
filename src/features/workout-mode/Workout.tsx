@@ -225,24 +225,23 @@ export function Workout() {
   };
   const seconds = Math.floor(workoutElapsedMs(log, now) / 1000);
   if (finished) {
-    const records = [...new Set(log.sets.map((s) => s.exerciseId))].map((exerciseId) => {
+    const completedSets = log.sets.filter((s) => s.done);
+    const hasResistance = completedSets.some((s) => !isTimedExercise(s.exerciseId));
+    const records = [...new Set(completedSets.map((s) => s.exerciseId))].map((exerciseId) => {
+      const hold = isTimedExercise(exerciseId);
+      const value = (s: (typeof log.sets)[number]) =>
+        hold ? (s.seconds ?? 0) : epley(s.kg || 0, s.reps || 0);
       const max = Math.max(
         0,
-        ...log.sets
-          .filter((s) => s.exerciseId === exerciseId)
-          .map((s) => epley(s.kg || 0, s.reps || 0)),
+        ...completedSets.filter((s) => s.exerciseId === exerciseId).map(value),
       );
       const previousMax = Math.max(
         0,
         ...data.workoutLog
           .filter((w) => w.id !== id && w.done && w.date <= date)
-          .flatMap((w) =>
-            w.sets
-              .filter((s) => s.exerciseId === exerciseId)
-              .map((s) => epley(s.kg || 0, s.reps || 0)),
-          ),
+          .flatMap((w) => w.sets.filter((s) => s.done && s.exerciseId === exerciseId).map(value)),
       );
-      return { exerciseId, max, record: max > previousMax };
+      return { exerciseId, max, hold, record: max > previousMax };
     });
     return (
       <div className="workout-mode">
@@ -265,11 +264,16 @@ export function Workout() {
                 <small>süre · dk:sn</small>
               </div>
               <div>
-                <b>{volume(log.sets).toLocaleString('tr')}</b>
-                <small>kg toplam hacim</small>
+                <b>
+                  {(hasResistance
+                    ? volume(completedSets)
+                    : completedSets.reduce((sum, s) => sum + (s.seconds ?? 0), 0)
+                  ).toLocaleString('tr')}
+                </b>
+                <small>{hasResistance ? 'kg toplam hacim' : 'sn toplam tutuş'}</small>
               </div>
               <div>
-                <b>{log.sets.length}</b>
+                <b>{completedSets.length}</b>
                 <small>tamamlanan set</small>
               </div>
             </div>
@@ -277,8 +281,10 @@ export function Workout() {
               .filter((r) => r.max > 0)
               .map((record) => (
                 <p className="notice" key={record.exerciseId}>
-                  {EXERCISES.find((e) => e.id === record.exerciseId)?.name} · Tahmini 1RM{' '}
-                  {record.max.toLocaleString('tr', { maximumFractionDigits: 1 })} kg (Epley)
+                  {EXERCISES.find((e) => e.id === record.exerciseId)?.name} ·{' '}
+                  {record.hold ? 'En uzun tutuş' : 'Tahmini 1RM'}{' '}
+                  {record.max.toLocaleString('tr', { maximumFractionDigits: 1 })}{' '}
+                  {record.hold ? 'sn' : 'kg (Epley)'}
                   {record.record ? ' · Yeni kişisel rekor!' : ''}
                 </p>
               ))}
@@ -469,9 +475,11 @@ export function Workout() {
                 <p>
                   {previousSets.length
                     ? timed
-                      ? `${previousSets.length} set · ${previousSets[0].seconds ?? 0} sn tutuş`
+                      ? `${previousSets.length} set · ${previousSets[0].seconds !== undefined ? previousSets[0].seconds + ' sn tutuş' : 'Kayıtlı süre yok'}`
                       : `${previousSets.length} × ${previousSets[0].reps} · ${previousSets[0].kg} kg`
-                    : 'İlk kaydın. Rahat ve kontrollü bir ağırlık seç.'}
+                    : timed
+                      ? 'İlk kaydın. Rahat ve kontrollü bir tutuşla başla.'
+                      : 'İlk kaydın. Rahat ve kontrollü bir ağırlık seç.'}
                 </p>
                 <p className="notice">
                   {timed

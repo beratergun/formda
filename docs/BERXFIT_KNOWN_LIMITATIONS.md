@@ -1,0 +1,14 @@
+# BERxFIT · Doğrulanmış kapsam ve sınırlar
+
+- 159 hareketin tamamında metin/kas/ekipman rehberi vardır. 11 hareket için ayrı kaynaklı özgün 2D teknik şema uygulanmıştır; kalan 148 hareket genel ve yanıltıcı bir animasyonla temsil edilmez. Şemalar kişiye özel form değerlendirmesi, sürekli video veya 3D simülasyon değildir.
+- Sağlık verisi yalnızca desteklenen Android Health Connect kaynağından açık izin ve önizleme onayıyla okunur. Beş READ kategorisi vardır; WRITE yoktur. Fiziksel cihaz izinleri, kaynak sağlayıcıları, arka plan davranışı ve gerçek APK güncellemesi **NOT RUN**. Masaüstü WebKit fiziksel iPhone değildir.
+- Yeni APK, imza Secrets bulunmadığında önceden kullanılan geliştirme sertifikalı debug varyantıdır. Mağaza imzası değildir. v2 sertifikasıyla farklılık CI'ı durdurur; yeni anahtara geçiş ayrıca veri ve imza geçiş planı gerektirir.
+- Tarayıcı/işletim sistemi uygulama verisini temizleyebilir. Otomatik sunucu veya bulut yedeği yoktur; kullanıcı ZIP yedeğini saklar. Depolama kalıcılığı isteği işletim sistemi garantisi değildir.
+- Food101 önerisi 101 sınıfla sınırlı isteğe bağlı yerel modeldir; yaklaşık 100 MB açık onaylı ilk indirme gerekir. Fotoğraf yüklenmez. Yiyecek ve miktarı kullanıcı doğrular. Önceki v2'de 10 sınıflı smoke ölçümü 10/10 ilk üç isabet vermiştir; tüm yemeklere doğruluk iddiası değildir.
+- Kalori/makro değerleri kaynak veya kullanıcı beyanıdır. Tarif, marka ve pişirme farkları vardır. MET, adım enerjisi, TDEE ve kilo projeksiyonu tahmindir; kilo hızı garantisi veya tıbbi öneri değildir.
+- iOS HealthKit, doğrudan saat bağlantısı, GPS rota kaydı, cloud sync, uzak LLM koçu ve gelişmiş 3D bu sürümde uygulanmış özellikler olarak sunulmaz. Mevcut yerel kurallı koç ve desteklenen hatırlatma/ICS akışları korunur.
+- PWA ve APK ayrı yerel veri alanlarıdır. Aynı origin üzerindeki `/formda/` yolu ve Android applicationId kullanıcı verisini korumak için bilerek korunmuştur. Güncel geçiş ayrıntıları: [veri geçişi](BERXFIT_MIGRATION.md).
+
+Son otomatik ve görsel sonuçlar [test raporunda](BERXFIT_TEST_REPORT.md), yayın durumu [kontrol dosyasında](BERXFIT_RELEASE_CHECKLIST.md) yer alır. Bu belgede bulunmayan veya çalıştırılmayan bir cihaz testi geçti sayılmaz.
+
+31 Ekim npm audit: dağıtılan runtime bağımlılıklarında **0 advisory**; tam geliştirme ağacında 2 düşük ve 23 orta, 0 yüksek/kritik. Bunlar lint/build/CLI zincirindedir (glob/minimatch/deepmerge kaynaklı aktarım). Otomatik force önerisi ESLint/Capacitor CLI için eski major sürümlere dönmeyi de içerdiğinden bu yayında uygulanmadı; uyumlu bakım güncellemeleri ayrı doğrulanmalıdır. Ham audit kayıtları ignored docs/qa altında tutulur.

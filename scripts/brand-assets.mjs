@@ -4,6 +4,17 @@ import { createHash } from 'node:crypto';
 const original = await readFile('public/brand/berxfit-original.png');
 const logo = await sharp(original).trim().png().toBuffer();
 await writeFile('public/brand/berxfit-logo.png', logo);
+await sharp({ create: { width: 680, height: 390, channels: 4, background: '#edf3fa' } })
+  .composite([
+    { input: await sharp(logo).resize({ width: 620 }).png().toBuffer(), gravity: 'centre' },
+  ])
+  .png()
+  .toFile('docs/brand-plaque.png');
+for (const width of [240, 360, 500, 560, 680])
+  await sharp(logo)
+    .resize({ width, withoutEnlargement: true })
+    .webp({ lossless: true, effort: 6 })
+    .toFile(`public/brand/berxfit-${width}.webp`);
 const icon = Buffer.from(
   `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="108" fill="#EDF3FA"/><image href="data:image/png;base64,${logo.toString('base64')}" x="81" y="164" width="350" height="184" preserveAspectRatio="xMidYMid meet"/></svg>`,
 );

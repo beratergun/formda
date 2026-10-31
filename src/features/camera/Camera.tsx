@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '../../app/Store';
 import { Button, Card, Chip, EmptyState, Segmented, Sheet } from '../../ui';
-import { useBlobUrl, useMedia, MediaThumb } from '../today/Today';
+import { useBlobUrl, useMedia, MediaThumb } from '../../ui/media';
 import { addImage } from '../../data/media/images';
 import { readMedia, deleteMedia } from '../../data/media/opfs';
 import { createMontage } from '../../data/media/montage';
@@ -343,7 +343,7 @@ export function PhotoTimeline({ from, to }: { from?: string; to?: string } = {})
       );
       await shareBlob(
         blob,
-        `formda-donusum.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
+        `berxfit-donusum.${blob.type.includes('html') ? 'html' : blob.type.includes('mp4') ? 'mp4' : 'webm'}`,
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Video hazırlanamadı.');
@@ -468,7 +468,7 @@ export function PhotoTimeline({ from, to }: { from?: string; to?: string } = {})
               void readMedia(view).then((blob) =>
                 downloadBlob(
                   blob,
-                  `formda-${view.date}.${blob.type.includes('webp') ? 'webp' : 'jpg'}`,
+                  `berxfit-${view.date}.${blob.type.includes('webp') ? 'webp' : 'jpg'}`,
                 ),
               )
             }

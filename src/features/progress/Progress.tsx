@@ -60,9 +60,10 @@ export function Progress() {
     profile.sex || 'unspecified',
     profile.activityFactor,
   );
-  const intake = data.dayLog
-    .filter((d) => d.date <= date && data.mealEntry.some((m) => m.date === d.date))
-    .map((d) => total(data.mealEntry.filter((m) => m.date === d.date)).kcal);
+  const mealDates = [...new Set(data.mealEntry.map((m) => m.date))];
+  const intake = mealDates
+    .filter((d) => d <= date)
+    .map((d) => total(data.mealEntry.filter((m) => m.date === d)).kcal);
   const observedDays = weights.length >= 2 ? dateDiff(weights.at(-1)!.date, weights[0].date) : 0;
   const adapted = adaptiveTdee(
     initial,
@@ -84,22 +85,17 @@ export function Progress() {
     weeks,
     adjustment: adapted.value - initial,
   });
-  const nutrition = recent.map((r) => ({
-    label: dateLabel(r.date, 'd MMM'),
-    kcal: r.meals.length ? r.macros.kcal : null,
-    protein: r.meals.length ? r.macros.protein : null,
-    average:
-      average(
-        data.dayLog
-          .filter(
-            (d) =>
-              d.date <= r.date &&
-              dateDiff(r.date, d.date) < 7 &&
-              data.mealEntry.some((m) => m.date === d.date),
-          )
-          .map((d) => total(data.mealEntry.filter((m) => m.date === d.date)).kcal),
-      ) || null,
-  }));
+  const nutrition = recent.map((r) => {
+    const recorded = mealDates.filter((d) => d <= r.date && dateDiff(r.date, d) < 7);
+    return {
+      label: dateLabel(r.date, 'd MMM'),
+      kcal: r.meals.length ? r.macros.kcal : null,
+      protein: r.meals.length ? r.macros.protein : null,
+      average: recorded.length
+        ? average(recorded.map((d) => total(data.mealEntry.filter((m) => m.date === d)).kcal))
+        : null,
+    };
+  });
   const timed = isTimedExercise(exercise);
   const movement = data.workoutLog
     .filter((w) => w.done && w.date <= date && w.sets.some((s) => s.exerciseId === exercise))
