@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        const theme = localStorage.getItem('yol-theme') || 'dark';
+        if (theme === 'system') delete document.documentElement.dataset.theme;
+        else document.documentElement.dataset.theme = theme;
+      } catch {
+        /* Default dark theme remains available without storage. */
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070b12" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="berXfit" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link
+      rel="preload"
+      as="image"
+      href="/formda/brand/berxfit-welcome-500.webp"
+      imagesrcset="/formda/brand/berxfit-welcome-500.webp 500w, /formda/brand/berxfit-welcome-680.webp 680w"
+      imagesizes="(max-width: 376px) calc(100vw - 96px), 280px"
+      fetchpriority="high"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/formda/icons/splash-1170-2532.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/formda/icons/splash-1290-2796.png"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/formda/icons/splash-1179-2556.png"
+      media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/formda/icons/splash-750-1334.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <meta
+      name="description"
+      content="berXfit: Kişisel spor ve beslenme koçun. Çevrimdışı çalışır, verilerin cihazında kalır."
+    />
+    <link rel="icon" href="/formda/icons/icon-48.png" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/formda/icons/apple-touch-icon.png" />
+    <title>berXfit · Kişisel spor ve beslenme koçun</title>
+    <script type="module" crossorigin src="/formda/assets/index-BK5XjLwj.js"></script>
+    <link rel="stylesheet" crossorigin href="/formda/assets/index-DfteSnLv.css">
+  <link rel="manifest" href="/formda/manifest.webmanifest"></head>
+  <body>
+    <div id="root">
+      <div
+        style="
+          position: fixed;
+          inset: 0;
+          display: grid;
+          place-content: center;
+          gap: 16px;
+          text-align: center;
+          background: #070b12;
+          color: #e6f0df;
+          font-family: system-ui;
+        "
+      >
+        <span style="font-size: 64px; font-weight: 700; letter-spacing: -4px">berXfit</span
+        ><span style="font-size: 12px; letter-spacing: 2px">Kişisel spor ve beslenme koçun</span>
+      </div>
+    </div>
+  </body>
+</html>
