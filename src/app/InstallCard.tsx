@@ -111,7 +111,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
         <p className="install-footnote">Ücretsiz · Hesap yok · Verilerin cihazında</p>
       </Card>
       {guide && (
-        <Sheet title="BERxFIT'yı telefonuna yükle" onClose={() => setGuide(false)}>
+        <Sheet title="BERxFIT'i telefonuna yükle" onClose={() => setGuide(false)}>
           <div className="choice-grid">
             <button
               className="choice"
@@ -180,7 +180,7 @@ export function InstallCard({ force = false }: { force?: boolean }) {
                   Tarayıcı menüsünden <Ellipsis size={18} /> Uygulamayı yükle veya Ana ekrana
                   ekle'yi seç.
                 </li>
-                <li>Yükle'ye dokun. BERxFIT'yı ana ekranındaki simgeden aç.</li>
+                <li>Yükle'ye dokun. BERxFIT'i ana ekranındaki simgeden aç.</li>
               </ol>
               {event && <Button onClick={() => void install()}>Şimdi yükle</Button>}
             </>
