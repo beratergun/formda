@@ -15,6 +15,7 @@ import type {
 } from '../domain/types';
 import { DEFAULT_TARGETS } from '../domain/types';
 import { todayKey } from '../domain/today';
+import { defaultPlan } from '../domain/program/defaultPlan';
 import { hydrateMedia } from './media/binary';
 
 export class FormdaDatabase extends Dexie {
@@ -60,15 +61,19 @@ export async function databaseIsCurrent(database = db) {
   ]);
   return !!seed && library?.value === '2' && catalog?.value === '2';
 }
-export async function seedDatabase(database = db) {
+async function loadSeedCatalog() {
+  const [foods, quotes, exercises] = await Promise.all([
+    import('./seed/foods'),
+    import('./seed/quotes'),
+    import('./seed/exercises'),
+  ]);
+  return { ...foods, ...quotes, ...exercises };
+}
+type SeedCatalog = Awaited<ReturnType<typeof loadSeedCatalog>>;
+export async function seedDatabase(database = db, catalog?: SeedCatalog) {
   if (await databaseIsCurrent(database)) return;
-  const [{ FOODS, DEFAULT_MENU, TURKISH_RECIPES }, { QUOTES }, { EXERCISES }, { defaultPlan }] =
-    await Promise.all([
-      import('./seed/foods'),
-      import('./seed/quotes'),
-      import('./seed/exercises'),
-      import('../domain/program'),
-    ]);
+  const { FOODS, DEFAULT_MENU, TURKISH_RECIPES, QUOTES, EXERCISES } =
+    catalog ?? (await loadSeedCatalog());
   await database.transaction('rw', database.tables, async () => {
     if (!(await database.meta.get('seedVersion'))) {
       await database.food.bulkPut(FOODS);

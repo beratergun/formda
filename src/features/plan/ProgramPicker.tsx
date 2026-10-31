@@ -1,4 +1,4 @@
-import { defaultPlan } from '../../domain/program';
+import { defaultPlan } from '../../domain/program/defaultPlan';
 import { PROGRAMS, selectProgram, type ProgramId } from '../../domain/program/programs';
 import type { PlanSettings } from '../../domain/types';
 export function ProgramPicker({

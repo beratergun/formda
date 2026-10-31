@@ -10,6 +10,7 @@ const CameraCapture = lazy(() =>
 );
 import { useStore } from '../../app/Store';
 import { todayKey } from '../../domain/today';
+import { defaultPlan } from '../../domain/program/defaultPlan';
 import type { Horizon } from '../../domain/types';
 import { InstallCard } from '../../app/InstallCard';
 export function Onboarding() {
@@ -33,10 +34,7 @@ export function Onboarding() {
   const finish = async () => {
     setBusy(true);
     try {
-      const [{ selectProgram }, { defaultPlan }] = await Promise.all([
-        import('../../domain/program/programs'),
-        import('../../domain/program'),
-      ]);
+      const { selectProgram } = await import('../../domain/program/programs');
       mutate((value) => ({
         profile: [
           { ...value.profile[0], name: name.trim(), heightCm: height, startWeight: weight },
@@ -95,12 +93,12 @@ export function Onboarding() {
         <>
           <div className="welcome-brand">
             <img
-              src={import.meta.env.BASE_URL + 'brand/berxfit-500.webp'}
+              src={import.meta.env.BASE_URL + 'brand/berxfit-welcome-500.webp'}
               srcSet={
                 import.meta.env.BASE_URL +
-                'brand/berxfit-500.webp 500w, ' +
+                'brand/berxfit-welcome-500.webp 500w, ' +
                 import.meta.env.BASE_URL +
-                'brand/berxfit-680.webp 680w'
+                'brand/berxfit-welcome-680.webp 680w'
               }
               sizes="(max-width: 376px) calc(100vw - 96px), 280px"
               fetchPriority="high"

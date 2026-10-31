@@ -15,6 +15,11 @@ for (const width of [240, 360, 500, 560, 680])
     .resize({ width, withoutEnlargement: true })
     .webp({ lossless: true, effort: 6 })
     .toFile(`public/brand/berxfit-${width}.webp`);
+for (const width of [500, 680])
+  await sharp(logo)
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality: 90, alphaQuality: 100, effort: 6 })
+    .toFile(`public/brand/berxfit-welcome-${width}.webp`);
 const icon = Buffer.from(
   `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="108" fill="#EDF3FA"/><image href="data:image/png;base64,${logo.toString('base64')}" x="81" y="164" width="350" height="184" preserveAspectRatio="xMidYMid meet"/></svg>`,
 );
