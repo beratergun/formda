@@ -25,6 +25,8 @@ Android 8+ (API 26) gerekir. Health Connect desteklenen cihazda kurulu ve kullan
 
 Dört imza sırrı varsa release APK; yoksa standart Android geliştirme sertifikalı debug APK seçilir. Kurulabilen APK bir sertifika gerektirir; debug APK mağaza/release imzası olarak sunulmaz. Mevcut debug keystore cache anahtarı korunur. CI, yeni APK sertifikasının yayımlanmış Formda v2.0.0 sertifikasıyla aynı olduğunu apksigner ile doğrular; eşleşmezse yayın durur. ApplicationId aynı kaldığından sertifika eşitliği yerinde güncelleme için zorunludur. Fiziksel cihazdaki güncelleme ayrıca denenmelidir.
 
+**31 Ekim v3 durumu:** İlk Android CI derleme ve lint'i geçti, sertifika eşitliğinde durdu; yeni APK yayımlanmadı. v2 release CI, debug keystore yolunu bulamadığı için cache'i kaydetmemiş. Eski özel anahtar yedeği olmadan mevcut Android kurulumuna aynı kimlikle güncelleme yapılamaz. Keystore yedeği veya kullanıcı tarafından seçilmiş ayrı kimlikle yan yana kurulum beklenir; eski uygulama/veri silinmez. Güncel kanıt ve seçenekler [geçiş belgesinde](BERXFIT_MIGRATION.md).
+
 ## Kullanıcının release anahtarı
 
 Aşağıdaki örnek gelecekte yeni bir dağıtım anahtarı oluşturmak içindir; mevcut debug kurulumuna yerinde güncelleme sağlamaz. Yeni anahtar, v2 sertifika eşitliği kapısını bilinçli bir anahtar/veri geçiş planı olmadan geçemez. Bu sürüm için yeni anahtar oluşturmak veya eski kurulumu kaldırmak gerekmez. Karar verildiğinde bu komutları kendi bilgisayarında uygula. Anahtar repoya girmez; parolaları yalnızca etkileşimli istemlere yaz.
@@ -41,7 +43,7 @@ gh secret set ANDROID_KEY_PASSWORD --repo beratergun/formda
 gh workflow run android.yml --repo beratergun/formda
 ```
 
-Alias istemine `formda`, parola istemlerine oluşturduğun anahtarın ilgili parolasını gir. Anahtarı ve parolaları güvenli bir yerde ayrıca yedekle. Sırlar eklendikten sonra iş akışı imzalı release varyantını üretir. Eski debug kurulumundan imzalı kuruluma geçerken sertifika değiştiği için önce tam yedek alıp eski kurulumu kaldırman gerekebilir.
+Alias istemine `formda`, parola istemlerine oluşturduğun anahtarın ilgili parolasını gir. Anahtarı ve parolaları güvenli bir yerde ayrıca yedekle. Sırlar eklendikten sonra iş akışı imzalı release varyantını derler; v2 sertifikasıyla eşleşmeyen paket dağıtılmaz. Yeni sertifika eski uygulamayı güncellemez. Eski kurulumu kaldırmak yerine, kullanıcı kararından sonra ayrı applicationId ile yan yana kurulum ve doğrulanmış tam ZIP aktarımı planlanabilir; mevcut uygulama ve veri korunur.
 
 ## PWA ve APK verileri
 

@@ -1,14 +1,7 @@
 import { addDays, format, parseISO, differenceInCalendarDays } from 'date-fns';
 import { tr } from 'date-fns/locale';
 
-export function todayKey(now = new Date()) {
-  return new Intl.DateTimeFormat('sv-SE', {
-    timeZone: 'Europe/Istanbul',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).format(now);
-}
+export { todayKey } from './today';
 export function shiftDate(date: string, days: number) {
   return format(addDays(parseISO(date), days), 'yyyy-MM-dd');
 }

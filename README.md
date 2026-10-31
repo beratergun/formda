@@ -3,7 +3,7 @@
 <p align="center"><strong>Kişisel spor ve beslenme koçun.</strong><br>Hesapsız, ücretsiz, cihazında.</p>
 <p align="center">
 <a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle"></a>
-<a href="https://github.com/beratergun/formda/releases/download/v3.0.0/BERxFIT-v3.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
+<a href="https://github.com/beratergun/formda/releases/tag/v2.0.0"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
 </p>
 <p align="center">
 <a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/PWA-offline-087e83" alt="Offline PWA">
 <img src="https://img.shields.io/badge/TypeScript-strict-3178c6" alt="Strict TypeScript">
 </p>
-<p align="center"><a href="#english">English</a> · <a href="https://github.com/beratergun/formda/releases/tag/v3.0.0">v3.0.0 ve SHA-256</a></p>
+<p align="center"><a href="#english">English</a> · <a href="https://github.com/beratergun/formda/releases">Yayımlanmış sürümler ve SHA-256</a></p>
 
 ![BERxFIT: Bugün, antrenman ve fotoğraf; telefon çerçevelerinde kurgusal demo](docs/screenshots/light-collage.png)
 
@@ -24,7 +24,7 @@ BERxFIT, öğünlerini, antrenmanını ve günlüğünü aynı yerde tutan kişi
 
 - **Android / PWA:** [Uygulamayı aç](https://beratergun.github.io/formda/) → Profil → Telefona yükle. Chrome menüsündeki “Uygulamayı yükle” seçeneği de kullanılabilir.
 - **iPhone / PWA:** Safari → Paylaş → Ana Ekrana Ekle.
-- **Android / APK:** [BERxFIT-v3.0.0.apk](https://github.com/beratergun/formda/releases/download/v3.0.0/BERxFIT-v3.0.0.apk), Android 8+. İndirme iznini Android sorar. Release Secrets yoksa APK geliştirme sertifikalı debug yapısıdır; mağaza imzalı paket olarak sunulmaz. [İmzalama rehberi](docs/android.md).
+- **Android / APK:** [Son yayımlanmış APK: Formda v2.0.0](https://github.com/beratergun/formda/releases/tag/v2.0.0), Android 8+. **BERxFIT v3 APK henüz yayımlanmadı:** v2 imza anahtarı kurtarılana veya ayrı kurulum kararı verilene kadar güncelleme sertifika kapısında bekler. Yukarıdaki APK düğmesi mevcut v2 sürümüne gider. Eski kurulumu/veriyi silme. [İmza ve geçiş durumu](docs/BERXFIT_MIGRATION.md).
 
 BERxFIT v3 mevcut `/formda/` adresinde güncellenir; kurulu PWA yolu, IndexedDB ve medya kimlikleri korunur. Formda v2 Android kimliği ve imza sertifikası korunarak yerinde güncelleme CI içinde kontrol edilir. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp BERxFIT'ya geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
 
@@ -103,7 +103,7 @@ Fiziksel cihazlarla Health Connect kaynak uyumluluğunu genişletmek; iOS Health
 
 ## English
 
-**BERxFIT is your personal fitness and nutrition coach, on your device.** Install the [PWA](https://beratergun.github.io/formda/) on Android or iPhone, or download the [Android APK](https://github.com/beratergun/formda/releases/download/v3.0.0/BERxFIT-v3.0.0.apk) for Android 8+. The interface is Turkish. All demo records, measurements and silhouettes are fictional.
+**BERxFIT is your personal fitness and nutrition coach, on your device.** Install the [PWA](https://beratergun.github.io/formda/) on Android or iPhone. The [latest published Android APK is still Formda v2.0.0](https://github.com/beratergun/formda/releases/tag/v2.0.0), for Android 8+. The BERxFIT v3 APK is blocked by a signing-certificate mismatch; the existing installation and data must be retained. The interface is Turkish. All demo records, measurements and silhouettes are fictional.
 
 Choose five ready-made programs or keep your personal plan. Adapt a single day to a busy gym, home equipment or a short session. Track sets, weight, reps, RPE and rest, with previous-session guidance. Explore 159 exercises and 34 apparatus entries: 11 source-backed original technical diagrams with pose controls, and 148 honest text/muscle-map guides. Timed holds use seconds rather than fabricated repetitions. Pause and resume persisted sessions; reorder exercises without changing your saved plan. Follow long-term plans, deload weeks, records, badges and shareable monthly stories.
 
@@ -113,6 +113,6 @@ Android Health Connect reads five categories with explicit permission and never 
 
 No account, subscription, analytics or personal-data server. IndexedDB stores records; OPFS stores media with Blob fallback. Explicit product search and model download are the only optional external services. Photos, videos and health records are never uploaded. Export full ZIP backups to move between devices or the PWA and APK. Before replacing the old Yol APK, export and verify its backup, then import it into BERxFIT.
 
-The APK uses a development certificate when release-signing Secrets are absent; see the [signing guide](docs/android.md). Automated desktop browsers cannot verify physical OS permission and installation panels. Use Node 22.12+, `npm ci`, `npm run dev`, and the validation commands above. The project includes 217 unit tests, 32 mobile-browser E2E cases and 56 two-theme accessibility views. See [quality evidence](docs/BERXFIT_TEST_REPORT.md) for current results and limits.
+The published v2 APK uses a development certificate. Its CI keystore cache was not saved; v3 distribution is blocked until the original key is recovered or the owner chooses a separate installation. See the [migration status](docs/BERXFIT_MIGRATION.md) and [signing guide](docs/android.md). Automated desktop browsers cannot verify physical OS permission and installation panels. Use Node 22.12+, `npm ci`, `npm run dev`, and the validation commands above. The project includes 217 unit tests, 32 mobile-browser E2E cases and 56 two-theme accessibility views. See [quality evidence](docs/BERXFIT_TEST_REPORT.md) for current results and limits.
 
 Built with React, TypeScript, Vite, Dexie, Workbox, Capacitor and local workers. Contributions are welcome under the MIT license. Roadmap: broader physical-device Health Connect checks, iOS HealthKit distribution, wearables, and wider Turkish-food evaluation.

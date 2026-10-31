@@ -1,3 +1,4 @@
+import { defaultPlan } from '../../domain/program';
 import { PROGRAMS, selectProgram, type ProgramId } from '../../domain/program/programs';
 import type { PlanSettings } from '../../domain/types';
 export function ProgramPicker({
@@ -43,5 +44,28 @@ export function ProgramPicker({
         </select>
       </label>
     </fieldset>
+  );
+}
+
+export function InitialProgramPicker({
+  start,
+  days,
+  equipment,
+  experience,
+  programId,
+  onChange,
+}: {
+  start: string;
+  days: number;
+  equipment: string[];
+  experience: string;
+  programId: ProgramId;
+  onChange: (settings: PlanSettings) => void;
+}) {
+  return (
+    <ProgramPicker
+      settings={{ ...defaultPlan(start, days, equipment, experience), programId }}
+      onChange={onChange}
+    />
   );
 }

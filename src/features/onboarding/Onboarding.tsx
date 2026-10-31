@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 const ProgramPicker = lazy(() =>
-  import('../plan/ProgramPicker').then((m) => ({ default: m.ProgramPicker })),
+  import('../plan/ProgramPicker').then((m) => ({ default: m.InitialProgramPicker })),
 );
 import type { ProgramId } from '../../domain/program/programs';
 import { ArrowRight, ArrowLeft, Check, LockKeyhole, Camera } from 'lucide-react';
@@ -9,8 +9,7 @@ const CameraCapture = lazy(() =>
   import('../camera/Camera').then((m) => ({ default: m.CameraCapture })),
 );
 import { useStore } from '../../app/Store';
-import { defaultPlan } from '../../domain/program';
-import { todayKey } from '../../domain/dates';
+import { todayKey } from '../../domain/today';
 import type { Horizon } from '../../domain/types';
 import { InstallCard } from '../../app/InstallCard';
 export function Onboarding() {
@@ -34,7 +33,10 @@ export function Onboarding() {
   const finish = async () => {
     setBusy(true);
     try {
-      const { selectProgram } = await import('../../domain/program/programs');
+      const [{ selectProgram }, { defaultPlan }] = await Promise.all([
+        import('../../domain/program/programs'),
+        import('../../domain/program'),
+      ]);
       mutate((value) => ({
         profile: [
           { ...value.profile[0], name: name.trim(), heightCm: height, startWeight: weight },
@@ -230,7 +232,11 @@ export function Onboarding() {
           <Card className="stack">
             <Suspense fallback={<p role="status">Programlar hazırlanıyor…</p>}>
               <ProgramPicker
-                settings={{ ...defaultPlan(start, days, equipment, experience), programId }}
+                start={start}
+                days={days}
+                equipment={equipment}
+                experience={experience}
+                programId={programId}
                 onChange={(next) => {
                   setProgramId(next.programId as ProgramId);
                   setDays(next.daysPerWeek);

@@ -13,182 +13,96 @@
     {
       "expected": "beignets",
       "predictions": [
-        {
-          "label": "beignets",
-          "score": 0.9990808367729187
-        },
-        {
-          "label": "waffles",
-          "score": 0.00027432816568762064
-        },
-        {
-          "label": "french_toast",
-          "score": 0.0002043399726971984
-        }
+        { "label": "beignets", "score": 0.9990808367729187 },
+        { "label": "waffles", "score": 0.00027432816568762064 },
+        { "label": "french_toast", "score": 0.0002043399726971984 }
       ],
       "hit": true
     },
     {
       "expected": "prime_rib",
       "predictions": [
-        {
-          "label": "prime_rib",
-          "score": 0.9662368893623352
-        },
-        {
-          "label": "steak",
-          "score": 0.014490249566733837
-        },
-        {
-          "label": "filet_mignon",
-          "score": 0.013674862682819366
-        }
+        { "label": "prime_rib", "score": 0.9662368893623352 },
+        { "label": "steak", "score": 0.014490249566733837 },
+        { "label": "filet_mignon", "score": 0.013674862682819366 }
       ],
       "hit": true
     },
     {
       "expected": "ramen",
       "predictions": [
-        {
-          "label": "ramen",
-          "score": 0.9998043179512024
-        },
-        {
-          "label": "pho",
-          "score": 0.0000600393905187957
-        },
-        {
-          "label": "peking_duck",
-          "score": 0.00004711280416813679
-        }
+        { "label": "ramen", "score": 0.9998043179512024 },
+        { "label": "pho", "score": 0.0000600393905187957 },
+        { "label": "peking_duck", "score": 0.00004711280416813679 }
       ],
       "hit": true
     },
     {
       "expected": "hamburger",
       "predictions": [
-        {
-          "label": "hamburger",
-          "score": 0.9954739809036255
-        },
-        {
-          "label": "pulled_pork_sandwich",
-          "score": 0.0023377123288810253
-        },
-        {
-          "label": "grilled_cheese_sandwich",
-          "score": 0.0011810039868578315
-        }
+        { "label": "hamburger", "score": 0.9954739809036255 },
+        { "label": "pulled_pork_sandwich", "score": 0.0023377123288810253 },
+        { "label": "grilled_cheese_sandwich", "score": 0.0011810039868578315 }
       ],
       "hit": true
     },
     {
       "expected": "bruschetta",
       "predictions": [
-        {
-          "label": "bruschetta",
-          "score": 0.9998999238014221
-        },
-        {
-          "label": "garlic_bread",
-          "score": 0.000034196469641756266
-        },
-        {
-          "label": "beef_tartare",
-          "score": 0.000022994963728706352
-        }
+        { "label": "bruschetta", "score": 0.9998999238014221 },
+        { "label": "garlic_bread", "score": 0.000034196469641756266 },
+        { "label": "beef_tartare", "score": 0.000022994963728706352 }
       ],
       "hit": true
     },
     {
       "expected": "chicken_wings",
       "predictions": [
-        {
-          "label": "chicken_wings",
-          "score": 0.9976290464401245
-        },
-        {
-          "label": "fish_and_chips",
-          "score": 0.0009825443848967552
-        },
-        {
-          "label": "baby_back_ribs",
-          "score": 0.0004247803008183837
-        }
+        { "label": "chicken_wings", "score": 0.9976290464401245 },
+        { "label": "fish_and_chips", "score": 0.0009825443848967552 },
+        { "label": "baby_back_ribs", "score": 0.0004247803008183837 }
       ],
       "hit": true
     },
     {
       "expected": "pork_chop",
       "predictions": [
-        {
-          "label": "pork_chop",
-          "score": 0.9995235800743103
-        },
-        {
-          "label": "steak",
-          "score": 0.00024263591330964118
-        },
-        {
-          "label": "grilled_salmon",
-          "score": 0.00013494931044988334
-        }
+        { "label": "pork_chop", "score": 0.9995235800743103 },
+        { "label": "steak", "score": 0.00024263591330964118 },
+        { "label": "grilled_salmon", "score": 0.00013494931044988334 }
       ],
       "hit": true
     },
     {
       "expected": "greek_salad",
       "predictions": [
-        {
-          "label": "greek_salad",
-          "score": 0.9939268231391907
-        },
-        {
-          "label": "beet_salad",
-          "score": 0.00202830764465034
-        },
-        {
-          "label": "caprese_salad",
-          "score": 0.0019229021854698658
-        }
+        { "label": "greek_salad", "score": 0.9939268231391907 },
+        { "label": "beet_salad", "score": 0.00202830764465034 },
+        { "label": "caprese_salad", "score": 0.0019229021854698658 }
       ],
       "hit": true
     },
     {
       "expected": "sashimi",
       "predictions": [
-        {
-          "label": "sashimi",
-          "score": 0.9953725337982178
-        },
-        {
-          "label": "sushi",
-          "score": 0.0045161801390349865
-        },
-        {
-          "label": "scallops",
-          "score": 0.000016507603504578583
-        }
+        { "label": "sashimi", "score": 0.9953725337982178 },
+        { "label": "sushi", "score": 0.0045161801390349865 },
+        { "label": "scallops", "score": 0.000016507603504578583 }
       ],
       "hit": true
     },
     {
       "expected": "risotto",
       "predictions": [
-        {
-          "label": "risotto",
-          "score": 0.9999640583992004
-        },
-        {
-          "label": "paella",
-          "score": 0.000008315218110510614
-        },
-        {
-          "label": "fried_rice",
-          "score": 0.0000075963048402627464
-        }
+        { "label": "risotto", "score": 0.9999640583992004 },
+        { "label": "paella", "score": 0.000008315218110510614 },
+        { "label": "fried_rice", "score": 0.0000075963048402627464 }
       ],
       "hit": true
     }
-  ]
+  ],
+  "verifiedReleaseCandidate": "3.0.0",
+  "verifiedSource": "e5182304588e8d207b156bb34418216c30d7147c",
+  "verifiedOn": "2026-10-31",
+  "limitations": "Small smoke sample only; not a general accuracy estimate. Public Food101 samples; no personal images."
 }

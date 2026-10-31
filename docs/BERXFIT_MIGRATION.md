@@ -17,6 +17,8 @@ Yeni su defteri ilk girişte mevcut `water × 250` miktarını `waterBaseMl` ola
 
 Antrenman `session`, `cancelledAt`, sayaç ve stil alanları opsiyoneldir. Eski setler değişmez. Süre kaydı olmayan eski statik setlerden saniye tahmin edilmez. Öğün düzenlemesi kaydedilmiş makroları orantılar; katalog güncellemesi geçmişi yeniden hesaplamaz. `sourceKind: user` özel besinleri yedekte korunur.
 
+Uyumluluk yönü eski v1/v2 yedeğinin v3'e aktarılmasıdır. v3'ün yeni su defteri, seans ve özel besin alanlarını eski uygulamaya geri yükleme garanti edilmez; aynı ZIP sürüm numarası iki yönlü uygulama uyumluluğu anlamına gelmez. Geçiş öncesi özgün yedek ayrı saklanır.
+
 Manuel tartıyı silmek gün satırını, notu, suyu, ölçüleri veya bağlı sağlık tartısını silmez. Aynı tarihte manuel tartı önceliklidir; kaldırıldığında varsa bağlı kaynağın değeri görünür.
 
 ## Doğrulama
@@ -26,6 +28,8 @@ Orijinal veritabanını tekrar açma, seed tekrarında eski kayıtların korunma
 ## Kullanıcı geçişi
 
 Formda v2 PWA aynı adreste güncelleme alır. Formda v2 APK için yalnızca aynı applicationId ve sertifikalı v3 APK yerinde güncellenebilir; CI iki sertifikayı karşılaştırmadan paketi yayınlamaz. Her durumda Profil → Tam yedek ile doğrulanabilir bir kopya saklanabilir. Uygulama verisini veya eski kurulumu silmek bu güncellemenin adımı değildir.
+
+31 Ekim ilk v3 Android CI sertifika eşitliğinde durdu. Eski v2 CI debug keystore dosyasını önbelleğe kaydetmemiş; yayımlanmış APK özel anahtarın yedeği değildir. Anahtar yedeği bulunana veya kullanıcı ayrı Android kimliğiyle yan yana kurulumu seçene kadar yeni APK dağıtımı bekler. PWA'nın bağımsız kalite ve yayın çalışması sürer.
 
 Eski **Yol v1 APK** farklı applicationId taşır. Onun verisi tam ZIP ile BERxFIT'e aktarılır; yedek ve medya doğrulanmadan eski kurulum kaldırılmaz. PWA ve APK da ayrı uygulama alanlarıdır; aralarında ZIP kullanılır.
 

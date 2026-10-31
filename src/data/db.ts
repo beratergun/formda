@@ -14,8 +14,7 @@ import type {
   Quote,
 } from '../domain/types';
 import { DEFAULT_TARGETS } from '../domain/types';
-import { defaultPlan } from '../domain/program';
-import { todayKey } from '../domain/dates';
+import { todayKey } from '../domain/today';
 import { hydrateMedia } from './media/binary';
 
 export class FormdaDatabase extends Dexie {
@@ -63,11 +62,13 @@ export async function databaseIsCurrent(database = db) {
 }
 export async function seedDatabase(database = db) {
   if (await databaseIsCurrent(database)) return;
-  const [{ FOODS, DEFAULT_MENU, TURKISH_RECIPES }, { QUOTES }, { EXERCISES }] = await Promise.all([
-    import('./seed/foods'),
-    import('./seed/quotes'),
-    import('./seed/exercises'),
-  ]);
+  const [{ FOODS, DEFAULT_MENU, TURKISH_RECIPES }, { QUOTES }, { EXERCISES }, { defaultPlan }] =
+    await Promise.all([
+      import('./seed/foods'),
+      import('./seed/quotes'),
+      import('./seed/exercises'),
+      import('../domain/program'),
+    ]);
   await database.transaction('rw', database.tables, async () => {
     if (!(await database.meta.get('seedVersion'))) {
       await database.food.bulkPut(FOODS);

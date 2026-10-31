@@ -2,6 +2,8 @@
 
 ## [3.0.0] - 2026-10-31
 
+Yayın adayı; v3 release henüz oluşturulmadı. PWA kalite/yayın doğrulaması sürüyor, APK eski imza anahtarı kararı nedeniyle bekliyor. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
+
 - BERxFIT kimliği: sahibinin orijinal logosu, dark-first navy/blue/cyan sistem, açık tema, PWA/Android görünen adları ve responsive günlük özet.
 - 36 sayı alanında ham taslak, Türkçe ondalık, sıfır/boş ayrımı, sınır/finite doğrulaması; geçersiz giriş kayıtları bozmaz.
 - Öğünleri kayıtlı makroları üzerinden düzenle/kopyala/onaylı sil/geri al; kaynak beyanlı özel besin ve yalnızca kayıtlı beslenme günlerinden özet.
@@ -13,7 +15,7 @@
 
 217 birim testi; kaynak, UI ve cihaz sınırlarının ayrıntıları [BERxFIT test raporunda](docs/BERXFIT_TEST_REPORT.md). Android/iPhone fiziksel kurulum ve sağlık sağlayıcı testleri NOT RUN. Debug sertifikalı APK mağaza imzası olarak sunulmaz. [Geçiş](docs/BERXFIT_MIGRATION.md) ve [bilinen sınırlar](docs/BERXFIT_KNOWN_LIMITATIONS.md).
 
-[3.0.0]: https://github.com/beratergun/formda/releases/tag/v3.0.0
+[3.0.0]: https://github.com/beratergun/formda
 
 ## [2.0.0] - 2026-10-30
 

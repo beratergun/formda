@@ -27,7 +27,9 @@ const Today = lazy(() => import('../features/today/Today').then((m) => ({ defaul
 const FoodSheet = lazy(() =>
   import('../features/food-sheet/FoodSheet').then((m) => ({ default: m.FoodSheet })),
 );
-import { QuickEntry } from '../features/today/QuickEntry';
+const QuickEntry = lazy(() =>
+  import('../features/today/QuickEntry').then((m) => ({ default: m.QuickEntry })),
+);
 import type { MealId } from '../domain/types';
 const Workout = lazy(() =>
   import('../features/workout-mode/Workout').then((m) => ({ default: m.Workout })),
@@ -53,7 +55,9 @@ const Profile = lazy(() =>
   import('../features/profile/Profile').then((m) => ({ default: m.Profile })),
 );
 import { AppLock } from './AppLock';
-import { LocalReminders } from './LocalReminders';
+const LocalReminders = lazy(() =>
+  import('./LocalReminders').then((m) => ({ default: m.LocalReminders })),
+);
 import { InstallProvider } from './InstallCard';
 import { NativeLifecycle } from './NativeLifecycle';
 
@@ -262,7 +266,9 @@ function AppLayout() {
         </Suspense>
       )}{' '}
       {(entry === 'weight' || entry === 'note') && (
-        <QuickEntry kind={entry} onClose={() => setEntry(undefined)} />
+        <Suspense fallback={<p role="status">Hazırlanıyor…</p>}>
+          <QuickEntry kind={entry} onClose={() => setEntry(undefined)} />
+        </Suspense>
       )}{' '}
       {error && (
         <aside className="error-toast" role="alert">
@@ -273,7 +279,11 @@ function AppLayout() {
         </aside>
       )}
       <PwaPrompt />
-      <LocalReminders />
+      {onboarded && (
+        <Suspense fallback={null}>
+          <LocalReminders />
+        </Suspense>
+      )}
       <NativeLifecycle />
     </>
   );

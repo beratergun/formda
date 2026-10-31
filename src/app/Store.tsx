@@ -12,7 +12,7 @@ import { db } from '../data/db';
 import { bootstrapDatabase } from '../data/bootstrap';
 import { repository, type AppData } from '../data/repositories';
 import { emptyDay, type DayLog, type MealEntry } from '../domain/types';
-import { todayKey } from '../domain/dates';
+import { todayKey } from '../domain/today';
 import { Skeleton } from '../ui';
 
 interface Store {
