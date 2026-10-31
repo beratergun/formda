@@ -3,9 +3,9 @@
 <p align="center"><strong>Kişisel spor ve beslenme koçun.</strong><br>Hesapsız, ücretsiz, cihazında.</p>
 <p align="center">
 <a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle"></a>
-<a href="https://github.com/beratergun/formda/releases/tag/v2.0.0"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
+<a href="https://github.com/beratergun/formda/releases/download/v3.0.0/berXfit-v3.0.0.apk"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
 </p>
-<p align="center">berXfit v3 PWA yayında. Yeni kalıcı imzalı APK, Formda’yı ve verilerini koruyan ayrı kurulum olarak doğrulanıyor.</p>
+<p align="center">berXfit v3 PWA ve kalıcı imzalı Android APK yayımlandı. APK, Formda’yı ve verilerini koruyan ayrı kurulumdur.</p>
 <p align="center">
 <a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
 <a href="https://github.com/beratergun/formda/actions/workflows/android.yml"><img src="https://github.com/beratergun/formda/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
@@ -25,9 +25,9 @@ berXfit, öğünlerini, antrenmanını ve günlüğünü aynı yerde tutan kişi
 
 - **Android / PWA:** [Uygulamayı aç](https://beratergun.github.io/formda/) → Profil → Telefona yükle. Chrome menüsündeki “Uygulamayı yükle” seçeneği de kullanılabilir.
 - **iPhone / PWA:** Safari → Paylaş → Ana Ekrana Ekle.
-- **Android / APK:** Yeni `io.github.beratergun.berxfit` kimliğiyle kalıcı imzalı, Formda ile yan yana kurulum hazırlanıyor. Doğrulanmış APK yayımlanana kadar düğme mevcut [Formda v2 sürümüne](https://github.com/beratergun/formda/releases/tag/v2.0.0) gider. Formda’da **Profil → Tam yedek** al; yeni berXfit’e geri yükleyip kayıtlarını doğrula. Eski kurulumu ve yedeği koru. [Geçiş rehberi](docs/BERXFIT_MIGRATION.md).
+- **Android / APK:** [berXfit v3.0.0 APK](https://github.com/beratergun/formda/releases/download/v3.0.0/berXfit-v3.0.0.apk), Android 8+. Yeni `io.github.beratergun.berxfit` kimliğiyle kalıcı imzalı, Formda ile yan yana kurulur. Formda’da **Profil → Tam yedek** al; berXfit’te **Yedeğimden devam et** ile geri yükleyip kayıtlarını doğrula. Eski kurulumu ve özgün ZIP’i koru. [Geçiş rehberi](docs/BERXFIT_MIGRATION.md).
 
-berXfit v3 mevcut `/formda/` adresinde güncellenir; kurulu PWA yolu, IndexedDB ve medya kimlikleri korunur. Yeni berXfit Android uygulaması ayrı kimlik ve kalıcı release sertifikasıyla hazırlanır; Formda yerinde değiştirilmez. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp berXfit'e geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
+berXfit v3 mevcut `/formda/` adresinde güncellenir; kurulu PWA yolu, IndexedDB ve medya kimlikleri korunur. Yeni berXfit Android uygulaması ayrı kimlik ve kalıcı release sertifikasıyla kurulur; Formda yerinde değiştirilmez. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp berXfit'e geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
 
 ## Günlük koçun
 
@@ -87,9 +87,9 @@ npx playwright test
 npm run android:sync
 ```
 
-217 birim testi; Pixel 7/Chromium ve iPhone 14/WebKit boyutlarında 32 E2E; iki temada 56 WCAG görünümü. Eski/yeni yedek alanları ve medya baytları gidiş dönüşte karşılaştırılır. [berXfit test raporu](docs/BERXFIT_TEST_REPORT.md) ve [kabul matrisi](docs/acceptance-matrix.md) kapsamı ve fiziksel cihaz sınırlarını açıklar. Masaüstü WebKit sonucu fiziksel iPhone testi değildir.
+217 uygulama birim testi ve 10 imza testi; Pixel 7/Chromium ve iPhone 14/WebKit boyutlarında 32 E2E; iki temada 56 WCAG görünümü. Eski/yeni yedek alanları ve medya baytları gidiş dönüşte karşılaştırılır. [berXfit test raporu](docs/BERXFIT_TEST_REPORT.md) ve [kabul matrisi](docs/acceptance-matrix.md) kapsamı ve fiziksel cihaz sınırlarını açıklar. Masaüstü WebKit sonucu fiziksel iPhone testi değildir.
 
-31 Ekim v3 PWA yayını [Pages CI](https://github.com/beratergun/formda/actions/runs/41192932078) ile doğrulandı: CI Lighthouse 96/100/100, canlı mobil **100/100/100**; domain satır kapsamı %99,85. Gerçek v2 PWA paketinden v3'e güncelleme Chromium ve WebKit'te bütün kayıtlar/fotoğraf baytları ve tema korunarak geçti. Yeni Android APK, onaylanan ayrı kurulum ve sabit release sertifikasıyla doğrulanıyor; [güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
+31 Ekim v3 PWA yayını [Pages CI](https://github.com/beratergun/formda/actions/runs/41235278581) ile doğrulandı: CI Lighthouse 96/100/100, canlı mobil **100/100/100**; domain satır kapsamı %99,85. Gerçek v2 PWA paketinden v3'e güncelleme Chromium ve WebKit'te bütün kayıtlar/fotoğraf baytları ve tema korunarak geçti. Yeni Android APK, ayrı kimlik ve sabit release sertifikası doğrulanarak yayımlandı; [güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
 
 ## Geçiş ve sınırlar
 
@@ -107,7 +107,7 @@ Fiziksel cihazlarla Health Connect kaynak uyumluluğunu genişletmek; iOS Health
 
 ## English
 
-**berXfit is your personal fitness and nutrition coach, on your device.** Install the [PWA](https://beratergun.github.io/formda/) on Android or iPhone. The [latest published Android APK is still Formda v2.0.0](https://github.com/beratergun/formda/releases/tag/v2.0.0), for Android 8+. The berXfit v3 APK is being validated as a separate installation with a persistent release key; Formda and its existing data remain intact. The interface is Turkish. All demo records, measurements and silhouettes are fictional.
+**berXfit is your personal fitness and nutrition coach, on your device.** Install the [PWA](https://beratergun.github.io/formda/) on Android or iPhone. The [berXfit v3.0.0 Android APK](https://github.com/beratergun/formda/releases/download/v3.0.0/berXfit-v3.0.0.apk) supports Android 8+ and installs beside Formda with a persistent release signature. Formda and its existing data remain intact. The interface is Turkish. All demo records, measurements and silhouettes are fictional.
 
 Choose five ready-made programs or keep your personal plan. Adapt a single day to a busy gym, home equipment or a short session. Track sets, weight, reps, RPE and rest, with previous-session guidance. Explore 159 exercises and 34 apparatus entries: 11 source-backed original technical diagrams with pose controls, and 148 honest text/muscle-map guides. Timed holds use seconds rather than fabricated repetitions. Pause and resume persisted sessions; reorder exercises without changing your saved plan. Follow long-term plans, deload weeks, records, badges and shareable monthly stories.
 
@@ -115,8 +115,6 @@ Nutrition includes 797 sourced foods, 160 ingredient-based example recipes, Turk
 
 Android Health Connect reads five categories with explicit permission and never writes back. Missing support or denied permission leaves manual tracking available. The PWA supports manual steps and active calories. Optional Apache-2.0 Food101 recognition downloads only after consent, runs locally, offers three suggestions, and requires food/portion confirmation. It covers 101 classes, not all Turkish cuisine. A ten-class, ten-image smoke evaluation achieved 10/10 top-three hits and offline worker reopening; this is not a population accuracy claim.
 
-No account, subscription, analytics or personal-data server. IndexedDB stores records; OPFS stores media with Blob fallback. Explicit product search and model download are the only optional external services. Photos, videos and health records are never uploaded. Export full ZIP backups to move between devices or the PWA and APK. Before replacing the old Yol APK, export and verify its backup, then import it into berXfit.
+No account, subscription, analytics or personal-data server. IndexedDB stores records; OPFS stores media with Blob fallback. Explicit product search and model download are the only optional external services. Photos, videos and health records are never uploaded. Export full ZIP backups to move between devices or the PWA and APK. Export and verify the old Yol APK backup, import it into berXfit and retain the original installation and ZIP.
 
-The published v2 APK uses a development certificate. Its CI keystore cache was not saved. The owner selected a separate berXfit installation with a new persistent signing identity. Export a full ZIP from Formda, restore it in berXfit and verify the records while retaining Formda and the original backup. See the [migration status](docs/BERXFIT_MIGRATION.md) and [signing guide](docs/android.md). Automated desktop browsers cannot verify physical OS permission and installation panels. Use Node 22.12+, `npm ci`, `npm run dev`, and the validation commands above. The project includes 217 unit tests, 32 mobile-browser E2E cases and 56 two-theme accessibility views. See [quality evidence](docs/BERXFIT_TEST_REPORT.md) for current results and limits.
-
-Built with React, TypeScript, Vite, Dexie, Workbox, Capacitor and local workers. Contributions are welcome under the MIT license. Roadmap: broader physical-device Health Connect checks, iOS HealthKit distribution, wearables, and wider Turkish-food evaluation.
+The new Android APK uses a persistent release certificate pinned in CI. Formda remains separately installed; export its full ZIP, restore it in berXfit and verify your records while keeping the original backup. See the [migration guide](docs/BERXFIT_MIGRATION.md) and [signing guide](docs/android.md). Automated desktop browsers cannot verify physical OS permissions and installation panels. Use Node 22.12+, `npm ci`, `npm run dev` and the validation commands above. The project includes 217 application unit tests, 10 signing tests, 32 mobile-browser E2E cases and 56 two-theme accessibility views. See [quality evidence](docs/BERXFIT_TEST_REPORT.md) for results and limits.

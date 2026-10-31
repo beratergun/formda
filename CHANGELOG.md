@@ -2,7 +2,7 @@
 
 ## [3.0.0] - 2026-10-31
 
-PWA yayımlandı ve canlı doğrulandı; birleşik v3 GitHub release'i henüz oluşturulmadı. Kullanıcının seçtiği yeni Android kimliğiyle yan yana APK ve kalıcı release imzası son doğrulamada. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
+berXfit v3.0.0: PWA ve kalıcı imzalı, Formda ile yan yana Android APK yayımlandı. [Yayın ve doğrulama](docs/BERXFIT_RELEASE_CHECKLIST.md).
 
 - berXfit kimliği: sahibinin orijinal logosu, dark-first navy/blue/cyan sistem, açık tema, PWA/Android görünen adları ve responsive günlük özet.
 - 36 sayı alanında ham taslak, Türkçe ondalık, sıfır/boş ayrımı, sınır/finite doğrulaması; geçersiz giriş kayıtları bozmaz.
@@ -13,9 +13,9 @@ PWA yayımlandı ve canlı doğrulandı; birleşik v3 GitHub release'i henüz ol
 - Ortak medya modülü ve ihtiyaçta ekran/kamera/program/ZIP kodu yükleme; responsive kayıpsız logo türevleri ve daha küçük offline paket. Güncelleme, bekleyen yerel yazımlar bitmeden sayfayı yenilemez.
 - Yerel veritabanı, OPFS, tema, ZIP imzası, mevcut Pages yolu korunur. Kullanıcının seçimiyle Android io.github.beratergun.berxfit kimliğine geçer; eski Formda ayrı kalır. Yeni APK sertifikası kalıcı berXfit pinine uymazsa CI durur. Eski v1/v2 release ve ekleri korunur.
 
-217 birim testi; kaynak, UI ve cihaz sınırlarının ayrıntıları [berXfit test raporunda](docs/BERXFIT_TEST_REPORT.md). Android/iPhone fiziksel kurulum ve sağlık sağlayıcı testleri NOT RUN. Debug sertifikalı APK mağaza imzası olarak sunulmaz. [Geçiş](docs/BERXFIT_MIGRATION.md) ve [bilinen sınırlar](docs/BERXFIT_KNOWN_LIMITATIONS.md).
+217 birim testi; kaynak, UI ve cihaz sınırlarının ayrıntıları [berXfit test raporunda](docs/BERXFIT_TEST_REPORT.md). Android/iPhone fiziksel kurulum ve sağlık sağlayıcı testleri NOT RUN. Eski v1/v2 debug sertifikaları yeni berXfit release kimliğiyle karıştırılmaz. [Geçiş](docs/BERXFIT_MIGRATION.md) ve [bilinen sınırlar](docs/BERXFIT_KNOWN_LIMITATIONS.md).
 
-[3.0.0]: https://github.com/beratergun/formda
+[3.0.0]: https://github.com/beratergun/formda/releases/tag/v3.0.0
 
 ## [2.0.0] - 2026-10-30
 
