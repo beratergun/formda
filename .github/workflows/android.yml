@@ -80,16 +80,18 @@ jobs:
           fi
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
           "$BUILD_TOOLS/apksigner" verify --verbose "apk/BERxFIT-v$VERSION.apk"
+          node scripts/check-apk.mjs "apk/BERxFIT-v$VERSION.apk"
           curl --fail --location --retry 3 --output "$RUNNER_TEMP/formda-v2.apk" "https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk"
           PREVIOUS_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "$RUNNER_TEMP/formda-v2.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
           CURRENT_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "apk/BERxFIT-v$VERSION.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          echo "Published v2 certificate SHA-256: $PREVIOUS_CERT"
+          echo "Candidate certificate SHA-256: $CURRENT_CERT"
           if [ -z "$PREVIOUS_CERT" ] || [ "$PREVIOUS_CERT" != "$CURRENT_CERT" ]; then
             echo "APK certificate differs from v2.0.0; an in-place update is not verified" >&2
             exit 1
           fi
           echo "APK certificate matches v2.0.0; application ID retained" >> "$GITHUB_STEP_SUMMARY"
           (cd apk && sha256sum "BERxFIT-v$VERSION.apk" > "BERxFIT-v$VERSION.apk.sha256")
-          node scripts/check-apk.mjs "apk/BERxFIT-v$VERSION.apk"
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: BERxFIT-android-apk
