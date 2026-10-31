@@ -33,7 +33,7 @@ Formda v2 PWA aynı adreste güncelleme alır. Yeni berXfit APK, `io.github.bera
 
 1. Eski Formda → Profil → Tam yedek al; ZIP'i cihazda sakla.
 2. Yeni berXfit APK'yı kur; Formda'yı kaldırma ve verisini temizleme.
-3. berXfit karşılama → Yedeğimden devam et veya Profil → Geri yükle; önce ZIP önizlemesini kontrol et, sonra onayla.
+3. Temiz berXfit karşılama ekranında Yedeğimden devam et ile ZIP'i seç. Kurulum tamamlandıysa Profil → Geri yükleme yöntemi → Tam yedeği geri yükle yolunu kullan; dosyayı seçmeden önce birleştir/üzerine yaz yöntemini belirle. Seçilen ZIP doğrulanıp doğrudan geri yüklenir; ayrı ZIP önizleme/onay penceresi yoktur.
 4. Öğün, antrenman, tartı, not, fotoğraf ve vloglarını doğrula; özgün ZIP'i ayrıca sakla.
 5. Health Connect kullanıyorsan yeni uygulamanın beş salt okuma iznini ayrıca ver. PWA ve her APK ayrı veri alanıdır; sonraki kayıtlar kendiliğinden senkronize olmaz.
 

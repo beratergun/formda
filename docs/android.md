@@ -6,7 +6,7 @@ React/TypeScript arayüzü `dist-native/` olarak APK içine paketlenir; uzak ser
 
 ## Veri aktarımı
 
-Eski Formda → Profil → Tam yedek al. Yeni berXfit'i ayrı kur; karşılama → Yedeğimden devam et veya Profil → Geri yükle. Önce ZIP önizlemesini, sonra tüm kayıt ve medyayı doğrula. Eski uygulamayı kaldırma/verisini temizleme. İki APK ve PWA ayrı veri alanlarıdır; sonraki değişiklikler otomatik senkronize olmaz. Ayrıntılar [geçiş belgesinde](BERXFIT_MIGRATION.md).
+Eski Formda → Profil → Tam yedek al. Yeni berXfit'i ayrı kur; temiz karşılama ekranında Yedeğimden devam et ile ZIP'i seç. Kurulum tamamlandıysa Profil → Geri yükleme yöntemi seçimi → Tam yedeği geri yükle yolunu kullan. ZIP seçimi doğrulamadan sonra geri yüklemeyi başlatır; ayrı bir ZIP önizleme/onay penceresi yoktur. Ardından tüm kayıt ve medyayı doğrula. Eski uygulamayı kaldırma/verisini temizleme. İki APK ve PWA ayrı veri alanlarıdır; sonraki değişiklikler otomatik senkronize olmaz. Ayrıntılar [geçiş belgesinde](BERXFIT_MIGRATION.md).
 
 ## Kalıcı release imzası
 
