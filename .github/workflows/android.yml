@@ -42,6 +42,7 @@ jobs:
           key: formda-debug-certificate-v1
       - run: npm ci
       - run: npm run lint && npm run typecheck && npm run test
+      - run: node --test scripts/apk-certificates.test.mjs
       - run: npm run android:sync
       - name: Decode release keystore
         if: env.HAS_SIGNING == 'true'
@@ -55,7 +56,7 @@ jobs:
         working-directory: android
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug lintDebug --no-daemon
+          ./gradlew assembleDebug lintDebug signingReport --no-daemon
       - name: Build signed release APK
         if: env.HAS_SIGNING == 'true'
         working-directory: android
@@ -82,14 +83,9 @@ jobs:
           "$BUILD_TOOLS/apksigner" verify --verbose "apk/BERxFIT-v$VERSION.apk"
           node scripts/check-apk.mjs "apk/BERxFIT-v$VERSION.apk"
           curl --fail --location --retry 3 --output "$RUNNER_TEMP/formda-v2.apk" "https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk"
-          PREVIOUS_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "$RUNNER_TEMP/formda-v2.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
-          CURRENT_CERT=$("$BUILD_TOOLS/apksigner" verify --print-certs "apk/BERxFIT-v$VERSION.apk" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
-          echo "Published v2 certificate SHA-256: $PREVIOUS_CERT"
-          echo "Candidate certificate SHA-256: $CURRENT_CERT"
-          if [ -z "$PREVIOUS_CERT" ] || [ "$PREVIOUS_CERT" != "$CURRENT_CERT" ]; then
-            echo "APK certificate differs from v2.0.0; an in-place update is not verified" >&2
-            exit 1
-          fi
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs-pem "$RUNNER_TEMP/formda-v2.apk" > "$RUNNER_TEMP/formda-v2-certificates.txt" 2>&1
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs-pem "apk/BERxFIT-v$VERSION.apk" > "$RUNNER_TEMP/berxfit-certificates.txt" 2>&1
+          node scripts/check-apk-signing.mjs "$RUNNER_TEMP/formda-v2-certificates.txt" "$RUNNER_TEMP/berxfit-certificates.txt"
           echo "APK certificate matches v2.0.0; application ID retained" >> "$GITHUB_STEP_SUMMARY"
           (cd apk && sha256sum "BERxFIT-v$VERSION.apk" > "BERxFIT-v$VERSION.apk.sha256")
       - uses: actions/upload-artifact@v7.0.2

@@ -8,6 +8,10 @@ const files = unzipSync(new Uint8Array(readFileSync(file)), {
 const config = JSON.parse(strFromU8(files['assets/capacitor.config.json']));
 const manifest = Buffer.from(files['AndroidManifest.xml']);
 const text = manifest.toString('utf8') + manifest.toString('utf16le');
+const expectedHealthReads = ['STEPS', 'ACTIVE_CALORIES_BURNED', 'WEIGHT', 'SLEEP', 'EXERCISE']
+  .map((permission) => `android.permission.health.READ_${permission}`)
+  .sort();
+const healthReads = [...new Set(text.match(/android\.permission\.health\.READ_[A-Z_]+/g))].sort();
 const result = {
   appId: config.appId,
   appName: config.appName,
@@ -15,9 +19,8 @@ const result = {
   manifestId: text.includes('io.github.beratergun.formda'),
   manifestVersion: text.includes(version),
   healthWritePermissions: /android\.permission\.health\.WRITE_/.test(text),
-  healthReadPermissions: ['STEPS', 'ACTIVE_CALORIES_BURNED', 'WEIGHT', 'SLEEP', 'EXERCISE'].every(
-    (p) => text.includes(`android.permission.health.READ_${p}`),
-  ),
+  healthReadPermissions: JSON.stringify(healthReads) === JSON.stringify(expectedHealthReads),
+  healthReads,
 };
 console.log(JSON.stringify(result, null, 2));
 if (
