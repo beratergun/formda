@@ -5,6 +5,7 @@
 <a href="https://beratergun.github.io/formda/"><img src="docs/buttons/pwa.svg" width="310" alt="Telefona yükle"></a>
 <a href="https://github.com/beratergun/formda/releases/tag/v2.0.0"><img src="docs/buttons/apk.svg" width="310" alt="Android APK indir"></a>
 </p>
+<p align="center">BERxFIT v3 PWA yayında. APK düğmesi mevcut Formda v2 sürümüne gider; v3 APK imza anahtarı kararı bekliyor.</p>
 <p align="center">
 <a href="https://github.com/beratergun/formda/actions/workflows/deploy.yml"><img src="https://github.com/beratergun/formda/actions/workflows/deploy.yml/badge.svg" alt="Kalite ve Pages"></a>
 <a href="https://github.com/beratergun/formda/actions/workflows/android.yml"><img src="https://github.com/beratergun/formda/actions/workflows/android.yml/badge.svg" alt="Android APK"></a>
@@ -26,7 +27,7 @@ BERxFIT, öğünlerini, antrenmanını ve günlüğünü aynı yerde tutan kişi
 - **iPhone / PWA:** Safari → Paylaş → Ana Ekrana Ekle.
 - **Android / APK:** [Son yayımlanmış APK: Formda v2.0.0](https://github.com/beratergun/formda/releases/tag/v2.0.0), Android 8+. **BERxFIT v3 APK henüz yayımlanmadı:** v2 imza anahtarı kurtarılana veya ayrı kurulum kararı verilene kadar güncelleme sertifika kapısında bekler. Yukarıdaki APK düğmesi mevcut v2 sürümüne gider. Eski kurulumu/veriyi silme. [İmza ve geçiş durumu](docs/BERXFIT_MIGRATION.md).
 
-BERxFIT v3 mevcut `/formda/` adresinde güncellenir; kurulu PWA yolu, IndexedDB ve medya kimlikleri korunur. Formda v2 Android kimliği ve imza sertifikası korunarak yerinde güncelleme CI içinde kontrol edilir. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp BERxFIT'ya geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
+BERxFIT v3 mevcut `/formda/` adresinde güncellenir; kurulu PWA yolu, IndexedDB ve medya kimlikleri korunur. Formda v2 Android kimliği ve imza sertifikası korunarak yerinde güncelleme CI içinde kontrol edilir. **Eski Yol APK'sındaki veriyi Profil → Tam yedek ile alıp BERxFIT'e geri yükle.** Ayrı Android kimlikleri nedeniyle otomatik veri geçişi yoktur. Yedeği doğrulamadan eski kurulumu kaldırma. PWA ve APK arasında da tam ZIP yedeği kullanılır.
 
 ## Günlük koçun
 
@@ -80,12 +81,15 @@ npm ci
 npm run dev
 npm run lint && npm run typecheck && npm run test && npm run build
 npm run test:coverage
+node --test scripts/apk-certificates.test.mjs
 npx playwright install chromium webkit
 npx playwright test
 npm run android:sync
 ```
 
 217 birim testi; Pixel 7/Chromium ve iPhone 14/WebKit boyutlarında 32 E2E; iki temada 56 WCAG görünümü. Eski/yeni yedek alanları ve medya baytları gidiş dönüşte karşılaştırılır. [BERxFIT test raporu](docs/BERXFIT_TEST_REPORT.md) ve [kabul matrisi](docs/acceptance-matrix.md) kapsamı ve fiziksel cihaz sınırlarını açıklar. Masaüstü WebKit sonucu fiziksel iPhone testi değildir.
+
+31 Ekim v3 PWA yayını [Pages CI](https://github.com/beratergun/formda/actions/runs/41192932078) ile doğrulandı: CI Lighthouse 96/100/100, canlı mobil **100/100/100**; domain satır kapsamı %99,85. Gerçek v2 PWA paketinden v3'e güncelleme Chromium ve WebKit'te bütün kayıtlar/fotoğraf baytları ve tema korunarak geçti. Yeni Android APK imza kararı nedeniyle bekliyor; [güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
 
 ## Geçiş ve sınırlar
 

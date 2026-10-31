@@ -2,7 +2,7 @@
 
 ## [3.0.0] - 2026-10-31
 
-Yayın adayı; v3 release henüz oluşturulmadı. PWA kalite/yayın doğrulaması sürüyor, APK eski imza anahtarı kararı nedeniyle bekliyor. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
+PWA yayımlandı ve canlı doğrulandı; birleşik v3 GitHub release'i henüz oluşturulmadı. Yeni APK eski imza anahtarı/ayrı kurulum kararı nedeniyle bekliyor. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
 
 - BERxFIT kimliği: sahibinin orijinal logosu, dark-first navy/blue/cyan sistem, açık tema, PWA/Android görünen adları ve responsive günlük özet.
 - 36 sayı alanında ham taslak, Türkçe ondalık, sıfır/boş ayrımı, sınır/finite doğrulaması; geçersiz giriş kayıtları bozmaz.

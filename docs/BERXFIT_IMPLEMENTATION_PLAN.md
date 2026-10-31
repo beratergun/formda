@@ -10,3 +10,5 @@ Her aşama sonunda lint, typecheck, birim ve build; ilgili mobil E2E, Playwright
 6. **Tam kalite ve teslim:** 320/360/390/412/430/768/1024/desktop; iki tema, tüm ikincil ekranlar, keyboard ve reduced motion; WCAG, offline, yedek, eski veri; native build/manifest/imza. README, görsel/demo, migration ve test/limit raporları. Yayın doğrulanmadan release tamamlandı denmez.
 
 PWA veri alanları, mevcut Android appId ve keystore kimliği korunur. Repo/base yol değişimi gerekiyorsa redirect, manifest/scope ve eski release bağlantıları birlikte doğrulanır. Mevcut v1/v2 release'leri ve varlıkları silinmez/üzerine yazılmaz. Yeni major aday 3.0.0; önce yerel ve CI release kapıları.
+
+31 Ekim son durum: Faz 1–5 tamamlandı. Faz 6 PWA yayını ve canlı 100/100/100 doğrulaması tamamlandı; 217 uygulama + 7 imza kapısı testi, 32 mobil E2E, 56 Axe ve gerçek v2 PWA güncellemesi iki motorda doğrulandı. Native build/lint/metadata/izin kontrolleri geçti. Birleşik v3 APK/release, gerçek X509 sertifika farkı nedeniyle eski keystore veya ayrı kurulum kararı bekliyor; tüm çalışma bu engelle birlikte milestones/test/migration belgelerinde kayıtlı.

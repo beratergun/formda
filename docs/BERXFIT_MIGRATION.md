@@ -25,11 +25,18 @@ Manuel tartıyı silmek gün satırını, notu, suyu, ölçüleri veya bağlı s
 
 Orijinal veritabanını tekrar açma, seed tekrarında eski kayıtların korunması ve ZIP encode/decode/sil/restore eşitliği otomatik testlidir. Son ZIP fikstürü manuel/sağlık tartısı, su defteri, kalıcı seans ve gerçek ikili medya baytlarını birlikte içerir. Silme denemeleri yalnızca izole kurgusal test veritabanında yapılır. Kullanıcının kurulu cihazına bu oturumda erişilmedi; fiziksel APK yerinde güncellemesi **NOT RUN**.
 
+31 Ekim'de yayımlanmış gerçek v2 PWA ZIP'i (SHA-256 `14846382680ea4748709f84e895d9ed177461070c0ae25880881a8ba4d7c0767`) aynı izole localhost origin/scope üzerinde açıldı. Chromium ve WebKit'te kurgusal öğün, su, not ve fotoğraf kaydedilip mevcut uygulamanın **Güncelle** düğmesiyle 3bd4748 kaynağının v3 build'ine geçildi. Tüm object store satırları, fotoğraf/thumbnail/OPFS baytları ve tema güncelleme öncesiyle birebir eşleşti. Offline yenilemede öğün 220 kcal kaldı; eski bir bardak 250 ml gösterildi, üzerine yeni 100 ml giriş eklenerek 350 ml kalıcı doğrulandı. Harici istek/yazım/pageerror yoktu. Bu gerçek service worker geçiş testi fiziksel telefon veya APK imza testi değildir.
+
 ## Kullanıcı geçişi
 
 Formda v2 PWA aynı adreste güncelleme alır. Formda v2 APK için yalnızca aynı applicationId ve sertifikalı v3 APK yerinde güncellenebilir; CI iki sertifikayı karşılaştırmadan paketi yayınlamaz. Her durumda Profil → Tam yedek ile doğrulanabilir bir kopya saklanabilir. Uygulama verisini veya eski kurulumu silmek bu güncellemenin adımı değildir.
 
-31 Ekim ilk v3 Android CI sertifika eşitliğinde durdu. Eski v2 CI debug keystore dosyasını önbelleğe kaydetmemiş; yayımlanmış APK özel anahtarın yedeği değildir. Anahtar yedeği bulunana veya kullanıcı ayrı Android kimliğiyle yan yana kurulumu seçene kadar yeni APK dağıtımı bekler. PWA'nın bağımsız kalite ve yayın çalışması sürer.
+31 Ekim ilk v3 Android CI sertifika kapısında durdu; sonraki tanılamada eski metin ayrıştırıcısının iki SHA alanını boş okuduğu görüldü. Bu ilk sonuçlar tek başına sertifika farkı kanıtı değildir. PEM/X509 karşılaştırmasına geçildi ve [CI 41194362584](https://github.com/beratergun/formda/actions/runs/41194362584) iki gerçek sertifikayı farklı buldu:
+
+- Yayımlanmış v2 sertifikası: `c5b094d15c64f2d649bff19b3dad65376a9e1a974c328288d9ff942e2fa9c0d9`.
+- O CI adayının sertifikası: `6312c8c504f2198a3e40d762bb4f7475440bea418400390cb143821af9496398`.
+
+Gradle signingReport gerçek debug yolunu `~/.config/.android/debug.keystore` olarak gösterdi; eski cache `~/.android/debug.keystore` yolunu izlediğinden v2 job dosyayı saklamamış. Güncel cache yolu düzeltildi; yalnızca sertifika kapısını geçen eşleşen debug anahtarı saklanabilir. Yanlış yeni anahtar veya release anahtarı cache'e kaydedilmez. Erişilebilir yerel/cache yedeklerinde eski anahtar bulunamadı; yayımlanmış APK özel anahtar yedeği değildir. Eski sertifikaya ait keystore yedeği veya kullanıcı tarafından seçilmiş ayrı kimlikle yan yana kurulum beklenir. PWA yayını bağımsız olarak tamamlandı. Eski uygulama/veri silinmez.
 
 Eski **Yol v1 APK** farklı applicationId taşır. Onun verisi tam ZIP ile BERxFIT'e aktarılır; yedek ve medya doğrulanmadan eski kurulum kaldırılmaz. PWA ve APK da ayrı uygulama alanlarıdır; aralarında ZIP kullanılır.
 
