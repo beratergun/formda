@@ -76,7 +76,7 @@ export function Onboarding() {
               sizes="134px"
               width="134"
               height="70"
-              alt="BERxFIT"
+              alt="berXfit"
             />
           </span>
         ) : (
@@ -104,7 +104,7 @@ export function Onboarding() {
               fetchPriority="high"
               width="1190"
               height="623"
-              alt="BERxFIT — kişisel spor ve beslenme koçun"
+              alt="berXfit — kişisel spor ve beslenme koçun"
             />
           </div>
           <div>

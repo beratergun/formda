@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">BERxFIT</string>
-    <string name="title_activity_main">BERxFIT</string>
-    <string name="package_name">io.github.beratergun.formda</string>
-    <string name="custom_url_scheme">io.github.beratergun.formda</string>
+    <string name="app_name">berXfit</string>
+    <string name="title_activity_main">berXfit</string>
+    <string name="package_name">io.github.beratergun.berxfit</string>
+    <string name="custom_url_scheme">io.github.beratergun.berxfit</string>
 </resources>

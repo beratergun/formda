@@ -78,7 +78,7 @@ try {
         Günlük: 'Biriken anların.',
         İlerleme: 'Yol aldığın her yer.',
         Planım: 'Rotanı sen çiz.',
-        Profil: 'BERxFIT, sana göre.',
+        Profil: 'berXfit, sana göre.',
       };
       await page.getByRole('heading', { name: headings[name], exact: true }).waitFor();
       await page.waitForFunction(() =>

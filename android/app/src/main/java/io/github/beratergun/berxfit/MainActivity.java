@@ -1,4 +1,4 @@
-package io.github.beratergun.formda;
+package io.github.beratergun.berxfit;
 
 import android.os.Bundle;
 import com.getcapacitor.BridgeActivity;

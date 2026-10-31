@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 const { version } = JSON.parse(readFileSync('package.json', 'utf8'));
-const file = process.argv[2] || `../berxfit-launch/android/BERxFIT-v${version}.apk`;
+const file = process.argv[2] || `../berxfit-launch/android/berXfit-v${version}.apk`;
 const files = unzipSync(new Uint8Array(readFileSync(file)), {
   filter: (f) => ['AndroidManifest.xml', 'assets/capacitor.config.json'].includes(f.name),
 });
@@ -16,7 +16,8 @@ const result = {
   appId: config.appId,
   appName: config.appName,
   remoteServer: config.server?.url || null,
-  manifestId: text.includes('io.github.beratergun.formda'),
+  manifestId: text.includes('io.github.beratergun.berxfit'),
+  legacyManifestId: text.includes('io.github.beratergun.formda'),
   manifestVersion: text.includes(version),
   healthWritePermissions: /android\.permission\.health\.WRITE_/.test(text),
   healthReadPermissions: JSON.stringify(healthReads) === JSON.stringify(expectedHealthReads),
@@ -24,10 +25,11 @@ const result = {
 };
 console.log(JSON.stringify(result, null, 2));
 if (
-  result.appId !== 'io.github.beratergun.formda' ||
-  result.appName !== 'BERxFIT' ||
+  result.appId !== 'io.github.beratergun.berxfit' ||
+  result.appName !== 'berXfit' ||
   result.remoteServer ||
   !result.manifestId ||
+  result.legacyManifestId ||
   !result.manifestVersion ||
   result.healthWritePermissions ||
   !result.healthReadPermissions

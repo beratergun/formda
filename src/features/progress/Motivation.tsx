@@ -225,7 +225,7 @@ export function Motivation() {
           {slides.map((slide, i) => (
             <article className="story-card" key={slide.title}>
               <p className="eyebrow">
-                BERxFIT · {dateLabel(date, 'MMMM yyyy')} · {i + 1}/3
+                berXfit · {dateLabel(date, 'MMMM yyyy')} · {i + 1}/3
               </p>
               <h3>{slide.title}</h3>
               <b className="story-value">{slide.value}</b>

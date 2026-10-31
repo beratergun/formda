@@ -85,7 +85,7 @@ export function decodeBackup(bytes: Uint8Array) {
     },
   });
   verifyZip(bytes, files);
-  if (!files['data.json']) throw new Error('BERxFIT yedek dosyası bulunamadı.');
+  if (!files['data.json']) throw new Error('berXfit yedek dosyası bulunamadı.');
   const document = backupSchema.parse(JSON.parse(strFromU8(files['data.json'])));
   for (const media of document.media) {
     if (

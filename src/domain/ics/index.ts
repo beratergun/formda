@@ -64,7 +64,7 @@ export function createIcs(settings: PlanSettings, start: string, end: string, no
       time: plan.time,
       minutes:
         plan.type === 'strength' ? 75 : plan.type === 'swim' ? 45 : plan.type === 'rest' ? 10 : 30,
-      title: `BERxFIT · ${plan.title}${plan.deload ? ' · Hafif hafta' : ''}`,
+      title: `berXfit · ${plan.title}${plan.deload ? ' · Hafif hafta' : ''}`,
       description: `${plan.phase} · ${plan.week}. hafta${plan.assessment ? ' · Değerlendirme haftası' : ''}. ${plan.note}`,
     });
   }
@@ -78,10 +78,10 @@ export function createIcs(settings: PlanSettings, start: string, end: string, no
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//BERxFIT//Kişisel Plan//TR',
+    'PRODID:-//berXfit//Kişisel Plan//TR',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'X-WR-CALNAME:BERxFIT',
+    'X-WR-CALNAME:berXfit',
     'X-WR-TIMEZONE:Europe/Istanbul',
     'BEGIN:VTIMEZONE',
     'TZID:Europe/Istanbul',

@@ -82,7 +82,7 @@ for (const theme of ['light', 'dark']) {
   const base = svg(
     1280,
     1024,
-    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'BERxFIT', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Kişisel spor ve beslenme koçun.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
+    `<rect width="1280" height="1024" fill="${bg}"/>${text(64, 72, 'berXfit', 46, ink, 750)}${text(64, 112, theme === 'light' ? 'Kişisel spor ve beslenme koçun.' : 'Günün her saatinde, kendi ritminde.', 24, sub)}${text(64, 992, 'Kurgusal demo · Fotoğraflar çizilmiş silüetlerden oluşur.', 15, sub)}`,
   );
   const layers = [];
   for (let i = 0; i < 3; i++) {
@@ -102,7 +102,7 @@ for (const theme of ['light', 'dark']) {
 const social = svg(
   1280,
   640,
-  `<defs><radialGradient id="g"><stop stop-color="#183452"/><stop offset="1" stop-color="#070b12"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#7db3ff" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#7db3ff" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'BERxFIT', 78, '#f4f7fb', 750)}${text(68, 238, 'Kişisel spor ve', 40, '#f4f7fb', 650)}${text(68, 290, 'beslenme koçun.', 40, '#f4f7fb', 650)}${text(68, 352, 'Kişisel hedeflerin, cihazında.', 21, '#a5b6cc')}${text(68, 420, 'PWA + Android', 18, '#62d9ef', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#a5b6cc')}${text(68, 570, 'beratergun.github.io/formda', 20, '#f4f7fb', 600)}`,
+  `<defs><radialGradient id="g"><stop stop-color="#183452"/><stop offset="1" stop-color="#070b12"/></radialGradient></defs><rect width="1280" height="640" fill="url(#g)"/><circle cx="1010" cy="190" r="350" fill="#7db3ff" opacity=".06"/><path d="M-50 580Q220 400 500 610" fill="none" stroke="#7db3ff" stroke-width="2" stroke-dasharray="5 10" opacity=".3"/>${text(64, 126, 'berXfit', 78, '#f4f7fb', 750)}${text(68, 238, 'Kişisel spor ve', 40, '#f4f7fb', 650)}${text(68, 290, 'beslenme koçun.', 40, '#f4f7fb', 650)}${text(68, 352, 'Kişisel hedeflerin, cihazında.', 21, '#a5b6cc')}${text(68, 420, 'PWA + Android', 18, '#62d9ef', 600)}${text(68, 460, 'Çevrimdışı · Hesap yok · Sunucu yok', 18, '#a5b6cc')}${text(68, 570, 'beratergun.github.io/formda', 20, '#f4f7fb', 600)}`,
 );
 await sharp(social)
   .composite([
@@ -147,7 +147,7 @@ for (const [name, label] of sequence) {
   const bg = svg(
     550,
     1060,
-    `<rect width="550" height="1060" fill="#edf3fa"/>${text(68, 43, 'BERxFIT', 28, '#13243c', 750)}${text(68, 76, label, 18, '#506680')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#506680')}`,
+    `<rect width="550" height="1060" fill="#edf3fa"/>${text(68, 43, 'berXfit', 28, '#13243c', 750)}${text(68, 76, label, 18, '#506680')}${text(68, 1037, 'Kurgusal demo · Sana ait. Cihazında kalır.', 14, '#506680')}`,
   );
   frames.push(
     await sharp(bg)

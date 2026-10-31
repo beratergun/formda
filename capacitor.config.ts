@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.github.beratergun.formda',
-  appName: 'BERxFIT',
+  appId: 'io.github.beratergun.berxfit',
+  appName: 'berXfit',
   webDir: 'dist-native',
   backgroundColor: '#070b12',
   loggingBehavior: 'none',

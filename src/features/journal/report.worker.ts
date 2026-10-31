@@ -18,7 +18,7 @@ self.onmessage = async (e: MessageEvent<CardData>) => {
     context.fillRect(50, 50, 980, 1250);
     context.fillStyle = '#f4f7fb';
     context.font = 'bold 64px sans-serif';
-    context.fillText('BERxFIT', 110, 165);
+    context.fillText('berXfit', 110, 165);
     context.font = '26px sans-serif';
     context.fillText('HER GÜN KENDİME BİR ADIM', 110, 215);
     context.font = '30px sans-serif';

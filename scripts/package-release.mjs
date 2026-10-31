@@ -17,7 +17,7 @@ if (!files['index.html'] || !files['manifest.webmanifest'] || !files['sw.js'])
   throw new Error('Incomplete PWA build');
 const out = '../berxfit-launch/releases';
 await mkdir(out, { recursive: true });
-const name = `BERxFIT-v${version}-pwa.zip`,
+const name = `berXfit-v${version}-pwa.zip`,
   bytes = zipSync(files, { level: 6 });
 await writeFile(`${out}/${name}`, bytes);
 const sha = createHash('sha256').update(bytes).digest('hex');

@@ -1,4 +1,4 @@
-# BERxFIT · Başlangıç denetimi
+# berXfit · Başlangıç denetimi
 
 30 Ekim 2026, başlangıç commit `6b3dcd8`. Önceki Formda A–F aşamaları tamamlanmış; yeni istek bunların üzerine ek geliştirmedir. Yapıştırılan iki metin baştan sona okundu. Yeni marka ve logo talimatı önceki marka tercihini günceller. Yerel AGENTS iş akışı main üzerinde küçük owner commit'leri öngördüğünden ayrı branch yerine mevcut akış korunur.
 
@@ -8,7 +8,7 @@
 - Yerel Store, yaklaşık 700 ms debounce; Dexie IndexedDB ve OPFS/Blob medya. DB `yol-local`, medya `yol-media`, eski yedek imzası ve tercih anahtarları korunmalıdır.
 - 797 kaynaklı besin, 160 örnek tarif, 159 hareket, 34 alet; altı program, tarih istisnaları, fotoğraf/vlog, rapor, yedek, Health Connect ve isteğe bağlı yerel model mevcut.
 - Capacitor 8, Android `io.github.beratergun.formda`, versionCode 2. Yeni isim için appId değiştirmek ayrı sandbox oluşturacağından korunacaktır.
-- Pages ve Android Actions mevcut. Aktif repo `beratergun/formda`; eski `yol` yalnızca yönlendirmedir. Tarihsel URL'ler mevcut durum sanılmaz. v2.0.0 etiketi yeniden kullanılmayacak; BERxFIT için sonraki majör sürüm 3.0.0 adayıdır.
+- Pages ve Android Actions mevcut. Aktif repo `beratergun/formda`; eski `yol` yalnızca yönlendirmedir. Tarihsel URL'ler mevcut durum sanılmaz. v2.0.0 etiketi yeniden kullanılmayacak; berXfit için sonraki majör sürüm 3.0.0 adayıdır.
 - Mevcut bağımlılıklar `npm ls --depth=0` ile doğrulandı. Hazır çalışma kurulumu gereksiz yeniden yüklenmedi. Lint/typecheck/140 birim/build başlangıçta yeşil. Önceki E2E 18 ve Axe 26 sonucu yeni kod için otomatik geçerli sayılmayacak; tekrar çalıştırılacak.
 - `npm audit`: 4 düşük, 0 orta/yüksek/kritik. Ayrıntılar ignored `docs/qa/berxfit-baseline/audit.json`; zorla veya ilgisiz toplu paket güncellemesi yapılmadı.
 

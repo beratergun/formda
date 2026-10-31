@@ -2,18 +2,18 @@
 
 ## [3.0.0] - 2026-10-31
 
-PWA yayımlandı ve canlı doğrulandı; birleşik v3 GitHub release'i henüz oluşturulmadı. Yeni APK eski imza anahtarı/ayrı kurulum kararı nedeniyle bekliyor. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
+PWA yayımlandı ve canlı doğrulandı; birleşik v3 GitHub release'i henüz oluşturulmadı. Kullanıcının seçtiği yeni Android kimliğiyle yan yana APK ve kalıcı release imzası son doğrulamada. [Güncel yayın durumu](docs/BERXFIT_RELEASE_CHECKLIST.md).
 
-- BERxFIT kimliği: sahibinin orijinal logosu, dark-first navy/blue/cyan sistem, açık tema, PWA/Android görünen adları ve responsive günlük özet.
+- berXfit kimliği: sahibinin orijinal logosu, dark-first navy/blue/cyan sistem, açık tema, PWA/Android görünen adları ve responsive günlük özet.
 - 36 sayı alanında ham taslak, Türkçe ondalık, sıfır/boş ayrımı, sınır/finite doğrulaması; geçersiz giriş kayıtları bozmaz.
 - Öğünleri kayıtlı makroları üzerinden düzenle/kopyala/onaylı sil/geri al; kaynak beyanlı özel besin ve yalnızca kayıtlı beslenme günlerinden özet.
 - Kesintiye dayanıklı antrenman: seans hareket/not/sayaç snapshot, duraklat/devam/iptal, ekle/çıkar/sırala ve kalıcı tamamlanma. Kaldırılmış hareketin tamamlanan setleri korunur.
 - 11 ayrı kaynaklı özgün teknik şema, poz/karşılaştır/hız/büyüt; 148 hareket için açık metin/kas rehberi. Statik tutuşlar saniye, süre grafiği ve saniye rekoruyla kaydedilir.
 - Eski su toplamını koruyan ml giriş geçmişi, özel miktar ve hedef, saatli düzenleme/onaylı silme; tarihli tartı yönetimi ve bağlı kaynak önceliği.
 - Ortak medya modülü ve ihtiyaçta ekran/kamera/program/ZIP kodu yükleme; responsive kayıpsız logo türevleri ve daha küçük offline paket. Güncelleme, bekleyen yerel yazımlar bitmeden sayfayı yenilemez.
-- Yerel veritabanı, OPFS, tema, ZIP imzası, Android appId ve mevcut Pages yolu korunur. Yeni APK sertifikası v2 ile eşleşmezse CI durur. Eski v1/v2 release ve ekleri korunur.
+- Yerel veritabanı, OPFS, tema, ZIP imzası, mevcut Pages yolu korunur. Kullanıcının seçimiyle Android io.github.beratergun.berxfit kimliğine geçer; eski Formda ayrı kalır. Yeni APK sertifikası kalıcı berXfit pinine uymazsa CI durur. Eski v1/v2 release ve ekleri korunur.
 
-217 birim testi; kaynak, UI ve cihaz sınırlarının ayrıntıları [BERxFIT test raporunda](docs/BERXFIT_TEST_REPORT.md). Android/iPhone fiziksel kurulum ve sağlık sağlayıcı testleri NOT RUN. Debug sertifikalı APK mağaza imzası olarak sunulmaz. [Geçiş](docs/BERXFIT_MIGRATION.md) ve [bilinen sınırlar](docs/BERXFIT_KNOWN_LIMITATIONS.md).
+217 birim testi; kaynak, UI ve cihaz sınırlarının ayrıntıları [berXfit test raporunda](docs/BERXFIT_TEST_REPORT.md). Android/iPhone fiziksel kurulum ve sağlık sağlayıcı testleri NOT RUN. Debug sertifikalı APK mağaza imzası olarak sunulmaz. [Geçiş](docs/BERXFIT_MIGRATION.md) ve [bilinen sınırlar](docs/BERXFIT_KNOWN_LIMITATIONS.md).
 
 [3.0.0]: https://github.com/beratergun/formda
 

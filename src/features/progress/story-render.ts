@@ -19,7 +19,7 @@ export function drawStory(
   c.stroke();
   c.fillStyle = '#f4f7fb';
   c.font = 'bold 72px sans-serif';
-  c.fillText('BERxFIT', 80, 160);
+  c.fillText('berXfit', 80, 160);
   c.font = '32px sans-serif';
   c.fillText(d.date, 80, 240);
   c.font = 'bold 48px sans-serif';

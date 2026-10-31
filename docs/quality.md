@@ -1,6 +1,6 @@
-# BERxFIT v3 · Güncel doğrulama
+# berXfit v3 · Güncel doğrulama
 
-31 Ekim 2026: lint/typecheck ve 217 birim testi geçti. Domain kapsamı: satır %99,85; fonksiyon %100; dal %97,03; ifade %99,11. Ayrıntılı mevcut sonuçlar ve test edilmeyen cihazlar [BERxFIT test raporunda](BERXFIT_TEST_REPORT.md). Son tam E2E, WCAG 2.2, Lighthouse ve yayın doğrulamaları [yayın kontrolünde](BERXFIT_RELEASE_CHECKLIST.md) kapanmadan v3 yayınlanmış sayılmaz.
+31 Ekim 2026: lint/typecheck ve 217 birim testi geçti. Domain kapsamı: satır %99,85; fonksiyon %100; dal %97,03; ifade %99,11. Ayrıntılı mevcut sonuçlar ve test edilmeyen cihazlar [berXfit test raporunda](BERXFIT_TEST_REPORT.md). Son tam E2E, WCAG 2.2, Lighthouse ve yayın doğrulamaları [yayın kontrolünde](BERXFIT_RELEASE_CHECKLIST.md) kapanmadan v3 yayınlanmış sayılmaz.
 
 Aşağıdaki v2 kayıtları tarihsel tabandır; yeni kod için otomatik başarı kanıtı değildir.
 

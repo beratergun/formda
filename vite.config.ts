@@ -27,8 +27,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'BERxFIT · Kişisel spor ve beslenme koçun',
-        short_name: 'BERxFIT',
+        name: 'berXfit · Kişisel spor ve beslenme koçun',
+        short_name: 'berXfit',
         description: 'Spor, beslenme ve gelişim takibi. Verilerin cihazında kalır.',
         lang: 'tr',
         theme_color: '#070b12',

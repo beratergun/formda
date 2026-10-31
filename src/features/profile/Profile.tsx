@@ -171,7 +171,7 @@ export function Profile() {
     <div className="stack page-enter">
       <div>
         <p className="eyebrow">SENİN ALANIN</p>
-        <h1>BERxFIT, sana göre.</h1>
+        <h1>berXfit, sana göre.</h1>
         <p className="muted">Tercihlerin, gizliliğin ve cihazındaki veriler.</p>
       </div>
       <InstallCard force />

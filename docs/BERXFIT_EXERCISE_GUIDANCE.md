@@ -1,4 +1,4 @@
-# BERxFIT · Teknik hareket rehberi
+# berXfit · Teknik hareket rehberi
 
 Durum: Faz 4b tamamlandı; kalite ve görsel doğrulama kanıtları BERXFIT_TEST_REPORT.md içinde.
 

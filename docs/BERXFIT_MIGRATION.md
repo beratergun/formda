@@ -1,17 +1,17 @@
-# BERxFIT v3 veri geçişi
+# berXfit v3 veri geçişi
 
-BERxFIT, yayınlanmış Formda v2 kodunun devamıdır. Mevcut uygulama kaydı korunur; veri temizleyen veya yeni boş veritabanına taşıyan bir geçiş yoktur.
+berXfit, yayımlanmış Formda v2 kodunun devamıdır. PWA aynı origin/scope üzerinde mevcut kaydı korur. Kullanıcı 31 Ekim 2026'da Android için **yeni berXfit kimliğiyle yan yana kurulumu açıkça seçti**. Yeni APK ayrı bir sandbox ile başlar; eski Formda kurulumu ve verileri yerinde kalır. Android verisi kullanıcı tarafından tam ZIP yedeğiyle aktarılır.
 
-| Kimlik                   | v3 kararı                                       |
-| ------------------------ | ----------------------------------------------- |
-| Pages başlangıç ve scope | `https://beratergun.github.io/formda/` korunur  |
-| IndexedDB                | `yol-local` korunur                             |
-| OPFS medya               | `yol-media` korunur; Blob fallback aynı         |
-| Tema                     | `yol-theme` korunur                             |
-| ZIP                      | `yol-backup`, version 1; yeni alanlar opsiyonel |
-| Android appId            | `io.github.beratergun.formda` korunur           |
-| Android imza             | v2 APK sertifikasıyla eşitlik CI kapısı         |
-| Eski sürümler            | v1.0.0 / v2.0.0 etiketleri ve ekleri korunur    |
+| Kimlik                   | v3 kararı                                              |
+| ------------------------ | ------------------------------------------------------ |
+| Pages başlangıç ve scope | `https://beratergun.github.io/formda/` korunur         |
+| IndexedDB                | `yol-local` korunur                                    |
+| OPFS medya               | `yol-media` korunur; Blob fallback aynı                |
+| Tema                     | `yol-theme` korunur                                    |
+| ZIP                      | `yol-backup`, version 1; yeni alanlar opsiyonel        |
+| Android appId            | `io.github.beratergun.berxfit`; eski Formda ayrı kalır |
+| Android imza             | Kalıcı berXfit release anahtarı; public SHA-256 pin    |
+| Eski sürümler            | v1.0.0 / v2.0.0 etiketleri ve ekleri korunur           |
 
 Yeni su defteri ilk girişte mevcut `water × 250` miktarını `waterBaseMl` olarak korur. Eski saat bilgisi yoksa üretilmez. `waterEntries` yalnızca yeni kimlikli ml girişleridir. Eski toplam ve yeni girişler tek kez toplanır; eski `water` alanı bardak karşılığıyla uyumlu tutulur. Tutarsız toplam veya yinelenen kimlik içeren yeni ZIP reddedilir.
 
@@ -29,17 +29,25 @@ Orijinal veritabanını tekrar açma, seed tekrarında eski kayıtların korunma
 
 ## Kullanıcı geçişi
 
-Formda v2 PWA aynı adreste güncelleme alır. Formda v2 APK için yalnızca aynı applicationId ve sertifikalı v3 APK yerinde güncellenebilir; CI iki sertifikayı karşılaştırmadan paketi yayınlamaz. Her durumda Profil → Tam yedek ile doğrulanabilir bir kopya saklanabilir. Uygulama verisini veya eski kurulumu silmek bu güncellemenin adımı değildir.
+Formda v2 PWA aynı adreste güncelleme alır. Yeni berXfit APK, `io.github.beratergun.berxfit` kimliğiyle eski `io.github.beratergun.formda` uygulamasının yanına kurulur. Eski uygulama kendiliğinden güncellenmez, silinmez ve verisi otomatik taşınmaz. İki uygulama arasındaki FileProvider ve özel depolama alanları farklıdır.
+
+1. Eski Formda → Profil → Tam yedek al; ZIP'i cihazda sakla.
+2. Yeni berXfit APK'yı kur; Formda'yı kaldırma ve verisini temizleme.
+3. berXfit karşılama → Yedeğimden devam et veya Profil → Geri yükle; önce ZIP önizlemesini kontrol et, sonra onayla.
+4. Öğün, antrenman, tartı, not, fotoğraf ve vloglarını doğrula; özgün ZIP'i ayrıca sakla.
+5. Health Connect kullanıyorsan yeni uygulamanın beş salt okuma iznini ayrıca ver. PWA ve her APK ayrı veri alanıdır; sonraki kayıtlar kendiliğinden senkronize olmaz.
+
+Yeni anahtar repo dışındaki kullanıcıya özel klasörde saklanır; CI yalnızca `BERXFIT_ANDROID_*` şifreli Secrets ile release APK üretir. Debug dağıtım veya imza cache'i yoktur. Her build `android/signing-identity.json` içindeki public sertifika SHA-256 pinini ve yeni appId'yi doğrular; değişen veya eksik anahtar dağıtımı engeller.
 
 31 Ekim ilk v3 Android CI sertifika kapısında durdu; sonraki tanılamada eski metin ayrıştırıcısının iki SHA alanını boş okuduğu görüldü. Bu ilk sonuçlar tek başına sertifika farkı kanıtı değildir. PEM/X509 karşılaştırmasına geçildi ve [CI 41194362584](https://github.com/beratergun/formda/actions/runs/41194362584) iki gerçek sertifikayı farklı buldu:
 
 - Yayımlanmış v2 sertifikası: `c5b094d15c64f2d649bff19b3dad65376a9e1a974c328288d9ff942e2fa9c0d9`.
 - O CI adayının sertifikası: `6312c8c504f2198a3e40d762bb4f7475440bea418400390cb143821af9496398`.
 
-Gradle signingReport gerçek debug yolunu `~/.config/.android/debug.keystore` olarak gösterdi; eski cache `~/.android/debug.keystore` yolunu izlediğinden v2 job dosyayı saklamamış. Güncel cache yolu düzeltildi; yalnızca sertifika kapısını geçen eşleşen debug anahtarı saklanabilir. Yanlış yeni anahtar veya release anahtarı cache'e kaydedilmez. Erişilebilir yerel/cache yedeklerinde eski anahtar bulunamadı; yayımlanmış APK özel anahtar yedeği değildir. Eski sertifikaya ait keystore yedeği veya kullanıcı tarafından seçilmiş ayrı kimlikle yan yana kurulum beklenir. PWA yayını bağımsız olarak tamamlandı. Eski uygulama/veri silinmez.
+Gradle signingReport gerçek debug yolunu `~/.config/.android/debug.keystore` olarak gösterdi; eski cache `~/.android/debug.keystore` yolunu izlediğinden v2 job dosyayı saklamamış. Erişilebilir yerel/cache yedeklerinde eski anahtar bulunamadı; yayımlanmış APK özel anahtar yedeği değildir. Bu yerinde güncelleme yolu artık kullanılmaz: kullanıcı yeni kimlikli yan yana kurulumu seçti. Debug cache kaldırıldı; kalıcı berXfit release anahtarı kullanılır. PWA yayını bağımsız olarak tamamlandı. Eski uygulama/veri silinmez.
 
-Eski **Yol v1 APK** farklı applicationId taşır. Onun verisi tam ZIP ile BERxFIT'e aktarılır; yedek ve medya doğrulanmadan eski kurulum kaldırılmaz. PWA ve APK da ayrı uygulama alanlarıdır; aralarında ZIP kullanılır.
+Eski **Yol v1 APK** farklı applicationId taşır. Onun verisi tam ZIP ile berXfit'e aktarılır; yedek ve medya doğrulanmadan eski kurulum kaldırılmaz. PWA ve APK da ayrı uygulama alanlarıdır; aralarında ZIP kullanılır.
 
 ## Repo adı
 
-Ürün, dosyalar ve yeni release BERxFIT'tir. `beratergun/formda` ve `/formda/` yolu kurulu PWA başlangıçlarını ve mevcut release bağlantılarını korumak için bu teslimde tutulur. `beratergun/berxfit` hazır veya yayınlanmış adres olarak sunulmaz. Hesap düzeyinde isim değiştirme ayrı yetkili işlemdir; gerekli olursa önce manifest kimliği/eski scope güncellemesi, Pages köprüsü, `yol` yönlendirmesi, README/release bağlantıları ve kurulu PWA yükseltmesi birlikte test edilmelidir. Mevcut repo silinerek yeni repo açılmaz.
+Ürün, dosyalar ve yeni release berXfit'tir. `beratergun/formda` ve `/formda/` yolu kurulu PWA başlangıçlarını ve mevcut release bağlantılarını korumak için bu teslimde tutulur. `beratergun/berxfit` hazır veya yayınlanmış adres olarak sunulmaz. Hesap düzeyinde isim değiştirme ayrı yetkili işlemdir; gerekli olursa önce manifest kimliği/eski scope güncellemesi, Pages köprüsü, `yol` yönlendirmesi, README/release bağlantıları ve kurulu PWA yükseltmesi birlikte test edilmelidir. Mevcut repo silinerek yeni repo açılmaz.

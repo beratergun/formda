@@ -1,4 +1,4 @@
-package io.github.beratergun.formda;
+package io.github.beratergun.berxfit;
 
 import android.Manifest;
 import com.getcapacitor.JSObject;

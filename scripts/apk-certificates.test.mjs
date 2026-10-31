@@ -6,9 +6,63 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
-import { certificateFingerprint, compareCertificates } from './apk-certificates.mjs';
+import {
+  certificateFingerprint,
+  compareCertificates,
+  verifyPinnedCertificate,
+} from './apk-certificates.mjs';
 
 const [first, second] = rootCertificates;
+const identity = {
+  mode: 'side-by-side',
+  appId: 'io.github.beratergun.berxfit',
+  legacyAppId: 'io.github.beratergun.formda',
+  certificateSha256: certificateFingerprint(first),
+  legacyCertificateSha256: certificateFingerprint(second),
+};
+test('accepts only the pinned berXfit certificate for the separate application', () => {
+  assert.equal(verifyPinnedCertificate(identity, first).matches, true);
+  assert.equal(verifyPinnedCertificate(identity, second).matches, false);
+});
+test('rejects a legacy application ID, malformed pin or reused legacy identity', () => {
+  for (const change of [
+    { appId: identity.legacyAppId },
+    { certificateSha256: '' },
+    { certificateSha256: identity.legacyCertificateSha256 },
+    { mode: 'in-place' },
+  ])
+    assert.throws(() => verifyPinnedCertificate({ ...identity, ...change }, first), /Invalid/);
+});
+test('pinned identity CLI fails closed for a wrong signer or invalid application policy', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'apk-pinned-test-'));
+  const policy = join(directory, 'identity.json'),
+    certificate = join(directory, 'certificate.pem');
+  try {
+    for (const [settings, pem, status] of [
+      [identity, first, 0],
+      [identity, second, 1],
+      [{ ...identity, appId: identity.legacyAppId }, first, 2],
+    ]) {
+      writeFileSync(policy, JSON.stringify(settings));
+      writeFileSync(certificate, pem);
+      const result = spawnSync(
+        process.execPath,
+        [
+          fileURLToPath(new URL('./check-apk-signing.mjs', import.meta.url)),
+          '--identity',
+          policy,
+          certificate,
+        ],
+        { encoding: 'utf8' },
+      );
+      assert.equal(result.status, status, result.stderr);
+    }
+  } finally {
+    unlinkSync(policy);
+    unlinkSync(certificate);
+    rmdirSync(directory);
+  }
+});
 test('CLI allows a match and exits nonzero for a mismatch or unreadable certificates', () => {
   const directory = mkdtempSync(join(tmpdir(), 'apk-certificate-test-'));
   const previous = join(directory, 'previous.pem');

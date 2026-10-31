@@ -1,50 +1,32 @@
-# BERxFIT Android uygulaması
+# Android · berXfit
 
-Uygulama kimliği: `io.github.beratergun.formda`. Android, PWA ile aynı React/TypeScript kaynaklarını kullanır. `dist-native/` derlemesi APK içine paketlenir; açılışta GitHub Pages veya başka bir sunucudan arayüz yüklenmez.
+Yeni uygulama kimliği `io.github.beratergun.berxfit`tir. Kullanıcı 31 Ekim 2026'da eski Formda ve verisini koruyarak yan yana APK kurulmasını seçti. Eski `io.github.beratergun.formda` uygulaması ayrı kalır. PWA adresi `/formda/` değişmez.
+
+React/TypeScript arayüzü `dist-native/` olarak APK içine paketlenir; uzak server.url yoktur. Android 8+ ve güncel WebView gerekir. Sağlık sağlayıcısı yoksa elle kayıt çalışır. Health Connect yalnızca adım, aktif kalori, egzersiz, kilo ve uyku için beş READ izni kullanır; WRITE yoktur. Yeni uygulamanın izinleri ayrıca verilir.
+
+## Veri aktarımı
+
+Eski Formda → Profil → Tam yedek al. Yeni berXfit'i ayrı kur; karşılama → Yedeğimden devam et veya Profil → Geri yükle. Önce ZIP önizlemesini, sonra tüm kayıt ve medyayı doğrula. Eski uygulamayı kaldırma/verisini temizleme. İki APK ve PWA ayrı veri alanlarıdır; sonraki değişiklikler otomatik senkronize olmaz. Ayrıntılar [geçiş belgesinde](BERXFIT_MIGRATION.md).
+
+## Kalıcı release imzası
+
+İlk berXfit anahtarı kullanıcı hesabında oluşturulmuş RSA-4096 / PKCS12 release anahtarıdır. Özel dosyalar repo dışındaki `%USERPROFILE%\.android-keys\berxfit-v3` klasöründedir; klasör ACL'i yalnızca kullanıcı ve SYSTEM erişimi verir. `berxfit-release.p12` şifreli keystore, `credentials.private.json` yerel erişim bilgileri, `berxfit-certificate.pem` public sertifikadır. Bu klasörü güvenli bir yedeğe/parola yöneticisine ayrıca sakla. Anahtar/parola dosyalarını repoya veya sohbete yükleme.
+
+CI için şu dört şifreli repo Secret ayarlanmıştır:
+
+- `BERXFIT_ANDROID_KEYSTORE_BASE64`
+- `BERXFIT_ANDROID_KEYSTORE_PASSWORD`
+- `BERXFIT_ANDROID_KEY_ALIAS`
+- `BERXFIT_ANDROID_KEY_PASSWORD`
+
+`android/signing-identity.json` yalnızca public applicationId ve sertifika SHA-256 pinini içerir. Her APK bu pinle eşleşmelidir. Sonraki sürümlerde aynı anahtar korunur. Eksik/değişmiş anahtar dağıtımı durdurur; debug dağıtım fallback'i veya keystore cache'i yoktur. Özel anahtar yalnızca runner geçici dizinine çözülür ve iş sonunda kaldırılır.
+
+## Otomatik APK ve denetimler
+
+Android workflow `assembleRelease lintRelease`, apksigner, appId/ad/sürüm, uzak sunucu yokluğu, eski applicationId'nin manifestte bulunmaması ve tam beş READ/WRITE yokluğunu denetler. Sertifika PEM'i Node X509 ile okunup public pine karşılaştırılır. Yanlış signer, yanlış applicationId, boş veya belirsiz sertifika dağıtımı engeller. On ayrı imza/CLI regresyonu iki CI pipeline'ında çalışır.
+
+Başarılı iş `berXfit-android-apk` artifact'ında APK ve SHA-256 üretir. Release etiketi package sürümüne eşit olmalıdır; release event'inde dosyalar eklenir, mevcut varlığın üzerine yazılmaz. v1/v2 release'leri korunur. Fiziksel Android kurulumu, iki uygulamanın cihazda yan yana açılması ve Health Connect sağlayıcıları ayrıca denenmelidir; CI/manifest testleri fiziksel cihaz testi değildir.
 
 ## Yerel geliştirme
 
-Node.js 22+, JDK 21 ve Android SDK 36 gerekir. Android Studio SDK'yı kurabilir.
-
-```powershell
-npm ci
-npm run android:sync
-npm run android:open
-# Alternatif: android klasöründe .\gradlew.bat assembleDebug
-```
-
-`capacitor.config.ts` içinde uzak `server.url` yoktur. Medya Android WebView'in özel OPFS alanında, destek yoksa IndexedDB Blob olarak kalır. Dışa aktarma, cache alanına parça parça yazıp Android paylaşım panelini açar. Cihaz dosyalarına kaydetme veya bir uygulamaya gönderme tercihini kullanıcı yapar. Otomatik bulut yedeği ve cihazlar arası veri çıkarımı manifest ve XML kurallarıyla kapalıdır.
-
-Kamera ve mikrofon yalnızca kullanıcı ilgili kaydı başlattığında yerel izin eklentisiyle istenir. İnternet izni, kullanıcının açıkça başlattığı Open Food Facts sorgusu ve isteğe bağlı model indirmesi içindir. Fotoğraf/sağlık verisi gönderilmez. Sunucu, hesap, analitik ve uzaktan medya işleme yoktur.
-
-Android 8+ (API 26) gerekir. Health Connect desteklenen cihazda kurulu ve kullanılabilir olmalıdır; yoksa uygulama elle kayıtla çalışır. Profil → Bağlı kaynaklar içinden yalnızca adım, aktif kalori, egzersiz, kilo ve uyku okunabilir. Yazma listesi boştur; birleştirilmiş APK manifestindeki tüm sağlık yazma izinleri ayrıca kontrol edilir. Kullanıcı önizlemeyi onaylamadan içe aktarma olmaz; elle girilmiş alanlar korunur. İzinler aynı ekrandan sistem ayarlarında yönetilir. Fiziksel cihazdaki izin ve kaynak veri uyumluluğu ayrıca denenmelidir.
-
-## Otomatik APK
-
-`.github/workflows/android.yml`, `main` push'unda ve elle tetiklendiğinde kalite kontrollerini, native derlemeyi, Android lint'i ve APK imza doğrulamasını çalıştırır. `BERxFIT-android-apk` artifact'ında `BERxFIT-v<version>.apk` ve SHA-256 dosyası bulunur. Release yayınlandığında aynı dosyalar release'e eklenir.
-
-Dört imza sırrı varsa release APK; yoksa standart Android geliştirme sertifikalı debug APK seçilir. Kurulabilen APK bir sertifika gerektirir; debug APK mağaza/release imzası olarak sunulmaz. Debug cache anahtarı korunur; gerçek Gradle yolu `~/.config/.android/debug.keystore` kullanılır. Ayrı restore/save adımları yalnızca sertifika kapısını geçmiş eşleşen debug anahtarını saklar; yanlış aday veya Secrets'tan çözülen release anahtarı cache'e girmez. CI, apksigner PEM çıktılarının X509 SHA-256 değerlerini karşılaştırır; okunamayan, çoklu belirsiz veya farklı sertifika dağıtımı engeller. Boş alan gerçek fark diye raporlanmaz. ApplicationId aynı kaldığından sertifika eşitliği yerinde güncelleme için zorunludur. Fiziksel cihazdaki güncelleme ayrıca denenmelidir.
-
-**31 Ekim v3 durumu:** CI 41194362584 derleme/lint/apksigner ve paket metadata/izin kontrollerini geçti. İlk metin ayrıştırma hatası giderildikten sonra gerçek PEM/X509 karşılaştırması v2 `c5b094d1…` ve aday `6312c8c5…` değerlerini farklı buldu; yeni APK yayımlanmadı. Eski özel anahtar yedeği veya kullanıcı tarafından seçilmiş ayrı kimlikle yan yana kurulum beklenir; eski uygulama/veri silinmez. Güncel kanıt ve seçenekler [geçiş belgesinde](BERXFIT_MIGRATION.md).
-
-## Kullanıcının release anahtarı
-
-Aşağıdaki örnek gelecekte yeni bir dağıtım anahtarı oluşturmak içindir; mevcut debug kurulumuna yerinde güncelleme sağlamaz. Yeni anahtar, v2 sertifika eşitliği kapısını bilinçli bir anahtar/veri geçiş planı olmadan geçemez. Bu sürüm için yeni anahtar oluşturmak veya eski kurulumu kaldırmak gerekmez. Karar verildiğinde bu komutları kendi bilgisayarında uygula. Anahtar repoya girmez; parolaları yalnızca etkileşimli istemlere yaz.
-
-```powershell
-$keyDirectory = Join-Path $env:USERPROFILE '.android-keys'
-New-Item -ItemType Directory -Force -Path $keyDirectory
-$keyPath = Join-Path $keyDirectory 'formda-release.jks'
-keytool -genkeypair -v -keystore $keyPath -storetype PKCS12 -alias formda -keyalg RSA -keysize 4096 -validity 10000
-[Convert]::ToBase64String([IO.File]::ReadAllBytes($keyPath)) | gh secret set ANDROID_KEYSTORE_BASE64 --repo beratergun/formda
-gh secret set ANDROID_KEYSTORE_PASSWORD --repo beratergun/formda
-gh secret set ANDROID_KEY_ALIAS --repo beratergun/formda
-gh secret set ANDROID_KEY_PASSWORD --repo beratergun/formda
-gh workflow run android.yml --repo beratergun/formda
-```
-
-Alias istemine `formda`, parola istemlerine oluşturduğun anahtarın ilgili parolasını gir. Anahtarı ve parolaları güvenli bir yerde ayrıca yedekle. Sırlar eklendikten sonra iş akışı imzalı release varyantını derler; v2 sertifikasıyla eşleşmeyen paket dağıtılmaz. Yeni sertifika eski uygulamayı güncellemez. Eski kurulumu kaldırmak yerine, kullanıcı kararından sonra ayrı applicationId ile yan yana kurulum ve doğrulanmış tam ZIP aktarımı planlanabilir; mevcut uygulama ve veri korunur.
-
-## PWA ve APK verileri
-
-PWA ve Android uygulaması ayrı uygulama alanları kullanır. Aralarında geçmek için tam ZIP yedeğini indir ve diğer uygulamada geri yükle. Hiçbir otomatik eşitleme yapılmaz.
+Node 22.12+, JDK 21 ve Android SDK 36 ile `npm ci`, `npm run android:sync`, ardından `npm run android:open`. Dağıtılacak paket CI'da kalıcı release anahtarıyla üretilir. Yerel debug APK dağıtım paketi olarak kullanılmaz.

@@ -16,19 +16,24 @@ jobs:
     permissions:
       contents: write
     env:
-      HAS_SIGNING: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' && secrets.ANDROID_KEYSTORE_PASSWORD != '' && secrets.ANDROID_KEY_ALIAS != '' && secrets.ANDROID_KEY_PASSWORD != '' }}
-      ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-      ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-      ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-      ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      HAS_SIGNING: ${{ secrets.BERXFIT_ANDROID_KEYSTORE_BASE64 != '' && secrets.BERXFIT_ANDROID_KEYSTORE_PASSWORD != '' && secrets.BERXFIT_ANDROID_KEY_ALIAS != '' && secrets.BERXFIT_ANDROID_KEY_PASSWORD != '' }}
+      ANDROID_KEYSTORE_BASE64: ${{ secrets.BERXFIT_ANDROID_KEYSTORE_BASE64 }}
+      ANDROID_KEYSTORE_PASSWORD: ${{ secrets.BERXFIT_ANDROID_KEYSTORE_PASSWORD }}
+      ANDROID_KEY_ALIAS: ${{ secrets.BERXFIT_ANDROID_KEY_ALIAS }}
+      ANDROID_KEY_PASSWORD: ${{ secrets.BERXFIT_ANDROID_KEY_PASSWORD }}
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: 22
           cache: npm
+      - name: Require persistent berXfit signing secrets
+        if: env.HAS_SIGNING != 'true'
+        run: |
+          echo "Persistent berXfit release signing is required; no debug distribution fallback" >&2
+          exit 1
       - name: Set signing file path
-        run: echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/formda-release.jks" >> "$GITHUB_ENV"
+        run: echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/berxfit-release.p12" >> "$GITHUB_ENV"
       - uses: actions/setup-java@v6.1.0
         with:
           distribution: temurin
@@ -36,32 +41,22 @@ jobs:
       - uses: android-actions/setup-android@v4.0.4
       - run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
       - uses: gradle/actions/setup-gradle@v6.4.1
-      - uses: actions/cache/restore@v6.1.0
-        id: debug-certificate
-        with:
-          path: ~/.config/.android/debug.keystore
-          key: formda-debug-certificate-v1
       - run: npm ci
       - run: npm run lint && npm run typecheck && npm run test
       - run: node --test scripts/apk-certificates.test.mjs
       - run: npm run android:sync
       - name: Decode release keystore
-        if: env.HAS_SIGNING == 'true'
         run: |
           python3 - <<'PY'
           import base64, os
           with open(os.environ['ANDROID_KEYSTORE_PATH'], 'wb') as key:
               key.write(base64.b64decode(os.environ['ANDROID_KEYSTORE_BASE64']))
           PY
-      - name: Build and lint debug APK
+      - name: Build and lint signed release APK
         working-directory: android
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug lintDebug signingReport --no-daemon
-      - name: Build signed release APK
-        if: env.HAS_SIGNING == 'true'
-        working-directory: android
-        run: ./gradlew assembleRelease --no-daemon
+          ./gradlew assembleRelease lintRelease --no-daemon
       - name: Select APK and verify signature
         shell: bash
         env:
@@ -73,36 +68,19 @@ jobs:
             exit 1
           fi
           mkdir -p apk
-          if [ "$HAS_SIGNING" = "true" ]; then
-            cp android/app/build/outputs/apk/release/app-release.apk "apk/BERxFIT-v$VERSION.apk"
-            echo "Release signing configured" >> "$GITHUB_STEP_SUMMARY"
-          else
-            cp android/app/build/outputs/apk/debug/app-debug.apk "apk/BERxFIT-v$VERSION.apk"
-            echo "Debug APK: Android development certificate; release secrets are not configured" >> "$GITHUB_STEP_SUMMARY"
-          fi
+          cp android/app/build/outputs/apk/release/app-release.apk "apk/berXfit-v$VERSION.apk"
+          echo "berXfit side-by-side release; persistent pinned certificate" >> "$GITHUB_STEP_SUMMARY"
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
-          "$BUILD_TOOLS/apksigner" verify --verbose "apk/BERxFIT-v$VERSION.apk"
-          node scripts/check-apk.mjs "apk/BERxFIT-v$VERSION.apk"
-          curl --fail --location --retry 3 --output "$RUNNER_TEMP/formda-v2.apk" "https://github.com/beratergun/formda/releases/download/v2.0.0/Formda-v2.0.0.apk"
-          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs-pem "$RUNNER_TEMP/formda-v2.apk" > "$RUNNER_TEMP/formda-v2-certificates.txt" 2>&1
-          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs-pem "apk/BERxFIT-v$VERSION.apk" > "$RUNNER_TEMP/berxfit-certificates.txt" 2>&1
-          node scripts/check-apk-signing.mjs "$RUNNER_TEMP/formda-v2-certificates.txt" "$RUNNER_TEMP/berxfit-certificates.txt"
-          echo "APK certificate matches v2.0.0; application ID retained" >> "$GITHUB_STEP_SUMMARY"
-          (cd apk && sha256sum "BERxFIT-v$VERSION.apk" > "BERxFIT-v$VERSION.apk.sha256")
-      - name: Cache only a verified matching debug certificate
-        uses: actions/cache/save@v6.1.0
-        if: env.HAS_SIGNING != 'true' && steps.debug-certificate.outputs.cache-hit != 'true'
-        with:
-          path: ~/.config/.android/debug.keystore
-          key: ${{ steps.debug-certificate.outputs.cache-primary-key }}
+          "$BUILD_TOOLS/apksigner" verify --verbose "apk/berXfit-v$VERSION.apk"
+          node scripts/check-apk.mjs "apk/berXfit-v$VERSION.apk"
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs-pem "apk/berXfit-v$VERSION.apk" > "$RUNNER_TEMP/berxfit-certificates.txt" 2>&1
+          node scripts/check-apk-signing.mjs --identity android/signing-identity.json "$RUNNER_TEMP/berxfit-certificates.txt"
+          echo "Certificate matches pinned berXfit identity; Formda remains a separate app" >> "$GITHUB_STEP_SUMMARY"
+          (cd apk && sha256sum "berXfit-v$VERSION.apk" > "berXfit-v$VERSION.apk.sha256")
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: BERxFIT-android-apk
+          name: berXfit-android-apk
           path: apk/
-      - uses: actions/upload-artifact@v7.0.2
-        with:
-          name: BERxFIT-android-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
       - name: Attach APK to release
         if: github.event_name == 'release'
         env:

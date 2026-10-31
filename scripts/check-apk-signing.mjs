@@ -1,14 +1,22 @@
 import { readFileSync } from 'node:fs';
-import { compareCertificates } from './apk-certificates.mjs';
+import { compareCertificates, verifyPinnedCertificate } from './apk-certificates.mjs';
 
 try {
-  const result = compareCertificates(
-    readFileSync(process.argv[2], 'utf8'),
-    readFileSync(process.argv[3], 'utf8'),
-  );
+  const pinned = process.argv[2] === '--identity';
+  const result = pinned
+    ? verifyPinnedCertificate(
+        JSON.parse(readFileSync(process.argv[3], 'utf8')),
+        readFileSync(process.argv[4], 'utf8'),
+      )
+    : compareCertificates(
+        readFileSync(process.argv[2], 'utf8'),
+        readFileSync(process.argv[3], 'utf8'),
+      );
   console.log(JSON.stringify(result, null, 2));
   if (!result.matches) {
-    console.error('APK signing certificate differs from v2.0.0; distribution blocked');
+    console.error(
+      'APK signing certificate does not match its required identity; distribution blocked',
+    );
     process.exitCode = 1;
   }
 } catch (error) {

@@ -13,7 +13,7 @@ const frame = async (name, height) =>
 const cover = svg(
   1200,
   1200,
-  `<defs><radialGradient id="g"><stop stop-color="#183452"/><stop offset="1" stop-color="#070b12"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#7db3ff" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#7db3ff" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'BERxFIT', 110, '#f4f7fb', 750)}${text(78, 295, 'Kişisel spor ve', 48, '#f4f7fb', 650)}${text(78, 360, 'beslenme koçun.', 48, '#f4f7fb', 650)}${text(78, 450, 'Yerel spor ve', 30, '#a5b6cc')}${text(78, 495, 'beslenme asistanı.', 30, '#a5b6cc')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#62d9ef"/>${text(101, 593, 'PWA + Android', 25, '#13243c', 650)}${text(78, 688, 'Hesap yok.', 29, '#f4f7fb', 600)}${text(78, 733, 'Sunucu yok.', 29, '#f4f7fb', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#f4f7fb', 600)}${text(78, 914, '217 birim testi · Yerel kayıt', 24, '#a5b6cc')}${text(78, 955, 'Açık kaynak · Strict TypeScript', 24, '#a5b6cc')}${text(78, 1085, 'beratergun.github.io/formda', 25, '#f4f7fb', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#a5b6cc')}`,
+  `<defs><radialGradient id="g"><stop stop-color="#183452"/><stop offset="1" stop-color="#070b12"/></radialGradient></defs><rect width="1200" height="1200" fill="url(#g)"/><circle cx="1050" cy="660" r="510" fill="#7db3ff" opacity=".06"/><path d="M-40 970Q280 700 580 1060" fill="none" stroke="#7db3ff" stroke-width="2" stroke-dasharray="6 12" opacity=".3"/>${text(72, 165, 'berXfit', 110, '#f4f7fb', 750)}${text(78, 295, 'Kişisel spor ve', 48, '#f4f7fb', 650)}${text(78, 360, 'beslenme koçun.', 48, '#f4f7fb', 650)}${text(78, 450, 'Yerel spor ve', 30, '#a5b6cc')}${text(78, 495, 'beslenme asistanı.', 30, '#a5b6cc')}<rect x="78" y="555" width="265" height="56" rx="16" fill="#62d9ef"/>${text(101, 593, 'PWA + Android', 25, '#13243c', 650)}${text(78, 688, 'Hesap yok.', 29, '#f4f7fb', 600)}${text(78, 733, 'Sunucu yok.', 29, '#f4f7fb', 600)}${text(78, 778, 'Verilerin cihazında.', 29, '#f4f7fb', 600)}${text(78, 914, '217 birim testi · Yerel kayıt', 24, '#a5b6cc')}${text(78, 955, 'Açık kaynak · Strict TypeScript', 24, '#a5b6cc')}${text(78, 1085, 'beratergun.github.io/formda', 25, '#f4f7fb', 600)}${text(78, 1135, 'Kurgusal demo · Seyid Berat Ergün', 18, '#a5b6cc')}`,
 );
 await sharp(cover)
   .composite([{ input: await frame('today-light', 885), left: 748, top: 215 }])
@@ -77,7 +77,7 @@ for (const layout of layouts) {
   const base = svg(
     1080,
     1350,
-    `<rect width="1080" height="1350" fill="${bg}"/>${text(56, 92, 'BERxFIT', 38, ink, 750)}${text(56, 167, layout.title, 52, ink, 650)}${text(56, 217, layout.sub, 24, sub)}${text(56, 1250, 'Telefona kurulabilen yerel uygulama · PWA + Android', 24, ink, 600)}${text(56, 1301, 'Tamamen kurgusal demo · beratergun.github.io/formda', 19, sub)}`,
+    `<rect width="1080" height="1350" fill="${bg}"/>${text(56, 92, 'berXfit', 38, ink, 750)}${text(56, 167, layout.title, 52, ink, 650)}${text(56, 217, layout.sub, 24, sub)}${text(56, 1250, 'Telefona kurulabilen yerel uygulama · PWA + Android', 24, ink, 600)}${text(56, 1301, 'Tamamen kurgusal demo · beratergun.github.io/formda', 19, sub)}`,
   );
   await sharp(base)
     .composite([
